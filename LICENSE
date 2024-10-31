@@ -1,0 +1,27 @@
+Copyright (c) 2024 Softwine.LTD
+
+This license covers all content within this repository, including but not limited to software, source code, documentation, data files, datasets, databases, configurations, and associated materials (collectively referred to as the "Materials").
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of these Materials, to use, copy, modify, merge, and distribute the Materials for non-commercial purposes only, subject to the following conditions:
+
+1. The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Materials.
+
+2. Commercial use of the Materials is expressly prohibited except by Softwine.LTD and its subsidiaries, affiliates, and authorized partners.
+
+3. "Commercial use" means using the Materials for direct or indirect commercial advantage or monetary compensation, including but not limited to:
+   - Using the Materials in a commercial product or service
+   - Using the Materials in a business environment
+   - Selling, licensing, or distributing the Materials for a fee
+   - Using the Materials to provide services to paying customers
+   - Training machine learning models for commercial purposes
+   - Using the data to derive commercial insights or analytics
+
+4. Data-specific restrictions:
+   - The data provided may not be used to create or enhance competing commercial products or services
+   - Derivative datasets must maintain these same license restrictions
+   - Any modifications, aggregations, or transformations of the data must be clearly documented
+   - If the data contains any personal or sensitive information, it must be handled in accordance with applicable privacy laws and regulations
+
+5. Redistributions of the Materials must retain this license, copyright notice, and disclaimer.
+
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE MATERIALS OR THE USE OR OTHER DEALINGS IN THE MATERIALS.
