@@ -140,3 +140,24 @@ body {
     margin: 12px;
     min-width: 200px;
 }
+
+.floating-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    z-index: 4;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+  }
+
+  .floating-icon:hover {
+    transform: scale(1.1);
+    /* cursor: pointer; */
+  }
+
+  .floating-icon svg {
+    width: 100%;
+    height: 100%;
+  }

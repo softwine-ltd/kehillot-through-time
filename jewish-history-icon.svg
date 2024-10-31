@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <!-- Background Circle -->
+    <circle cx="100" cy="100" r="95" fill="#ffffff" stroke="#2B5797" stroke-width="2"/>
+    
+    <!-- Star of David -->
+    <g transform="translate(100,100)">
+      <path d="M0,-50 L14.43,-25 L43.3,-25 L28.87,0 L43.3,25 L14.43,25 L0,50 L-14.43,25 L-43.3,25 L-28.87,0 L-43.3,-25 L-14.43,-25 Z" 
+            fill="none" 
+            stroke="#2B5797" 
+            stroke-width="3"/>
+    </g>
+    
+    <!-- Connection Points and Lines representing communities -->
+    <g fill="#2B5797">
+      <circle cx="70" cy="60" r="4"/>
+      <circle cx="130" cy="60" r="4"/>
+      <circle cx="50" cy="100" r="4"/>
+      <circle cx="150" cy="100" r="4"/>
+      <circle cx="70" cy="140" r="4"/>
+      <circle cx="130" cy="140" r="4"/>
+    </g>
+    
+    <!-- Connecting Lines -->
+    <g stroke="#2B5797" stroke-width="2" fill="none">
+      <path d="M70,60 Q100,80 130,60"/>
+      <path d="M50,100 Q100,120 150,100"/>
+      <path d="M70,140 Q100,160 130,140"/>
+      <path d="M70,60 Q60,100 70,140"/>
+      <path d="M130,60 Q140,100 130,140"/>
+    </g>
+    
+    <!-- Central Dot -->
+    <circle cx="100" cy="100" r="6" fill="#2B5797"/>
+  </svg>
