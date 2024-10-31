@@ -1,35 +1,43 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Load MarkerCluster after Leaflet is ready
+    var markerClusterScript = document.createElement('script');
+    markerClusterScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js';
+    markerClusterScript.onload = initializeMap;  // Call initialization after MarkerCluster loads
+    document.head.appendChild(markerClusterScript);
+});
+
 const historicalEvents = [
-    { 
+    {
         year: -1313,
         titleEn: "Exodus",
         titleHe: "יציאת מצרים",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1313))
     },
-    { 
+    {
         year: -1813,
         titleEn: "Abraham Born",
         titleHe: "לידת אברהם אבינו",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1813))
     },
-    { 
+    {
         year: 70,
         titleEn: "Temple Destruction",
         titleHe: "חורבן בית המקדש",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(70))
     },
-    { 
+    {
         year: 1492,
         titleEn: "Exile from Spain",
         titleHe: "גירוש ספרד",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(1492))
     },
-    { 
+    {
         year: 1939,
         titleEn: "The Holocaust",
         titleHe: "השואה",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(1939))
     },
-    { 
+    {
         year: 1948,
         titleEn: "Israel Independence",
         titleHe: "הקמת מדינת ישראל",
@@ -89,17 +97,17 @@ function convertToHebrewYear(gregorianYear) {
 function addEventMarkers() {
     const timelineElement = document.getElementById('timeline');
     const totalRange = 5024; // from -3000 to 2024
-    
+
     historicalEvents.forEach(event => {
         const marker = document.createElement('div');
         marker.className = 'timeline-marker';
-        
+
         const position = ((event.year + 3000) / totalRange) * 100;
         marker.style.left = `${position}%`;
 
         const tooltip = document.createElement('div');
         tooltip.className = 'timeline-tooltip';
-        
+
         // Create structured tooltip content
         tooltip.innerHTML = `
             <div class="tooltip-content">
@@ -111,8 +119,128 @@ function addEventMarkers() {
                 </div>
             </div>
         `;
-        
+
         marker.appendChild(tooltip);
         timelineElement.appendChild(marker);
+    });
+}
+
+
+let markersLayer = {};
+let currentMarkers = [];
+
+async function loadData(year) {
+    try {
+        const response = await fetch('kehilot.csv');
+        const csvText = await response.text();
+
+        // Parse CSV
+        const rows = csvText.split('\n').slice(1); // Skip header
+        const kehilot = rows.map(row => {
+            const [name, name_he, lat, lon, rowYear, source] = row.split(',');
+            return {
+                name,
+                name_he,
+                lat: parseFloat(lat),
+                lon: parseFloat(lon),
+                year: parseInt(rowYear),
+                source
+            };
+        });
+
+        updateMarkers(kehilot, year);
+    } catch (error) {
+        console.error('Error loading kehilot data:', error);
+    }
+}
+
+function updateMarkers(kehilot, currentYear) {
+    // Clear existing markers
+    markersLayer.clearLayers();
+    currentMarkers = [];
+
+    // Filter kehilot that existed by the current year
+    const relevantKehilot = kehilot.filter(k => k.year <= currentYear);
+
+    // Add new markers
+    relevantKehilot.forEach(kehila => {
+        const marker = L.marker([kehila.lat, kehila.lon]);
+
+        // Create popup content
+        const popupContent = `
+            <div style="direction: rtl; text-align: right;">
+                <strong>${kehila.name_he}</strong>
+                <br>
+                ${kehila.name}
+                <br>
+                <small>
+                    שנת ייסוד: ${kehila.year < 0 ? Math.abs(kehila.year) + ' BCE' : kehila.year + ' CE'}
+                    (${numberToHebrewLetters(convertToHebrewYear(kehila.year))})
+                </small>
+                <br>
+                <small>מקור: ${kehila.source}</small>
+            </div>
+        `;
+
+        marker.bindPopup(popupContent);
+        currentMarkers.push(marker);
+        markersLayer.addLayer(marker);
+    });
+
+    // Add marker cluster layer to map if not already added
+    if (!map.hasLayer(markersLayer)) {
+        map.addLayer(markersLayer);
+    }
+}
+
+function initializeMap() {
+    // Initialize map
+    map = L.map('map', {
+        center: [41.9028, 25.4324],
+        zoom: 5,
+        minZoom: 4,
+        maxZoom: 8,
+        maxBounds: [
+            [20, -20],
+            [65, 65]
+        ]
+    });
+
+    // Add tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Initialize markers layer
+    markersLayer = L.markerClusterGroup();
+    map.addLayer(markersLayer);
+
+    // Initialize timeline
+    const timeline = document.getElementById('timeline');
+    const yearDisplay = document.getElementById('year-display');
+
+    noUiSlider.create(timeline, {
+        start: [-3000],
+        range: {
+            'min': [-3000],
+            'max': [2024]
+        },
+        step: 1,
+        tooltips: false
+    });
+    addEventMarkers();
+
+    // Add window resize handler to reposition markers
+    window.addEventListener('resize', addEventMarkers);
+    // Update year display and trigger data loading
+    timeline.noUiSlider.on('update', function (values) {
+        const year = parseInt(values[0]);
+        const jewishYear = convertToHebrewYear(year);
+        const hebrewLetters = numberToHebrewLetters(jewishYear);
+        const yearText = year < 0
+            ? `${Math.abs(year)} BCE (${hebrewLetters})`
+            : `${year} CE (${hebrewLetters})`;
+        yearDisplay.textContent = yearText;
+        loadData(year);
     });
 }

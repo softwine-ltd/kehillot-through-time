@@ -6,14 +6,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="helpers.js"></script>
-    <!-- Leaflet CSS -->
+    <!-- Leaflet map CSS + JS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
-    <!-- Timeline CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+
+    <!-- Timeline -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+    <!-- map markers -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css" />
 
+    <script src="helpers.js"></script>
     <link rel="stylesheet" href="./styles.css" />
-
 </head>
 
 <body>
@@ -23,95 +30,6 @@
         <div id="timeline"></div>
     </div>
 
-    <!-- Leaflet JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-
-    <!-- Timeline JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
-
-
-    <script>
-        // Initialize the map
-        const map = L.map('map', {
-            center: [41.9028, 25.4324], // Center between Europe and Middle East
-            zoom: 5,
-            minZoom: 4,
-            maxZoom: 8,
-            maxBounds: [
-                [20, -20], // Southwest coordinates
-                [65, 65]   // Northeast coordinates
-            ]
-        });
-
-        // Add tile layer (you might want to customize this later)
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-
-        // Function to load and parse CSV data
-        async function loadData(year) {
-            try {
-                const response = await fetch('your-data.csv');
-                const data = await response.text();
-                // Parse CSV and update markers
-                updateMarkers(parseCSV(data), year);
-            } catch (error) {
-                console.error('Error loading data:', error);
-            }
-        }
-
-        // Function to parse CSV and return structured data
-        function parseCSV(csvText) {
-            // Add CSV parsing logic here
-            // Return structured data
-            return [];
-        }
-
-        // Function to update markers based on year
-        function updateMarkers(data, year) {
-            // Add marker update logic here
-        }
-
-        // Initialize with default year
-        // loadData(-3000); // Will be called when we have the data file
-
-        // Initialize timeline
-        const timeline = document.getElementById('timeline');
-        const yearDisplay = document.getElementById('year-display');
-
-        noUiSlider.create(timeline, {
-            start: [-3000],
-            range: {
-                'min': [-3000],
-                'max': [2024]
-            },
-            step: 1,
-            tooltips: false,
-            // format: {
-            //     to: function (value) {
-            //         return Math.round(value);
-            //     },
-            //     from: function (value) {
-            //         return Math.round(value);
-            //     }
-            // }
-        });
-        addEventMarkers();
-
-        // Add window resize handler to reposition markers
-        window.addEventListener('resize', addEventMarkers);
-        // Update year display and trigger data loading
-        timeline.noUiSlider.on('update', function (values) {
-            const year = parseInt(values[0]);
-            const jewishYear = convertToHebrewYear(year);
-            const hebrewLetters = numberToHebrewLetters(jewishYear);
-            const yearText = year < 0
-                ? `${Math.abs(year)} BCE (${hebrewLetters})`
-                : `${year} CE (${hebrewLetters})`;
-            yearDisplay.textContent = yearText;
-            loadData(year);
-        });
-    </script>
 </body>
 
 </html>
