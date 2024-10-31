@@ -137,14 +137,16 @@ async function loadData(year) {
         // Parse CSV
         const rows = csvText.split('\n').slice(1); // Skip header
         const kehilot = rows.map(row => {
-            const [name, name_he, lat, lon, rowYear, source] = row.split(',');
+            const [name, name_he, lat, lon, rowYear, population, confidence, source] = row.split(',');
             return {
                 name,
                 name_he,
                 lat: parseFloat(lat),
                 lon: parseFloat(lon),
                 year: parseInt(rowYear),
-                source
+                population: parseInt(population),
+                confidence,
+                source: source.replace(/"/g, '') // Remove quotes from source
             };
         });
 
@@ -160,29 +162,48 @@ function updateMarkers(kehilot, currentYear) {
     currentMarkers = [];
 
     // Filter kehilot that existed by the current year
+    // TODO: add Kehila end date :((((
     const relevantKehilot = kehilot.filter(k => k.year <= currentYear);
 
     // Add new markers
     relevantKehilot.forEach(kehila => {
-        const marker = L.marker([kehila.lat, kehila.lon]);
+        const marker = createCustomMarker(kehila);
 
         // Create popup content
         const popupContent = `
             <div style="direction: rtl; text-align: right;">
-                <strong>${kehila.name_he}</strong>
+                <strong style="font-size: 16px;">${kehila.name_he}</strong>
                 <br>
                 ${kehila.name}
                 <br>
-                <small>
-                    שנת ייסוד: ${kehila.year < 0 ? Math.abs(kehila.year) + ' BCE' : kehila.year + ' CE'}
-                    (${numberToHebrewLetters(convertToHebrewYear(kehila.year))})
-                </small>
-                <br>
-                <small>מקור: ${kehila.source}</small>
+                <div style="margin: 8px 0;">
+                    <strong>אוכלוסייה:</strong> ${kehila.population.toLocaleString()}
+                </div>
+                <div style="
+                    padding: 4px 8px;
+                    background: ${getConfidenceColor(kehila.confidence)}22;
+                    border-radius: 4px;
+                    display: inline-block;
+                    color: ${getConfidenceColor(kehila.confidence)};
+                    font-size: 12px;
+                ">
+                    ${getConfidenceText(kehila.confidence)}
+                </div>
+                <div style="margin-top: 8px;">
+                    <small>
+                        שנת ייסוד: ${kehila.year < 0 ? Math.abs(kehila.year) + ' BCE' : kehila.year + ' CE'}
+                        (${numberToHebrewLetters(convertToHebrewYear(kehila.year))})
+                    </small>
+                    <br>
+                    <small>מקור: ${formatSource(kehila.source)}</small>
+                </div>
             </div>
         `;
 
-        marker.bindPopup(popupContent);
+        marker.bindPopup(popupContent, {
+            maxWidth: 300,
+            className: 'custom-popup'
+        });
         currentMarkers.push(marker);
         markersLayer.addLayer(marker);
     });
@@ -243,4 +264,81 @@ function initializeMap() {
         yearDisplay.textContent = yearText;
         loadData(year);
     });
+}
+
+function getMarkerSize(population) {
+    // Base size for the marker
+    const baseSize = 8;
+    if (population < 1000) return baseSize;
+    if (population < 5000) return baseSize * 1.5;
+    if (population < 10000) return baseSize * 2;
+    if (population < 50000) return baseSize * 2.5;
+    return baseSize * 3;
+}
+
+
+function getConfidenceColor(confidence) {
+    switch (confidence.toLowerCase()) {
+        case 'high':
+            return '#1a5f7a';  // Solid blue
+        case 'medium':
+            return '#699eb3';  // Lighter blue
+        case 'low':
+            return '#a8c9d5';  // Very light blue
+        default:
+            return '#84a7b4';  // Default blue
+    }
+}
+
+
+function getConfidenceText(confidence) {
+    switch (confidence.toLowerCase()) {
+        case 'high':
+            return 'רמת ודאות גבוהה';
+        case 'medium':
+            return 'רמת ודאות בינונית';
+        case 'low':
+            return 'רמת ודאות נמוכה';
+        default:
+            return 'רמת ודאות לא ידועה';
+    }
+}
+
+
+function createCustomMarker(kehila) {
+    const size = getMarkerSize(kehila.population);
+    const color = getConfidenceColor(kehila.confidence);
+
+    // Create custom div icon
+    const icon = L.divIcon({
+        className: 'custom-marker',
+        html: `<div style="
+            width: ${size * 2}px;
+            height: ${size * 2}px;
+            background: ${color};
+            border: 2px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 4px rgba(0,0,0,0.3);
+            opacity: 0.9;
+        "></div>`,
+        iconSize: [size * 2, size * 2],
+        iconAnchor: [size, size]
+    });
+
+    return L.marker([kehila.lat, kehila.lon], { icon });
+}
+
+function formatSource(source) {
+    // Check if the source is a URL
+    const isUrl = source.startsWith('http://') || source.startsWith('https://') || source.startsWith('www.');
+    
+    if (isUrl) {
+        return `<a href="${source}" target="_blank" style="
+            color: #2563eb;
+            text-decoration: underline;
+            font-weight: 500;
+        ">מקור מקוון ↗</a>`;
+    }
+    
+    return source;
 }
