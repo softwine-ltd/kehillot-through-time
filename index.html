@@ -2,9 +2,84 @@
 <html>
 
 <head>
-    <title>Kehillot Through Time</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C58QB49Z2S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-C58QB49Z2S');
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Jewish Demographics & Historical Communities Map | Interactive Timeline</title>
+    <meta name="title" content="Jewish Demographics & Historical Communities Map | Interactive Timeline">
+    <meta name="description"
+        content="Explore interactive maps of Jewish communities worldwide, tracking demographic changes and migration patterns throughout history. Discover kehillot and Jewish diaspora population data across time.">
+    <meta name="keywords"
+        content="Jewish demographics, Jewish history, population maps, Jewish communities, kehillot, Jewish diaspora, historical maps, Jewish migration, interactive timeline, Jewish geography, demographic changes, Jewish population data">
+
+    <!-- Author and Copyright -->
+    <meta name="author" content="Bezalel Brandwine and Ofer Manela">
+    <meta name="copyright" content="Softwine LTD">
+
+    <!-- Additional Meta -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kehilot.softwine.net/">
+    <meta property="og:title" content="Jewish Demographics & Historical Communities Map">
+    <meta property="og:description"
+        content="Explore interactive maps of Jewish communities worldwide, tracking demographic changes and migration patterns throughout history.">
+    <meta property="og:image" content="https://kehilot.softwine.net/jewish-history-icon.svg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kehilot.softwine.net/">
+    <meta property="twitter:title" content="Jewish Demographics & Historical Communities Map">
+    <meta property="twitter:description"
+        content="Explore interactive maps of Jewish communities worldwide, tracking demographic changes and migration patterns throughout history.">
+    <meta property="twitter:image" content="https://kehilot.softwine.net/jewish-history-icon.svg">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": [{
+            "@language": "en",
+            "@value": "Jewish Demographics & Historical Communities Map"
+          }, {
+            "@language": "he",
+            "@value": "מפת דמוגרפיה וקהילות יהודיות היסטוריות"
+          }],
+          "description": [{
+            "@language": "en",
+            "@value": "Interactive mapping platform for exploring Jewish communities..."
+          }, {
+            "@language": "he",
+            "@value": "פלטפורמת מיפוי אינטראקטיבית לחקר קהילות יהודיות..."
+          }],
+        "keywords": "Jewish demographics, Jewish history, population maps, Jewish communities, kehillot, Jewish diaspora, historical maps, Jewish migration, interactive timeline, Jewish geography, demographic changes, Jewish population data",
+        "url": "https://kehilot.softwine.net",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Softwine LTD",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://softwine.net/default.svg"
+            }
+        }
+    }
+    </script>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kehilot.softwine.net/">
     <link rel="icon" type="image/svg+xml" href="jewish-history-icon.svg">
 
     <!-- Leaflet map CSS + JS -->
@@ -25,8 +100,12 @@
 </head>
 
 <body>
+    <header>
+        <h1>Jewish Demographics & Historical Communities Map</h1>
+    </header>
     <div class="floating-icon">
-        <img src="jewish-history-icon.svg" alt="Jewish History Interactive Visualization Icon" title="Interactive Jewish History Visualization">
+        <img src="jewish-history-icon.svg" alt="Jewish History Interactive Visualization Icon"
+            title="Interactive Jewish History Visualization">
     </div>
     <div id="map"></div>
     <div class="timeline-container">
