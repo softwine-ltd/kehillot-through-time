@@ -86,6 +86,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+
     <!-- Timeline -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
@@ -99,18 +101,50 @@
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
-<body>
-    <header>
-        <h1>Jewish Demographics & Historical Communities Map</h1>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-semibold text-gray-900">Jewish Demographics & Historical Communities Map</h1>
+            <div class="flex gap-4">
+                <button class="px-4 py-2 bg-blue-50 text-blue-600 rounded-md hover:bg-blue-100 transition-colors">
+                    About
+                </button>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                    Start Tour
+                </button>
+            </div>
+        </div>
     </header>
-    <div class="floating-icon">
-        <img src="jewish-history-icon.svg" alt="Jewish History Interactive Visualization Icon"
-            title="Interactive Jewish History Visualization">
-    </div>
-    <div id="map"></div>
-    <div class="timeline-container">
-        <div id="year-display">3000 BCE</div>
-        <div id="timeline"></div>
+
+    <div class="map-container">
+        <div class="floating-icon">
+            <img src="jewish-history-icon.svg" alt="Jewish History Interactive Visualization Icon"
+                title="Interactive Jewish History Visualization">
+        </div>
+
+        <div class="bg-white border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 py-6">
+                <div class="flex items-center gap-4 mb-4">
+                    <button id="playButton" class="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                        </svg>
+                    </button>
+                    <div id="year-display" class="text-sm font-medium text-gray-900"></div>
+                </div>
+                
+                <div id="timeline" class="relative h-2 bg-gray-200 rounded-full">
+                    <!-- <div class="absolute left-1/4 h-full w-1/4 bg-blue-500 rounded-full"></div> -->
+                </div>
+                
+                <div class="flex justify-between mt-2">
+                    <span class="text-sm text-gray-500">3000 BCE (תשס"א)</span>
+                    <span class="text-sm text-gray-500">Present (הווה)</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="map"></div>
     </div>
 
 </body>

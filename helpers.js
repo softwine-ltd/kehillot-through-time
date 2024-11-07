@@ -73,6 +73,7 @@ function numberToHebrewLetters(number) {
     if (remaining >= 10) {
         const tens = Math.floor(remaining / 10) * 10;
         result += digits[tens];
+        result += '"';
         remaining %= 10;
     }
 
@@ -213,6 +214,7 @@ function updateMarkers(kehilot, currentYear) {
         map.addLayer(markersLayer);
     }
 }
+var playIntervalGlobal = null;
 
 function initializeMap() {
     // Initialize map
@@ -264,6 +266,41 @@ function initializeMap() {
         yearDisplay.textContent = yearText;
         loadData(year);
     });
+
+    const playButton = document.getElementById('playButton');
+    let isPlaying = false;
+
+    // Toggle play/pause
+    playButton.addEventListener('click', () => {
+        isPlaying = !isPlaying;
+        playButton.innerHTML = isPlaying ?
+            '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6"/></svg>' :
+            '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/></svg>';
+        if (isPlaying) {
+            playTimeline(timeline);
+        } else if (playIntervalGlobal) {
+            clearInterval(playIntervalGlobal);
+        }
+    });
+}
+
+function playTimeline(timeline) {
+    const currentYear = parseInt(timeline.noUiSlider.get());
+    const maxYear = 2024;
+    const interval = 1000/24;
+
+    const playInterval = setInterval(() => {
+        const currentYear = parseInt(timeline.noUiSlider.get());
+        if (currentYear >= maxYear) {
+            clearInterval(playInterval);
+            const playButton = document.getElementById('playButton');
+            playButton.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/></svg>';
+            return;
+        }
+
+        timeline.noUiSlider.set(currentYear + 10);
+    }, interval);
+    playIntervalGlobal = playInterval;
 }
 
 function getMarkerSize(population) {
@@ -331,7 +368,7 @@ function createCustomMarker(kehila) {
 function formatSource(source) {
     // Check if the source is a URL
     const isUrl = source.startsWith('http://') || source.startsWith('https://') || source.startsWith('www.');
-    
+
     if (isUrl) {
         return `<a href="${source}" target="_blank" style="
             color: #2563eb;
@@ -339,6 +376,6 @@ function formatSource(source) {
             font-weight: 500;
         ">מקור מקוון ↗</a>`;
     }
-    
+
     return source;
 }

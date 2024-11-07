@@ -2,11 +2,13 @@ body {
     margin: 0;
     padding: 0;
 }
-#map { 
-    height: 80vh; 
-    width: 100%; 
+
+#map {
+    height: 80vh;
+    width: 100%;
     position: relative;
-    z-index: 1;  /* Lower z-index for the map */
+    z-index: 1;
+    /* Lower z-index for the map */
 }
 
 .timeline-container {
@@ -19,13 +21,15 @@ body {
     align-items: center;
 
     position: relative;
-    z-index: 2;  /* Higher z-index for timeline and tooltips */
-    background: white;  /* Ensures timeline area is opaque */
+    z-index: 2;
+    /* Higher z-index for timeline and tooltips */
+    background: white;
+    /* Ensures timeline area is opaque */
 }
 
 #timeline {
     width: 100%;
-    height: 10px;
+    height: 25px;
 }
 
 #year-display {
@@ -33,34 +37,37 @@ body {
     margin: 10px 0;
     font-family: Arial, sans-serif;
 }
-.timeline-marker {
-    width: 3px;
-    height: 25px;
-    background: #1a365d;  /* Darker blue */
-    position: absolute;
-    bottom: 0;
-    transform: translateX(-50%);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
-.timeline-marker::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: -4.5px;
-    width: 12px;
-    height: 12px;
-    background: #2b4c82;  /* Slightly lighter blue */
+.timeline-marker {
+    width: 24px;
+    height: 24px;
+    background: #2b4c82;
     border-radius: 50%;
     border: 2px solid #ffffff;
-    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    position: absolute;
+    bottom: 1px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
+/* .timeline-marker::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -8px;
+    width: 24px;
+    height: 24px;
+    background: #2b4c82;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+} */
+
 .timeline-marker:hover {
-    height: 30px;
-    background: #2563eb;  /* Brighter blue on hover */
+    transform: scale(1.2);
 }
 
 .timeline-marker:hover::after {
@@ -73,7 +80,8 @@ body {
     bottom: 35px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(30, 41, 59, 0.95);  /* Darker, slightly transparent */
+    background: rgba(30, 41, 59, 0.95);
+    /* Darker, slightly transparent */
     color: white;
     padding: 8px 12px;
     border-radius: 6px;
@@ -82,8 +90,9 @@ body {
     opacity: 0;
     transition: all 0.3s ease;
     pointer-events: none;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    z-index: 3;  /* Highest z-index for tooltips */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    /* Highest z-index for tooltips */
 
 }
 
@@ -150,14 +159,40 @@ body {
     z-index: 4;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
     transition: transform 0.3s ease;
-  }
+}
 
-  .floating-icon:hover {
+.floating-icon:hover {
     transform: scale(1.1);
     /* cursor: pointer; */
-  }
+}
 
-  .floating-icon svg {
+.floating-icon svg {
     width: 100%;
     height: 100%;
-  }
+}
+
+.map-container {
+    position: relative;
+    height: calc(100vh - 150px);
+    background-color: #f8fafc;
+}
+
+/* .community-marker {
+    width: 20px;
+    height: 20px;
+    background: rgba(59, 130, 246, 0.8);
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.community-marker:hover {
+    transform: scale(1.2);
+    background: rgba(59, 130, 246, 1);
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+} */
