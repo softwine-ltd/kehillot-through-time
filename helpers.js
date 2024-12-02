@@ -72,9 +72,14 @@ function numberToHebrewLetters(number) {
     // Convert tens
     if (remaining >= 10) {
         const tens = Math.floor(remaining / 10) * 10;
-        result += digits[tens];
-        result += '"';
         remaining %= 10;
+        if (remaining === 0) {
+            result += '"';
+            result += digits[tens];
+        } else {
+            result += digits[tens];
+            result += '"';
+        }
     }
 
     // Convert ones
@@ -126,6 +131,33 @@ function addEventMarkers() {
     });
 }
 
+// Parse CSV while respecting quotes
+function parseCSVLine(line) {
+    const result = [];
+    let current = '';
+    let inQuotes = false;
+
+    for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+
+        if (char === '"') {
+            inQuotes = !inQuotes;
+            continue;
+        }
+
+        if (char === ',' && !inQuotes) {
+            result.push(current);
+            current = '';
+            continue;
+        }
+
+        current += char;
+    }
+    result.push(current); // Push the last field
+
+    return result;
+}
+
 
 let markersLayer = {};
 let currentMarkers = [];
@@ -137,38 +169,85 @@ async function loadData(year) {
 
         // Parse CSV
         const rows = csvText.split('\n').slice(1); // Skip header
-        const kehilot = rows.map(row => {
-            const [name, name_he, lat, lon, rowYear, population, confidence, source] = row.split(',');
-            return {
-                name,
-                name_he,
-                lat: parseFloat(lat),
-                lon: parseFloat(lon),
-                year: parseInt(rowYear),
-                population: parseInt(population),
-                confidence,
-                source: source.replace(/"/g, '') // Remove quotes from source
-            };
-        });
+        const kehilot = rows
+            .filter(row => row.trim()) // Skip empty rows
+            .map(row => {
+                const [
+                    country, city, long, lat, year_start, year_end,
+                    pop_start, pop_end, probability, type, symbol,
+                    city_english, city_hebrew, city_yid, city_german,
+                    city_other, source, comment
+                ] = parseCSVLine(row).slice(0, 18);
 
-        updateMarkers(kehilot, year);
+
+                // If year_end is empty, use current year
+                const actualYearEnd = year_end == undefined || year_end.trim() === '' ? undefined : parseInt(year_end);
+                const actualPopEnd = pop_end == undefined || pop_end.trim() === '' ? undefined : parseInt(pop_end);
+
+
+                return {
+                    name: city, // Fallback to city if English name not available
+                    name_he: city_hebrew,
+                    lat: lat,
+                    lon: long,
+                    year_start: parseInt(year_start),
+                    year_end: actualYearEnd,
+                    population_start: parseInt(pop_start),
+                    population_end: actualPopEnd,
+                    confidence: probability, // Using probability as confidence indicator
+                    type: parseInt(type),
+                    symbol: parseInt(symbol),
+                    country,
+                    names: {
+                        english: city_english,
+                        yiddish: city_yid,
+                        german: city_german,
+                        other: city_other
+                    },
+                    source: source.replace(/"/g, ''), // Remove quotes from source
+                    comment
+                };
+            });
+
+        // Filter data based on the given year
+        const relevantKehilot = kehilot.filter(kehila =>
+            kehila.year_start <= year && (kehila.year_end === undefined || kehila.year_end >= year)
+        );
+
+        updateMarkers(relevantKehilot);
     } catch (error) {
         console.error('Error loading kehilot data:', error);
     }
 }
 
-function updateMarkers(kehilot, currentYear) {
+function updateMarkers(kehilot) {
     // Clear existing markers
     markersLayer.clearLayers();
     currentMarkers = [];
 
-    // Filter kehilot that existed by the current year
-    // TODO: add Kehila end date :((((
-    const relevantKehilot = kehilot.filter(k => k.year <= currentYear);
-
     // Add new markers
-    relevantKehilot.forEach(kehila => {
+    kehilot.forEach(kehila => {
         const marker = createCustomMarker(kehila);
+
+        const endYearDetails = kehila.year_end === undefined || kehila.year_end === '' ? '' : `
+                    <small>
+                        שנת חורבן: ${kehila.year_end < 0 ? Math.abs(kehila.year_end) + ' BCE' : kehila.year_end + ' CE'}
+                        (${numberToHebrewLetters(convertToHebrewYear(kehila.year_end))})
+                    </small>
+                    <br>
+        `;
+
+        const populationEndDetails = kehila.population_end === undefined || kehila.population_end === '' ? '' : `
+                    <div style="margin: 8px 0;">
+                        <strong> אוכלוסייה בחורבן:</strong> ${kehila.population_end.toLocaleString()}
+                    </div>
+        `;
+
+        const commentDetails = kehila.comment === undefined || kehila.comment === '' ? '' : `
+                    <div style="margin: 8px 0;">
+                        <strong> הערות:</strong> ${kehila.comment}
+                    </div>
+        `;
 
         // Create popup content
         const popupContent = `
@@ -177,9 +256,14 @@ function updateMarkers(kehilot, currentYear) {
                 <br>
                 ${kehila.name}
                 <br>
+                ${kehila.names.english ? `English: ${kehila.names.english} <br>` : ''}                
+                ${kehila.names.yiddish ? `ייִדיש: ${kehila.names.yiddish} <br>` : ''}                
+                ${kehila.names.german ? `Deutsch: ${kehila.names.german} <br>` : ''}                
+                ${kehila.names.other ? `אחר: ${kehila.names.other} <br>` : ''}
                 <div style="margin: 8px 0;">
-                    <strong>אוכלוסייה:</strong> ${kehila.population.toLocaleString()}
+                    <strong> אוכלוסייה בהקמה:</strong> ${kehila.population_start.toLocaleString()}
                 </div>
+                ${populationEndDetails}
                 <div style="
                     padding: 4px 8px;
                     background: ${getConfidenceColor(kehila.confidence)}22;
@@ -192,11 +276,14 @@ function updateMarkers(kehilot, currentYear) {
                 </div>
                 <div style="margin-top: 8px;">
                     <small>
-                        שנת ייסוד: ${kehila.year < 0 ? Math.abs(kehila.year) + ' BCE' : kehila.year + ' CE'}
-                        (${numberToHebrewLetters(convertToHebrewYear(kehila.year))})
+                        שנת ייסוד: ${kehila.year_start < 0 ? Math.abs(kehila.year_start) + ' BCE' : kehila.year_start + ' CE'}
+                        (${numberToHebrewLetters(convertToHebrewYear(kehila.year_start))})
                     </small>
                     <br>
+                    ${endYearDetails}
                     <small>מקור: ${formatSource(kehila.source)}</small>
+                    <br>
+                    ${commentDetails}
                 </div>
             </div>
         `;
@@ -287,7 +374,7 @@ function initializeMap() {
 function playTimeline(timeline) {
     const currentYear = parseInt(timeline.noUiSlider.get());
     const maxYear = 2024;
-    const interval = 1000/24;
+    const interval = 1000 / 24;
 
     const playInterval = setInterval(() => {
         const currentYear = parseInt(timeline.noUiSlider.get());
@@ -343,7 +430,7 @@ function getConfidenceText(confidence) {
 
 
 function createCustomMarker(kehila) {
-    const size = getMarkerSize(kehila.population);
+    const size = getMarkerSize(kehila.population_start);
     const color = getConfidenceColor(kehila.confidence);
 
     // Create custom div icon

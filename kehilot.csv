@@ -1,5 +1,11 @@
-name,name_he,lat,lon,year,population,confidence,source
-Jerusalem,ירושלים,31.7767,35.2345,-1000,50000,high,"Historical Records"
-Alexandria,אלכסנדריה,31.2001,29.9187,-332,25000,medium,"Ancient Documents"
-Babylon,בבל,32.5429,44.4212,-586,10000,low,"Talmudic Sources"
-Rome,רומא,41.9028,12.4964,-139,15000,medium,"Jewish Encyclopedia"
+country,city,long,lat,year_start,year_end,pop_start,pop_end,probability,type,symbol,city_english,city_hebrew,city_yid,city_german,city_other,source,comment
+Germany,München,11.575,48.1375,1000,1100,10,100,low,1,0,Munich,מינכן,,München,,https://de.wikipedia.org/wiki/Geschichte_der_Juden_in_M%C3%BCnchen,
+France,Arles,4.6278,43.6767,900,1000,100,200,high,2,3,,אַרְלְ,,,ארלדי,https://he.wikipedia.org/wiki/%D7%90%D7%A8%D7%9C,
+France,Arles,4.6278,43.6767,1100,1300,300,1200,high,2,3,,אַרְלְ,,,,https://www.encyclopedia.com/places/britain-ireland-france-and-low-countries/french-political-geography/arles,
+Poland,Inowłódz,20.221389,51.526944,1200,1400,300,150,high,2,2,,אינובלודז',,,,https://he.wikipedia.org/wiki/%D7%90%D7%99%D7%A0%D7%95%D7%91%D7%9C%D7%95%D7%93%D7%96%27,
+France,Trinquetaille,4.622222,43.680556,850,1000,10,200,medium,1,0,,טרינקווטיה,,,"טרונקטיילא, טְרַנְקְטֵיילִישׁ",https://www.jewishencyclopedia.com/articles/14520-trinquetaille,
+Czech,Boskovice,16.660002,49.487537,1100,1300,0,250,high,1,0,Boskovice,,,Boskowitz,,https://he.wikipedia.org/wiki/%D7%91%D7%95%D7%A1%D7%A7%D7%95%D7%91%D7%99%D7%A6%D7%94,
+Israel,Jerusalem,35.2345,31.7767,-1000,,50000,,high,1,0,Jerusalem,ירושלים,,,,Historical Records,לנצח נצחים
+Egypt,Alexandria,29.9187,31.2001,-332,,25000,,medium,1,0,Alexandria,אלכסנדריה,,,,Ancient Documents,
+Iraq,Babylon,44.4212,32.5429,-586,,10000,,low,1,0,Babylon,בבל,,,,Talmudic Sources,
+Italy,Rome,12.4964,41.9028,-139,,15000,,medium,1,0,Rome,רומא,,,,Jewish Encyclopedia,
