@@ -1,0 +1,5 @@
+name,name_he,lat,lon,year,population,confidence,source
+Jerusalem,ירושלים,31.7767,35.2345,-1000,50000,high,"Historical Records"
+Alexandria,אלכסנדריה,31.2001,29.9187,-332,25000,medium,"Ancient Documents"
+Babylon,בבל,32.5429,44.4212,-586,10000,low,"Talmudic Sources"
+Rome,רומא,41.9028,12.4964,-139,15000,medium,"Jewish Encyclopedia"
