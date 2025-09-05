@@ -102,7 +102,7 @@ function convertToHebrewYear(gregorianYear) {
 
 function addEventMarkers() {
     const timelineElement = document.getElementById('timeline');
-    const totalRange = 5025; // from -3000 to 2025
+    const totalRange = 3625; // from --1600 to 2025
 
     historicalEvents.forEach(event => {
         const marker = document.createElement('div');
@@ -330,10 +330,10 @@ function initializeMap() {
     const yearDisplay = document.getElementById('year-display');
 
     noUiSlider.create(timeline, {
-        start: [-3000],
+        start: [-1600],
         range: {
-            'min': [-3000],
-            'max': [2024]
+            'min': [-1600],
+            'max': [2025]
         },
         step: 1,
         tooltips: false
