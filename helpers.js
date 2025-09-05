@@ -108,7 +108,7 @@ function addEventMarkers() {
         const marker = document.createElement('div');
         marker.className = 'timeline-marker';
 
-        const position = ((event.year + 3000) / totalRange) * 100;
+        const position = ((event.year + 1600) / totalRange) * 100;
         marker.style.left = `${position}%`;
 
         const tooltip = document.createElement('div');
