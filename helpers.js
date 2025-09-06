@@ -102,7 +102,7 @@ function convertToHebrewYear(gregorianYear) {
 
 function addEventMarkers() {
     const timelineElement = document.getElementById('timeline');
-    const totalRange = 3625; // from --1600 to 2025
+    const totalRange = 3625; // from -1600 to 2025
 
     historicalEvents.forEach(event => {
         const marker = document.createElement('div');
