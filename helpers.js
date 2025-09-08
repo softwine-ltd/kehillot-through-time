@@ -20,10 +20,34 @@ const historicalEvents = [
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1813))
     },
     {
+        year: -586,
+        titleEn: "Temple Destruction",
+        titleHe: "חורבן בית המקדש הראשון",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-586))
+    },
+    {
         year: 70,
         titleEn: "Temple Destruction",
-        titleHe: "חורבן בית המקדש",
+        titleHe: "חורבן בית המקדש השני",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(70))
+    },
+    {
+        year: 1096,
+        titleEn: "Exile from Spain",
+        titleHe: "מסע הצלב הראשון",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1096))
+    },
+    {
+        year: 1147,
+        titleEn: "Exile from Spain",
+        titleHe: "מסע הצלב השני",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1147))
+    },
+    {
+        year: 1189,
+        titleEn: "Exile from Spain",
+        titleHe: "מסע הצלב השלישי",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1189))
     },
     {
         year: 1492,
@@ -161,11 +185,19 @@ function parseCSVLine(line) {
 
 let markersLayer = {};
 let currentMarkers = [];
+// Data is fetched only once
+let cachedCsvData = null; // Variable to store the data
 
 async function loadData(year) {
     try {
-        const response = await fetch('kehilot.csv');
-        const csvText = await response.text();
+        // Check if data is already loaded
+       if (!cachedCsvData) {
+           console.log("Fetching data for the first time...");
+           const response = await fetch('kehilot.csv');
+           cachedCsvData = await response.text(); //  Store the data
+           console.log("Data fetched and cached.");
+           }
+        const csvText = cachedCsvData;
 
         // Parse CSV
         const rows = csvText.split('\n').slice(1); // Skip header
