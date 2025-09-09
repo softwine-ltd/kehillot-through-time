@@ -271,7 +271,9 @@ async function loadData(year) {
     //        cachedCsvData = await response.text(); //  Store the data
     //        console.log("Data fetched and cached.");
     //        }
-         const csvText = cachedCsvData;
+       console.log("Requesting data...");
+         const csvData = await getData(); // This will only fetch the first time
+         const csvText = csvData;
 
         // Parse CSV
         const rows = csvText.split('\n').slice(1); // Skip header
