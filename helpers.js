@@ -290,9 +290,15 @@ async function loadData(year) {
 
                 // If year_end is empty, use current year
                 const actualYearEnd = year_end == undefined || year_end.trim() === '' ? undefined : parseInt(year_end);
-                const actualPopEnd = pop_end == undefined || pop_end.trim() === '' ? undefined : parseInt(pop_end);
-
-
+                const actualPopEnd = pop_end == undefined || pop_end.trim() === '' ? parseInt(pop_start) : parseInt(pop_end);
+                if (actualYearEnd == undefined) {
+                    actualPop = parseInt(pop_start);
+                } else {    
+                    const year_start_int = parseInt(year_start);
+                    const years_span = actualYearEnd - year_start_int;
+                    var actualPop = Math.floor(((actualYearEnd - year)*parseInt(pop_start) + (year - year_start_int)*actualPopEnd)/years_span);
+                }
+                
                 return {
                     name: city, // Fallback to city if English name not available
                     name_he: city_hebrew,
@@ -302,6 +308,7 @@ async function loadData(year) {
                     year_end: actualYearEnd,
                     population_start: parseInt(pop_start),
                     population_end: actualPopEnd,
+                    actual_pop: actualPop,
                     confidence: probability, // Using probability as confidence indicator
                     type: parseInt(type),
                     symbol: parseInt(symbol),
@@ -345,9 +352,9 @@ function updateMarkers(kehilot) {
                     <br>
         `;
 
-        const populationEndDetails = kehila.population_end === undefined || kehila.population_end === '' ? '' : `
+        const populationEndDetails = kehila.actual_pop === undefined || kehila.actual_pop === '' ? '' : `
                     <div style="margin: 8px 0;">
-                        <strong> אוכלוסייה בחורבן:</strong> ${kehila.population_end.toLocaleString()}
+                        <strong> אוכלוסייה:</strong> ${kehila.actual_pop.toLocaleString()}
                     </div>
         `;
 
@@ -501,11 +508,11 @@ function playTimeline(timeline) {
 function getMarkerSize(population) {
     // Base size for the marker
     const baseSize = 8;
-    if (population < 1000) return baseSize;
-    if (population < 5000) return baseSize * 1.5;
-    if (population < 10000) return baseSize * 2;
-    if (population < 50000) return baseSize * 2.5;
-    return baseSize * 3;
+//    if (population < 1000) return baseSize;
+//    if (population < 5000) return baseSize * 1.5;
+//    if (population < 10000) return baseSize * 2;
+//    if (population < 50000) return baseSize * 2.5;
+    return Math.max(baseSize, Math.floor(2.2 * Math.log(population)));
 }
 
 
@@ -538,7 +545,7 @@ function getConfidenceText(confidence) {
 
 
 function createCustomMarker(kehila) {
-    const size = getMarkerSize(kehila.population_start);
+    const size = getMarkerSize(kehila.actual_pop);
     const color = getConfidenceColor(kehila.confidence);
 
     // Create custom div icon
