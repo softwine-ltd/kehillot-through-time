@@ -20,26 +20,74 @@ const historicalEvents = [
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1813))
     },
     {
-        year: -586,
+        year: -1000,
+        titleEn: "Reign of King David",
+        titleHe: "מלכות דוד",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1000))
+    },
+    {
+        year: -722,
         titleEn: "Temple Destruction",
+        titleHe: "חורבן ממלכת ישראל",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-722))
+    },
+    {
+        year: -586,
+        titleEn: "Destruction of the First Temple",
         titleHe: "חורבן בית המקדש הראשון",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-586))
     },
+     {
+        year: -457,
+        titleEn: "Aliya of Ezra",
+        titleHe: "עליית עזרא לירושלים",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-457))
+    },
+      {
+        year: -167,
+        titleEn: "Maccabean Revolt",
+        titleHe: "מרד חשמונאים",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-167))
+    },
     {
         year: 70,
-        titleEn: "Temple Destruction",
+        titleEn: "Destruction of the Second Temple",
         titleHe: "חורבן בית המקדש השני",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(70))
     },
+        {
+        year: 132,
+        titleEn: "Bar Kokhba revolt",
+        titleHe: "מרד בר כוכבא",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(132))
+    },
+     {
+        year: 200,
+        titleEn: "End of Tannaim Period",
+        titleHe: "סוף תקופת התנאים",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(200))
+    },
+      {
+        year: 500,
+        titleEn: "End of Amoraim Period",
+        titleHe: "סוף תקופת האמוראים",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(500))
+    },
+    {
+        year: 1038,
+        titleEn: "End of Amoraim Geonim",
+        titleHe: "סוף תקופת הגאונים",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1038))
+    },
     {
         year: 1096,
-        titleEn: "Exile from Spain",
+        titleEn: "First Crusade",
         titleHe: "מסע הצלב הראשון",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(1096))
     },
     {
         year: 1147,
-        titleEn: "Exile from Spain",
+        titleEn: "Second Crusade",
         titleHe: "מסע הצלב השני",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(1147))
     },
@@ -51,8 +99,8 @@ const historicalEvents = [
     },
     {
         year: 1492,
-        titleEn: "Exile from Spain",
-        titleHe: "גירוש ספרד",
+        titleEn: "Exile from Spain and End of Rishonim Period",
+        titleHe: "גירוש ספרד וסוף תקופת הראשונים",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(1492))
     },
     {
@@ -128,6 +176,10 @@ function addEventMarkers() {
     const timelineElement = document.getElementById('timeline');
     const totalRange = 3625; // from -1600 to 2025
 
+    // Remove existing markers to avoid duplicates (e.g., on resize)
+    const existingMarkers = timelineElement.querySelectorAll('.timeline-marker');
+    existingMarkers.forEach(m => m.remove());
+
     historicalEvents.forEach(event => {
         const marker = document.createElement('div');
         marker.className = 'timeline-marker';
@@ -188,16 +240,38 @@ let currentMarkers = [];
 // Data is fetched only once
 let cachedCsvData = null; // Variable to store the data
 
+// A self-executing function to create a private scope for our promise
+const getData = (() => {
+    let dataPromise = null;
+  
+    return async () => {
+      // If the promise doesn't exist yet, create it
+      if (!dataPromise) {
+        console.log("Fetching data for the first time...");
+        dataPromise = fetch('kehilot.csv').then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.text();
+        });
+      } else {
+        console.log("Fetch already in progress or completed, returning existing promise.");
+      }
+      // Return the promise (either the new one or the existing one)
+      return dataPromise;
+    };
+  })();
+
 async function loadData(year) {
     try {
         // Check if data is already loaded
-       if (!cachedCsvData) {
-           console.log("Fetching data for the first time...");
-           const response = await fetch('kehilot.csv');
-           cachedCsvData = await response.text(); //  Store the data
-           console.log("Data fetched and cached.");
-           }
-        const csvText = cachedCsvData;
+    //    if (!cachedCsvData) {
+    //        console.log("Fetching data for the first time...");
+    //        const response = await fetch('kehilot.csv');
+    //        cachedCsvData = await response.text(); //  Store the data
+    //        console.log("Data fetched and cached.");
+    //        }
+         const csvText = cachedCsvData;
 
         // Parse CSV
         const rows = csvText.split('\n').slice(1); // Skip header
