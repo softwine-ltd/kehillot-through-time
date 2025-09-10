@@ -13,6 +13,8 @@ const historicalArrows = [
         startLon: 35.2137,
         endLat: 33.351111,
         endLon: 43.786111,
+        midLat: 32.5,
+        midLon: 39.5,
         yearStart: -586,
         yearEnd: -516,
         titleEn: "Babylonian Exile",
@@ -23,8 +25,10 @@ const historicalArrows = [
     {
         startLat: 39.88207,
         startLon: -3.9341,
-        endLat: 48,
+        endLat: 50,
         endLon: 13.4050,
+        midLat: 45,
+        midLon: 5,
         yearStart: 1492,
         yearEnd: 1600,
         titleEn: "Spanish Expulsion to Central Europe",
@@ -32,11 +36,27 @@ const historicalArrows = [
         color: expulsion_color,
         description: "Migration of Sephardic Jews after the Spanish Inquisition"
     },
-       {
+    {
+        startLat: 39.88207,
+        startLon: -3.9341,
+        endLat: 30.045964312758123, 
+        endLon: 31.236493887508182,
+        midLat: 28,
+        midLon: -13,
+        yearStart: 1492,
+        yearEnd: 1600,
+        titleEn: "Spanish Expulsion to North Africa",
+        titleHe: "גירוש ספרד לצפון אפריקה",
+        color: expulsion_color,
+        description: "Migration of Sephardic Jews after the Spanish Inquisition"
+    },
+    {
         startLat: 52.5200,
         startLon: 23.4050,
         endLat: 40.69857,
         endLon: -74.0401,
+        midLat: 60,
+        midLon: -25,
         yearStart: 1880,
         yearEnd: 1920,
         titleEn: "Eastern European Immigration to America",
@@ -45,16 +65,18 @@ const historicalArrows = [
         description: "Mass migration during the late 19th and early 20th centuries"
     },
     {
-        startLat: 52.5200,
-        endLon: 13.4050,
-        endLat: 40.69857,
-        endLon: 34.0401,
-        yearStart: 1000,
-        yearEnd: 1920,
-        titleEn: "Eastern European Immigration to America",
-        titleHe: "הגירה ממזרח אירופה לאמריקה",
+        startLat: 50.590556,
+        startLon: 21.002778,
+        endLat: 31.7683,
+        endLon: 35.2137,
+        midLat: 49.5,
+        midLon: 17,
+        yearStart: 1697,
+        yearEnd: 1710,
+        titleEn: "Aliyah of Judah HeHasid ",
+        titleHe: " עליית רבי יהודה החסיד  (1000 איש)",
         color: emigration_color,
-        description: "Mass migration during the late 19th and early 20th centuries"
+        description: "en.wikipedia.org/wiki/Judah_HeHasid_(Jerusalem)"
     }
 ];
 
@@ -629,17 +651,52 @@ function createCustomMarker(kehila) {
     return L.marker([kehila.lat, kehila.lon], { icon });
 }
 
+function generateBezierCurve(startPoint, midPoint, endPoint) {
+    // Generate a quadratic Bezier curve with the midpoint as control point
+    const points = [];
+    const steps = 50; // Number of points along the curve
+    
+    for (let i = 0; i <= steps; i++) {
+        const t = i / steps;
+        
+        // Quadratic Bezier formula: B(t) = (1-t)²P₀ + 2(1-t)tP₁ + t²P₂
+        const lat = Math.pow(1 - t, 2) * startPoint[0] + 
+                   2 * (1 - t) * t * midPoint[0] + 
+                   Math.pow(t, 2) * endPoint[0];
+        
+        const lon = Math.pow(1 - t, 2) * startPoint[1] + 
+                   2 * (1 - t) * t * midPoint[1] + 
+                   Math.pow(t, 2) * endPoint[1];
+        
+        points.push([lat, lon]);
+    }
+    
+    return points;
+}
+
 function createArrow(arrowData) {
-    // Create the polyline for the arrow
-    const polyline = L.polyline([
+    // Generate Bezier curve points
+    const curvePoints = generateBezierCurve(
         [arrowData.startLat, arrowData.startLon],
+        [arrowData.midLat, arrowData.midLon],
         [arrowData.endLat, arrowData.endLon]
-    ], {
+    );
+
+    // Create the curved polyline for the arrow
+    const polyline = L.polyline(curvePoints, {
         color: arrowData.color,
         weight: 4,
         opacity: 0.8,
         className: 'historical-arrow'
     });
+
+    // Calculate the direction for the arrowhead based on the last segment of the curve
+    const lastSegmentStart = curvePoints[curvePoints.length - 2];
+    const lastSegmentEnd = curvePoints[curvePoints.length - 1];
+    const arrowRotation = getArrowRotation(
+        lastSegmentStart[0], lastSegmentStart[1],
+        lastSegmentEnd[0], lastSegmentEnd[1]
+    );
 
     // Create arrowhead marker
     const arrowhead = L.marker([arrowData.endLat, arrowData.endLon], {
@@ -651,7 +708,7 @@ function createArrow(arrowData) {
                 border-left: 8px solid transparent;
                 border-right: 8px solid transparent;
                 border-bottom: 12px solid ${arrowData.color};
-                transform: rotate(${getArrowRotation(arrowData.startLat, arrowData.startLon, arrowData.endLat, arrowData.endLon)}deg);
+                transform: rotate(${arrowRotation}deg);
             "></div>`,
             iconSize: [16, 16],
             iconAnchor: [8, 6]
