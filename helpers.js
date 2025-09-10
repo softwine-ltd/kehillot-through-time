@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 const expulsion_color ="#e74c3c"
 const emigration_color ="#2ecc71"  // "#3498db"
+const crusades_color = "#ff2222"
 const historicalArrows = [
     {
         startLat: 31.7683,
@@ -21,6 +22,20 @@ const historicalArrows = [
         titleHe: "גלות בבל",
         color: expulsion_color,
         description: "Migration pattern from Jerusalem to major diaspora centers"
+    },
+        {
+        startLat: 50,
+        startLon: 5,
+        endLat: 31.76830,
+        endLon: 35.2137,
+        midLat: 42,
+        midLon: 32,
+        yearStart: 1096,
+        yearEnd: 1100,
+        titleEn: "First Crusade",
+        titleHe: "מסע הצלב הראשון",
+        color: crusades_color,
+        description: "First Crusade"
     },
     {
         startLat: 39.88207,
