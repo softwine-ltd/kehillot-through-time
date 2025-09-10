@@ -171,10 +171,13 @@ function convertToHebrewYear(gregorianYear) {
 
     return jewishYear;
 }
+const startYear0 = -1400;
+const endYear0 = 2025;
+const totalRange0 = endYear0 - startYear0; // from -1600 to 2025
 
 function addEventMarkers() {
     const timelineElement = document.getElementById('timeline');
-    const totalRange = 3625; // from -1600 to 2025
+    const totalRange = totalRange0; // from -1600 to 2025
 
     // Remove existing markers to avoid duplicates (e.g., on resize)
     const existingMarkers = timelineElement.querySelectorAll('.timeline-marker');
@@ -184,7 +187,7 @@ function addEventMarkers() {
         const marker = document.createElement('div');
         marker.className = 'timeline-marker';
 
-        const position = ((event.year + 1600) / totalRange) * 100;
+        const position = ((event.year - startYear0) / totalRange) * 100;
         marker.style.left = `${position}%`;
 
         const tooltip = document.createElement('div');
@@ -281,11 +284,11 @@ async function loadData(year) {
             .filter(row => row.trim()) // Skip empty rows
             .map(row => {
                 const [
-                    country, city, long, lat, year_start, year_end,
+                    country, city, long, lat, year_estab, year_start, year_end,
                     pop_start, pop_end, probability, type, symbol,
                     city_english, city_hebrew, city_yid, city_german,
                     city_other, source, comment
-                ] = parseCSVLine(row).slice(0, 18);
+                ] = parseCSVLine(row).slice(0, 19);
 
 
                 // If year_end is empty, use current year
@@ -304,6 +307,7 @@ async function loadData(year) {
                     name_he: city_hebrew,
                     lat: lat,
                     lon: long,
+                    year_estab: parseInt(year_estab),
                     year_start: parseInt(year_start),
                     year_end: actualYearEnd,
                     population_start: parseInt(pop_start),
@@ -344,19 +348,19 @@ function updateMarkers(kehilot) {
     kehilot.forEach(kehila => {
         const marker = createCustomMarker(kehila);
 
-        const endYearDetails = kehila.year_end === undefined || kehila.year_end === '' ? '' : `
-                    <small>
-                        שנת חורבן: ${kehila.year_end < 0 ? Math.abs(kehila.year_end) + ' BCE' : kehila.year_end + ' CE'}
-                        (${numberToHebrewLetters(convertToHebrewYear(kehila.year_end))})
-                    </small>
-                    <br>
-        `;
+        // const endYearDetails = kehila.year_end === undefined || kehila.year_end === '' ? '' : `
+        //             <small>
+        //                 שנת חורבן: ${kehila.year_end < 0 ? Math.abs(kehila.year_end) + ' BCE' : kehila.year_end + ' CE'}
+        //                 (${numberToHebrewLetters(convertToHebrewYear(kehila.year_end))})
+        //             </small>
+        //             <br>
+        // `;
 
-        const populationEndDetails = kehila.actual_pop === undefined || kehila.actual_pop === '' ? '' : `
-                    <div style="margin: 8px 0;">
-                        <strong> אוכלוסייה:</strong> ${kehila.actual_pop.toLocaleString()}
-                    </div>
-        `;
+        // const populationEndDetails = kehila.actual_pop === undefined || kehila.actual_pop === '' ? '' : `
+        //             <div style="margin: 8px 0;">
+        //                 <strong> אוכלוסייה:</strong> ${kehila.actual_pop.toLocaleString()}
+        //             </div>
+        // `;
 
         const commentDetails = kehila.comment === undefined || kehila.comment === '' ? '' : `
                     <div style="margin: 8px 0;">
@@ -376,9 +380,9 @@ function updateMarkers(kehilot) {
                 ${kehila.names.german ? `Deutsch: ${kehila.names.german} <br>` : ''}                
                 ${kehila.names.other ? `אחר: ${kehila.names.other} <br>` : ''}
                 <div style="margin: 8px 0;">
-                    <strong> אוכלוסייה בהקמה:</strong> ${kehila.population_start.toLocaleString()}
+                    <strong> אוכלוסייה:</strong> ${kehila.actual_pop.toLocaleString()}
                 </div>
-                ${populationEndDetails}
+  
                 <div style="
                     padding: 4px 8px;
                     background: ${getConfidenceColor(kehila.confidence)}22;
@@ -391,11 +395,10 @@ function updateMarkers(kehilot) {
                 </div>
                 <div style="margin-top: 8px;">
                     <small>
-                        שנת ייסוד: ${kehila.year_start < 0 ? Math.abs(kehila.year_start) + ' BCE' : kehila.year_start + ' CE'}
-                        (${numberToHebrewLetters(convertToHebrewYear(kehila.year_start))})
+                        שנת ייסוד: ${kehila.year_estab < 0 ? Math.abs(kehila.year_estab) + ' BCE' : kehila.year_estab + ' CE'}
+                        (${numberToHebrewLetters(convertToHebrewYear(kehila.year_estab))})
                     </small>
                     <br>
-                    ${endYearDetails}
                     <small>מקור: ${formatSource(kehila.source)}</small>
                     <br>
                     ${commentDetails}
@@ -445,10 +448,10 @@ function initializeMap() {
     const yearDisplay = document.getElementById('year-display');
 
     noUiSlider.create(timeline, {
-        start: [-1600],
+        start: [startYear0],
         range: {
-            'min': [-1600],
-            'max': [2025]
+            'min': [startYear0],
+            'max': [endYear0]
         },
         step: 1,
         tooltips: false
@@ -488,7 +491,7 @@ function initializeMap() {
 
 function playTimeline(timeline) {
     const currentYear = parseInt(timeline.noUiSlider.get());
-    const maxYear = 2024;
+    const maxYear = endYear0;
     const interval = 1000 / 24;
 
     const playInterval = setInterval(() => {
