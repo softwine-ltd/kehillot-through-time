@@ -511,6 +511,7 @@ function updateMarkers(kehilot) {
     }
 }
 var playIntervalGlobal = null;
+var animationSpeed = 10; // Default speed multiplier
 
 function initializeMap() {
     // Initialize map
@@ -571,6 +572,15 @@ function initializeMap() {
     const playButton = document.getElementById('playButton');
     let isPlaying = false;
 
+    // Speed control
+    const speedControl = document.getElementById('speedControl');
+    const speedDisplay = document.getElementById('speedDisplay');
+    
+    speedControl.addEventListener('input', (e) => {
+        animationSpeed = parseInt(e.target.value);
+        speedDisplay.textContent = animationSpeed + 'x';
+    });
+
     // Toggle play/pause
     playButton.addEventListener('click', () => {
         isPlaying = !isPlaying;
@@ -588,7 +598,8 @@ function initializeMap() {
 function playTimeline(timeline) {
     const currentYear = parseInt(timeline.noUiSlider.get());
     const maxYear = endYear0;
-    const interval = 1000 / 24;
+    const baseInterval = 1000 / 24; // Base interval for 1x speed
+    const interval = baseInterval / animationSpeed; // Adjust interval based on speed
 
     const playInterval = setInterval(() => {
         const currentYear = parseInt(timeline.noUiSlider.get());
@@ -599,7 +610,8 @@ function playTimeline(timeline) {
             return;
         }
 
-        timeline.noUiSlider.set(currentYear + 10);
+        // Advance by 1 year per step (regardless of speed)
+        timeline.noUiSlider.set(currentYear + animationSpeed);
     }, interval);
     playIntervalGlobal = playInterval;
 }

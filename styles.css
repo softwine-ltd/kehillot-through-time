@@ -200,6 +200,46 @@ body {
     transform: scale(1.2);
 }
 
+/* Speed control styling */
+#speedControl {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #e5e7eb;
+    outline: none;
+    border-radius: 8px;
+}
+
+#speedControl::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #3b82f6;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#speedControl::-webkit-slider-thumb:hover {
+    background: #2563eb;
+    transform: scale(1.1);
+}
+
+#speedControl::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #3b82f6;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+#speedControl::-moz-range-thumb:hover {
+    background: #2563eb;
+    transform: scale(1.1);
+}
+
 /* .community-marker {
     width: 20px;
     height: 20px;
