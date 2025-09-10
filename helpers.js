@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     markerClusterScript.onload = initializeMap;  // Call initialization after MarkerCluster loads
     document.head.appendChild(markerClusterScript);
 });
-
+const expulsion_color ="#e74c3c"
+const emigration_color ="#2ecc71"  // "#3498db"
 const historicalArrows = [
     {
         startLat: 31.7683,
@@ -16,7 +17,7 @@ const historicalArrows = [
         yearEnd: -516,
         titleEn: "Babylonian Exile",
         titleHe: "גלות בבל",
-        color: "#e74c3c",
+        color: expulsion_color,
         description: "Migration pattern from Jerusalem to major diaspora centers"
     },
     {
@@ -28,7 +29,7 @@ const historicalArrows = [
         yearEnd: 1600,
         titleEn: "Spanish Expulsion to Central Europe",
         titleHe: "גירוש ספרד למרכז אירופה",
-        color: "#f39c12",
+        color: expulsion_color,
         description: "Migration of Sephardic Jews after the Spanish Inquisition"
     },
        {
@@ -36,12 +37,12 @@ const historicalArrows = [
         startLon: 23.4050,
         endLat: 40.69857,
         endLon: -74.0401,
-        yearStart: 1800,
-        yearEnd: 2000,
-        titleEn: "Spanish Expulsion to Central Europe",
-        titleHe: "גירוש ספרד למרכז אירופה",
-        color: "#f39c12",
-        description: "Migration of Sephardic Jews after the Spanish Inquisition"
+        yearStart: 1880,
+        yearEnd: 1920,
+        titleEn: "Eastern European Immigration to America",
+        titleHe: "הגירה ממזרח אירופה לאמריקה",
+        color: emigration_color,
+        description: "Mass migration during the late 19th and early 20th centuries"
     },
     {
         startLat: 52.5200,
@@ -52,7 +53,7 @@ const historicalArrows = [
         yearEnd: 1920,
         titleEn: "Eastern European Immigration to America",
         titleHe: "הגירה ממזרח אירופה לאמריקה",
-        color: "#3498db",
+        color: emigration_color,
         description: "Mass migration during the late 19th and early 20th centuries"
     }
 ];
