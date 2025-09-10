@@ -6,6 +6,57 @@ document.addEventListener('DOMContentLoaded', function () {
     document.head.appendChild(markerClusterScript);
 });
 
+const historicalArrows = [
+    {
+        startLat: 31.7683,
+        startLon: 35.2137,
+        endLat: 33.351111,
+        endLon: 43.786111,
+        yearStart: -586,
+        yearEnd: -516,
+        titleEn: "Babylonian Exile",
+        titleHe: "גלות בבל",
+        color: "#e74c3c",
+        description: "Migration pattern from Jerusalem to major diaspora centers"
+    },
+    {
+        startLat: 39.88207,
+        startLon: -3.9341,
+        endLat: 48,
+        endLon: 13.4050,
+        yearStart: 1492,
+        yearEnd: 1600,
+        titleEn: "Spanish Expulsion to Central Europe",
+        titleHe: "גירוש ספרד למרכז אירופה",
+        color: "#f39c12",
+        description: "Migration of Sephardic Jews after the Spanish Inquisition"
+    },
+       {
+        startLat: 52.5200,
+        startLon: 23.4050,
+        endLat: 40.69857,
+        endLon: -74.0401,
+        yearStart: 1800,
+        yearEnd: 2000,
+        titleEn: "Spanish Expulsion to Central Europe",
+        titleHe: "גירוש ספרד למרכז אירופה",
+        color: "#f39c12",
+        description: "Migration of Sephardic Jews after the Spanish Inquisition"
+    },
+    {
+        startLat: 52.5200,
+        endLon: 13.4050,
+        endLat: 40.69857,
+        endLon: 34.0401,
+        yearStart: 1000,
+        yearEnd: 1920,
+        titleEn: "Eastern European Immigration to America",
+        titleHe: "הגירה ממזרח אירופה לאמריקה",
+        color: "#3498db",
+        description: "Mass migration during the late 19th and early 20th centuries"
+    }
+];
+
 const historicalEvents = [
     {
         year: -1313,
@@ -240,6 +291,8 @@ function parseCSVLine(line) {
 
 let markersLayer = {};
 let currentMarkers = [];
+let arrowsLayer = {};
+let currentArrows = [];
 // Data is fetched only once
 let cachedCsvData = null; // Variable to store the data
 
@@ -443,6 +496,10 @@ function initializeMap() {
     markersLayer = L.markerClusterGroup();
     map.addLayer(markersLayer);
 
+    // Initialize arrows layer
+    arrowsLayer = L.layerGroup();
+    map.addLayer(arrowsLayer);
+
     // Initialize timeline
     const timeline = document.getElementById('timeline');
     const yearDisplay = document.getElementById('year-display');
@@ -470,6 +527,7 @@ function initializeMap() {
             : `${year} CE (${hebrewLetters})`;
         yearDisplay.textContent = yearText;
         loadData(year);
+        updateArrows(year);
     });
 
     const playButton = document.getElementById('playButton');
@@ -558,7 +616,7 @@ function createCustomMarker(kehila) {
             width: ${size * 2}px;
             height: ${size * 2}px;
             background: ${color};
-            border: 2px solid white;
+            border: 2px solid red;
             border-radius: 50%;
             box-shadow: 0 0 4px rgba(0,0,0,0.3);
             opacity: 0.9;
@@ -568,6 +626,97 @@ function createCustomMarker(kehila) {
     });
 
     return L.marker([kehila.lat, kehila.lon], { icon });
+}
+
+function createArrow(arrowData) {
+    // Create the polyline for the arrow
+    const polyline = L.polyline([
+        [arrowData.startLat, arrowData.startLon],
+        [arrowData.endLat, arrowData.endLon]
+    ], {
+        color: arrowData.color,
+        weight: 4,
+        opacity: 0.8,
+        className: 'historical-arrow'
+    });
+
+    // Create arrowhead marker
+    const arrowhead = L.marker([arrowData.endLat, arrowData.endLon], {
+        icon: L.divIcon({
+            className: 'arrowhead-marker',
+            html: `<div style="
+                width: 0;
+                height: 0;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 12px solid ${arrowData.color};
+                transform: rotate(${getArrowRotation(arrowData.startLat, arrowData.startLon, arrowData.endLat, arrowData.endLon)}deg);
+            "></div>`,
+            iconSize: [16, 16],
+            iconAnchor: [8, 6]
+        })
+    });
+
+    // Create popup content for the arrow
+    const popupContent = `
+        <div style="direction: rtl; text-align: right;">
+            <strong style="font-size: 16px;">${arrowData.titleHe}</strong>
+            <br>
+            ${arrowData.titleEn}
+            <br>
+            <div style="margin: 8px 0;">
+                <strong>תקופה:</strong> 
+                ${arrowData.yearStart < 0 ? Math.abs(arrowData.yearStart) + ' BCE' : arrowData.yearStart + ' CE'} - 
+                ${arrowData.yearEnd < 0 ? Math.abs(arrowData.yearEnd) + ' BCE' : arrowData.yearEnd + ' CE'}
+            </div>
+            <div style="margin: 8px 0;">
+                <strong>תיאור:</strong> ${arrowData.description}
+            </div>
+        </div>
+    `;
+
+    // Bind popup to both polyline and arrowhead
+    polyline.bindPopup(popupContent, {
+        maxWidth: 300,
+        className: 'custom-popup'
+    });
+    arrowhead.bindPopup(popupContent, {
+        maxWidth: 300,
+        className: 'custom-popup'
+    });
+
+    return { polyline, arrowhead };
+}
+
+function getArrowRotation(startLat, startLon, endLat, endLon) {
+    const deltaLat = endLat - startLat;
+    const deltaLon = endLon - startLon;
+    const angle = Math.atan2(deltaLon, deltaLat) * (180 / Math.PI);
+    return angle;
+}
+
+function updateArrows(year) {
+    // Clear existing arrows
+    arrowsLayer.clearLayers();
+    currentArrows = [];
+
+    // Filter arrows based on the current year
+    const relevantArrows = historicalArrows.filter(arrow => 
+        year >= arrow.yearStart && year <= arrow.yearEnd
+    );
+
+    // Add new arrows
+    relevantArrows.forEach(arrowData => {
+        const arrow = createArrow(arrowData);
+        currentArrows.push(arrow);
+        arrowsLayer.addLayer(arrow.polyline);
+        arrowsLayer.addLayer(arrow.arrowhead);
+    });
+
+    // Add arrows layer to map if not already added
+    if (!map.hasLayer(arrowsLayer)) {
+        map.addLayer(arrowsLayer);
+    }
 }
 
 function formatSource(source) {
