@@ -295,6 +295,17 @@ function addEventMarkers() {
         `;
 
         marker.appendChild(tooltip);
+        
+        // Add click event handler to change the timeline year
+        marker.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent event bubbling
+            const timeline = document.getElementById('timeline');
+            timeline.noUiSlider.set(event.year);
+        });
+        
+        // Add cursor pointer style to indicate clickability
+        marker.style.cursor = 'pointer';
+        
         timelineElement.appendChild(marker);
     });
 }
@@ -712,7 +723,7 @@ function createArrow(arrowData) {
     // Create the curved polyline for the arrow
     const polyline = L.polyline(curvePoints, {
         color: arrowData.color,
-        weight: 4,
+        weight: 5,
         opacity: 0.8,
         className: 'historical-arrow'
     });
