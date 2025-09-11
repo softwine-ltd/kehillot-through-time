@@ -537,10 +537,17 @@ function initializeMap() {
         ]
     });
 
-    // Add tile layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    // Create tile layers
+    const osmTileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
+    });
+    
+    const osmDeTileLayer = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    });
+    
+    // Add default tile layer
+    osmTileLayer.addTo(map);
 
     // Initialize markers layer
     markersLayer = L.markerClusterGroup();
@@ -590,6 +597,26 @@ function initializeMap() {
     speedControl.addEventListener('input', (e) => {
         animationSpeed = parseInt(e.target.value);
         speedDisplay.textContent = animationSpeed + 'x';
+    });
+
+    // Tile layer control
+    const tileSelector = document.getElementById('tileSelector');
+    let currentTileLayer = osmTileLayer;
+    
+    tileSelector.addEventListener('change', (e) => {
+        const selectedTile = e.target.value;
+        
+        // Remove current tile layer
+        map.removeLayer(currentTileLayer);
+        
+        // Add new tile layer based on selection
+        if (selectedTile === 'osm-de') {
+            currentTileLayer = osmDeTileLayer;
+        } else {
+            currentTileLayer = osmTileLayer;
+        }
+        
+        currentTileLayer.addTo(map);
     });
 
     // Toggle play/pause
