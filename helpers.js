@@ -102,12 +102,12 @@ const historicalEvents = [
         titleHe: "יציאת מצרים",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1313))
     },
-    {
-        year: -1813,
-        titleEn: "Abraham Born",
-        titleHe: "לידת אברהם אבינו",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1813))
-    },
+    // {
+    //     year: -1813,
+    //     titleEn: "Abraham Born",
+    //     titleHe: "לידת אברהם אבינו",
+    //     hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1813))
+    // },
     {
         year: -1000,
         titleEn: "Reign of King David",
@@ -522,7 +522,7 @@ function updateMarkers(kehilot) {
     }
 }
 var playIntervalGlobal = null;
-var animationSpeed = 10; // Default speed multiplier
+var animationSpeed = 4; // Default speed multiplier
 
 function initializeMap() {
     // Initialize map
