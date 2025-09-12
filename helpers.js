@@ -115,6 +115,12 @@ const historicalEvents = [
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1000))
     },
     {
+        year: -928,
+        titleEn: "Dissolution of the United Kingdom of Israel",
+        titleHe: "פילוג ממלכת ישראל המאוחדת",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-928))
+    },
+    {
         year: -722,
         titleEn: "Temple Destruction",
         titleHe: "חורבן ממלכת ישראל",
@@ -344,6 +350,26 @@ let arrowsLayer = {};
 let currentArrows = [];
 // Data is fetched only once
 let cachedCsvData = null; // Variable to store the data
+let eventsLayer = {};
+let currentEvents = [];
+// Events data fetch (cached single fetch like kehilot)
+const getEventsData = (() => {
+    let dataPromise = null;
+    return async () => {
+        if (!dataPromise) {
+            console.log("Fetching events data for the first time...");
+            dataPromise = fetch('events.csv').then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            });
+        } else {
+            console.log("Events fetch already in progress or completed, returning existing promise.");
+        }
+        return dataPromise;
+    };
+})();
 
 // A self-executing function to create a private scope for our promise
 const getData = (() => {
@@ -557,6 +583,10 @@ function initializeMap() {
     arrowsLayer = L.layerGroup();
     map.addLayer(arrowsLayer);
 
+    // Initialize events layer (ellipses)
+    eventsLayer = L.layerGroup();
+    map.addLayer(eventsLayer);
+
     // Initialize timeline
     const timeline = document.getElementById('timeline');
     const yearDisplay = document.getElementById('year-display');
@@ -585,6 +615,7 @@ function initializeMap() {
         yearDisplay.textContent = yearText;
         loadData(year);
         updateArrows(year);
+        updateEvents(year);
     });
 
     const playButton = document.getElementById('playButton');
@@ -855,4 +886,111 @@ function formatSource(source) {
     }
 
     return source;
+}
+
+// Parse and update events (ellipses) for a given year
+async function updateEvents(year) {
+    try {
+        // Clear existing events
+        eventsLayer.clearLayers();
+        currentEvents = [];
+
+        const csvText = await getEventsData();
+        const rows = csvText.split('\n').slice(1); // skip header
+        // Each row: center_lon, center_lat, radii1, radii2, tilt_deg, color, fillColor, fillOpacity, year_start, year_end, description, source, type
+        const events = rows
+            .filter(row => row.trim())
+            .map(row => {
+                const [
+                    center_lon, center_lat, radii1, radii2, tilt_deg,
+                    color, fillColor, fillOpacity, year_start, year_end,
+                    description, source, type
+                ] = parseCSVLine(row).slice(0, 13);
+
+                const actualYearEnd = year_end == undefined || year_end.trim() === '' ? undefined : parseInt(year_end);
+                return {
+                    center: [parseFloat(center_lat), parseFloat(center_lon)],
+                    radii1: parseFloat(radii1),
+                    radii2: parseFloat(radii2),
+                    tiltDeg: parseFloat(tilt_deg),
+                    color: color,
+                    fillColor: fillColor,
+                    fillOpacity: parseFloat(fillOpacity),
+                    yearStart: parseInt(year_start),
+                    yearEnd: actualYearEnd,
+                    description: description ? description.replace(/"/g, '') : '',
+                    source: source ? source.replace(/"/g, '') : '',
+                    type: parseInt(type)
+                };
+            });
+
+        // Events are sorted by yearStart ascending per specification; stop scanning once > year
+        const relevant = [];
+        for (let i = 0; i < events.length; i++) {
+            const ev = events[i];
+            if (ev.yearStart > year) break;
+            if (ev.yearStart <= year && (ev.yearEnd === undefined || ev.yearEnd >= year)) {
+                relevant.push(ev);
+            }
+        }
+
+        relevant.forEach(ev => {
+            const polygon = createEllipsePolygon(ev.center, ev.radii1, ev.radii2, ev.tiltDeg, {
+                color: ev.color,
+                weight: 2,
+                fillColor: ev.fillColor,
+                fillOpacity: isNaN(ev.fillOpacity) ? 0.25 : ev.fillOpacity
+            });
+
+            const popupContent = `
+            <div style="direction: rtl; text-align: right;">
+                <div style="font-weight: 600; margin-bottom: 4px;">אירוע</div>
+                <div style="margin: 6px 0;">
+                    <strong>תקופה:</strong> ${ev.yearStart < 0 ? Math.abs(ev.yearStart) + ' BCE' : ev.yearStart + ' CE'}
+                    ${ev.yearEnd !== undefined ? ' - ' + (ev.yearEnd < 0 ? Math.abs(ev.yearEnd) + ' BCE' : ev.yearEnd + ' CE') : ''}
+                </div>
+                ${ev.description ? `<div style="margin: 6px 0;"><strong>תיאור:</strong> ${ev.description}</div>` : ''}
+                ${ev.source ? `<div style="margin: 6px 0;"><strong>מקור:</strong> ${formatSource(ev.source)}</div>` : ''}
+            </div>`;
+
+            polygon.bindPopup(popupContent, { maxWidth: 320, className: 'custom-popup' });
+            eventsLayer.addLayer(polygon);
+            currentEvents.push(polygon);
+        });
+
+        if (!map.hasLayer(eventsLayer)) {
+            map.addLayer(eventsLayer);
+        }
+    } catch (error) {
+        console.error('Error loading events data:', error);
+    }
+}
+
+// Generate an approximate ellipse on the sphere by sampling points
+function createEllipsePolygon(centerLatLng, radiusMetersMajor, radiusMetersMinor, tiltDegrees, styleOptions) {
+    // Convert radii in meters to degrees approximately using latitude
+    const lat = centerLatLng[0];
+    const lon = centerLatLng[1];
+    const metersPerDegLat = 111320; // approximate
+    const metersPerDegLon = 40075000 * Math.cos(lat * Math.PI / 180) / 360; // varies with latitude
+
+    const aDeg = radiusMetersMajor / metersPerDegLat; // along Y before rotation
+    const bDeg = radiusMetersMinor / metersPerDegLon; // along X before rotation
+
+    const theta = (tiltDegrees || 0) * Math.PI / 180; // rotation angle
+    const cosT = Math.cos(theta);
+    const sinT = Math.sin(theta);
+
+    const points = [];
+    const steps = 90; // resolution
+    for (let i = 0; i <= steps; i++) {
+        const t = (i / steps) * 2 * Math.PI;
+        const x = bDeg * Math.cos(t); // lon delta before rotation
+        const y = aDeg * Math.sin(t); // lat delta before rotation
+        // rotate
+        const xRot = x * cosT - y * sinT;
+        const yRot = x * sinT + y * cosT;
+        points.push([lat + yRot, lon + xRot]);
+    }
+    return L.polygon(points, styleOptions);
 }
