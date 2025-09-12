@@ -650,6 +650,24 @@ function initializeMap() {
         currentTileLayer.addTo(map);
     });
 
+    // Year step buttons
+    const stepsContainer = document.getElementById('year-steps');
+    if (stepsContainer) {
+        stepsContainer.addEventListener('click', (e) => {
+            const target = e.target;
+            if (!(target instanceof HTMLElement)) return;
+            const stepAttr = target.getAttribute('data-step');
+            if (!stepAttr) return;
+            const step = parseInt(stepAttr, 10);
+            if (isNaN(step)) return;
+            const current = parseInt(timeline.noUiSlider.get());
+            let next = current + step;
+            if (next < startYear0) next = startYear0;
+            if (next > endYear0) next = endYear0;
+            timeline.noUiSlider.set(next);
+        });
+    }
+
     // Toggle play/pause
     playButton.addEventListener('click', () => {
         isPlaying = !isPlaying;
