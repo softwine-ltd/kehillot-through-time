@@ -1,6 +1,7 @@
 ellipse_center_long,ellipse_center_lat,radii_1,radii_2,tilt_deg,color,fillColor,fillOpacity,year_start,year_end,description,source,type
 35.2137,31.7683,120000,60000,30,#e67e22,#f39c12,0.18,-586,-516,"Babylonian administrative zone around Jerusalem during exile period","https://en.wikipedia.org/wiki/Babylonian_exile",1
 29.9187,31.2001,60000,40000,20,#c0392b,#e74c3c,0.15,38,38,"Alexandria pogrom against the Jewish community","https://en.wikipedia.org/wiki/Alexandria_in_Antiquity#Jewish_history",9
+39.6142,24.4672,40000,25000,0,#c0392b,#e74c3c,0.15,627,627,"Massacre of Banu Qurayza in Medina","https://en.wikipedia.org/wiki/Banu_Qurayza",9
 -3.5990,37.1773,50000,30000,10,#c0392b,#e74c3c,0.15,1066,1066,"Granada massacre (al-Andalus)","https://en.wikipedia.org/wiki/1066_Granada_massacre",9
 8.2473,50.0010,120000,70000,25,#c0392b,#e74c3c,0.15,1096,1098,"Rhineland massacres during the First Crusade (centered near Mainz)","https://en.wikipedia.org/wiki/Rhineland_massacres",9
 -1.0820,53.9583,30000,20000,-5,#c0392b,#e74c3c,0.15,1190,1190,"York massacre at Clifford's Tower","https://en.wikipedia.org/wiki/York_massacre",9
@@ -10,15 +11,19 @@ ellipse_center_long,ellipse_center_lat,radii_1,radii_2,tilt_deg,color,fillColor,
 14.4378,50.0755,40000,25000,30,#c0392b,#e74c3c,0.15,1389,1389,"Prague Easter massacre","https://en.wikipedia.org/wiki/Prague_Easter_pogrom",9
 2.1734,41.3851,80000,50000,15,#8e44ad,#9b59b6,0.15,1391,1400,"Riots and anti-Jewish violence in Catalonia region (Barcelona area)","https://en.wikipedia.org/wiki/Massacre_of_1391",2
 16.3738,48.2082,50000,30000,5,#c0392b,#e74c3c,0.15,1421,1421,"Vienna Gesera (expulsions and killings)","https://en.wikipedia.org/wiki/Vienna_Gesera",9
+-5.0030,34.0330,60000,40000,5,#c0392b,#e74c3c,0.15,1465,1465,"Fez massacre of Jews during the 1465 revolt","https://en.wikipedia.org/wiki/1465_Moroccan_revolt",9
 -3.7038,40.4168,200000,120000,0,#c0392b,#e74c3c,0.12,1492,1600,"Spanish expulsion footprint across central Spain","https://en.wikipedia.org/wiki/Alhambra_Decree",3
+35.4933,32.9646,50000,30000,0,#c0392b,#e74c3c,0.15,1517,1517,"Safed massacre during Ottoman conquest","https://en.wikipedia.org/wiki/Safed#Early_Ottoman_period",9
+35.0950,31.5330,40000,25000,0,#c0392b,#e74c3c,0.15,1517,1517,"Hebron massacre during Ottoman conquest","https://en.wikipedia.org/wiki/1517_Hebron_attacks",9
 32.0590,49.4440,250000,180000,20,#c0392b,#e74c3c,0.15,1648,1657,"Khmelnytsky Uprising massacres (centered near Cherkasy, Ukraine)","https://en.wikipedia.org/wiki/Khmelnytsky_Uprising#Massacres_of_Jews",9
+35.4933,32.9646,60000,35000,10,#c0392b,#e74c3c,0.15,1660,1660,"Destruction of Safed community","https://en.wikipedia.org/wiki/Destruction_of_Safed_(1660)",9
 30.2220,48.7540,60000,40000,0,#c0392b,#e74c3c,0.15,1768,1768,"Uman massacre","https://en.wikipedia.org/wiki/Uman_massacre",9
 9.9534,49.7913,80000,50000,10,#c0392b,#e74c3c,0.15,1819,1820,"Hep-Hep riots in German states (centered near Würzburg)","https://en.wikipedia.org/wiki/Hep-Hep_riots",9
 35.4933,32.9646,50000,30000,5,#c0392b,#e74c3c,0.15,1834,1834,"1834 looting and violence in Safed","https://en.wikipedia.org/wiki/Safed#1834_plunder_of_Safed",9
 36.2910,33.5130,70000,40000,-20,#c0392b,#e74c3c,0.15,1840,1840,"Violence surrounding the Damascus affair","https://en.wikipedia.org/wiki/Damascus_affair",9
 30.7233,46.4825,90000,60000,0,#c0392b,#e74c3c,0.15,1871,1871,"Odessa anti-Jewish riots","https://en.wikipedia.org/wiki/History_of_the_Jews_in_Odesa#Pogroms",9
-30.0000,50.4500,300000,200000,15,#c0392b,#e74c3c,0.15,1881,1884,"Mass pogroms across the Russian Empire (centered near Kyiv)","https://en.wikipedia.org/wiki/Anti-Jewish_pogroms_in_the_Russian_Empire",9
 19.0402,47.4979,150000,70000,45,#16a085,#1abc9c,0.16,1880,1920,"Migration-era socio-economic zone in Central Europe (Budapest area)","",4
+30.0000,50.4500,300000,200000,15,#c0392b,#e74c3c,0.15,1881,1884,"Mass pogroms across the Russian Empire (centered near Kyiv)","https://en.wikipedia.org/wiki/Anti-Jewish_pogroms_in_the_Russian_Empire",9
 28.8320,47.0105,60000,40000,0,#c0392b,#e74c3c,0.15,1903,1903,"Kishinev pogrom","https://en.wikipedia.org/wiki/Kishinev_pogrom",9
 30.7233,46.4825,90000,60000,10,#c0392b,#e74c3c,0.15,1905,1905,"Odessa pogrom","https://en.wikipedia.org/wiki/1905_Odessa_pogrom",9
 23.1680,53.1330,60000,40000,-15,#c0392b,#e74c3c,0.15,1906,1906,"Białystok pogrom","https://en.wikipedia.org/wiki/Bia%C5%82ystok_pogrom",9
