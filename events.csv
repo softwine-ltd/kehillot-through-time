@@ -1,7 +1,37 @@
 ellipse_center_long,ellipse_center_lat,radii_1,radii_2,tilt_deg,color,fillColor,fillOpacity,year_start,year_end,description,source,type
 35.2137,31.7683,120000,60000,30,#e67e22,#f39c12,0.18,-586,-516,"Babylonian administrative zone around Jerusalem during exile period","https://en.wikipedia.org/wiki/Babylonian_exile",1
+29.9187,31.2001,60000,40000,20,#c0392b,#e74c3c,0.15,38,38,"Alexandria pogrom against the Jewish community","https://en.wikipedia.org/wiki/Alexandria_in_Antiquity#Jewish_history",9
+-3.5990,37.1773,50000,30000,10,#c0392b,#e74c3c,0.15,1066,1066,"Granada massacre (al-Andalus)","https://en.wikipedia.org/wiki/1066_Granada_massacre",9
+8.2473,50.0010,120000,70000,25,#c0392b,#e74c3c,0.15,1096,1098,"Rhineland massacres during the First Crusade (centered near Mainz)","https://en.wikipedia.org/wiki/Rhineland_massacres",9
+-1.0820,53.9583,30000,20000,-5,#c0392b,#e74c3c,0.15,1190,1190,"York massacre at Clifford's Tower","https://en.wikipedia.org/wiki/York_massacre",9
+11.5820,49.4542,100000,60000,15,#c0392b,#e74c3c,0.15,1298,1299,"Rindfleisch massacres in Franconia (centered near Nuremberg)","https://en.wikipedia.org/wiki/Rintfleisch_massacres",9
+1.4442,43.6047,120000,70000,-10,#c0392b,#e74c3c,0.15,1320,1320,"Shepherds' Crusade persecutions (southern France, centered near Toulouse)","https://en.wikipedia.org/wiki/Shepherds%27_Crusade_(1320)",9
+7.7500,48.5830,150000,90000,0,#c0392b,#e74c3c,0.15,1348,1351,"Black Death persecutions (centered near Strasbourg)","https://en.wikipedia.org/wiki/Black_Death_Jewish_persecutions",9
+14.4378,50.0755,40000,25000,30,#c0392b,#e74c3c,0.15,1389,1389,"Prague Easter massacre","https://en.wikipedia.org/wiki/Prague_Easter_pogrom",9
 2.1734,41.3851,80000,50000,15,#8e44ad,#9b59b6,0.15,1391,1400,"Riots and anti-Jewish violence in Catalonia region (Barcelona area)","https://en.wikipedia.org/wiki/Massacre_of_1391",2
+16.3738,48.2082,50000,30000,5,#c0392b,#e74c3c,0.15,1421,1421,"Vienna Gesera (expulsions and killings)","https://en.wikipedia.org/wiki/Vienna_Gesera",9
 -3.7038,40.4168,200000,120000,0,#c0392b,#e74c3c,0.12,1492,1600,"Spanish expulsion footprint across central Spain","https://en.wikipedia.org/wiki/Alhambra_Decree",3
+32.0590,49.4440,250000,180000,20,#c0392b,#e74c3c,0.15,1648,1657,"Khmelnytsky Uprising massacres (centered near Cherkasy, Ukraine)","https://en.wikipedia.org/wiki/Khmelnytsky_Uprising#Massacres_of_Jews",9
+30.2220,48.7540,60000,40000,0,#c0392b,#e74c3c,0.15,1768,1768,"Uman massacre","https://en.wikipedia.org/wiki/Uman_massacre",9
+9.9534,49.7913,80000,50000,10,#c0392b,#e74c3c,0.15,1819,1820,"Hep-Hep riots in German states (centered near Würzburg)","https://en.wikipedia.org/wiki/Hep-Hep_riots",9
+35.4933,32.9646,50000,30000,5,#c0392b,#e74c3c,0.15,1834,1834,"1834 looting and violence in Safed","https://en.wikipedia.org/wiki/Safed#1834_plunder_of_Safed",9
+36.2910,33.5130,70000,40000,-20,#c0392b,#e74c3c,0.15,1840,1840,"Violence surrounding the Damascus affair","https://en.wikipedia.org/wiki/Damascus_affair",9
+30.7233,46.4825,90000,60000,0,#c0392b,#e74c3c,0.15,1871,1871,"Odessa anti-Jewish riots","https://en.wikipedia.org/wiki/History_of_the_Jews_in_Odesa#Pogroms",9
+30.0000,50.4500,300000,200000,15,#c0392b,#e74c3c,0.15,1881,1884,"Mass pogroms across the Russian Empire (centered near Kyiv)","https://en.wikipedia.org/wiki/Anti-Jewish_pogroms_in_the_Russian_Empire",9
 19.0402,47.4979,150000,70000,45,#16a085,#1abc9c,0.16,1880,1920,"Migration-era socio-economic zone in Central Europe (Budapest area)","",4
+28.8320,47.0105,60000,40000,0,#c0392b,#e74c3c,0.15,1903,1903,"Kishinev pogrom","https://en.wikipedia.org/wiki/Kishinev_pogrom",9
+30.7233,46.4825,90000,60000,10,#c0392b,#e74c3c,0.15,1905,1905,"Odessa pogrom","https://en.wikipedia.org/wiki/1905_Odessa_pogrom",9
+23.1680,53.1330,60000,40000,-15,#c0392b,#e74c3c,0.15,1906,1906,"Białystok pogrom","https://en.wikipedia.org/wiki/Bia%C5%82ystok_pogrom",9
+24.0316,49.8397,70000,45000,0,#c0392b,#e74c3c,0.15,1918,1918,"Lwów (Lviv) pogrom","https://en.wikipedia.org/wiki/Lviv_pogroms_(1918%E2%80%931940)",9
+27.0000,49.4220,70000,45000,10,#c0392b,#e74c3c,0.15,1919,1919,"Proskurov (Khmelnytskyi) pogrom","https://en.wikipedia.org/wiki/Proskurov_pogrom",9
+26.1000,52.1220,50000,30000,-5,#c0392b,#e74c3c,0.15,1919,1919,"Pinsk massacre","https://en.wikipedia.org/wiki/Pinsk_massacre",9
+34.7580,32.0510,60000,35000,0,#c0392b,#e74c3c,0.15,1921,1921,"Jaffa riots against Jews in Mandatory Palestine","https://en.wikipedia.org/wiki/Jaffa_riots",9
+35.0950,31.5330,50000,30000,10,#c0392b,#e74c3c,0.15,1929,1929,"Hebron massacre","https://en.wikipedia.org/wiki/1929_Hebron_massacre",9
 13.4050,52.5200,100000,50000,-25,#2c3e50,#34495e,0.14,1933,1945,"Nazi-era restrictions and events in Berlin area","https://en.wikipedia.org/wiki/History_of_the_Jews_in_Berlin",5
+26.5550,41.6770,90000,60000,5,#c0392b,#e74c3c,0.15,1934,1934,"Thrace pogroms (centered near Edirne)","https://en.wikipedia.org/wiki/Thrace_pogroms",9
+11.5820,48.1351,90000,60000,20,#c0392b,#e74c3c,0.15,1938,1938,"Kristallnacht violence (centered near Munich)","https://en.wikipedia.org/wiki/Kristallnacht",9
+44.3661,33.3152,90000,60000,-10,#c0392b,#e74c3c,0.15,1941,1941,"Farhud in Baghdad","https://en.wikipedia.org/wiki/Farhud",9
+27.5910,47.1590,70000,45000,0,#c0392b,#e74c3c,0.15,1941,1941,"Iași pogrom","https://en.wikipedia.org/wiki/Ia%C8%99i_pogrom",9
+22.3020,53.2890,50000,30000,15,#c0392b,#e74c3c,0.15,1941,1941,"Jedwabne massacre","https://en.wikipedia.org/wiki/Jedwabne_massacre",9
+20.6286,50.8661,40000,25000,0,#c0392b,#e74c3c,0.15,1946,1946,"Kielce pogrom in post-war Poland","https://en.wikipedia.org/wiki/Kielce_pogrom",9
 34.7818,32.0853,60000,30000,10,#2980b9,#3498db,0.20,1948,1967,"Early Israeli state events around Tel Aviv region","https://en.wikipedia.org/wiki/Tel_Aviv",6
