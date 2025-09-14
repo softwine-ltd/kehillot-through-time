@@ -279,6 +279,21 @@ body {
     padding: 0 10%;
 }
 
+/* Custom cluster icon styling */
+.custom-cluster-icon {
+    background: transparent !important;
+    border: none !important;
+}
+
+.custom-cluster-icon div {
+    transition: all 0.3s ease;
+}
+
+.custom-cluster-icon:hover div {
+    transform: scale(1.1);
+    background-color: #2563eb !important;
+}
+
 /* .community-marker {
     width: 20px;
     height: 20px;

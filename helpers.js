@@ -575,8 +575,49 @@ function initializeMap() {
     // Add default tile layer
     osmTileLayer.addTo(map);
 
-    // Initialize markers layer
-    markersLayer = L.markerClusterGroup();
+    // Initialize markers layer with custom cluster icon
+    markersLayer = L.markerClusterGroup({
+        iconCreateFunction: function(cluster) {
+            const childCount = cluster.getChildCount();
+            let totalPopulation = 0;
+            
+            // Calculate total population for all markers in this cluster
+            cluster.getAllChildMarkers().forEach(marker => {
+                // Access the population data from the marker's popup content or stored data
+                if (marker.kehilaData && marker.kehilaData.actual_pop) {
+                    totalPopulation += marker.kehilaData.actual_pop;
+                }
+            });
+            
+            // Format population with commas
+            const formattedPopulation = totalPopulation.toLocaleString();
+            
+            // Create cluster icon with count and population
+            return L.divIcon({
+                html: `<div style="
+                    background-color: #3b82f6;
+                    color: white;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: bold;
+                    font-size: 12px;
+                    border: 2px solid white;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                ">
+                    <div>${childCount}</div>
+                    <div style="font-size: 10px; margin-top: -2px;">${formattedPopulation}</div>
+                </div>`,
+                className: 'custom-cluster-icon',
+                iconSize: [40, 40],
+                iconAnchor: [20, 20]
+            });
+        }
+    });
     map.addLayer(markersLayer);
 
     // Initialize arrows layer
@@ -777,7 +818,12 @@ function createCustomMarker(kehila) {
         iconAnchor: [size, size]
     });
 
-    return L.marker([kehila.lat, kehila.lon], { icon });
+    const marker = L.marker([kehila.lat, kehila.lon], { icon });
+    
+    // Store kehila data on the marker for cluster calculations
+    marker.kehilaData = kehila;
+    
+    return marker;
 }
 
 function generateBezierCurve(startPoint, midPoint, endPoint) {
