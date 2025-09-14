@@ -850,6 +850,289 @@ function initializeMap() {
             closeModal();
         }
     });
+
+    // Tour functionality
+    const startTourButton = document.getElementById('startTourButton');
+    const tourModal = document.getElementById('tourModal');
+    const closeTourModal = document.getElementById('closeTourModal');
+    const skipTour = document.getElementById('skipTour');
+    const prevTourStep = document.getElementById('prevTourStep');
+    const nextTourStep = document.getElementById('nextTourStep');
+    const tourContent = document.getElementById('tourContent');
+    const tourProgress = document.getElementById('tourProgress');
+    const tourOverlay = document.getElementById('tourOverlay');
+    const tourHighlight = document.getElementById('tourHighlight');
+
+    let currentTourStep = 0;
+    const tourSteps = [
+        {
+            title: "Welcome to the Jewish Communities Timeline",
+            content: `
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Welcome! This interactive visualization shows the demographic history of Jewish communities 
+                    worldwide from ancient times to the present. You'll explore 3,400+ years of Jewish history 
+                    through population data, migration patterns, and historical events.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    Let's start by learning about the timeline controls and how to navigate through history.
+                </p>
+            `,
+            highlight: null
+        },
+        {
+            title: "Timeline Navigation",
+            content: `
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    The timeline at the bottom allows you to navigate through history. You can:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><strong>Drag the slider</strong> to jump to any year</li>
+                    <li><strong>Use the play button</strong> to animate through time automatically</li>
+                    <li><strong>Adjust the speed</strong> with the speed control</li>
+                    <li><strong>Use step buttons</strong> (-10, -5, -1, +1, +5, +10) for precise navigation</li>
+                </ul>
+                <p class="text-blue-600 font-medium">
+                    Try dragging the timeline slider to see how the map changes!
+                </p>
+            `,
+            highlight: 'timeline'
+        },
+        {
+            title: "Community Markers",
+            content: `
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Each circle on the map represents a Jewish community (kehila) at that time period. 
+                    The markers show:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><strong>Population size</strong> - displayed as numbers inside the markers</li>
+                    <li><strong>Confidence level</strong> - color indicates data reliability (blue = high, lighter = lower)</li>
+                    <li><strong>Marker size</strong> - larger markers = larger populations</li>
+                </ul>
+                <p class="text-blue-600 font-medium">
+                    Click on any marker to see detailed information about that community!
+                </p>
+            `,
+            highlight: 'map'
+        },
+        {
+            title: "Historical Events Timeline",
+            content: `
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    The small markers on the timeline represent major historical events. Hover over them to see:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><strong>Event name</strong> in Hebrew and English</li>
+                    <li><strong>Historical year</strong> in both Gregorian and Hebrew calendars</li>
+                    <li><strong>Wikipedia links</strong> for detailed information</li>
+                </ul>
+                <p class="text-blue-600 font-medium">
+                    Hover over the timeline markers to explore historical events!
+                </p>
+            `,
+            highlight: 'timeline-markers'
+        },
+        {
+            title: "Historical Events on Map",
+            content: `
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Colored ellipses on the map show the geographic scope of major historical events:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><strong>Red ellipses</strong> - Massacres and persecutions</li>
+                    <li><strong>Other colors</strong> - Different types of historical events</li>
+                    <li><strong>Click ellipses</strong> to learn more about specific events</li>
+                </ul>
+                <p class="text-blue-600 font-medium">
+                    Look for the colored shapes on the map - they show where major events occurred!
+                </p>
+            `,
+            highlight: 'map'
+        },
+        {
+            title: "Map View Options",
+            content: `
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    You can customize your map view using the controls:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><strong>Place names</strong> - Choose between local language, German, or English labels</li>
+                    <li><strong>Map view</strong> - Switch between Europe & Middle East or Americas focus</li>
+                    <li><strong>Different perspectives</strong> help you explore different regions</li>
+                </ul>
+                <p class="text-blue-600 font-medium">
+                    Try switching between different map views to see how it changes the perspective!
+                </p>
+            `,
+            highlight: 'controls'
+        },
+        {
+            title: "Journey Through Time: Ancient Period",
+            content: `
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Let's take a journey through time! We'll start in ancient times and see how Jewish 
+                    communities developed and spread across the world.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    <strong>Ancient Period (-1400 to 0 BCE):</strong> The story begins with the Exodus 
+                    and the establishment of the Kingdom of Israel. Watch how communities form in the 
+                    ancient Near East.
+                </p>
+                <p class="text-blue-600 font-medium">
+                    The timeline will now automatically show the ancient period. Watch the communities appear!
+                </p>
+            `,
+            highlight: 'timeline',
+            action: () => {
+                const timeline = document.getElementById('timeline');
+                timeline.noUiSlider.set(-1000);
+            }
+        },
+        {
+            title: "Journey Through Time: Modern Period",
+            content: `
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Now let's see the modern period and how Jewish communities spread worldwide:
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    <strong>Modern Period (1800-1948 CE):</strong> Major migrations to the Americas, 
+                    the Holocaust, and the establishment of modern Israel. Notice how communities 
+                    appear across the globe.
+                </p>
+                <p class="text-blue-600 font-medium">
+                    The timeline will now show the modern period. See how communities spread worldwide!
+                </p>
+            `,
+            highlight: 'timeline',
+            action: () => {
+                const timeline = document.getElementById('timeline');
+                timeline.noUiSlider.set(1900);
+            }
+        },
+        {
+            title: "Tour Complete!",
+            content: `
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Congratulations! You've completed the tour and learned about the key features of 
+                    this Jewish communities timeline visualization.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    You now know how to:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li>Navigate through 3,400+ years of history</li>
+                    <li>Explore community populations and details</li>
+                    <li>Learn about historical events and their impact</li>
+                    <li>Customize your map view and language preferences</li>
+                    <li>Use all the interactive features</li>
+                </ul>
+                <p class="text-green-600 font-medium">
+                    Start exploring! Use the timeline to discover the rich history of Jewish communities worldwide.
+                </p>
+            `,
+            highlight: null
+        }
+    ];
+
+    function showTourStep(stepIndex) {
+        const step = tourSteps[stepIndex];
+        currentTourStep = stepIndex;
+        
+        // Update progress
+        tourProgress.textContent = `Step ${stepIndex + 1} of ${tourSteps.length}`;
+        
+        // Update content
+        tourContent.innerHTML = `
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">${step.title}</h3>
+            ${step.content}
+        `;
+        
+        // Update buttons
+        prevTourStep.disabled = stepIndex === 0;
+        nextTourStep.textContent = stepIndex === tourSteps.length - 1 ? 'Finish' : 'Next';
+        
+        // Handle highlighting
+        if (step.highlight) {
+            highlightElement(step.highlight);
+        } else {
+            hideHighlight();
+        }
+        
+        // Execute action if present
+        if (step.action) {
+            setTimeout(step.action, 500);
+        }
+    }
+
+    function highlightElement(selector) {
+        tourOverlay.classList.remove('hidden');
+        
+        let element;
+        switch(selector) {
+            case 'timeline':
+                element = document.getElementById('timeline');
+                break;
+            case 'timeline-markers':
+                element = document.querySelector('.timeline-marker');
+                break;
+            case 'map':
+                element = document.getElementById('map');
+                break;
+            case 'controls':
+                element = document.querySelector('.timeline-section');
+                break;
+        }
+        
+        if (element) {
+            const rect = element.getBoundingClientRect();
+            tourHighlight.style.left = `${rect.left - 8}px`;
+            tourHighlight.style.top = `${rect.top - 8}px`;
+            tourHighlight.style.width = `${rect.width + 16}px`;
+            tourHighlight.style.height = `${rect.height + 16}px`;
+        }
+    }
+
+    function hideHighlight() {
+        tourOverlay.classList.add('hidden');
+    }
+
+    function closeTour() {
+        tourModal.classList.add('hidden');
+        tourOverlay.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+        currentTourStep = 0;
+    }
+
+    // Tour event listeners
+    startTourButton.addEventListener('click', () => {
+        tourModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        showTourStep(0);
+    });
+
+    closeTourModal.addEventListener('click', closeTour);
+    skipTour.addEventListener('click', closeTour);
+
+    prevTourStep.addEventListener('click', () => {
+        if (currentTourStep > 0) {
+            showTourStep(currentTourStep - 1);
+        }
+    });
+
+    nextTourStep.addEventListener('click', () => {
+        if (currentTourStep < tourSteps.length - 1) {
+            showTourStep(currentTourStep + 1);
+        } else {
+            closeTour();
+        }
+    });
+
+    // Close tour with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !tourModal.classList.contains('hidden')) {
+            closeTour();
+        }
+    });
 }
 
 function playTimeline(timeline) {

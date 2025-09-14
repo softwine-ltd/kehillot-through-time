@@ -120,7 +120,7 @@
                 <button id="aboutButton" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-md hover:bg-blue-100 transition-colors">
                     About
                 </button>
-                <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                <button id="startTourButton" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
                     Start Tour
                 </button>
             </div>
@@ -269,6 +269,46 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Tour Modal -->
+    <div id="tourModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Interactive Tour</h2>
+                    <div class="flex items-center gap-4">
+                        <span id="tourProgress" class="text-sm text-gray-600">Step 1 of 8</span>
+                        <button id="closeTourModal" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">
+                            ×
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="tourContent" class="space-y-6">
+                    <!-- Tour content will be dynamically populated -->
+                </div>
+
+                <div class="mt-8 flex justify-between">
+                    <button id="prevTourStep" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        Previous
+                    </button>
+                    <div class="flex gap-2">
+                        <button id="skipTour" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200 transition-colors">
+                            Skip Tour
+                        </button>
+                        <button id="nextTourStep" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tour Overlay -->
+    <div id="tourOverlay" class="fixed inset-0 pointer-events-none z-40 hidden">
+        <div id="tourHighlight" class="absolute border-4 border-blue-500 rounded-lg shadow-lg bg-blue-500 bg-opacity-20 transition-all duration-500"></div>
     </div>
 
 </body>
