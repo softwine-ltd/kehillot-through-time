@@ -100,7 +100,8 @@ const historicalEvents = [
         year: -1313,
         titleEn: "Exodus",
         titleHe: "יציאת מצרים",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1313))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1313)),
+        url: "https://en.wikipedia.org/wiki/Exodus_(biblical_book)"
     },
     {
         year: -1205,
@@ -113,103 +114,120 @@ const historicalEvents = [
         year: -1000,
         titleEn: "Reign of King David",
         titleHe: "מלכות דוד",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1000))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1000)),
+        url: "https://en.wikipedia.org/wiki/David"
     },
     {
         year: -928,
         titleEn: "Dissolution of the United Kingdom of Israel",
         titleHe: "פילוג ממלכת ישראל המאוחדת",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-928))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-928)),
+        url: "https://en.wikipedia.org/wiki/Kingdom_of_Israel_(united_monarchy)"
     },
     {
         year: -722,
         titleEn: "Temple Destruction",
         titleHe: "חורבן ממלכת ישראל",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-722))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-722)),
+        url: "https://en.wikipedia.org/wiki/Kingdom_of_Israel_(Samaria)"
     },
     {
         year: -586,
         titleEn: "Destruction of the First Temple",
         titleHe: "חורבן בית המקדש הראשון",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-586))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-586)),
+        url: "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(587_BC)"
     },
      {
         year: -457,
         titleEn: "Aliya of Ezra",
         titleHe: "עליית עזרא לירושלים",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-457))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-457)),
+        url: "https://en.wikipedia.org/wiki/Ezra"
     },
       {
         year: -167,
         titleEn: "Maccabean Revolt",
         titleHe: "מרד חשמונאים",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-167))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-167)),
+        url: "https://en.wikipedia.org/wiki/Maccabean_Revolt"
     },
     {
         year: 70,
         titleEn: "Destruction of the Second Temple",
         titleHe: "חורבן בית המקדש השני",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(70))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(70)),
+        url: "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(70_CE)"
     },
         {
         year: 132,
         titleEn: "Bar Kokhba revolt",
         titleHe: "מרד בר כוכבא",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(132))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(132)),
+        url: "https://en.wikipedia.org/wiki/Bar_Kokhba_revolt"
     },
      {
         year: 200,
         titleEn: "End of Tannaim Period",
         titleHe: "סוף תקופת התנאים",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(200))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(200)),
+        url: "https://en.wikipedia.org/wiki/Tannaim"
     },
       {
         year: 500,
         titleEn: "End of Amoraim Period",
         titleHe: "סוף תקופת האמוראים",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(500))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(500)),
+        url: "https://en.wikipedia.org/wiki/Amoraim"
     },
     {
         year: 1038,
         titleEn: "End of Amoraim Geonim",
         titleHe: "סוף תקופת הגאונים",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1038))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1038)),
+        url: "https://en.wikipedia.org/wiki/Geonim"
     },
     {
         year: 1096,
         titleEn: "First Crusade",
         titleHe: "מסע הצלב הראשון",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1096))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1096)),
+        url: "https://en.wikipedia.org/wiki/First_Crusade"
     },
     {
         year: 1147,
         titleEn: "Second Crusade",
         titleHe: "מסע הצלב השני",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1147))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1147)),
+        url: "https://en.wikipedia.org/wiki/Second_Crusade"
     },
     {
         year: 1189,
         titleEn: "Exile from Spain",
         titleHe: "מסע הצלב השלישי",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1189))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1189)),
+        url: "https://en.wikipedia.org/wiki/Third_Crusade"
     },
     {
         year: 1492,
         titleEn: "Exile from Spain and End of Rishonim Period",
         titleHe: "גירוש ספרד וסוף תקופת הראשונים",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1492))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1492)),
+        url: "https://en.wikipedia.org/wiki/Expulsion_of_Jews_from_Spain"
     },
     {
         year: 1939,
         titleEn: "The Holocaust",
         titleHe: "השואה",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1939))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1939)),
+        url: "https://en.wikipedia.org/wiki/The_Holocaust"
     },
     {
         year: 1948,
         titleEn: "Israel Independence",
         titleHe: "הקמת מדינת ישראל",
-        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1948))
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(1948)),
+        url: "https://en.wikipedia.org/wiki/Israeli_Declaration_of_Independence"
     }
 ];
 
