@@ -801,19 +801,45 @@ function getConfidenceText(confidence) {
 function createCustomMarker(kehila) {
     const size = getMarkerSize(kehila.actual_pop);
     const color = getConfidenceColor(kehila.confidence);
+    
+    // Format population number for display
+    let populationText;
+    if (kehila.actual_pop >= 1000000) {
+        populationText = (kehila.actual_pop / 1000000).toFixed(1) + 'M';
+    } else if (kehila.actual_pop >= 1000) {
+        populationText = (kehila.actual_pop / 1000).toFixed(1) + 'k';
+    } else {
+        populationText = kehila.actual_pop.toString();
+    }
+    
+    // Determine CSS class based on marker size
+    let sizeClass = 'population-marker-small';
+    if (size >= 16) {
+        sizeClass = 'population-marker-large';
+    } else if (size >= 12) {
+        sizeClass = 'population-marker-medium';
+    }
 
-    // Create custom div icon
+    // Create custom div icon with population display
     const icon = L.divIcon({
         className: 'custom-marker',
-        html: `<div style="
+        html: `<div class="population-marker ${sizeClass}" style="
             width: ${size * 2}px;
             height: ${size * 2}px;
             background: ${color};
-            border: 2px solid red;
+            border: 2px solid white;
             border-radius: 50%;
-            box-shadow: 0 0 4px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
             opacity: 0.9;
-        "></div>`,
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        ">${populationText}</div>`,
         iconSize: [size * 2, size * 2],
         iconAnchor: [size, size]
     });

@@ -294,22 +294,46 @@ body {
     background-color: #2563eb !important;
 }
 
-/* .community-marker {
-    width: 20px;
-    height: 20px;
-    background: rgba(59, 130, 246, 0.8);
-    border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: all 0.3s;
+/* Community marker styles */
+.custom-marker {
+    transition: all 0.3s ease;
 }
 
-.community-marker:hover {
-    transform: scale(1.2);
-    background: rgba(59, 130, 246, 1);
+.custom-marker:hover {
+    transform: scale(1.15);
+    z-index: 1000;
+}
+
+.custom-marker div {
+    transition: all 0.3s ease;
+}
+
+.custom-marker:hover div {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+/* Population marker specific styles */
+.population-marker {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+}
+
+.population-marker-small {
+    font-size: 8px;
+}
+
+.population-marker-medium {
+    font-size: 10px;
+}
+
+.population-marker-large {
+    font-size: 12px;
 }
 
 .info-card {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(8px);
-} */
+}
