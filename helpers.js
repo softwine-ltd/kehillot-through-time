@@ -102,6 +102,14 @@ const historicalEvents = [
         titleHe: "יציאת מצרים",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1313))
     },
+    {
+        year: -1205,
+        titleEn: " Merneptah (Israel) Stele",
+        titleHe: ": 'ישראל הושם אין זרע לו' מצבת מרנפתח (מצבת ישראל)",
+        hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1205)),
+        url: "https://en.wikipedia.org/wiki/Merneptah_Stele"
+    },
+    
     // {
     //     year: -1813,
     //     titleEn: "Abraham Born",
@@ -289,6 +297,14 @@ function addEventMarkers() {
         tooltip.className = 'timeline-tooltip';
 
         // Create structured tooltip content
+        const linkHtml = event.url ? `
+            <div class="tooltip-link">
+                <a href="${event.url}" target="_blank" style="color: #3b82f6; text-decoration: underline; font-size: 11px;">
+                    Learn more ↗
+                </a>
+            </div>
+        ` : '';
+        
         tooltip.innerHTML = `
             <div class="tooltip-content">
                 <div class="tooltip-hebrew">${event.titleHe}</div>
@@ -297,10 +313,40 @@ function addEventMarkers() {
                     ${event.year < 0 ? Math.abs(event.year) + ' BCE' : event.year + ' CE'} 
                     / ${event.hebrewYear}
                 </div>
+                ${linkHtml}
             </div>
         `;
 
         marker.appendChild(tooltip);
+        
+        // Add hover delay to prevent tooltip from disappearing too quickly
+        let hoverTimeout;
+        
+        marker.addEventListener('mouseenter', function() {
+            clearTimeout(hoverTimeout);
+            tooltip.style.opacity = '1';
+            tooltip.style.pointerEvents = 'auto';
+        });
+        
+        marker.addEventListener('mouseleave', function() {
+            hoverTimeout = setTimeout(() => {
+                tooltip.style.opacity = '0';
+                tooltip.style.pointerEvents = 'none';
+            }, 100);
+        });
+        
+        tooltip.addEventListener('mouseenter', function() {
+            clearTimeout(hoverTimeout);
+            tooltip.style.opacity = '1';
+            tooltip.style.pointerEvents = 'auto';
+        });
+        
+        tooltip.addEventListener('mouseleave', function() {
+            hoverTimeout = setTimeout(() => {
+                tooltip.style.opacity = '0';
+                tooltip.style.pointerEvents = 'none';
+            }, 100);
+        });
         
         // Add click event handler to change the timeline year
         marker.addEventListener('click', function(e) {
@@ -572,6 +618,20 @@ function initializeMap() {
         attribution: '&copy; OpenStreetMap contributors'
     });
     
+    // CartoDB tile layer with English labels
+    const cartoDbTileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20
+    });
+    
+    // OpenMapTiles with English labels (requires API key, using demo)
+    const openMapTilesEnLayer = L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=get_your_own_OpIi9ZULNHzrESv6T2vL', {
+        attribution: '&copy; <a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a> &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 20
+    });
+    
+    
     // Add default tile layer
     osmTileLayer.addTo(map);
 
@@ -682,10 +742,18 @@ function initializeMap() {
         map.removeLayer(currentTileLayer);
         
         // Add new tile layer based on selection
-        if (selectedTile === 'osm-de') {
-            currentTileLayer = osmDeTileLayer;
-        } else {
-            currentTileLayer = osmTileLayer;
+        switch(selectedTile) {
+            case 'osm-de':
+                currentTileLayer = osmDeTileLayer;
+                break;
+            case 'cartodb':
+                currentTileLayer = cartoDbTileLayer;
+                break;
+            case 'maptiler':
+                currentTileLayer = openMapTilesEnLayer;
+                break;
+            default:
+                currentTileLayer = osmTileLayer;
         }
         
         currentTileLayer.addTo(map);

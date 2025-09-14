@@ -96,8 +96,10 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 6;
     /* Highest z-index for tooltips */
-
 }
+
+/* Tooltip visibility is now controlled by JavaScript */
+
 
 .timeline-tooltip::after {
     content: '';
@@ -110,10 +112,6 @@ body {
     background: rgba(30, 41, 59, 0.95);
 }
 
-.timeline-marker:hover .timeline-tooltip {
-    opacity: 1;
-    bottom: 40px;
-}
 
 .tooltip-content {
     display: flex;
@@ -138,6 +136,21 @@ body {
     font-size: 11px;
     color: #94a3b8;
     margin-top: 2px;
+}
+
+.tooltip-link {
+    margin-top: 4px;
+}
+
+.tooltip-link a {
+    color: #3b82f6 !important;
+    text-decoration: underline !important;
+    font-size: 11px !important;
+    transition: color 0.2s ease;
+}
+
+.tooltip-link a:hover {
+    color: #1d4ed8 !important;
 }
 
 .custom-popup {
