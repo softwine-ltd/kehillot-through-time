@@ -117,7 +117,7 @@
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <h1 class="text-xl font-semibold text-gray-900">Jewish Demographics & Historical Communities Map</h1>
             <div class="flex gap-4">
-                <button class="px-4 py-2 bg-blue-50 text-blue-600 rounded-md hover:bg-blue-100 transition-colors">
+                <button id="aboutButton" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-md hover:bg-blue-100 transition-colors">
                     About
                 </button>
                 <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
@@ -185,6 +185,90 @@
         </div>
 
         <div id="map"></div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">About This Project</h2>
+                    <button id="closeAboutModal" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">
+                        ×
+                    </button>
+                </div>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Project Overview</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            This interactive visualization explores the demographic history of Jewish communities worldwide, 
+                            tracking population changes and migration patterns from ancient times to the present. The map 
+                            displays Jewish communities (kehillot) with their estimated populations at different historical 
+                            periods, allowing users to understand the ebb and flow of Jewish life across centuries.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Features</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li><strong>Interactive Timeline:</strong> Navigate through 3,400+ years of Jewish history</li>
+                            <li><strong>Population Visualization:</strong> Community markers show population size and confidence levels</li>
+                            <li><strong>Historical Events:</strong> Major events and persecutions that shaped Jewish demographics</li>
+                            <li><strong>Migration Patterns:</strong> Visual representation of Jewish diaspora movements</li>
+                            <li><strong>Multilingual Support:</strong> Place names in local languages and English</li>
+                            <li><strong>Educational Resources:</strong> Links to historical sources and references</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Data Sources</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            The data combines historical records, archaeological findings, demographic studies, and scholarly 
+                            research. Population estimates are based on available historical sources and may include approximations 
+                            for demonstration purposes. Sources include academic publications, historical documents, and 
+                            established demographic databases.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">How to Use</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Use the timeline slider to navigate through different time periods</li>
+                            <li>Click on community markers to see detailed information</li>
+                            <li>Hover over timeline markers to learn about historical events</li>
+                            <li>Use the play button to animate through time automatically</li>
+                            <li>Switch between different map views and language options</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Credits</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            <strong>Developed by:</strong> Bezalel Brandwine and Ofer Manela<br>
+                            <strong>Organization:</strong> Softwine LTD<br>
+                            <strong>Map Data:</strong> OpenStreetMap contributors<br>
+                            <strong>Timeline Technology:</strong> noUiSlider<br>
+                            <strong>Mapping Library:</strong> Leaflet with MarkerCluster
+                        </p>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
+                        <p class="text-yellow-800 text-sm">
+                            <strong>Note:</strong> This visualization is under development. Some data points are estimates 
+                            or approximations for demonstration purposes and have not been fully verified. We welcome 
+                            feedback and corrections from historians and researchers.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex justify-end">
+                    <button id="closeAboutModalBtn" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>

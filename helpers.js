@@ -104,18 +104,11 @@ const historicalEvents = [
     },
     {
         year: -1205,
-        titleEn: " Merneptah (Israel) Stele",
-        titleHe: ": 'ישראל הושם אין זרע לו' מצבת מרנפתח (מצבת ישראל)",
+        titleEn: " Merneptah Stele: 'Israel is laid waste—its seed is no more' ",
+        titleHe: "'ישראל הושם אין זרע לו' מצבת מרנפתח (מצבת ישראל)",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1205)),
         url: "https://en.wikipedia.org/wiki/Merneptah_Stele"
     },
-    
-    // {
-    //     year: -1813,
-    //     titleEn: "Abraham Born",
-    //     titleHe: "לידת אברהם אבינו",
-    //     hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1813))
-    // },
     {
         year: -1000,
         titleEn: "Reign of King David",
@@ -802,6 +795,41 @@ function initializeMap() {
             playTimeline(timeline);
         } else if (playIntervalGlobal) {
             clearInterval(playIntervalGlobal);
+        }
+    });
+
+    // About modal functionality
+    const aboutButton = document.getElementById('aboutButton');
+    const aboutModal = document.getElementById('aboutModal');
+    const closeAboutModal = document.getElementById('closeAboutModal');
+    const closeAboutModalBtn = document.getElementById('closeAboutModalBtn');
+
+    // Open modal
+    aboutButton.addEventListener('click', () => {
+        aboutModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    });
+
+    // Close modal functions
+    function closeModal() {
+        aboutModal.classList.add('hidden');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+
+    closeAboutModal.addEventListener('click', closeModal);
+    closeAboutModalBtn.addEventListener('click', closeModal);
+
+    // Close modal when clicking outside
+    aboutModal.addEventListener('click', (e) => {
+        if (e.target === aboutModal) {
+            closeModal();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !aboutModal.classList.contains('hidden')) {
+            closeModal();
         }
     });
 }
