@@ -134,7 +134,7 @@
         </div>
 
         <div class="bg-white border-t border-gray-200">
-            <div class="max-w-7xl mx-auto px-4 py-6">
+            <div class="timeline-section py-6">
                 <div class="flex items-center gap-4 mb-4">
                     <button id="playButton" class="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,6 +162,13 @@
                             <option value="osm-de">Local Language and German</option>
                         </select>
                     </div>
+                    <div class="flex items-center gap-2 ml-4">
+                        <label for="mapCenterSelector" class="text-sm text-gray-600">Map view:</label>
+                        <select id="mapCenterSelector" class="text-sm border border-gray-300 rounded-md px-2 py-1 bg-white">
+                            <option value="europe">Europe & Middle East</option>
+                            <option value="americas">Americas</option>
+                        </select>
+                    </div>
                 </div>
                 
                 <div id="timeline" class="relative h-2 bg-gray-200 rounded-full">
@@ -169,7 +176,7 @@
                 </div>
                 
                 <div class="flex justify-between mt-2">
-                    <span class="text-sm text-gray-500">1600 BCE (ב'קס"א)</span>
+                    <span class="text-sm text-gray-500">1400 BCE (ב'שס"א)</span>
                     <span class="text-sm text-gray-500">Present (הווה)</span>
                 </div>
             </div>

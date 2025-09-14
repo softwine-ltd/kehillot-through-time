@@ -240,6 +240,45 @@ body {
     transform: scale(1.1);
 }
 
+/* Map center selector styling */
+#mapCenterSelector {
+    transition: all 0.2s ease;
+}
+
+#mapCenterSelector:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 1px #3b82f6;
+}
+
+#mapCenterSelector:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Tile selector styling */
+#tileSelector {
+    transition: all 0.2s ease;
+}
+
+#tileSelector:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 1px #3b82f6;
+}
+
+#tileSelector:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Extended container for timeline and controls */
+.timeline-section {
+    max-width: none;
+    width: 100%;
+    padding: 0 10%;
+}
+
 /* .community-marker {
     width: 20px;
     height: 20px;

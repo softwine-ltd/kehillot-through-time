@@ -268,11 +268,11 @@ function convertToHebrewYear(gregorianYear) {
 }
 const startYear0 = -1400;
 const endYear0 = 2025;
-const totalRange0 = endYear0 - startYear0; // from -1600 to 2025
+const totalRange0 = endYear0 - startYear0; // from -1400 to 2025
 
 function addEventMarkers() {
     const timelineElement = document.getElementById('timeline');
-    const totalRange = totalRange0; // from -1600 to 2025
+    const totalRange = totalRange0; // from -1400 to 2025
 
     // Remove existing markers to avoid duplicates (e.g., on resize)
     const existingMarkers = timelineElement.querySelectorAll('.timeline-marker');
@@ -555,11 +555,11 @@ function initializeMap() {
     map = L.map('map', {
         center: [41.9028, 25.4324],
         zoom: 5,
-        minZoom: 4,
+        minZoom: 3,
         maxZoom: 10,
         maxBounds: [
-            [20, -20],
-            [65, 65]
+            [-60, -180],
+            [80, 180]
         ]
     });
 
@@ -648,6 +648,21 @@ function initializeMap() {
         }
         
         currentTileLayer.addTo(map);
+    });
+
+    // Map center control
+    const mapCenterSelector = document.getElementById('mapCenterSelector');
+    
+    mapCenterSelector.addEventListener('change', (e) => {
+        const selectedCenter = e.target.value;
+        
+        if (selectedCenter === 'europe') {
+            // Center on Europe & Middle East (Bulgaria)
+            map.setView([41.9028, 25.4324], 5);
+        } else if (selectedCenter === 'americas') {
+            // Center on Americas (US)
+            map.setView([38, -90], 5);
+        }
     });
 
     // Year step buttons
