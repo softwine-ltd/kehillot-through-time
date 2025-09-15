@@ -38,6 +38,25 @@ body {
     font-size: 24px;
     margin: 10px 0;
     font-family: Arial, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 200px;
+}
+
+/* Responsive year display for tablets and mobile */
+@media (max-width: 768px) {
+    #year-display {
+        font-size: 18px;
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 640px) {
+    #year-display {
+        font-size: 16px;
+        min-width: 160px;
+    }
 }
 
 .timeline-marker {
@@ -289,7 +308,20 @@ body {
 .timeline-section {
     max-width: none;
     width: 100%;
-    padding: 0 10%;
+    padding: 0 5%;
+}
+
+/* Responsive padding for different screen sizes */
+@media (min-width: 640px) {
+    .timeline-section {
+        padding: 0 10%;
+    }
+}
+
+@media (max-width: 640px) {
+    .timeline-section {
+        padding: 0 2%;
+    }
 }
 
 /* Custom cluster icon styling */

@@ -135,38 +135,38 @@
 
         <div class="bg-white border-t border-gray-200">
             <div class="timeline-section py-6">
-                <div class="flex items-center gap-4 mb-4">
-                    <button id="playButton" class="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                <div class="flex flex-wrap items-center gap-2 sm:gap-4 mb-4">
+                    <button id="playButton" class="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors flex-shrink-0">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
                         </svg>
                     </button>
-                    <div id="year-display" class="text-sm font-medium text-gray-900 w-64 text-center"></div>
-                    <div class="flex items-center gap-2 ml-4">
-                        <label for="speedControl" class="text-sm text-gray-600">Speed:</label>
-                        <input type="range" id="speedControl" min="1" max="20" value="4" class="w-24 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
-                        <span id="speedDisplay" class="text-sm text-gray-500 w-8">4x</span>
+                    <div id="year-display" class="text-sm font-medium text-gray-900 min-w-48 sm:min-w-64 flex-1 text-center whitespace-nowrap"></div>
+                    <div class="flex items-center gap-2 ml-2 sm:ml-4 flex-shrink-0">
+                        <label for="speedControl" class="text-sm text-gray-600 hidden sm:inline">Speed:</label>
+                        <input type="range" id="speedControl" min="1" max="20" value="4" class="w-20 sm:w-24 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                        <span id="speedDisplay" class="text-sm text-gray-500 w-6 sm:w-8">4x</span>
                     </div>
-                    <div id="year-steps" class="flex items-center gap-1 ml-4">
-                        <button data-step="-10" class="px-2 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">-10</button>
-                        <button data-step="-5" class="px-2 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">-5</button>
-                        <button data-step="-1" class="px-2 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">-1</button>
-                        <button data-step="1" class="px-2 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">+1</button>
-                        <button data-step="5" class="px-2 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">+5</button>
-                        <button data-step="10" class="px-2 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">+10</button>
+                    <div id="year-steps" class="flex items-center gap-1 ml-2 sm:ml-4 flex-shrink-0">
+                        <button data-step="-10" class="px-1 sm:px-2 py-1 text-xs sm:text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">-10</button>
+                        <button data-step="-5" class="px-1 sm:px-2 py-1 text-xs sm:text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">-5</button>
+                        <button data-step="-1" class="px-1 sm:px-2 py-1 text-xs sm:text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">-1</button>
+                        <button data-step="1" class="px-1 sm:px-2 py-1 text-xs sm:text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">+1</button>
+                        <button data-step="5" class="px-1 sm:px-2 py-1 text-xs sm:text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">+5</button>
+                        <button data-step="10" class="px-1 sm:px-2 py-1 text-xs sm:text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">+10</button>
                     </div>
-                    <div class="flex items-center gap-2 ml-4">
-                        <label for="tileSelector" class="text-sm text-gray-600">Place names:</label>
-                        <select id="tileSelector" class="text-sm border border-gray-300 rounded-md px-2 py-1 bg-white">
+                    <div class="flex items-center gap-2 ml-2 sm:ml-4 flex-shrink-0">
+                        <label for="tileSelector" class="text-sm text-gray-600 hidden sm:inline">Place names:</label>
+                        <select id="tileSelector" class="text-xs sm:text-sm border border-gray-300 rounded-md px-1 sm:px-2 py-1 bg-white min-w-0">
                             <option value="osm">Local Language</option>
                             <option value="osm-de">Local Language and German</option>
                             <option value="cartodb">English Labels (CartoDB)</option>
                             <option value="maptiler">English Labels (MapTiler)</option>
                         </select>
                     </div>
-                    <div class="flex items-center gap-2 ml-4">
-                        <label for="mapCenterSelector" class="text-sm text-gray-600">Map view:</label>
-                        <select id="mapCenterSelector" class="text-sm border border-gray-300 rounded-md px-2 py-1 bg-white">
+                    <div class="flex items-center gap-2 ml-2 sm:ml-4 flex-shrink-0">
+                        <label for="mapCenterSelector" class="text-sm text-gray-600 hidden sm:inline">Map view:</label>
+                        <select id="mapCenterSelector" class="text-xs sm:text-sm border border-gray-300 rounded-md px-1 sm:px-2 py-1 bg-white min-w-0">
                             <option value="europe">Europe & Middle East</option>
                             <option value="americas">Americas</option>
                         </select>
