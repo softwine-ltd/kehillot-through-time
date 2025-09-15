@@ -1452,9 +1452,25 @@ async function updateEvents(year) {
                 fillOpacity: isNaN(ev.fillOpacity) ? 0.25 : ev.fillOpacity
             });
 
+            // Generate titles based on event type
+            function getEventTitles(type) {
+                const titles = {
+                    1: { he: "גלות", en: "Exile" },
+                    2: { he: "מהומות", en: "Riots" },
+                    3: { he: "גירוש", en: "Expulsion" },
+                    4: { he: "הגירה", en: "Migration" },
+                    5: { he: "רדיפות", en: "Persecution" },
+                    6: { he: "אירועי מדינה", en: "State Events" },
+                    9: { he: "פוגרום", en: "Pogrom" }
+                };
+                return titles[type] || { he: "אירוע", en: "Event" };
+            }
+
+            const eventTitles = getEventTitles(ev.type);
             const popupContent = `
             <div style="direction: rtl; text-align: right;">
-                <div style="font-weight: 600; margin-bottom: 4px;">אירוע</div>
+                <div style="font-weight: 600; margin-bottom: 4px;">${eventTitles.he}</div>
+                <div style="font-weight: 500; margin-bottom: 8px; color: #666; font-size: 14px;">${eventTitles.en}</div>
                 <div style="margin: 6px 0;">
                     <strong>תקופה:</strong> ${ev.yearStart < 0 ? Math.abs(ev.yearStart) + ' BCE' : ev.yearStart + ' CE'}
                     ${ev.yearEnd !== undefined ? ' - ' + (ev.yearEnd < 0 ? Math.abs(ev.yearEnd) + ' BCE' : ev.yearEnd + ' CE') : ''}
