@@ -286,12 +286,12 @@ function convertToHebrewYear(gregorianYear) {
     return jewishYear;
 }
 const startYear0 = -1400;
-const endYear0 = 2025;
-const totalRange0 = endYear0 - startYear0; // from -1400 to 2025
+const endYear0 = 2023;
+const totalRange0 = endYear0 - startYear0; // from -1400 to 2023
 
 function addEventMarkers() {
     const timelineElement = document.getElementById('timeline');
-    const totalRange = totalRange0; // from -1400 to 2025
+    const totalRange = totalRange0; // from -1400 to 2023
 
     // Remove existing markers to avoid duplicates (e.g., on resize)
     const existingMarkers = timelineElement.querySelectorAll('.timeline-marker');
@@ -565,7 +565,7 @@ function updateMarkers(kehilot) {
                 ${kehila.names.german ? `Deutsch: ${kehila.names.german} <br>` : ''}                
                 ${kehila.names.other ? `אחר: ${kehila.names.other} <br>` : ''}
                 <div style="margin: 8px 0;">
-                    <strong> אוכלוסייה:</strong> ${kehila.actual_pop.toLocaleString()}
+                    <strong> אוכלוסייה:</strong> ${formatPopulation(kehila.actual_pop)}
                 </div>
   
                 <div style="
@@ -660,8 +660,13 @@ function initializeMap() {
                 }
             });
             
-            // Format population with commas
-            const formattedPopulation = totalPopulation.toLocaleString();
+            // Format population with shorter format for large numbers
+            const formattedPopulation = formatPopulation(totalPopulation);
+            
+            // Calculate cluster size based on total population using the same function as individual markers
+            const clusterSize = getMarkerSize(totalPopulation);
+            const iconSize = Math.max(32, clusterSize * 2.5); // Increased multiplier and minimum size for better readability
+            const iconAnchor = iconSize / 2; // Center the anchor
             
             // Create cluster icon with count and population
             return L.divIcon({
@@ -669,23 +674,23 @@ function initializeMap() {
                     background-color: #3b82f6;
                     color: white;
                     border-radius: 50%;
-                    width: 40px;
-                    height: 40px;
+                    width: ${iconSize}px;
+                    height: ${iconSize}px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
                     font-weight: bold;
-                    font-size: 12px;
+                    font-size: ${Math.max(12, Math.min(18, iconSize * 0.3))}px;
                     border: 2px solid white;
                     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
                 ">
                     <div>${childCount}</div>
-                    <div style="font-size: 10px; margin-top: -2px;">${formattedPopulation}</div>
+                    <div style="font-size: ${Math.max(9, Math.min(14, iconSize * 0.25))}px; margin-top: -2px;">${formattedPopulation}</div>
                 </div>`,
                 className: 'custom-cluster-icon',
-                iconSize: [40, 40],
-                iconAnchor: [20, 20]
+                iconSize: [iconSize, iconSize],
+                iconAnchor: [iconAnchor, iconAnchor]
             });
         }
     });
@@ -1194,20 +1199,23 @@ function getConfidenceText(confidence) {
     }
 }
 
+function formatPopulation(population) {
+    if (population >= 1000000) {
+        return (population / 1000000).toFixed(1) + 'M';
+    } else if (population >= 1000) {
+        return (population / 1000).toFixed(1) + 'k';
+    } else {
+        return population.toLocaleString();
+    }
+}
+
 
 function createCustomMarker(kehila) {
     const size = getMarkerSize(kehila.actual_pop);
     const color = getConfidenceColor(kehila.confidence);
     
     // Format population number for display
-    let populationText;
-    if (kehila.actual_pop >= 1000000) {
-        populationText = (kehila.actual_pop / 1000000).toFixed(1) + 'M';
-    } else if (kehila.actual_pop >= 1000) {
-        populationText = (kehila.actual_pop / 1000).toFixed(1) + 'k';
-    } else {
-        populationText = kehila.actual_pop.toString();
-    }
+    const populationText = formatPopulation(kehila.actual_pop);
     
     // Determine CSS class based on marker size
     let sizeClass = 'population-marker-small';
