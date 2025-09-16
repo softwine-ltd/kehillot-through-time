@@ -120,6 +120,9 @@
                 <button id="aboutButton" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-md hover:bg-blue-100 transition-colors">
                     About
                 </button>
+                <button id="loadGedcomButton" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
+                    Load GEDCOM
+                </button>
                 <button id="startTourButton" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
                     Start Tour
                 </button>
@@ -310,6 +313,9 @@
     <div id="tourOverlay" class="fixed inset-0 pointer-events-none z-40 hidden">
         <div id="tourHighlight" class="absolute border-4 border-blue-500 rounded-lg shadow-lg bg-blue-500 bg-opacity-20 transition-all duration-500"></div>
     </div>
+
+    <!-- Hidden file input for GEDCOM files -->
+    <input type="file" id="gedcomFileInput" accept=".ged" style="display: none;">
 
 </body>
 

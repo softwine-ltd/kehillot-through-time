@@ -285,6 +285,367 @@ function convertToHebrewYear(gregorianYear) {
 
     return jewishYear;
 }
+
+// GEDCOM Parser Functions
+function parseGedcomFile(gedcomText) {
+    const lines = gedcomText.split('\n');
+    const individuals = {};
+    const families = {};
+    let currentRecord = null;
+    let currentLevel = 0;
+    let currentEvent = null;
+    
+    for (let line of lines) {
+        line = line.trim();
+        if (!line) continue;
+        
+        const parts = line.split(' ');
+        const level = parseInt(parts[0]);
+        const tag = parts[1];
+        const value = parts.slice(2).join(' ');
+        
+        if (level === 0) {
+            if (tag.startsWith('@') && tag.endsWith('@')) {
+                const id = tag;
+                if (value === 'INDI') {
+                    currentRecord = { type: 'INDI', id, data: {} };
+                    individuals[id] = currentRecord;
+                } else if (value === 'FAM') {
+                    currentRecord = { type: 'FAM', id, data: {} };
+                    families[id] = currentRecord;
+                } else {
+                    currentRecord = null;
+                }
+            } else {
+                currentRecord = null;
+            }
+            currentEvent = null;
+        } else if (currentRecord) {
+            if (level === 1) {
+                // Level 1 tags like BIRT, DEAT, MARR, NAME, etc.
+                if (!currentRecord.data[tag]) {
+                    currentRecord.data[tag] = [];
+                }
+                currentEvent = { level, value, subdata: {} };
+                currentRecord.data[tag].push(currentEvent);
+            } else if (level === 2 && currentEvent) {
+                // Level 2 tags like DATE, PLAC under events
+                if (!currentEvent.subdata[tag]) {
+                    currentEvent.subdata[tag] = [];
+                }
+                currentEvent.subdata[tag].push({ level, value });
+            }
+        }
+        
+        currentLevel = level;
+    }
+    
+    console.log('Parsed GEDCOM:', { individuals: Object.keys(individuals).length, families: Object.keys(families).length });
+    return { individuals, families };
+}
+
+function extractGedcomEvents(individuals, families) {
+    const events = [];
+    
+    // Process individuals
+    Object.values(individuals).forEach(individual => {
+        const data = individual.data;
+        const name = extractName(data);
+        
+        // Birth event
+        if (data.BIRT) {
+            const birthEvent = extractEvent(data.BIRT, 'BIRT', name, 'birth');
+            if (birthEvent) {
+                events.push(birthEvent);
+            }
+        }
+        
+        // Death event
+        if (data.DEAT) {
+            const deathEvent = extractEvent(data.DEAT, 'DEAT', name, 'death');
+            if (deathEvent) {
+                events.push(deathEvent);
+            }
+        }
+    });
+    
+    // Process families for marriage events
+    Object.values(families).forEach(family => {
+        const data = family.data;
+        if (data.MARR) {
+            const husbandId = data.HUSB ? data.HUSB[0].value : null;
+            const wifeId = data.WIFE ? data.WIFE[0].value : null;
+            
+            const husbandName = husbandId && individuals[husbandId] ? extractName(individuals[husbandId].data) : 'Unknown';
+            const wifeName = wifeId && individuals[wifeId] ? extractName(individuals[wifeId].data) : 'Unknown';
+            
+            const marriageEvent = extractEvent(data.MARR, 'MARR', `${husbandName} & ${wifeName}`, 'marriage');
+            if (marriageEvent) {
+                events.push(marriageEvent);
+            }
+        }
+    });
+    
+    return events;
+}
+
+function extractName(data) {
+    if (data.NAME && data.NAME[0]) {
+        return data.NAME[0].value.replace('/', '').replace('/', '').trim();
+    }
+    return 'Unknown';
+}
+
+function extractEvent(eventData, eventType, name, eventCategory) {
+    let date = null;
+    let place = null;
+    
+    // Extract date and place from event data
+    eventData.forEach(event => {
+        // Check for DATE and PLAC in subdata
+        if (event.subdata) {
+            if (event.subdata.DATE && event.subdata.DATE[0]) {
+                date = event.subdata.DATE[0].value;
+            }
+            if (event.subdata.PLAC && event.subdata.PLAC[0]) {
+                place = event.subdata.PLAC[0].value;
+            }
+        }
+    });
+    
+    if (!place) return null;
+    
+    return {
+        type: eventType,
+        category: eventCategory,
+        name: name,
+        date: date,
+        place: place,
+        year: extractYearFromDate(date)
+    };
+}
+
+function isValidDate(dateString) {
+    // Simple date validation - check if it contains numbers and common date separators
+    return /^\d{1,4}[\s\-\/\.]/.test(dateString) || /^\d{1,4}$/.test(dateString);
+}
+
+function extractYearFromDate(dateString) {
+    if (!dateString) return null;
+    
+    // Extract year from various date formats
+    const yearMatch = dateString.match(/(\d{4})/);
+    if (yearMatch) {
+        return parseInt(yearMatch[1]);
+    }
+    
+    // Try to extract year from 2-digit years
+    const shortYearMatch = dateString.match(/(\d{2})/);
+    if (shortYearMatch) {
+        const year = parseInt(shortYearMatch[1]);
+        // Assume 20th century for years 00-30, 19th century for 31-99
+        return year <= 30 ? 1900 + year : 1800 + year;
+    }
+    
+    return null;
+}
+
+// Geocoding function for place names
+async function geocodePlace(placeName) {
+    try {
+        console.log('Geocoding place:', placeName);
+        
+        // Try different search strategies
+        const searchQueries = [
+            placeName, // Original place name
+            placeName + ', Poland', // Add Poland if not specified
+            placeName + ', Europe', // Add Europe as fallback
+        ];
+        
+        for (let i = 0; i < searchQueries.length; i++) {
+            const query = searchQueries[i];
+            try {
+                console.log('Trying geocoding query:', query);
+                
+                // Add small delay between requests to avoid rate limiting
+                if (i > 0) {
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                }
+                
+                const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=1&addressdetails=1&countrycodes=pl,de,us,gb,fr,it,es,ru,ua,by,lt,lv,ee,cz,sk,hu,ro,bg,hr,si,at,ch,be,nl,dk,se,no,fi,ie,pt,gr,cy,mt,lu,is,li,mc,ad,sm,va,monaco`, {
+                    headers: {
+                        'User-Agent': 'JewishCommunitiesMap/1.0'
+                    }
+                });
+                
+                if (!response.ok) {
+                    console.log('Geocoding request failed:', response.status);
+                    continue;
+                }
+                
+                const data = await response.json();
+                
+                if (data && data.length > 0) {
+                    const result = {
+                        lat: parseFloat(data[0].lat),
+                        lon: parseFloat(data[0].lon),
+                        display_name: data[0].display_name
+                    };
+                    console.log('Geocoding success:', result);
+                    return result;
+                }
+            } catch (queryError) {
+                console.log('Query failed:', query, queryError);
+                continue;
+            }
+        }
+        
+        console.log('No geocoding results for any query of:', placeName);
+    } catch (error) {
+        console.error('Geocoding error:', error);
+    }
+    return null;
+}
+
+// Create GEDCOM event markers
+function createGedcomEventMarker(event, coordinates) {
+    let iconHtml = '';
+    let iconColor = '#3b82f6';
+    
+    // Determine icon based on event category
+    switch (event.category) {
+        case 'birth':
+            // Use baby icon - differentiate by gender if possible
+            iconHtml = '👶';
+            iconColor = '#22c55e'; // Green for birth
+            break;
+        case 'marriage':
+            // Use couple icon
+            iconHtml = '💑';
+            iconColor = '#f59e0b'; // Orange for marriage
+            break;
+        case 'death':
+            // Use Jewish star for death
+            iconHtml = '✡️';
+            iconColor = '#ef4444'; // Red for death
+            break;
+        default:
+            iconHtml = '📍';
+            iconColor = '#6b7280'; // Gray for unknown
+    }
+    
+    const icon = L.divIcon({
+        className: 'gedcom-event-marker',
+        html: `<div style="
+            width: 32px;
+            height: 32px;
+            background: ${iconColor};
+            border: 2px solid white;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        ">${iconHtml}</div>`,
+        iconSize: [32, 32],
+        iconAnchor: [16, 16]
+    });
+    
+    const marker = L.marker([coordinates.lat, coordinates.lon], { icon });
+    
+    // Create popup content
+    const popupContent = `
+        <div style="direction: rtl; text-align: right;">
+            <strong style="font-size: 16px;">${event.name}</strong>
+            <br>
+            <div style="margin: 8px 0;">
+                <strong>אירוע:</strong> ${getEventTypeHebrew(event.category)}
+            </div>
+            ${event.date ? `
+                <div style="margin: 8px 0;">
+                    <strong>תאריך:</strong> ${event.date}
+                </div>
+            ` : ''}
+            <div style="margin: 8px 0;">
+                <strong>מקום:</strong> ${event.place}
+            </div>
+            ${coordinates.display_name ? `
+                <div style="margin: 8px 0; font-size: 12px; color: #666;">
+                    ${coordinates.display_name}
+                </div>
+            ` : ''}
+        </div>
+    `;
+    
+    marker.bindPopup(popupContent, {
+        maxWidth: 300,
+        className: 'custom-popup'
+    });
+    
+    return marker;
+}
+
+function getEventTypeHebrew(category) {
+    switch (category) {
+        case 'birth': return 'לידה';
+        case 'marriage': return 'נישואין';
+        case 'death': return 'פטירה';
+        default: return 'אירוע';
+    }
+}
+
+// Update GEDCOM events on the map
+async function updateGedcomEvents(year) {
+    if (!gedcomData) {
+        console.log('No GEDCOM data loaded');
+        return;
+    }
+    
+    console.log('Updating GEDCOM events for year:', year);
+    console.log('Total events:', gedcomData.events.length);
+    
+    // Clear existing GEDCOM events
+    gedcomLayer.clearLayers();
+    currentGedcomEvents = [];
+    
+    // Filter events by year - show events from their year until 10 years later
+    const relevantEvents = gedcomData.events.filter(event => 
+        event.year && event.year <= year && event.year >= (year - 10)
+    );
+    
+    console.log(`Relevant events for year ${year} (showing events from ${year-10} to ${year}):`, relevantEvents.length);
+    
+    // Process each event
+    for (const event of relevantEvents) {
+        try {
+            console.log('Processing event:', event);
+            const coordinates = await geocodePlace(event.place);
+            
+            if (coordinates) {
+                console.log('Using coordinates:', coordinates);
+                const marker = createGedcomEventMarker(event, coordinates);
+                currentGedcomEvents.push(marker);
+                gedcomLayer.addLayer(marker);
+            } else {
+                console.log('Skipping event - could not geocode place:', event.place);
+            }
+        } catch (error) {
+            console.error('Error processing GEDCOM event:', error);
+        }
+    }
+    
+    console.log('Added', currentGedcomEvents.length, 'GEDCOM markers to map');
+    
+    // Add GEDCOM layer to map if not already added
+    if (!map.hasLayer(gedcomLayer)) {
+        map.addLayer(gedcomLayer);
+    }
+}
+
 const startYear0 = -1400;
 const endYear0 = 2023;
 const totalRange0 = endYear0 - startYear0; // from -1400 to 2023
@@ -409,6 +770,10 @@ let currentArrows = [];
 let cachedCsvData = null; // Variable to store the data
 let eventsLayer = {};
 let currentEvents = [];
+// GEDCOM data
+let gedcomLayer = {};
+let currentGedcomEvents = [];
+let gedcomData = null;
 // Events data fetch (cached single fetch like kehilot)
 const getEventsData = (() => {
     let dataPromise = null;
@@ -704,6 +1069,10 @@ function initializeMap() {
     eventsLayer = L.layerGroup();
     map.addLayer(eventsLayer);
 
+    // Initialize GEDCOM layer
+    gedcomLayer = L.layerGroup();
+    map.addLayer(gedcomLayer);
+
     // Initialize timeline
     const timeline = document.getElementById('timeline');
     const yearDisplay = document.getElementById('year-display');
@@ -733,6 +1102,7 @@ function initializeMap() {
         loadData(year);
         updateArrows(year);
         updateEvents(year);
+        updateGedcomEvents(year);
     });
 
     const playButton = document.getElementById('playButton');
@@ -1138,6 +1508,50 @@ function initializeMap() {
             closeTour();
         }
     });
+
+    // GEDCOM file loading functionality
+    const loadGedcomButton = document.getElementById('loadGedcomButton');
+    const gedcomFileInput = document.getElementById('gedcomFileInput');
+    
+    loadGedcomButton.addEventListener('click', () => {
+        gedcomFileInput.click();
+    });
+    
+    gedcomFileInput.addEventListener('change', async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        
+        try {
+            console.log('Loading GEDCOM file:', file.name);
+            const text = await file.text();
+            console.log('File content length:', text.length);
+            
+            const parsed = parseGedcomFile(text);
+            console.log('Parsed data:', parsed);
+            
+            const events = extractGedcomEvents(parsed.individuals, parsed.families);
+            console.log('Extracted events:', events);
+            
+            gedcomData = {
+                individuals: parsed.individuals,
+                families: parsed.families,
+                events: events
+            };
+            
+            console.log(`Loaded GEDCOM file with ${events.length} events`);
+            
+            // Update the map with GEDCOM events for the current year
+            const currentYear = parseInt(timeline.noUiSlider.get());
+            await updateGedcomEvents(currentYear);
+            
+            // Show success message
+            alert(`Successfully loaded GEDCOM file with ${events.length} events!`);
+            
+        } catch (error) {
+            console.error('Error loading GEDCOM file:', error);
+            alert('Error loading GEDCOM file. Please check the file format.');
+        }
+    });
 }
 
 function playTimeline(timeline) {
@@ -1434,7 +1848,7 @@ async function updateEvents(year) {
                 };
             });
 
-        // Events are sorted by yearStart ascending per specification; stop scanning once > year
+        //  Events are sorted by yearStart ascending per specification; stop scanning once > year
         const relevant = [];
         for (let i = 0; i < events.length; i++) {
             const ev = events[i];

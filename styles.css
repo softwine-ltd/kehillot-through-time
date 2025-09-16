@@ -452,3 +452,22 @@ body {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(8px);
 }
+
+/* GEDCOM event marker styles */
+.gedcom-event-marker {
+    transition: all 0.3s ease;
+}
+
+.gedcom-event-marker:hover {
+    transform: scale(1.2);
+    z-index: 1000;
+}
+
+.gedcom-event-marker div {
+    transition: all 0.3s ease;
+}
+
+.gedcom-event-marker:hover div {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
