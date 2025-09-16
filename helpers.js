@@ -790,6 +790,106 @@ function initializeMap() {
         }
     });
 
+    // City search functionality
+    const citySearch = document.getElementById('citySearch');
+    const clearSearch = document.getElementById('clearSearch');
+    let searchMarker = null;
+    let searchLayer = null;
+
+    // Initialize search layer
+    searchLayer = L.layerGroup();
+    map.addLayer(searchLayer);
+
+    // Search function
+    async function searchCity(cityName) {
+        if (!cityName.trim()) return;
+
+        try {
+            // Use Nominatim geocoding service
+            const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(cityName)}&limit=1&addressdetails=1`, {
+                headers: {
+                    'User-Agent': 'JewishCommunitiesMap/1.0'
+                }
+            });
+            
+            if (!response.ok) {
+                throw new Error('Search failed');
+            }
+            
+            const data = await response.json();
+            
+            if (data && data.length > 0) {
+                const result = data[0];
+                const lat = parseFloat(result.lat);
+                const lon = parseFloat(result.lon);
+                
+                // Remove existing search marker
+                if (searchMarker) {
+                    searchLayer.removeLayer(searchMarker);
+                }
+                
+                // Create new search marker
+                searchMarker = L.marker([lat, lon], {
+                    icon: L.divIcon({
+                        className: 'search-marker',
+                        html: `<div style="
+                            width: 20px;
+                            height: 20px;
+                            background: #ef4444;
+                            border: 3px solid white;
+                            border-radius: 50%;
+                            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+                            animation: pulse 2s infinite;
+                        "></div>`,
+                        iconSize: [20, 20],
+                        iconAnchor: [10, 10]
+                    })
+                });
+                
+                // Add popup with search result info
+                searchMarker.bindPopup(`
+                    <div style="direction: rtl; text-align: right;">
+                        <strong>${result.display_name}</strong>
+                        <br>
+                        <small>Search result</small>
+                    </div>
+                `);
+                
+                searchLayer.addLayer(searchMarker);
+                
+                // Zoom to the location
+                map.setView([lat, lon], 8);
+                
+                // Open popup
+                searchMarker.openPopup();
+                
+                console.log('Found city:', result.display_name);
+            } else {
+                alert('City not found. Please try a different name.');
+            }
+        } catch (error) {
+            console.error('Search error:', error);
+            alert('Search failed. Please try again.');
+        }
+    }
+
+    // Search on Enter key
+    citySearch.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            searchCity(citySearch.value);
+        }
+    });
+
+    // Clear search
+    clearSearch.addEventListener('click', () => {
+        citySearch.value = '';
+        if (searchMarker) {
+            searchLayer.removeLayer(searchMarker);
+            searchMarker = null;
+        }
+    });
+
     // Year step buttons
     const stepsContainer = document.getElementById('year-steps');
     if (stepsContainer) {
