@@ -613,7 +613,7 @@ function initializeMap() {
         center: [41.9028, 25.4324],
         zoom: 5,
         minZoom: 3,
-        maxZoom: 10,
+        maxZoom: 12,
         maxBounds: [
             [-60, -180],
             [80, 180]
@@ -921,6 +921,77 @@ function initializeMap() {
             highlight: 'map'
         },
         {
+            title: "Understanding Community Markers",
+            content: `
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Let's explore the different types of markers you'll see on the map:
+                </p>
+                <div class="space-y-4 mb-4">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-blue-800 mb-2">Individual Community Markers</h4>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">1.2k</div>
+                            <div class="text-sm text-gray-700">
+                                <strong>Small marker:</strong> Smaller communities
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 mt-2">
+                            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">15k</div>
+                            <div class="text-sm text-gray-700">
+                                <strong>Medium marker:</strong> Medium-sized communities
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 mt-2">
+                            <div class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">250k</div>
+                            <div class="text-sm text-gray-700">
+                                <strong>Large marker:</strong> Major communities
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-2 italic">
+                            Larger markers represent larger communities
+                        </p>
+                    </div>
+                    
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-800 mb-2">Cluster Markers</h4>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-600 rounded-full flex flex-col items-center justify-center text-white text-xs font-bold" style="box-shadow: 0 2px 4px rgba(0,0,0,0.3); border: 2px solid white;">
+                                <div>5</div>
+                                <div class="text-xs">2.1M</div>
+                            </div>
+                            <div class="text-sm text-gray-700">
+                                <strong>Cluster marker:</strong> Groups nearby communities together<br>
+                                <em>Top number:</em> Number of communities<br>
+                                <em>Bottom number:</em> Total population
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-yellow-800 mb-2">Confidence Levels</h4>
+                        <div class="space-y-2">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 bg-blue-800 rounded-full"></div>
+                                <span class="text-sm text-gray-700"><strong>Dark blue:</strong> High confidence data</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 bg-blue-400 rounded-full"></div>
+                                <span class="text-sm text-gray-700"><strong>Medium blue:</strong> Medium confidence data</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 bg-blue-200 rounded-full"></div>
+                                <span class="text-sm text-gray-700"><strong>Light blue:</strong> Lower confidence data</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-blue-600 font-medium">
+                    Look for these different marker types as you explore the map!
+                </p>
+            `,
+            highlight: 'map'
+        },
+        {
             title: "Historical Events Timeline",
             content: `
                 <p class="text-gray-700 leading-relaxed mb-4">
@@ -1026,6 +1097,8 @@ function initializeMap() {
                 </p>
                 <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
                     <li>Navigate through 3,400+ years of history</li>
+                    <li>Understand different marker types and their meanings</li>
+                    <li>Read population data and confidence levels</li>
                     <li>Explore community populations and details</li>
                     <li>Learn about historical events and their impact</li>
                     <li>Customize your map view and language preferences</li>
