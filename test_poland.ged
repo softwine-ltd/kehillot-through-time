@@ -1,0 +1,54 @@
+0 HEAD
+1 SOUR Test Poland
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+0 @I1@ INDI
+1 NAME Jan /Kowalski/
+2 GIVN Jan
+2 SURN Kowalski
+1 SEX M
+1 BIRT
+2 DATE 15 JAN 1920
+2 PLAC Warsaw, Poland
+1 DEAT
+2 DATE 20 MAR 2000
+2 PLAC Krakow, Poland
+0 @I2@ INDI
+1 NAME Maria /Nowak/
+2 GIVN Maria
+2 SURN Nowak
+1 SEX F
+1 BIRT
+2 DATE 10 FEB 1925
+2 PLAC Lodz, Poland
+0 @I3@ INDI
+1 NAME Piotr /Wisniewski/
+2 GIVN Piotr
+2 SURN Wisniewski
+1 SEX M
+1 BIRT
+2 DATE 20 MAR 1950
+2 PLAC Gdansk, Poland
+0 @I4@ INDI
+1 NAME Anna /Wojcik/
+2 GIVN Anna
+2 SURN Wojcik
+1 SEX F
+1 BIRT
+2 DATE 10 APR 1955
+2 PLAC Poznan, Poland
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 MARR
+2 DATE 5 JUN 1950
+2 PLAC Warsaw, Poland
+0 @F2@ FAM
+1 HUSB @I3@
+1 WIFE @I4@
+1 MARR
+2 DATE 15 AUG 1980
+2 PLAC Krakow, Poland
+0 TRLR
