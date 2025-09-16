@@ -478,3 +478,61 @@ body {
     transform: scale(1.1);
     z-index: 1000;
 }
+
+/* Print styles */
+@media print {
+    .controls {
+        display: none !important;
+    }
+    
+    #timeline {
+        display: none !important;
+    }
+    
+    #year-steps {
+        display: none !important;
+    }
+    
+    .leaflet-control-container {
+        display: none !important;
+    }
+    
+    #map {
+        height: 90vh !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        position: relative !important;
+    }
+    
+    .leaflet-container {
+        height: 90vh !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .leaflet-map-pane {
+        height: 90vh !important;
+        width: 100% !important;
+    }
+    
+    .leaflet-tile-pane {
+        height: 90vh !important;
+        width: 100% !important;
+    }
+    
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+    
+    .print-header {
+        margin-bottom: 10px !important;
+    }
+    
+    /* Ensure the map takes full width and height */
+    .map-container {
+        width: 100% !important;
+        height: 90vh !important;
+    }
+}

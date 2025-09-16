@@ -890,6 +890,171 @@ function initializeMap() {
         }
     });
 
+    // Print functionality
+    const printButton = document.getElementById('printButton');
+    
+    printButton.addEventListener('click', () => {
+        try {
+            // Check if required elements exist
+            if (!map) {
+                throw new Error('Map not initialized');
+            }
+            if (!timeline || !timeline.noUiSlider) {
+                throw new Error('Timeline not initialized');
+            }
+            
+            // Get current map state
+            const center = map.getCenter();
+            const zoom = map.getZoom();
+            const currentYear = Math.round(timeline.noUiSlider.get());
+            const yearDisplay = currentYear < 0 ? `${Math.abs(currentYear)} BCE` : `${currentYear} CE`;
+            const mapView = mapCenterSelector.value === 'europe' ? 'Europe & Middle East' : 'Americas';
+            
+            // Create a simple print view by hiding controls and printing the current page
+            const originalControls = document.querySelector('.controls');
+            const originalTimeline = document.querySelector('#timeline');
+            const originalYearSteps = document.querySelector('#year-steps');
+            const originalTitle = document.querySelector('h1');
+            const originalSubtitle = document.querySelector('p');
+            const timelineLabels = document.querySelector('.flex.justify-between.mt-2');
+            const yearDisplayElement = document.querySelector('#year-display');
+            const speedDisplay = document.getElementById('speedDisplay');
+            
+            // Hide all controls and original title
+            if (originalControls) originalControls.style.display = 'none';
+            if (originalTimeline) originalTimeline.style.display = 'none';
+            if (originalYearSteps) originalYearSteps.style.display = 'none';
+            if (originalTitle) originalTitle.style.display = 'none';
+            if (originalSubtitle) originalSubtitle.style.display = 'none';
+            if (timelineLabels) timelineLabels.style.display = 'none';
+            if (yearDisplayElement) yearDisplayElement.style.display = 'none';
+            if (speedDisplay) speedDisplay.style.display = 'none';
+            
+            // Hide all Leaflet controls
+            const leafletControls = document.querySelectorAll('.leaflet-control-container');
+            leafletControls.forEach(control => {
+                control.style.display = 'none';
+            });
+            
+            // Hide all buttons and interactive elements
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.style.display = 'none';
+            });
+            
+            // Hide all select elements
+            const selects = document.querySelectorAll('select');
+            selects.forEach(select => {
+                select.style.display = 'none';
+            });
+            
+            // Hide all input elements
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.style.display = 'none';
+            });
+            
+            // Hide all labels
+            const labels = document.querySelectorAll('label');
+            labels.forEach(label => {
+                label.style.display = 'none';
+            });
+            
+            // Add print header with smaller title
+            const printHeader = document.createElement('div');
+            printHeader.className = 'print-header';
+            printHeader.innerHTML = `
+                <div style="text-align: center; margin-bottom: 10px; padding-bottom: 5px;">
+                    <h2 style="margin: 0; color: #333; font-size: 16px; font-weight: normal;">Jewish Demographics & Historical Communities Map</h2>
+                    <p style="margin: 2px 0 0 0; color: #666; font-size: 12px;">Year: ${yearDisplay}</p>
+                </div>
+            `;
+            document.body.insertBefore(printHeader, document.body.firstChild);
+            
+            // Ensure map is properly sized for print
+            const mapElement = document.getElementById('map');
+            if (mapElement) {
+                mapElement.style.height = '90vh';
+                mapElement.style.width = '100%';
+                mapElement.style.maxWidth = '100%';
+                
+                // Trigger map resize to ensure proper rendering
+                setTimeout(() => {
+                    if (map && map.invalidateSize) {
+                        map.invalidateSize();
+                    }
+                }, 100);
+            }
+            
+            // Trigger print after a short delay to ensure map is properly sized
+            setTimeout(() => {
+                window.print();
+            }, 200);
+            
+            // Restore controls after printing
+            setTimeout(() => {
+                try {
+                    // Restore main elements
+                    if (originalControls) originalControls.style.display = '';
+                    if (originalTimeline) originalTimeline.style.display = '';
+                    if (originalYearSteps) originalYearSteps.style.display = '';
+                    if (originalTitle) originalTitle.style.display = '';
+                    if (originalSubtitle) originalSubtitle.style.display = '';
+                    if (timelineLabels) timelineLabels.style.display = '';
+                    if (yearDisplayElement) yearDisplayElement.style.display = '';
+                    if (speedDisplay) speedDisplay.style.display = '';
+                    
+                    // Restore Leaflet controls
+                    if (leafletControls) {
+                        leafletControls.forEach(control => {
+                            control.style.display = '';
+                        });
+                    }
+                    
+                    // Restore all buttons
+                    if (buttons) {
+                        buttons.forEach(button => {
+                            button.style.display = '';
+                        });
+                    }
+                    
+                    // Restore all select elements
+                    if (selects) {
+                        selects.forEach(select => {
+                            select.style.display = '';
+                        });
+                    }
+                    
+                    // Restore all input elements
+                    if (inputs) {
+                        inputs.forEach(input => {
+                            input.style.display = '';
+                        });
+                    }
+                    
+                    // Restore all labels
+                    if (labels) {
+                        labels.forEach(label => {
+                            label.style.display = '';
+                        });
+                    }
+                    
+                    // Remove print header
+                    if (printHeader) printHeader.remove();
+                    
+                } catch (restoreError) {
+                    console.error('Error restoring controls:', restoreError);
+                    // Force reload if restoration fails
+                    location.reload();
+                }
+            }, 2000);
+            
+        } catch (error) {
+            console.error('Print error details:', error);
+            alert(`Print failed: ${error.message}. Please try again.`);
+        }
+    });
+
     // Year step buttons
     const stepsContainer = document.getElementById('year-steps');
     if (stepsContainer) {
