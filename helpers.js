@@ -428,6 +428,25 @@ const getEventsData = (() => {
     };
 })();
 
+// Polygon events data fetch (cached single fetch like kehilot)
+const getPolygonEventsData = (() => {
+    let dataPromise = null;
+    return async () => {
+        if (!dataPromise) {
+            console.log("Fetching polygon events data for the first time...");
+            dataPromise = fetch('events_polygon.csv').then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            });
+        } else {
+            console.log("Polygon events fetch already in progress or completed, returning existing promise.");
+        }
+        return dataPromise;
+    };
+})();
+
 // A self-executing function to create a private scope for our promise
 const getData = (() => {
     let dataPromise = null;
@@ -734,6 +753,15 @@ function initializeMap() {
         updateArrows(year);
         updateEvents(year);
     });
+
+    // Add click functionality to year display for direct year input
+    yearDisplay.addEventListener('click', function() {
+        showYearInputDialog();
+    });
+    
+    // Add visual indication that year display is clickable
+    yearDisplay.style.cursor = 'pointer';
+    yearDisplay.title = 'Click to enter a specific year';
 
     const playButton = document.getElementById('playButton');
     let isPlaying = false;
@@ -1736,13 +1764,30 @@ function formatSource(source) {
     return source;
 }
 
-// Parse and update events (ellipses) for a given year
+// Parse and update events (ellipses and polygons) for a given year
 async function updateEvents(year) {
     try {
         // Clear existing events
         eventsLayer.clearLayers();
         currentEvents = [];
 
+        // Process ellipse events
+        await processEllipseEvents(year);
+        
+        // Process polygon events
+        await processPolygonEvents(year);
+
+        if (!map.hasLayer(eventsLayer)) {
+            map.addLayer(eventsLayer);
+        }
+    } catch (error) {
+        console.error('Error loading events data:', error);
+    }
+}
+
+// Process ellipse events
+async function processEllipseEvents(year) {
+    try {
         const csvText = await getEventsData();
         const rows = csvText.split('\n').slice(1); // skip header
         // Each row: center_lon, center_lat, radii1, radii2, tilt_deg, color, fillColor, fillOpacity, year_start, year_end, description, source, type
@@ -1790,44 +1835,134 @@ async function updateEvents(year) {
                 fillOpacity: isNaN(ev.fillOpacity) ? 0.25 : ev.fillOpacity
             });
 
-            // Generate titles based on event type
-            function getEventTitles(type) {
-                const titles = {
-                    1: { he: "גלות", en: "Exile" },
-                    2: { he: "מהומות", en: "Riots" },
-                    3: { he: "גירוש", en: "Expulsion" },
-                    4: { he: "הגירה", en: "Migration" },
-                    5: { he: "רדיפות", en: "Persecution" },
-                    6: { he: "אירועי מדינה", en: "State Events" },
-                    9: { he: "פוגרום", en: "Pogrom" }
-                };
-                return titles[type] || { he: "אירוע", en: "Event" };
-            }
-
-            const eventTitles = getEventTitles(ev.type);
-            const popupContent = `
-            <div style="direction: rtl; text-align: right;">
-                <div style="font-weight: 600; margin-bottom: 4px;">${eventTitles.he}</div>
-                <div style="font-weight: 500; margin-bottom: 8px; color: #666; font-size: 14px;">${eventTitles.en}</div>
-                <div style="margin: 6px 0;">
-                    <strong>תקופה:</strong> ${ev.yearStart < 0 ? Math.abs(ev.yearStart) + ' BCE' : ev.yearStart + ' CE'}
-                    ${ev.yearEnd !== undefined ? ' - ' + (ev.yearEnd < 0 ? Math.abs(ev.yearEnd) + ' BCE' : ev.yearEnd + ' CE') : ''}
-                </div>
-                ${ev.description ? `<div style="margin: 6px 0;"><strong>תיאור:</strong> ${ev.description}</div>` : ''}
-                ${ev.source ? `<div style="margin: 6px 0;"><strong>מקור:</strong> ${formatSource(ev.source)}</div>` : ''}
-            </div>`;
-
-            polygon.bindPopup(popupContent, { maxWidth: 320, className: 'custom-popup' });
+            addEventPopup(polygon, ev);
             eventsLayer.addLayer(polygon);
             currentEvents.push(polygon);
         });
-
-        if (!map.hasLayer(eventsLayer)) {
-            map.addLayer(eventsLayer);
-        }
     } catch (error) {
-        console.error('Error loading events data:', error);
+        console.error('Error loading ellipse events data:', error);
     }
+}
+
+// Process polygon events
+async function processPolygonEvents(year) {
+    try {
+        const csvText = await getPolygonEventsData();
+        const rows = csvText.split('\n').slice(1); // skip header
+        // Each row: polygon_coordinates, color, fillColor, fillOpacity, year_start, year_end, description, source, type
+        const events = rows
+            .filter(row => row.trim())
+            .map(row => {
+                const [
+                    polygon_coords, color, fillColor, fillOpacity, year_start, year_end,
+                    description, source, type
+                ] = parseCSVLine(row).slice(0, 8);
+
+                const actualYearEnd = year_end == undefined || year_end.trim() === '' ? undefined : parseInt(year_end);
+                return {
+                    coordinates: parsePolygonCoordinates(polygon_coords),
+                    color: color,
+                    fillColor: fillColor,
+                    fillOpacity: parseFloat(fillOpacity),
+                    yearStart: parseInt(year_start),
+                    yearEnd: actualYearEnd,
+                    description: description ? description.replace(/"/g, '') : '',
+                    source: source ? source.replace(/"/g, '') : '',
+                    type: parseInt(type)
+                };
+            });
+
+        // Events are sorted by yearStart ascending per specification; stop scanning once > year
+        const relevant = [];
+        for (let i = 0; i < events.length; i++) {
+            const ev = events[i];
+            if (ev.yearStart > year) break;
+            if (ev.yearStart <= year && (ev.yearEnd === undefined || ev.yearEnd >= year)) {
+                relevant.push(ev);
+            }
+        }
+
+        relevant.forEach(ev => {
+            if (ev.coordinates.length >= 3) {
+                const polygon = createPolygonFromCoordinates(ev.coordinates, {
+                    color: ev.color,
+                    weight: 2,
+                    fillColor: ev.fillColor,
+                    fillOpacity: isNaN(ev.fillOpacity) ? 0.25 : ev.fillOpacity
+                });
+
+                if (polygon) {
+                    addEventPopup(polygon, ev);
+                    eventsLayer.addLayer(polygon);
+                    currentEvents.push(polygon);
+                }
+            }
+        });
+    } catch (error) {
+        console.error('Error loading polygon events data:', error);
+    }
+}
+
+// Add popup to event polygon
+function addEventPopup(polygon, ev) {
+    // Generate titles based on event type
+    function getEventTitles(type) {
+        const titles = {
+            1: { he: "גלות", en: "Exile" },
+            2: { he: "מהומות", en: "Riots" },
+            3: { he: "גירוש", en: "Expulsion" },
+            4: { he: "הגירה", en: "Migration" },
+            5: { he: "רדיפות", en: "Persecution" },
+            6: { he: "אירועי מדינה", en: "State Events" },
+            9: { he: "פוגרום", en: "Pogrom" }
+        };
+        return titles[type] || { he: "אירוע", en: "Event" };
+    }
+
+    const eventTitles = getEventTitles(ev.type);
+    const popupContent = `
+    <div style="direction: rtl; text-align: right;">
+        <div style="font-weight: 600; margin-bottom: 4px;">${eventTitles.he}</div>
+        <div style="font-weight: 500; margin-bottom: 8px; color: #666; font-size: 14px;">${eventTitles.en}</div>
+        <div style="margin: 6px 0;">
+            <strong>תקופה:</strong> ${ev.yearStart < 0 ? Math.abs(ev.yearStart) + ' BCE' : ev.yearStart + ' CE'}
+            ${ev.yearEnd !== undefined ? ' - ' + (ev.yearEnd < 0 ? Math.abs(ev.yearEnd) + ' BCE' : ev.yearEnd + ' CE') : ''}
+        </div>
+        ${ev.description ? `<div style="margin: 6px 0;"><strong>תיאור:</strong> ${ev.description}</div>` : ''}
+        ${ev.source ? `<div style="margin: 6px 0;"><strong>מקור:</strong> ${formatSource(ev.source)}</div>` : ''}
+    </div>`;
+
+    polygon.bindPopup(popupContent, { maxWidth: 320, className: 'custom-popup' });
+}
+
+// Parse polygon coordinates from string format like "((35, 32),(35.2,32),(35.2,32.2),(35.1,32.3),(35,32.2),(34.9,32.1))"
+function parsePolygonCoordinates(coordinateString) {
+    try {
+        // Remove outer parentheses and split by coordinate pairs
+        const cleanString = coordinateString.replace(/^\(|\)$/g, '');
+        const coordinatePairs = cleanString.split('),(');
+        
+        const coordinates = coordinatePairs.map(pair => {
+            // Remove any remaining parentheses and split by comma
+            const cleanPair = pair.replace(/[()]/g, '');
+            const [lon, lat] = cleanPair.split(',').map(coord => parseFloat(coord.trim()));
+            return [lat, lon]; // Leaflet expects [lat, lon] format
+        });
+        
+        return coordinates;
+    } catch (error) {
+        console.error('Error parsing polygon coordinates:', error);
+        return [];
+    }
+}
+
+// Create a polygon from coordinate array
+function createPolygonFromCoordinates(coordinates, styleOptions) {
+    if (coordinates.length < 3) {
+        console.warn('Polygon needs at least 3 coordinates');
+        return null;
+    }
+    return L.polygon(coordinates, styleOptions);
 }
 
 // Generate an approximate ellipse on the sphere by sampling points
@@ -1857,4 +1992,34 @@ function createEllipsePolygon(centerLatLng, radiusMetersMajor, radiusMetersMinor
         points.push([lat + yRot, lon + xRot]);
     }
     return L.polygon(points, styleOptions);
+}
+
+// Show year input dialog for direct year entry
+function showYearInputDialog() {
+    const currentYear = parseInt(timeline.noUiSlider.get());
+    const yearInput = prompt(
+        `Enter a year to jump to:\n\n` +
+        `Current year: ${currentYear < 0 ? Math.abs(currentYear) + ' BCE' : currentYear + ' CE'}\n` +
+        `Valid range: ${startYear0 < 0 ? Math.abs(startYear0) + ' BCE' : startYear0 + ' CE'} to ${endYear0} CE\n\n` +
+        `Enter year (use negative numbers for BCE, e.g., -1000 for 1000 BCE):`,
+        currentYear.toString()
+    );
+    
+    if (yearInput !== null) {
+        const newYear = parseInt(yearInput);
+        
+        // Validate input
+        if (isNaN(newYear)) {
+            alert('Please enter a valid number.');
+            return;
+        }
+        
+        if (newYear < startYear0 || newYear > endYear0) {
+            alert(`Year must be between ${startYear0} and ${endYear0}.`);
+            return;
+        }
+        
+        // Update timeline to new year
+        timeline.noUiSlider.set(newYear);
+    }
 }

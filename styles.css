@@ -42,6 +42,16 @@ body {
     text-overflow: ellipsis;
     white-space: nowrap;
     min-width: 200px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+#year-display:hover {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    transform: scale(1.02);
 }
 
 /* Responsive year display for tablets and mobile */
