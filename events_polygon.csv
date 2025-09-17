@@ -1,0 +1,6 @@
+polygon_coordinates,color,fillColor,fillOpacity,year_start,year_end,description,source,type
+"((35.2137,31.7683),(35.5,31.9),(35.8,31.7),(35.6,31.4),(35.2,31.5),(35.0,31.6))",#e67e22,#f39c12,0.18,-586,-516,"Babylonian administrative zone around Jerusalem during exile period","https://en.wikipedia.org/wiki/Babylonian_exile",1
+"((39.5,24.3),(39.8,24.6),(39.6,24.8),(39.3,24.5),(39.4,24.2))",#c0392b,#e74c3c,0.15,627,627,"Massacre of Banu Qurayza in Medina","https://en.wikipedia.org/wiki/Banu_Qurayza",9
+"((29.8,31.1),(30.1,31.3),(30.0,31.6),(29.7,31.4),(29.6,31.2))",#c0392b,#e74c3c,0.15,38,38,"Alexandria pogrom against the Jewish community","https://en.wikipedia.org/wiki/Alexandria_in_Antiquity#Jewish_history",9
+"((-5.2,33.8),(-4.8,34.2),(-4.6,33.9),(-4.9,33.6),(-5.1,33.7))",#c0392b,#e74c3c,0.15,1033,1033,"1033 Fez massacre of Jews in Morocco","https://en.wikipedia.org/wiki/1033_Fez_massacre",9
+"((-3.4,37.0),(-3.8,37.3),(-3.6,37.5),(-3.2,37.2),(-3.3,36.9))",#c0392b,#e74c3c,0.15,1066,1066,"Granada massacre (al-Andalus)","https://en.wikipedia.org/wiki/1066_Granada_massacre",9

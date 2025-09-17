@@ -756,12 +756,12 @@ function initializeMap() {
 
     // Add click functionality to year display for direct year input
     yearDisplay.addEventListener('click', function() {
-        showYearInputDialog();
+        makeYearEditable();
     });
     
     // Add visual indication that year display is clickable
     yearDisplay.style.cursor = 'pointer';
-    yearDisplay.title = 'Click to enter a specific year';
+    yearDisplay.title = 'Click to edit year';
 
     const playButton = document.getElementById('playButton');
     let isPlaying = false;
@@ -1994,32 +1994,132 @@ function createEllipsePolygon(centerLatLng, radiusMetersMajor, radiusMetersMinor
     return L.polygon(points, styleOptions);
 }
 
-// Show year input dialog for direct year entry
-function showYearInputDialog() {
+// Make year display editable inline
+function makeYearEditable() {
+    const yearDisplay = document.getElementById('year-display');
     const currentYear = parseInt(timeline.noUiSlider.get());
-    const yearInput = prompt(
-        `Enter a year to jump to:\n\n` +
-        `Current year: ${currentYear < 0 ? Math.abs(currentYear) + ' BCE' : currentYear + ' CE'}\n` +
-        `Valid range: ${startYear0 < 0 ? Math.abs(startYear0) + ' BCE' : startYear0 + ' CE'} to ${endYear0} CE\n\n` +
-        `Enter year (use negative numbers for BCE, e.g., -1000 for 1000 BCE):`,
-        currentYear.toString()
-    );
     
-    if (yearInput !== null) {
-        const newYear = parseInt(yearInput);
+    // Store original content
+    const originalContent = yearDisplay.innerHTML;
+    
+    // Create input element
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.value = currentYear.toString();
+    input.style.cssText = `
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        border: 2px solid #3b82f6;
+        border-radius: 4px;
+        padding: 2px 6px;
+        background: white;
+        color: #1f2937;
+        width: 120px;
+        text-align: center;
+        outline: none;
+    `;
+    
+    // Replace year display with input
+    yearDisplay.innerHTML = '';
+    yearDisplay.appendChild(input);
+    yearDisplay.style.cursor = 'text';
+    
+    // Focus and select text
+    input.focus();
+    input.select();
+    
+    // Handle input events
+    const handleInput = (e) => {
+        if (e.key === 'Enter') {
+            saveYear();
+        } else if (e.key === 'Escape') {
+            cancelEdit();
+        }
+    };
+    
+    const saveYear = () => {
+        const newYear = parseInt(input.value);
         
         // Validate input
         if (isNaN(newYear)) {
-            alert('Please enter a valid number.');
+            showError('Please enter a valid number');
             return;
         }
         
         if (newYear < startYear0 || newYear > endYear0) {
-            alert(`Year must be between ${startYear0} and ${endYear0}.`);
+            showError(`Year must be between ${startYear0} and ${endYear0}`);
             return;
         }
         
         // Update timeline to new year
         timeline.noUiSlider.set(newYear);
-    }
+        
+        // The timeline update will trigger the 'update' event which will update the display text
+        // We need to wait for the update event to complete, then restore the display
+        setTimeout(() => {
+            yearDisplay.style.cursor = 'pointer';
+        }, 50);
+    };
+    
+    const cancelEdit = () => {
+        yearDisplay.innerHTML = originalContent;
+        yearDisplay.style.cursor = 'pointer';
+    };
+    
+    const showError = (message) => {
+        input.style.borderColor = '#ef4444';
+        input.style.backgroundColor = '#fef2f2';
+        
+        // Show error message briefly
+        const errorDiv = document.createElement('div');
+        errorDiv.textContent = message;
+        errorDiv.style.cssText = `
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ef4444;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            z-index: 1000;
+            margin-top: 4px;
+        `;
+        
+        yearDisplay.style.position = 'relative';
+        yearDisplay.appendChild(errorDiv);
+        
+        // Remove error after 2 seconds
+        setTimeout(() => {
+            if (errorDiv.parentNode) {
+                errorDiv.parentNode.removeChild(errorDiv);
+            }
+            input.style.borderColor = '#3b82f6';
+            input.style.backgroundColor = 'white';
+        }, 2000);
+    };
+    
+    // Add event listeners
+    input.addEventListener('keydown', handleInput);
+    input.addEventListener('blur', saveYear); // Save when clicking outside
+    
+    // Prevent year display click during editing
+    yearDisplay.removeEventListener('click', makeYearEditable);
+    
+    // Re-add click listener after editing is done
+    const reAddListener = () => {
+        setTimeout(() => {
+            yearDisplay.addEventListener('click', makeYearEditable);
+        }, 100);
+    };
+    
+    input.addEventListener('blur', reAddListener);
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === 'Escape') {
+            reAddListener();
+        }
+    });
 }
