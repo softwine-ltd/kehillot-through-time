@@ -299,6 +299,115 @@ body {
     }
 }
 
+/* Historical Periods Timeline */
+#historical-periods {
+    margin: 12px 0 20px 0;
+}
+
+.period-bar {
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.period-text {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    padding: 0 2px;
+}
+
+/* Year labels container */
+#historical-periods .relative {
+    height: 20px;
+    margin-bottom: 8px;
+}
+
+.period-bar:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.period-bar::after {
+    content: attr(data-period);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 20;
+}
+
+.period-bar:hover::after {
+    opacity: 1;
+}
+
+/* Responsive adjustments for historical periods */
+@media (max-width: 768px) {
+    #historical-periods .relative {
+        height: 12px;
+    }
+    
+    .period-text {
+        font-size: 8px;
+    }
+    
+    .period-bar::after {
+        font-size: 9px;
+        top: -18px;
+    }
+    
+    #historical-periods .flex.justify-between {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #historical-periods .relative {
+        height: 10px;
+    }
+    
+    .period-text {
+        font-size: 7px;
+    }
+    
+    .period-bar::after {
+        font-size: 8px;
+        top: -16px;
+    }
+    
+    #historical-periods .flex.justify-between {
+        font-size: 9px;
+    }
+}
+
+/* Hide text on very small periods */
+@media (max-width: 640px) {
+    .period-bar[data-period="Early Modern"] .period-text,
+    .period-bar[data-period="Modern"] .period-text {
+        display: none;
+    }
+}
+
 .floating-icon:hover {
     transform: scale(1.1);
     /* cursor: pointer; */
@@ -394,6 +503,47 @@ body {
 /* Tile selector styling */
 #tileSelector {
     transition: all 0.2s ease;
+}
+
+/* Clustering control slider styling */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #d1d5db;
+    outline: none;
+    border-radius: 5px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #3b82f6;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #3b82f6;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.slider:hover::-webkit-slider-thumb {
+    background: #2563eb;
+    transform: scale(1.1);
+}
+
+.slider:hover::-moz-range-thumb {
+    background: #2563eb;
+    transform: scale(1.1);
 }
 
 #tileSelector:hover {
@@ -523,6 +673,40 @@ body {
     }
     
     #year-steps {
+        display: none !important;
+    }
+    
+    /* Hide historical periods timeline from print */
+    #historical-periods {
+        display: none !important;
+    }
+    
+    /* Hide historical period bars and labels */
+    .period-bar {
+        display: none !important;
+    }
+    
+    /* Hide year labels below historical periods */
+    #historical-periods .flex.justify-between {
+        display: none !important;
+    }
+    
+    /* Hide clustering control from print */
+    #clusterRadius {
+        display: none !important;
+    }
+    
+    #clusterValue {
+        display: none !important;
+    }
+    
+    /* Hide clustering label from print */
+    label[for="clusterRadius"] {
+        display: none !important;
+    }
+    
+    /* Hide work in progress message from print */
+    .bg-yellow-50 {
         display: none !important;
     }
     

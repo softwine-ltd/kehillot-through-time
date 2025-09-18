@@ -667,6 +667,7 @@ function initializeMap() {
 
     // Initialize markers layer with custom cluster icon
     markersLayer = L.markerClusterGroup({
+        maxClusterRadius: 80, // Default cluster radius
         iconCreateFunction: function(cluster) {
             const childCount = cluster.getChildCount();
             let totalPopulation = 0;
@@ -762,6 +763,12 @@ function initializeMap() {
     // Add visual indication that year display is clickable
     yearDisplay.style.cursor = 'pointer';
     yearDisplay.title = 'Click to edit year';
+
+    // Add historical periods functionality
+    addHistoricalPeriodsInteraction();
+    
+    // Add clustering control functionality
+    addClusteringControl();
 
     const playButton = document.getElementById('playButton');
     let isPlaying = false;
@@ -1185,12 +1192,13 @@ function initializeMap() {
                 </p>
                 <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
                     <li><strong>Drag the slider</strong> to jump to any year</li>
+                    <li><strong>Click the year display</strong> to edit it directly and jump to a specific year</li>
                     <li><strong>Use the play button</strong> to animate through time automatically</li>
                     <li><strong>Adjust the speed</strong> with the speed control</li>
                     <li><strong>Use step buttons</strong> (-10, -5, -1, +1, +5, +10) for precise navigation</li>
                 </ul>
                 <p class="text-blue-600 font-medium">
-                    Try dragging the timeline slider to see how the map changes!
+                    Try dragging the timeline slider or clicking the year display to see how the map changes!
                 </p>
             `,
             highlight: 'timeline'
@@ -1220,22 +1228,22 @@ function initializeMap() {
                     Let's explore the different types of markers you'll see on the map:
                 </p>
                 <div class="space-y-4 mb-4">
-                    <div class="bg-blue-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-blue-800 mb-2">Individual Community Markers</h4>
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-red-800 mb-2">Individual Community Markers</h4>
                         <div class="flex items-center space-x-4">
-                            <div class="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">1.2k</div>
+                            <div class="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center text-white text-xs font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">1.2k</div>
                             <div class="text-sm text-gray-700">
                                 <strong>Small marker:</strong> Smaller communities
                             </div>
                         </div>
                         <div class="flex items-center space-x-4 mt-2">
-                            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">15k</div>
+                            <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white text-sm font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">15k</div>
                             <div class="text-sm text-gray-700">
                                 <strong>Medium marker:</strong> Medium-sized communities
                             </div>
                         </div>
                         <div class="flex items-center space-x-4 mt-2">
-                            <div class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">250k</div>
+                            <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center text-white font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">250k</div>
                             <div class="text-sm text-gray-700">
                                 <strong>Large marker:</strong> Major communities
                             </div>
@@ -1245,10 +1253,10 @@ function initializeMap() {
                         </p>
                     </div>
                     
-                    <div class="bg-green-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-green-800 mb-2">Cluster Markers</h4>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-blue-800 mb-2">Cluster Markers</h4>
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-green-600 rounded-full flex flex-col items-center justify-center text-white text-xs font-bold" style="box-shadow: 0 2px 4px rgba(0,0,0,0.3); border: 2px solid white;">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex flex-col items-center justify-center text-white text-xs font-bold" style="box-shadow: 0 2px 4px rgba(0,0,0,0.3); border: 2px solid white;">
                                 <div>5</div>
                                 <div class="text-xs">2.1M</div>
                             </div>
@@ -1264,16 +1272,16 @@ function initializeMap() {
                         <h4 class="font-semibold text-yellow-800 mb-2">Confidence Levels</h4>
                         <div class="space-y-2">
                             <div class="flex items-center space-x-2">
-                                <div class="w-4 h-4 bg-blue-800 rounded-full"></div>
-                                <span class="text-sm text-gray-700"><strong>Dark blue:</strong> High confidence data</span>
+                                <div class="w-4 h-4 bg-red-800 rounded-full"></div>
+                                <span class="text-sm text-gray-700"><strong>Dark red:</strong> High confidence data</span>
                             </div>
                             <div class="flex items-center space-x-2">
-                                <div class="w-4 h-4 bg-blue-400 rounded-full"></div>
-                                <span class="text-sm text-gray-700"><strong>Medium blue:</strong> Medium confidence data</span>
+                                <div class="w-4 h-4 bg-red-500 rounded-full"></div>
+                                <span class="text-sm text-gray-700"><strong>Medium red:</strong> Medium confidence data</span>
                             </div>
                             <div class="flex items-center space-x-2">
-                                <div class="w-4 h-4 bg-blue-200 rounded-full"></div>
-                                <span class="text-sm text-gray-700"><strong>Light blue:</strong> Lower confidence data</span>
+                                <div class="w-4 h-4 bg-red-300 rounded-full"></div>
+                                <span class="text-sm text-gray-700"><strong>Light red:</strong> Lower confidence data</span>
                             </div>
                         </div>
                     </div>
@@ -1379,6 +1387,76 @@ function initializeMap() {
             }
         },
         {
+            title: "Clustering Control",
+            content: `
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    You can control how communities are grouped together using the clustering slider:
+                </p>
+                <div class="space-y-4 mb-4">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-blue-800 mb-2">Clustering Options</h4>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li><strong>Small radius (10-50px):</strong> More individual communities visible, smaller clusters</li>
+                            <li><strong>Medium radius (50-100px):</strong> Balanced view - default setting</li>
+                            <li><strong>Large radius (100-200px):</strong> More aggregated view, larger clusters</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-blue-600 font-medium">
+                    Try adjusting the clustering slider to see how it changes the map view!
+                </p>
+            `,
+            highlight: 'cluster-control'
+        },
+        {
+            title: "Historical Periods Timeline",
+            content: `
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Below the main timeline, you'll see a color-coded bar showing different historical periods:
+                </p>
+                <div class="space-y-4 mb-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-gray-800 mb-3">Historical Periods</h4>
+                        <div class="grid grid-cols-2 gap-2 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 rounded" style="background-color: #8B4513;"></div>
+                                <span>Biblical Era (1400-586 BCE)</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 rounded" style="background-color: #B8860B;"></div>
+                                <span>Second Temple (586 BCE-70 CE)</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 rounded" style="background-color: #228B22;"></div>
+                                <span>Talmudic Era (70-500 CE)</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 rounded" style="background-color: #4169E1;"></div>
+                                <span>Medieval (500-1500 CE)</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 rounded" style="background-color: #9370DB;"></div>
+                                <span>Early Modern (1500-1800 CE)</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 rounded" style="background-color: #FF6347;"></div>
+                                <span>Modern (1800-2025 CE)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><strong>Click any period</strong> to jump to the beginning of that era</li>
+                    <li><strong>Current period</strong> is highlighted with a border and shadow</li>
+                    <li><strong>Year labels</strong> show the boundaries between periods</li>
+                </ul>
+                <p class="text-blue-600 font-medium">
+                    Click on any historical period to quickly navigate to that era!
+                </p>
+            `,
+            highlight: 'historical-periods'
+        },
+        {
             title: "Tour Complete!",
             content: `
                 <p class="text-gray-700 leading-relaxed mb-4">
@@ -1395,6 +1473,8 @@ function initializeMap() {
                     <li>Explore community populations and details</li>
                     <li>Learn about historical events and their impact</li>
                     <li>Customize your map view and language preferences</li>
+                    <li>Control clustering granularity for different views</li>
+                    <li>Use historical periods for quick navigation</li>
                     <li>Use all the interactive features</li>
                 </ul>
                 <p class="text-green-600 font-medium">
@@ -1451,6 +1531,12 @@ function initializeMap() {
                 break;
             case 'controls':
                 element = document.querySelector('.timeline-section');
+                break;
+            case 'cluster-control':
+                element = document.getElementById('clusterRadius');
+                break;
+            case 'historical-periods':
+                element = document.getElementById('historical-periods');
                 break;
         }
         
@@ -1529,25 +1615,25 @@ function playTimeline(timeline) {
 
 function getMarkerSize(population) {
     // Base size for the marker
-    const baseSize = 8;
+    const baseSize = 10;
 //    if (population < 1000) return baseSize;
 //    if (population < 5000) return baseSize * 1.5;
 //    if (population < 10000) return baseSize * 2;
 //    if (population < 50000) return baseSize * 2.5;
-    return Math.max(baseSize, Math.floor(2.2 * Math.log(population)));
+    return Math.max(baseSize, Math.floor(2.38862 * Math.log(population)));  //  Math.log computes the Natural Logarithm, 2.38862*np.log(100) = 11
 }
 
 
 function getConfidenceColor(confidence) {
     switch (confidence.toLowerCase()) {
         case 'high':
-            return '#1a5f7a';  // Solid blue
+            return '#dc2626';  // Dark red
         case 'medium':
-            return '#699eb3';  // Lighter blue
+            return '#ef4444';  // Medium red
         case 'low':
-            return '#a8c9d5';  // Very light blue
+            return '#f87171';  // Light red
         default:
-            return '#84a7b4';  // Default blue
+            return '#ef3333';  // Default: Medium red
     }
 }
 
@@ -2120,6 +2206,155 @@ function makeYearEditable() {
     input.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === 'Escape') {
             reAddListener();
+        }
+    });
+}
+
+// Historical periods data (matching the HTML)
+const historicalPeriods = {
+    "Biblical Era": { start: -1400, end: -586, color: "#8B4513" },
+    "Second Temple": { start: -586, end: 70, color: "#B8860B" },
+    "Talmudic Era": { start: 70, end: 500, color: "#228B22" },
+    "Medieval": { start: 500, end: 1500, color: "#4169E1" },
+    "Early Modern": { start: 1500, end: 1800, color: "#9370DB" },
+    "Modern": { start: 1800, end: 2025, color: "#FF6347" }
+};
+
+// Add historical periods interaction functionality
+function addHistoricalPeriodsInteraction() {
+    const periodBars = document.querySelectorAll('.period-bar');
+    
+    // Add click handlers to period bars
+    periodBars.forEach(bar => {
+        bar.addEventListener('click', function() {
+            const period = this.dataset.period;
+            const periodData = historicalPeriods[period];
+            if (periodData) {
+                // Set timeline to the beginning of the period
+                timeline.noUiSlider.set(periodData.start);
+            }
+        });
+    });
+    
+    // Update period highlighting based on current year
+    timeline.noUiSlider.on('update', function(values) {
+        const currentYear = parseInt(values[0]);
+        updatePeriodHighlighting(currentYear);
+    });
+}
+
+// Add clustering control functionality
+function addClusteringControl() {
+    const clusterRadiusSlider = document.getElementById('clusterRadius');
+    const clusterValueDisplay = document.getElementById('clusterValue');
+    
+    // Update display value
+    function updateClusterValue() {
+        const value = clusterRadiusSlider.value;
+        clusterValueDisplay.textContent = value + 'px';
+    }
+    
+    // Handle slider change
+    clusterRadiusSlider.addEventListener('input', function() {
+        updateClusterValue();
+        updateClusterRadius(parseInt(this.value));
+    });
+    
+    // Initialize display
+    updateClusterValue();
+}
+
+// Update cluster radius
+function updateClusterRadius(radius) {
+    if (markersLayer && map) {
+        // Store current markers
+        const currentMarkers = [];
+        markersLayer.eachLayer(function(marker) {
+            currentMarkers.push(marker);
+        });
+        
+        // Remove current cluster group from map
+        map.removeLayer(markersLayer);
+        
+        // Create new cluster group with updated radius
+        markersLayer = L.markerClusterGroup({
+            maxClusterRadius: radius,
+            iconCreateFunction: function(cluster) {
+                const childCount = cluster.getChildCount();
+                let totalPopulation = 0;
+                
+                // Calculate total population for all markers in this cluster
+                cluster.getAllChildMarkers().forEach(marker => {
+                    if (marker.kehilaData && marker.kehilaData.actual_pop) {
+                        totalPopulation += marker.kehilaData.actual_pop;
+                    }
+                });
+                
+                // Format population with shorter format for large numbers
+                const formattedPopulation = formatPopulation(totalPopulation);
+                
+                // Calculate cluster size based on total population using the same function as individual markers
+                const clusterSize = getMarkerSize(totalPopulation);
+                const iconSize = Math.max(32, clusterSize * 2.5);
+                const iconAnchor = iconSize / 2;
+                
+                // Create cluster icon with count and population
+                return L.divIcon({
+                    html: `<div style="
+                        background-color: #3b82f6;
+                        color: white;
+                        border-radius: 50%;
+                        width: ${iconSize}px;
+                        height: ${iconSize}px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                        font-size: ${Math.max(12, Math.min(18, iconSize * 0.3))}px;
+                        border: 2px solid white;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                    ">
+                        <div>${childCount}</div>
+                        <div style="font-size: ${Math.max(9, Math.min(14, iconSize * 0.25))}px; margin-top: -2px;">${formattedPopulation}</div>
+                    </div>`,
+                    className: 'custom-cluster-icon',
+                    iconSize: [iconSize, iconSize],
+                    iconAnchor: [iconAnchor, iconAnchor]
+                });
+            }
+        });
+        
+        // Add markers back to the new cluster group
+        currentMarkers.forEach(marker => {
+            markersLayer.addLayer(marker);
+        });
+        
+        // Add the new cluster group to the map
+        map.addLayer(markersLayer);
+        
+        console.log(`Cluster radius updated to ${radius}px`);
+    }
+}
+
+// Update period highlighting based on current year
+function updatePeriodHighlighting(year) {
+    const periodBars = document.querySelectorAll('.period-bar');
+    
+    periodBars.forEach(bar => {
+        const period = bar.dataset.period;
+        const periodData = historicalPeriods[period];
+        
+        if (year >= periodData.start && year <= periodData.end) {
+            // Current period - add highlight
+            bar.style.border = '2px solid #333';
+            bar.style.boxShadow = '0 0 8px rgba(0,0,0,0.3)';
+            bar.style.transform = 'scale(1.05)';
+        } else {
+            // Not current period - remove highlight
+            bar.style.border = 'none';
+            bar.style.boxShadow = 'none';
+            bar.style.transform = 'scale(1)';
         }
     });
 }

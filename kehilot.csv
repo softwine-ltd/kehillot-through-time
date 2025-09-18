@@ -1446,25 +1446,25 @@ Switzerland,Zurich,8.641154,47.441242,1273,1273,1942,30,30,,,,,ציריך,,,,htt
 Switzerland,Zurich,8.641154,47.441242,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 ,Zutphen,6.20139,52.13833,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 ,Zwolle,6.09444,52.5125,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
-Israel,Jerusalem,35.2137,31.7683,-1000,-1000,-586,2000,2000,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,King David establishes Jerusalem as capital - estimated population
-Israel,Jerusalem,35.2137,31.7683,-586,-586,-515,0,0,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Babylonian destruction and exile - no Jewish population
-Israel,Jerusalem,35.2137,31.7683,-515,-515,70,5000,40000,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Second Temple period - gradual growth to peak before Roman destruction
-Israel,Jerusalem,35.2137,31.7683,70,70,135,0,0,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Roman destruction of Second Temple - Jews expelled from Jerusalem
-Israel,Jerusalem,35.2137,31.7683,135,135,638,0,0,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Bar Kokhba revolt - Jews banned from Jerusalem by Romans
-Israel,Jerusalem,35.2137,31.7683,638,638,1099,1000,1000,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Islamic conquest - small Jewish community allowed to return
-Israel,Jerusalem,35.2137,31.7683,1099,1099,1267,0,0,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Crusader conquest - Jews massacred or expelled
-Israel,Jerusalem,35.2137,31.7683,1267,1267,1517,1000,1000,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Rabbi Nachmanides re-establishes Jewish community
-Israel,Jerusalem,35.2137,31.7683,1517,1517,1800,1000,2000,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Ottoman conquest - gradual Jewish population growth
-Israel,Jerusalem,35.2137,31.7683,1800,1800,1844,2000,7120,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Jewish population growth under Ottoman rule
-Israel,Jerusalem,35.2137,31.7683,1844,1844,1876,7120,12000,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Continued growth - Jews become largest religious group
-Israel,Jerusalem,35.2137,31.7683,1876,1876,1896,12000,28112,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Significant Jewish immigration and neighborhood expansion
-Israel,Jerusalem,35.2137,31.7683,1896,1896,1922,28112,33971,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,British Mandate period - continued growth
-Israel,Jerusalem,35.2137,31.7683,1922,1922,1931,33971,51222,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Pre-World War II growth
-Israel,Jerusalem,35.2137,31.7683,1931,1931,1948,51222,100000,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Establishment of State of Israel - Jerusalem divided
-Israel,Jerusalem,35.2137,31.7683,1948,1948,1967,100000,195700,0.6,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Post-independence growth - Jerusalem reunified in 1967
-Israel,Jerusalem,35.2137,31.7683,1967,1967,1987,195700,340000,high,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Post-reunification growth - Jerusalem declared capital
-Israel,Jerusalem,35.2137,31.7683,1987,1987,2000,340000,439600,high,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Continued growth and expansion
-Israel,Jerusalem,35.2137,31.7683,2000,2000,2025,439600,576600,high,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://jerusaleminstitute.org.il/en/publications/jerusalem-facts-and-trends-2023/,Modern Jerusalem - over 1 million total population
+Israel,Jerusalem,35.2137,31.7683,-1000,-1000,-586,2000,5000,high,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,King David establishes Jerusalem as capital - estimated population
+Israel,Jerusalem,35.2137,31.7683,-1000,-585,-515,5000,500,medium,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Babylonian destruction and exile - no Jewish population
+Israel,Jerusalem,35.2137,31.7683,-1000,-514,70,500,40000,low,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Second Temple period - gradual growth to peak before Roman destruction
+Israel,Jerusalem,35.2137,31.7683,-1000,70,135,2000,2000,medium,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Roman destruction of Second Temple - Jews expelled from Jerusalem
+Israel,Jerusalem,35.2137,31.7683,-1000,135,638,0,0,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Bar Kokhba revolt - Jews banned from Jerusalem by Romans
+Israel,Jerusalem,35.2137,31.7683,-1000,638,1099,1000,1000,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Islamic conquest - small Jewish community allowed to return
+Israel,Jerusalem,35.2137,31.7683,-1000,1099,1267,0,0,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Crusader conquest - Jews massacred or expelled
+Israel,Jerusalem,35.2137,31.7683,-1000,1267,1517,1000,1000,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Rabbi Nachmanides re-establishes Jewish community
+Israel,Jerusalem,35.2137,31.7683,-1000,1517,1800,1000,2000,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/jerusalem,Ottoman conquest - gradual Jewish population growth
+Israel,Jerusalem,35.2137,31.7683,-1000,1800,1844,2000,7120,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Jewish population growth under Ottoman rule
+Israel,Jerusalem,35.2137,31.7683,-1000,1844,1876,7120,12000,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Continued growth - Jews become largest religious group
+Israel,Jerusalem,35.2137,31.7683,-1000,1876,1896,12000,28112,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Significant Jewish immigration and neighborhood expansion
+Israel,Jerusalem,35.2137,31.7683,-1000,1896,1922,28112,33971,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,British Mandate period - continued growth
+Israel,Jerusalem,35.2137,31.7683,-1000,1922,1931,33971,51222,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Pre-World War II growth
+Israel,Jerusalem,35.2137,31.7683,-1000,1931,1948,51222,100000,,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Establishment of State of Israel - Jerusalem divided
+Israel,Jerusalem,35.2137,31.7683,-1000,1948,1967,100000,195700,high,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Post-independence growth - Jerusalem reunified in 1967
+Israel,Jerusalem,35.2137,31.7683,-1000,1967,1987,195700,340000,high,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Post-reunification growth - Jerusalem declared capital
+Israel,Jerusalem,35.2137,31.7683,-1000,1987,2000,340000,439600,high,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://www.jewishvirtuallibrary.org/population-of-jerusalem-1844-2009,Continued growth and expansion
+Israel,Jerusalem,35.2137,31.7683,-1000,2000,2025,439600,576600,high,,,,ירושלים,ירושלים,Jerusalem,Jerusalem,https://jerusaleminstitute.org.il/en/publications/jerusalem-facts-and-trends-2023/,Modern Jerusalem - over 1 million total population
 Israel,Tel Aviv,34.7818,32.0853,1909,1909,2023,1000,467875,1,,,,תל אביב,תל אביב,Tel Aviv,Tel Aviv,https://www.jewishvirtuallibrary.org/tel-aviv-israel,First Hebrew city - established in 1909
 Israel,Haifa,34.9896,32.7940,1880,1880,2023,500,282832,,,,,חיפה,חיפה,Haifa,Haifa,https://www.jewishvirtuallibrary.org/haifa-israel,Jewish community established in 1880s
 Israel,Rishon LeZion,34.8015,31.9640,1882,1882,2023,200,257128,,,,,ראשון לציון,ראשון לציון,Rishon LeZion,Rishon LeZion,https://www.jewishvirtuallibrary.org/rishon-lezion-israel,First Zionist settlement - established in 1882
@@ -1607,84 +1607,7 @@ Israel,Ma'ale Adumim,35.3000,31.7667,2008,2008,2023,32000,38000,,,,,מעלה א�
 Israel,Beitar Illit,35.1167,31.7000,1985,1985,1987,2000,5000,,,,,ביתר עילית,ביתר עילית,Beitar Illit,Beitar Illit,https://www.jewishvirtuallibrary.org/beitar-illit-israel,Ultra-Orthodox settlement - established in 1985
 Israel,Beitar Illit,35.1167,31.7000,1987,1987,2008,5000,35000,,,,,ביתר עילית,ביתר עילית,Beitar Illit,Beitar Illit,https://www.jewishvirtuallibrary.org/beitar-illit-israel,Rapid Haredi growth
 Israel,Beitar Illit,35.1167,31.7000,2008,2008,2023,35000,60000,,,,,ביתר עילית,ביתר עילית,Beitar Illit,Beitar Illit,https://www.jewishvirtuallibrary.org/beitar-illit-israel,Largest ultra-Orthodox settlement
-Israel,Modi'in Illit,35.0500,31.9333,1996,1996,2008,25000,45000,,,,,מודיעין עילית,מודיעין עילית,Modi'in Illit,Modi'in Illit,https://www.jewishvirtuallibrary.org/modiin-illit-israel,Ultra-Orthodox settlement - established in 1996
-Israel,Modi'in Illit,35.0500,31.9333,2008,2008,2023,45000,76000,,,,,מודיעין עילית,מודיעין עילית,Modi'in Illit,Modi'in Illit,https://www.jewishvirtuallibrary.org/modiin-illit-israel,Fast-growing Haredi city
-Israel,Efrat,35.1333,31.6500,1983,1983,1987,2000,5000,,,,,אפרת,אפרת,Efrat,Efrat,https://www.jewishvirtuallibrary.org/efrat-israel,Religious settlement - established in 1983
-Israel,Efrat,35.1333,31.6500,1987,1987,2008,5000,8000,,,,,אפרת,אפרת,Efrat,Efrat,https://www.jewishvirtuallibrary.org/efrat-israel,Modern Orthodox community
-Israel,Efrat,35.1333,31.6500,2008,2008,2023,8000,12000,,,,,אפרת,אפרת,Efrat,Efrat,https://www.jewishvirtuallibrary.org/efrat-israel,Gush Etzion settlement
-Poland,Warsaw,21.0122,52.2297,1750,1750,1800,5000,5000,,,,,ורשה,ווארשע,Warschau,,IIJG Historical Data,Historical Jewish community data - 1750-1800
-Poland,Warsaw,21.0122,52.2297,1750,1800,1850,8000,8000,,,,,ורשה,ווארשע,Warschau,,IIJG Historical Data,Historical Jewish community data - 1800-1850
-Poland,Warsaw,21.0122,52.2297,1750,1850,1900,12000,12000,,,,,ורשה,ווארשע,Warschau,,IIJG Historical Data,Historical Jewish community data - 1850-1900
-Poland,Warsaw,21.0122,52.2297,1750,1900,1920,300000,300000,,,,,ורשה,ווארשע,Warschau,,IIJG Historical Data,Historical Jewish community data - 1900-1920
-Poland,Warsaw,21.0122,52.2297,1750,1920,1950,350000,350000,,,,,ורשה,ווארשע,Warschau,,IIJG Historical Data,Historical Jewish community data - 1920-1950
-Poland,Warsaw,21.0122,52.2297,1750,1950,2023,50000,50000,,,,,ורשה,ווארשע,Warschau,,IIJG Historical Data,Historical Jewish community data - 1950-2023
-Poland,Krakow,19.9450,50.0647,1200,1750,1800,3000,3000,,,,,קרקוב,קראָקע,Krakau,,IIJG Historical Data,Historical Jewish community data - 1750-1800
-Poland,Krakow,19.9450,50.0647,1200,1800,1850,5000,5000,,,,,קרקוב,קראָקע,Krakau,,IIJG Historical Data,Historical Jewish community data - 1800-1850
-Poland,Krakow,19.9450,50.0647,1200,1850,1900,8000,8000,,,,,קרקוב,קראָקע,Krakau,,IIJG Historical Data,Historical Jewish community data - 1850-1900
-Poland,Krakow,19.9450,50.0647,1200,1900,1920,25000,25000,,,,,קרקוב,קראָקע,Krakau,,IIJG Historical Data,Historical Jewish community data - 1900-1920
-Poland,Krakow,19.9450,50.0647,1200,1920,1950,30000,30000,,,,,קרקוב,קראָקע,Krakau,,IIJG Historical Data,Historical Jewish community data - 1920-1950
-Poland,Krakow,19.9450,50.0647,1200,1950,2023,2000,2000,,,,,קרקוב,קראָקע,Krakau,,IIJG Historical Data,Historical Jewish community data - 1950-2023
-Poland,Lodz,19.4560,51.7592,1800,1800,1850,2000,2000,,,,,לודז,לודזש,Lodsch,,IIJG Historical Data,Historical Jewish community data - 1800-1850
-Poland,Lodz,19.4560,51.7592,1800,1850,1900,100000,100000,,,,,לודז,לודזש,Lodsch,,IIJG Historical Data,Historical Jewish community data - 1850-1900
-Poland,Lodz,19.4560,51.7592,1800,1900,1920,200000,200000,,,,,לודז,לודזש,Lodsch,,IIJG Historical Data,Historical Jewish community data - 1900-1920
-Poland,Lodz,19.4560,51.7592,1800,1920,1950,250000,250000,,,,,לודז,לודזש,Lodsch,,IIJG Historical Data,Historical Jewish community data - 1920-1950
-Poland,Lodz,19.4560,51.7592,1800,1950,2023,10000,10000,,,,,לודז,לודזש,Lodsch,,IIJG Historical Data,Historical Jewish community data - 1950-2023
-Lithuania,Vilnius,25.2797,54.6872,1500,1750,1800,4000,4000,,,,,וילנה,ווילנע,Wilna,,IIJG Historical Data,Historical Jewish community data - 1750-1800
-Lithuania,Vilnius,25.2797,54.6872,1500,1800,1850,6000,6000,,,,,וילנה,ווילנע,Wilna,,IIJG Historical Data,Historical Jewish community data - 1800-1850
-Lithuania,Vilnius,25.2797,54.6872,1500,1850,1900,10000,10000,,,,,וילנה,ווילנע,Wilna,,IIJG Historical Data,Historical Jewish community data - 1850-1900
-Lithuania,Vilnius,25.2797,54.6872,1500,1900,1920,50000,50000,,,,,וילנה,ווילנע,Wilna,,IIJG Historical Data,Historical Jewish community data - 1900-1920
-Lithuania,Vilnius,25.2797,54.6872,1500,1920,1950,60000,60000,,,,,וילנה,ווילנע,Wilna,,IIJG Historical Data,Historical Jewish community data - 1920-1950
-Lithuania,Vilnius,25.2797,54.6872,1500,1950,2023,5000,5000,,,,,וילנה,ווילנע,Wilna,,IIJG Historical Data,Historical Jewish community data - 1950-2023
-Belarus,Minsk,27.5590,53.9006,1600,1750,1800,2000,2000,,,,,מינסק,מינסק,Minsk,,IIJG Historical Data,Historical Jewish community data - 1750-1800
-Belarus,Minsk,27.5590,53.9006,1600,1800,1850,4000,4000,,,,,מינסק,מינסק,Minsk,,IIJG Historical Data,Historical Jewish community data - 1800-1850
-Belarus,Minsk,27.5590,53.9006,1600,1850,1900,15000,15000,,,,,מינסק,מינסק,Minsk,,IIJG Historical Data,Historical Jewish community data - 1850-1900
-Belarus,Minsk,27.5590,53.9006,1600,1900,1920,50000,50000,,,,,מינסק,מינסק,Minsk,,IIJG Historical Data,Historical Jewish community data - 1900-1920
-Belarus,Minsk,27.5590,53.9006,1600,1920,1950,60000,60000,,,,,מינסק,מינסק,Minsk,,IIJG Historical Data,Historical Jewish community data - 1920-1950
-Belarus,Minsk,27.5590,53.9006,1600,1950,2023,10000,10000,,,,,מינסק,מינסק,Minsk,,IIJG Historical Data,Historical Jewish community data - 1950-2023
-Germany,Berlin,13.4050,52.5200,1670,1750,1800,3000,3000,,,,,ברלין,בערלין,Berlin,,IIJG Historical Data,Historical Jewish community data - 1750-1800
-Germany,Berlin,13.4050,52.5200,1670,1800,1850,5000,5000,,,,,ברלין,בערלין,Berlin,,IIJG Historical Data,Historical Jewish community data - 1800-1850
-Germany,Berlin,13.4050,52.5200,1670,1850,1900,12000,12000,,,,,ברלין,בערלין,Berlin,,IIJG Historical Data,Historical Jewish community data - 1850-1900
-Germany,Berlin,13.4050,52.5200,1670,1900,1920,150000,150000,,,,,ברלין,בערלין,Berlin,,IIJG Historical Data,Historical Jewish community data - 1900-1920
-Germany,Berlin,13.4050,52.5200,1670,1920,1950,200000,200000,,,,,ברלין,בערלין,Berlin,,IIJG Historical Data,Historical Jewish community data - 1920-1950
-Germany,Berlin,13.4050,52.5200,1670,1950,2023,6000,6000,,,,,ברלין,בערלין,Berlin,,IIJG Historical Data,Historical Jewish community data - 1950-2023
-Austria,Vienna,16.3738,48.2082,1200,1750,1800,2000,2000,,,,,וינה,ווין,Wien,,IIJG Historical Data,Historical Jewish community data - 1750-1800
-Austria,Vienna,16.3738,48.2082,1200,1800,1850,4000,4000,,,,,וינה,ווין,Wien,,IIJG Historical Data,Historical Jewish community data - 1800-1850
-Austria,Vienna,16.3738,48.2082,1200,1850,1900,10000,10000,,,,,וינה,ווין,Wien,,IIJG Historical Data,Historical Jewish community data - 1850-1900
-Austria,Vienna,16.3738,48.2082,1200,1900,1920,200000,200000,,,,,וינה,ווין,Wien,,IIJG Historical Data,Historical Jewish community data - 1900-1920
-Austria,Vienna,16.3738,48.2082,1200,1920,1950,180000,180000,,,,,וינה,ווין,Wien,,IIJG Historical Data,Historical Jewish community data - 1920-1950
-Austria,Vienna,16.3738,48.2082,1200,1950,2023,8000,8000,,,,,וינה,ווין,Wien,,IIJG Historical Data,Historical Jewish community data - 1950-2023
-Czech Republic,Prague,14.4378,50.0755,1000,1750,1800,5000,5000,,,,,פראג,פראג,Prag,,IIJG Historical Data,Historical Jewish community data - 1750-1800
-Czech Republic,Prague,14.4378,50.0755,1000,1800,1850,8000,8000,,,,,פראג,פראג,Prag,,IIJG Historical Data,Historical Jewish community data - 1800-1850
-Czech Republic,Prague,14.4378,50.0755,1000,1850,1900,15000,15000,,,,,פראג,פראג,Prag,,IIJG Historical Data,Historical Jewish community data - 1850-1900
-Czech Republic,Prague,14.4378,50.0755,1000,1900,1920,35000,35000,,,,,פראג,פראג,Prag,,IIJG Historical Data,Historical Jewish community data - 1900-1920
-Czech Republic,Prague,14.4378,50.0755,1000,1920,1950,40000,40000,,,,,פראג,פראג,Prag,,IIJG Historical Data,Historical Jewish community data - 1920-1950
-Czech Republic,Prague,14.4378,50.0755,1000,1950,2023,5000,5000,,,,,פראג,פראג,Prag,,IIJG Historical Data,Historical Jewish community data - 1950-2023
-Hungary,Budapest,19.0402,47.4979,1200,1750,1800,3000,3000,,,,,בודפשט,בודפעשט,Budapest,,IIJG Historical Data,Historical Jewish community data - 1750-1800
-Hungary,Budapest,19.0402,47.4979,1200,1800,1850,5000,5000,,,,,בודפשט,בודפעשט,Budapest,,IIJG Historical Data,Historical Jewish community data - 1800-1850
-Hungary,Budapest,19.0402,47.4979,1200,1850,1900,15000,15000,,,,,בודפשט,בודפעשט,Budapest,,IIJG Historical Data,Historical Jewish community data - 1850-1900
-Hungary,Budapest,19.0402,47.4979,1200,1900,1920,200000,200000,,,,,בודפשט,בודפעשט,Budapest,,IIJG Historical Data,Historical Jewish community data - 1900-1920
-Hungary,Budapest,19.0402,47.4979,1200,1920,1950,180000,180000,,,,,בודפשט,בודפעשט,Budapest,,IIJG Historical Data,Historical Jewish community data - 1920-1950
-Hungary,Budapest,19.0402,47.4979,1200,1950,2023,100000,100000,,,,,בודפשט,בודפעשט,Budapest,,IIJG Historical Data,Historical Jewish community data - 1950-2023
-Romania,Bucharest,26.1025,44.4268,1600,1750,1800,2000,2000,,,,,בוקרשט,בוקארעשט,Bukarest,,IIJG Historical Data,Historical Jewish community data - 1750-1800
-Romania,Bucharest,26.1025,44.4268,1600,1800,1850,4000,4000,,,,,בוקרשט,בוקארעשט,Bukarest,,IIJG Historical Data,Historical Jewish community data - 1800-1850
-Romania,Bucharest,26.1025,44.4268,1600,1850,1900,10000,10000,,,,,בוקרשט,בוקארעשט,Bukarest,,IIJG Historical Data,Historical Jewish community data - 1850-1900
-Romania,Bucharest,26.1025,44.4268,1600,1900,1920,50000,50000,,,,,בוקרשט,בוקארעשט,Bukarest,,IIJG Historical Data,Historical Jewish community data - 1900-1920
-Romania,Bucharest,26.1025,44.4268,1600,1920,1950,60000,60000,,,,,בוקרשט,בוקארעשט,Bukarest,,IIJG Historical Data,Historical Jewish community data - 1920-1950
-Romania,Bucharest,26.1025,44.4268,1600,1950,2023,5000,5000,,,,,בוקרשט,בוקארעשט,Bukarest,,IIJG Historical Data,Historical Jewish community data - 1950-2023
-Ukraine,Kiev,30.5234,50.4501,1000,1750,1800,3000,3000,,,,,קייב,קיעוו,Kiew,,IIJG Historical Data,Historical Jewish community data - 1750-1800
-Ukraine,Kiev,30.5234,50.4501,1000,1800,1850,5000,5000,,,,,קייב,קיעוו,Kiew,,IIJG Historical Data,Historical Jewish community data - 1800-1850
-Ukraine,Kiev,30.5234,50.4501,1000,1850,1900,15000,15000,,,,,קייב,קיעוו,Kiew,,IIJG Historical Data,Historical Jewish community data - 1850-1900
-Ukraine,Kiev,30.5234,50.4501,1000,1900,1920,80000,80000,,,,,קייב,קיעוו,Kiew,,IIJG Historical Data,Historical Jewish community data - 1900-1920
-Ukraine,Kiev,30.5234,50.4501,1000,1920,1950,100000,100000,,,,,קייב,קיעוו,Kiew,,IIJG Historical Data,Historical Jewish community data - 1920-1950
-Ukraine,Kiev,30.5234,50.4501,1000,1950,2023,20000,20000,,,,,קייב,קיעוו,Kiew,,IIJG Historical Data,Historical Jewish community data - 1950-2023
-Ukraine,Odessa,30.7233,46.4825,1800,1800,1850,5000,5000,,,,,אודסה,אָדעסע,Odessa,,IIJG Historical Data,Historical Jewish community data - 1800-1850
-Ukraine,Odessa,30.7233,46.4825,1800,1850,1900,50000,50000,,,,,אודסה,אָדעסע,Odessa,,IIJG Historical Data,Historical Jewish community data - 1850-1900
-Ukraine,Odessa,30.7233,46.4825,1800,1900,1920,150000,150000,,,,,אודסה,אָדעסע,Odessa,,IIJG Historical Data,Historical Jewish community data - 1900-1920
-Ukraine,Odessa,30.7233,46.4825,1800,1920,1950,180000,180000,,,,,אודסה,אָדעסע,Odessa,,IIJG Historical Data,Historical Jewish community data - 1920-1950
-Ukraine,Odessa,30.7233,46.4825,1800,1950,2023,30000,30000,,,,,אודסה,אָדעסע,Odessa,,IIJG Historical Data,Historical Jewish community data - 1950-2023
-Ukraine,Lviv,24.0297,49.8397,1300,1750,1800,4000,4000,,,,,לבוב,לעמבערג,Lemberg,,IIJG Historical Data,Historical Jewish community data - 1750-1800
-Ukraine,Lviv,24.0297,49.8397,1300,1800,1850,6000,6000,,,,,לבוב,לעמבערג,Lemberg,,IIJG Historical Data,Historical Jewish community data - 1800-1850
-Ukraine,Lviv,24.0297,49.8397,1300,1850,1900,20000,20000,,,,,לבוב,לעמבערג,Lemberg,,IIJG Historical Data,Historical Jewish community data - 1850-1900
-Ukraine,Lviv,24.0297,49.8397,1300,1900,1920,100000,100000,,,,,לבוב,לעמבערג,Lemberg,,IIJG Historical Data,Historical Jewish community data - 1900-1920
-Ukraine,Lviv,24.0297,49.8397,1300,1920,1950,120000,120000,,,,,לבוב,לעמבערג,Lemberg,,IIJG Historical Data,Historical Jewish community data - 1920-1950
-Ukraine,Lviv,24.0297,49.8397,1300,1950,2023,5000,5000,,,,,לבוב,לעמבערג,Lemberg,,IIJG Historical Data,Historical Jewish community data - 1950-2023
+Israel,Modi'in Illit,35.0500,31.9333,1996,1996,1999,30,34500,,,,,מודיעין עילית,מודיעין עילית,Modi'in Illit,Modi'in Illit,https://he.wikipedia.org/wiki/%D7%9E%D7%95%D7%93%D7%99%D7%A2%D7%99%D7%9F_%D7%A2%D7%99%D7%9C%D7%99%D7%AA
+Israel,Modi'in Illit,35.0500,31.9333,1996,1996,2008,30,34500,,,,,מודיעין עילית,מודיעין עילית,Modi'in Illit,Modi'in Illit,https://he.wikipedia.org/wiki/%D7%9E%D7%95%D7%93%D7%99%D7%A2%D7%99%D7%9F_%D7%A2%D7%99%D7%9C%D7%99%D7%AA
+Israel,Modi'in Illit,35.0500,31.9333,1996,1996,2008,30,34500,,,,,מודיעין עילית,מודיעין עילית,Modi'in Illit,Modi'in Illit,https://he.wikipedia.org/wiki/%D7%9E%D7%95%D7%93%D7%99%D7%A2%D7%99%D7%9F_%D7%A2%D7%99%D7%9C%D7%99%D7%AA
+Israel,Modi'in Illit,35.0500,31.9333,1996,2008,2025,34500 ,90000,,,,,מודיעין עילית,מודיעין עילית,Modi'in Illit,Modi'in Illit,https://he.wikipedia.org/wiki/%D7%9E%D7%95%D7%93%D7%99%D7%A2%D7%99%D7%9F_%D7%A2%D7%99%D7%9C%D7%99%D7%AA
