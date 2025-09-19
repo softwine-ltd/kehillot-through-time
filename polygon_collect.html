@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polygon Collector - Kehillot Through Time</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+        .side-panel {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100vh;
+            background: white;
+            border-left: 2px solid #e5e7eb;
+            padding: 20px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .point-item {
+            padding: 8px;
+            margin: 4px 0;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .point-item:hover {
+            background-color: #f3f4f6;
+        }
+        .point-item.selected {
+            background-color: #dbeafe;
+            border-color: #3b82f6;
+        }
+        .coordinate-text {
+            font-family: monospace;
+            font-size: 12px;
+            color: #374151;
+        }
+        .control-panel {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 200px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: #ef4444;
+            border: 2px solid white;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+        .dot.selected {
+            background-color: #3b82f6;
+            width: 16px;
+            height: 16px;
+        }
+        .line {
+            position: absolute;
+            background-color: #ef4444;
+            height: 2px;
+            transform-origin: left center;
+            z-index: 999;
+        }
+        .image-overlay {
+            position: absolute;
+            z-index: 998;
+            pointer-events: none;
+        }
+        .image-overlay img {
+            pointer-events: none;
+            max-width: 1400px;
+            max-height: 1400px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    
+    <!-- Hidden file input for image import -->
+    <input type="file" id="imageInput" accept="image/*" style="display: none;">
+    
+        <div class="control-panel">
+        <h2 class="text-base font-bold mb-3">Polygon Collector</h2>
+        <div class="space-y-2">
+            <button id="startPolygon" class="w-full bg-blue-500 text-white px-3 py-1.5 text-sm rounded hover:bg-blue-600">
+                Start Polygon
+            </button>
+            <button id="finishPolygon" class="w-full bg-green-500 text-white px-3 py-1.5 text-sm rounded hover:bg-green-600" disabled>
+                Finish Polygon
+            </button>
+            <button id="clearPolygon" class="w-full bg-gray-500 text-white px-3 py-1.5 text-sm rounded hover:bg-gray-600">
+                Clear All
+            </button>
+            <button id="importMap" class="w-full bg-orange-500 text-white px-3 py-1.5 text-sm rounded hover:bg-orange-600">
+                Import External Map
+            </button>
+            <button id="downloadData" class="w-full bg-purple-500 text-white px-3 py-1.5 text-sm rounded hover:bg-purple-600" disabled>
+                Download
+            </button>
+        </div>
+        <div class="mt-3 text-xs text-gray-600">
+            <p><strong>Instructions:</strong></p>
+            <ul class="list-disc list-inside space-y-0.5 mt-1">
+                <li>Click "Start Polygon" to begin</li>
+                <li>Click on map to add points</li>
+                <li>Click a point to select it</li>
+                <li>Drag points to move them</li>
+                <li>Press Delete to remove selected point</li>
+                <li>Click "Finish Polygon" when done</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="side-panel">
+        <h3 class="text-lg font-bold mb-4">Polygon Points</h3>
+        <div id="pointsList" class="space-y-2">
+            <p class="text-gray-500 text-sm">No points added yet. Click "Start Polygon" to begin.</p>
+        </div>
+    </div>
+
+    <script>
+        let map;
+        let isPolygonMode = false;
+        let currentPolygon = [];
+        let selectedPointIndex = -1;
+        let dots = [];
+        let lines = [];
+        let imageOverlay = null;
+
+        // Initialize map
+        function initMap() {
+            map = L.map('map').setView([35.0, 32.0], 6);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Add map click handler
+            map.on('click', onMapClick);
+            
+            // Add map move/zoom handlers to update visualization
+            map.on('moveend', updateVisualization);
+            map.on('zoomend', updateVisualization);
+            
+            // Add keyboard handler for delete key
+            document.addEventListener('keydown', onKeyDown);
+        }
+
+        function onMapClick(e) {
+            if (!isPolygonMode) return;
+            
+            const lat = e.latlng.lat;
+            const lng = e.latlng.lng;
+            
+            addPoint(lat, lng);
+        }
+
+        function addPoint(lat, lng) {
+            currentPolygon.push({ lat, lng });
+            updateVisualization();
+            updatePointsList();
+        }
+
+        function updateVisualization() {
+            // Clear existing dots and lines
+            clearVisualization();
+            
+            // Add dots for each point
+            currentPolygon.forEach((point, index) => {
+                const dot = createDot(point.lat, point.lng, index);
+                dots.push(dot);
+            });
+            
+            // Add lines between consecutive points
+            for (let i = 0; i < currentPolygon.length - 1; i++) {
+                const line = createLine(currentPolygon[i], currentPolygon[i + 1]);
+                lines.push(line);
+            }
+        }
+
+        function createDot(lat, lng, index) {
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            dot.dataset.index = index;
+            
+            // Convert lat/lng to pixel coordinates
+            const point = map.latLngToContainerPoint([lat, lng]);
+            dot.style.left = point.x + 'px';
+            dot.style.top = point.y + 'px';
+            
+            // Add event listeners
+            dot.addEventListener('click', (e) => {
+                e.stopPropagation();
+                selectPoint(index);
+            });
+            
+            dot.addEventListener('mousedown', (e) => {
+                e.stopPropagation();
+                startDrag(index, e);
+            });
+            
+            document.getElementById('map').appendChild(dot);
+            return dot;
+        }
+
+        function createLine(point1, point2) {
+            const line = document.createElement('div');
+            line.className = 'line';
+            
+            const p1 = map.latLngToContainerPoint([point1.lat, point1.lng]);
+            const p2 = map.latLngToContainerPoint([point2.lat, point2.lng]);
+            
+            const length = Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
+            const angle = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
+            
+            line.style.left = p1.x + 'px';
+            line.style.top = p1.y + 'px';
+            line.style.width = length + 'px';
+            line.style.transform = `rotate(${angle}deg)`;
+            
+            document.getElementById('map').appendChild(line);
+            return line;
+        }
+
+        function selectPoint(index) {
+            // Remove previous selection
+            dots.forEach(dot => dot.classList.remove('selected'));
+            
+            // Select new point
+            if (index >= 0 && index < dots.length) {
+                dots[index].classList.add('selected');
+                selectedPointIndex = index;
+                
+                // Update the points list to highlight the selected point
+                updatePointsList();
+            }
+        }
+
+        function startDrag(index, e) {
+            const dot = dots[index];
+            const startX = e.clientX;
+            const startY = e.clientY;
+            
+            // Store the initial map position of the point
+            const initialMapPoint = map.latLngToContainerPoint([currentPolygon[index].lat, currentPolygon[index].lng]);
+            
+            function onMouseMove(e) {
+                const deltaX = e.clientX - startX;
+                const deltaY = e.clientY - startY;
+                
+                // Calculate new position based on initial map position + mouse delta
+                const newX = initialMapPoint.x + deltaX;
+                const newY = initialMapPoint.y + deltaY;
+                
+                const newLatLng = map.containerPointToLatLng([newX, newY]);
+                currentPolygon[index].lat = newLatLng.lat;
+                currentPolygon[index].lng = newLatLng.lng;
+                
+                updateVisualization();
+                updatePointsList();
+            }
+            
+            function onMouseUp() {
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            }
+            
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+        }
+
+        function clearVisualization() {
+            dots.forEach(dot => dot.remove());
+            lines.forEach(line => line.remove());
+            dots = [];
+            lines = [];
+        }
+
+        function updatePointsList() {
+            const pointsList = document.getElementById('pointsList');
+            
+            if (currentPolygon.length === 0) {
+                pointsList.innerHTML = '<p class="text-gray-500 text-sm">No points added yet. Click "Start Polygon" to begin.</p>';
+                return;
+            }
+            
+            pointsList.innerHTML = currentPolygon.map((point, index) => `
+                <div class="point-item ${index === selectedPointIndex ? 'selected' : ''}" data-index="${index}">
+                    <div class="font-medium">Point ${index + 1}</div>
+                    <div class="coordinate-text">
+                        Lat: ${point.lat.toFixed(6)}<br>
+                        Lng: ${point.lng.toFixed(6)}
+                    </div>
+                </div>
+            `).join('');
+            
+            // Add click handlers to point items
+            pointsList.querySelectorAll('.point-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const index = parseInt(item.dataset.index);
+                    selectPoint(index);
+                });
+            });
+        }
+
+        function onKeyDown(e) {
+            if (e.key === 'Delete' && selectedPointIndex >= 0) {
+                removePoint(selectedPointIndex);
+            }
+        }
+
+        function removePoint(index) {
+            if (index >= 0 && index < currentPolygon.length) {
+                currentPolygon.splice(index, 1);
+                selectedPointIndex = -1;
+                updateVisualization();
+                updatePointsList();
+            }
+        }
+
+        function downloadCoordinates() {
+            if (currentPolygon.length === 0) {
+                alert('No polygon data to download!');
+                return;
+            }
+            
+            const coordinates = currentPolygon.map(point => 
+                `(${point.lat.toFixed(6)},${point.lng.toFixed(6)})`
+            ).join(',');
+            
+            const content = `Polygon Coordinates:\n${coordinates}\n\nTotal Points: ${currentPolygon.length}`;
+            
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'polygon_coordinates.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function importImage() {
+            document.getElementById('imageInput').click();
+        }
+
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                createImageOverlay(e.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function createImageOverlay(imageSrc) {
+            // Remove existing overlay if any
+            if (imageOverlay) {
+                imageOverlay.remove();
+            }
+
+            // Create image element
+            const img = document.createElement('img');
+            img.src = imageSrc;
+            img.style.opacity = '0.5';
+
+            // Create overlay container
+            imageOverlay = document.createElement('div');
+            imageOverlay.className = 'image-overlay';
+            imageOverlay.appendChild(img);
+
+            // Position in center of map
+            const mapContainer = document.getElementById('map');
+            const mapRect = mapContainer.getBoundingClientRect();
+            imageOverlay.style.left = '50%';
+            imageOverlay.style.top = '50%';
+            imageOverlay.style.transform = 'translate(-50%, -50%)';
+
+            // Add to map
+            mapContainer.appendChild(imageOverlay);
+        }
+
+
+        // Event listeners
+        document.getElementById('startPolygon').addEventListener('click', () => {
+            // Clear previous polygon when starting new one
+            currentPolygon = [];
+            selectedPointIndex = -1;
+            clearVisualization();
+            updatePointsList();
+            
+            isPolygonMode = true;
+            document.getElementById('startPolygon').disabled = true;
+            document.getElementById('finishPolygon').disabled = false;
+            document.getElementById('downloadData').disabled = false;
+        });
+
+        document.getElementById('finishPolygon').addEventListener('click', () => {
+            isPolygonMode = false;
+            document.getElementById('startPolygon').disabled = false;
+            document.getElementById('finishPolygon').disabled = true;
+        });
+
+        document.getElementById('clearPolygon').addEventListener('click', () => {
+            currentPolygon = [];
+            selectedPointIndex = -1;
+            clearVisualization();
+            updatePointsList();
+            isPolygonMode = false;
+            document.getElementById('startPolygon').disabled = false;
+            document.getElementById('finishPolygon').disabled = true;
+            document.getElementById('downloadData').disabled = true;
+        });
+
+        document.getElementById('downloadData').addEventListener('click', downloadCoordinates);
+
+        document.getElementById('importMap').addEventListener('click', importImage);
+        document.getElementById('imageInput').addEventListener('change', handleImageUpload);
+
+        // Initialize map when page loads
+        initMap();
+    </script>
+</body>
+</html>

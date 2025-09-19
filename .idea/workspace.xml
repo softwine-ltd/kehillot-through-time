@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="48a85851-4303-41f9-a7cb-ff4be9f5b996" name="Changes" comment="Some visual improvemnts, addition of events_polygon.csv data and &quot;Press here&quot; message" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;OManela&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/softwine-ltd/kehillot-through-time.git&quot;,
+    &quot;accountId&quot;: &quot;74d573b4-7324-41fb-a9a3-a547764d285d&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="32HNjgyrXcoUPSN55Lmw3UpLw78" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.index.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.decode_html_entities_advanced.executor": "Run",
+    "Python.iijg_data_collector.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main__gedcom",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/oferm/Documents/GitHub/kehillot-through-time",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="decode_html_entities_advanced" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kehillot-through-time" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/decode_html_entities_advanced.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="iijg_data_collector" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kehillot-through-time" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/iijg_data_collector.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.decode_html_entities_advanced" />
+        <item itemvalue="Python.iijg_data_collector" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-8753aad8314d-d902c0275401-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-252.25557.178" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48a85851-4303-41f9-a7cb-ff4be9f5b996" name="Changes" comment="" />
+      <created>1757073679560</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1757073679560</updated>
+      <workItem from="1757073680803" duration="8482000" />
+    </task>
+    <task id="LOCAL-00007" summary="Adddd historicalEvents,and corrected markers so that tooltips would work">
+      <option name="closed" value="true" />
+      <created>1757441116540</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1757441116540</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Corrected loading of data.">
+      <option name="closed" value="true" />
+      <created>1757444689783</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1757444689783</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changed in helpers.js marker size function and current population calculation. Added some Jerusalem data just for debugging.">
+      <option name="closed" value="true" />
+      <created>1757453522270</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1757453522270</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changed tooltips, size markers, added startYear0, endYear0 as global variables">
+      <option name="closed" value="true" />
+      <created>1757529606497</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1757529606497</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added arrows for emigrations and expulsions">
+      <option name="closed" value="true" />
+      <created>1757535263112</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1757535263112</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added different arrow  colors">
+      <option name="closed" value="true" />
+      <created>1757535661806</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1757535661806</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added curved arrows!">
+      <option name="closed" value="true" />
+      <created>1757538152147</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1757538152147</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added First Crusade">
+      <option name="closed" value="true" />
+      <created>1757538806414</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1757538806414</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added Year-rate Control">
+      <option name="closed" value="true" />
+      <created>1757540411658</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1757540411658</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added clicking on the historicalEvents markers update the current year to the event year">
+      <option name="closed" value="true" />
+      <created>1757623038248</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1757623038248</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Changed initial value of speed to 4">
+      <option name="closed" value="true" />
+      <created>1757624140305</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1757624140305</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added language selector">
+      <option name="closed" value="true" />
+      <created>1757630103285</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1757630103285</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added events csv.file and ellipses layer for events.">
+      <option name="closed" value="true" />
+      <created>1757681784237</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1757681784237</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added events to the events.csv file.">
+      <option name="closed" value="true" />
+      <created>1757687660701</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1757687660701</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added -10,-5,-1,1,5, and 10-years buttons.">
+      <option name="closed" value="true" />
+      <created>1757688648157</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1757688648157</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added some events in Muslim areas">
+      <option name="closed" value="true" />
+      <created>1757689140830</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1757689140830</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added some events in Muslim areas, 2nd time">
+      <option name="closed" value="true" />
+      <created>1757689871504</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1757689871504</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added a warning comment aat the top.">
+      <option name="closed" value="true" />
+      <created>1757690167105</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1757690167105</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added an option to focus on America, and enlarged the timeline.">
+      <option name="closed" value="true" />
+      <created>1757867971206</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1757867971206</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Changed multiple-communities markers to show also total of population.">
+      <option name="closed" value="true" />
+      <created>1757868754401</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1757868754401</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Changed single community markers to show population.">
+      <option name="closed" value="true" />
+      <created>1757882717726</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1757882717726</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Added Wikipedia link to Merneptah Stele - Hover tooltip now includes a clickable link&#10;Fixed tooltip hover behavior - Users can now move from marker to tooltip and click links without the tooltip disappearing. Also Added events in events.csv and Map with English layer">
+      <option name="closed" value="true" />
+      <created>1757885042305</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1757885042305</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Added a detailed about message">
+      <option name="closed" value="true" />
+      <created>1757885456329</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1757885456329</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Changed a link">
+      <option name="closed" value="true" />
+      <created>1757885700759</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1757885700759</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Added Tour">
+      <option name="closed" value="true" />
+      <created>1757886404975</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1757886404975</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Added some USA communities">
+      <option name="closed" value="true" />
+      <created>1757914448243</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1757914448243</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Added some  communities in South America">
+      <option name="closed" value="true" />
+      <created>1757914652011</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1757914652011</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Added some  communities in the Muslim world">
+      <option name="closed" value="true" />
+      <created>1757956650355</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1757956650355</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Updated some data about Jerusalem">
+      <option name="closed" value="true" />
+      <created>1757957360895</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1757957360895</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Updated some data about Israel">
+      <option name="closed" value="true" />
+      <created>1757960101325</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1757960101325</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Improved Cluster Marker size dependence on total population size">
+      <option name="closed" value="true" />
+      <created>1757968411229</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1757968411229</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Improved UI for small screens (tablet)">
+      <option name="closed" value="true" />
+      <created>1757968973263</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1757968973263</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Improved UI for small screens (tablet) - (dealing with the floating-icon jewish-history-icon.svg)">
+      <option name="closed" value="true" />
+      <created>1757969472304</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1757969472304</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Improved UI for small screens (tablet) - (dealing with the floating-icon jewish-history-icon.svg), second time - for Galaxy Tab s9">
+      <option name="closed" value="true" />
+      <created>1757969967513</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1757969967513</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Changed year-display text to left justified.">
+      <option name="closed" value="true" />
+      <created>1757970242243</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1757970242243</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Made the kehilot.csv file csv-consistent">
+      <option name="closed" value="true" />
+      <created>1757971141173</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1757971141173</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Made the title of the historical events popup realted to the event type">
+      <option name="closed" value="true" />
+      <created>1757972035964</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1757972035964</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Added support for uploading GEDCOM 5.5. files and viewing on the map. Works slowly and should be doing some preprocessing to make it work faster">
+      <option name="closed" value="true" />
+      <created>1758045222347</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1758045222347</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Added test GEDCOM files">
+      <option name="closed" value="true" />
+      <created>1758045280294</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1758045280294</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Added markers examples to the Tour, and increased max zoom.">
+      <option name="closed" value="true" />
+      <created>1758047827823</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1758047827823</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Added &quot;search city&quot; control.">
+      <option name="closed" value="true" />
+      <created>1758054286591</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1758054286591</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Added &quot;Print&quot; button with customized printing without the controls.">
+      <option name="closed" value="true" />
+      <created>1758056766657</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1758056766657</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Added polygon events and examples, added option to choose year using dialog box (mifgt be better changing to local editing?)">
+      <option name="closed" value="true" />
+      <created>1758129206572</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1758129206572</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Changed year slection using local editing.">
+      <option name="closed" value="true" />
+      <created>1758130434588</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1758130434588</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Just increased maximal zoom.">
+      <option name="closed" value="true" />
+      <created>1758131279857</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1758131279857</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Many improvemnt - Clustering slider, historic periods color bars, moved buttons, improved Printing and Tour, imptoved size of marker and colors.">
+      <option name="closed" value="true" />
+      <created>1758191231132</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1758191231132</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Added a French Map. Printing from Chrome and Firefox works OK, but Edge is printing the wrong location and we were not able to correct it.">
+      <option name="closed" value="true" />
+      <created>1758201331382</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1758201331382</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Adaptation of the ui sizes to smaller displays">
+      <option name="closed" value="true" />
+      <created>1758233512355</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1758233512355</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Some visual improvemnts, addition of events_polygon.csv data and &quot;Press here&quot; message">
+      <option name="closed" value="true" />
+      <created>1758271678838</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1758271678838</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added some USA communities" />
+    <MESSAGE value="Added some  communities in South America" />
+    <MESSAGE value="Added some  communities in the Muslim world" />
+    <MESSAGE value="Updated some data about Jerusalem" />
+    <MESSAGE value="Updated some data about Israel" />
+    <MESSAGE value="Improved Cluster Marker size dependence on total population size" />
+    <MESSAGE value="Improved UI for small screens (tablet)" />
+    <MESSAGE value="Improved UI for small screens (tablet) - (dealing with the floating-icon jewish-history-icon.svg)" />
+    <MESSAGE value="Improved UI for small screens (tablet) - (dealing with the floating-icon jewish-history-icon.svg), second time - for Galaxy Tab s9" />
+    <MESSAGE value="Changed year-display text to left justified." />
+    <MESSAGE value="Made the kehilot.csv file csv-consistent" />
+    <MESSAGE value="Made the title of the historical events popup realted to the event type" />
+    <MESSAGE value="Added support for uploading GEDCOM 5.5. files and viewing on the map. Works slowly and should be doing some preprocessing to make it work faster" />
+    <MESSAGE value="Added test GEDCOM files" />
+    <MESSAGE value="Added markers examples to the Tour, and increased max zoom." />
+    <MESSAGE value="Added &quot;search city&quot; control." />
+    <MESSAGE value="Added &quot;Print&quot; button with customized printing without the controls." />
+    <MESSAGE value="Added polygon events and examples, added option to choose year using dialog box (mifgt be better changing to local editing?)" />
+    <MESSAGE value="Changed year selection using local editing." />
+    <MESSAGE value="Changed year selection using local editing." />
+    <MESSAGE value="Just increased maximal zoom." />
+    <MESSAGE value="Many improvemnt - Clustering slider, historic periods color bars, moved buttons, improved Printing and Tour, imptoved size of marker and colors." />
+    <MESSAGE value="Added a French Map. Printing from Chrome and Firefox works OK, but Edge is printing the wrong location and we were not able to correct it." />
+    <MESSAGE value="Adaptation of the ui sizes to smaller displays" />
+    <MESSAGE value="Some visual improvemnts, addition of events_polygon.csv data and &quot;Press here&quot; message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some visual improvemnts, addition of events_polygon.csv data and &quot;Press here&quot; message" />
+  </component>
+</project>
