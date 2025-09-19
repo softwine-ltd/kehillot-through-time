@@ -92,6 +92,132 @@ const historicalArrows = [
         titleHe: " עליית רבי יהודה החסיד  (1000 איש)",
         color: emigration_color,
         description: "en.wikipedia.org/wiki/Judah_HeHasid_(Jerusalem)"
+    },
+    {
+        startLat: 32.5,
+        startLon: 35.0,
+        endLat: 36.0,
+        endLon: 43.0,
+        midLat: 34.0,
+        midLon: 39.0,
+        yearStart: -733,
+        yearEnd: -722,
+        titleEn: "Assyrian Captivity",
+        titleHe: "גלות אשור",
+        color: expulsion_color,
+        description: "Tiglath-Pileser III and Sargon II captured northern Kingdom of Israel, resettled Israelites in Assyria and Media"
+    },
+    {
+        startLat: 41.9028,
+        startLon: 12.4964,
+        endLat: 32.0,
+        endLon: 35.0,
+        midLat: 36.0,
+        midLon: 23.0,
+        yearStart: -39,
+        yearEnd: -39,
+        titleEn: "Expulsion from Rome (39 BCE)",
+        titleHe: "גירוש מרומא (39 לפנה\"ס)",
+        color: expulsion_color,
+        description: "Expulsion from the city of Rome under the accusation of aggressive proselytizing among the Romans"
+    },
+    {
+        startLat: 41.9028,
+        startLon: 12.4964,
+        endLat: 32.0,
+        endLon: 35.0,
+        midLat: 36.0,
+        midLon: 23.0,
+        yearStart: 19,
+        yearEnd: 19,
+        titleEn: "Expulsion from Rome (19 CE)",
+        titleHe: "גירוש מרומא (19 לספירה)",
+        color: expulsion_color,
+        description: "Expulsion from the city of Rome by Emperor Tiberius together with practitioners of the Egyptian religion"
+    },
+    {
+        startLat: 46.2276,
+        startLon: 2.2137,
+        endLat: 52.0,
+        endLon: 20.0,
+        midLat: 49.0,
+        midLon: 11.0,
+        yearStart: 1306,
+        yearEnd: 1306,
+        titleEn: "Expulsion from France (1306)",
+        titleHe: "גירוש מצרפת (1306)",
+        color: expulsion_color,
+        description: "King Philip IV expelled Jews from France, largely to confiscate their property to fund wars"
+    },
+    {
+        startLat: 46.2276,
+        startLon: 2.2137,
+        endLat: 52.0,
+        endLon: 20.0,
+        midLat: 49.0,
+        midLon: 11.0,
+        yearStart: 1394,
+        yearEnd: 1394,
+        titleEn: "Final Expulsion from France (1394)",
+        titleHe: "גירוש סופי מצרפת (1394)",
+        color: expulsion_color,
+        description: "A final expulsion by Charles VI removed the Jewish population from France, with most Jews fleeing to Eastern Europe and Poland"
+    },
+    {
+        startLat: 51.5074,
+        startLon: -0.1278,
+        endLat: 42,
+        endLon: 0,
+        midLat: 49,
+        midLon: 5.0,
+        yearStart: 1290,
+        yearEnd: 1290,
+        titleEn: "Expulsion from England (1290)",
+        titleHe: "גירוש מאנגליה (1290)",
+        color: expulsion_color,
+        description: "King Edward I issued the Edict of Expulsion, removing all Jews from England"
+    },
+    {
+        startLat: 51.5074,
+        startLon: -0.1278,
+        endLat: 52,
+        endLon: 5,
+        midLat: 50,
+        midLon: 2.0,
+        yearStart: 1290,
+        yearEnd: 1290,
+        titleEn: "Expulsion from England (1290)",
+        titleHe: "גירוש מאנגליה (1290)",
+        color: expulsion_color,
+        description: "King Edward I issued the Edict of Expulsion, removing all Jews from England"
+    },
+    {
+        startLat: 52.0,
+        startLon: 20.0,
+        endLat: 51.5074,
+        endLon: -0.1278,
+        midLat: 51.5,
+        midLon: 10.0,
+        yearStart: 1656,
+        yearEnd: 1656,
+        titleEn: "Readmission to England (1656)",
+        titleHe: "חזרה לאנגליה (1656)",
+        color: emigration_color,
+        description: "The Jewish community was formally readmitted to England, ending the period of expulsion"
+    },
+    {
+        startLat: 39.3999,
+        startLon: -8.2245,
+        endLat: 40.0,
+        endLon: -3.0,
+        midLat: 39.5,
+        midLon: -5.5,
+        yearStart: 1497,
+        yearEnd: 1497,
+        titleEn: "Expulsion from Portugal (1497)",
+        titleHe: "גירוש מפורטוגל (1497)",
+        color: expulsion_color,
+        description: "A similar expulsion was issued from Portugal, contributing to the spread of the Sephardic diaspora"
     }
 ];
 
@@ -1368,6 +1494,7 @@ function initializeMap() {
 
     // Tour functionality
     const startTourButton = document.getElementById('startTourButton');
+    const languageModal = document.getElementById('languageModal');
     const tourModal = document.getElementById('tourModal');
     const closeTourModal = document.getElementById('closeTourModal');
     const skipTour = document.getElementById('skipTour');
@@ -1375,11 +1502,15 @@ function initializeMap() {
     const nextTourStep = document.getElementById('nextTourStep');
     const tourContent = document.getElementById('tourContent');
     const tourProgress = document.getElementById('tourProgress');
+    const tourTitle = document.getElementById('tourTitle');
+    const prevTourText = document.getElementById('prevTourText');
     const tourOverlay = document.getElementById('tourOverlay');
     const tourHighlight = document.getElementById('tourHighlight');
 
     let currentTourStep = 0;
-    const tourSteps = [
+    let tourLanguage = 'en'; // 'en' or 'he'
+    const tourSteps = {
+        en: [
         {
             title: "Welcome to the Jewish Communities Timeline",
             content: `
@@ -1693,14 +1824,404 @@ function initializeMap() {
             `,
             highlight: null
         }
-    ];
+        ],
+        he: [
+            {
+                title: "ברוכים הבאים לציר הזמן של הקהילות היהודיות",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        ברוכים הבאים! ויזואליזציה אינטראקטיבית זו מציגה את ההיסטוריה הדמוגרפית של הקהילות היהודיות 
+                        ברחבי העולם מתקופות קדומות ועד היום. תחקרו 3,400+ שנות היסטוריה יהודית 
+                        דרך נתוני אוכלוסייה, דפוסי הגירה ואירועים היסטוריים.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed" style="direction: rtl; text-align: right;">
+                        בואו נתחיל בלימוד על פקדי ציר הזמן ואיך לנווט בהיסטוריה.
+                    </p>
+                `,
+                highlight: null
+            },
+            {
+                title: "ניווט בציר הזמן",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        ציר הזמן בתחתית מאפשר לכם לנווט בהיסטוריה. אתם יכולים:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4" style="direction: rtl; text-align: right;">
+                        <li><strong>גרור את המחוון</strong> כדי לקפוץ לכל שנה</li>
+                        <li><strong>לחץ על תצוגת השנה</strong> כדי לערוך אותה ישירות ולקפוץ לשנה ספציפית</li>
+                        <li><strong>השתמש בכפתור ההפעלה</strong> כדי להניע בזמן אוטומטית</li>
+                        <li><strong>התאם את המהירות</strong> עם פקד המהירות</li>
+                        <li><strong>השתמש בכפתורי הצעדים</strong> (-10, -5, -1, +1, +5, +10) לניווט מדויק</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium" style="direction: rtl; text-align: right;">
+                        נסו לגרור את מחוון ציר הזמן או ללחוץ על תצוגת השנה כדי לראות איך המפה משתנה!
+                    </p>
+                `,
+                highlight: 'timeline'
+            },
+            {
+                title: "סמני קהילות",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        כל עיגול על המפה מייצג קהילה יהודית (קהילה) בתקופה ההיא. 
+                        הסמנים מציגים:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4" style="direction: rtl; text-align: right;">
+                        <li><strong>גודל אוכלוסייה</strong> - מוצג כמספרים בתוך הסמנים</li>
+                        <li><strong>רמת אמינות</strong> - צבע מציין אמינות הנתונים (כחול = גבוה, בהיר יותר = נמוך יותר)</li>
+                        <li><strong>גודל סמן</strong> - סמנים גדולים יותר = אוכלוסיות גדולות יותר</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium" style="direction: rtl; text-align: right;">
+                        לחצו על כל סמן כדי לראות מידע מפורט על הקהילה ההיא!
+                    </p>
+                `,
+                highlight: 'map'
+            },
+            {
+                title: "הבנת סמני קהילות",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        בואו נחקור את סוגי הסמנים השונים שתראו על המפה:
+                    </p>
+                    <div class="space-y-4 mb-4">
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-red-800 mb-2" style="direction: rtl; text-align: right;">סמני קהילות בודדות</h4>
+                            <div class="flex items-center space-x-4" style="direction: rtl;">
+                                <div class="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center text-white text-xs font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">1.2k</div>
+                                <div class="text-sm text-gray-700" style="direction: rtl; text-align: right;">
+                                    <strong>סמן קטן:</strong> קהילות קטנות יותר
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 mt-2" style="direction: rtl;">
+                                <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white text-sm font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">15k</div>
+                                <div class="text-sm text-gray-700" style="direction: rtl; text-align: right;">
+                                    <strong>סמן בינוני:</strong> קהילות בגודל בינוני
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 mt-2" style="direction: rtl;">
+                                <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center text-white font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">250k</div>
+                                <div class="text-sm text-gray-700" style="direction: rtl; text-align: right;">
+                                    <strong>סמן גדול:</strong> קהילות מרכזיות
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-600 mt-2 italic" style="direction: rtl; text-align: right;">
+                                סמנים גדולים יותר מייצגים קהילות גדולות יותר
+                            </p>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2" style="direction: rtl; text-align: right;">סמני קיבוץ</h4>
+                            <div class="flex items-center space-x-4" style="direction: rtl;">
+                                <div class="w-12 h-12 bg-blue-600 rounded-full flex flex-col items-center justify-center text-white text-xs font-bold" style="box-shadow: 0 2px 4px rgba(0,0,0,0.3); border: 2px solid white;">
+                                    <div>5</div>
+                                    <div class="text-xs">2.1M</div>
+                                </div>
+                                <div class="text-sm text-gray-700" style="direction: rtl; text-align: right;">
+                                    <strong>סמן קיבוץ:</strong> מקובץ קהילות סמוכות יחד<br>
+                                    <em>מספר עליון:</em> מספר הקהילות<br>
+                                    <em>מספר תחתון:</em> אוכלוסייה כוללת
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-yellow-800 mb-2" style="direction: rtl; text-align: right;">רמות אמינות</h4>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2" style="direction: rtl;">
+                                    <div class="w-4 h-4 bg-red-800 rounded-full"></div>
+                                    <span class="text-sm text-gray-700" style="direction: rtl; text-align: right;"><strong>אדום כהה:</strong> נתונים ברמת אמינות גבוהה</span>
+                                </div>
+                                <div class="flex items-center space-x-2" style="direction: rtl;">
+                                    <div class="w-4 h-4 bg-red-500 rounded-full"></div>
+                                    <span class="text-sm text-gray-700" style="direction: rtl; text-align: right;"><strong>אדום בינוני:</strong> נתונים ברמת אמינות בינונית</span>
+                                </div>
+                                <div class="flex items-center space-x-2" style="direction: rtl;">
+                                    <div class="w-4 h-4 bg-red-300 rounded-full"></div>
+                                    <span class="text-sm text-gray-700" style="direction: rtl; text-align: right;"><strong>אדום בהיר:</strong> נתונים ברמת אמינות נמוכה יותר</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-blue-600 font-medium" style="direction: rtl; text-align: right;">
+                        חפשו את סוגי הסמנים השונים האלה כשאתם חוקרים את המפה!
+                    </p>
+                `,
+                highlight: 'map'
+            },
+            {
+                title: "ציר זמן אירועים היסטוריים",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        הסמנים הקטנים על ציר הזמן מייצגים אירועים היסטוריים מרכזיים. רחפו מעליהם כדי לראות:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4" style="direction: rtl; text-align: right;">
+                        <li><strong>שם האירוע</strong> בעברית ובאנגלית</li>
+                        <li><strong>שנה היסטורית</strong> בלוח הגרגוריאני והעברי</li>
+                        <li><strong>קישורי ויקיפדיה</strong> למידע מפורט</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium" style="direction: rtl; text-align: right;">
+                        רחפו מעל סמני ציר הזמן כדי לחקור אירועים היסטוריים!
+                    </p>
+                `,
+                highlight: 'timeline-markers'
+            },
+            {
+                title: "אירועים היסטוריים על המפה",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        אליפסות צבעוניות על המפה מציגות את ההיקף הגיאוגרפי של אירועים היסטוריים מרכזיים:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4" style="direction: rtl; text-align: right;">
+                        <li><strong>אליפסות אדומות</strong> - טבחים ורדיפות</li>
+                        <li><strong>צבעים אחרים</strong> - סוגים שונים של אירועים היסטוריים</li>
+                        <li><strong>לחצו על אליפסות</strong> כדי ללמוד עוד על אירועים ספציפיים</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium" style="direction: rtl; text-align: right;">
+                        חפשו את הצורות הצבעוניות על המפה - הן מציגות איפה התרחשו אירועים מרכזיים!
+                    </p>
+                `,
+                highlight: 'map'
+            },
+            {
+                title: "אפשרויות תצוגת מפה",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        אתם יכולים להתאים את תצוגת המפה באמצעות הפקדים:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4" style="direction: rtl; text-align: right;">
+                        <li><strong>שמות מקומות</strong> - בחרו בין שפה מקומית, גרמנית או אנגלית</li>
+                        <li><strong>תצוגת מפה</strong> - החלפו בין התמקדות באירופה והמזרח התיכון או באמריקות</li>
+                        <li><strong>פרספקטיבות שונות</strong> עוזרות לכם לחקור אזורים שונים</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium" style="direction: rtl; text-align: right;">
+                        נסו להחליף בין תצוגות מפה שונות כדי לראות איך זה משנה את הפרספקטיבה!
+                    </p>
+                `,
+                highlight: 'controls'
+            },
+            {
+                title: "מסע בזמן: תקופה עתיקה",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        בואו נצא למסע בזמן! נתחיל בתקופות עתיקות ונראה איך הקהילות היהודיות 
+                        התפתחו והתפשטו ברחבי העולם.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        <strong>תקופה עתיקה (-1400 עד 0 לפנה"ס):</strong> הסיפור מתחיל עם יציאת מצרים 
+                        והקמת ממלכת ישראל. צפו איך קהילות נוצרות במזרח הקרוב העתיק.
+                    </p>
+                    <p class="text-blue-600 font-medium" style="direction: rtl; text-align: right;">
+                        ציר הזמן יציג כעת אוטומטית את התקופה העתיקה. צפו בקהילות מופיעות!
+                    </p>
+                `,
+                highlight: 'timeline',
+                action: () => {
+                    const timeline = document.getElementById('timeline');
+                    timeline.noUiSlider.set(-1000);
+                }
+            },
+            {
+                title: "מסע בזמן: תקופה מודרנית",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        עכשיו בואו נראה את התקופה המודרנית ואיך הקהילות היהודיות התפשטו ברחבי העולם:
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        <strong>תקופה מודרנית (1800-1948 לספירה):</strong> הגירות מרכזיות לאמריקות, 
+                        השואה, והקמת ישראל המודרנית. שימו לב איך קהילות מופיעות ברחבי הגלובוס.
+                    </p>
+                    <p class="text-blue-600 font-medium" style="direction: rtl; text-align: right;">
+                        ציר הזמן יציג כעת את התקופה המודרנית. ראו איך קהילות מתפשטות ברחבי העולם!
+                    </p>
+                `,
+                highlight: 'timeline',
+                action: () => {
+                    const timeline = document.getElementById('timeline');
+                    timeline.noUiSlider.set(1900);
+                }
+            },
+            {
+                title: "פקד קיבוץ",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        אתם יכולים לשלוט איך קהילות מקובצות יחד באמצעות מחוון הקיבוץ:
+                    </p>
+                    <div class="space-y-4 mb-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2" style="direction: rtl; text-align: right;">אפשרויות קיבוץ</h4>
+                            <ul class="text-sm text-gray-700 space-y-2" style="direction: rtl; text-align: right;">
+                                <li><strong>רדיוס קטן (10-50px):</strong> יותר קהילות בודדות נראות, קיבוצים קטנים יותר</li>
+                                <li><strong>רדיוס בינוני (50-100px):</strong> תצוגה מאוזנת - הגדרה ברירת מחדל</li>
+                                <li><strong>רדיוס גדול (100-200px):</strong> תצוגה יותר מצטברת, קיבוצים גדולים יותר</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-blue-600 font-medium" style="direction: rtl; text-align: right;">
+                        נסו להתאים את מחוון הקיבוץ כדי לראות איך זה משנה את תצוגת המפה!
+                    </p>
+                `,
+                highlight: 'cluster-control'
+            },
+            {
+                title: "ציר זמן תקופות היסטוריות",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        מתחת לציר הזמן הראשי, תראו פס מקודד בצבעים המציג תקופות היסטוריות שונות:
+                    </p>
+                    <div class="space-y-4 mb-4">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-3" style="direction: rtl; text-align: right;">תקופות היסטוריות</h4>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div class="flex items-center space-x-2" style="direction: rtl;">
+                                    <div class="w-4 h-4 rounded" style="background-color: #8B4513;"></div>
+                                    <span>תקופה מקראית (1400-586 לפנה"ס)</span>
+                                </div>
+                                <div class="flex items-center space-x-2" style="direction: rtl;">
+                                    <div class="w-4 h-4 rounded" style="background-color: #B8860B;"></div>
+                                    <span>בית שני (586 לפנה"ס-70 לספירה)</span>
+                                </div>
+                                <div class="flex items-center space-x-2" style="direction: rtl;">
+                                    <div class="w-4 h-4 rounded" style="background-color: #228B22;"></div>
+                                    <span>תקופה תלמודית (70-500 לספירה)</span>
+                                </div>
+                                <div class="flex items-center space-x-2" style="direction: rtl;">
+                                    <div class="w-4 h-4 rounded" style="background-color: #4169E1;"></div>
+                                    <span>ימי הביניים (500-1500 לספירה)</span>
+                                </div>
+                                <div class="flex items-center space-x-2" style="direction: rtl;">
+                                    <div class="w-4 h-4 rounded" style="background-color: #9370DB;"></div>
+                                    <span>מודרני מוקדם (1500-1800 לספירה)</span>
+                                </div>
+                                <div class="flex items-center space-x-2" style="direction: rtl;">
+                                    <div class="w-4 h-4 rounded" style="background-color: #FF6347;"></div>
+                                    <span>מודרני (1800-2025 לספירה)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4" style="direction: rtl; text-align: right;">
+                        <li><strong>לחצו על כל תקופה</strong> כדי לקפוץ לתחילת העידן ההוא</li>
+                        <li><strong>התקופה הנוכחית</strong> מודגשת עם גבול וצל</li>
+                        <li><strong>תוויות שנים</strong> מציגות את הגבולות בין התקופות</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium" style="direction: rtl; text-align: right;">
+                        לחצו על כל תקופה היסטורית כדי לנווט במהירות לעידן ההוא!
+                    </p>
+                `,
+                highlight: 'historical-periods'
+            },
+            {
+                title: "הסיור הושלם!",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        מזל טוב! סיימתם את הסיור ולמדתם על התכונות המרכזיות של 
+                        ויזואליזציית ציר הזמן של הקהילות היהודיות הזו.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        עכשיו אתם יודעים איך:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4" style="direction: rtl; text-align: right;">
+                        <li>לנווט דרך 3,400+ שנות היסטוריה</li>
+                        <li>להבין סוגי סמנים שונים ואת משמעותם</li>
+                        <li>לקרוא נתוני אוכלוסייה ורמות אמינות</li>
+                        <li>לחקור אוכלוסיות קהילות ופרטים</li>
+                        <li>ללמוד על אירועים היסטוריים והשפעתם</li>
+                        <li>להתאים את תצוגת המפה והעדפות השפה</li>
+                        <li>לשלוט בגרגריות הקיבוץ לתצוגות שונות</li>
+                        <li>להשתמש בתקופות היסטוריות לניווט מהיר</li>
+                        <li>להשתמש בכל התכונות האינטראקטיביות</li>
+                    </ul>
+                    <p class="text-green-600 font-medium" style="direction: rtl; text-align: right;">
+                        התחילו לחקור! השתמשו בציר הזמן כדי לגלות את ההיסטוריה העשירה של הקהילות היהודיות ברחבי העולם.
+                    </p>
+                `,
+                highlight: null
+            },
+            {
+                title: "פקדי מפה",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        השתמשו בפקדי המפה כדי להתאים את התצוגה:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4" style="direction: rtl; text-align: right;">
+                        <li><strong>חיפוש</strong> - מצא ערים או אזורים ספציפיים</li>
+                        <li><strong>תוויות</strong> - החלף בין סגנונות מפה ושפות שונים</li>
+                        <li><strong>תצוגה</strong> - החלף בין ספקי מפה שונים</li>
+                        <li><strong>קיבוץ</strong> - התאם איך קהילות מקובצות יחד</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium" style="direction: rtl; text-align: right;">
+                        נסו לשנות את סגנון המפה או לחפש מיקום ספציפי!
+                    </p>
+                `,
+                highlight: 'controls'
+            },
+            {
+                title: "מקורות נתונים ואמינות",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        הנתונים מגיעים מרשומות היסטוריות, ממצאים ארכיאולוגיים ומחקר אקדמי. 
+                        הערכות אוכלוסייה מבוססות על:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4" style="direction: rtl; text-align: right;">
+                        <li>רשומות מס ונתוני מפקד</li>
+                        <li>ראיות ארכיאולוגיות</li>
+                        <li>מסמכים היסטוריים וכרוניקות</li>
+                        <li>הערכות אקדמיות ושיחזורים</li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed" style="direction: rtl; text-align: right;">
+                        רמות אמינות מציינות את האמינות של כל נקודת נתונים בהתבסס על מקורות זמינים.
+                    </p>
+                `,
+                highlight: null
+            },
+            {
+                title: "תקופות היסטוריות",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        ציר הזמן מכסה תקופות מרכזיות בהיסטוריה היהודית:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4" style="direction: rtl; text-align: right;">
+                        <li><strong>תקופה עתיקה</strong> (1400 לפנה"ס - 70 לספירה) - זמנים מקראיים, בית ראשון ושני</li>
+                        <li><strong>תקופה רבנית</strong> (70 - 500 לספירה) - פיתוח המשנה והתלמוד</li>
+                        <li><strong>תקופה מימי הביניים</strong> (500 - 1500 לספירה) - קהילות גולה, תור הזהב של ספרד</li>
+                        <li><strong>תקופה מודרנית מוקדמת</strong> (1500 - 1800 לספירה) - גירושים, הגירות, קהילות חדשות</li>
+                        <li><strong>תקופה מודרנית</strong> (1800 - היום) - אמנציפציה, הגירה, מדינות מודרניות</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium" style="direction: rtl; text-align: right;">
+                        השתמשו בכפתורי התקופות ההיסטוריות לניווט מהיר לתקופות מרכזיות!
+                    </p>
+                `,
+                highlight: 'periods'
+            },
+            {
+                title: "אתם מוכנים לחקור!",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
+                        עכשיו אתם יודעים איך לנווט בציר הזמן האינטראקטיבי הזה! זכרו:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4" style="direction: rtl; text-align: right;">
+                        <li>השתמשו בציר הזמן לחקור תקופות זמן שונות</li>
+                        <li>לחצו על קהילות ואירועים למידע מפורט</li>
+                        <li>שלטו בגרגריות הקיבוץ לתצוגות שונות</li>
+                        <li>השתמשו בתקופות היסטוריות לניווט מהיר</li>
+                        <li>השתמשו בכל התכונות האינטראקטיביות</li>
+                    </ul>
+                    <p class="text-green-600 font-medium" style="direction: rtl; text-align: right;">
+                        התחילו לחקור! השתמשו בציר הזמן כדי לגלות את ההיסטוריה העשירה של הקהילות היהודיות ברחבי העולם.
+                    </p>
+                `,
+                highlight: null
+            }
+        ]
+    };
 
     function showTourStep(stepIndex) {
-        const step = tourSteps[stepIndex];
+        const steps = tourSteps[tourLanguage];
+        const step = steps[stepIndex];
         currentTourStep = stepIndex;
         
         // Update progress
-        tourProgress.textContent = `Step ${stepIndex + 1} of ${tourSteps.length}`;
+        tourProgress.textContent = `Step ${stepIndex + 1} of ${steps.length}`;
         
         // Update content
         tourContent.innerHTML = `
@@ -1710,7 +2231,18 @@ function initializeMap() {
         
         // Update buttons
         prevTourStep.disabled = stepIndex === 0;
-        nextTourStep.textContent = stepIndex === tourSteps.length - 1 ? 'Finish' : 'Next';
+        nextTourStep.textContent = stepIndex === steps.length - 1 ? 
+            (tourLanguage === 'he' ? 'סיום' : 'Finish') : 
+            (tourLanguage === 'he' ? 'הבא' : 'Next');
+        
+        // Update previous button text
+        prevTourText.textContent = tourLanguage === 'he' ? 'הקודם' : 'Previous';
+        
+        // Update skip button text
+        skipTour.textContent = tourLanguage === 'he' ? 'דלג על הסיור' : 'Skip Tour';
+        
+        // Update title
+        tourTitle.textContent = tourLanguage === 'he' ? 'סיור אינטראקטיבי' : 'Interactive Tour';
         
         // Handle highlighting
         if (step.highlight) {
@@ -1765,16 +2297,33 @@ function initializeMap() {
 
     function closeTour() {
         tourModal.classList.add('hidden');
+        languageModal.classList.add('hidden');
         tourOverlay.classList.add('hidden');
         document.body.style.overflow = 'auto';
         currentTourStep = 0;
     }
 
-    // Tour event listeners
-    startTourButton.addEventListener('click', () => {
+    // Language selection event listeners
+    document.getElementById('selectEnglish').addEventListener('click', () => {
+        tourLanguage = 'en';
+        languageModal.classList.add('hidden');
         tourModal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
         showTourStep(0);
+    });
+
+    document.getElementById('selectHebrew').addEventListener('click', () => {
+        tourLanguage = 'he';
+        languageModal.classList.add('hidden');
+        tourModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        showTourStep(0);
+    });
+
+    // Tour event listeners
+    startTourButton.addEventListener('click', () => {
+        languageModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
     });
 
     closeTourModal.addEventListener('click', closeTour);
@@ -1787,7 +2336,8 @@ function initializeMap() {
     });
 
     nextTourStep.addEventListener('click', () => {
-        if (currentTourStep < tourSteps.length - 1) {
+        const steps = tourSteps[tourLanguage];
+        if (currentTourStep < steps.length - 1) {
             showTourStep(currentTourStep + 1);
         } else {
             closeTour();
@@ -2086,15 +2636,15 @@ async function processEllipseEvents(year) {
     try {
         const csvText = await getEventsData();
         const rows = csvText.split('\n').slice(1); // skip header
-        // Each row: center_lon, center_lat, radii1, radii2, tilt_deg, color, fillColor, fillOpacity, year_start, year_end, description, source, type
+        // Each row: center_lon, center_lat, radii1, radii2, tilt_deg, color, fillColor, fillOpacity, year_start, year_end, description_eng, description_heb, source, type
         const events = rows
             .filter(row => row.trim())
             .map(row => {
                 const [
                     center_lon, center_lat, radii1, radii2, tilt_deg,
                     color, fillColor, fillOpacity, year_start, year_end,
-                    description, source, type
-                ] = parseCSVLine(row).slice(0, 13);
+                    description_eng, description_heb, source, type
+                ] = parseCSVLine(row).slice(0, 14);
 
                 const actualYearEnd = year_end == undefined || year_end.trim() === '' ? undefined : parseInt(year_end);
                 return {
@@ -2107,7 +2657,8 @@ async function processEllipseEvents(year) {
                     fillOpacity: parseFloat(fillOpacity),
                     yearStart: parseInt(year_start),
                     yearEnd: actualYearEnd,
-                    description: description ? description.replace(/"/g, '') : '',
+                    descriptionEng: description_eng ? description_eng.replace(/"/g, '') : '',
+                    descriptionHeb: description_heb ? description_heb.replace(/"/g, '') : '',
                     source: source ? source.replace(/"/g, '') : '',
                     type: parseInt(type)
                 };
@@ -2145,14 +2696,14 @@ async function processPolygonEvents(year) {
     try {
         const csvText = await getPolygonEventsData();
         const rows = csvText.split('\n').slice(1); // skip header
-        // Each row: polygon_coordinates, color, fillColor, fillOpacity, year_start, year_end, description, source, type
+        // Each row: polygon_coordinates, color, fillColor, fillOpacity, year_start, year_end, description_eng, description_heb, source, type
         const events = rows
             .filter(row => row.trim())
             .map(row => {
                 const [
                     polygon_coords, color, fillColor, fillOpacity, year_start, year_end,
-                    description, source, type
-                ] = parseCSVLine(row).slice(0, 9);
+                    description_eng, description_heb, source, type
+                ] = parseCSVLine(row).slice(0, 10);
 
                 const actualYearEnd = year_end == undefined || year_end.trim() === '' ? undefined : parseInt(year_end);
                 return {
@@ -2162,7 +2713,8 @@ async function processPolygonEvents(year) {
                     fillOpacity: parseFloat(fillOpacity),
                     yearStart: parseInt(year_start),
                     yearEnd: actualYearEnd,
-                    description: description ? description.replace(/"/g, '') : '',
+                    descriptionEng: description_eng ? description_eng.replace(/"/g, '') : '',
+                    descriptionHeb: description_heb ? description_heb.replace(/"/g, '') : '',
                     source: source ? source.replace(/"/g, '') : '',
                     type: parseInt(type)
                 };
@@ -2228,7 +2780,13 @@ function addEventPopup(polygon, ev) {
             <strong>תקופה:</strong> ${ev.yearStart < 0 ? Math.abs(ev.yearStart) + ' BCE' : ev.yearStart + ' CE'}
             ${ev.yearEnd !== undefined ? ' - ' + (ev.yearEnd < 0 ? Math.abs(ev.yearEnd) + ' BCE' : ev.yearEnd + ' CE') : ''}
         </div>
-        ${ev.description ? `<div style="margin: 6px 0;"><strong>תיאור:</strong> ${ev.description}</div>` : ''}
+        ${ev.descriptionEng || ev.descriptionHeb ? `
+            <div style="margin: 6px 0;">
+                <strong>תיאור:</strong>
+                ${ev.descriptionHeb ? `<div style="margin: 2px 0;">${ev.descriptionHeb}</div>` : ''}
+                ${ev.descriptionEng ? `<div style="margin: 2px 0; color: #666; font-size: 12px;">${ev.descriptionEng}</div>` : ''}
+            </div>
+        ` : ''}
         ${ev.source ? `<div style="margin: 6px 0;"><strong>מקור:</strong> ${formatSource(ev.source)}</div>` : ''}
     </div>`;
 

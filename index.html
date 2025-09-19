@@ -332,12 +332,50 @@
         </div>
     </div>
 
+    <!-- Language Selection Modal -->
+    <div id="languageModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-md w-full">
+            <div class="p-6">
+                <div class="text-center mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Select Tour Language</h2>
+                    <p class="text-gray-600">Choose your preferred language for the interactive tour</p>
+                </div>
+                
+                <div class="space-y-4">
+                    <button id="selectEnglish" class="w-full p-4 border-2 border-blue-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-colors text-left">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-blue-600 font-bold">EN</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">English</div>
+                                <div class="text-sm text-gray-600">Interactive tour in English</div>
+                            </div>
+                        </div>
+                    </button>
+                    
+                    <button id="selectHebrew" class="w-full p-4 border-2 border-blue-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-colors text-left">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-blue-600 font-bold">עב</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">עברית</div>
+                                <div class="text-sm text-gray-600">סיור אינטראקטיבי בעברית</div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Tour Modal -->
     <div id="tourModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-2xl font-bold text-gray-900">Interactive Tour</h2>
+                    <h2 id="tourTitle" class="text-2xl font-bold text-gray-900">Interactive Tour</h2>
                     <div class="flex items-center gap-4">
                         <span id="tourProgress" class="text-sm text-gray-600">Step 1 of 8</span>
                         <button id="closeTourModal" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">
@@ -352,7 +390,7 @@
 
                 <div class="mt-8 flex justify-between">
                     <button id="prevTourStep" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
-                        Previous
+                        <span id="prevTourText">Previous</span>
                     </button>
                     <div class="flex gap-2">
                         <button id="skipTour" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200 transition-colors">
