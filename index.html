@@ -142,11 +142,19 @@
         <div class="bg-white border-t border-gray-200">
             <div class="timeline-section py-3 lg:py-6">
                 <div class="flex flex-wrap items-center gap-1 sm:gap-2 lg:gap-4 mb-2 lg:mb-4">
-                    <button id="playButton" class="p-1.5 lg:p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors flex-shrink-0">
-                        <svg class="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-                        </svg>
-                    </button>
+                    <div class="relative flex-shrink-0">
+                        <button id="playButton" class="p-1.5 lg:p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors flex-shrink-0">
+                            <svg class="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                            </svg>
+                        </button>
+                        <div id="playButtonArrow" class="absolute -top-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-1 animate-pulse">
+                            <span class="text-red-500 font-bold text-sm whitespace-nowrap">Press Here</span>
+                            <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                    </div>
                     <div id="year-display" class="text-xs lg:text-sm font-medium text-gray-900 min-w-24 sm:min-w-32 lg:min-w-[28rem] text-left whitespace-nowrap"></div>
                     <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
                         <label for="speedControl" class="text-xs lg:text-sm text-gray-600 hidden lg:inline">Speed:</label>

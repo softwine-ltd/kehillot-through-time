@@ -1314,6 +1314,12 @@ function initializeMap() {
 
     // Toggle play/pause
     playButton.addEventListener('click', () => {
+        // Hide the arrow after first click
+        const playButtonArrow = document.getElementById('playButtonArrow');
+        if (playButtonArrow) {
+            playButtonArrow.style.display = 'none';
+        }
+        
         isPlaying = !isPlaying;
         playButton.innerHTML = isPlaying ?
             '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6"/></svg>' :
@@ -2146,7 +2152,7 @@ async function processPolygonEvents(year) {
                 const [
                     polygon_coords, color, fillColor, fillOpacity, year_start, year_end,
                     description, source, type
-                ] = parseCSVLine(row).slice(0, 8);
+                ] = parseCSVLine(row).slice(0, 9);
 
                 const actualYearEnd = year_end == undefined || year_end.trim() === '' ? undefined : parseInt(year_end);
                 return {
@@ -2204,7 +2210,11 @@ function addEventPopup(polygon, ev) {
             4: { he: "הגירה", en: "Migration" },
             5: { he: "רדיפות", en: "Persecution" },
             6: { he: "אירועי מדינה", en: "State Events" },
-            9: { he: "פוגרום", en: "Pogrom" }
+            7: { he: "גטו", en: "Ghetto" },
+            8: { he: "מהפכה", en: "Revolution" },
+            9: { he: "פוגרום", en: "Pogrom" },
+            10: { he: "ממלכה", en: "Kingdom" },
+            11: { he: "מחשבת ישראל", en: "Jewish Thought" }
         };
         return titles[type] || { he: "אירוע", en: "Event" };
     }

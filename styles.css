@@ -771,6 +771,25 @@ body {
     z-index: 1000;
 }
 
+/* Play Button Arrow */
+#playButtonArrow {
+    animation: blink 1.5s infinite;
+    z-index: 1000;
+    pointer-events: none; /* Prevent interference with button clicks */
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+}
+
+/* Hide arrow on small screens to avoid layout issues */
+@media (max-width: 640px) {
+    #playButtonArrow {
+        display: none;
+    }
+}
+
 /* Print styles */
 @media print {
     .controls {
