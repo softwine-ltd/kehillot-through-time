@@ -1,56 +1,162 @@
 ellipse_center_long,ellipse_center_lat,radii_1,radii_2,tilt_deg,color,fillColor,fillOpacity,year_start,year_end,description_eng,description_heb,source,type
-35.2137,31.7683,120000,60000,30,#e67e22,#f39c12,0.18,-586,-516,"Babylonian administrative zone around Jerusalem during exile period","אזור מנהלי בבלי סביב ירושלים בתקופת הגלות","https://en.wikipedia.org/wiki/Babylonian_exile",1
-39.6142,24.4672,40000,25000,0,#c0392b,#e74c3c,0.15,627,627,"Massacre of Banu Qurayza in Medina","טבח בני קוריצה במדינה","https://en.wikipedia.org/wiki/Banu_Qurayza",9
-29.9187,31.2001,60000,40000,20,#c0392b,#e74c3c,0.15,38,38,"Alexandria pogrom against the Jewish community","פוגרום אלכסנדריה נגד הקהילה היהודית","https://en.wikipedia.org/wiki/Alexandria_in_Antiquity#Jewish_history",9
--5.0000,34.0333,60000,40000,0,#c0392b,#e74c3c,0.15,1033,1033,"1033 Fez massacre of Jews in Morocco","טבח פז 1033 של יהודים במרוקו","https://en.wikipedia.org/wiki/1033_Fez_massacre",9
--3.5990,37.1773,50000,30000,10,#c0392b,#e74c3c,0.15,1066,1066,"Granada massacre (al-Andalus)","טבח גרנדה (אל-אנדלוס)","https://en.wikipedia.org/wiki/1066_Granada_massacre",9
-8.2473,50.0010,120000,70000,25,#c0392b,#e74c3c,0.15,1096,1098,"Rhineland massacres during the First Crusade (centered near Mainz)","טבח הריין במסע הצלב הראשון (מרכז ליד מיינץ)","https://en.wikipedia.org/wiki/Rhineland_massacres",9
--7.9811,31.6295,80000,50000,0,#c0392b,#e74c3c,0.15,1148,1160,"Almohad persecutions of Jews in Morocco and al-Andalus (centered near Marrakesh)","רדיפות אל-מוואחידון של יהודים במרוקו ואל-אנדלוס (מרכז ליד מרקש)","https://en.wikipedia.org/wiki/Almohad_Caliphate#Persecution_of_dhimmis",9
--1.0820,53.9583,30000,20000,-5,#c0392b,#e74c3c,0.15,1190,1190,"York massacre at Clifford's Tower","טבח יורק במגדל קליפורד","https://en.wikipedia.org/wiki/York_massacre",9
-11.5820,49.4542,100000,60000,15,#c0392b,#e74c3c,0.15,1298,1299,"Rindfleisch massacres in Franconia (centered near Nuremberg)","טבח רינדפלייש בפרנקוניה (מרכז ליד נירנברג)","https://en.wikipedia.org/wiki/Rintfleisch_massacres",9
-31.2358,30.0444,80000,50000,0,#c0392b,#e74c3c,0.15,1301,1301,"Cairo massacre of Jews during Mamluk period","טבח קהיר של יהודים בתקופת הממלוכים","https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt",9
--7.9811,31.6295,70000,45000,0,#c0392b,#e74c3c,0.15,1301,1301,"Marrakesh massacre of Jews during Mamluk period","טבח מרקש של יהודים בתקופת הממלוכים","https://en.wikipedia.org/wiki/History_of_the_Jews_in_Morocco",9
-44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1301,1301,"Baghdad massacre of Jews during Mongol invasion","טבח בגדד של יהודים בפלישה המונגולית","https://en.wikipedia.org/wiki/History_of_the_Jews_in_Iraq",9
-36.2765,33.5138,60000,40000,0,#c0392b,#e74c3c,0.15,1301,1301,"Damascus massacre of Jews during Mongol invasion","טבח דמשק של יהודים בפלישה המונגולית","https://en.wikipedia.org/wiki/History_of_the_Jews_in_Syria",9
-59.6167,36.2605,70000,45000,0,#c0392b,#e74c3c,0.15,1301,1301,"Khorasan massacre of Jews in Iran during Mongol invasion","טבח חוראסן של יהודים באיראן בפלישה המונגולית","https://en.wikipedia.org/wiki/History_of_the_Jews_in_Iran",9
-1.4442,43.6047,120000,70000,-10,#c0392b,#e74c3c,0.15,1320,1320,"Shepherds' Crusade persecutions (southern France, centered near Toulouse)","רדיפות מסע הצלב הרועים (דרום צרפת, מרכז ליד טולוז)","https://en.wikipedia.org/wiki/Shepherds%27_Crusade_(1320)",9
-7.7500,48.5830,150000,90000,0,#c0392b,#e74c3c,0.15,1348,1351,"Black Death persecutions (centered near Strasbourg)","רדיפות המוות השחור (מרכז ליד שטרסבורג)","https://en.wikipedia.org/wiki/Black_Death_Jewish_persecutions",9
-14.4378,50.0755,40000,25000,30,#c0392b,#e74c3c,0.15,1389,1389,"Prague Easter massacre","טבח פסחא בפראג","https://en.wikipedia.org/wiki/Prague_Easter_pogrom",9
-2.1734,41.3851,80000,50000,15,#8e44ad,#9b59b6,0.15,1391,1400,"Riots and anti-Jewish violence in Catalonia region (Barcelona area)","מהומות ואלימות אנטי-יהודית באזור קטלוניה (אזור ברצלונה)","https://en.wikipedia.org/wiki/Massacre_of_1391",2
-16.3738,48.2082,50000,30000,5,#c0392b,#e74c3c,0.15,1421,1421,"Vienna Gesera (expulsions and killings)","גזרת וינה (גירושים והרג)","https://en.wikipedia.org/wiki/Vienna_Gesera",9
--5.0000,34.0333,60000,40000,0,#c0392b,#e74c3c,0.15,1438,1438,"Mellah Ghetto massacre in North Africa","טבח גטו המלאח בצפון אפריקה","https://en.wikipedia.org/wiki/Mellah",9
--5.0030,34.0330,60000,40000,5,#c0392b,#e74c3c,0.15,1465,1465,"Fez massacre of Jews during the 1465 revolt","טבח פז של יהודים במרד 1465","https://en.wikipedia.org/wiki/1465_Moroccan_revolt",9
--3.7038,40.4168,200000,120000,0,#c0392b,#e74c3c,0.12,1492,1600,"Spanish expulsion footprint across central Spain","טביעת רגל הגירוש הספרדי ברחבי מרכז ספרד","https://en.wikipedia.org/wiki/Alhambra_Decree",3
-35.4933,32.9646,50000,30000,0,#c0392b,#e74c3c,0.15,1517,1517,"Safed massacre during Ottoman conquest","טבח צפת בכיבוש העות'מאני","https://en.wikipedia.org/wiki/Safed#Early_Ottoman_period",9
-35.0950,31.5330,40000,25000,0,#c0392b,#e74c3c,0.15,1517,1517,"Hebron massacre during Ottoman conquest","טבח חברון בכיבוש העות'מאני","https://en.wikipedia.org/wiki/1517_Hebron_attacks",9
-32.0590,49.4440,250000,180000,20,#c0392b,#e74c3c,0.15,1577,1577,"Passover massacre in Ottoman Empire","טבח פסח באימפריה העות'מאנית","https://en.wikipedia.org/wiki/Passover_massacre",9
-59.6167,36.2605,60000,40000,0,#c0392b,#e74c3c,0.15,1588,1629,"Mahalay Programs persecutions in Iran","רדיפות תוכניות מהליי באיראן","https://en.wikipedia.org/wiki/Mahalay_Programs",9
-32.0590,49.4440,250000,180000,20,#c0392b,#e74c3c,0.15,1648,1657,"Khmelnytsky Uprising massacres (centered near Cherkasy, Ukraine)","טבח מרד חמלניצקי (מרכז ליד צ'רקאסי, אוקראינה)","https://en.wikipedia.org/wiki/Khmelnytsky_Uprising#Massacres_of_Jews",9
-35.4933,32.9646,60000,35000,10,#c0392b,#e74c3c,0.15,1660,1660,"Destruction of Safed community","חורבן קהילת צפת","https://en.wikipedia.org/wiki/Destruction_of_Safed_(1660)",9
-43.2470,13.3150,80000,50000,0,#c0392b,#e74c3c,0.15,1679,1680,"Mawza Exile of Yemeni Jews (centered near Mocha)","גלות מוזע של יהודי תימן (מרכז ליד מוקה)","https://en.wikipedia.org/wiki/Mawza_Exile",9
-30.2220,48.7540,60000,40000,0,#c0392b,#e74c3c,0.15,1768,1768,"Uman massacre","טבח אומן","https://en.wikipedia.org/wiki/Uman_massacre",9
--5.0030,34.0330,70000,45000,0,#c0392b,#e74c3c,0.15,1790,1792,"Persecutions of Jews in Fez under Sultan Yazid","רדיפות יהודים בפז תחת הסולטן יזיד","https://en.wikipedia.org/wiki/Yazid_of_Morocco",9
-9.9534,49.7913,80000,50000,10,#c0392b,#e74c3c,0.15,1819,1820,"Hep-Hep riots in German states (centered near Würzburg)","מהומות היפ-היפ במדינות גרמניות (מרכז ליד וירצבורג)","https://en.wikipedia.org/wiki/Hep-Hep_riots",9
-35.4933,32.9646,50000,30000,5,#c0392b,#e74c3c,0.15,1834,1834,"1834 looting and violence in Safed","שוד ואלימות 1834 בצפת","https://en.wikipedia.org/wiki/Safed#1834_plunder_of_Safed",9
-59.6167,36.2605,60000,40000,0,#c0392b,#e74c3c,0.15,1839,1839,"Allahdad: Pogrom and forced conversions of Jews in Mashhad, Iran","אללהדד: פוגרום והמרות כפויות של יהודים במשהד, איראן","https://en.wikipedia.org/wiki/Allahdad",9
-36.2910,33.5130,70000,40000,-20,#c0392b,#e74c3c,0.15,1840,1840,"Violence surrounding the Damascus affair","אלימות סביב פרשת דמשק","https://en.wikipedia.org/wiki/Damascus_affair",9
-30.7233,46.4825,90000,60000,0,#c0392b,#e74c3c,0.15,1871,1871,"Odessa anti-Jewish riots","מהומות אנטי-יהודיות באודסה","https://en.wikipedia.org/wiki/History_of_the_Jews_in_Odesa#Pogroms",9
-19.0402,47.4979,150000,70000,45,#16a085,#1abc9c,0.16,1880,1920,"Migration-era socio-economic zone in Central Europe (Budapest area)","אזור סוציו-אקונומי בתקופת ההגירה במרכז אירופה (אזור בודפשט)","",4
-30.0000,50.4500,300000,200000,15,#c0392b,#e74c3c,0.15,1881,1884,"Mass pogroms across the Russian Empire (centered near Kyiv)","פוגרומים המוניים ברחבי האימפריה הרוסית (מרכז ליד קייב)","https://en.wikipedia.org/wiki/Anti-Jewish_pogroms_in_the_Russian_Empire",9
-28.8320,47.0105,60000,40000,0,#c0392b,#e74c3c,0.15,1903,1903,"Kishinev pogrom","פוגרום קישינב","https://en.wikipedia.org/wiki/Kishinev_pogrom",9
-30.7233,46.4825,90000,60000,10,#c0392b,#e74c3c,0.15,1905,1905,"Odessa pogrom","פוגרום אודסה","https://en.wikipedia.org/wiki/1905_Odessa_pogrom",9
-23.1680,53.1330,60000,40000,-15,#c0392b,#e74c3c,0.15,1906,1906,"Białystok pogrom","פוגרום ביאליסטוק","https://en.wikipedia.org/wiki/Bia%C5%82ystok_pogrom",9
-52.5837,29.5918,60000,40000,0,#c0392b,#e74c3c,0.15,1910,1910,"Shiraz blood libel and pogrom","עלילת דם שיראז ופוגרום","https://en.wikipedia.org/wiki/Shiraz_blood_libel",9
-24.0316,49.8397,70000,45000,0,#c0392b,#e74c3c,0.15,1918,1918,"Lwów (Lviv) pogrom","פוגרום לבוב (לביב)","https://en.wikipedia.org/wiki/Lviv_pogroms_(1918%E2%80%931940)",9
-27.0000,49.4220,70000,45000,10,#c0392b,#e74c3c,0.15,1919,1919,"Proskurov (Khmelnytskyi) pogrom","פוגרום פרוסקורוב (חמלניצקי)","https://en.wikipedia.org/wiki/Proskurov_pogrom",9
-26.1000,52.1220,50000,30000,-5,#c0392b,#e74c3c,0.15,1919,1919,"Pinsk massacre","טבח פינסק","https://en.wikipedia.org/wiki/Pinsk_massacre",9
-34.7580,32.0510,60000,35000,0,#c0392b,#e74c3c,0.15,1921,1921,"Jaffa riots against Jews in Mandatory Palestine","מהומות יפו נגד יהודים בפלשתינה המנדטורית","https://en.wikipedia.org/wiki/Jaffa_riots",9
-35.0950,31.5330,50000,30000,10,#c0392b,#e74c3c,0.15,1929,1929,"Hebron massacre","טבח חברון","https://en.wikipedia.org/wiki/1929_Hebron_massacre",9
-13.4050,52.5200,100000,50000,-25,#2c3e50,#34495e,0.14,1933,1945,"Nazi-era restrictions and events in Berlin area","הגבלות ואירועים מתקופת הנאצים באזור ברלין","https://en.wikipedia.org/wiki/History_of_the_Jews_in_Berlin",5
-26.5550,41.6770,90000,60000,5,#c0392b,#e74c3c,0.15,1934,1934,"Thrace pogroms (centered near Edirne)","פוגרומים בתראקיה (מרכז ליד אדירנה)","https://en.wikipedia.org/wiki/Thrace_pogroms",9
-11.5820,48.1351,90000,60000,20,#c0392b,#e74c3c,0.15,1938,1938,"Kristallnacht violence (centered near Munich)","אלימות ליל הבדולח (מרכז ליד מינכן)","https://en.wikipedia.org/wiki/Kristallnacht",9
-44.3661,33.3152,90000,60000,-10,#c0392b,#e74c3c,0.15,1941,1941,"Farhud in Baghdad","פארהוד בבגדד","https://en.wikipedia.org/wiki/Farhud",9
-27.5910,47.1590,70000,45000,0,#c0392b,#e74c3c,0.15,1941,1941,"Iași pogrom","פוגרום יאשי","https://en.wikipedia.org/wiki/Ia%C8%99i_pogrom",9
-22.3020,53.2890,50000,30000,15,#c0392b,#e74c3c,0.15,1941,1941,"Jedwabne massacre","טבח ידוובנה","https://en.wikipedia.org/wiki/Jedwabne_massacre",9
-20.6286,50.8661,40000,25000,0,#c0392b,#e74c3c,0.15,1946,1946,"Kielce pogrom in post-war Poland","פוגרום קיילצה בפולין שלאחר המלחמה","https://en.wikipedia.org/wiki/Kielce_pogrom",9
-34.7818,32.0853,60000,30000,10,#2980b9,#3498db,0.20,1948,1967,"Early Israeli state events around Tel Aviv region","אירועי מדינה מוקדמים באזור תל אביב","https://en.wikipedia.org/wiki/Tel_Aviv",6
+35.2137,31.7683,120000,60000,30,#e67e22,#f39c12,0.18,-586,-516,Babylonian administrative zone around Jerusalem during exile period,אזור מנהלי בבלי סביב ירושלים בתקופת הגלות,https://en.wikipedia.org/wiki/Babylonian_exile,1
+29.9187,31.2001,60000,40000,20,#c0392b,#e74c3c,0.15,38,38,Alexandria pogrom against the Jewish community,פוגרום אלכסנדריה נגד הקהילה היהודית,https://en.wikipedia.org/wiki/Alexandria_in_Antiquity#Jewish_history,9
+39.6142,24.4672,40000,25000,0,#c0392b,#e74c3c,0.15,622,627,Ethnic cleansing of Jews from Mecca and Medina,ניקוי אתני של יהודים ממכה ומדינה,https://en.wikipedia.org/wiki/Banu_Qurayza,9
+39.6142,24.4672,40000,25000,0,#c0392b,#e74c3c,0.15,622,634,Extermination of the 14 Arabian Jewish tribes,השמדת 14 השבטים היהודיים הערביים,https://en.wikipedia.org/wiki/Banu_Qurayza,9
+39.6142,24.4672,40000,25000,0,#c0392b,#e74c3c,0.15,627,627,Massacre of Banu Qurayza in Medina,טבח בני קוריצה במדינה,https://en.wikipedia.org/wiki/Banu_Qurayza,9
+29.9187,31.2001,60000,40000,20,#c0392b,#e74c3c,0.15,629,629,"1st Alexandria Massacres, Egypt","טבח אלכסנדריה הראשון, מצרים",https://en.wikipedia.org/wiki/Alexandria_in_Antiquity#Jewish_history,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,822,861,Islamic empire law requiring Jews to wear yellow stars,חוק האימפריה האסלאמית המחייב יהודים לענוד כוכבים צהובים,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Iraq,9
+-5.0000,34.0333,60000,40000,0,#c0392b,#e74c3c,0.15,1033,1033,1033 Fez massacre of Jews in Morocco,טבח פז 1033 של יהודים במרוקו,https://en.wikipedia.org/wiki/1033_Fez_massacre,9
+-5.0000,34.0333,60000,40000,0,#c0392b,#e74c3c,0.15,1033,1033,"1st Fez Pogrom, Morocco","פוגרום פז הראשון, מרוקו",https://en.wikipedia.org/wiki/1033_Fez_massacre,9
+-3.5990,37.1773,50000,30000,10,#c0392b,#e74c3c,0.15,1066,1066,Granada massacre (al-Andalus),טבח גרנדה (אל-אנדלוס),https://en.wikipedia.org/wiki/1066_Granada_massacre,9
+-3.5990,37.1773,50000,30000,10,#c0392b,#e74c3c,0.15,1066,1066,"Granada Massacre, Muslim occupied Spain","טבח גרנדה, ספרד הכבושה על ידי מוסלמים",https://en.wikipedia.org/wiki/1066_Granada_massacre,9
+8.2473,50.0010,120000,70000,25,#c0392b,#e74c3c,0.15,1096,1098,Rhineland massacres during the First Crusade (centered near Mainz),טבח הריין במסע הצלב הראשון (מרכז ליד מיינץ),https://en.wikipedia.org/wiki/Rhineland_massacres,9
+-7.9811,31.6295,60000,40000,0,#c0392b,#e74c3c,0.15,1106,1106,Ali Ibn Yousef decrees death penalty for Jews in Marrakesh,עלי אבן יוסף גוזר עונש מוות על יהודים במרקש,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Morocco,9
+-7.9811,31.6295,80000,50000,0,#c0392b,#e74c3c,0.15,1148,1160,Almohad persecutions of Jews in Morocco and al-Andalus (centered near Marrakesh),רדיפות אל-מוואחידון של יהודים במרוקו ואל-אנדלוס (מרכז ליד מרקש),https://en.wikipedia.org/wiki/Almohad_Caliphate#Persecution_of_dhimmis,9
+-7.9811,31.6295,80000,50000,0,#c0392b,#e74c3c,0.15,1148,1148,Almohadin gives Jews choice: convert to Islam or expulsion,אל-מוואחידון נותן ליהודים בחירה: להתאסלם או גירוש,https://en.wikipedia.org/wiki/Almohad_Caliphate#Persecution_of_dhimmis,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1165,1178,"Jews given choice: convert to Islam or die, Yemen","יהודים מקבלים בחירה: להתאסלם או למות, תימן",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Yemen,9
+-7.9811,31.6295,60000,40000,0,#c0392b,#e74c3c,0.15,1165,1165,"Chief Rabbi of the Maghreb burnt alive, Rambam flees","הרב הראשי של המגרב נשרף חי, הרמבם בורח""",https://en.wikipedia.org/wiki/Maimonides,9
+-0.1278,51.5074,40000,25000,0,#c0392b,#e74c3c,0.15,1189,1189,London massacre of Jews during coronation riots,טבח לונדון של יהודים במהומות ההכתרה,https://en.wikipedia.org/wiki/Massacre_of_1189,9
+0.7217,52.2430,30000,20000,10,#c0392b,#e74c3c,0.15,1190,1190,Bury St Edmunds massacre of Jews,טבח בורי סנט אדמונדס של יהודים,https://en.wikipedia.org/wiki/Massacre_of_1189,9
+-1.0820,53.9583,30000,20000,-5,#c0392b,#e74c3c,0.15,1190,1190,York massacre at Clifford's Tower,טבח יורק במגדל קליפורד,https://en.wikipedia.org/wiki/York_massacre,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1220,1220,Thousands of Jews killed by Muslims after being blamed for Mongol invasion,אלפי יהודים נהרגו על ידי מוסלמים לאחר שהואשמו בפלישה המונגולית,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Iraq,9
+31.2358,30.0444,60000,40000,0,#c0392b,#e74c3c,0.15,1270,1270,Sultan Baibars of Egypt resolved to burn all the Jews,הסולטן ביברס ממצרים החליט לשרוף את כל היהודים,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+-5.0000,34.0333,60000,40000,0,#c0392b,#e74c3c,0.15,1276,1276,"2nd Fez Pogrom, Morocco","פוגרום פז השני, מרוקו",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Morocco,9
+11.5820,49.4542,100000,60000,15,#c0392b,#e74c3c,0.15,1298,1299,Rindfleisch massacres in Franconia (centered near Nuremberg),טבח רינדפלייש בפרנקוניה (מרכז ליד נירנברג),https://en.wikipedia.org/wiki/Rintfleisch_massacres,9
+31.2358,30.0444,80000,50000,0,#c0392b,#e74c3c,0.15,1301,1301,Cairo massacre of Jews during Mamluk period,טבח קהיר של יהודים בתקופת הממלוכים,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+-7.9811,31.6295,70000,45000,0,#c0392b,#e74c3c,0.15,1301,1301,Marrakesh massacre of Jews during Mamluk period,טבח מרקש של יהודים בתקופת הממלוכים,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Morocco,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1301,1301,Baghdad massacre of Jews during Mongol invasion,טבח בגדד של יהודים בפלישה המונגולית,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Iraq,9
+36.2765,33.5138,60000,40000,0,#c0392b,#e74c3c,0.15,1301,1301,Damascus massacre of Jews during Mongol invasion,טבח דמשק של יהודים בפלישה המונגולית,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Syria,9
+59.6167,36.2605,70000,45000,0,#c0392b,#e74c3c,0.15,1301,1301,Khorasan massacre of Jews in Iran during Mongol invasion,טבח חוראסן של יהודים באיראן בפלישה המונגולית,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Iran,9
+1.4442,43.6047,120000,70000,-10,#c0392b,#e74c3c,0.15,1320,1320,"Shepherds' Crusade persecutions (southern France, centered near Toulouse)","רדיפות מסע הצלב הרועים (דרום צרפת, מרכז ליד טולוז)",https://en.wikipedia.org/wiki/Shepherds%27_Crusade_(1320),9
+7.7500,48.5830,150000,90000,0,#c0392b,#e74c3c,0.15,1348,1351,Black Death persecutions (centered near Strasbourg),רדיפות המוות השחור (מרכז ליד שטרסבורג),https://en.wikipedia.org/wiki/Black_Death_Jewish_persecutions,9
+5.9280,43.1242,30000,20000,0,#c0392b,#e74c3c,0.15,1348,1348,Toulon massacre during Black Death,טבח טולון במגפת המוות השחור,https://en.wikipedia.org/wiki/Persecution_of_Jews_during_the_Black_Death,9
+2.1734,41.3851,40000,25000,0,#c0392b,#e74c3c,0.15,1348,1348,Barcelona massacre during Black Death,טבח ברצלונה במגפת המוות השחור,https://en.wikipedia.org/wiki/Persecution_of_Jews_during_the_Black_Death,9
+11.0328,50.9787,30000,20000,0,#c0392b,#e74c3c,0.15,1349,1349,Erfurt massacre during Black Death,טבח ארפורט במגפת המוות השחור,https://en.wikipedia.org/wiki/Persecution_of_Jews_during_the_Black_Death,9
+7.5886,47.5596,30000,20000,0,#c0392b,#e74c3c,0.15,1349,1349,Basel massacre during Black Death,טבח בזל במגפת המוות השחור,https://en.wikipedia.org/wiki/Persecution_of_Jews_during_the_Black_Death,9
+8.6821,50.1109,40000,25000,0,#c0392b,#e74c3c,0.15,1349,1349,Frankfurt massacre during Black Death,טבח פרנקפורט במגפת המוות השחור,https://en.wikipedia.org/wiki/Persecution_of_Jews_during_the_Black_Death,9
+7.7521,48.5734,50000,30000,0,#c0392b,#e74c3c,0.15,1349,1349,Strasbourg massacre during Black Death,טבח שטרסבורג במגפת המוות השחור,https://en.wikipedia.org/wiki/Persecution_of_Jews_during_the_Black_Death,9
+59.6167,36.2605,60000,40000,0,#c0392b,#e74c3c,0.15,1385,1385,"Khorasan Massacres, Iran","טבח חוראסן, איראן",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Iran,9
+14.4378,50.0755,40000,25000,30,#c0392b,#e74c3c,0.15,1389,1389,Prague Easter massacre,טבח פסחא בפראג,https://en.wikipedia.org/wiki/Prague_Easter_pogrom,9
+2.1734,41.3851,80000,50000,15,#8e44ad,#9b59b6,0.15,1391,1400,Riots and anti-Jewish violence in Catalonia region (Barcelona area),מהומות ואלימות אנטי-יהודית באזור קטלוניה (אזור ברצלונה),https://en.wikipedia.org/wiki/Massacre_of_1391,2
+16.3738,48.2082,50000,30000,5,#c0392b,#e74c3c,0.15,1421,1421,Vienna Gesera (expulsions and killings),גזרת וינה (גירושים והרג),https://en.wikipedia.org/wiki/Vienna_Gesera,9
+-5.0000,34.0333,60000,40000,0,#c0392b,#e74c3c,0.15,1438,1438,"1st Mellah Ghetto Massacres, North Africa","טבח גטו המלאח הראשון, צפון אפריקה",https://en.wikipedia.org/wiki/Mellah,9
+-5.0000,34.0333,60000,40000,0,#c0392b,#e74c3c,0.15,1438,1438,Mellah Ghetto massacre in North Africa,טבח גטו המלאח בצפון אפריקה,https://en.wikipedia.org/wiki/Mellah,9
+-5.0000,34.0333,60000,40000,0,#c0392b,#e74c3c,0.15,1465,1465,"3rd Fez Pogrom, Morocco (11 Jews left alive)","פוגרום פז השלישי, מרוקו (11 יהודים נותרו בחיים)",https://en.wikipedia.org/wiki/1465_Moroccan_revolt,9
+-5.0030,34.0330,60000,40000,5,#c0392b,#e74c3c,0.15,1465,1465,Fez massacre of Jews during the 1465 revolt,טבח פז של יהודים במרד 1465,https://en.wikipedia.org/wiki/1465_Moroccan_revolt,9
+-3.7038,40.4168,200000,120000,0,#c0392b,#e74c3c,0.12,1492,1600,Spanish expulsion footprint across central Spain,טביעת רגל הגירוש הספרדי ברחבי מרכז ספרד,https://en.wikipedia.org/wiki/Alhambra_Decree,3
+35.4933,32.9646,50000,30000,0,#c0392b,#e74c3c,0.15,1517,1517,Safed massacre during Ottoman conquest,טבח צפת בכיבוש העות'מאני,https://en.wikipedia.org/wiki/Safed#Early_Ottoman_period,9
+35.0950,31.5330,40000,25000,0,#c0392b,#e74c3c,0.15,1517,1517,Hebron massacre during Ottoman conquest,טבח חברון בכיבוש העות'מאני,https://en.wikipedia.org/wiki/1517_Hebron_attacks,9
+35.4933,32.9646,50000,30000,0,#c0392b,#e74c3c,0.15,1517,1517,"1st Safed Pogrom, Ottoman Palestine","פוגרום צפת הראשון, פלשתינה העות'מאנית",https://en.wikipedia.org/wiki/Safed#Early_Ottoman_period,9
+35.0950,31.5330,40000,25000,0,#c0392b,#e74c3c,0.15,1517,1517,"1st Hebron Pogrom, Ottoman Palestine","פוגרום חברון הראשון, פלשתינה העות'מאנית",https://en.wikipedia.org/wiki/1517_Hebron_attacks,9
+13.1913,32.8872,60000,40000,0,#c0392b,#e74c3c,0.15,1517,1517,"Marsa ibn Ghazi Massacre, Ottoman Libya","טבח מרסה אבן ע'אזי, לוב העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Libya,9
+32.0590,49.4440,250000,180000,20,#c0392b,#e74c3c,0.15,1577,1577,Passover massacre in Ottoman Empire,טבח פסח באימפריה העות'מאנית,https://en.wikipedia.org/wiki/Passover_massacre,9
+32.0590,49.4440,250000,180000,20,#c0392b,#e74c3c,0.15,1577,1577,"Passover Massacre, Ottoman empire","טבח פסח, האימפריה העות'מאנית",https://en.wikipedia.org/wiki/Passover_massacre,9
+59.6167,36.2605,60000,40000,0,#c0392b,#e74c3c,0.15,1588,1629,Mahalay Programs persecutions in Iran,רדיפות תוכניות מהליי באיראן,https://en.wikipedia.org/wiki/Mahalay_Programs,9
+59.6167,36.2605,60000,40000,0,#c0392b,#e74c3c,0.15,1588,1629,"Mahalay Pogroms, Iran","פוגרומים מהליי, איראן",https://en.wikipedia.org/wiki/Mahalay_Programs,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1630,1700,Yemenite Jews considered 'impure' and forbidden to touch Muslims,יהודי תימן נחשבו 'טמאים' ואסור להם לגעת במוסלמים,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Yemen,9
+32.0590,49.4440,250000,180000,20,#c0392b,#e74c3c,0.15,1648,1657,"Khmelnytsky Uprising massacres (centered near Cherkasy, Ukraine)","טבח מרד חמלניצקי (מרכז ליד צ'רקאסי, אוקראינה)",https://en.wikipedia.org/wiki/Khmelnytsky_Uprising#Massacres_of_Jews,9
+35.4933,32.9646,60000,35000,10,#c0392b,#e74c3c,0.15,1660,1660,Destruction of Safed community,חורבן קהילת צפת,https://en.wikipedia.org/wiki/Destruction_of_Safed_(1660),9
+35.4933,32.9646,50000,30000,0,#c0392b,#e74c3c,0.15,1660,1660,"2nd Safed Pogrom, Ottoman Palestine","פוגרום צפת השני, פלשתינה העות'מאנית",https://en.wikipedia.org/wiki/Destruction_of_Safed_(1660),9
+43.2470,13.3150,80000,50000,0,#c0392b,#e74c3c,0.15,1670,1670,Mawza expulsion Yemen,גירוש מוזע תימן,https://en.wikipedia.org/wiki/Mawza_Exile,9
+43.2470,13.3150,80000,50000,0,#c0392b,#e74c3c,0.15,1679,1680,Mawza Exile of Yemeni Jews (centered near Mocha),גלות מוזע של יהודי תימן (מרכז ליד מוקה),https://en.wikipedia.org/wiki/Mawza_Exile,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1679,1680,"Sanaa Massacres, Yemen","טבח צנעא, תימן",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Yemen,9
+59.6167,36.2605,60000,40000,0,#c0392b,#e74c3c,0.15,1747,1747,"Mashhad Massacres, Iran","טבח משהד, איראן",https://en.wikipedia.org/wiki/Allahdad,9
+30.2220,48.7540,60000,40000,0,#c0392b,#e74c3c,0.15,1768,1768,Uman massacre,טבח אומן,https://en.wikipedia.org/wiki/Uman_massacre,9
+13.1913,32.8872,60000,40000,0,#c0392b,#e74c3c,0.15,1785,1785,"Tripoli Pogrom, Ottoman Libya","פוגרום טריפולי, לוב העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Libya,9
+-5.0030,34.0330,70000,45000,0,#c0392b,#e74c3c,0.15,1790,1792,Persecutions of Jews in Fez under Sultan Yazid,רדיפות יהודים בפז תחת הסולטן יזיד,https://en.wikipedia.org/wiki/Yazid_of_Morocco,9
+-5.0000,34.0333,60000,40000,0,#c0392b,#e74c3c,0.15,1790,1792,"Tetouan Pogrom, Morocco (Jews stripped naked)","פוגרום תיטואן, מרוקו (יהודים הופשטו עירומים)",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Morocco,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1800,1800,New decree in Yemen: Jews forbidden to wear new clothing,צו חדש בתימן: אסור ליהודים ללבוש בגדים חדשים,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Yemen,9
+3.0588,36.7539,60000,40000,0,#c0392b,#e74c3c,0.15,1805,1805,"1st Algiers Pogrom, Ottoman Algeria","פוגרום אלג'יר הראשון, אלג'יריה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Algeria,9
+3.0588,36.7539,60000,40000,0,#c0392b,#e74c3c,0.15,1815,1815,"2nd Algiers Pogrom, Ottoman Algeria","פוגרום אלג'יר השני, אלג'יריה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Algeria,9
+9.9534,49.7913,80000,50000,10,#c0392b,#e74c3c,0.15,1819,1820,Hep-Hep riots in German states (centered near Würzburg),מהומות היפ-היפ במדינות גרמניות (מרכז ליד וירצבורג),https://en.wikipedia.org/wiki/Hep-Hep_riots,9
+36.2765,33.5138,60000,40000,0,#c0392b,#e74c3c,0.15,1820,1820,"Sahalu Lobiant Massacres, Ottoman Syria","טבח סהלו לוביאנט, סוריה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Syria,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1828,1828,"Baghdad Pogrom, Ottoman Iraq","פוגרום בגדד, עיראק העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Iraq,9
+3.0588,36.7539,60000,40000,0,#c0392b,#e74c3c,0.15,1830,1830,"3rd Algiers Pogrom, Ottoman Algeria","פוגרום אלג'יר השלישי, אלג'יריה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Algeria,9
+46.2586,38.0808,60000,40000,0,#c0392b,#e74c3c,0.15,1830,1830,"Ethnic cleansing of Jews in Tabriz, Iran","ניקוי אתני של יהודים בטאבריז, איראן",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Iran,9
+35.4933,32.9646,50000,30000,5,#c0392b,#e74c3c,0.15,1834,1834,1834 looting and violence in Safed,שוד ואלימות 1834 בצפת,https://en.wikipedia.org/wiki/Safed#1834_plunder_of_Safed,9
+35.4933,32.9646,50000,30000,0,#c0392b,#e74c3c,0.15,1834,1834,"Safed Pogrom, Ottoman Palestine","פוגרום צפת, פלשתינה העות'מאנית",https://en.wikipedia.org/wiki/Safed#1834_plunder_of_Safed,9
+59.6167,36.2605,60000,40000,0,#c0392b,#e74c3c,0.15,1839,1839,"Massacre of the Mashadi Jews, Iran","טבח יהודי משהד, איראן",https://en.wikipedia.org/wiki/Allahdad,9
+59.6167,36.2605,60000,40000,0,#c0392b,#e74c3c,0.15,1839,1839,"Allahdad: Pogrom and forced conversions of Jews in Mashhad, Iran","אללהדד: פוגרום והמרות כפויות של יהודים במשהד, איראן",https://en.wikipedia.org/wiki/Allahdad,9
+36.2765,33.5138,60000,40000,0,#c0392b,#e74c3c,0.15,1840,1840,Damascus ritual killings (Muslims and French Christians),הרג טקסי בדמשק (מוסלמים ונוצרים צרפתים),https://en.wikipedia.org/wiki/Damascus_affair,9
+36.2765,33.5138,60000,40000,0,#c0392b,#e74c3c,0.15,1840,1840,Blood libels introduced to the Muslim world from Europe,עלילות דם הוכנסו לעולם המוסלמי מאירופה,https://en.wikipedia.org/wiki/Damascus_affair,9
+36.2910,33.5130,70000,40000,-20,#c0392b,#e74c3c,0.15,1840,1840,Violence surrounding the Damascus affair,אלימות סביב פרשת דמשק,https://en.wikipedia.org/wiki/Damascus_affair,9
+31.2358,30.0444,60000,40000,0,#c0392b,#e74c3c,0.15,1844,1844,"1st Cairo Massacres, Ottoman Egypt","טבח קהיר הראשון, מצרים העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+35.5018,33.8439,40000,25000,0,#c0392b,#e74c3c,0.15,1847,1847,"Dayr al-Qamar Pogrom, Ottoman Lebanon","פוגרום דיר אל-קמר, לבנון העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Lebanon,9
+35.2137,31.7683,40000,25000,0,#c0392b,#e74c3c,0.15,1847,1847,"Ethnic cleansing of the Jews in Jerusalem, Ottoman Palestine","ניקוי אתני של יהודים בירושלים, פלשתינה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Jerusalem,9
+36.2765,33.5138,60000,40000,0,#c0392b,#e74c3c,0.15,1848,1848,"1st Damascus Pogrom, Syria","פוגרום דמשק הראשון, סוריה",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Syria,9
+36.2021,37.1342,60000,40000,0,#c0392b,#e74c3c,0.15,1850,1850,"1st Aleppo Pogrom, Ottoman Syria","פוגרום חלב הראשון, סוריה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Syria,9
+36.2765,33.5138,60000,40000,0,#c0392b,#e74c3c,0.15,1860,1860,"2nd Damascus Pogrom, Ottoman Syria","פוגרום דמשק השני, סוריה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Syria,9
+35.5018,33.8439,40000,25000,0,#c0392b,#e74c3c,0.15,1862,1862,"1st Beirut Pogrom, Ottoman Lebanon","פוגרום ביירות הראשון, לבנון העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Lebanon,9
+-7.9811,31.6295,60000,40000,0,#c0392b,#e74c3c,0.15,1864,1880,"Marrakesh Massacre, Morocco","טבח מרקש, מרוקו",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Morocco,9
+28.9784,41.0082,40000,25000,0,#c0392b,#e74c3c,0.15,1866,1866,"Kuzguncuk Pogrom, Ottoman Turkey","פוגרום קוזגונג'וק, טורקיה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Turkey,9
+59.6167,36.2605,60000,40000,0,#c0392b,#e74c3c,0.15,1867,1867,"Barfurush Massacre, Ottoman Turkey","טבח בארפורוש, טורקיה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Turkey,9
+28.9784,41.0082,40000,25000,0,#c0392b,#e74c3c,0.15,1868,1868,"Eyub Pogrom, Ottoman Turkey","פוגרום איוב, טורקיה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Turkey,9
+10.1815,36.8065,60000,40000,0,#c0392b,#e74c3c,0.15,1869,1869,"Tunis Massacre, Ottoman Tunisia","טבח תוניס, תוניסיה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Tunisia,9
+10.7592,34.7406,60000,40000,0,#c0392b,#e74c3c,0.15,1869,1869,"Sfax Massacre, Ottoman Tunisia","טבח ספקס, תוניסיה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Tunisia,9
+29.9187,31.2001,60000,40000,0,#c0392b,#e74c3c,0.15,1870,1870,"2nd Alexandria Massacres, Ottoman Egypt","טבח אלכסנדריה השני, מצרים העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+28.9784,41.0082,40000,25000,0,#c0392b,#e74c3c,0.15,1870,1870,"1st Istanbul Pogrom, Ottoman Turkey","פוגרום איסטנבול הראשון, טורקיה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Turkey,9
+31.2358,30.0444,60000,40000,0,#c0392b,#e74c3c,0.15,1871,1871,"1st Damanhur Massacres, Ottoman Egypt","טבח דמנהור הראשון, מצרים העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+30.7233,46.4825,90000,60000,0,#c0392b,#e74c3c,0.15,1871,1871,Odessa anti-Jewish riots,מהומות אנטי-יהודיות באודסה,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Odesa#Pogroms,9
+28.9784,41.0082,40000,25000,0,#c0392b,#e74c3c,0.15,1872,1872,"Edrine Massacres, Ottoman Turkey","טבח אדרין, טורקיה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Turkey,9
+27.1387,38.4192,40000,25000,0,#c0392b,#e74c3c,0.15,1872,1872,"1st Izmir Pogrom, Ottoman Turkey","פוגרום איזמיר הראשון, טורקיה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Turkey,9
+31.2358,30.0444,60000,40000,0,#c0392b,#e74c3c,0.15,1873,1873,"2nd Damanhur Massacres, Ottoman Egypt","טבח דמנהור השני, מצרים העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+27.1387,38.4192,40000,25000,0,#c0392b,#e74c3c,0.15,1874,1874,"2nd Izmir Pogrom, Ottoman Turkey","פוגרום איזמיר השני, טורקיה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Turkey,9
+28.9784,41.0082,40000,25000,0,#c0392b,#e74c3c,0.15,1874,1874,"2nd Istanbul Pogrom, Ottoman Turkey","פוגרום איסטנבול השני, טורקיה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Turkey,9
+35.5018,33.8439,40000,25000,0,#c0392b,#e74c3c,0.15,1874,1874,"2nd Beirut Pogrom, Ottoman Lebanon","פוגרום ביירות השני, לבנון העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Lebanon,9
+36.2021,37.1342,60000,40000,0,#c0392b,#e74c3c,0.15,1875,1875,"2nd Aleppo Pogrom, Ottoman Syria","פוגרום חלב השני, סוריה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Syria,9
+10.1815,36.8065,60000,40000,0,#c0392b,#e74c3c,0.15,1875,1875,"Jerba Island Massacre, Ottoman Tunisia","טבח אי ג'רבה, תוניסיה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Tunisia,9
+31.2358,30.0444,60000,40000,0,#c0392b,#e74c3c,0.15,1877,1877,"3rd Damanhur Massacres, Ottoman Egypt","טבח דמנהור השלישי, מצרים העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+31.2358,30.0444,60000,40000,0,#c0392b,#e74c3c,0.15,1877,1877,"Mansura Pogrom, Ottoman Egypt","פוגרום מנצורה, מצרים העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+19.0402,47.4979,150000,70000,45,#16a085,#1abc9c,0.16,1880,1920,Migration-era socio-economic zone in Central Europe (Budapest area),אזור סוציו-אקונומי בתקופת ההגירה במרכז אירופה (אזור בודפשט),,4
+30.0000,50.4500,300000,200000,15,#c0392b,#e74c3c,0.15,1881,1884,Mass pogroms across the Russian Empire (centered near Kyiv),פוגרומים המוניים ברחבי האימפריה הרוסית (מרכז ליד קייב),https://en.wikipedia.org/wiki/Anti-Jewish_pogroms_in_the_Russian_Empire,9
+36.2765,33.5138,60000,40000,0,#c0392b,#e74c3c,0.15,1882,1882,"Homs Massacre, Ottoman Syria","טבח חמס, סוריה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Syria,9
+29.9187,31.2001,60000,40000,0,#c0392b,#e74c3c,0.15,1882,1882,"3rd Alexandria Massacres, Ottoman Egypt","טבח אלכסנדריה השלישי, מצרים העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+31.2358,30.0444,60000,40000,0,#c0392b,#e74c3c,0.15,1890,1890,"2nd Cairo Massacres, Ottoman Egypt","טבח קהיר השני, מצרים העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+36.2765,33.5138,60000,40000,0,#c0392b,#e74c3c,0.15,1890,1890,"3rd Damascus Pogrom, Ottoman Syria","פוגרום דמשק השלישי, סוריה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Syria,9
+10.1815,36.8065,60000,40000,0,#c0392b,#e74c3c,0.15,1890,1890,"Tunis Massacres, Ottoman Tunisia","טבח תוניס, תוניסיה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Tunisia,9
+31.2358,30.0444,60000,40000,0,#c0392b,#e74c3c,0.15,1891,1891,"4th Damanahur Massacres, Ottoman Egypt","טבח דמנהור הרביעי, מצרים העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+13.1913,32.8872,60000,40000,0,#c0392b,#e74c3c,0.15,1897,1897,"Tripolitania killings, Ottoman Libya","הרג טריפוליטניה, לוב העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Libya,9
+31.2358,30.0444,60000,40000,0,#c0392b,#e74c3c,0.15,1901,1902,"3rd Cairo Massacres, Ottoman Egypt","טבח קהיר השלישי, מצרים העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+29.9187,31.2001,60000,40000,0,#c0392b,#e74c3c,0.15,1901,1907,"4th Alexandria Massacres, Ottoman Egypt","טבח אלכסנדריה הרביעי, מצרים העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+-5.0000,34.0333,60000,40000,0,#c0392b,#e74c3c,0.15,1903,1907,"Taza & Settat pogroms, Morocco","פוגרומים תאזה וסטאט, מרוקו",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Morocco,9
+31.2358,30.0444,60000,40000,0,#c0392b,#e74c3c,0.15,1903,1903,"1st Port Sa'id Massacres, Ottoman Egypt","טבח פורט סעיד הראשון, מצרים העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+-5.0000,34.0333,60000,40000,0,#c0392b,#e74c3c,0.15,1903,1940,"Pogroms of Taza and Settat, Morocco","פוגרומים של תאזה וסטאט, מרוקו",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Morocco,9
+28.8320,47.0105,60000,40000,0,#c0392b,#e74c3c,0.15,1903,1903,Kishinev pogrom,פוגרום קישינב,https://en.wikipedia.org/wiki/Kishinev_pogrom,9
+30.7233,46.4825,90000,60000,10,#c0392b,#e74c3c,0.15,1905,1905,Odessa pogrom,פוגרום אודסה,https://en.wikipedia.org/wiki/1905_Odessa_pogrom,9
+23.1680,53.1330,60000,40000,-15,#c0392b,#e74c3c,0.15,1906,1906,Białystok pogrom,פוגרום ביאליסטוק,https://en.wikipedia.org/wiki/Bia%C5%82ystok_pogrom,9
+-7.9811,31.6295,60000,40000,0,#c0392b,#e74c3c,0.15,1907,1907,"Casablanca pogrom, Morocco","פוגרום קזבלנקה, מרוקו",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Morocco,9
+31.2358,30.0444,60000,40000,0,#c0392b,#e74c3c,0.15,1908,1908,"2nd Port Said Massacres, Ottoman Egypt","טבח פורט סעיד השני, מצרים העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+59.6167,36.2605,60000,40000,0,#c0392b,#e74c3c,0.15,1910,1910,Shiraz blood libel,עלילת דם שיראז,https://en.wikipedia.org/wiki/Shiraz_blood_libel,9
+52.5837,29.5918,60000,40000,0,#c0392b,#e74c3c,0.15,1910,1910,Shiraz blood libel and pogrom,עלילת דם שיראז ופוגרום,https://en.wikipedia.org/wiki/Shiraz_blood_libel,9
+59.6167,36.2605,60000,40000,0,#c0392b,#e74c3c,0.15,1911,1911,Shiraz Pogrom,פוגרום שיראז,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Iran,9
+-5.0000,34.0333,60000,40000,0,#c0392b,#e74c3c,0.15,1912,1912,"4th Fez Pogrom, Morocco","פוגרום פז הרביעי, מרוקו",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Morocco,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1917,1917,"Baghdadi Jewish Inquisition, Ottoman empire","אינקוויזיציה יהודית בגדדית, האימפריה העות'מאנית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Iraq,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1918,1948,"Law making it illegal to raise an orphan Jewish, Yemen","חוק האוסר לגדל יתום יהודי, תימן",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Yemen,9
+24.0316,49.8397,70000,45000,0,#c0392b,#e74c3c,0.15,1918,1918,Lwów (Lviv) pogrom,פוגרום לבוב (לביב),https://en.wikipedia.org/wiki/Lviv_pogroms_(1918%E2%80%931940),9
+27.0000,49.4220,70000,45000,10,#c0392b,#e74c3c,0.15,1919,1919,Proskurov (Khmelnytskyi) pogrom,פוגרום פרוסקורוב (חמלניצקי),https://en.wikipedia.org/wiki/Proskurov_pogrom,9
+26.1000,52.1220,50000,30000,-5,#c0392b,#e74c3c,0.15,1919,1919,Pinsk massacre,טבח פינסק,https://en.wikipedia.org/wiki/Pinsk_massacre,9
+32.0590,49.4440,60000,40000,0,#c0392b,#e74c3c,0.15,1920,1920,Irbid Massacres: British mandate Palestine,טבח עירביד: פלשתינה המנדטורית,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Jordan,9
+35.2137,31.7683,60000,40000,0,#c0392b,#e74c3c,0.15,1920,1930,"Arab riots, British mandate Palestine","מהומות ערביות, פלשתינה המנדטורית",https://en.wikipedia.org/wiki/1920_Nebi_Musa_riots,9
+34.7580,32.0510,60000,35000,0,#c0392b,#e74c3c,0.15,1921,1921,Jaffa riots against Jews in Mandatory Palestine,מהומות יפו נגד יהודים בפלשתינה המנדטורית,https://en.wikipedia.org/wiki/Jaffa_riots,9
+34.7580,32.0510,60000,35000,0,#c0392b,#e74c3c,0.15,1921,1921,"1st Jaffa riots, British mandate Palestine","מהומות יפו הראשונות, פלשתינה המנדטורית",https://en.wikipedia.org/wiki/Jaffa_riots,9
+10.1815,36.8065,60000,40000,0,#c0392b,#e74c3c,0.15,1922,1922,"Djerba Massacres, Tunisia","טבח ג'רבה, תוניסיה",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Tunisia,9
+31.2358,30.0444,60000,40000,0,#c0392b,#e74c3c,0.15,1928,1928,"Ikhwan Massacres, Egypt, and British mandate Palestine","טבח האחווה, מצרים ופלשתינה המנדטורית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1928,1928,"Jewish orphans sold into slavery, and forced to convert to Islam by Muslim Brotherhood, Yemen","יתומים יהודים נמכרו לעבדות ואולצו להתאסלם על ידי האחים המוסלמים, תימן",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Yemen,9
+35.0950,31.5330,50000,30000,10,#c0392b,#e74c3c,0.15,1929,1929,Hebron massacre,טבח חברון,https://en.wikipedia.org/wiki/1929_Hebron_massacre,9
+35.0950,31.5330,50000,30000,10,#c0392b,#e74c3c,0.15,1929,1929,3rd Hebron Pogrom British mandate Palestine,פוגרום חברון השלישי פלשתינה המנדטורית,https://en.wikipedia.org/wiki/1929_Hebron_massacre,9
+35.4933,32.9646,50000,30000,0,#c0392b,#e74c3c,0.15,1929,1929,"3rd Safed Pogrom, British mandate Palestine","פוגרום צפת השלישי, פלשתינה המנדטורית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Safed,9
+13.4050,52.5200,100000,50000,-25,#2c3e50,#34495e,0.14,1933,1945,Nazi-era restrictions and events in Berlin area,הגבלות ואירועים מתקופת הנאצים באזור ברלין,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Berlin,5
+34.7580,32.0510,60000,35000,0,#c0392b,#e74c3c,0.15,1933,1933,"2nd Jaffa riots, British mandate Palestine","מהומות יפו השניות, פלשתינה המנדטורית",https://en.wikipedia.org/wiki/History_of_the_Jews_in_Palestine,9
+26.5550,41.6770,90000,60000,5,#c0392b,#e74c3c,0.15,1934,1934,Thrace pogroms (centered near Edirne),פוגרומים בתראקיה (מרכז ליד אדירנה),https://en.wikipedia.org/wiki/Thrace_pogroms,9
+28.9784,41.0082,40000,25000,0,#c0392b,#e74c3c,0.15,1934,1934,"Thrace Pogroms, Turkey","פוגרומים בתראקיה, טורקיה",https://en.wikipedia.org/wiki/Thrace_pogroms,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1934,1934,"1st Farhud Massacres, Iraq","פארהוד הראשון, עיראק",https://en.wikipedia.org/wiki/Farhud,9
+34.7580,32.0510,60000,35000,0,#c0392b,#e74c3c,0.15,1936,1936,"3rd Jaffa riots, British mandate Palestine","מהומות יפו השלישיות, פלשתינה המנדטורית",https://en.wikipedia.org/wiki/1936%E2%80%9339_Arab_revolt_in_Palestine,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1936,1936,"2nd Farhud Massacres, Iraq","פארהוד השני, עיראק",https://en.wikipedia.org/wiki/Farhud,9
+11.5820,48.1351,90000,60000,20,#c0392b,#e74c3c,0.15,1938,1938,Kristallnacht violence (centered near Munich),אלימות ליל הבדולח (מרכז ליד מינכן),https://en.wikipedia.org/wiki/Kristallnacht,9
+44.3661,33.3152,90000,60000,-10,#c0392b,#e74c3c,0.15,1941,1941,Farhud in Baghdad,פארהוד בבגדד,https://en.wikipedia.org/wiki/Farhud,9
+27.5910,47.1590,70000,45000,0,#c0392b,#e74c3c,0.15,1941,1941,Iași pogrom,פוגרום יאשי,https://en.wikipedia.org/wiki/Ia%C8%99i_pogrom,9
+22.3020,53.2890,50000,30000,15,#c0392b,#e74c3c,0.15,1941,1941,Jedwabne massacre,טבח ידוובנה,https://en.wikipedia.org/wiki/Jedwabne_massacre,9
+44.3661,33.3152,60000,40000,0,#c0392b,#e74c3c,0.15,1941,1941,"3rd Farhud Massacres, Iraq","פארהוד השלישי, עיראק",https://en.wikipedia.org/wiki/Farhud,9
+20.6286,50.8661,40000,25000,0,#c0392b,#e74c3c,0.15,1946,1946,Kielce pogrom in post-war Poland,פוגרום קיילצה בפולין שלאחר המלחמה,https://en.wikipedia.org/wiki/Kielce_pogrom,9
+34.7818,32.0853,60000,30000,10,#2980b9,#3498db,0.20,1948,1967,Early Israeli state events around Tel Aviv region,אירועי מדינה מוקדמים באזור תל אביב,https://en.wikipedia.org/wiki/Tel_Aviv,6
