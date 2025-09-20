@@ -905,6 +905,20 @@ const historicalArrows = [
         titleHe: "גירושים במלחמה הפולנית-סובייטית (1919)",
         color: expulsion_color,
         description: "Following World War I, Jews were expelled from parts of Poland during the Polish–Soviet War"
+    },
+    {
+        startLat: 43.8430,
+        startLon: 10.5079,
+        endLat: 49.9929,
+        endLon: 8.2473,
+        midLat: 46.5,
+        midLon: 9.0,
+        yearStart: 920,
+        yearEnd: 920,
+        titleEn: "R. Moses of Lucca and son Kalonymus move to Mainz (920)",
+        titleHe: "ר' משה מלוקה ובנו קלונימוס עוברים למיינץ (920)",
+        color: emigration_color,
+        description: "R. Moses of Lucca, of N. Italy and son Kalonymus, move to Mainz–becoming forefathers of German Jewish culture. Kalonymus' Responsa c. 940, are the oldest native products of Ashkenazi Jewry."
     }
 ];
 

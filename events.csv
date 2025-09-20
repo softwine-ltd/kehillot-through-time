@@ -1,6 +1,7 @@
 ellipse_center_long,ellipse_center_lat,radii_1,radii_2,tilt_deg,color,fillColor,fillOpacity,year_start,year_end,description_eng,description_heb,source,type
 35.2137,31.7683,120000,60000,30,#e67e22,#f39c12,0.18,-586,-516,Babylonian administrative zone around Jerusalem during exile period,אזור מנהלי בבלי סביב ירושלים בתקופת הגלות,https://en.wikipedia.org/wiki/Babylonian_exile,1
 29.9187,31.2001,60000,40000,20,#c0392b,#e74c3c,0.15,38,38,Alexandria pogrom against the Jewish community,פוגרום אלכסנדריה נגד הקהילה היהודית,https://en.wikipedia.org/wiki/Alexandria_in_Antiquity#Jewish_history,9
+12.2881,41.7325,40000,25000,0,#27ae60,#2ecc71,0.20,100,100,Oldest known synagogue in Western Europe established in Ostia (port of Rome),בית הכנסת העתיק ביותר במערב אירופה נוסד באוסטיה (נמל רומא),https://www.jewishvirtuallibrary.org/timeline-of-jewish-history-in-italy,1
 39.6142,24.4672,40000,25000,0,#c0392b,#e74c3c,0.15,622,627,Ethnic cleansing of Jews from Mecca and Medina,ניקוי אתני של יהודים ממכה ומדינה,https://en.wikipedia.org/wiki/Banu_Qurayza,9
 39.6142,24.4672,40000,25000,0,#c0392b,#e74c3c,0.15,622,634,Extermination of the 14 Arabian Jewish tribes,השמדת 14 השבטים היהודיים הערביים,https://en.wikipedia.org/wiki/Banu_Qurayza,9
 39.6142,24.4672,40000,25000,0,#c0392b,#e74c3c,0.15,627,627,Massacre of Banu Qurayza in Medina,טבח בני קוריצה במדינה,https://en.wikipedia.org/wiki/Banu_Qurayza,9
