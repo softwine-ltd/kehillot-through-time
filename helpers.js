@@ -45,7 +45,7 @@ const historicalArrows = [
         midLat: 45,
         midLon: 5,
         yearStart: 1492,
-        yearEnd: 1600,
+        yearEnd: 1500,
         titleEn: "Spanish Expulsion to Central Europe",
         titleHe: "גירוש ספרד למרכז אירופה",
         color: expulsion_color,
@@ -59,7 +59,7 @@ const historicalArrows = [
         midLat: 28,
         midLon: -13,
         yearStart: 1492,
-        yearEnd: 1600,
+        yearEnd: 1500,
         titleEn: "Spanish Expulsion to North Africa",
         titleHe: "גירוש ספרד לצפון אפריקה",
         color: expulsion_color,
@@ -3264,9 +3264,11 @@ function updateArrows(year) {
     currentArrows = [];
 
     // Filter arrows based on the current year
-    const relevantArrows = historicalArrows.filter(arrow => 
-        year >= arrow.yearStart && year <= arrow.yearEnd
-    );
+    const relevantArrows = historicalArrows.filter(arrow => {
+        const isInRange = year >= arrow.yearStart && year <= arrow.yearEnd;
+        const isSingleYearEvent = arrow.yearStart === arrow.yearEnd && year === arrow.yearEnd + 1;
+        return isInRange || isSingleYearEvent;
+    });
 
     // Add new arrows
     relevantArrows.forEach(arrowData => {
@@ -3356,7 +3358,9 @@ async function processEllipseEvents(year) {
         for (let i = 0; i < events.length; i++) {
             const ev = events[i];
             if (ev.yearStart > year) break;
-            if (ev.yearStart <= year && (ev.yearEnd === undefined || ev.yearEnd >= year)) {
+            const isInRange = ev.yearStart <= year && (ev.yearEnd === undefined || ev.yearEnd >= year);
+            const isSingleYearEvent = ev.yearStart === ev.yearEnd && year === ev.yearEnd + 1;
+            if (isInRange || isSingleYearEvent) {
                 relevant.push(ev);
             }
         }
@@ -3412,7 +3416,9 @@ async function processPolygonEvents(year) {
         for (let i = 0; i < events.length; i++) {
             const ev = events[i];
             if (ev.yearStart > year) break;
-            if (ev.yearStart <= year && (ev.yearEnd === undefined || ev.yearEnd >= year)) {
+            const isInRange = ev.yearStart <= year && (ev.yearEnd === undefined || ev.yearEnd >= year);
+            const isSingleYearEvent = ev.yearStart === ev.yearEnd && year === ev.yearEnd + 1;
+            if (isInRange || isSingleYearEvent) {
                 relevant.push(ev);
             }
         }
