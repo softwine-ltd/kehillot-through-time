@@ -1,0 +1,20 @@
+Search the web for information about the town Saratoga Springs, which is in the USA,
+and its location is 43.0831N , 73.7847W.
+Look for information about the historical existence of Jews in this city, and more specifically,
+try to find information about the approximate first year when Jews lived in the city, and number of jews.
+In addition to searching the English Wikipedia, the Hebrew Wikipedia, try also around the net in various Jewish-History and local-history sites.
+Some relevant information might be found in pdf files.
+Provide the following information as a comma separated line with the following information:
+First line:
+1. country
+2. Town name
+3. Longitude
+4. Latitude
+5. First year of Jews in the city
+7. link to the web page or document from which the data in (5) was taken.
+
+Separate the first line from the rest of the text with '********'
+Next lines:
+A table showing the Estimated number of jews in the town as a function of year (if such an estimation exist), and link(s) to the web page(s) or document(s) from which the data was taken.
+
+Finally, Notes, if applicable.
