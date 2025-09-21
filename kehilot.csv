@@ -425,7 +425,18 @@ Brazil,Curitiba,-49.2733,-25.4284,1950,1950,2023,40,1200,,,,,קוריטיבה,ק
 Brazil,Belo Horizonte,-43.9345,-19.9167,1960,1960,2023,30,1000,,,,,בלו הוריזונטה,בלו הוריזונטה,Belo Horizonte,Belo Horizonte,https://www.jewishvirtuallibrary.org/belo-horizonte-brazil,Jewish community established in 1960s
 Chile,Valparaíso,-71.6127,-33.0472,1930,1930,2023,20,500,,,,,ולפראיסו,ולפראיסו,Valparaíso,Valparaíso,https://www.jewishvirtuallibrary.org/valparaiso-chile,Jewish community established in 1930s
 Morocco,Casablanca,-7.5898,33.5731,1900,1900,2023,20000,2500,,,,,קזבלנקה,,Casablanca,Casablanca,https://www.jewishvirtuallibrary.org/casablanca-morocco,Largest Jewish community in Morocco - established in 1900s
-Morocco,Fez,-5.0000,34.0331,1000,1000,2023,15000,1500,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco,Ancient Jewish community - established in 1000s
+Morocco,Fez,-5.0000,34.0331,789,789,978,1000,15000,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco-jewish-history-tour,Early Jewish settlement - Idriss II admits Jews from Andalusia
+Morocco,Fez,-5.0000,34.0331,789,979,1200,0,5000,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco-jewish-history-tour,Golden age - yeshivot attract scholars and poets
+Morocco,Fez,-5.0000,34.0331,789,1200,1400,5000,3000,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco-jewish-history-tour,Almoravid/Almohad invasions - Maimonides lives in Fez (1160-1165)
+Morocco,Fez,-5.0000,34.0331,789,1400,1500,3000,2000,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco-jewish-history-tour,Mellah established (1438) - 1465 massacre reduces community
+Morocco,Fez,-5.0000,34.0331,789,1500,1700,2000,8000,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco-jewish-history-tour,Spanish exiles arrive (1492) - cultural flourishing
+Morocco,Fez,-5.0000,34.0331,789,1926,1930,7553,7800,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco-jewish-history-tour,Community stability - internal conflicts
+Morocco,Fez,-5.0000,34.0331,789,1931,1935,7820,10000,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco-jewish-history-tour,1790 expulsion and 1792 return - community diminished
+Morocco,Fez,-5.0000,34.0331,789,1936,1950,10496,12000,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco-jewish-history-tour,French Protectorate - peak population (1947)
+Morocco,Fez,-5.0000,34.0331,789,1951,1959,12648,9000,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco-jewish-history-tour,French Protectorate - peak population (1947)
+Morocco,Fez,-5.0000,34.0331,789,1960,1970,8857,5000,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco-jewish-history-tour,Mass emigration to Israel and elsewhere
+Morocco,Fez,-5.0000,34.0331,789,1970,1990,5000,500,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco-jewish-history-tour,Continued emigration - community decline
+Morocco,Fez,-5.0000,34.0331,789,1990,2023,500,150,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco-jewish-history-tour,Modern period - small elderly community remains
 Morocco,Marrakech,-7.9811,31.6295,1200,1200,2023,10000,1000,,,,,מרקש,,Marrakech,Marrakech,https://www.jewishvirtuallibrary.org/marrakech-morocco,Jewish community established in 1200s
 Morocco,Rabat,-6.8416,34.0209,1400,1400,2023,5000,500,,,,,רבאט,,Rabat,Rabat,https://www.jewishvirtuallibrary.org/rabat-morocco,Jewish community established in 1400s
 Morocco,Tangier,-5.8339,35.7595,1500,1500,2023,8000,1000,,,,,טנג'יר,,Tangier,Tangier,https://www.jewishvirtuallibrary.org/tangier-morocco,Jewish community established in 1500s
@@ -1523,7 +1534,15 @@ Germany,Phaley,,,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.c
 Italy,Piemonte,,,1400,1400,1942,30,30,,,,,פיימונטה,,,,https://he.wikipedia.org/wiki/%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%A4%D7%99%D7%99%D7%9E%D7%95%D7%A0%D7%98%D7%94,
 Czech,Pilsen (Plzeň),13.3775249,49.7477415,0,,1942,30,30,,,,,פלזן,,,,https://www.jewishvirtuallibrary.org/pilsen,
 Belarus,Pinsk,26.06726,52.12153,1410,1410,1942,30,30,,,,,פינסק,,,,https://he.wikipedia.org/wiki/%D7%A4%D7%99%D7%A0%D7%A1%D7%A7,
-Poland,Piotrków Trybunalski,,,0,,1942,30,30,,,,,פיוטרקוב טריבונלסקי,,,,https://he.wikipedia.org/wiki/%D7%A4%D7%99%D7%95%D7%98%D7%A8%D7%A7%D7%95%D7%91_%D7%98%D7%A8%D7%99%D7%91%D7%95%D7%A0%D7%9C%D7%A1%D7%A7%D7%99,
+Poland,Piotrków Trybunalski,19.7030,51.4054,1400,1400,1500,100,300,,,,,פיוטרקוב טריבונלסקי,,Piotrków Trybunalski,Piotrków Trybunalski,https://www.crarg.org/jewish-genealogy/piotrkow-trybunalski-poland.php,Early Jewish settlement - community begins to form
+Poland,Piotrków Trybunalski,19.7030,51.4054,1400,1500,1600,300,800,,,,,פיוטרקוב טריבונלסקי,,Piotrków Trybunalski,Piotrków Trybunalski,https://www.crarg.org/jewish-genealogy/piotrkow-trybunalski-poland.php,Community growth - important regional center
+Poland,Piotrków Trybunalski,19.7030,51.4054,1400,1600,1800,800,2000,,,,,פיוטרקוב טריבונלסקי,,Piotrków Trybunalski,Piotrków Trybunalski,https://www.crarg.org/jewish-genealogy/piotrkow-trybunalski-poland.php,Continued development - thriving Jewish community
+Poland,Piotrków Trybunalski,19.7030,51.4054,1400,1800,1900,2000,5000,,,,,פיוטרקוב טריבונלסקי,,Piotrków Trybunalski,Piotrków Trybunalski,https://www.crarg.org/jewish-genealogy/piotrkow-trybunalski-poland.php,Industrial growth - population expands significantly
+Poland,Piotrków Trybunalski,19.7030,51.4054,1400,1900,1920,5000,12000,,,,,פיוטרקוב טריבונלסקי,,Piotrków Trybunalski,Piotrków Trybunalski,https://www.crarg.org/jewish-genealogy/piotrkow-trybunalski-poland.php,Pre-war growth - major Jewish center
+Poland,Piotrków Trybunalski,19.7030,51.4054,1400,1920,1939,12000,20000,,,,,פיוטרקוב טריבונלסקי,,Piotrków Trybunalski,Piotrków Trybunalski,https://www.crarg.org/jewish-genealogy/piotrkow-trybunalski-poland.php,Peak population - over 20,000 Jews before Holocaust
+Poland,Piotrków Trybunalski,19.7030,51.4054,1400,1939,1942,20000,3000,,,,,פיוטרקוב טריבונלסקי,,Piotrków Trybunalski,Piotrków Trybunalski,https://www.crarg.org/jewish-genealogy/piotrkow-trybunalski-poland.php,German occupation - ghetto established, mass deportations
+Poland,Piotrków Trybunalski,19.7030,51.4054,1400,1942,1945,3000,0,,,,,פיוטרקוב טריבונלסקי,,Piotrków Trybunalski,Piotrków Trybunalski,https://www.crarg.org/jewish-genealogy/piotrkow-trybunalski-poland.php,Holocaust devastation - community destroyed
+Poland,Piotrków Trybunalski,19.7030,51.4054,1400,1945,2023,0,0,,,,,פיוטרקוב טריבונלסקי,,Piotrków Trybunalski,Piotrków Trybunalski,https://www.crarg.org/jewish-genealogy/piotrkow-trybunalski-poland.php,Post-war period - no Jewish population remains
 France,Plancy,,,0,,1942,30,30,,,,,פלאנסי,,,,"Aube - jewish heritage, history, synagogues, museums, areas and sites to visit (jguideeurope.org)",
 Bulgaria,Pleven,24.6067,43.417,681,681,1942,30,30,,,,,יהדות פלבן,,,,https://he.wikipedia.org/wiki/%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%A4%D7%9C%D7%91%D7%9F,
 Poland,Plock,19.690317,52.520284,1237,1237,1942,30,30,,,,,פלוצק,,,,https://sztetl.org.pl/en/towns/p/414-plock/99-history/137854-history-of-community,
@@ -1812,6 +1831,265 @@ Poland,Warsaw,21.0122287,52.2296756,1349,1944,1942,30,30,,,,,יהדות וואר
 Poland,Warsaw,21.0122287,52.2296756,1349,1967,1942,30,30,,,,,יהדות ווארשה,,,,Liberation - few survivors remain,
 Poland,Warsaw,21.0122287,52.2296756,19134968,1988,1942,30,30,,,,,יהדות ווארשה,,,,Anti-Semitic campaign - Jewish emigration,
 Poland,Warsaw,21.0122287,52.2296756,1349,1989,1942,30,30,,,,,יהדות ווארשה,,,,Fall of communism - Jewish revival begins,
+Poland,Kielce,20.6286,50.8661,1819,1819,1845,100,500,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,First Jewish settlement - Jews begin settling in Kielce
+Poland,Kielce,20.6286,50.8661,1819,1845,1846,500,40,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,Jews expelled from Kielce (1845) - ban officially lifted in 1863
+Poland,Kielce,20.6286,50.8661,1819,1846,1862,50,700,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,Jews expelled from Kielce (1845) - ban officially lifted in 1863
+Poland,Kielce,20.6286,50.8661,1819,1863,1890,800,6000,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,Post-ban period - Jewish population grows to over 6,000
+Poland,Kielce,20.6286,50.8661,1819,1890,1910,6000,11000,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,Peak growth - over 11,000 Jews (1/3 of total population)
+Poland,Kielce,20.6286,50.8661,1819,1910,1921,11000,15500,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,Continued expansion - well over 15,500 Jews by 1921
+Poland,Kielce,20.6286,50.8661,1819,1921,1931,15500,18000,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,Thriving community - over 18,000 Jews with hundreds of workshops
+Poland,Kielce,20.6286,50.8661,1819,1931,1939,18000,25000,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,Pre-war peak - over 25,000 Jews including refugees from Krakow and Vienna
+Poland,Kielce,20.6286,50.8661,1819,1939,1942,25000,1600,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,German occupation - two ghettos established, mass deportations to Treblinka
+Poland,Kielce,20.6286,50.8661,1819,1942,1943,1600,0,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,Final liquidation - remaining Jews in small ghetto murdered
+Poland,Kielce,20.6286,50.8661,1819,1943,1946,0,200,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,Post-war return - small number of survivors return
+Poland,Kielce,20.6286,50.8661,1819,1946,2023,200,0,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,Kielce pogrom (July 4, 1946) - survivors flee, community destroyed
+Poland,Częstochowa,19.1240,50.7967,1700,1700,1800,500,1000,,,,,צ'נסטוחובה,,Częstochowa,Częstochowa,https://www.crarg.org/jewish-genealogy/czestochowa-poland.php,Early Jewish settlement - community begins to form
+Poland,Częstochowa,19.1240,50.7967,1700,1800,1900,1000,5000,,,,,צ'נסטוחובה,,Częstochowa,Częstochowa,https://www.crarg.org/jewish-genealogy/czestochowa-poland.php,Industrial development - Jewish population grows
+Poland,Częstochowa,19.1240,50.7967,1700,1900,1920,5000,15000,,,,,צ'נסטוחובה,,Częstochowa,Częstochowa,https://www.crarg.org/jewish-genealogy/czestochowa-poland.php,Pre-war growth - major Jewish center
+Poland,Częstochowa,19.1240,50.7967,1700,1920,1939,15000,30000,,,,,צ'נסטוחובה,,Częstochowa,Częstochowa,https://www.crarg.org/jewish-genealogy/czestochowa-poland.php,Peak population - over 30,000 Jews before Holocaust
+Poland,Częstochowa,19.1240,50.7967,1700,1939,1942,30000,5000,,,,,צ'נסטוחובה,,Częstochowa,Częstochowa,https://www.crarg.org/jewish-genealogy/czestochowa-poland.php,German occupation - ghetto established, mass deportations
+Poland,Częstochowa,19.1240,50.7967,1700,1942,1945,5000,0,,,,,צ'נסטוחובה,,Częstochowa,Częstochowa,https://www.crarg.org/jewish-genealogy/czestochowa-poland.php,Holocaust devastation - community destroyed
+Poland,Częstochowa,19.1240,50.7967,1700,1945,2023,0,0,,,,,צ'נסטוחובה,,Częstochowa,Częstochowa,https://www.crarg.org/jewish-genealogy/czestochowa-poland.php,Post-war period - no Jewish population remains
+Poland,Radomsko,19.7030,51.0678,1500,1500,1600,200,500,,,,,רדומסקו,,Radomsko,Radomsko,https://www.crarg.org/jewish-genealogy/radomsko-poland.php,Early Jewish settlement - community begins to form
+Poland,Radomsko,19.7030,51.0678,1500,1600,1800,500,1500,,,,,רדומסקו,,Radomsko,Radomsko,https://www.crarg.org/jewish-genealogy/radomsko-poland.php,Community growth - regional center
+Poland,Radomsko,19.7030,51.0678,1500,1800,1900,1500,4000,,,,,רדומסקו,,Radomsko,Radomsko,https://www.crarg.org/jewish-genealogy/radomsko-poland.php,Industrial development - population expands
+Poland,Radomsko,19.7030,51.0678,1500,1900,1920,4000,8000,,,,,רדומסקו,,Radomsko,Radomsko,https://www.crarg.org/jewish-genealogy/radomsko-poland.php,Pre-war growth - major Jewish center
+Poland,Radomsko,19.7030,51.0678,1500,1920,1939,8000,12000,,,,,רדומסקו,,Radomsko,Radomsko,https://www.crarg.org/jewish-genealogy/radomsko-poland.php,Peak population - over 12,000 Jews before Holocaust
+Poland,Radomsko,19.7030,51.0678,1500,1939,1942,12000,2000,,,,,רדומסקו,,Radomsko,Radomsko,https://www.crarg.org/jewish-genealogy/radomsko-poland.php,German occupation - ghetto established, mass deportations
+Poland,Radomsko,19.7030,51.0678,1500,1942,1945,2000,0,,,,,רדומסקו,,Radomsko,Radomsko,https://www.crarg.org/jewish-genealogy/radomsko-poland.php,Holocaust devastation - community destroyed
+Poland,Radomsko,19.7030,51.0678,1500,1945,2023,0,0,,,,,רדומסקו,,Radomsko,Radomsko,https://www.crarg.org/jewish-genealogy/radomsko-poland.php,Post-war period - no Jewish population remains
+Poland,Kłobuck,18.9333,50.9000,1600,1600,1700,100,300,,,,,קלובוצק,,Kłobuck,Kłobuck,https://www.crarg.org/jewish-genealogy/klobuck-poland.php,Early Jewish settlement - community begins to form
+Poland,Kłobuck,18.9333,50.9000,1600,1700,1800,300,800,,,,,קלובוצק,,Kłobuck,Kłobuck,https://www.crarg.org/jewish-genealogy/klobuck-poland.php,Community growth - regional development
+Poland,Kłobuck,18.9333,50.9000,1600,1800,1900,800,2000,,,,,קלובוצק,,Kłobuck,Kłobuck,https://www.crarg.org/jewish-genealogy/klobuck-poland.php,Industrial growth - population expands
+Poland,Kłobuck,18.9333,50.9000,1600,1900,1920,2000,4000,,,,,קלובוצק,,Kłobuck,Kłobuck,https://www.crarg.org/jewish-genealogy/klobuck-poland.php,Pre-war growth - thriving community
+Poland,Kłobuck,18.9333,50.9000,1600,1920,1939,4000,6000,,,,,קלובוצק,,Kłobuck,Kłobuck,https://www.crarg.org/jewish-genealogy/klobuck-poland.php,Peak population - over 6,000 Jews before Holocaust
+Poland,Kłobuck,18.9333,50.9000,1600,1939,1942,6000,1000,,,,,קלובוצק,,Kłobuck,Kłobuck,https://www.crarg.org/jewish-genealogy/klobuck-poland.php,German occupation - ghetto established, mass deportations
+Poland,Kłobuck,18.9333,50.9000,1600,1942,1945,1000,0,,,,,קלובוצק,,Kłobuck,Kłobuck,https://www.crarg.org/jewish-genealogy/klobuck-poland.php,Holocaust devastation - community destroyed
+Poland,Kłobuck,18.9333,50.9000,1600,1945,2023,0,0,,,,,קלובוצק,,Kłobuck,Kłobuck,https://www.crarg.org/jewish-genealogy/klobuck-poland.php,Post-war period - no Jewish population remains
+Poland,Końskie,20.4167,51.2000,1600,1600,1700,100,300,,,,,קונסקיה,,Końskie,Końskie,https://www.crarg.org/jewish-genealogy/konskie-poland.php,Early Jewish settlement - community begins to form
+Poland,Końskie,20.4167,51.2000,1600,1700,1800,300,800,,,,,קונסקיה,,Końskie,Końskie,https://www.crarg.org/jewish-genealogy/konskie-poland.php,Community growth - regional development
+Poland,Końskie,20.4167,51.2000,1600,1800,1900,800,2000,,,,,קונסקיה,,Końskie,Końskie,https://www.crarg.org/jewish-genealogy/konskie-poland.php,Industrial growth - population expands
+Poland,Końskie,20.4167,51.2000,1600,1900,1920,2000,4000,,,,,קונסקיה,,Końskie,Końskie,https://www.crarg.org/jewish-genealogy/konskie-poland.php,Pre-war growth - thriving community
+Poland,Końskie,20.4167,51.2000,1600,1920,1939,4000,6000,,,,,קונסקיה,,Końskie,Końskie,https://www.crarg.org/jewish-genealogy/konskie-poland.php,Peak population - over 6,000 Jews before Holocaust
+Poland,Końskie,20.4167,51.2000,1600,1939,1942,6000,1000,,,,,קונסקיה,,Końskie,Końskie,https://www.crarg.org/jewish-genealogy/konskie-poland.php,German occupation - ghetto established, mass deportations
+Poland,Końskie,20.4167,51.2000,1600,1942,1945,1000,0,,,,,קונסקיה,,Końskie,Końskie,https://www.crarg.org/jewish-genealogy/konskie-poland.php,Holocaust devastation - community destroyed
+Poland,Końskie,20.4167,51.2000,1600,1945,2023,0,0,,,,,קונסקיה,,Końskie,Końskie,https://www.crarg.org/jewish-genealogy/konskie-poland.php,Post-war period - no Jewish population remains
+Poland,Wieluń,18.5696,51.2210,1500,1500,1600,200,500,,,,,ויילון,,Wieluń,Wieluń,https://www.crarg.org/jewish-genealogy/wielun-poland.php,Early Jewish settlement - community begins to form
+Poland,Wieluń,18.5696,51.2210,1500,1600,1800,500,1500,,,,,ויילון,,Wieluń,Wieluń,https://www.crarg.org/jewish-genealogy/wielun-poland.php,Community growth - regional center
+Poland,Wieluń,18.5696,51.2210,1500,1800,1900,1500,4000,,,,,ויילון,,Wieluń,Wieluń,https://www.crarg.org/jewish-genealogy/wielun-poland.php,Industrial development - population expands
+Poland,Wieluń,18.5696,51.2210,1500,1900,1920,4000,8000,,,,,ויילון,,Wieluń,Wieluń,https://www.crarg.org/jewish-genealogy/wielun-poland.php,Pre-war growth - major Jewish center
+Poland,Wieluń,18.5696,51.2210,1500,1920,1939,8000,12000,,,,,ויילון,,Wieluń,Wieluń,https://www.crarg.org/jewish-genealogy/wielun-poland.php,Peak population - over 12,000 Jews before Holocaust
+Poland,Wieluń,18.5696,51.2210,1500,1939,1942,12000,2000,,,,,ויילון,,Wieluń,Wieluń,https://www.crarg.org/jewish-genealogy/wielun-poland.php,German occupation - ghetto established, mass deportations
+Poland,Wieluń,18.5696,51.2210,1500,1942,1945,2000,0,,,,,ויילון,,Wieluń,Wieluń,https://www.crarg.org/jewish-genealogy/wielun-poland.php,Holocaust devastation - community destroyed
+Poland,Wieluń,18.5696,51.2210,1500,1945,2023,0,0,,,,,ויילון,,Wieluń,Wieluń,https://www.crarg.org/jewish-genealogy/wielun-poland.php,Post-war period - no Jewish population remains
+Poland,Włoszczowa,19.9667,50.8500,1600,1600,1700,100,300,,,,,וולשצ'ובה,,Włoszczowa,Włoszczowa,https://www.crarg.org/jewish-genealogy/wloszczowa-poland.php,Early Jewish settlement - community begins to form
+Poland,Włoszczowa,19.9667,50.8500,1600,1700,1800,300,800,,,,,וולשצ'ובה,,Włoszczowa,Włoszczowa,https://www.crarg.org/jewish-genealogy/wloszczowa-poland.php,Community growth - regional development
+Poland,Włoszczowa,19.9667,50.8500,1600,1800,1900,800,2000,,,,,וולשצ'ובה,,Włoszczowa,Włoszczowa,https://www.crarg.org/jewish-genealogy/wloszczowa-poland.php,Industrial growth - population expands
+Poland,Włoszczowa,19.9667,50.8500,1600,1900,1920,2000,4000,,,,,וולשצ'ובה,,Włoszczowa,Włoszczowa,https://www.crarg.org/jewish-genealogy/wloszczowa-poland.php,Pre-war growth - thriving community
+Poland,Włoszczowa,19.9667,50.8500,1600,1920,1939,4000,6000,,,,,וולשצ'ובה,,Włoszczowa,Włoszczowa,https://www.crarg.org/jewish-genealogy/wloszczowa-poland.php,Peak population - over 6,000 Jews before Holocaust
+Poland,Włoszczowa,19.9667,50.8500,1600,1939,1942,6000,1000,,,,,וולשצ'ובה,,Włoszczowa,Włoszczowa,https://www.crarg.org/jewish-genealogy/wloszczowa-poland.php,German occupation - ghetto established, mass deportations
+Poland,Włoszczowa,19.9667,50.8500,1600,1942,1945,1000,0,,,,,וולשצ'ובה,,Włoszczowa,Włoszczowa,https://www.crarg.org/jewish-genealogy/wloszczowa-poland.php,Holocaust devastation - community destroyed
+Poland,Włoszczowa,19.9667,50.8500,1600,1945,2023,0,0,,,,,וולשצ'ובה,,Włoszczowa,Włoszczowa,https://www.crarg.org/jewish-genealogy/wloszczowa-poland.php,Post-war period - no Jewish population remains
+Poland,Wolbrom,19.7667,50.3833,1600,1600,1700,100,300,,,,,וולברום,,Wolbrom,Wolbrom,https://www.crarg.org/jewish-genealogy/wolbrom-poland.php,Early Jewish settlement - community begins to form
+Poland,Wolbrom,19.7667,50.3833,1600,1700,1800,300,800,,,,,וולברום,,Wolbrom,Wolbrom,https://www.crarg.org/jewish-genealogy/wolbrom-poland.php,Community growth - regional development
+Poland,Wolbrom,19.7667,50.3833,1600,1800,1900,800,2000,,,,,וולברום,,Wolbrom,Wolbrom,https://www.crarg.org/jewish-genealogy/wolbrom-poland.php,Industrial growth - population expands
+Poland,Wolbrom,19.7667,50.3833,1600,1900,1920,2000,4000,,,,,וולברום,,Wolbrom,Wolbrom,https://www.crarg.org/jewish-genealogy/wolbrom-poland.php,Pre-war growth - thriving community
+Poland,Wolbrom,19.7667,50.3833,1600,1920,1939,4000,6000,,,,,וולברום,,Wolbrom,Wolbrom,https://www.crarg.org/jewish-genealogy/wolbrom-poland.php,Peak population - over 6,000 Jews before Holocaust
+Poland,Wolbrom,19.7667,50.3833,1600,1939,1942,6000,1000,,,,,וולברום,,Wolbrom,Wolbrom,https://www.crarg.org/jewish-genealogy/wolbrom-poland.php,German occupation - ghetto established, mass deportations
+Poland,Wolbrom,19.7667,50.3833,1600,1942,1945,1000,0,,,,,וולברום,,Wolbrom,Wolbrom,https://www.crarg.org/jewish-genealogy/wolbrom-poland.php,Holocaust devastation - community destroyed
+Poland,Wolbrom,19.7667,50.3833,1600,1945,2023,0,0,,,,,וולברום,,Wolbrom,Wolbrom,https://www.crarg.org/jewish-genealogy/wolbrom-poland.php,Post-war period - no Jewish population remains
+Poland,Żarki,19.3667,50.6167,1600,1600,1700,100,300,,,,,ז'רקי,,Żarki,Żarki,https://www.crarg.org/jewish-genealogy/zarki-poland.php,Early Jewish settlement - community begins to form
+Poland,Żarki,19.3667,50.6167,1600,1700,1800,300,800,,,,,ז'רקי,,Żarki,Żarki,https://www.crarg.org/jewish-genealogy/zarki-poland.php,Community growth - regional development
+Poland,Żarki,19.3667,50.6167,1600,1800,1900,800,2000,,,,,ז'רקי,,Żarki,Żarki,https://www.crarg.org/jewish-genealogy/zarki-poland.php,Industrial growth - population expands
+Poland,Żarki,19.3667,50.6167,1600,1900,1920,2000,4000,,,,,ז'רקי,,Żarki,Żarki,https://www.crarg.org/jewish-genealogy/zarki-poland.php,Pre-war growth - thriving community
+Poland,Żarki,19.3667,50.6167,1600,1920,1939,4000,6000,,,,,ז'רקי,,Żarki,Żarki,https://www.crarg.org/jewish-genealogy/zarki-poland.php,Peak population - over 6,000 Jews before Holocaust
+Poland,Żarki,19.3667,50.6167,1600,1939,1942,6000,1000,,,,,ז'רקי,,Żarki,Żarki,https://www.crarg.org/jewish-genealogy/zarki-poland.php,German occupation - ghetto established, mass deportations
+Poland,Żarki,19.3667,50.6167,1600,1942,1945,1000,0,,,,,ז'רקי,,Żarki,Żarki,https://www.crarg.org/jewish-genealogy/zarki-poland.php,Holocaust devastation - community destroyed
+Poland,Żarki,19.3667,50.6167,1600,1945,2023,0,0,,,,,ז'רקי,,Żarki,Żarki,https://www.crarg.org/jewish-genealogy/zarki-poland.php,Post-war period - no Jewish population remains
+Poland,Działoszyn,18.8667,51.1167,1600,1600,1700,50,150,,,,,דזיאלושין,,Działoszyn,Działoszyn,https://www.crarg.org/jewish-genealogy/dzialoszyn-poland.php,Early Jewish settlement - community begins to form
+Poland,Działoszyn,18.8667,51.1167,1600,1700,1800,150,400,,,,,דזיאלושין,,Działoszyn,Działoszyn,https://www.crarg.org/jewish-genealogy/dzialoszyn-poland.php,Community growth - regional development
+Poland,Działoszyn,18.8667,51.1167,1600,1800,1900,400,1000,,,,,דזיאלושין,,Działoszyn,Działoszyn,https://www.crarg.org/jewish-genealogy/dzialoszyn-poland.php,Industrial growth - population expands
+Poland,Działoszyn,18.8667,51.1167,1600,1900,1920,1000,2000,,,,,דזיאלושין,,Działoszyn,Działoszyn,https://www.crarg.org/jewish-genealogy/dzialoszyn-poland.php,Pre-war growth - thriving community
+Poland,Działoszyn,18.8667,51.1167,1600,1920,1939,2000,3000,,,,,דזיאלושין,,Działoszyn,Działoszyn,https://www.crarg.org/jewish-genealogy/dzialoszyn-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Działoszyn,18.8667,51.1167,1600,1939,1942,3000,500,,,,,דזיאלושין,,Działoszyn,Działoszyn,https://www.crarg.org/jewish-genealogy/dzialoszyn-poland.php,German occupation - ghetto established, mass deportations
+Poland,Działoszyn,18.8667,51.1167,1600,1942,1945,500,0,,,,,דזיאלושין,,Działoszyn,Działoszyn,https://www.crarg.org/jewish-genealogy/dzialoszyn-poland.php,Holocaust devastation - community destroyed
+Poland,Działoszyn,18.8667,51.1167,1600,1945,2023,0,0,,,,,דזיאלושין,,Działoszyn,Działoszyn,https://www.crarg.org/jewish-genealogy/dzialoszyn-poland.php,Post-war period - no Jewish population remains
+Poland,Gowarczów,20.4333,51.2833,1600,1600,1700,50,150,,,,,גובארצ'וב,,Gowarczów,Gowarczów,https://www.crarg.org/jewish-genealogy/gowarczow-poland.php,Early Jewish settlement - community begins to form
+Poland,Gowarczów,20.4333,51.2833,1600,1700,1800,150,400,,,,,גובארצ'וב,,Gowarczów,Gowarczów,https://www.crarg.org/jewish-genealogy/gowarczow-poland.php,Community growth - regional development
+Poland,Gowarczów,20.4333,51.2833,1600,1800,1900,400,1000,,,,,גובארצ'וב,,Gowarczów,Gowarczów,https://www.crarg.org/jewish-genealogy/gowarczow-poland.php,Industrial growth - population expands
+Poland,Gowarczów,20.4333,51.2833,1600,1900,1920,1000,2000,,,,,גובארצ'וב,,Gowarczów,Gowarczów,https://www.crarg.org/jewish-genealogy/gowarczow-poland.php,Pre-war growth - thriving community
+Poland,Gowarczów,20.4333,51.2833,1600,1920,1939,2000,3000,,,,,גובארצ'וב,,Gowarczów,Gowarczów,https://www.crarg.org/jewish-genealogy/gowarczow-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Gowarczów,20.4333,51.2833,1600,1939,1942,3000,500,,,,,גובארצ'וב,,Gowarczów,Gowarczów,https://www.crarg.org/jewish-genealogy/gowarczow-poland.php,German occupation - ghetto established, mass deportations
+Poland,Gowarczów,20.4333,51.2833,1600,1942,1945,500,0,,,,,גובארצ'וב,,Gowarczów,Gowarczów,https://www.crarg.org/jewish-genealogy/gowarczow-poland.php,Holocaust devastation - community destroyed
+Poland,Gowarczów,20.4333,51.2833,1600,1945,2023,0,0,,,,,גובארצ'וב,,Gowarczów,Gowarczów,https://www.crarg.org/jewish-genealogy/gowarczow-poland.php,Post-war period - no Jewish population remains
+Poland,Janów,19.4167,50.7167,1600,1600,1700,50,150,,,,,יאנוב,,Janów,Janów,https://www.crarg.org/jewish-genealogy/janow-poland.php,Early Jewish settlement - community begins to form
+Poland,Janów,19.4167,50.7167,1600,1700,1800,150,400,,,,,יאנוב,,Janów,Janów,https://www.crarg.org/jewish-genealogy/janow-poland.php,Community growth - regional development
+Poland,Janów,19.4167,50.7167,1600,1800,1900,400,1000,,,,,יאנוב,,Janów,Janów,https://www.crarg.org/jewish-genealogy/janow-poland.php,Industrial growth - population expands
+Poland,Janów,19.4167,50.7167,1600,1900,1920,1000,2000,,,,,יאנוב,,Janów,Janów,https://www.crarg.org/jewish-genealogy/janow-poland.php,Pre-war growth - thriving community
+Poland,Janów,19.4167,50.7167,1600,1920,1939,2000,3000,,,,,יאנוב,,Janów,Janów,https://www.crarg.org/jewish-genealogy/janow-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Janów,19.4167,50.7167,1600,1939,1942,3000,500,,,,,יאנוב,,Janów,Janów,https://www.crarg.org/jewish-genealogy/janow-poland.php,German occupation - ghetto established, mass deportations
+Poland,Janów,19.4167,50.7167,1600,1942,1945,500,0,,,,,יאנוב,,Janów,Janów,https://www.crarg.org/jewish-genealogy/janow-poland.php,Holocaust devastation - community destroyed
+Poland,Janów,19.4167,50.7167,1600,1945,2023,0,0,,,,,יאנוב,,Janów,Janów,https://www.crarg.org/jewish-genealogy/janow-poland.php,Post-war period - no Jewish population remains
+Poland,Kamieńsk,19.6167,51.2000,1600,1600,1700,50,150,,,,,קמינסק,,Kamieńsk,Kamieńsk,https://www.crarg.org/jewish-genealogy/kamiensk-poland.php,Early Jewish settlement - community begins to form
+Poland,Kamieńsk,19.6167,51.2000,1600,1700,1800,150,400,,,,,קמינסק,,Kamieńsk,Kamieńsk,https://www.crarg.org/jewish-genealogy/kamiensk-poland.php,Community growth - regional development
+Poland,Kamieńsk,19.6167,51.2000,1600,1800,1900,400,1000,,,,,קמינסק,,Kamieńsk,Kamieńsk,https://www.crarg.org/jewish-genealogy/kamiensk-poland.php,Industrial growth - population expands
+Poland,Kamieńsk,19.6167,51.2000,1600,1900,1920,1000,2000,,,,,קמינסק,,Kamieńsk,Kamieńsk,https://www.crarg.org/jewish-genealogy/kamiensk-poland.php,Pre-war growth - thriving community
+Poland,Kamieńsk,19.6167,51.2000,1600,1920,1939,2000,3000,,,,,קמינסק,,Kamieńsk,Kamieńsk,https://www.crarg.org/jewish-genealogy/kamiensk-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Kamieńsk,19.6167,51.2000,1600,1939,1942,3000,500,,,,,קמינסק,,Kamieńsk,Kamieńsk,https://www.crarg.org/jewish-genealogy/kamiensk-poland.php,German occupation - ghetto established, mass deportations
+Poland,Kamieńsk,19.6167,51.2000,1600,1942,1945,500,0,,,,,קמינסק,,Kamieńsk,Kamieńsk,https://www.crarg.org/jewish-genealogy/kamiensk-poland.php,Holocaust devastation - community destroyed
+Poland,Kamieńsk,19.6167,51.2000,1600,1945,2023,0,0,,,,,קמינסק,,Kamieńsk,Kamieńsk,https://www.crarg.org/jewish-genealogy/kamiensk-poland.php,Post-war period - no Jewish population remains
+Poland,Koniecpol,19.6833,50.7833,1600,1600,1700,50,150,,,,,קוניצפול,,Koniecpol,Koniecpol,https://www.crarg.org/jewish-genealogy/koniecpol-poland.php,Early Jewish settlement - community begins to form
+Poland,Koniecpol,19.6833,50.7833,1600,1700,1800,150,400,,,,,קוניצפול,,Koniecpol,Koniecpol,https://www.crarg.org/jewish-genealogy/koniecpol-poland.php,Community growth - regional development
+Poland,Koniecpol,19.6833,50.7833,1600,1800,1900,400,1000,,,,,קוניצפול,,Koniecpol,Koniecpol,https://www.crarg.org/jewish-genealogy/koniecpol-poland.php,Industrial growth - population expands
+Poland,Koniecpol,19.6833,50.7833,1600,1900,1920,1000,2000,,,,,קוניצפול,,Koniecpol,Koniecpol,https://www.crarg.org/jewish-genealogy/koniecpol-poland.php,Pre-war growth - thriving community
+Poland,Koniecpol,19.6833,50.7833,1600,1920,1939,2000,3000,,,,,קוניצפול,,Koniecpol,Koniecpol,https://www.crarg.org/jewish-genealogy/koniecpol-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Koniecpol,19.6833,50.7833,1600,1939,1942,3000,500,,,,,קוניצפול,,Koniecpol,Koniecpol,https://www.crarg.org/jewish-genealogy/koniecpol-poland.php,German occupation - ghetto established, mass deportations
+Poland,Koniecpol,19.6833,50.7833,1600,1942,1945,500,0,,,,,קוניצפול,,Koniecpol,Koniecpol,https://www.crarg.org/jewish-genealogy/koniecpol-poland.php,Holocaust devastation - community destroyed
+Poland,Koniecpol,19.6833,50.7833,1600,1945,2023,0,0,,,,,קוניצפול,,Koniecpol,Koniecpol,https://www.crarg.org/jewish-genealogy/koniecpol-poland.php,Post-war period - no Jewish population remains
+Poland,Kromołów,19.4333,50.4167,1600,1600,1700,50,150,,,,,קרומולוב,,Kromołów,Kromołów,https://www.crarg.org/jewish-genealogy/kromolow-poland.php,Early Jewish settlement - community begins to form
+Poland,Kromołów,19.4333,50.4167,1600,1700,1800,150,400,,,,,קרומולוב,,Kromołów,Kromołów,https://www.crarg.org/jewish-genealogy/kromolow-poland.php,Community growth - regional development
+Poland,Kromołów,19.4333,50.4167,1600,1800,1900,400,1000,,,,,קרומולוב,,Kromołów,Kromołów,https://www.crarg.org/jewish-genealogy/kromolow-poland.php,Industrial growth - population expands
+Poland,Kromołów,19.4333,50.4167,1600,1900,1920,1000,2000,,,,,קרומולוב,,Kromołów,Kromołów,https://www.crarg.org/jewish-genealogy/kromolow-poland.php,Pre-war growth - thriving community
+Poland,Kromołów,19.4333,50.4167,1600,1920,1939,2000,3000,,,,,קרומולוב,,Kromołów,Kromołów,https://www.crarg.org/jewish-genealogy/kromolow-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Kromołów,19.4333,50.4167,1600,1939,1942,3000,500,,,,,קרומולוב,,Kromołów,Kromołów,https://www.crarg.org/jewish-genealogy/kromolow-poland.php,German occupation - ghetto established, mass deportations
+Poland,Kromołów,19.4333,50.4167,1600,1942,1945,500,0,,,,,קרומולוב,,Kromołów,Kromołów,https://www.crarg.org/jewish-genealogy/kromolow-poland.php,Holocaust devastation - community destroyed
+Poland,Kromołów,19.4333,50.4167,1600,1945,2023,0,0,,,,,קרומולוב,,Kromołów,Kromołów,https://www.crarg.org/jewish-genealogy/kromolow-poland.php,Post-war period - no Jewish population remains
+Poland,Krzepice,18.7167,50.9667,1600,1600,1700,50,150,,,,,קרז'פיצה,,Krzepice,Krzepice,https://www.crarg.org/jewish-genealogy/krzepice-poland.php,Early Jewish settlement - community begins to form
+Poland,Krzepice,18.7167,50.9667,1600,1700,1800,150,400,,,,,קרז'פיצה,,Krzepice,Krzepice,https://www.crarg.org/jewish-genealogy/krzepice-poland.php,Community growth - regional development
+Poland,Krzepice,18.7167,50.9667,1600,1800,1900,400,1000,,,,,קרז'פיצה,,Krzepice,Krzepice,https://www.crarg.org/jewish-genealogy/krzepice-poland.php,Industrial growth - population expands
+Poland,Krzepice,18.7167,50.9667,1600,1900,1920,1000,2000,,,,,קרז'פיצה,,Krzepice,Krzepice,https://www.crarg.org/jewish-genealogy/krzepice-poland.php,Pre-war growth - thriving community
+Poland,Krzepice,18.7167,50.9667,1600,1920,1939,2000,3000,,,,,קרז'פיצה,,Krzepice,Krzepice,https://www.crarg.org/jewish-genealogy/krzepice-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Krzepice,18.7167,50.9667,1600,1939,1942,3000,500,,,,,קרז'פיצה,,Krzepice,Krzepice,https://www.crarg.org/jewish-genealogy/krzepice-poland.php,German occupation - ghetto established, mass deportations
+Poland,Krzepice,18.7167,50.9667,1600,1942,1945,500,0,,,,,קרז'פיצה,,Krzepice,Krzepice,https://www.crarg.org/jewish-genealogy/krzepice-poland.php,Holocaust devastation - community destroyed
+Poland,Krzepice,18.7167,50.9667,1600,1945,2023,0,0,,,,,קרז'פיצה,,Krzepice,Krzepice,https://www.crarg.org/jewish-genealogy/krzepice-poland.php,Post-war period - no Jewish population remains
+Poland,Lelów,19.6167,50.6833,1600,1600,1700,50,150,,,,,ללוב,,Lelów,Lelów,https://www.crarg.org/jewish-genealogy/lelow-poland.php,Early Jewish settlement - community begins to form
+Poland,Lelów,19.6167,50.6833,1600,1700,1800,150,400,,,,,ללוב,,Lelów,Lelów,https://www.crarg.org/jewish-genealogy/lelow-poland.php,Community growth - regional development
+Poland,Lelów,19.6167,50.6833,1600,1800,1900,400,1000,,,,,ללוב,,Lelów,Lelów,https://www.crarg.org/jewish-genealogy/lelow-poland.php,Industrial growth - population expands
+Poland,Lelów,19.6167,50.6833,1600,1900,1920,1000,2000,,,,,ללוב,,Lelów,Lelów,https://www.crarg.org/jewish-genealogy/lelow-poland.php,Pre-war growth - thriving community
+Poland,Lelów,19.6167,50.6833,1600,1920,1939,2000,3000,,,,,ללוב,,Lelów,Lelów,https://www.crarg.org/jewish-genealogy/lelow-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Lelów,19.6167,50.6833,1600,1939,1942,3000,500,,,,,ללוב,,Lelów,Lelów,https://www.crarg.org/jewish-genealogy/lelow-poland.php,German occupation - ghetto established, mass deportations
+Poland,Lelów,19.6167,50.6833,1600,1942,1945,500,0,,,,,ללוב,,Lelów,Lelów,https://www.crarg.org/jewish-genealogy/lelow-poland.php,Holocaust devastation - community destroyed
+Poland,Lelów,19.6167,50.6833,1600,1945,2023,0,0,,,,,ללוב,,Lelów,Lelów,https://www.crarg.org/jewish-genealogy/lelow-poland.php,Post-war period - no Jewish population remains
+Poland,Mstów,19.2833,50.8333,1600,1600,1700,50,150,,,,,מסטוב,,Mstów,Mstów,https://www.crarg.org/jewish-genealogy/mstow-poland.php,Early Jewish settlement - community begins to form
+Poland,Mstów,19.2833,50.8333,1600,1700,1800,150,400,,,,,מסטוב,,Mstów,Mstów,https://www.crarg.org/jewish-genealogy/mstow-poland.php,Community growth - regional development
+Poland,Mstów,19.2833,50.8333,1600,1800,1900,400,1000,,,,,מסטוב,,Mstów,Mstów,https://www.crarg.org/jewish-genealogy/mstow-poland.php,Industrial growth - population expands
+Poland,Mstów,19.2833,50.8333,1600,1900,1920,1000,2000,,,,,מסטוב,,Mstów,Mstów,https://www.crarg.org/jewish-genealogy/mstow-poland.php,Pre-war growth - thriving community
+Poland,Mstów,19.2833,50.8333,1600,1920,1939,2000,3000,,,,,מסטוב,,Mstów,Mstów,https://www.crarg.org/jewish-genealogy/mstow-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Mstów,19.2833,50.8333,1600,1939,1942,3000,500,,,,,מסטוב,,Mstów,Mstów,https://www.crarg.org/jewish-genealogy/mstow-poland.php,German occupation - ghetto established, mass deportations
+Poland,Mstów,19.2833,50.8333,1600,1942,1945,500,0,,,,,מסטוב,,Mstów,Mstów,https://www.crarg.org/jewish-genealogy/mstow-poland.php,Holocaust devastation - community destroyed
+Poland,Mstów,19.2833,50.8333,1600,1945,2023,0,0,,,,,מסטוב,,Mstów,Mstów,https://www.crarg.org/jewish-genealogy/mstow-poland.php,Post-war period - no Jewish population remains
+Poland,Nowa Brzeźnica,19.1833,50.8500,1600,1600,1700,50,150,,,,,נובה ברז'ניצה,,Nowa Brzeźnica,Nowa Brzeźnica,https://www.crarg.org/jewish-genealogy/nowa-brzeznica-poland.php,Early Jewish settlement - community begins to form
+Poland,Nowa Brzeźnica,19.1833,50.8500,1600,1700,1800,150,400,,,,,נובה ברז'ניצה,,Nowa Brzeźnica,Nowa Brzeźnica,https://www.crarg.org/jewish-genealogy/nowa-brzeznica-poland.php,Community growth - regional development
+Poland,Nowa Brzeźnica,19.1833,50.8500,1600,1800,1900,400,1000,,,,,נובה ברז'ניצה,,Nowa Brzeźnica,Nowa Brzeźnica,https://www.crarg.org/jewish-genealogy/nowa-brzeznica-poland.php,Industrial growth - population expands
+Poland,Nowa Brzeźnica,19.1833,50.8500,1600,1900,1920,1000,2000,,,,,נובה ברז'ניצה,,Nowa Brzeźnica,Nowa Brzeźnica,https://www.crarg.org/jewish-genealogy/nowa-brzeznica-poland.php,Pre-war growth - thriving community
+Poland,Nowa Brzeźnica,19.1833,50.8500,1600,1920,1939,2000,3000,,,,,נובה ברז'ניצה,,Nowa Brzeźnica,Nowa Brzeźnica,https://www.crarg.org/jewish-genealogy/nowa-brzeznica-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Nowa Brzeźnica,19.1833,50.8500,1600,1939,1942,3000,500,,,,,נובה ברז'ניצה,,Nowa Brzeźnica,Nowa Brzeźnica,https://www.crarg.org/jewish-genealogy/nowa-brzeznica-poland.php,German occupation - ghetto established, mass deportations
+Poland,Nowa Brzeźnica,19.1833,50.8500,1600,1942,1945,500,0,,,,,נובה ברז'ניצה,,Nowa Brzeźnica,Nowa Brzeźnica,https://www.crarg.org/jewish-genealogy/nowa-brzeznica-poland.php,Holocaust devastation - community destroyed
+Poland,Nowa Brzeźnica,19.1833,50.8500,1600,1945,2023,0,0,,,,,נובה ברז'ניצה,,Nowa Brzeźnica,Nowa Brzeźnica,https://www.crarg.org/jewish-genealogy/nowa-brzeznica-poland.php,Post-war period - no Jewish population remains
+Poland,Opoczno,20.2500,51.3833,1600,1600,1700,50,150,,,,,אופוצ'נו,,Opoczno,Opoczno,https://www.crarg.org/jewish-genealogy/opoczno-poland.php,Early Jewish settlement - community begins to form
+Poland,Opoczno,20.2500,51.3833,1600,1700,1800,150,400,,,,,אופוצ'נו,,Opoczno,Opoczno,https://www.crarg.org/jewish-genealogy/opoczno-poland.php,Community growth - regional development
+Poland,Opoczno,20.2500,51.3833,1600,1800,1900,400,1000,,,,,אופוצ'נו,,Opoczno,Opoczno,https://www.crarg.org/jewish-genealogy/opoczno-poland.php,Industrial growth - population expands
+Poland,Opoczno,20.2500,51.3833,1600,1900,1920,1000,2000,,,,,אופוצ'נו,,Opoczno,Opoczno,https://www.crarg.org/jewish-genealogy/opoczno-poland.php,Pre-war growth - thriving community
+Poland,Opoczno,20.2500,51.3833,1600,1920,1939,2000,3000,,,,,אופוצ'נו,,Opoczno,Opoczno,https://www.crarg.org/jewish-genealogy/opoczno-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Opoczno,20.2500,51.3833,1600,1939,1942,3000,500,,,,,אופוצ'נו,,Opoczno,Opoczno,https://www.crarg.org/jewish-genealogy/opoczno-poland.php,German occupation - ghetto established, mass deportations
+Poland,Opoczno,20.2500,51.3833,1600,1942,1945,500,0,,,,,אופוצ'נו,,Opoczno,Opoczno,https://www.crarg.org/jewish-genealogy/opoczno-poland.php,Holocaust devastation - community destroyed
+Poland,Opoczno,20.2500,51.3833,1600,1945,2023,0,0,,,,,אופוצ'נו,,Opoczno,Opoczno,https://www.crarg.org/jewish-genealogy/opoczno-poland.php,Post-war period - no Jewish population remains
+Poland,Pajęczno,18.9833,51.1500,1600,1600,1700,50,150,,,,,פאיינצ'נו,,Pajęczno,Pajęczno,https://www.crarg.org/jewish-genealogy/pajeczno-poland.php,Early Jewish settlement - community begins to form
+Poland,Pajęczno,18.9833,51.1500,1600,1700,1800,150,400,,,,,פאיינצ'נו,,Pajęczno,Pajęczno,https://www.crarg.org/jewish-genealogy/pajeczno-poland.php,Community growth - regional development
+Poland,Pajęczno,18.9833,51.1500,1600,1800,1900,400,1000,,,,,פאיינצ'נו,,Pajęczno,Pajęczno,https://www.crarg.org/jewish-genealogy/pajeczno-poland.php,Industrial growth - population expands
+Poland,Pajęczno,18.9833,51.1500,1600,1900,1920,1000,2000,,,,,פאיינצ'נו,,Pajęczno,Pajęczno,https://www.crarg.org/jewish-genealogy/pajeczno-poland.php,Pre-war growth - thriving community
+Poland,Pajęczno,18.9833,51.1500,1600,1920,1939,2000,3000,,,,,פאיינצ'נו,,Pajęczno,Pajęczno,https://www.crarg.org/jewish-genealogy/pajeczno-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Pajęczno,18.9833,51.1500,1600,1939,1942,3000,500,,,,,פאיינצ'נו,,Pajęczno,Pajęczno,https://www.crarg.org/jewish-genealogy/pajeczno-poland.php,German occupation - ghetto established, mass deportations
+Poland,Pajęczno,18.9833,51.1500,1600,1942,1945,500,0,,,,,פאיינצ'נו,,Pajęczno,Pajęczno,https://www.crarg.org/jewish-genealogy/pajeczno-poland.php,Holocaust devastation - community destroyed
+Poland,Pajęczno,18.9833,51.1500,1600,1945,2023,0,0,,,,,פאיינצ'נו,,Pajęczno,Pajęczno,https://www.crarg.org/jewish-genealogy/pajeczno-poland.php,Post-war period - no Jewish population remains
+Poland,Pilica,19.6500,50.4667,1600,1600,1700,50,150,,,,,פיליצה,,Pilica,Pilica,https://www.crarg.org/jewish-genealogy/pilica-poland.php,Early Jewish settlement - community begins to form
+Poland,Pilica,19.6500,50.4667,1600,1700,1800,150,400,,,,,פיליצה,,Pilica,Pilica,https://www.crarg.org/jewish-genealogy/pilica-poland.php,Community growth - regional development
+Poland,Pilica,19.6500,50.4667,1600,1800,1900,400,1000,,,,,פיליצה,,Pilica,Pilica,https://www.crarg.org/jewish-genealogy/pilica-poland.php,Industrial growth - population expands
+Poland,Pilica,19.6500,50.4667,1600,1900,1920,1000,2000,,,,,פיליצה,,Pilica,Pilica,https://www.crarg.org/jewish-genealogy/pilica-poland.php,Pre-war growth - thriving community
+Poland,Pilica,19.6500,50.4667,1600,1920,1939,2000,3000,,,,,פיליצה,,Pilica,Pilica,https://www.crarg.org/jewish-genealogy/pilica-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Pilica,19.6500,50.4667,1600,1939,1942,3000,500,,,,,פיליצה,,Pilica,Pilica,https://www.crarg.org/jewish-genealogy/pilica-poland.php,German occupation - ghetto established, mass deportations
+Poland,Pilica,19.6500,50.4667,1600,1942,1945,500,0,,,,,פיליצה,,Pilica,Pilica,https://www.crarg.org/jewish-genealogy/pilica-poland.php,Holocaust devastation - community destroyed
+Poland,Pilica,19.6500,50.4667,1600,1945,2023,0,0,,,,,פיליצה,,Pilica,Pilica,https://www.crarg.org/jewish-genealogy/pilica-poland.php,Post-war period - no Jewish population remains
+Poland,Pławno,19.4500,50.9833,1600,1600,1700,50,150,,,,,פלאבונו,,Pławno,Pławno,https://www.crarg.org/jewish-genealogy/plawno-poland.php,Early Jewish settlement - community begins to form
+Poland,Pławno,19.4500,50.9833,1600,1700,1800,150,400,,,,,פלאבונו,,Pławno,Pławno,https://www.crarg.org/jewish-genealogy/plawno-poland.php,Community growth - regional development
+Poland,Pławno,19.4500,50.9833,1600,1800,1900,400,1000,,,,,פלאבונו,,Pławno,Pławno,https://www.crarg.org/jewish-genealogy/plawno-poland.php,Industrial growth - population expands
+Poland,Pławno,19.4500,50.9833,1600,1900,1920,1000,2000,,,,,פלאבונו,,Pławno,Pławno,https://www.crarg.org/jewish-genealogy/plawno-poland.php,Pre-war growth - thriving community
+Poland,Pławno,19.4500,50.9833,1600,1920,1939,2000,3000,,,,,פלאבונו,,Pławno,Pławno,https://www.crarg.org/jewish-genealogy/plawno-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Pławno,19.4500,50.9833,1600,1939,1942,3000,500,,,,,פלאבונו,,Pławno,Pławno,https://www.crarg.org/jewish-genealogy/plawno-poland.php,German occupation - ghetto established, mass deportations
+Poland,Pławno,19.4500,50.9833,1600,1942,1945,500,0,,,,,פלאבונו,,Pławno,Pławno,https://www.crarg.org/jewish-genealogy/plawno-poland.php,Holocaust devastation - community destroyed
+Poland,Pławno,19.4500,50.9833,1600,1945,2023,0,0,,,,,פלאבונו,,Pławno,Pławno,https://www.crarg.org/jewish-genealogy/plawno-poland.php,Post-war period - no Jewish population remains
+Poland,Gidle,19.4667,50.9667,1600,1600,1700,50,150,,,,,גידלה,,Gidle,Gidle,https://www.crarg.org/jewish-genealogy/gidle-poland.php,Early Jewish settlement - community begins to form
+Poland,Gidle,19.4667,50.9667,1600,1700,1800,150,400,,,,,גידלה,,Gidle,Gidle,https://www.crarg.org/jewish-genealogy/gidle-poland.php,Community growth - regional development
+Poland,Gidle,19.4667,50.9667,1600,1800,1900,400,1000,,,,,גידלה,,Gidle,Gidle,https://www.crarg.org/jewish-genealogy/gidle-poland.php,Industrial growth - population expands
+Poland,Gidle,19.4667,50.9667,1600,1900,1920,1000,2000,,,,,גידלה,,Gidle,Gidle,https://www.crarg.org/jewish-genealogy/gidle-poland.php,Pre-war growth - thriving community
+Poland,Gidle,19.4667,50.9667,1600,1920,1939,2000,3000,,,,,גידלה,,Gidle,Gidle,https://www.crarg.org/jewish-genealogy/gidle-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Gidle,19.4667,50.9667,1600,1939,1942,3000,500,,,,,גידלה,,Gidle,Gidle,https://www.crarg.org/jewish-genealogy/gidle-poland.php,German occupation - ghetto established, mass deportations
+Poland,Gidle,19.4667,50.9667,1600,1942,1945,500,0,,,,,גידלה,,Gidle,Gidle,https://www.crarg.org/jewish-genealogy/gidle-poland.php,Holocaust devastation - community destroyed
+Poland,Gidle,19.4667,50.9667,1600,1945,2023,0,0,,,,,גידלה,,Gidle,Gidle,https://www.crarg.org/jewish-genealogy/gidle-poland.php,Post-war period - no Jewish population remains
+Poland,Kłomnice,19.3667,50.9167,1600,1600,1700,50,150,,,,,קלומניצה,,Kłomnice,Kłomnice,https://www.crarg.org/jewish-genealogy/klomnice-poland.php,Early Jewish settlement - community begins to form
+Poland,Kłomnice,19.3667,50.9167,1600,1700,1800,150,400,,,,,קלומניצה,,Kłomnice,Kłomnice,https://www.crarg.org/jewish-genealogy/klomnice-poland.php,Community growth - regional development
+Poland,Kłomnice,19.3667,50.9167,1600,1800,1900,400,1000,,,,,קלומניצה,,Kłomnice,Kłomnice,https://www.crarg.org/jewish-genealogy/klomnice-poland.php,Industrial growth - population expands
+Poland,Kłomnice,19.3667,50.9167,1600,1900,1920,1000,2000,,,,,קלומניצה,,Kłomnice,Kłomnice,https://www.crarg.org/jewish-genealogy/klomnice-poland.php,Pre-war growth - thriving community
+Poland,Kłomnice,19.3667,50.9167,1600,1920,1939,2000,3000,,,,,קלומניצה,,Kłomnice,Kłomnice,https://www.crarg.org/jewish-genealogy/klomnice-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Kłomnice,19.3667,50.9167,1600,1939,1942,3000,500,,,,,קלומניצה,,Kłomnice,Kłomnice,https://www.crarg.org/jewish-genealogy/klomnice-poland.php,German occupation - ghetto established, mass deportations
+Poland,Kłomnice,19.3667,50.9167,1600,1942,1945,500,0,,,,,קלומניצה,,Kłomnice,Kłomnice,https://www.crarg.org/jewish-genealogy/klomnice-poland.php,Holocaust devastation - community destroyed
+Poland,Kłomnice,19.3667,50.9167,1600,1945,2023,0,0,,,,,קלומניצה,,Kłomnice,Kłomnice,https://www.crarg.org/jewish-genealogy/klomnice-poland.php,Post-war period - no Jewish population remains
+Poland,Praszka,18.4500,51.0500,1600,1600,1700,50,150,,,,,פרשקה,,Praszka,Praszka,https://www.crarg.org/jewish-genealogy/praszka-poland.php,Early Jewish settlement - community begins to form
+Poland,Praszka,18.4500,51.0500,1600,1700,1800,150,400,,,,,פרשקה,,Praszka,Praszka,https://www.crarg.org/jewish-genealogy/praszka-poland.php,Community growth - regional development
+Poland,Praszka,18.4500,51.0500,1600,1800,1900,400,1000,,,,,פרשקה,,Praszka,Praszka,https://www.crarg.org/jewish-genealogy/praszka-poland.php,Industrial growth - population expands
+Poland,Praszka,18.4500,51.0500,1600,1900,1920,1000,2000,,,,,פרשקה,,Praszka,Praszka,https://www.crarg.org/jewish-genealogy/praszka-poland.php,Pre-war growth - thriving community
+Poland,Praszka,18.4500,51.0500,1600,1920,1939,2000,3000,,,,,פרשקה,,Praszka,Praszka,https://www.crarg.org/jewish-genealogy/praszka-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Praszka,18.4500,51.0500,1600,1939,1942,3000,500,,,,,פרשקה,,Praszka,Praszka,https://www.crarg.org/jewish-genealogy/praszka-poland.php,German occupation - ghetto established, mass deportations
+Poland,Praszka,18.4500,51.0500,1600,1942,1945,500,0,,,,,פרשקה,,Praszka,Praszka,https://www.crarg.org/jewish-genealogy/praszka-poland.php,Holocaust devastation - community destroyed
+Poland,Praszka,18.4500,51.0500,1600,1945,2023,0,0,,,,,פרשקה,,Praszka,Praszka,https://www.crarg.org/jewish-genealogy/praszka-poland.php,Post-war period - no Jewish population remains
+Poland,Przedbórz,19.9167,51.0833,1600,1600,1700,50,150,,,,,פשדבוז',,Przedbórz,Przedbórz,https://www.crarg.org/jewish-genealogy/przedborz-poland.php,Early Jewish settlement - community begins to form
+Poland,Przedbórz,19.9167,51.0833,1600,1700,1800,150,400,,,,,פשדבוז',,Przedbórz,Przedbórz,https://www.crarg.org/jewish-genealogy/przedborz-poland.php,Community growth - regional development
+Poland,Przedbórz,19.9167,51.0833,1600,1800,1900,400,1000,,,,,פשדבוז',,Przedbórz,Przedbórz,https://www.crarg.org/jewish-genealogy/przedborz-poland.php,Industrial growth - population expands
+Poland,Przedbórz,19.9167,51.0833,1600,1900,1920,1000,2000,,,,,פשדבוז',,Przedbórz,Przedbórz,https://www.crarg.org/jewish-genealogy/przedborz-poland.php,Pre-war growth - thriving community
+Poland,Przedbórz,19.9167,51.0833,1600,1920,1939,2000,3000,,,,,פשדבוז',,Przedbórz,Przedbórz,https://www.crarg.org/jewish-genealogy/przedborz-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Przedbórz,19.9167,51.0833,1600,1939,1942,3000,500,,,,,פשדבוז',,Przedbórz,Przedbórz,https://www.crarg.org/jewish-genealogy/przedborz-poland.php,German occupation - ghetto established, mass deportations
+Poland,Przedbórz,19.9167,51.0833,1600,1942,1945,500,0,,,,,פשדבוז',,Przedbórz,Przedbórz,https://www.crarg.org/jewish-genealogy/przedborz-poland.php,Holocaust devastation - community destroyed
+Poland,Przedbórz,19.9167,51.0833,1600,1945,2023,0,0,,,,,פשדבוז',,Przedbórz,Przedbórz,https://www.crarg.org/jewish-genealogy/przedborz-poland.php,Post-war period - no Jewish population remains
+Poland,Przyrów,19.5167,50.8000,1600,1600,1700,50,150,,,,,פז'ירוב,,Przyrów,Przyrów,https://www.crarg.org/jewish-genealogy/przyrow-poland.php,Early Jewish settlement - community begins to form
+Poland,Przyrów,19.5167,50.8000,1600,1700,1800,150,400,,,,,פז'ירוב,,Przyrów,Przyrów,https://www.crarg.org/jewish-genealogy/przyrow-poland.php,Community growth - regional development
+Poland,Przyrów,19.5167,50.8000,1600,1800,1900,400,1000,,,,,פז'ירוב,,Przyrów,Przyrów,https://www.crarg.org/jewish-genealogy/przyrow-poland.php,Industrial growth - population expands
+Poland,Przyrów,19.5167,50.8000,1600,1900,1920,1000,2000,,,,,פז'ירוב,,Przyrów,Przyrów,https://www.crarg.org/jewish-genealogy/przyrow-poland.php,Pre-war growth - thriving community
+Poland,Przyrów,19.5167,50.8000,1600,1920,1939,2000,3000,,,,,פז'ירוב,,Przyrów,Przyrów,https://www.crarg.org/jewish-genealogy/przyrow-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Przyrów,19.5167,50.8000,1600,1939,1942,3000,500,,,,,פז'ירוב,,Przyrów,Przyrów,https://www.crarg.org/jewish-genealogy/przyrow-poland.php,German occupation - ghetto established, mass deportations
+Poland,Przyrów,19.5167,50.8000,1600,1942,1945,500,0,,,,,פז'ירוב,,Przyrów,Przyrów,https://www.crarg.org/jewish-genealogy/przyrow-poland.php,Holocaust devastation - community destroyed
+Poland,Przyrów,19.5167,50.8000,1600,1945,2023,0,0,,,,,פז'ירוב,,Przyrów,Przyrów,https://www.crarg.org/jewish-genealogy/przyrow-poland.php,Post-war period - no Jewish population remains
+Poland,Radoszyce,20.2667,50.7333,1600,1600,1700,50,150,,,,,רדושיצה,,Radoszyce,Radoszyce,https://www.crarg.org/jewish-genealogy/radoszyce-poland.php,Early Jewish settlement - community begins to form
+Poland,Radoszyce,20.2667,50.7333,1600,1700,1800,150,400,,,,,רדושיצה,,Radoszyce,Radoszyce,https://www.crarg.org/jewish-genealogy/radoszyce-poland.php,Community growth - regional development
+Poland,Radoszyce,20.2667,50.7333,1600,1800,1900,400,1000,,,,,רדושיצה,,Radoszyce,Radoszyce,https://www.crarg.org/jewish-genealogy/radoszyce-poland.php,Industrial growth - population expands
+Poland,Radoszyce,20.2667,50.7333,1600,1900,1920,1000,2000,,,,,רדושיצה,,Radoszyce,Radoszyce,https://www.crarg.org/jewish-genealogy/radoszyce-poland.php,Pre-war growth - thriving community
+Poland,Radoszyce,20.2667,50.7333,1600,1920,1939,2000,3000,,,,,רדושיצה,,Radoszyce,Radoszyce,https://www.crarg.org/jewish-genealogy/radoszyce-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Radoszyce,20.2667,50.7333,1600,1939,1942,3000,500,,,,,רדושיצה,,Radoszyce,Radoszyce,https://www.crarg.org/jewish-genealogy/radoszyce-poland.php,German occupation - ghetto established, mass deportations
+Poland,Radoszyce,20.2667,50.7333,1600,1942,1945,500,0,,,,,רדושיצה,,Radoszyce,Radoszyce,https://www.crarg.org/jewish-genealogy/radoszyce-poland.php,Holocaust devastation - community destroyed
+Poland,Radoszyce,20.2667,50.7333,1600,1945,2023,0,0,,,,,רדושיצה,,Radoszyce,Radoszyce,https://www.crarg.org/jewish-genealogy/radoszyce-poland.php,Post-war period - no Jewish population remains
+Poland,Rozprza,19.6333,51.3000,1600,1600,1700,50,150,,,,,רוזפרה,,Rozprza,Rozprza,https://www.crarg.org/jewish-genealogy/rozprza-poland.php,Early Jewish settlement - community begins to form
+Poland,Rozprza,19.6333,51.3000,1600,1700,1800,150,400,,,,,רוזפרה,,Rozprza,Rozprza,https://www.crarg.org/jewish-genealogy/rozprza-poland.php,Community growth - regional development
+Poland,Rozprza,19.6333,51.3000,1600,1800,1900,400,1000,,,,,רוזפרה,,Rozprza,Rozprza,https://www.crarg.org/jewish-genealogy/rozprza-poland.php,Industrial growth - population expands
+Poland,Rozprza,19.6333,51.3000,1600,1900,1920,1000,2000,,,,,רוזפרה,,Rozprza,Rozprza,https://www.crarg.org/jewish-genealogy/rozprza-poland.php,Pre-war growth - thriving community
+Poland,Rozprza,19.6333,51.3000,1600,1920,1939,2000,3000,,,,,רוזפרה,,Rozprza,Rozprza,https://www.crarg.org/jewish-genealogy/rozprza-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Rozprza,19.6333,51.3000,1600,1939,1942,3000,500,,,,,רוזפרה,,Rozprza,Rozprza,https://www.crarg.org/jewish-genealogy/rozprza-poland.php,German occupation - ghetto established, mass deportations
+Poland,Rozprza,19.6333,51.3000,1600,1942,1945,500,0,,,,,רוזפרה,,Rozprza,Rozprza,https://www.crarg.org/jewish-genealogy/rozprza-poland.php,Holocaust devastation - community destroyed
+Poland,Rozprza,19.6333,51.3000,1600,1945,2023,0,0,,,,,רוזפרה,,Rozprza,Rozprza,https://www.crarg.org/jewish-genealogy/rozprza-poland.php,Post-war period - no Jewish population remains
+Poland,Secemin,19.8333,50.7667,1600,1600,1700,50,150,,,,,סצ'מין,,Secemin,Secemin,https://www.crarg.org/jewish-genealogy/secemin-poland.php,Early Jewish settlement - community begins to form
+Poland,Secemin,19.8333,50.7667,1600,1700,1800,150,400,,,,,סצ'מין,,Secemin,Secemin,https://www.crarg.org/jewish-genealogy/secemin-poland.php,Community growth - regional development
+Poland,Secemin,19.8333,50.7667,1600,1800,1900,400,1000,,,,,סצ'מין,,Secemin,Secemin,https://www.crarg.org/jewish-genealogy/secemin-poland.php,Industrial growth - population expands
+Poland,Secemin,19.8333,50.7667,1600,1900,1920,1000,2000,,,,,סצ'מין,,Secemin,Secemin,https://www.crarg.org/jewish-genealogy/secemin-poland.php,Pre-war growth - thriving community
+Poland,Secemin,19.8333,50.7667,1600,1920,1939,2000,3000,,,,,סצ'מין,,Secemin,Secemin,https://www.crarg.org/jewish-genealogy/secemin-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Secemin,19.8333,50.7667,1600,1939,1942,3000,500,,,,,סצ'מין,,Secemin,Secemin,https://www.crarg.org/jewish-genealogy/secemin-poland.php,German occupation - ghetto established, mass deportations
+Poland,Secemin,19.8333,50.7667,1600,1942,1945,500,0,,,,,סצ'מין,,Secemin,Secemin,https://www.crarg.org/jewish-genealogy/secemin-poland.php,Holocaust devastation - community destroyed
+Poland,Secemin,19.8333,50.7667,1600,1945,2023,0,0,,,,,סצ'מין,,Secemin,Secemin,https://www.crarg.org/jewish-genealogy/secemin-poland.php,Post-war period - no Jewish population remains
+Poland,Sulmierzyce,19.2000,51.1833,1600,1600,1700,50,150,,,,,סולמייז'יצה,,Sulmierzyce,Sulmierzyce,https://www.crarg.org/jewish-genealogy/sulmierzyce-poland.php,Early Jewish settlement - community begins to form
+Poland,Sulmierzyce,19.2000,51.1833,1600,1700,1800,150,400,,,,,סולמייז'יצה,,Sulmierzyce,Sulmierzyce,https://www.crarg.org/jewish-genealogy/sulmierzyce-poland.php,Community growth - regional development
+Poland,Sulmierzyce,19.2000,51.1833,1600,1800,1900,400,1000,,,,,סולמייז'יצה,,Sulmierzyce,Sulmierzyce,https://www.crarg.org/jewish-genealogy/sulmierzyce-poland.php,Industrial growth - population expands
+Poland,Sulmierzyce,19.2000,51.1833,1600,1900,1920,1000,2000,,,,,סולמייז'יצה,,Sulmierzyce,Sulmierzyce,https://www.crarg.org/jewish-genealogy/sulmierzyce-poland.php,Pre-war growth - thriving community
+Poland,Sulmierzyce,19.2000,51.1833,1600,1920,1939,2000,3000,,,,,סולמייז'יצה,,Sulmierzyce,Sulmierzyce,https://www.crarg.org/jewish-genealogy/sulmierzyce-poland.php,Peak population - over 3,000 Jews before Holocaust
+Poland,Sulmierzyce,19.2000,51.1833,1600,1939,1942,3000,500,,,,,סולמייז'יצה,,Sulmierzyce,Sulmierzyce,https://www.crarg.org/jewish-genealogy/sulmierzyce-poland.php,German occupation - ghetto established, mass deportations
+Poland,Sulmierzyce,19.2000,51.1833,1600,1942,1945,500,0,,,,,סולמייז'יצה,,Sulmierzyce,Sulmierzyce,https://www.crarg.org/jewish-genealogy/sulmierzyce-poland.php,Holocaust devastation - community destroyed
+Poland,Sulmierzyce,19.2000,51.1833,1600,1945,2023,0,0,,,,,סולמייז'יצה,,Sulmierzyce,Sulmierzyce,https://www.crarg.org/jewish-genealogy/sulmierzyce-poland.php,Post-war period - no Jewish population remains
 Germany,Waldkirch,7.96371,48.09585,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Waldshut,8.21667,47.61667,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Waldürn,9.36667,49.45,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
@@ -1826,12 +2104,12 @@ France,Wattwiller,7.17785,47.83649,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - Je
 Germany,Weil am Rhein,10.92161,48.11717,0,,1942,30,30,,,,,וייל אם ריין,,,,,
 Germany,Weil der Stadt,10.92161,48.11717,1600,1600,1942,30,30,,,,,וייל דר שטאדט,,,,https://www.alemannia-judaica.de/tracking_jewish_history.htm,
 Germany,Weil-die-Stadt,8.76667,48.75,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
-,Weilheim,8.23333,47.66667,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
-,Weimar,11.32903,50.9803,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
-,Weinheim,8.66697,49.54887,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
-,Weinheim,8.66697,49.54887,1250,1250,1942,30,30,,,,,,,,,Jewish traces in Weinheim :: Places,
-,Weinheim,8.66697,49.54887,1250,1250,1942,30,30,,,,,,,,,Tracking Jewish History (alemannia-judaica.de),
-Germany,Weinheim,,,0,,1942,30,30,,,,,ויינהיים,,,,https://www.jewishvirtuallibrary.org/weinheim,
+Germany,Weilheim,8.23333,47.66667,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
+Germany,Weimar,11.32903,50.9803,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
+Germany,Weinheim,8.66697,49.54887,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
+Germany,Weinheim,8.66697,49.54887,1250,1250,1942,30,30,,,,,,,,,Jewish traces in Weinheim :: Places,
+Germany,Weinheim,8.66697,49.54887,1250,1250,1942,30,30,,,,,,,,,Tracking Jewish History (alemannia-judaica.de),
+Germany,Weinheim,8.23333,47.66667,0,,1942,30,30,,,,,ויינהיים,,,,https://www.jewishvirtuallibrary.org/weinheim,
 ,Weissensee,,,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Wemding,10.72452,48.87461,0,,1942,30,30,,,,,וומדינג,,,,EhemaligeSynagogeOberdorf-Katalog-englisch-2013.pdf,
 ,Wertheim,9.50852,49.759,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
