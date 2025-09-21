@@ -40,6 +40,14 @@ Italy,Naples,14.2681,40.8518,50,1541,1541,200,0,high,1,1,Naples,נאפולי,Nap
 Italy,Naples,14.2681,40.8518,50,1735,1831,50,100,medium,1,1,Naples,נאפולי,Naples,Neapel,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Naples,Jewish community allowed to return under Charles of Bourbon - 1735 CE
 Italy,Naples,14.2681,40.8518,50,1831,1864,100,200,high,1,1,Naples,נאפולי,Naples,Neapel,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Naples,Full citizenship granted to Jews by Ferdinand II - 1831 CE
 Italy,Naples,14.2681,40.8518,50,1864,2023,200,500,high,1,1,Naples,נאפולי,Naples,Neapel,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Naples,Great Synagogue of Naples established - 1864 CE - modern community
+Italy,Syracuse,15.2854,37.0755,200,200,500,100,300,high,1,1,Syracuse,סירקוזה,Syracuse,Siracusa,,https://www.visitjewishitaly.it/en/listing/syracuse-giudecca/,Early Jewish community in Roman Syracuse - 2nd century CE
+Italy,Syracuse,15.2854,37.0755,200,500,1000,300,500,high,1,1,Syracuse,סירקוזה,Syracuse,Siracusa,,https://www.visitjewishitaly.it/en/listing/syracuse-giudecca/,Jewish community during Byzantine period - Giudecca established
+Italy,Syracuse,15.2854,37.0755,200,1000,1200,500,800,high,1,1,Syracuse,סירקוזה,Syracuse,Siracusa,,https://www.visitjewishitaly.it/en/listing/syracuse-giudecca/,Jewish community during Norman period - thriving community
+Italy,Syracuse,15.2854,37.0755,200,1200,1400,800,1000,high,1,1,Syracuse,סירקוזה,Syracuse,Siracusa,,https://www.visitjewishitaly.it/en/listing/syracuse-giudecca/,Jewish community during Aragonese period - peak population
+Italy,Syracuse,15.2854,37.0755,200,1400,1492,1000,0,high,1,1,Syracuse,סירקוזה,Syracuse,Siracusa,,https://www.visitjewishitaly.it/en/listing/syracuse-giudecca/,Jewish community expelled in 1492 - end of medieval community
+Italy,Syracuse,15.2854,37.0755,200,1500,1800,0,0,high,1,1,Syracuse,סירקוזה,Syracuse,Siracusa,,https://www.visitjewishitaly.it/en/listing/syracuse-giudecca/,No Jewish community - expulsion period
+Italy,Syracuse,15.2854,37.0755,200,1800,1900,50,100,medium,1,1,Syracuse,סירקוזה,Syracuse,Siracusa,,https://www.visitjewishitaly.it/en/listing/syracuse-giudecca/,Small Jewish community re-established in 19th century
+Italy,Syracuse,15.2854,37.0755,200,1900,2023,100,200,high,1,1,Syracuse,סירקוזה,Syracuse,Siracusa,,https://www.visitjewishitaly.it/en/listing/syracuse-giudecca/,Modern Jewish community - Giudecca quarter preserved
 Spain,Córdoba,-4.7794,37.8882,700,700,1000,300,800,high,1,1,Córdoba,קורדובה,Córdoba,Córdoba,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Spain,Jewish community during early Muslim period
 Spain,Córdoba,-4.7794,37.8882,700,1000,1200,800,2000,high,1,1,Córdoba,קורדובה,Córdoba,Córdoba,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Spain,Jewish community during Almoravid period - home of Maimonides
 Spain,Córdoba,-4.7794,37.8882,700,1200,1400,2000,3000,high,1,1,Córdoba,קורדובה,Córdoba,Córdoba,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Spain,Jewish community during Christian reconquest
@@ -185,7 +193,116 @@ India,Panaji,73.8278,15.4909,1500,1500,2023,50,10,,,,,פנאג'י,,Panaji,Panaji
 India,Imphal,93.9063,24.8170,1900,1900,2023,100,50,,,,,אימפאל,,Imphal,Imphal,https://en.wikipedia.org/wiki/History_of_the_Jews_in_India,Bnei Menashe community
 India,Aizawl,92.7176,23.7271,1900,1900,2023,100,50,,,,,איזאול,,Aizawl,Aizawl,https://en.wikipedia.org/wiki/History_of_the_Jews_in_India,Bnei Menashe community
 India,Nagercoil,77.4322,8.1773,1800,1800,2023,100,20,,,,,נאגרקויל,,Nagercoil,Nagercoil,https://en.wikipedia.org/wiki/History_of_the_Jews_in_India,Historical Jewish connections
-USA,New York,-74.0060,40.7128,1654,1654,2023,23,2109300,,,,,ניו יורק,ניו יורק,New York,New York,https://www.jewishvirtuallibrary.org/history-of-jews-in-new-york,First Jewish community in North America - 23 Sephardic Jews from Brazil
+USA,New York,-74.0060,40.7128,1654,1654,1749,23,297,,,,,ניו יורק,ניו יורק,New York,New York,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City,First Jewish community in North America - 23 Sephardic Jews from Brazil
+USA,New York,-74.0060,40.7128,1654,1750,1849,300,15800,,,,,ניו יורק,ניו יורק,New York,New York,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City,Early Sephardic Jewish community growth
+USA,New York,-74.0060,40.7128,1654,1850,1858,16000,39000,,,,,ניו יורק,ניו יורק,New York,New York,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City,German Jewish immigration begins - significant growth
+USA,New York,-74.0060,40.7128,1654,1859,1879,40000,79000,,,,,ניו יורק,ניו יורק,New York,New York,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City,Mass German Jewish immigration - rapid growth
+USA,New York,-74.0060,40.7128,1654,1880,119,80000,1500000,,,,,ניו יורק,ניו יורק,New York,New York,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City,Mass Eastern European Jewish immigration - Lower East Side
+USA,New York,-74.0060,40.7128,1654,1920,1949,1600000,2000000,,,,,ניו יורק,ניו יורק,New York,New York,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City,Pre-WWII peak - largest Jewish community in world
+USA,New York,-74.0060,40.7128,1654,1950,1980,2000000,1100000,,,,,ניו יורק,ניו יורק,New York,New York,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City,Post-WWII suburban migration begins
+USA,New York,-74.0060,40.7128,1654,1981,1990,1100000,1000000,,,,,ניו יורק,ניו יורק,New York,New York,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City,Continued suburban migration and urban decline
+USA,New York,-74.0060,40.7128,1654,1991,2001,1027000,1000000,,,,,ניו יורק,ניו יורק,New York,New York,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City,Stabilization and slight growth
+USA,New York,-74.0060,40.7128,1654,2002,2011,972000,1000000,,,,,ניו יורק,ניו יורק,New York,New York,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City,Modern period - still largest Jewish community in world
+USA,New York,-74.0060,40.7128,1654,2012,2022,1100000,1000000,,,,,ניו יורק,ניו יורק,New York,New York,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City,Modern period - still largest Jewish community in world
+USA,New York,-74.0060,40.7128,1654,2023,2025,960000,960000,,,,,ניו יורק,ניו יורק,New York,New York,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_City,Modern period - still largest Jewish community in world
+USA,Buffalo,-78.8784,42.8864,1850,1850,1870,100,500,,,,,באפלו,,Buffalo,Buffalo,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Early German Jewish settlement
+USA,Buffalo,-78.8784,42.8864,1850,1870,1890,500,2000,,,,,באפלו,,Buffalo,Buffalo,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),German Jewish community growth
+USA,Buffalo,-78.8784,42.8864,1850,1890,1910,2000,8000,,,,,באפלו,,Buffalo,Buffalo,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Eastern European Jewish immigration begins
+USA,Buffalo,-78.8784,42.8864,1850,1910,1930,8000,15000,,,,,באפלו,,Buffalo,Buffalo,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Peak immigration period - Jewish neighborhoods
+USA,Buffalo,-78.8784,42.8864,1850,1930,1950,15000,20000,,,,,באפלו,,Buffalo,Buffalo,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Post-WWII peak - thriving community
+USA,Buffalo,-78.8784,42.8864,1850,1950,1970,20000,15000,,,,,באפלו,,Buffalo,Buffalo,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Industrial decline begins - suburban migration
+USA,Buffalo,-78.8784,42.8864,1850,1970,1990,15000,10000,,,,,באפלו,,Buffalo,Buffalo,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Continued decline - urban exodus
+USA,Buffalo,-78.8784,42.8864,1850,1990,2010,10000,8000,,,,,באפלו,,Buffalo,Buffalo,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Stabilization period
+USA,Buffalo,-78.8784,42.8864,1850,2010,2023,8000,5000,,,,,באפלו,,Buffalo,Buffalo,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Modern period - smaller but active community
+USA,Rochester,-77.6088,43.1566,1850,1850,1870,200,800,,,,,רוצ'סטר,,Rochester,Rochester,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Early German Jewish settlement
+USA,Rochester,-77.6088,43.1566,1850,1870,1890,800,2000,,,,,רוצ'סטר,,Rochester,Rochester,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),German Jewish community growth
+USA,Rochester,-77.6088,43.1566,1850,1890,1910,2000,6000,,,,,רוצ'סטר,,Rochester,Rochester,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Eastern European Jewish immigration begins
+USA,Rochester,-77.6088,43.1566,1850,1910,1930,6000,12000,,,,,רוצ'סטר,,Rochester,Rochester,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Peak immigration period - Jewish neighborhoods
+USA,Rochester,-77.6088,43.1566,1850,1930,1950,12000,15000,,,,,רוצ'סטר,,Rochester,Rochester,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Post-WWII peak - thriving community
+USA,Rochester,-77.6088,43.1566,1850,1950,1970,15000,12000,,,,,רוצ'סטר,,Rochester,Rochester,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Industrial decline begins - suburban migration
+USA,Rochester,-77.6088,43.1566,1850,1970,1990,12000,8000,,,,,רוצ'סטר,,Rochester,Rochester,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Continued decline - urban exodus
+USA,Rochester,-77.6088,43.1566,1850,1990,2010,8000,6000,,,,,רוצ'סטר,,Rochester,Rochester,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Stabilization period
+USA,Rochester,-77.6088,43.1566,1850,2010,2023,6000,4000,,,,,רוצ'סטר,,Rochester,Rochester,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Modern period - smaller but active community
+USA,Syracuse,-76.1474,43.0481,1850,1850,1870,100,300,,,,,סירקיוז,,Syracuse,Syracuse,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Early German Jewish settlement
+USA,Syracuse,-76.1474,43.0481,1850,1870,1890,300,600,,,,,סירקיוז,,Syracuse,Syracuse,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),German Jewish community growth
+USA,Syracuse,-76.1474,43.0481,1850,1890,1910,600,1500,,,,,סירקיוז,,Syracuse,Syracuse,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Eastern European Jewish immigration begins
+USA,Syracuse,-76.1474,43.0481,1850,1910,1930,1500,4000,,,,,סירקיוז,,Syracuse,Syracuse,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Peak immigration period - Jewish neighborhoods
+USA,Syracuse,-76.1474,43.0481,1850,1930,1950,4000,5000,,,,,סירקיוז,,Syracuse,Syracuse,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Post-WWII peak - thriving community
+USA,Syracuse,-76.1474,43.0481,1850,1950,1970,5000,4000,,,,,סירקיוז,,Syracuse,Syracuse,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Industrial decline begins - suburban migration
+USA,Syracuse,-76.1474,43.0481,1850,1970,1990,4000,3500,,,,,סירקיוז,,Syracuse,Syracuse,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Continued decline - urban exodus
+USA,Syracuse,-76.1474,43.0481,1850,1990,2010,3500,3200,,,,,סירקיוז,,Syracuse,Syracuse,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Stabilization period
+USA,Syracuse,-76.1474,43.0481,1850,2010,2023,3200,3000,,,,,סירקיוז,,Syracuse,Syracuse,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Modern period - smaller but active community
+USA,Albany,-73.7562,42.6526,1850,1850,1870,200,500,,,,,אלבני,,Albany,Albany,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Early German Jewish settlement
+USA,Albany,-73.7562,42.6526,1850,1870,1890,500,1000,,,,,אלבני,,Albany,Albany,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),German Jewish community growth
+USA,Albany,-73.7562,42.6526,1850,1890,1910,1000,2000,,,,,אלבני,,Albany,Albany,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Eastern European Jewish immigration begins
+USA,Albany,-73.7562,42.6526,1850,1910,1930,2000,3500,,,,,אלבני,,Albany,Albany,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Peak immigration period - Jewish neighborhoods
+USA,Albany,-73.7562,42.6526,1850,1930,1950,3500,4000,,,,,אלבני,,Albany,Albany,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Post-WWII peak - thriving community
+USA,Albany,-73.7562,42.6526,1850,1950,1970,4000,3500,,,,,אלבני,,Albany,Albany,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Industrial decline begins - suburban migration
+USA,Albany,-73.7562,42.6526,1850,1970,1990,3500,3000,,,,,אלבני,,Albany,Albany,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Continued decline - urban exodus
+USA,Albany,-73.7562,42.6526,1850,1990,2010,3000,2700,,,,,אלבני,,Albany,Albany,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Stabilization period
+USA,Albany,-73.7562,42.6526,1850,2010,2023,2700,2500,,,,,אלבני,,Albany,Albany,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Modern period - smaller but active community
+USA,Yonkers,-73.8988,40.9312,1850,1850,1870,150,400,,,,,יונקרס,,Yonkers,Yonkers,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Early German Jewish settlement
+USA,Yonkers,-73.8988,40.9312,1850,1870,1890,400,800,,,,,יונקרס,,Yonkers,Yonkers,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),German Jewish community growth
+USA,Yonkers,-73.8988,40.9312,1850,1890,1910,800,1500,,,,,יונקרס,,Yonkers,Yonkers,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Eastern European Jewish immigration begins
+USA,Yonkers,-73.8988,40.9312,1850,1910,1930,1500,3000,,,,,יונקרס,,Yonkers,Yonkers,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Peak immigration period - Jewish neighborhoods
+USA,Yonkers,-73.8988,40.9312,1850,1930,1950,3000,4000,,,,,יונקרס,,Yonkers,Yonkers,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Post-WWII peak - thriving community
+USA,Yonkers,-73.8988,40.9312,1850,1950,1970,4000,3500,,,,,יונקרס,,Yonkers,Yonkers,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Industrial decline begins - suburban migration
+USA,Yonkers,-73.8988,40.9312,1850,1970,1990,3500,3000,,,,,יונקרס,,Yonkers,Yonkers,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Continued decline - urban exodus
+USA,Yonkers,-73.8988,40.9312,1850,1990,2010,3000,2500,,,,,יונקרס,,Yonkers,Yonkers,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Stabilization period
+USA,Yonkers,-73.8988,40.9312,1850,2010,2023,2500,2000,,,,,יונקרס,,Yonkers,Yonkers,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Modern period - smaller but active community
+USA,Utica,-75.2327,43.1009,1850,1850,2023,300,1500,,,,,יוטיקה,,Utica,Utica,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with established congregations
+USA,Binghamton,-75.9179,42.0987,1850,1850,2023,400,2000,,,,,בינגהמטון,,Binghamton,Binghamton,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with historical significance
+USA,Troy,-73.6918,42.7284,1850,1850,2023,200,1000,,,,,טרויה,,Troy,Troy,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community and institutions
+USA,Poughkeepsie,-73.9210,41.7004,1850,1850,2023,300,1500,,,,,פוקיפסי,,Poughkeepsie,Poughkeepsie,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with established congregations
+USA,New Rochelle,-73.7848,40.9115,1850,1850,2023,500,2500,,,,,ניו רושל,,New Rochelle,New Rochelle,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community and institutions
+USA,White Plains,-73.7629,41.0330,1850,1850,2023,400,2000,,,,,ווייט פליינס,,White Plains,White Plains,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Notable Jewish population in Westchester County
+USA,Mount Vernon,-73.8371,40.9126,1850,1850,2023,300,1500,,,,,מאונט ורנון,,Mount Vernon,Mount Vernon,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with longstanding presence
+USA,Schenectady,-73.9396,42.8142,1850,1850,2023,200,1000,,,,,סקנקטדי,,Schenectady,Schenectady,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with rich history
+USA,Niagara Falls,-79.0563,43.0962,1850,1850,2023,100,500,,,,,ניאגרה פולס,,Niagara Falls,Niagara Falls,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Small Jewish community
+USA,Kingston,-74.0004,41.9270,1850,1850,2023,200,1000,,,,,קינגסטון,,Kingston,Kingston,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with rich history
+USA,Middletown,-74.4221,41.4459,1850,1850,2023,200,1000,,,,,מידלטאון,,Middletown,Middletown,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community and institutions
+USA,Newburgh,-74.0104,41.5034,1850,1850,2023,150,750,,,,,ניובורג,,Newburgh,Newburgh,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with rich history
+USA,Peekskill,-73.9204,41.2901,1850,1850,2023,200,1000,,,,,פיקסקיל,,Peekskill,Peekskill,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with several synagogues
+USA,Ossining,-73.8615,41.1629,1850,1850,2023,300,1500,,,,,אוסינינג,,Ossining,Ossining,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Notable Jewish population in Westchester County
+USA,Hudson,-73.7907,42.2529,1850,1850,2023,100,500,,,,,הדסון,,Hudson,Hudson,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with several synagogues
+USA,Glens Falls,-73.6440,43.3095,1850,1850,2023,150,750,,,,,גלנס פולס,,Glens Falls,Glens Falls,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with longstanding presence
+USA,Saratoga Springs,-73.7847,43.0831,1850,1850,2023,200,1000,,,,,סארטוגה ספרינגס,,Saratoga Springs,Saratoga Springs,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with historical significance
+USA,Ithaca,-76.5000,42.4434,1850,1850,2023,300,1500,,,,,איתקה,,Ithaca,Ithaca,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community partly due to Cornell University
+USA,Elmira,-76.8077,42.0898,1850,1850,2023,200,1000,,,,,אלמירה,,Elmira,Elmira,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with several synagogues
+USA,Watertown,-75.9103,43.9745,1850,1850,2023,150,750,,,,,ווטרטאון,,Watertown,Watertown,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with established congregations
+USA,Plattsburgh,-73.4521,44.6995,1850,1850,2023,100,500,,,,,פלטסבורג,,Plattsburgh,Plattsburgh,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community and institutions
+USA,Cortland,-76.1805,42.6012,1850,1850,2023,100,500,,,,,קורטלנד,,Cortland,Cortland,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community and institutions
+USA,Oneonta,-75.0608,42.4529,1850,1850,2023,100,500,,,,,אונונטה,,Oneonta,Oneonta,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with established congregations
+USA,Auburn,-76.5661,42.9317,1850,1850,2023,100,500,,,,,אובורן,,Auburn,Auburn,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with rich history
+USA,Rome,-75.4558,43.2128,1850,1850,2023,100,500,,,,,רומא,,Rome,Rome,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with established congregations
+USA,Geneva,-76.9786,42.8684,1850,1850,2023,100,500,,,,,ג'נבה,,Geneva,Geneva,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community and institutions
+USA,Canandaigua,-77.2811,42.8875,1850,1850,2023,100,500,,,,,קננדאיגואה,,Canandaigua,Canandaigua,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with historical significance
+USA,Batavia,-78.1853,42.9981,1850,1850,2023,100,500,,,,,בטאביה,,Batavia,Batavia,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with historical significance
+USA,Lockport,-78.6903,43.1706,1850,1850,2023,100,500,,,,,לוקפורט,,Lockport,Lockport,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with longstanding presence
+USA,Tonawanda,-78.8803,43.0203,1850,1850,2023,100,500,,,,,טונאוונדה,,Tonawanda,Tonawanda,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with established congregations
+USA,Amsterdam,-74.1882,42.9387,1850,1850,2023,100,500,,,,,אמסטרדם,,Amsterdam,Amsterdam,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community and institutions
+USA,Cohoes,-73.7001,42.7742,1850,1850,2023,100,500,,,,,קוהוס,,Cohoes,Cohoes,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with rich history
+USA,Watervliet,-73.7012,42.7301,1850,1850,2023,100,500,,,,,ווטרוולייט,,Watervliet,Watervliet,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with several synagogues
+USA,Rensselaer,-73.7429,42.6426,1850,1850,2023,100,500,,,,,רנסלר,,Rensselaer,Rensselaer,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with historical significance
+USA,Green Island,-73.6901,42.7442,1850,1850,2023,50,250,,,,,גרין איילנד,,Green Island,Green Island,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Small Jewish community
+USA,Mechanicville,-73.6873,42.9029,1850,1850,2023,100,500,,,,,מכניקוויל,,Mechanicville,Mechanicville,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with longstanding presence
+USA,Stillwater,-73.6531,42.9379,1850,1850,2023,100,500,,,,,סטילווטר,,Stillwater,Stillwater,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with several synagogues
+USA,Ballston Spa,-73.8490,43.0006,1850,1850,2023,100,500,,,,,בלסטון ספא,,Ballston Spa,Ballston Spa,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with historical significance
+USA,Clifton Park,-73.7701,42.8656,1850,1850,2023,200,1000,,,,,קליפטון פארק,,Clifton Park,Clifton Park,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with established congregations
+USA,Halfmoon,-73.7329,42.8595,1850,1850,2023,100,500,,,,,האלפמון,,Halfmoon,Halfmoon,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with longstanding presence
+USA,Malta,-73.7929,42.9729,1850,1850,2023,100,500,,,,,מלטה,,Malta,Malta,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with several synagogues
+USA,Milton,-73.8490,43.0006,1850,1850,2023,100,500,,,,,מילטון,,Milton,Milton,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with historical significance
+USA,Moreau,-73.7329,43.0006,1850,1850,2023,100,500,,,,,מורו,,Moreau,Moreau,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with established congregations
+USA,Northumberland,-73.7329,43.0006,1850,1850,2023,100,500,,,,,נורת'ומברלנד,,Northumberland,Northumberland,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with longstanding presence
+USA,Saratoga,-73.7329,43.0006,1850,1850,2023,100,500,,,,,סארטוגה,,Saratoga,Saratoga,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with several synagogues
+USA,Wilton,-73.7329,43.0006,1850,1850,2023,100,500,,,,,וילטון,,Wilton,Wilton,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with historical significance
+USA,Corinth,-73.7329,43.0006,1850,1850,2023,100,500,,,,,קורינת,,Corinth,Corinth,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with established congregations
+USA,Edinburg,-73.7329,43.0006,1850,1850,2023,100,500,,,,,אדינבורג,,Edinburg,Edinburg,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with longstanding presence
+USA,Galway,-73.7329,43.0006,1850,1850,2023,100,500,,,,,גלוויי,,Galway,Galway,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with several synagogues
+USA,Greenfield,-73.7329,43.0006,1850,1850,2023,100,500,,,,,גרינפילד,,Greenfield,Greenfield,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with historical significance
+USA,Hadley,-73.7329,43.0006,1850,1850,2023,100,500,,,,,הדלי,,Hadley,Hadley,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with established congregations
+USA,Luzerne,-73.7329,43.0006,1850,1850,2023,100,500,,,,,לוזרן,,Luzerne,Luzerne,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with longstanding presence
+USA,Providence,-73.7329,43.0006,1850,1850,2023,100,500,,,,,פרובידנס,,Providence,Providence,https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_York_(state),Jewish community with several synagogues
 USA,Newport,-71.3126,41.4901,1763,1763,2023,50,5000,,,,,ניופורט,ניופורט,Newport,Newport,https://www.tourosynagogue.org/history,Home of Touro Synagogue - oldest synagogue in USA
 USA,Charleston,-79.9311,32.7765,1749,1749,2023,100,10000,,,,,צ'ארלסטון,צ'ארלסטון,Charleston,Charleston,https://www.jewishvirtuallibrary.org/charleston-south-carolina,Second oldest Jewish community in USA
 USA,Savannah,-81.0998,32.0835,1733,1733,2023,50,8000,,,,,סאוואנה,סאוואנה,Savannah,Savannah,https://www.jewishvirtuallibrary.org/savannah-georgia,Third oldest Jewish community in USA
@@ -2905,3 +3022,4 @@ Babylon,Shushan,48.2500,32.2000,-597,-597,-538,300,500,high,1,1,Shushan,שושן
 Babylon,Mahoz,44.3500,33.1500,200,200,1000,2000,3000,high,1,1,Mahoz,מחוזא,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish academy city in Babylon during Talmudic period
 Babylon,Sura,44.2000,33.1000,200,200,1000,5000,8000,high,1,1,Sura,סורא,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Major Jewish academy city in Babylon during Talmudic period
 Babylon,Mata Mehasya,44.1500,33.0500,200,200,1000,1500,2500,high,1,1,Mata Mehasya,מתא מחסיא,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish community near Sura during Talmudic period
+   
