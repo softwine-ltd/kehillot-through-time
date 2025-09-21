@@ -1354,7 +1354,7 @@ async function loadData(year) {
                         german: city_german,
                         other: city_other
                     },
-                    source: source.replace(/"/g, ''), // Remove quotes from source
+                    source: source ? source.replace(/"/g, '') : '', // Remove quotes from source, handle undefined
                     comment
                 };
             });
