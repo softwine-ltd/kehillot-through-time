@@ -16,12 +16,12 @@ def backup_csv():
     """Create backup of original CSV"""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     backup_name = f'kehilot_backup_{timestamp}.csv'
-    shutil.copy('kehilot.csv', backup_name)
+    shutil.copy('../kehilot.csv', backup_name)
     print(f"Created backup: {backup_name}")
 
 def load_existing_data():
     """Load existing CSV data"""
-    with open('kehilot.csv', 'r', encoding='utf-8-sig') as file:
+    with open('../kehilot.csv', 'r', encoding='utf-8-sig') as file:
         reader = csv.DictReader(file)
         fieldnames = reader.fieldnames
         existing_data = list(reader)
@@ -233,7 +233,7 @@ def add_communities_from_web():
         all_data = existing_data + new_entries
         
         # Write updated CSV
-        with open('kehilot.csv', 'w', newline='', encoding='utf-8') as file:
+        with open('../kehilot.csv', 'w', newline='', encoding='utf-8') as file:
             writer = csv.DictWriter(file, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(all_data)
