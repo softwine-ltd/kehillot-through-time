@@ -178,6 +178,15 @@ Egypt,Aswan,32.9078,24.0889,1600,1600,2023,2000,0,,,,,אסואן,,Aswan,Aswan,ht
 Egypt,Asyut,31.1806,27.1783,1700,1700,2023,1500,0,,,,,אסיוט,,Asyut,Asyut,https://www.jewishvirtuallibrary.org/asyut-egypt,Jewish community established in 1700s
 Egypt,Tanta,31.0400,30.7833,1800,1800,2023,1000,0,,,,,טנטה,,Tanta,Tanta,https://www.jewishvirtuallibrary.org/tanta-egypt,Jewish community established in 1800s
 Egypt,Zagazig,31.3570,30.5877,1900,1900,2023,500,0,,,,,זקאזיק,,Zagazig,Zagazig,https://www.jewishvirtuallibrary.org/zagazig-egypt,Jewish community established in 1900s
+Egypt,Fustat,31.2300,30.0444,641,641,1200,5000,10000,high,1,1,Fustat,פוסטאט,,,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,Medieval Jewish community in Old Cairo
+Egypt,Damietta,31.4167,31.8167,1000,1000,2023,2000,100,,,,,דמיאטה,,Damietta,Damietta,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,Jewish community in northern Egypt
+Egypt,Rosetta,31.4000,30.4167,1000,1000,2023,1500,50,,,,,רוזטה,,Rosetta,Rashid,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,Jewish community in Rosetta (Rashid)
+Egypt,Damanhur,31.0333,31.1667,1000,1000,2023,1000,0,,,,,דמנהור,,Damanhur,Damanhur,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,Jewish community in Damanhur
+Egypt,Minya,28.1167,30.7500,1000,1000,2023,800,0,,,,,מיניה,,Minya,Minya,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,Jewish community in Minya
+Egypt,Beni Suef,29.0667,31.0833,1000,1000,2023,600,0,,,,,בני סואף,,Beni Suef,Beni Suef,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,Jewish community in Beni Suef
+Egypt,Fayyum,29.3000,30.8333,1000,1000,2023,500,0,,,,,פיום,,Fayyum,Fayyum,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,Jewish community in Fayyum
+Egypt,Helwan,29.8500,31.3333,1000,1000,2023,300,0,,,,,חלוואן,,Helwan,Helwan,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,Jewish community in Helwan
+Egypt,Shubra,30.1167,31.2500,1000,1000,2023,400,0,,,,,שוברה,,Shubra,Shubra,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Egypt,Jewish community in Shubra
 Iraq,Baghdad,44.3661,33.3152,1000,1000,2023,90000,0,,,,,בגדאד,בגדאד,Baghdad,Baghdad,https://www.jewishvirtuallibrary.org/baghdad-iraq,Jewish community established in 1000s
 Iraq,Basra,47.7835,30.5081,1200,1200,2023,10000,0,,,,,בצרה,בצרה,Basra,Basra,https://www.jewishvirtuallibrary.org/basra-iraq,Jewish community established in 1200s
 Iraq,Mosul,43.1199,36.3650,1300,1300,2023,8000,0,,,,,מוסול,מוסול,Mosul,Mosul,https://www.jewishvirtuallibrary.org/mosul-iraq,Jewish community established in 1300s
@@ -2775,3 +2784,23 @@ Israel,Revava,35.1,32.8,1991,1991,2023,30,30,,,,,רבבה,,,,https://he.wikipedi
 Israel,Shoham,35.1,32.8,1993,1993,2023,30,30,,,,,שוהם,,,,https://he.wikipedia.org/wiki/%D7%A9%D7%95%D7%97%D7%9D,
 Israel,Se'orim,35.1,32.8,1991,1991,2023,30,30,,,,,שעורים,,,,https://he.wikipedia.org/wiki/%D7%A9%D7%A2%D7%95%D7%A8%D7%99%D7%9D,
 Israel,Sha'are Avraham,35.1,32.8,1991,1991,2023,30,30,,,,,שערי אברהם,,,,https://he.wikipedia.org/wiki/%D7%A9%D7%A2%D7%A8%D7%99_%D7%90%D7%91%D7%A8%D7%94%D7%9D
+Babylon,Babylon,44.4242,32.5411,-597,-597,-538,5000,10000,high,1,1,Babylon,בבל,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Capital of Babylonian Empire - major Jewish settlement during exile
+Babylon,Nippur,45.2333,32.1333,-597,-597,-538,1000,2000,high,1,1,Nippur,ניפור,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Important Jewish settlement in Nippur region during Babylonian exile
+Babylon,Susa,48.2500,32.2000,-597,-597,-538,500,1000,high,1,1,Susa,שושן,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish community in Susa during Babylonian period
+Babylon,Ecbatana,48.5167,34.8000,-597,-597,-538,300,500,high,1,1,Ecbatana,אחמתא,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish settlement in Ecbatana during exile
+Babylon,Ur,46.1000,30.9500,-597,-597,-538,200,300,high,1,1,Ur,אור,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Ancient city with Jewish presence during Babylonian exile
+Babylon,Kish,44.6333,32.5500,-597,-597,-538,100,200,high,1,1,Kish,כיש,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish community in Kish during Babylonian period
+Babylon,Sippar,44.2500,33.0667,-597,-597,-538,150,250,high,1,1,Sippar,סיפר,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish settlement in Sippar during exile
+Babylon,Borsippa,44.3500,32.3833,-597,-597,-538,100,150,high,1,1,Borsippa,בורסיפה,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish community in Borsippa during Babylonian period
+Babylon,Cuthah,44.5000,32.7500,-597,-597,-538,200,300,high,1,1,Cuthah,כותה,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish settlement in Cuthah during Babylonian exile
+Babylon,Hamath,36.7500,35.2500,-597,-597,-538,150,200,high,1,1,Hamath,חמת,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish community in Hamath during exile period
+Babylon,Avva,44.2000,32.1000,-597,-597,-538,100,150,high,1,1,Avva,עוה,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish settlement in Avva during Babylonian exile
+Babylon,Sepharvaim,44.1000,32.0500,-597,-597,-538,80,120,high,1,1,Sepharvaim,ספרוים,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish community in Sepharvaim during exile
+Babylon,Nehardea,44.3000,33.2000,-597,-597,-538,500,800,high,1,1,Nehardea,נהרדעא,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Important Jewish center in Nehardea during Babylonian period
+Babylon,Pumbedita,44.4000,33.3000,-597,-597,-538,300,500,high,1,1,Pumbedita,פומבדיתא,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Major Jewish academy city during Babylonian exile
+Babylon,Mahoz,44.3500,33.1500,-597,-597,-538,200,300,high,1,1,Mahoz,מחוז,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish settlement in Mahoz during exile period
+Babylon,Nehar Pekod,44.2500,33.1000,-597,-597,-538,150,200,high,1,1,Nehar Pekod,נהר פקוד,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish community in Nehar Pekod during Babylonian exile
+Babylon,Shushan,48.2500,32.2000,-597,-597,-538,300,500,high,1,1,Shushan,שושן,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Alternative name for Susa - Jewish settlement during exile
+Babylon,Mahoz,44.3500,33.1500,200,200,1000,2000,3000,high,1,1,Mahoz,מחוזא,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish academy city in Babylon during Talmudic period
+Babylon,Sura,44.2000,33.1000,200,200,1000,5000,8000,high,1,1,Sura,סורא,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Major Jewish academy city in Babylon during Talmudic period
+Babylon,Mata Mehasya,44.1500,33.0500,200,200,1000,1500,2500,high,1,1,Mata Mehasya,מתא מחסיא,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish community near Sura during Talmudic period
