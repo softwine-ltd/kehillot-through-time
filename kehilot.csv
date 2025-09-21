@@ -1,24 +1,24 @@
 ﻿country,city,long,lat,year_estab,year_start,year_end,pop_start,pop_end,probability,type,symbol,city_english,city_hebrew,city_yid,city_german,city_other,source,comment
-Egypt,Elephantine,32.8870,24.0855,-650,-650,-550,100,200,high,1,1,Elephantine,אלפנטין,Yeb,Yeb,,https://en.wikipedia.org/wiki/Elephantine,Jewish military colony on Elephantine Island during Persian period
-Egypt,Elephantine,32.8870,24.0855,-650,-550,-300,200,400,high,1,1,Elephantine,אלפנטין,Yeb,Yeb,,https://en.wikipedia.org/wiki/Elephantine,Jewish military colony on Elephantine Island during Persian period
-Egypt,Elephantine,32.8870,24.0855,-650,-300,-200,400,000,high,1,1,Elephantine,אלפנטין,Yeb,Yeb,,https://en.wikipedia.org/wiki/Elephantine,Jewish military colony on Elephantine Island during Persian period
-Egypt,Alexandria,29.9187,31.2001,-332,-332,-100,5000,15000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community established after city founding by Alexander the Great
-Egypt,Alexandria,29.9187,31.2001,-332,-100,100,15000,25000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Roman period - about 35% of city population
-Egypt,Alexandria,29.9187,31.2001,-332,100,300,25000,30000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during late Roman period
-Egypt,Alexandria,29.9187,31.2001,-332,300,500,30000,25000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Byzantine period
-Egypt,Alexandria,29.9187,31.2001,-332,500,700,25000,20000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during early Islamic period
-Egypt,Alexandria,29.9187,31.2001,-332,700,900,20000,15000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Islamic period
-Egypt,Alexandria,29.9187,31.2001,-332,900,1100,15000,12000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Fatimid period
-Egypt,Alexandria,29.9187,31.2001,-332,1100,1300,12000,10000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Ayyubid period
-Egypt,Alexandria,29.9187,31.2001,-332,1300,1500,10000,8000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Mamluk period
-Egypt,Alexandria,29.9187,31.2001,-332,1500,1700,8000,6000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Ottoman period
-Egypt,Alexandria,29.9187,31.2001,-332,1700,1900,6000,8000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during late Ottoman period
-Egypt,Alexandria,29.9187,31.2001,-332,1900,1920,8000,12000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during early 20th century
-Egypt,Alexandria,29.9187,31.2001,-332,1920,1940,12000,20000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during interwar period
-Egypt,Alexandria,29.9187,31.2001,-332,1940,1960,20000,5000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during WWII and post-war period
-Egypt,Alexandria,29.9187,31.2001,-332,1960,1980,5000,1000,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Nasser period
-Egypt,Alexandria,29.9187,31.2001,-332,1980,2000,1000,100,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during late 20th century
-Egypt,Alexandria,29.9187,31.2001,-332,2000,2023,100,12,high,1,1,Alexandria,אלכסנדריה,Alexandria,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community in modern Egypt - very small remaining community
+Egypt,Elephantine,32.8870,24.0855,-650,-650,-550,100,200,high,1,1,Elephantine,אלפנטין,,Yeb,,https://en.wikipedia.org/wiki/Elephantine,Jewish military colony on Elephantine Island during Persian period
+Egypt,Elephantine,32.8870,24.0855,-650,-550,-300,200,400,high,1,1,Elephantine,אלפנטין,,Yeb,,https://en.wikipedia.org/wiki/Elephantine,Jewish military colony on Elephantine Island during Persian period
+Egypt,Elephantine,32.8870,24.0855,-650,-300,-200,400,000,high,1,1,Elephantine,אלפנטין,,Yeb,,https://en.wikipedia.org/wiki/Elephantine,Jewish military colony on Elephantine Island during Persian period
+Egypt,Alexandria,29.9187,31.2001,-332,-332,-100,5000,15000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community established after city founding by Alexander the Great
+Egypt,Alexandria,29.9187,31.2001,-332,-100,100,15000,25000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Roman period - about 35% of city population
+Egypt,Alexandria,29.9187,31.2001,-332,100,300,25000,30000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during late Roman period
+Egypt,Alexandria,29.9187,31.2001,-332,300,500,30000,25000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Byzantine period
+Egypt,Alexandria,29.9187,31.2001,-332,500,700,25000,20000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during early Islamic period
+Egypt,Alexandria,29.9187,31.2001,-332,700,900,20000,15000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Islamic period
+Egypt,Alexandria,29.9187,31.2001,-332,900,1100,15000,12000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Fatimid period
+Egypt,Alexandria,29.9187,31.2001,-332,1100,1300,12000,10000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Ayyubid period
+Egypt,Alexandria,29.9187,31.2001,-332,1300,1500,10000,8000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Mamluk period
+Egypt,Alexandria,29.9187,31.2001,-332,1500,1700,8000,6000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Ottoman period
+Egypt,Alexandria,29.9187,31.2001,-332,1700,1900,6000,8000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during late Ottoman period
+Egypt,Alexandria,29.9187,31.2001,-332,1900,1920,8000,12000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during early 20th century
+Egypt,Alexandria,29.9187,31.2001,-332,1920,1940,12000,20000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during interwar period
+Egypt,Alexandria,29.9187,31.2001,-332,1940,1960,20000,5000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during WWII and post-war period
+Egypt,Alexandria,29.9187,31.2001,-332,1960,1980,5000,1000,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during Nasser period
+Egypt,Alexandria,29.9187,31.2001,-332,1980,2000,1000,100,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community during late 20th century
+Egypt,Alexandria,29.9187,31.2001,-332,2000,2023,100,12,high,1,1,Alexandria,אלכסנדריה,,Alexandria,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Alexandria,Jewish community in modern Egypt - very small remaining community
 Spain,Toledo,-4.0273,39.8628,700,700,800,500,800,high,1,1,Toledo,טולדו,Toledo,Toledo,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Spain,Jewish community established during Visigothic period
 Spain,Toledo,-4.0273,39.8628,700,800,1000,800,1200,high,1,1,Toledo,טולדו,Toledo,Toledo,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Spain,Jewish community during early Muslim period
 Spain,Toledo,-4.0273,39.8628,700,1000,1200,1200,2000,high,1,1,Toledo,טולדו,Toledo,Toledo,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Spain,Jewish community during Almoravid period
@@ -135,49 +135,49 @@ Brazil,Salvador,-38.5014,-12.9714,1940,1940,2023,30,1000,,,,,סלבדור,סלב
 Brazil,Curitiba,-49.2733,-25.4284,1950,1950,2023,40,1200,,,,,קוריטיבה,קוריטיבה,Curitiba,Curitiba,https://www.jewishvirtuallibrary.org/curitiba-brazil,Jewish community established in 1950s
 Brazil,Belo Horizonte,-43.9345,-19.9167,1960,1960,2023,30,1000,,,,,בלו הוריזונטה,בלו הוריזונטה,Belo Horizonte,Belo Horizonte,https://www.jewishvirtuallibrary.org/belo-horizonte-brazil,Jewish community established in 1960s
 Chile,Valparaíso,-71.6127,-33.0472,1930,1930,2023,20,500,,,,,ולפראיסו,ולפראיסו,Valparaíso,Valparaíso,https://www.jewishvirtuallibrary.org/valparaiso-chile,Jewish community established in 1930s
-Morocco,Casablanca,-7.5898,33.5731,1900,1900,2023,20000,2500,,,,,קזבלנקה,קזבלנקה,Casablanca,Casablanca,https://www.jewishvirtuallibrary.org/casablanca-morocco,Largest Jewish community in Morocco - established in 1900s
-Morocco,Fez,-5.0000,34.0331,1000,1000,2023,15000,1500,,,,,פאס,פאס,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco,Ancient Jewish community - established in 1000s
-Morocco,Marrakech,-7.9811,31.6295,1200,1200,2023,10000,1000,,,,,מרקש,מרקש,Marrakech,Marrakech,https://www.jewishvirtuallibrary.org/marrakech-morocco,Jewish community established in 1200s
-Morocco,Rabat,-6.8416,34.0209,1400,1400,2023,5000,500,,,,,רבאט,רבאט,Rabat,Rabat,https://www.jewishvirtuallibrary.org/rabat-morocco,Jewish community established in 1400s
-Morocco,Tangier,-5.8339,35.7595,1500,1500,2023,8000,1000,,,,,טנג'יר,טנג'יר,Tangier,Tangier,https://www.jewishvirtuallibrary.org/tangier-morocco,Jewish community established in 1500s
-Morocco,Meknes,-5.5547,33.8950,1600,1600,2023,7000,500,,,,,מקנס,מקנס,Meknes,Meknes,https://www.jewishvirtuallibrary.org/meknes-morocco,Jewish community established in 1600s
-Morocco,Agadir,-9.5981,30.4278,1700,1700,2023,3000,200,,,,,אגאדיר,אגאדיר,Agadir,Agadir,https://www.jewishvirtuallibrary.org/agadir-morocco,Jewish community established in 1700s
-Morocco,Essaouira,-9.7693,31.5085,1800,1800,2023,2000,100,,,,,אסואירה,אסואירה,Essaouira,Essaouira,https://www.jewishvirtuallibrary.org/essaouira-morocco,Jewish community established in 1800s
-Morocco,Oujda,-1.9086,34.6814,1900,1900,2023,1000,50,,,,,אוג'דה,אוג'דה,Oujda,Oujda,https://www.jewishvirtuallibrary.org/oujda-morocco,Jewish community established in 1900s
-Algeria,Algiers,3.0863,36.7372,1200,1200,2023,30000,100,,,,,אלג'יר,אלג'יר,Algiers,Algiers,https://www.jewishvirtuallibrary.org/algiers-algeria,Jewish community established in 1200s
-Algeria,Oran,-0.6331,35.6977,1400,1400,2023,25000,50,,,,,אוראן,אוראן,Oran,Oran,https://www.jewishvirtuallibrary.org/oran-algeria,Jewish community established in 1400s
-Algeria,Constantine,6.6147,36.3650,1500,1500,2023,15000,0,,,,,קונסטנטין,קונסטנטין,Constantine,Constantine,https://www.jewishvirtuallibrary.org/constantine-algeria,Jewish community established in 1500s
-Algeria,Annaba,7.7667,36.9000,1600,1600,2023,5000,0,,,,,אנאבה,אנאבה,Annaba,Annaba,https://www.jewishvirtuallibrary.org/annaba-algeria,Jewish community established in 1600s
-Algeria,Tlemcen,-1.3167,34.8828,1700,1700,2023,4000,0,,,,,תלמסן,תלמסן,Tlemcen,Tlemcen,https://www.jewishvirtuallibrary.org/tlemcen-algeria,Jewish community established in 1700s
-Algeria,Blida,2.9210,36.4700,1800,1800,2023,2000,0,,,,,בלידה,בלידה,Blida,Blida,https://www.jewishvirtuallibrary.org/blida-algeria,Jewish community established in 1800s
-Algeria,Mostaganem,0.0892,35.9333,1900,1900,2023,1000,0,,,,,מוסטגאנם,מוסטגאנם,Mostaganem,Mostaganem,https://www.jewishvirtuallibrary.org/mostaganem-algeria,Jewish community established in 1900s
-Tunisia,Tunis,10.1815,36.8065,1000,1000,2023,50000,1500,,,,,תוניס,תוניס,Tunis,Tunis,https://www.jewishvirtuallibrary.org/tunis-tunisia,Jewish community established in 1000s
-Tunisia,Sfax,10.7600,34.7390,1200,1200,2023,10000,100,,,,,ספאקס,ספאקס,Sfax,Sfax,https://www.jewishvirtuallibrary.org/sfax-tunisia,Jewish community established in 1200s
-Tunisia,Sousse,10.6360,35.8254,1300,1300,2023,8000,50,,,,,סוסה,סוסה,Sousse,Sousse,https://www.jewishvirtuallibrary.org/sousse-tunisia,Jewish community established in 1300s
-Tunisia,Gabès,10.0982,33.8815,1400,1400,2023,5000,0,,,,,גאבס,גאבס,Gabès,Gabès,https://www.jewishvirtuallibrary.org/gabes-tunisia,Jewish community established in 1400s
-Tunisia,Bizerte,9.8739,37.2744,1500,1500,2023,4000,0,,,,,ביזרטה,ביזרטה,Bizerte,Bizerte,https://www.jewishvirtuallibrary.org/bizerte-tunisia,Jewish community established in 1500s
-Tunisia,Djerba,10.8450,33.8076,1600,1600,2023,5000,1000,,,,,ג'רבה,ג'רבה,Djerba,Djerba,https://www.jewishvirtuallibrary.org/djerba-tunisia,Ancient Jewish community - established in 1600s
-Tunisia,Kairouan,10.1002,35.6711,1700,1700,2023,3000,0,,,,,קירואן,קירואן,Kairouan,Kairouan,https://www.jewishvirtuallibrary.org/kairouan-tunisia,Jewish community established in 1700s
-Tunisia,Monastir,10.8262,35.7771,1800,1800,2023,2000,0,,,,,מונסטיר,מונסטיר,Monastir,Monastir,https://www.jewishvirtuallibrary.org/monastir-tunisia,Jewish community established in 1800s
-Tunisia,Beja,9.1815,36.7256,1900,1900,2023,1000,0,,,,,בג'ה,בג'ה,Beja,Beja,https://www.jewishvirtuallibrary.org/beja-tunisia,Jewish community established in 1900s
-Libya,Tripoli,13.1913,32.8872,1000,1000,2023,38000,0,,,,,טריפולי,טריפולי,Tripoli,Tripoli,https://www.jewishvirtuallibrary.org/tripoli-libya,Jewish community established in 1000s
-Libya,Benghazi,20.0667,32.1167,1200,1200,2023,2500,0,,,,,בנגאזי,בנגאזי,Benghazi,Benghazi,https://www.jewishvirtuallibrary.org/benghazi-libya,Jewish community established in 1200s
-Libya,Misrata,15.0925,32.3754,1300,1300,2023,5000,0,,,,,מיסראטה,מיסראטה,Misrata,Misrata,https://www.jewishvirtuallibrary.org/misrata-libya,Jewish community established in 1300s
-Libya,Zliten,14.5687,32.4674,1400,1400,2023,3000,0,,,,,זליטן,זליטן,Zliten,Zliten,https://www.jewishvirtuallibrary.org/zliten-libya,Jewish community established in 1400s
-Libya,Derna,22.6367,32.7670,1500,1500,2023,2000,0,,,,,דרנה,דרנה,Derna,Derna,https://www.jewishvirtuallibrary.org/derna-libya,Jewish community established in 1500s
-Libya,Sabha,14.4283,27.0374,1600,1600,2023,1000,0,,,,,סבהא,סבהא,Sabha,Sabha,https://www.jewishvirtuallibrary.org/sabha-libya,Jewish community established in 1600s
-Libya,Ghadames,9.5000,30.1333,1700,1700,2023,500,0,,,,,ע'דאמס,ע'דאמס,Ghadames,Ghadames,https://www.jewishvirtuallibrary.org/ghadames-libya,Jewish community established in 1700s
-Libya,Zuwarah,12.0810,32.9312,1800,1800,2023,800,0,,,,,זווארה,זווארה,Zuwarah,Zuwarah,https://www.jewishvirtuallibrary.org/zuwarah-libya,Jewish community established in 1800s
-Libya,Ajdabiya,20.2264,30.7554,1900,1900,2023,300,0,,,,,אג'דאביה,אג'דאביה,Ajdabiya,Ajdabiya,https://www.jewishvirtuallibrary.org/ajdabiya-libya,Jewish community established in 1900s
-Egypt,Cairo,31.2357,30.0444,1000,1000,2023,80000,100,,,,,קהיר,קהיר,Cairo,Cairo,https://www.jewishvirtuallibrary.org/cairo-egypt,Jewish community established in 1000s
-Egypt,Alexandria,29.9187,31.2001,1200,1200,2023,40000,50,,,,,אלכסנדריה,אלכסנדריה,Alexandria,Alexandria,https://www.jewishvirtuallibrary.org/alexandria-egypt,Jewish community established in 1200s
-Egypt,Port Said,32.3019,31.2653,1300,1300,2023,10000,0,,,,,פורט סעיד,פורט סעיד,Port Said,Port Said,https://www.jewishvirtuallibrary.org/port-said-egypt,Jewish community established in 1300s
-Egypt,Ismailia,32.2654,30.5900,1400,1400,2023,5000,0,,,,,איסמעיליה,איסמעיליה,Ismailia,Ismailia,https://www.jewishvirtuallibrary.org/ismailia-egypt,Jewish community established in 1400s
-Egypt,Luxor,32.6396,25.6872,1500,1500,2023,3000,0,,,,,לוקסור,לוקסור,Luxor,Luxor,https://www.jewishvirtuallibrary.org/luxor-egypt,Jewish community established in 1500s
-Egypt,Aswan,32.9078,24.0889,1600,1600,2023,2000,0,,,,,אסואן,אסואן,Aswan,Aswan,https://www.jewishvirtuallibrary.org/aswan-egypt,Jewish community established in 1600s
-Egypt,Asyut,31.1806,27.1783,1700,1700,2023,1500,0,,,,,אסיוט,אסיוט,Asyut,Asyut,https://www.jewishvirtuallibrary.org/asyut-egypt,Jewish community established in 1700s
-Egypt,Tanta,31.0400,30.7833,1800,1800,2023,1000,0,,,,,טנטה,טנטה,Tanta,Tanta,https://www.jewishvirtuallibrary.org/tanta-egypt,Jewish community established in 1800s
-Egypt,Zagazig,31.3570,30.5877,1900,1900,2023,500,0,,,,,זקאזיק,זקאזיק,Zagazig,Zagazig,https://www.jewishvirtuallibrary.org/zagazig-egypt,Jewish community established in 1900s
+Morocco,Casablanca,-7.5898,33.5731,1900,1900,2023,20000,2500,,,,,קזבלנקה,,Casablanca,Casablanca,https://www.jewishvirtuallibrary.org/casablanca-morocco,Largest Jewish community in Morocco - established in 1900s
+Morocco,Fez,-5.0000,34.0331,1000,1000,2023,15000,1500,,,,,פאס,,Fez,Fez,https://www.jewishvirtuallibrary.org/fez-morocco,Ancient Jewish community - established in 1000s
+Morocco,Marrakech,-7.9811,31.6295,1200,1200,2023,10000,1000,,,,,מרקש,,Marrakech,Marrakech,https://www.jewishvirtuallibrary.org/marrakech-morocco,Jewish community established in 1200s
+Morocco,Rabat,-6.8416,34.0209,1400,1400,2023,5000,500,,,,,רבאט,,Rabat,Rabat,https://www.jewishvirtuallibrary.org/rabat-morocco,Jewish community established in 1400s
+Morocco,Tangier,-5.8339,35.7595,1500,1500,2023,8000,1000,,,,,טנג'יר,,Tangier,Tangier,https://www.jewishvirtuallibrary.org/tangier-morocco,Jewish community established in 1500s
+Morocco,Meknes,-5.5547,33.8950,1600,1600,2023,7000,500,,,,,מקנס,,Meknes,Meknes,https://www.jewishvirtuallibrary.org/meknes-morocco,Jewish community established in 1600s
+Morocco,Agadir,-9.5981,30.4278,1700,1700,2023,3000,200,,,,,אגאדיר,,Agadir,Agadir,https://www.jewishvirtuallibrary.org/agadir-morocco,Jewish community established in 1700s
+Morocco,Essaouira,-9.7693,31.5085,1800,1800,2023,2000,100,,,,,אסואירה,,Essaouira,Essaouira,https://www.jewishvirtuallibrary.org/essaouira-morocco,Jewish community established in 1800s
+Morocco,Oujda,-1.9086,34.6814,1900,1900,2023,1000,50,,,,,אוג'דה,,Oujda,Oujda,https://www.jewishvirtuallibrary.org/oujda-morocco,Jewish community established in 1900s
+Algeria,Algiers,3.0863,36.7372,1200,1200,2023,30000,100,,,,,אלג'יר,,Algiers,Algiers,https://www.jewishvirtuallibrary.org/algiers-algeria,Jewish community established in 1200s
+Algeria,Oran,-0.6331,35.6977,1400,1400,2023,25000,50,,,,,אוראן,,Oran,Oran,https://www.jewishvirtuallibrary.org/oran-algeria,Jewish community established in 1400s
+Algeria,Constantine,6.6147,36.3650,1500,1500,2023,15000,0,,,,,קונסטנטין,,Constantine,Constantine,https://www.jewishvirtuallibrary.org/constantine-algeria,Jewish community established in 1500s
+Algeria,Annaba,7.7667,36.9000,1600,1600,2023,5000,0,,,,,אנאבה,,Annaba,Annaba,https://www.jewishvirtuallibrary.org/annaba-algeria,Jewish community established in 1600s
+Algeria,Tlemcen,-1.3167,34.8828,1700,1700,2023,4000,0,,,,,תלמסן,,Tlemcen,Tlemcen,https://www.jewishvirtuallibrary.org/tlemcen-algeria,Jewish community established in 1700s
+Algeria,Blida,2.9210,36.4700,1800,1800,2023,2000,0,,,,,בלידה,,Blida,Blida,https://www.jewishvirtuallibrary.org/blida-algeria,Jewish community established in 1800s
+Algeria,Mostaganem,0.0892,35.9333,1900,1900,2023,1000,0,,,,,מוסטגאנם,,Mostaganem,Mostaganem,https://www.jewishvirtuallibrary.org/mostaganem-algeria,Jewish community established in 1900s
+Tunisia,Tunis,10.1815,36.8065,1000,1000,2023,50000,1500,,,,,תוניס,,Tunis,Tunis,https://www.jewishvirtuallibrary.org/tunis-tunisia,Jewish community established in 1000s
+Tunisia,Sfax,10.7600,34.7390,1200,1200,2023,10000,100,,,,,ספאקס,,Sfax,Sfax,https://www.jewishvirtuallibrary.org/sfax-tunisia,Jewish community established in 1200s
+Tunisia,Sousse,10.6360,35.8254,1300,1300,2023,8000,50,,,,,סוסה,,Sousse,Sousse,https://www.jewishvirtuallibrary.org/sousse-tunisia,Jewish community established in 1300s
+Tunisia,Gabès,10.0982,33.8815,1400,1400,2023,5000,0,,,,,גאבס,,Gabès,Gabès,https://www.jewishvirtuallibrary.org/gabes-tunisia,Jewish community established in 1400s
+Tunisia,Bizerte,9.8739,37.2744,1500,1500,2023,4000,0,,,,,ביזרטה,,Bizerte,Bizerte,https://www.jewishvirtuallibrary.org/bizerte-tunisia,Jewish community established in 1500s
+Tunisia,Djerba,10.8450,33.8076,1600,1600,2023,5000,1000,,,,,ג'רבה,,Djerba,Djerba,https://www.jewishvirtuallibrary.org/djerba-tunisia,Ancient Jewish community - established in 1600s
+Tunisia,Kairouan,10.1002,35.6711,1700,1700,2023,3000,0,,,,,קירואן,,Kairouan,Kairouan,https://www.jewishvirtuallibrary.org/kairouan-tunisia,Jewish community established in 1700s
+Tunisia,Monastir,10.8262,35.7771,1800,1800,2023,2000,0,,,,,מונסטיר,,Monastir,Monastir,https://www.jewishvirtuallibrary.org/monastir-tunisia,Jewish community established in 1800s
+Tunisia,Beja,9.1815,36.7256,1900,1900,2023,1000,0,,,,,בג'ה,,Beja,Beja,https://www.jewishvirtuallibrary.org/beja-tunisia,Jewish community established in 1900s
+Libya,Tripoli,13.1913,32.8872,1000,1000,2023,38000,0,,,,,טריפולי,,Tripoli,Tripoli,https://www.jewishvirtuallibrary.org/tripoli-libya,Jewish community established in 1000s
+Libya,Benghazi,20.0667,32.1167,1200,1200,2023,2500,0,,,,,בנגאזי,,Benghazi,Benghazi,https://www.jewishvirtuallibrary.org/benghazi-libya,Jewish community established in 1200s
+Libya,Misrata,15.0925,32.3754,1300,1300,2023,5000,0,,,,,מיסראטה,,Misrata,Misrata,https://www.jewishvirtuallibrary.org/misrata-libya,Jewish community established in 1300s
+Libya,Zliten,14.5687,32.4674,1400,1400,2023,3000,0,,,,,זליטן,,Zliten,Zliten,https://www.jewishvirtuallibrary.org/zliten-libya,Jewish community established in 1400s
+Libya,Derna,22.6367,32.7670,1500,1500,2023,2000,0,,,,,דרנה,,Derna,Derna,https://www.jewishvirtuallibrary.org/derna-libya,Jewish community established in 1500s
+Libya,Sabha,14.4283,27.0374,1600,1600,2023,1000,0,,,,,סבהא,,Sabha,Sabha,https://www.jewishvirtuallibrary.org/sabha-libya,Jewish community established in 1600s
+Libya,Ghadames,9.5000,30.1333,1700,1700,2023,500,0,,,,,ע'דאמס,,Ghadames,Ghadames,https://www.jewishvirtuallibrary.org/ghadames-libya,Jewish community established in 1700s
+Libya,Zuwarah,12.0810,32.9312,1800,1800,2023,800,0,,,,,זווארה,,Zuwarah,Zuwarah,https://www.jewishvirtuallibrary.org/zuwarah-libya,Jewish community established in 1800s
+Libya,Ajdabiya,20.2264,30.7554,1900,1900,2023,300,0,,,,,אג'דאביה,,Ajdabiya,Ajdabiya,https://www.jewishvirtuallibrary.org/ajdabiya-libya,Jewish community established in 1900s
+Egypt,Cairo,31.2357,30.0444,1000,1000,2023,80000,100,,,,,קהיר,,Cairo,Cairo,https://www.jewishvirtuallibrary.org/cairo-egypt,Jewish community established in 1000s
+Egypt,Alexandria,29.9187,31.2001,1200,1200,2023,40000,50,,,,,אלכסנדריה,,Alexandria,Alexandria,https://www.jewishvirtuallibrary.org/alexandria-egypt,Jewish community established in 1200s
+Egypt,Port Said,32.3019,31.2653,1300,1300,2023,10000,0,,,,,פורט סעיד,,Port Said,Port Said,https://www.jewishvirtuallibrary.org/port-said-egypt,Jewish community established in 1300s
+Egypt,Ismailia,32.2654,30.5900,1400,1400,2023,5000,0,,,,,איסמעיליה,,Ismailia,Ismailia,https://www.jewishvirtuallibrary.org/ismailia-egypt,Jewish community established in 1400s
+Egypt,Luxor,32.6396,25.6872,1500,1500,2023,3000,0,,,,,לוקסור,,Luxor,Luxor,https://www.jewishvirtuallibrary.org/luxor-egypt,Jewish community established in 1500s
+Egypt,Aswan,32.9078,24.0889,1600,1600,2023,2000,0,,,,,אסואן,,Aswan,Aswan,https://www.jewishvirtuallibrary.org/aswan-egypt,Jewish community established in 1600s
+Egypt,Asyut,31.1806,27.1783,1700,1700,2023,1500,0,,,,,אסיוט,,Asyut,Asyut,https://www.jewishvirtuallibrary.org/asyut-egypt,Jewish community established in 1700s
+Egypt,Tanta,31.0400,30.7833,1800,1800,2023,1000,0,,,,,טנטה,,Tanta,Tanta,https://www.jewishvirtuallibrary.org/tanta-egypt,Jewish community established in 1800s
+Egypt,Zagazig,31.3570,30.5877,1900,1900,2023,500,0,,,,,זקאזיק,,Zagazig,Zagazig,https://www.jewishvirtuallibrary.org/zagazig-egypt,Jewish community established in 1900s
 Iraq,Baghdad,44.3661,33.3152,1000,1000,2023,90000,0,,,,,בגדאד,בגדאד,Baghdad,Baghdad,https://www.jewishvirtuallibrary.org/baghdad-iraq,Jewish community established in 1000s
 Iraq,Basra,47.7835,30.5081,1200,1200,2023,10000,0,,,,,בצרה,בצרה,Basra,Basra,https://www.jewishvirtuallibrary.org/basra-iraq,Jewish community established in 1200s
 Iraq,Mosul,43.1199,36.3650,1300,1300,2023,8000,0,,,,,מוסול,מוסול,Mosul,Mosul,https://www.jewishvirtuallibrary.org/mosul-iraq,Jewish community established in 1300s
@@ -2774,4 +2774,4 @@ Israel,Zoran,35.1,32.8,1994,1994,2023,30,30,,,,,צורן,,,,https://he.wikipedia
 Israel,Revava,35.1,32.8,1991,1991,2023,30,30,,,,,רבבה,,,,https://he.wikipedia.org/wiki/%D7%A8%D7%91%D7%91%D7%94,
 Israel,Shoham,35.1,32.8,1993,1993,2023,30,30,,,,,שוהם,,,,https://he.wikipedia.org/wiki/%D7%A9%D7%95%D7%97%D7%9D,
 Israel,Se'orim,35.1,32.8,1991,1991,2023,30,30,,,,,שעורים,,,,https://he.wikipedia.org/wiki/%D7%A9%D7%A2%D7%95%D7%A8%D7%99%D7%9D,
-Israel,Sha'are Avraham,35.1,32.8,1991,1991,2023,30,30,,,,,שערי אברהם,,,,https://he.wikipedia.org/wiki/%D7%A9%D7%A2%D7%A8%D7%99_%D7%90%D7%91%D7%A8%D7%94%D7%9D,
+Israel,Sha'are Avraham,35.1,32.8,1991,1991,2023,30,30,,,,,שערי אברהם,,,,https://he.wikipedia.org/wiki/%D7%A9%D7%A2%D7%A8%D7%99_%D7%90%D7%91%D7%A8%D7%94%D7%9D
