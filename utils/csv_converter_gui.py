@@ -26,6 +26,7 @@ class CSVConverterGUI:
         self.converted_data = None
         self.df = None
         self.input_file_path = None  # Store the input file path
+        self.input_format = "unknown"  # Format detection: "input", "kehilot", "unknown"
         
         self.setup_ui()
         
@@ -54,7 +55,7 @@ class CSVConverterGUI:
         data_frame.grid(row=1, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.N, tk.S), pady=(0, 10))
         
         # Treeview for data display
-        columns = ['country', 'city', 'long', 'lat', 'year_estab', 'year_start', 'year_end', 
+        columns = ['line_num', 'country', 'city', 'long', 'lat', 'year_estab', 'year_start', 'year_end', 
                   'pop_start', 'pop_end', 'probability', 'type', 'symbol', 'city_english', 
                   'city_hebrew', 'city_yid', 'city_german', 'city_other', 'source', 'comment']
         
@@ -62,8 +63,21 @@ class CSVConverterGUI:
         
         # Configure columns
         for col in columns:
-            self.tree.heading(col, text=col)
-            self.tree.column(col, width=100, minwidth=50)
+            if col == 'line_num':
+                self.tree.heading(col, text='#')
+                self.tree.column(col, width=20, minwidth=10)
+            elif  col in ['source', 'comment']:
+                self.tree.heading(col, text=col)
+                self.tree.column(col, width=150, minwidth=100)
+            elif col in ['year_estab', 'year_start', 'year_end']:
+                self.tree.heading(col, text=col)
+                self.tree.column(col, width=30, minwidth=50)
+            elif col in ['type', 'symbol']:
+                self.tree.heading(col, text=col)
+                self.tree.column(col, width=30, minwidth=50)
+            else:
+                self.tree.heading(col, text=col)
+                self.tree.column(col, width=70, minwidth=50)
         
         # Scrollbars
         v_scrollbar = ttk.Scrollbar(data_frame, orient=tk.VERTICAL, command=self.tree.yview)
@@ -120,14 +134,56 @@ class CSVConverterGUI:
             self.load_original_data(file_path)
     
     def load_original_data(self, file_path):
-        """Load the original CSV data"""
+        """Load the original CSV data and detect format"""
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 reader = csv.reader(f)
                 self.original_data = list(reader)
-            self.status_label.config(text=f"Loaded {len(self.original_data)} rows from file")
+            
+            # Detect format based on number of columns
+            if len(self.original_data) > 0:
+                first_row = self.original_data[0]
+                if len(first_row) == 19:
+                    self.input_format = "kehilot"  # Already in kehilot.csv format
+                    self.status_label.config(text=f"Loaded {len(self.original_data)} rows (kehilot.csv format) - displaying...")
+                    # Immediately display the data since it's already in the correct format
+                    try:
+                        self._display_kehilot_data()
+                    except Exception as e:
+                        self.status_label.config(text=f"Error displaying: {str(e)}")
+                        print(f"Error in _display_kehilot_data: {e}")
+                elif len(first_row) == 9:
+                    self.input_format = "input"  # Input format (9 columns)
+                    self.status_label.config(text=f"Loaded {len(self.original_data)} rows (input format) - converting automatically...")
+                    # Automatically start conversion for 9-column files
+                    try:
+                        self.convert_data()
+                    except Exception as e:
+                        self.status_label.config(text=f"Error converting: {str(e)}")
+                        print(f"Error in convert_data: {e}")
+                else:
+                    self.input_format = "unknown"
+                    self.status_label.config(text=f"Loaded {len(self.original_data)} rows (unknown format - {len(first_row)} columns)")
+            else:
+                self.input_format = "empty"
+                self.status_label.config(text="File is empty")
+                
         except Exception as e:
             messagebox.showerror("Error", f"Failed to load file: {str(e)}")
+    
+    def _display_kehilot_data(self):
+        """Immediately display kehilot.csv format data without conversion"""
+        try:
+            # Use the original data as converted data since it's already in the right format
+            self.converted_data = self.original_data
+            self.df = pd.DataFrame(self.converted_data)
+            
+            # Update the display
+            self.refresh_display()
+            self.status_label.config(text=f"Displayed {len(self.converted_data)} rows (kehilot.csv format)")
+            
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to display data: {str(e)}")
     
     def convert_data(self):
         """Convert the data to kehilot.csv format"""
@@ -146,34 +202,54 @@ class CSVConverterGUI:
     def _convert_data_thread(self):
         """Convert data in a separate thread"""
         try:
-            # Skip header row
-            data_rows = self.original_data[1:] if len(self.original_data) > 1 else []
-            
             converted_rows = []
             
-            for i, row in enumerate(data_rows):
-                if len(row) < 9:  # Ensure we have enough columns
-                    continue
+            if self.input_format == "kehilot":
+                # Already in kehilot.csv format - just use as is
+                data_rows = self.original_data
+                for i, row in enumerate(data_rows):
+                    if len(row) >= 19:  # Ensure we have enough columns for kehilot format
+                        converted_rows.append(row)
+            
+            elif self.input_format == "input":
+                # Input format - convert to kehilot.csv format
+                # Check if first row is a header
+                data_rows = self.original_data
+                num_data_rows = len(data_rows)
+                if num_data_rows > 0:
+                    first_row = data_rows[0]
+                    # Check if first row looks like a header
+                    if any(header_word in first_row[0].lower() for header_word in ['country', 'town', 'name']):
+                        data_rows = data_rows[1:]  # Skip header
                 
-                # Extract data from original format
-                country = row[0].strip()
-                city = row[1].strip()
-                longitude = row[2].strip()
-                latitude = row[3].strip()
-                year_estab = row[4].strip()
-                year_data = row[5].strip()
-                population = row[6].strip()
-                notes = row[7].strip()
-                source = row[8].strip()
-                
-                # Convert to kehilot.csv format
-                converted_row = self.convert_single_row(
-                    country, city, longitude, latitude, year_estab, 
-                    year_data, population, notes, source, i, data_rows
-                )
-                
-                if converted_row:
-                    converted_rows.append(converted_row)
+                for i, row in enumerate(data_rows):
+                    if len(row) < 9:  # Ensure we have enough columns
+                        continue
+                    self.status_label.config(text=f"Converting line {i}/{num_data_rows}...")
+                    # Extract data from input format
+                    country = row[0].strip()
+                    city = row[1].strip()
+                    longitude = row[2].strip()
+                    latitude = row[3].strip()
+                    year_estab = row[4].strip()
+                    year_data = row[5].strip()
+                    population = row[6].strip()
+                    notes = row[7].strip()
+                    source = row[8].strip()
+                    
+                    # Convert to kehilot.csv format
+                    converted_row = self.convert_single_row(
+                        country, city, longitude, latitude, year_estab, 
+                        year_data, population, notes, source, i, data_rows
+                    )
+                    
+                    if converted_row:
+                        converted_rows.append(converted_row)
+            
+            else:
+                # Unknown format - try to handle gracefully
+                messagebox.showwarning("Warning", f"Unknown file format with {len(self.original_data[0]) if self.original_data else 0} columns")
+                return
             
             self.converted_data = converted_rows
             self.df = pd.DataFrame(converted_rows)
@@ -587,7 +663,7 @@ class CSVConverterGUI:
         """Start editing a cell"""
         # Get the column index
         col_index = int(column.replace('#', '')) - 1
-        columns = ['country', 'city', 'long', 'lat', 'year_estab', 'year_start', 'year_end', 
+        columns = ['line_num', 'country', 'city', 'long', 'lat', 'year_estab', 'year_start', 'year_end', 
                   'pop_start', 'pop_end', 'probability', 'type', 'symbol', 'city_english', 
                   'city_hebrew', 'city_yid', 'city_german', 'city_other', 'source', 'comment']
         
@@ -596,7 +672,11 @@ class CSVConverterGUI:
         
         col_name = columns[col_index]
         
-        # Get current value
+        # Don't allow editing of line numbers
+        if col_name == 'line_num':
+            return
+        
+        # Get current value (adjust for line number column)
         current_value = self.tree.item(item, 'values')[col_index]
         
         # Get cell coordinates
@@ -679,14 +759,17 @@ class CSVConverterGUI:
         # Get the item index
         item_index = self.tree.index(item)
         
-        # Update the data
+        # Update the data (adjust for line number column)
         if item_index < len(self.converted_data):
-            self.converted_data[item_index][col_index] = new_value
-            
-            # Update the tree display
-            values = list(self.tree.item(item, 'values'))
-            values[col_index] = new_value
-            self.tree.item(item, values=values)
+            # col_index includes line number column, so subtract 1 for actual data
+            data_col_index = col_index - 1
+            if data_col_index >= 0 and data_col_index < len(self.converted_data[item_index]):
+                self.converted_data[item_index][data_col_index] = new_value
+                
+                # Update the tree display
+                values = list(self.tree.item(item, 'values'))
+                values[col_index] = new_value
+                self.tree.item(item, values=values)
             
             # Update status
             self.status_label.config(text=f"Updated row {item_index + 1}, column {col_index + 1}")
@@ -710,9 +793,11 @@ class CSVConverterGUI:
             for item in self.tree.get_children():
                 self.tree.delete(item)
             
-            # Insert new data
+            # Insert new data with line numbers
             for index, row in self.df.iterrows():
-                self.tree.insert('', 'end', values=list(row))
+                # Add line number as first column
+                values_with_line_num = [index + 1] + list(row)
+                self.tree.insert('', 'end', values=values_with_line_num)
     
     def save_to_csv(self):
         """Save the converted data to a new CSV file"""
@@ -773,7 +858,7 @@ class CSVConverterGUI:
             csv_string = "country,city,long,lat,year_estab,year_start,year_end,pop_start,pop_end,probability,type,symbol,city_english,city_hebrew,city_yid,city_german,city_other,source,comment\n"
             
             for row in self.converted_data:
-                csv_string += ",".join(f'"{str(cell)}"' for cell in row) + "\n"
+                csv_string += ",".join(f'{str(cell)}' for cell in row) + "\n"
             
             # Copy to clipboard
             pyperclip.copy(csv_string)
