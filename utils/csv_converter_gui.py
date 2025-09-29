@@ -19,7 +19,7 @@ class CSVConverterGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("CSV Converter for kehilot.csv")
-        self.root.geometry("2400x1300")
+        self.root.geometry("2400x1300+100+50")
         
         # Data storage
         self.original_data = None
@@ -99,18 +99,58 @@ class CSVConverterGUI:
         self.tree.bind('<Button-3>', self.on_right_click)  # Right-click for context menu
         self.tree.bind('<F2>', self.on_f2_edit)  # F2 key to edit selected cell
         
+        # Original data display frame (only for 9-column input files)
+        self.original_data_frame = ttk.LabelFrame(main_frame, text="Original CSV Data (Selected Line + Next Line)", padding="5")
+        self.original_data_frame.grid(row=2, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.N, tk.S), pady=(0, 10))
+        
+        # Treeview for original data display
+        original_columns = ['line', 'Country', 'Town Name', 'Longitude', 'Latitude', 'Year Established', 
+                           'Year of Population Data or Event', 'Size of Jewish Population', 'Notes', 'Source']
+        
+        self.original_tree = ttk.Treeview(self.original_data_frame, columns=original_columns, show='headings', height=2)
+        
+        # Configure original data columns
+        for col in original_columns:
+            if col == 'line':
+                self.original_tree.heading(col, text='#')
+                self.original_tree.column(col, width=30, minwidth=20)
+            elif col in ['Notes', 'Source']:
+                self.original_tree.heading(col, text=col)
+                self.original_tree.column(col, width=200, minwidth=100)
+            else:
+                self.original_tree.heading(col, text=col)
+                self.original_tree.column(col, width=100, minwidth=80)
+        
+        # Scrollbar for original data
+        original_v_scrollbar = ttk.Scrollbar(self.original_data_frame, orient=tk.VERTICAL, command=self.original_tree.yview)
+        original_h_scrollbar = ttk.Scrollbar(self.original_data_frame, orient=tk.HORIZONTAL, command=self.original_tree.xview)
+        self.original_tree.configure(yscrollcommand=original_v_scrollbar.set, xscrollcommand=original_h_scrollbar.set)
+        
+        # Grid layout for original data
+        self.original_tree.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        original_v_scrollbar.grid(row=0, column=1, sticky=(tk.N, tk.S))
+        original_h_scrollbar.grid(row=1, column=0, sticky=(tk.W, tk.E))
+        
+        # Configure grid weights for original data
+        self.original_data_frame.columnconfigure(0, weight=1)
+        self.original_data_frame.rowconfigure(0, weight=1)
+        
+        # Initially hide the original data frame
+        self.original_data_frame.grid_remove()
+        
         # Variables for editing
         self.editing_item = None
         self.editing_column = None
         self.edit_window = None
         main_frame.columnconfigure(0, weight=1)
         main_frame.rowconfigure(1, weight=1)
+        main_frame.rowconfigure(2, weight=0)  # Original data frame doesn't expand
         self.root.columnconfigure(0, weight=1)
         self.root.rowconfigure(0, weight=1)
         
         # Action buttons frame
         action_frame = ttk.Frame(main_frame)
-        action_frame.grid(row=2, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=(10, 0))
+        action_frame.grid(row=3, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=(10, 0))
         
         ttk.Button(action_frame, text="Save to CSV", command=self.save_to_csv).grid(row=0, column=0, padx=(0, 10))
         ttk.Button(action_frame, text="Copy to Clipboard", command=self.copy_to_clipboard).grid(row=0, column=1, padx=(0, 10))
@@ -118,7 +158,7 @@ class CSVConverterGUI:
         
         # Status label
         self.status_label = ttk.Label(main_frame, text="Ready")
-        self.status_label.grid(row=3, column=0, columnspan=2, sticky=tk.W, pady=(10, 0))
+        self.status_label.grid(row=4, column=0, columnspan=2, sticky=tk.W, pady=(10, 0))
         
     def select_file(self):
         """Select CSV file to convert"""
@@ -143,9 +183,14 @@ class CSVConverterGUI:
             # Detect format based on number of columns
             if len(self.original_data) > 0:
                 first_row = self.original_data[0]
+                # Update status to show what we're checking
+                self.status_label.config(text=f"Checking format: {len(first_row)} columns")
+                print(f"DEBUG: First row has {len(first_row)} columns: {first_row[:5]}...")
                 if len(first_row) == 19:
                     self.input_format = "kehilot"  # Already in kehilot.csv format
                     self.status_label.config(text=f"Loaded {len(self.original_data)} rows (kehilot.csv format) - displaying...")
+                    # Hide the original data frame for 19-column files
+                    self.original_data_frame.grid_remove()
                     # Immediately display the data since it's already in the correct format
                     try:
                         self._display_kehilot_data()
@@ -155,6 +200,8 @@ class CSVConverterGUI:
                 elif len(first_row) == 9:
                     self.input_format = "input"  # Input format (9 columns)
                     self.status_label.config(text=f"Loaded {len(self.original_data)} rows (input format) - converting automatically...")
+                    # Show the original data frame for 9-column files
+                    self.original_data_frame.grid()
                     # Automatically start conversion for 9-column files
                     try:
                         self.convert_data()
@@ -169,6 +216,7 @@ class CSVConverterGUI:
                 self.status_label.config(text="File is empty")
                 
         except Exception as e:
+            self.status_label.config(text=f"Error loading file: {str(e)}")
             messagebox.showerror("Error", f"Failed to load file: {str(e)}")
     
     def _display_kehilot_data(self):
@@ -612,6 +660,9 @@ class CSVConverterGUI:
             item = self.tree.identify_row(event.y)
             if item:
                 self.tree.selection_set(item)
+                # Update original data display if this is a 9-column input file
+                if self.input_format == "input" and self.original_data is not None:
+                    self.update_original_data_display(item)
     
     def on_right_click(self, event):
         """Handle right-click to show context menu"""
@@ -867,6 +918,59 @@ class CSVConverterGUI:
             
         except Exception as e:
             messagebox.showerror("Error", f"Failed to copy to clipboard: {str(e)}")
+    
+    def update_original_data_display(self, selected_item):
+        """Update the original data display with the selected line and next line"""
+        if self.original_data is None or len(self.original_data) <= 1:
+            return
+        
+        # Clear existing data
+        for item in self.original_tree.get_children():
+            self.original_tree.delete(item)
+        
+        # Get the selected row index from the Treeview item
+        # The selected_item is a Treeview item ID, we need to get its position
+        children = self.tree.get_children()
+        try:
+            selected_index = children.index(selected_item)
+        except ValueError:
+            # If item not found, return
+            return
+        
+        # Keep the selected_index as is, but adjust the data access
+        # The user reports seeing the next row instead of the selected row,
+        # so we need to access the data with selected_index instead of selected_index + 1
+        
+        # Show the selected line and next line (if available)
+        lines_to_show = []
+        
+          # Add the selected line (skip header row in original_data)
+        if 0 <= selected_index < len(self.original_data) :
+            lines_to_show.append((selected_index , self.original_data[selected_index ]))
+        
+        # Add the next line if it exists
+        if selected_index + 1 < len(self.original_data):  # -1 to account for header
+            lines_to_show.append((selected_index + 1, self.original_data[selected_index + 1]))  # +1 to skip header
+        
+        # Populate the treeview
+        for line_num, row_data in lines_to_show:
+            # Ensure we have enough columns (pad with empty strings if needed)
+            while len(row_data) < 10:
+                row_data.append("")
+            
+            # Insert the row
+            self.original_tree.insert("", "end", values=[
+                line_num,
+                row_data[0] if len(row_data) > 0 else "",  # Country
+                row_data[1] if len(row_data) > 1 else "",  # Town Name
+                row_data[2] if len(row_data) > 2 else "",  # Longitude
+                row_data[3] if len(row_data) > 3 else "",  # Latitude
+                row_data[4] if len(row_data) > 4 else "",  # Year Established
+                row_data[5] if len(row_data) > 5 else "",  # Year of Population Data or Event
+                row_data[6] if len(row_data) > 6 else "",  # Size of Jewish Population
+                row_data[7] if len(row_data) > 7 else "",  # Notes
+                row_data[8] if len(row_data) > 8 else ""   # Source
+            ])
 
 def main():
     root = tk.Tk()
