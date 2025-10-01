@@ -4,6 +4,7 @@ CSV Converter GUI for kehilot.csv format
 Converts CSV files with specific columns to kehilot.csv format
 """
 import os
+import json
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 import csv
@@ -27,6 +28,11 @@ class CSVConverterGUI:
         self.df = None
         self.input_file_path = None  # Store the input file path
         self.input_format = "unknown"  # Format detection: "input", "kehilot", "unknown"
+        
+        # City names cache
+        self.cache_file = "utils/city_names_cache.json"
+        self.city_names_cache = {}
+        self.load_city_names_cache()
         
         self.setup_ui()
         
@@ -373,7 +379,20 @@ class CSVConverterGUI:
             return None
     
     def get_city_names(self, city, country):
-        """Get additional city names from Wikipedia interlanguage links"""
+        """Get additional city names from Wikipedia interlanguage links with caching"""
+        # Create a cache key combining city and country
+        cache_key = f"{city}|{country}".lower().strip()
+        
+        # Ensure cache is initialized
+        if not hasattr(self, 'city_names_cache'):
+            self.city_names_cache = {}
+        
+        # Check if we have this city in cache
+        if cache_key in self.city_names_cache:
+            cached_result = self.city_names_cache[cache_key].copy()
+            cached_result['english'] = city  # Always use the current city name
+            return cached_result
+        
         city_names = {
             'english': city,
             'hebrew': '',
@@ -642,7 +661,45 @@ class CSVConverterGUI:
             if city in common_mappings:
                 city_names.update(common_mappings[city])
         
+        # Store the result in cache
+        cache_result = city_names.copy()
+        cache_result['english'] = city  # Store the original city name
+        self.city_names_cache[cache_key] = cache_result
+        
+        # Save cache
+        if len(self.city_names_cache):
+            self.save_city_names_cache()
+        
         return city_names
+    
+    def load_city_names_cache(self):
+        """Load city names cache from file"""
+        try:
+            if os.path.exists(self.cache_file):
+                with open(self.cache_file, 'r', encoding='utf-8') as f:
+                    self.city_names_cache = json.load(f)
+                print(f"Loaded {len(self.city_names_cache)} city names from cache")
+            else:
+                print("No city names cache file found, starting with empty cache")
+        except Exception as e:
+            print(f"Error loading city names cache: {e}")
+            self.city_names_cache = {}
+    
+    def save_city_names_cache(self):
+        """Save city names cache to file"""
+        try:
+            # Ensure the utils directory exists
+            os.makedirs(os.path.dirname(self.cache_file), exist_ok=True)
+            
+            with open(self.cache_file, 'w', encoding='utf-8') as f:
+                json.dump(self.city_names_cache, f, ensure_ascii=False, indent=2)
+            print(f"Saved {len(self.city_names_cache)} city names to cache")
+        except Exception as e:
+            print(f"Error saving city names cache: {e}")
+    
+    def cleanup(self):
+        """Cleanup method to save cache before closing"""
+        self.save_city_names_cache()
     
     def on_double_click(self, event):
         """Handle double-click to start editing"""
@@ -975,6 +1032,13 @@ class CSVConverterGUI:
 def main():
     root = tk.Tk()
     app = CSVConverterGUI(root)
+    
+    # Set up cleanup on window close
+    def on_closing():
+        app.cleanup()
+        root.destroy()
+    
+    root.protocol("WM_DELETE_WINDOW", on_closing)
     root.mainloop()
 
 if __name__ == "__main__":
