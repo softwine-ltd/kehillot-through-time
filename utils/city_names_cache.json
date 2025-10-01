@@ -1,0 +1,16 @@
+{
+  "prague|czech republic": {
+    "english": "Prague",
+    "hebrew": "פראג",
+    "yiddish": "פראג",
+    "german": "Prag",
+    "other": "Praha"
+  },
+  "los angeles|united states": {
+    "english": "Los Angeles",
+    "hebrew": "לוס אנג'לס",
+    "yiddish": "לאס אנדזשעלעס",
+    "german": "Los Angeles",
+    "other": "Los Angeles"
+  }
+}
