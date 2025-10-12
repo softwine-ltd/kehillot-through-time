@@ -2,7 +2,6 @@
 /.idea/misc.xml
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/vcs.xml
-.git/*
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
