@@ -398,10 +398,12 @@ async function loadHistoricalArrows() {
         historicalArrows = rows
             .filter(row => row.trim()) // Skip empty rows
             .map(row => {
+                const cols = parseCSVLine(row);
                 const [
                     startLat, startLon, endLat, endLon, midLat, midLon,
                     yearStart, yearEnd, titleEn, titleHe, color, description
-                ] = parseCSVLine(row);
+                ] = cols;
+                const url = cols[12]; // optional URL column (backward compatible)
                 
                 // Convert color string to actual color variable
                 let colorValue;
@@ -419,6 +421,19 @@ async function loadHistoricalArrows() {
                         colorValue = expulsion_color; // Default fallback
                 }
                 
+                // Build final URL: prefer provided URL, otherwise generate a Wikipedia link from English title
+                const buildFallbackUrl = (title) => {
+                    if (!title) return '';
+                    try {
+                        // Remove extra spaces and some bracketed details for cleaner URLs
+                        const cleaned = title
+                            .replace(/\s*\([^\)]*\)\s*/g, ' ') // remove parentheses content
+                            .replace(/\s+/g, ' ')                 // collapse whitespace
+                            .trim();
+                        return `https://en.wikipedia.org/wiki/${encodeURIComponent(cleaned.replace(/\s+/g, '_'))}`;
+                    } catch (_) { return ''; }
+                };
+
                 return {
                     startLat: parseFloat(startLat),
                     startLon: parseFloat(startLon),
@@ -431,7 +446,8 @@ async function loadHistoricalArrows() {
                     titleEn: titleEn,
                     titleHe: titleHe,
                     color: colorValue,
-                    description: description
+                    description: description,
+                    url: (url ? url.replace(/"/g, '') : '') || buildFallbackUrl(titleEn)
                 };
             });
         
@@ -2398,6 +2414,14 @@ function createArrow(arrowData) {
     });
 
     // Create popup content for the arrow
+    const linkHtml = arrowData.url ? `
+            <div class="tooltip-link" style="margin-top:6px;">
+                <a href="${arrowData.url}" target="_blank" style="color: #3b82f6; text-decoration: underline; font-size: 12px;">
+                    Learn more ↗
+                </a>
+            </div>
+        ` : '';
+
     const popupContent = `
         <div style="direction: rtl; text-align: right;">
             <strong style="font-size: 16px;">${arrowData.titleHe}</strong>
@@ -2412,6 +2436,7 @@ function createArrow(arrowData) {
             <div style="margin: 8px 0;">
                 <strong>תיאור:</strong> ${arrowData.description}
             </div>
+            ${linkHtml}
         </div>
     `;
 
