@@ -852,7 +852,7 @@ body {
 
 /* Ensure labels appear on the right side of controls in RTL */
 .rtl .timeline-section label {
-    order: 2;
+    order: 3;
     margin-left: 0.5rem;
     margin-right: 0;
 }
@@ -860,13 +860,13 @@ body {
 .rtl .timeline-section input,
 .rtl .timeline-section select,
 .rtl .timeline-section button {
-    order: 1;
+    order: 2;
 }
 
 .rtl .timeline-section span {
-    order: 3;
-    margin-left: 0.5rem;
-    margin-right: 0;
+    order: 1;
+    margin-left: 0;
+    margin-right: 0.5rem;
 }
 
 /* RTL adjustments for year display */
@@ -882,6 +882,26 @@ body {
 /* RTL adjustments for historical periods timeline */
 .rtl .timeline-section #historical-periods .relative {
     text-align: right;
+}
+
+/* RTL adjustments for search control group - specific ordering */
+.rtl .timeline-section #citySearch {
+    order: 2;
+}
+
+.rtl .timeline-section #clearSearch {
+    order: 1;
+    margin-right: 0.5rem;
+    margin-left: 0;
+}
+
+.rtl .timeline-section label[for="citySearch"] {
+    order: 3;
+}
+
+/* RTL layout for search control group - using more compatible selectors */
+.rtl .timeline-section .flex > div.flex.items-center {
+    flex-direction: row-reverse;
 }
 
 /* RTL adjustments for modals */

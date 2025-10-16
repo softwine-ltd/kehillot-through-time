@@ -666,7 +666,7 @@ function updateMarkers(kehilot) {
     }
 }
 var playIntervalGlobal = null;
-var animationSpeed = 4; // Default speed multiplier
+var animationSpeed = 2; // Default speed multiplier
 
 function initializeMap() {
     // Initialize map
