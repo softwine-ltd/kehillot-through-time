@@ -1,8 +1,12 @@
 import csv
 import sys
 
+
+# Define file names
+in_filename = '../historical_arrows.csv'
+out_filename = in_filename.replace('.csv', '_sorted.csv')
 # Read the CSV file
-with open('../events.csv', 'r', encoding='utf-8') as f:
+with open(in_filename, 'r', encoding='utf-8') as f:
     reader = csv.reader(f)
     rows = list(reader)
 
@@ -11,10 +15,10 @@ header = rows[0]
 data_rows = rows[1:]
 
 # Sort by year_start (column 8, index 8)
-data_rows.sort(key=lambda x: int(x[8]) if x[8].lstrip('-').isdigit() else 9999)
+data_rows.sort(key=lambda x: int(x[7]) if x[7].lstrip('-').isdigit() else 9999)
 
 # Write sorted data back to file
-with open('../events.csv', 'w', encoding='utf-8', newline='') as f:
+with open(out_filename, 'w', encoding='utf-8', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(header)
     writer.writerows(data_rows)

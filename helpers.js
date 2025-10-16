@@ -18,6 +18,7 @@ const historicalEvents = [
         year: -1313,
         titleEn: "Exodus",
         titleHe: "יציאת מצרים",
+        titleFr: "Exode",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1313)),
         url: "https://en.wikipedia.org/wiki/Exodus_(biblical_book)"
     },
@@ -25,6 +26,7 @@ const historicalEvents = [
         year: -1205,
         titleEn: " Merneptah Stele: 'Israel is laid waste—its seed is no more' ",
         titleHe: "'ישראל הושם אין זרע לו' מצבת מרנפתח (מצבת ישראל)",
+        titleFr: "Stèle de Merneptah : 'Israël est dévasté—sa semence n'est plus'",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1205)),
         url: "https://en.wikipedia.org/wiki/Merneptah_Stele"
     },
@@ -32,6 +34,7 @@ const historicalEvents = [
         year: -1000,
         titleEn: "Reign of King David",
         titleHe: "מלכות דוד",
+        titleFr: "Règne du Roi David",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-1000)),
         url: "https://en.wikipedia.org/wiki/David"
     },
@@ -39,6 +42,7 @@ const historicalEvents = [
         year: -928,
         titleEn: "Dissolution of the United Kingdom of Israel",
         titleHe: "פילוג ממלכת ישראל המאוחדת",
+        titleFr: "Dissolution du Royaume Unifié d'Israël",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-928)),
         url: "https://en.wikipedia.org/wiki/Kingdom_of_Israel_(united_monarchy)"
     },
@@ -46,6 +50,7 @@ const historicalEvents = [
         year: -722,
         titleEn: "Temple Destruction",
         titleHe: "חורבן ממלכת ישראל",
+        titleFr: "Destruction du Temple",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-722)),
         url: "https://en.wikipedia.org/wiki/Kingdom_of_Israel_(Samaria)"
     },
@@ -53,6 +58,7 @@ const historicalEvents = [
         year: -586,
         titleEn: "Destruction of the First Temple",
         titleHe: "חורבן בית המקדש הראשון",
+        titleFr: "Destruction du Premier Temple",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-586)),
         url: "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(587_BC)"
     },
@@ -60,6 +66,7 @@ const historicalEvents = [
         year: -457,
         titleEn: "Aliya of Ezra",
         titleHe: "עליית עזרא לירושלים",
+        titleFr: "Aliya d'Ezra",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-457)),
         url: "https://en.wikipedia.org/wiki/Ezra"
     },
@@ -67,6 +74,7 @@ const historicalEvents = [
         year: -167,
         titleEn: "Maccabean Revolt",
         titleHe: "מרד חשמונאים",
+        titleFr: "Révolte des Maccabées",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(-167)),
         url: "https://en.wikipedia.org/wiki/Maccabean_Revolt"
     },
@@ -74,6 +82,7 @@ const historicalEvents = [
         year: 70,
         titleEn: "Destruction of the Second Temple",
         titleHe: "חורבן בית המקדש השני",
+        titleFr: "Destruction du Second Temple",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(70)),
         url: "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(70_CE)"
     },
@@ -81,6 +90,7 @@ const historicalEvents = [
         year: 132,
         titleEn: "Bar Kokhba revolt",
         titleHe: "מרד בר כוכבא",
+        titleFr: "Révolte de Bar Kokhba",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(132)),
         url: "https://en.wikipedia.org/wiki/Bar_Kokhba_revolt"
     },
@@ -88,6 +98,7 @@ const historicalEvents = [
         year: 200,
         titleEn: "End of Tannaim Period",
         titleHe: "סוף תקופת התנאים",
+        titleFr: "Fin de la Période des Tannaïm",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(200)),
         url: "https://en.wikipedia.org/wiki/Tannaim"
     },
@@ -95,6 +106,7 @@ const historicalEvents = [
         year: 500,
         titleEn: "End of Amoraim Period",
         titleHe: "סוף תקופת האמוראים",
+        titleFr: "Fin de la Période des Amoraïm",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(500)),
         url: "https://en.wikipedia.org/wiki/Amoraim"
     },
@@ -102,6 +114,7 @@ const historicalEvents = [
         year: 1038,
         titleEn: "End of Amoraim Geonim",
         titleHe: "סוף תקופת הגאונים",
+        titleFr: "Fin de la Période des Gaonim",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(1038)),
         url: "https://en.wikipedia.org/wiki/Geonim"
     },
@@ -109,6 +122,7 @@ const historicalEvents = [
         year: 1096,
         titleEn: "First Crusade",
         titleHe: "מסע הצלב הראשון",
+        titleFr: "Première Croisade",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(1096)),
         url: "https://en.wikipedia.org/wiki/First_Crusade"
     },
@@ -116,6 +130,7 @@ const historicalEvents = [
         year: 1147,
         titleEn: "Second Crusade",
         titleHe: "מסע הצלב השני",
+        titleFr: "Deuxième Croisade",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(1147)),
         url: "https://en.wikipedia.org/wiki/Second_Crusade"
     },
@@ -123,6 +138,7 @@ const historicalEvents = [
         year: 1189,
         titleEn: "Exile from Spain",
         titleHe: "מסע הצלב השלישי",
+        titleFr: "Troisième Croisade",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(1189)),
         url: "https://en.wikipedia.org/wiki/Third_Crusade"
     },
@@ -130,6 +146,7 @@ const historicalEvents = [
         year: 1492,
         titleEn: "Exile from Spain and End of Rishonim Period",
         titleHe: "גירוש ספרד וסוף תקופת הראשונים",
+        titleFr: "Expulsion d'Espagne et Fin de la Période des Rishonim",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(1492)),
         url: "https://en.wikipedia.org/wiki/Expulsion_of_Jews_from_Spain"
     },
@@ -137,6 +154,7 @@ const historicalEvents = [
         year: 1939,
         titleEn: "The Holocaust",
         titleHe: "השואה",
+        titleFr: "L'Holocauste",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(1939)),
         url: "https://en.wikipedia.org/wiki/The_Holocaust"
     },
@@ -144,6 +162,7 @@ const historicalEvents = [
         year: 1948,
         titleEn: "Israel Independence",
         titleHe: "הקמת מדינת ישראל",
+        titleFr: "Indépendance d'Israël",
         hebrewYear: numberToHebrewLetters(convertToHebrewYear(1948)),
         url: "https://en.wikipedia.org/wiki/Israeli_Declaration_of_Independence"
     }
@@ -234,17 +253,50 @@ function addEventMarkers() {
             </div>
         ` : '';
         
-        tooltip.innerHTML = `
-            <div class="tooltip-content">
-                <div class="tooltip-hebrew">${event.titleHe}</div>
-                <div class="tooltip-english">${event.titleEn}</div>
-                <div class="tooltip-year">
-                    ${event.year < 0 ? Math.abs(event.year) + ' BCE' : event.year + ' CE'} 
-                    / ${event.hebrewYear}
+        // Get current language for tooltip display
+        const currentLang = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
+        
+        // Create language-specific tooltip content
+        let tooltipContent = '';
+        if (currentLang === 'he') {
+            tooltipContent = `
+                <div class="tooltip-content">
+                    <div class="tooltip-hebrew">${event.titleHe}</div>
+                    <div class="tooltip-english">${event.titleEn}</div>
+                    <div class="tooltip-year">
+                        ${event.year < 0 ? Math.abs(event.year) + ' BCE' : event.year + ' CE'} 
+                        / ${event.hebrewYear}
+                    </div>
+                    ${linkHtml}
                 </div>
-                ${linkHtml}
-            </div>
-        `;
+            `;
+        } else if (currentLang === 'fr') {
+            tooltipContent = `
+                <div class="tooltip-content">
+                    <div class="tooltip-french" style="font-family: 'Arial', sans-serif; font-size: 14px; font-weight: bold;">${event.titleFr}</div>
+                    <div class="tooltip-english" style="font-size: 12px; color: #e2e8f0;">${event.titleEn}</div>
+                    <div class="tooltip-year" style="font-size: 11px; color: #94a3b8; margin-top: 2px;">
+                        ${event.year < 0 ? Math.abs(event.year) + ' AEC' : event.year + ' EC'} 
+                        / ${event.hebrewYear}
+                    </div>
+                    ${linkHtml}
+                </div>
+            `;
+        } else {
+            tooltipContent = `
+                <div class="tooltip-content">
+                    <div class="tooltip-hebrew">${event.titleHe}</div>
+                    <div class="tooltip-english">${event.titleEn}</div>
+                    <div class="tooltip-year">
+                        ${event.year < 0 ? Math.abs(event.year) + ' BCE' : event.year + ' CE'} 
+                        / ${event.hebrewYear}
+                    </div>
+                    ${linkHtml}
+                </div>
+            `;
+        }
+        
+        tooltip.innerHTML = tooltipContent;
 
         marker.appendChild(tooltip);
         
@@ -1388,7 +1440,7 @@ function initializeMap() {
     const tourHighlight = document.getElementById('tourHighlight');
 
     let currentTourStep = 0;
-    let tourLanguage = 'en'; // 'en' or 'he'
+    let tourLanguage = 'en'; // 'en', 'he', or 'fr'
     const tourSteps = {
         en: [
         {
@@ -2092,16 +2144,334 @@ function initializeMap() {
                 `,
                 highlight: null
             }
+        ],
+        fr: [
+            {
+                title: "Bienvenue dans la Chronologie des Communautés Juives",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Bienvenue ! Cette visualisation interactive montre l'histoire démographique des communautés juives 
+                        dans le monde entier, des temps anciens à nos jours. Vous explorerez plus de 3 400 ans d'histoire juive 
+                        à travers les données démographiques, les modèles de migration et les événements historiques.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Commençons par apprendre les contrôles de la chronologie et comment naviguer dans l'histoire.
+                    </p>
+                `,
+                highlight: null
+            },
+            {
+                title: "Navigation dans la Chronologie",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        La chronologie en bas vous permet de naviguer dans l'histoire. Vous pouvez :
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                        <li><strong>Faire glisser le curseur</strong> pour sauter à n'importe quelle année</li>
+                        <li><strong>Cliquer sur l'affichage de l'année</strong> pour l'éditer directement et sauter à une année spécifique</li>
+                        <li><strong>Utiliser le bouton de lecture</strong> pour animer automatiquement dans le temps</li>
+                        <li><strong>Ajuster la vitesse</strong> avec le contrôle de vitesse</li>
+                        <li><strong>Utiliser les boutons d'étape</strong> (-10, -5, -1, +1, +5, +10) pour une navigation précise</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium">
+                        Essayez de faire glisser le curseur de la chronologie ou de cliquer sur l'affichage de l'année pour voir comment la carte change !
+                    </p>
+                `,
+                highlight: 'timeline'
+            },
+            {
+                title: "Marqueurs de Communautés",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Chaque cercle sur la carte représente une communauté juive (kehila) à cette période. 
+                        Les marqueurs montrent :
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                        <li><strong>Taille de la population</strong> - affichée sous forme de nombres dans les marqueurs</li>
+                        <li><strong>Niveau de confiance</strong> - la couleur indique la fiabilité des données (bleu = élevé, plus clair = plus bas)</li>
+                        <li><strong>Taille du marqueur</strong> - marqueurs plus grands = populations plus importantes</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium">
+                        Cliquez sur n'importe quel marqueur pour voir des informations détaillées sur cette communauté !
+                    </p>
+                `,
+                highlight: 'map'
+            },
+            {
+                title: "Comprendre les Marqueurs de Communautés",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Explorons les différents types de marqueurs que vous verrez sur la carte :
+                    </p>
+                    <div class="space-y-4 mb-4">
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-red-800 mb-2">Marqueurs de Communautés Individuelles</h4>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center text-white text-xs font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">1.2k</div>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Petit marqueur :</strong> Communautés plus petites
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 mt-2">
+                                <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white text-sm font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">15k</div>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Marqueur moyen :</strong> Communautés de taille moyenne
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 mt-2">
+                                <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center text-white font-bold" style="box-shadow: 0 2px 6px rgba(0,0,0,0.4);">250k</div>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Grand marqueur :</strong> Communautés majeures
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-600 mt-2 italic">
+                                Les marqueurs plus grands représentent des communautés plus importantes
+                            </p>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2">Marqueurs de Regroupement</h4>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-blue-600 rounded-full flex flex-col items-center justify-center text-white text-xs font-bold" style="box-shadow: 0 2px 4px rgba(0,0,0,0.3); border: 2px solid white;">
+                                    <div>5</div>
+                                    <div class="text-xs">2.1M</div>
+                                </div>
+                                <div class="text-sm text-gray-700">
+                                    <strong>Marqueur de regroupement :</strong> Groupe les communautés voisines ensemble<br>
+                                    <em>Nombre du haut :</em> Nombre de communautés<br>
+                                    <em>Nombre du bas :</em> Population totale
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-yellow-800 mb-2">Niveaux de Confiance</h4>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-4 h-4 bg-red-800 rounded-full"></div>
+                                    <span class="text-sm text-gray-700"><strong>Rouge foncé :</strong> Données de haute confiance</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-4 h-4 bg-red-500 rounded-full"></div>
+                                    <span class="text-sm text-gray-700"><strong>Rouge moyen :</strong> Données de confiance moyenne</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-4 h-4 bg-red-300 rounded-full"></div>
+                                    <span class="text-sm text-gray-700"><strong>Rouge clair :</strong> Données de confiance plus faible</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-blue-600 font-medium">
+                        Cherchez ces différents types de marqueurs pendant que vous explorez la carte !
+                    </p>
+                `,
+                highlight: 'map'
+            },
+            {
+                title: "Chronologie des Événements Historiques",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Les petits marqueurs sur la chronologie représentent des événements historiques majeurs. Survolez-les pour voir :
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                        <li><strong>Nom de l'événement</strong> en hébreu et en anglais</li>
+                        <li><strong>Année historique</strong> dans les calendriers grégorien et hébreu</li>
+                        <li><strong>Liens Wikipédia</strong> pour des informations détaillées</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium">
+                        Survolez les marqueurs de la chronologie pour explorer les événements historiques !
+                    </p>
+                `,
+                highlight: 'timeline-markers'
+            },
+            {
+                title: "Événements Historiques sur la Carte",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Les ellipses colorées sur la carte montrent la portée géographique des événements historiques majeurs :
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                        <li><strong>Ellipses rouges</strong> - Massacres et persécutions</li>
+                        <li><strong>Autres couleurs</strong> - Différents types d'événements historiques</li>
+                        <li><strong>Cliquez sur les ellipses</strong> pour en savoir plus sur des événements spécifiques</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium">
+                        Cherchez les formes colorées sur la carte - elles montrent où se sont produits les événements majeurs !
+                    </p>
+                `,
+                highlight: 'map'
+            },
+            {
+                title: "Options d'Affichage de la Carte",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Vous pouvez personnaliser votre vue de la carte en utilisant les contrôles :
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                        <li><strong>Noms de lieux</strong> - Choisissez entre langue locale, allemande ou anglaise</li>
+                        <li><strong>Vue de la carte</strong> - Basculez entre Europe & Moyen-Orient ou Amériques</li>
+                        <li><strong>Perspectives différentes</strong> vous aident à explorer différentes régions</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium">
+                        Essayez de basculer entre différentes vues de carte pour voir comment cela change la perspective !
+                    </p>
+                `,
+                highlight: 'controls'
+            },
+            {
+                title: "Voyage dans le Temps : Période Ancienne",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Faisons un voyage dans le temps ! Nous commencerons dans les temps anciens et verrons comment les 
+                        communautés juives se sont développées et répandues dans le monde.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        <strong>Période Ancienne (-1400 à 0 AEC) :</strong> L'histoire commence avec l'Exode 
+                        et l'établissement du Royaume d'Israël. Regardez comment les communautés se forment dans 
+                        l'ancien Proche-Orient.
+                    </p>
+                    <p class="text-blue-600 font-medium">
+                        La chronologie va maintenant automatiquement montrer la période ancienne. Regardez les communautés apparaître !
+                    </p>
+                `,
+                highlight: 'timeline',
+                action: () => {
+                    const timeline = document.getElementById('timeline');
+                    timeline.noUiSlider.set(-1000);
+                }
+            },
+            {
+                title: "Voyage dans le Temps : Période Moderne",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Maintenant, voyons la période moderne et comment les communautés juives se sont répandues dans le monde :
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        <strong>Période Moderne (1800-1948 EC) :</strong> Migrations majeures vers les Amériques, 
+                        l'Holocauste, et l'établissement d'Israël moderne. Remarquez comment les communautés 
+                        apparaissent à travers le globe.
+                    </p>
+                    <p class="text-blue-600 font-medium">
+                        La chronologie va maintenant montrer la période moderne. Voyez comment les communautés se répandent dans le monde !
+                    </p>
+                `,
+                highlight: 'timeline',
+                action: () => {
+                    const timeline = document.getElementById('timeline');
+                    timeline.noUiSlider.set(1900);
+                }
+            },
+            {
+                title: "Contrôle de Regroupement",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Vous pouvez contrôler comment les communautés sont regroupées ensemble en utilisant le curseur de regroupement :
+                    </p>
+                    <div class="space-y-4 mb-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2">Options de Regroupement</h4>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li><strong>Petit rayon (10-50px) :</strong> Plus de communautés individuelles visibles, regroupements plus petits</li>
+                                <li><strong>Rayon moyen (50-100px) :</strong> Vue équilibrée - réglage par défaut</li>
+                                <li><strong>Grand rayon (100-200px) :</strong> Vue plus agrégée, regroupements plus grands</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-blue-600 font-medium">
+                        Essayez d'ajuster le curseur de regroupement pour voir comment cela change la vue de la carte !
+                    </p>
+                `,
+                highlight: 'cluster-control'
+            },
+            {
+                title: "Chronologie des Périodes Historiques",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Sous la chronologie principale, vous verrez une barre codée par couleur montrant différentes périodes historiques :
+                    </p>
+                    <div class="space-y-4 mb-4">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-3">Périodes Historiques</h4>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-4 h-4 rounded" style="background-color: #8B4513;"></div>
+                                    <span>Ère Biblique (1400-586 AEC)</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-4 h-4 rounded" style="background-color: #B8860B;"></div>
+                                    <span>Second Temple (586 AEC-70 EC)</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-4 h-4 rounded" style="background-color: #228B22;"></div>
+                                    <span>Ère Talmudique (70-500 EC)</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-4 h-4 rounded" style="background-color: #4169E1;"></div>
+                                    <span>Médiéval (500-1500 EC)</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-4 h-4 rounded" style="background-color: #9370DB;"></div>
+                                    <span>Moderne Précoce (1500-1800 EC)</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-4 h-4 rounded" style="background-color: #FF6347;"></div>
+                                    <span>Moderne (1800-2025 EC)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                        <li><strong>Cliquez sur n'importe quelle période</strong> pour sauter au début de cette ère</li>
+                        <li><strong>Période actuelle</strong> est mise en surbrillance avec une bordure et une ombre</li>
+                        <li><strong>Étiquettes d'années</strong> montrent les frontières entre les périodes</li>
+                    </ul>
+                    <p class="text-blue-600 font-medium">
+                        Cliquez sur n'importe quelle période historique pour naviguer rapidement vers cette ère !
+                    </p>
+                `,
+                highlight: 'historical-periods'
+            },
+            {
+                title: "Visite Terminée !",
+                content: `
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Félicitations ! Vous avez terminé la visite et appris les fonctionnalités clés de 
+                        cette visualisation de chronologie des communautés juives.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Vous savez maintenant comment :
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                        <li>Naviguer à travers plus de 3 400 ans d'histoire</li>
+                        <li>Comprendre différents types de marqueurs et leurs significations</li>
+                        <li>Lire les données démographiques et les niveaux de confiance</li>
+                        <li>Explorer les populations et détails des communautés</li>
+                        <li>Apprendre sur les événements historiques et leur impact</li>
+                        <li>Personnaliser votre vue de carte et préférences linguistiques</li>
+                        <li>Contrôler la granularité du regroupement pour différentes vues</li>
+                        <li>Utiliser les périodes historiques pour une navigation rapide</li>
+                        <li>Utiliser toutes les fonctionnalités interactives</li>
+                    </ul>
+                    <p class="text-green-600 font-medium">
+                        Commencez à explorer ! Utilisez la chronologie pour découvrir la riche histoire des communautés juives dans le monde.
+                    </p>
+                `,
+                highlight: null
+            }
         ]
     };
 
     function showTourStep(stepIndex) {
-        const steps = tourSteps[tourLanguage];
+        const currentLang = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
+        const steps = window.i18n ? window.i18n.t('tour.steps') : tourSteps[tourLanguage];
         const step = steps[stepIndex];
         currentTourStep = stepIndex;
         
         // Update progress
-        tourProgress.textContent = `Step ${stepIndex + 1} of ${steps.length}`;
+        const stepText = window.i18n ? window.i18n.t('tour.step') : 'Step';
+        const ofText = window.i18n ? window.i18n.t('tour.of') : 'of';
+        tourProgress.textContent = `${stepText} ${stepIndex + 1} ${ofText} ${steps.length}`;
         
         // Update content
         tourContent.innerHTML = `
@@ -2111,18 +2481,23 @@ function initializeMap() {
         
         // Update buttons
         prevTourStep.disabled = stepIndex === 0;
-        nextTourStep.textContent = stepIndex === steps.length - 1 ? 
-            (tourLanguage === 'he' ? 'סיום' : 'Finish') : 
-            (tourLanguage === 'he' ? 'הבא' : 'Next');
+        const nextText = window.i18n ? window.i18n.t('ui.next') : 'Next';
+        const finishText = stepIndex === steps.length - 1 ? 
+            (currentLang === 'he' ? 'סיום' : 
+             currentLang === 'fr' ? 'Terminer' : 'Finish') : nextText;
+        nextTourStep.textContent = finishText;
         
         // Update previous button text
-        prevTourText.textContent = tourLanguage === 'he' ? 'הקודם' : 'Previous';
+        const prevText = window.i18n ? window.i18n.t('ui.previous') : 'Previous';
+        prevTourText.textContent = prevText;
         
         // Update skip button text
-        skipTour.textContent = tourLanguage === 'he' ? 'דלג על הסיור' : 'Skip Tour';
+        const skipText = window.i18n ? window.i18n.t('ui.skipTour') : 'Skip Tour';
+        skipTour.textContent = skipText;
         
         // Update title
-        tourTitle.textContent = tourLanguage === 'he' ? 'סיור אינטראקטיבי' : 'Interactive Tour';
+        const titleText = window.i18n ? window.i18n.t('tour.title') : 'Interactive Tour';
+        tourTitle.textContent = titleText;
         
         // Handle highlighting
         if (step.highlight) {
@@ -2185,6 +2560,9 @@ function initializeMap() {
 
     // Language selection event listeners
     document.getElementById('selectEnglish').addEventListener('click', () => {
+        if (window.i18n) {
+            window.i18n.switchLanguage('en');
+        }
         tourLanguage = 'en';
         languageModal.classList.add('hidden');
         tourModal.classList.remove('hidden');
@@ -2193,12 +2571,32 @@ function initializeMap() {
     });
 
     document.getElementById('selectHebrew').addEventListener('click', () => {
+        if (window.i18n) {
+            window.i18n.switchLanguage('he');
+        }
         tourLanguage = 'he';
         languageModal.classList.add('hidden');
         tourModal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
         showTourStep(0);
     });
+
+    const frenchButton = document.getElementById('selectFrench');
+    if (frenchButton) {
+        frenchButton.addEventListener('click', () => {
+            console.log('French language selected');
+            if (window.i18n) {
+                window.i18n.switchLanguage('fr');
+            }
+            tourLanguage = 'fr';
+            languageModal.classList.add('hidden');
+            tourModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            showTourStep(0);
+        });
+    } else {
+        console.error('French button not found in DOM');
+    }
 
     // Tour event listeners
     startTourButton.addEventListener('click', () => {
@@ -2229,6 +2627,16 @@ function initializeMap() {
         if (e.key === 'Escape' && !tourModal.classList.contains('hidden')) {
             closeTour();
         }
+    });
+
+    // Listen for language changes to update tour and tooltips
+    window.addEventListener('languageChanged', (e) => {
+        tourLanguage = e.detail.language;
+        if (!tourModal.classList.contains('hidden')) {
+            showTourStep(currentTourStep);
+        }
+        // Refresh event markers with new language
+        addEventMarkers();
     });
 }
 

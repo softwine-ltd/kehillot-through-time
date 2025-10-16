@@ -790,6 +790,128 @@ body {
     }
 }
 
+/* RTL Language Support */
+.rtl {
+    direction: rtl;
+}
+
+.rtl .floating-icon {
+    left: 20px;
+    right: auto;
+}
+
+.rtl .timeline-section {
+    text-align: right;
+}
+
+.rtl .period-text {
+    text-align: center;
+}
+
+.rtl .tooltip-hebrew {
+    direction: rtl;
+    text-align: right;
+}
+
+.rtl .custom-popup {
+    direction: rtl;
+    text-align: right;
+}
+
+.rtl .custom-popup .leaflet-popup-content {
+    text-align: right;
+}
+
+/* RTL adjustments for header */
+.rtl header .flex {
+    flex-direction: row-reverse;
+}
+
+.rtl header .flex .flex {
+    flex-direction: row-reverse;
+}
+
+/* RTL adjustments for controls */
+.rtl .timeline-section .flex {
+    flex-direction: row-reverse;
+}
+
+.rtl .timeline-section .flex > div {
+    flex-direction: row-reverse;
+}
+
+/* RTL adjustments for control labels and inputs */
+.rtl .timeline-section .flex > div.flex {
+    flex-direction: row-reverse;
+}
+
+/* RTL adjustments for control groups */
+.rtl .timeline-section .flex > div.flex.items-center {
+    flex-direction: row-reverse;
+}
+
+/* Ensure labels appear on the right side of controls in RTL */
+.rtl .timeline-section label {
+    order: 2;
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+.rtl .timeline-section input,
+.rtl .timeline-section select,
+.rtl .timeline-section button {
+    order: 1;
+}
+
+.rtl .timeline-section span {
+    order: 3;
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+/* RTL adjustments for year display */
+.rtl .timeline-section #year-display {
+    text-align: right;
+}
+
+/* RTL adjustments for year step buttons */
+.rtl .timeline-section #year-steps {
+    flex-direction: row-reverse;
+}
+
+/* RTL adjustments for historical periods timeline */
+.rtl .timeline-section #historical-periods .relative {
+    text-align: right;
+}
+
+/* RTL adjustments for modals */
+.rtl .modal-content {
+    text-align: right;
+}
+
+.rtl .modal-content ul {
+    text-align: right;
+}
+
+.rtl .modal-content .flex {
+    flex-direction: row-reverse;
+}
+
+/* RTL adjustments for tour modal */
+.rtl #tourContent {
+    text-align: right;
+}
+
+.rtl #tourContent h3,
+.rtl #tourContent p {
+    text-align: right;
+}
+
+/* RTL adjustments for language switcher */
+.rtl #languageSwitcher {
+    flex-direction: row-reverse;
+}
+
 /* Print styles */
 @media print {
     .controls {

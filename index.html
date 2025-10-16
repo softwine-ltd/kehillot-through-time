@@ -97,6 +97,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css" />
 
+    <script src="i18n.js"></script>
     <script src="helpers.js"></script>
     <link rel="stylesheet" href="./styles.css" />
 </head>
@@ -106,7 +107,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex">
                 <div class="ml-3">
-                    <p class="text-base text-yellow-700">
+                    <p class="text-base text-yellow-700" data-i18n="workInProgress">
                         <strong>Work in Progress:</strong> This visualization is under development. The data has not been verified and some numbers are estimates or approximations for demonstration purposes.
                     </p>
                 </div>
@@ -115,19 +116,19 @@
     </div>
     <header class="bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 py-1 lg:py-4 flex justify-between items-center">
-            <h1 class="text-base lg:text-xl font-semibold text-gray-900">Jewish Demographics & Historical Communities Map</h1>
+            <h1 class="text-base lg:text-xl font-semibold text-gray-900" data-i18n="ui.title">Jewish Demographics & Historical Communities Map</h1>
             <div class="flex gap-1 lg:gap-4">
-                <button id="aboutButton" class="px-2 py-1 lg:px-4 lg:py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-xs lg:text-base">
+                <button id="aboutButton" class="px-2 py-1 lg:px-4 lg:py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-xs lg:text-base" data-i18n="ui.about">
                     About
                 </button>
-                <button id="startTourButton" class="px-2 py-1 lg:px-4 lg:py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-xs lg:text-base">
+                <button id="startTourButton" class="px-2 py-1 lg:px-4 lg:py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-xs lg:text-base" data-i18n="ui.startTour">
                     Start Tour
                 </button>
                 <button id="printButton" class="px-2 py-1 lg:px-4 lg:py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center gap-1 lg:gap-2 text-xs lg:text-base">
                     <svg class="w-3 h-3 lg:w-4 lg:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
                     </svg>
-                    Print
+                    <span data-i18n="ui.print">Print</span>
                 </button>
             </div>
         </div>
@@ -149,7 +150,7 @@
                             </svg>
                         </button>
                         <div id="playButtonArrow" class="absolute -top-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-1 animate-pulse">
-                            <span class="text-red-500 font-bold text-sm whitespace-nowrap">Press Here</span>
+                            <span class="text-red-500 font-bold text-sm whitespace-nowrap" data-i18n="ui.pressHere">Press Here</span>
                             <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                             </svg>
@@ -157,7 +158,7 @@
                     </div>
                     <div id="year-display" class="text-xs lg:text-sm font-medium text-gray-900 min-w-24 sm:min-w-32 lg:min-w-[28rem] text-left whitespace-nowrap"></div>
                     <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-                        <label for="speedControl" class="text-xs lg:text-sm text-gray-600 hidden lg:inline">Speed:</label>
+                        <label for="speedControl" class="text-xs lg:text-sm text-gray-600 hidden lg:inline" data-i18n="ui.speed">Speed:</label>
                         <input type="range" id="speedControl" min="1" max="20" value="4" class="w-16 sm:w-20 lg:w-24 h-1.5 lg:h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
                         <span id="speedDisplay" class="text-xs lg:text-sm text-gray-500 w-4 sm:w-6 lg:w-8">4x</span>
                     </div>
@@ -170,29 +171,29 @@
                         <button data-step="10" class="px-1 py-0.5 lg:px-2 lg:py-1 text-xs bg-gray-100 text-gray-700 rounded hover:bg-gray-200">+10</button>
                     </div>
                     <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-                        <label for="citySearch" class="text-xs lg:text-sm text-gray-600 hidden lg:inline">Search:</label>
-                        <input type="text" id="citySearch" placeholder="City..." class="text-xs lg:text-sm border border-gray-300 rounded-md px-1.5 lg:px-2 py-0.5 lg:py-1 bg-white min-w-0 w-24 sm:w-32 lg:w-36">
-                        <button id="clearSearch" class="text-gray-400 hover:text-gray-600 text-xs lg:text-sm" title="Clear search">✕</button>
+                        <label for="citySearch" class="text-xs lg:text-sm text-gray-600 hidden lg:inline" data-i18n="ui.search">Search:</label>
+                        <input type="text" id="citySearch" data-i18n="ui.cityPlaceholder" placeholder="City..." class="text-xs lg:text-sm border border-gray-300 rounded-md px-1.5 lg:px-2 py-0.5 lg:py-1 bg-white min-w-0 w-24 sm:w-32 lg:w-36">
+                        <button id="clearSearch" class="text-gray-400 hover:text-gray-600 text-xs lg:text-sm" data-i18n="ui.clearSearch" title="Clear search">✕</button>
                     </div>
                     <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-                        <label for="tileSelector" class="text-xs lg:text-sm text-gray-600 hidden lg:inline">Labels:</label>
+                        <label for="tileSelector" class="text-xs lg:text-sm text-gray-600 hidden lg:inline" data-i18n="ui.labels">Labels:</label>
                         <select id="tileSelector" class="text-xs lg:text-sm border border-gray-300 rounded-md px-1 lg:px-2 py-0.5 lg:py-1 bg-white min-w-0">
-                            <option value="osm">Local</option>
-                            <option value="cartodb">English (CartoDB)</option>
-                            <option value="maptiler">English (MapTiler)</option>
-                            <option value="osm-france">French</option>
-                            <option value="osm-de">German</option>
+                            <option value="osm" data-i18n="mapLabels.local">Local</option>
+                            <option value="cartodb" data-i18n="mapLabels.englishCartoDB">English (CartoDB)</option>
+                            <option value="maptiler" data-i18n="mapLabels.englishMapTiler">English (MapTiler)</option>
+                            <option value="osm-france" data-i18n="mapLabels.french">French</option>
+                            <option value="osm-de" data-i18n="mapLabels.german">German</option>
                         </select>
                     </div>
                     <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-                        <label for="mapCenterSelector" class="text-xs lg:text-sm text-gray-600 hidden lg:inline">View:</label>
+                        <label for="mapCenterSelector" class="text-xs lg:text-sm text-gray-600 hidden lg:inline" data-i18n="ui.view">View:</label>
                         <select id="mapCenterSelector" class="text-xs lg:text-sm border border-gray-300 rounded-md px-1 lg:px-2 py-0.5 lg:py-1 bg-white min-w-0">
-                            <option value="europe">Europe & Middle East</option>
-                            <option value="americas">Americas</option>
+                            <option value="europe" data-i18n="mapLabels.europeMiddleEast">Europe & Middle East</option>
+                            <option value="americas" data-i18n="mapLabels.americas">Americas</option>
                         </select>
                     </div>
                     <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-                        <label for="clusterRadius" class="text-xs lg:text-sm text-gray-600 hidden lg:inline">Clustering:</label>
+                        <label for="clusterRadius" class="text-xs lg:text-sm text-gray-600 hidden lg:inline" data-i18n="ui.clustering">Clustering:</label>
                         <input type="range" id="clusterRadius" min="10" max="200" value="80" 
                                class="w-16 sm:w-20 lg:w-24 h-1.5 lg:h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
                         <span id="clusterValue" class="text-xs lg:text-sm text-gray-500 w-4 sm:w-6 lg:w-8">80px</span>
@@ -208,27 +209,27 @@
                     <div class="relative h-4 bg-gray-100 rounded-full">
                         <!-- Biblical Era: -1400 to -586 (814 years) = 23.8% -->
                         <div class="period-bar absolute left-0 top-0 h-full rounded-l-full" data-period="Biblical Era" style="background-color: #8B4513; width: 23.8%;" title="Biblical Era (1400-586 BCE)">
-                            <span class="period-text">Biblical Era</span>
+                            <span class="period-text" data-i18n="historicalPeriods.biblicalEra">Biblical Era</span>
                         </div>
                         <!-- Second Temple: -586 to 70 (656 years) = 19.2% -->
                         <div class="period-bar absolute" data-period="Second Temple" style="background-color: #B8860B; left: 23.8%; width: 19.2%;" title="Second Temple (586 BCE - 70 CE)">
-                            <span class="period-text">Second Temple</span>
+                            <span class="period-text" data-i18n="historicalPeriods.secondTemple">Second Temple</span>
                         </div>
                         <!-- Talmudic Era: 70 to 500 (430 years) = 12.6% -->
                         <div class="period-bar absolute" data-period="Talmudic Era" style="background-color: #228B22; left: 43.0%; width: 12.6%;" title="Talmudic Era (70-500 CE)">
-                            <span class="period-text">Talmudic Era</span>
+                            <span class="period-text" data-i18n="historicalPeriods.talmudicEra">Talmudic Era</span>
                         </div>
                         <!-- Medieval: 500 to 1500 (1000 years) = 29.2% -->
                         <div class="period-bar absolute" data-period="Medieval" style="background-color: #4169E1; left: 55.6%; width: 29.2%;" title="Medieval (500-1500 CE)">
-                            <span class="period-text">Medieval</span>
+                            <span class="period-text" data-i18n="historicalPeriods.medieval">Medieval</span>
                         </div>
                         <!-- Early Modern: 1500 to 1800 (300 years) = 8.8% -->
                         <div class="period-bar absolute" data-period="Early Modern" style="background-color: #9370DB; left: 84.8%; width: 8.8%;" title="Early Modern (1500-1800 CE)">
-                            <span class="period-text">Early Modern</span>
+                            <span class="period-text" data-i18n="historicalPeriods.earlyModern">Early Modern</span>
                         </div>
                         <!-- Modern: 1800 to 2025 (225 years) = 6.6% -->
                         <div class="period-bar absolute right-0 top-0 h-full rounded-r-full" data-period="Modern" style="background-color: #FF6347; width: 6.6%;" title="Modern (1800-2025 CE)">
-                            <span class="period-text">Modern</span>
+                            <span class="period-text" data-i18n="historicalPeriods.modern">Modern</span>
                         </div>
                     </div>
                     <div class="relative mt-1 text-xs text-gray-500">
@@ -253,7 +254,7 @@
         <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-2xl font-bold text-gray-900">About This Project</h2>
+                    <h2 class="text-2xl font-bold text-gray-900" data-i18n="about.title">About This Project</h2>
                     <button id="closeAboutModal" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">
                         ×
                     </button>
@@ -261,8 +262,8 @@
                 
                 <div class="space-y-6">
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Project Overview</h3>
-                        <p class="text-gray-700 leading-relaxed">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3" data-i18n="about.overview.title">Project Overview</h3>
+                        <p class="text-gray-700 leading-relaxed" data-i18n="about.overview.description">
                             This interactive visualization explores the demographic history of Jewish communities worldwide, 
                             tracking population changes and migration patterns from ancient times to the present. The map 
                             displays Jewish communities (kehillot) with their estimated populations at different historical 
@@ -271,8 +272,8 @@
                     </div>
 
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Features</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3" data-i18n="about.features.title">Features</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2" data-i18n="about.features.items">
                             <li><strong>Interactive Timeline:</strong> Navigate through 3,400+ years of Jewish history</li>
                             <li><strong>Population Visualization:</strong> Community markers show population size and confidence levels</li>
                             <li><strong>Historical Events:</strong> Major events and persecutions that shaped Jewish demographics</li>
@@ -283,8 +284,8 @@
                     </div>
 
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Data Sources</h3>
-                        <p class="text-gray-700 leading-relaxed">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3" data-i18n="about.dataSources.title">Data Sources</h3>
+                        <p class="text-gray-700 leading-relaxed" data-i18n="about.dataSources.description">
                             The data combines historical records, archaeological findings, demographic studies, and scholarly 
                             research. Population estimates are based on available historical sources and may include approximations 
                             for demonstration purposes. Sources include academic publications, historical documents, and 
@@ -293,8 +294,8 @@
                     </div>
 
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">How to Use</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3" data-i18n="about.howToUse.title">How to Use</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2" data-i18n="about.howToUse.items">
                             <li>Use the timeline slider to navigate through different time periods</li>
                             <li>Click on community markers to see detailed information</li>
                             <li>Hover over timeline markers to learn about historical events</li>
@@ -304,19 +305,19 @@
                     </div>
 
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Credits</h3>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3" data-i18n="about.credits.title">Credits</h3>
                         <p class="text-gray-700 leading-relaxed">
-                            <strong>Developed by:</strong> Bezalel Brandwine and Ofer Manela<br>
-                            <strong>Organization:</strong> Softwine LTD<br>
-                            <strong>Contact:</strong> <a href="mailto:kehilot.history@gmail.com" class="text-blue-600 hover:text-blue-800 underline">kehilot.history@gmail.com</a><br>
-                            <strong>Map Data:</strong> OpenStreetMap contributors<br>
-                            <strong>Timeline Technology:</strong> noUiSlider<br>
-                            <strong>Mapping Library:</strong> Leaflet with MarkerCluster
+                            <strong data-i18n="about.credits.developedBy">Developed by:</strong> Bezalel Brandwine and Ofer Manela<br>
+                            <strong data-i18n="about.credits.organization">Organization:</strong> Softwine LTD<br>
+                            <strong data-i18n="about.credits.contact">Contact:</strong> <a href="mailto:kehilot.history@gmail.com" class="text-blue-600 hover:text-blue-800 underline">kehilot.history@gmail.com</a><br>
+                            <strong data-i18n="about.credits.mapData">Map Data:</strong> OpenStreetMap contributors<br>
+                            <strong data-i18n="about.credits.timelineTechnology">Timeline Technology:</strong> noUiSlider<br>
+                            <strong data-i18n="about.credits.mappingLibrary">Mapping Library:</strong> Leaflet with MarkerCluster
                         </p>
                     </div>
 
                     <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
-                        <p class="text-yellow-800 text-sm">
+                        <p class="text-yellow-800 text-sm" data-i18n="about.note">
                             <strong>Note:</strong> This visualization is under development. Some data points are estimates 
                             or approximations for demonstration purposes and have not been fully verified. We welcome 
                             feedback and corrections from historians and researchers.
@@ -325,7 +326,7 @@
                 </div>
 
                 <div class="mt-8 flex justify-end">
-                    <button id="closeAboutModalBtn" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                    <button id="closeAboutModalBtn" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors" data-i18n="ui.close">
                         Close
                     </button>
                 </div>
@@ -338,8 +339,8 @@
         <div class="bg-white rounded-lg max-w-md w-full">
             <div class="p-6">
                 <div class="text-center mb-6">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Select Tour Language</h2>
-                    <p class="text-gray-600">Choose your preferred language for the interactive tour</p>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2" data-i18n="tour.selectLanguage">Select Tour Language</h2>
+                    <p class="text-gray-600" data-i18n="tour.selectLanguageDescription">Choose your preferred language for the interactive tour</p>
                 </div>
                 
                 <div class="space-y-4">
@@ -366,6 +367,18 @@
                             </div>
                         </div>
                     </button>
+                    
+                    <button id="selectFrench" class="w-full p-4 border-2 border-blue-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-colors text-left">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-blue-600 font-bold">FR</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">Français</div>
+                                <div class="text-sm text-gray-600">Visite interactive en français</div>
+                            </div>
+                        </div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -376,7 +389,7 @@
         <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-6">
-                    <h2 id="tourTitle" class="text-2xl font-bold text-gray-900">Interactive Tour</h2>
+                    <h2 id="tourTitle" class="text-2xl font-bold text-gray-900" data-i18n="tour.title">Interactive Tour</h2>
                     <div class="flex items-center gap-4">
                         <span id="tourProgress" class="text-sm text-gray-600">Step 1 of 8</span>
                         <button id="closeTourModal" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">
@@ -391,13 +404,13 @@
 
                 <div class="mt-8 flex justify-between">
                     <button id="prevTourStep" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
-                        <span id="prevTourText">Previous</span>
+                        <span id="prevTourText" data-i18n="ui.previous">Previous</span>
                     </button>
                     <div class="flex gap-2">
-                        <button id="skipTour" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200 transition-colors">
+                        <button id="skipTour" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200 transition-colors" data-i18n="ui.skipTour">
                             Skip Tour
                         </button>
-                        <button id="nextTourStep" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                        <button id="nextTourStep" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors" data-i18n="ui.next">
                             Next
                         </button>
                     </div>
