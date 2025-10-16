@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "Carte Démographique & Communautés Juives Historiques | Chronologie Interactive",
+    "description": "Explorez les cartes interactives des communautés juives dans le monde entier, suivez les changements démographiques et les modèles de migration tout au long de l'histoire. Découvrez les données démographiques des kehillot et de la diaspora juive à travers le temps.",
+    "keywords": "démographie juive, histoire juive, cartes de population, communautés juives, kehillot, diaspora juive, cartes historiques, migration juive, chronologie interactive, géographie juive, changements démographiques, données démographiques juives"
+  },
+  "ui": {
+    "title": "Carte Démographique & Communautés Juives Historiques",
+    "about": "À propos",
+    "startTour": "Commencer la Visite",
+    "print": "Imprimer",
+    "close": "Fermer",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "skipTour": "Passer la Visite",
+    "pressHere": "Appuyez Ici",
+    "speed": "Vitesse:",
+    "search": "Rechercher:",
+    "labels": "Étiquettes:",
+    "view": "Vue:",
+    "clustering": "Regroupement:",
+    "cityPlaceholder": "Ville...",
+    "clearSearch": "Effacer la recherche"
+  },
+  "mapLabels": {
+    "local": "Local",
+    "englishCartoDB": "Anglais (CartoDB)",
+    "englishMapTiler": "Anglais (MapTiler)",
+    "french": "Français",
+    "german": "Allemand",
+    "europeMiddleEast": "Europe & Moyen-Orient",
+    "americas": "Amériques"
+  },
+  "historicalPeriods": {
+    "biblicalEra": "Ère Biblique",
+    "secondTemple": "Second Temple",
+    "talmudicEra": "Ère Talmudique",
+    "medieval": "Médiéval",
+    "earlyModern": "Moderne Précoce",
+    "modern": "Moderne"
+  },
+  "about": {
+    "title": "À propos de ce Projet",
+    "overview": {
+      "title": "Aperçu du Projet",
+      "description": "Cette visualisation interactive explore l'histoire démographique des communautés juives dans le monde entier, suivant les changements de population et les modèles de migration des temps anciens à nos jours. La carte affiche les communautés juives (kehillot) avec leurs populations estimées à différentes périodes historiques, permettant aux utilisateurs de comprendre le flux et le reflux de la vie juive à travers les siècles."
+    },
+    "features": {
+      "title": "Fonctionnalités",
+      "items": [
+        "Chronologie Interactive: Naviguez à travers plus de 3 400 ans d'histoire juive",
+        "Visualisation de la Population: Les marqueurs de communauté montrent la taille de la population et les niveaux de confiance",
+        "Événements Historiques: Les événements majeurs et les persécutions qui ont façonné la démographie juive",
+        "Modèles de Migration: Représentation visuelle des mouvements de la diaspora juive",
+        "Support Multilingue: Noms de lieux dans les langues locales et en anglais",
+        "Ressources Éducatives: Liens vers les sources historiques et les références"
+      ]
+    },
+    "dataSources": {
+      "title": "Sources de Données",
+      "description": "Les données combinent des archives historiques, des découvertes archéologiques, des études démographiques et des recherches universitaires. Les estimations de population sont basées sur des sources historiques disponibles et peuvent inclure des approximations à des fins de démonstration. Les sources incluent des publications académiques, des documents historiques et des bases de données démographiques établies."
+    },
+    "howToUse": {
+      "title": "Comment Utiliser",
+      "items": [
+        "Utilisez le curseur de chronologie pour naviguer à travers différentes périodes",
+        "Cliquez sur les marqueurs de communauté pour voir des informations détaillées",
+        "Survolez les marqueurs de chronologie pour apprendre sur les événements historiques",
+        "Utilisez le bouton de lecture pour animer automatiquement dans le temps",
+        "Basculez entre différentes vues de carte et options de langue"
+      ]
+    },
+    "credits": {
+      "title": "Crédits",
+      "developedBy": "Développé par:",
+      "organization": "Organisation:",
+      "contact": "Contact:",
+      "mapData": "Données de Carte:",
+      "timelineTechnology": "Technologie de Chronologie:",
+      "mappingLibrary": "Bibliothèque de Cartographie:"
+    },
+    "note": "Note: Cette visualisation est en cours de développement. Certains points de données sont des estimations ou des approximations à des fins de démonstration et n'ont pas été entièrement vérifiés. Nous accueillons les commentaires et corrections des historiens et chercheurs."
+  },
+  "tour": {
+    "title": "Visite Interactive",
+    "selectLanguage": "Sélectionner la Langue de la Visite",
+    "selectLanguageDescription": "Choisissez votre langue préférée pour la visite interactive",
+    "step": "Étape",
+    "of": "de",
+    "steps": [
+      {
+        "title": "Bienvenue dans la Carte Démographique Juive",
+        "content": "Cette carte interactive montre les communautés juives à travers l'histoire. Utilisez la chronologie en bas pour explorer différentes périodes."
+      },
+      {
+        "title": "Navigation dans la Chronologie",
+        "content": "Le curseur de chronologie vous permet de naviguer à travers plus de 3 400 ans d'histoire juive. Glissez le curseur ou utilisez le bouton de lecture pour animer dans le temps."
+      },
+      {
+        "title": "Marqueurs de Communauté",
+        "content": "Chaque marqueur représente une communauté juive. La taille indique la population, et les couleurs montrent différents types de communautés ou d'événements."
+      },
+      {
+        "title": "Événements Historiques",
+        "content": "Survolez les marqueurs de chronologie pour voir les événements historiques majeurs qui ont façonné la démographie juive et les modèles de migration."
+      },
+      {
+        "title": "Contrôles de Carte",
+        "content": "Utilisez les contrôles au-dessus de la chronologie pour changer les vues de carte, rechercher des villes, ajuster le regroupement et basculer entre différentes couches de carte."
+      },
+      {
+        "title": "Options de Langue",
+        "content": "Basculez entre différentes langues de carte et vues pour voir les noms de lieux dans leurs langues locales ou en anglais."
+      },
+      {
+        "title": "Informations sur la Population",
+        "content": "Cliquez sur n'importe quel marqueur de communauté pour voir des informations détaillées sur la population, le contexte historique et les ressources connexes."
+      },
+      {
+        "title": "Explorer et Apprendre",
+        "content": "Vous êtes maintenant prêt à explorer l'histoire juive à travers cette visualisation interactive. Utilisez tous les contrôles pour découvrir la riche tapisserie des communautés juives à travers le temps et l'espace."
+      }
+    ]
+  },
+  "workInProgress": "Travail en Cours: Cette visualisation est en cours de développement. Les données n'ont pas été vérifiées et certains chiffres sont des estimations ou des approximations à des fins de démonstration.",
+  "yearLabels": {
+    "bce": "AEC",
+    "ce": "EC"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "title": "Jewish Demographics & Historical Communities Map | Interactive Timeline",
+    "description": "Explore interactive maps of Jewish communities worldwide, tracking demographic changes and migration patterns throughout history. Discover kehillot and Jewish diaspora population data across time.",
+    "keywords": "Jewish demographics, Jewish history, population maps, Jewish communities, kehillot, Jewish diaspora, historical maps, Jewish migration, interactive timeline, Jewish geography, demographic changes, Jewish population data"
+  },
+  "ui": {
+    "title": "Jewish Demographics & Historical Communities Map",
+    "about": "About",
+    "startTour": "Start Tour",
+    "print": "Print",
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next",
+    "skipTour": "Skip Tour",
+    "pressHere": "Press Here",
+    "speed": "Speed:",
+    "search": "Search:",
+    "labels": "Labels:",
+    "view": "View:",
+    "clustering": "Clustering:",
+    "cityPlaceholder": "City...",
+    "clearSearch": "Clear search"
+  },
+  "mapLabels": {
+    "local": "Local",
+    "englishCartoDB": "English (CartoDB)",
+    "englishMapTiler": "English (MapTiler)",
+    "french": "French",
+    "german": "German",
+    "europeMiddleEast": "Europe & Middle East",
+    "americas": "Americas"
+  },
+  "historicalPeriods": {
+    "biblicalEra": "Biblical Era",
+    "secondTemple": "Second Temple",
+    "talmudicEra": "Mishnaic and Talmudic Era",
+    "medieval": "Medieval",
+    "earlyModern": "Early Modern",
+    "modern": "Modern"
+  },
+  "about": {
+    "title": "About This Project",
+    "overview": {
+      "title": "Project Overview",
+      "description": "This interactive visualization explores the demographic history of Jewish communities worldwide, tracking population changes and migration patterns from ancient times to the present. The map displays Jewish communities (kehillot) with their estimated populations at different historical periods, allowing users to understand the ebb and flow of Jewish life across centuries."
+    },
+    "features": {
+      "title": "Features",
+      "items": [
+        "Interactive Timeline: Navigate through 3,400+ years of Jewish history",
+        "Population Visualization: Community markers show population size and confidence levels",
+        "Historical Events: Major events and persecutions that shaped Jewish demographics",
+        "Migration Patterns: Visual representation of Jewish diaspora movements",
+        "Multilingual Support: Place names in local languages and English",
+        "Educational Resources: Links to historical sources and references"
+      ]
+    },
+    "dataSources": {
+      "title": "Data Sources",
+      "description": "The data combines historical records, archaeological findings, demographic studies, and scholarly research. Population estimates are based on available historical sources and may include approximations for demonstration purposes. Sources include academic publications, historical documents, and established demographic databases."
+    },
+    "howToUse": {
+      "title": "How to Use",
+      "items": [
+        "Use the timeline slider to navigate through different time periods",
+        "Click on community markers to see detailed information",
+        "Hover over timeline markers to learn about historical events",
+        "Use the play button to animate through time automatically",
+        "Switch between different map views and language options"
+      ]
+    },
+    "credits": {
+      "title": "Credits",
+      "developedBy": "Developed by:",
+      "organization": "Organization:",
+      "contact": "Contact:",
+      "mapData": "Map Data:",
+      "timelineTechnology": "Timeline Technology:",
+      "mappingLibrary": "Mapping Library:"
+    },
+    "note": "Note: This visualization is under development. Some data points are estimates or approximations for demonstration purposes and have not been fully verified. We welcome feedback and corrections from historians and researchers."
+  },
+  "tour": {
+    "title": "Interactive Tour",
+    "selectLanguage": "Select Tour Language",
+    "selectLanguageDescription": "Choose your preferred language for the interactive tour",
+    "step": "Step",
+    "of": "of",
+    "steps": [
+      {
+        "title": "Welcome to the Jewish Demographics Map",
+        "content": "This interactive map shows Jewish communities throughout history. Use the timeline at the bottom to explore different time periods."
+      },
+      {
+        "title": "Timeline Navigation",
+        "content": "The timeline slider allows you to navigate through 3,400+ years of Jewish history. Drag the slider or use the play button to animate through time."
+      },
+      {
+        "title": "Community Markers",
+        "content": "Each marker represents a Jewish community. The size indicates population, and colors show different types of communities or events."
+      },
+      {
+        "title": "Historical Events",
+        "content": "Hover over the timeline markers to see major historical events that shaped Jewish demographics and migration patterns."
+      },
+      {
+        "title": "Map Controls",
+        "content": "Use the controls above the timeline to change map views, search for cities, adjust clustering, and switch between different map layers."
+      },
+      {
+        "title": "Language Options",
+        "content": "Switch between different map languages and views to see place names in their local languages or in English."
+      },
+      {
+        "title": "Population Information",
+        "content": "Click on any community marker to see detailed population information, historical context, and related resources."
+      },
+      {
+        "title": "Explore and Learn",
+        "content": "You're now ready to explore Jewish history through this interactive visualization. Use all the controls to discover the rich tapestry of Jewish communities across time and space."
+      }
+    ]
+  },
+  "workInProgress": "Work in Progress: This visualization is under development. The data has not been verified and some numbers are estimates or approximations for demonstration purposes.",
+  "yearLabels": {
+    "bce": "BCE",
+    "ce": "CE"
+  }
+}
+
