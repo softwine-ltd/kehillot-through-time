@@ -2468,6 +2468,9 @@ function initializeMap() {
         const step = steps[stepIndex];
         currentTourStep = stepIndex;
         
+        // Get highlighting info from hardcoded tourSteps (which has highlight property)
+        const highlightStep = tourSteps[tourLanguage] ? tourSteps[tourLanguage][stepIndex] : tourSteps['en'][stepIndex];
+        
         // Update progress
         const stepText = window.i18n ? window.i18n.t('tour.step') : 'Step';
         const ofText = window.i18n ? window.i18n.t('tour.of') : 'of';
@@ -2499,16 +2502,16 @@ function initializeMap() {
         const titleText = window.i18n ? window.i18n.t('tour.title') : 'Interactive Tour';
         tourTitle.textContent = titleText;
         
-        // Handle highlighting
-        if (step.highlight) {
-            highlightElement(step.highlight);
+        // Handle highlighting using hardcoded tourSteps
+        if (highlightStep && highlightStep.highlight) {
+            highlightElement(highlightStep.highlight);
         } else {
             hideHighlight();
         }
         
         // Execute action if present
-        if (step.action) {
-            setTimeout(step.action, 500);
+        if (highlightStep && highlightStep.action) {
+            setTimeout(highlightStep.action, 500);
         }
     }
 
