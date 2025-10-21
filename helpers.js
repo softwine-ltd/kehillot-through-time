@@ -222,13 +222,13 @@ function convertToHebrewYear(gregorianYear) {
 
     return jewishYear;
 }
-const startYear0 = -1400;
+const startYear0 = -1312;
 const endYear0 = 2023;
-const totalRange0 = endYear0 - startYear0; // from -1400 to 2023
+const totalRange0 = endYear0 - startYear0; // from -1312 to 2023
 
 function addEventMarkers() {
     const timelineElement = document.getElementById('timeline');
-    const totalRange = totalRange0; // from -1400 to 2023
+    const totalRange = totalRange0; // from -1313 to 2023
 
     // Remove existing markers to avoid duplicates (e.g., on resize)
     const existingMarkers = timelineElement.querySelectorAll('.timeline-marker');
@@ -1624,7 +1624,7 @@ function initializeMap() {
                     communities developed and spread across the world.
                 </p>
                 <p class="text-gray-700 leading-relaxed mb-4">
-                    <strong>Ancient Period (-1400 to 0 BCE):</strong> The story begins with the Exodus 
+                    <strong>Ancient Period (-1313 to 0 BCE):</strong> The story begins with the Exodus 
                     and the establishment of the Kingdom of Israel. Watch how communities form in the 
                     ancient Near East.
                 </p>
@@ -1939,7 +1939,7 @@ function initializeMap() {
                         התפתחו והתפשטו ברחבי העולם.
                     </p>
                     <p class="text-gray-700 leading-relaxed mb-4" style="direction: rtl; text-align: right;">
-                        <strong>תקופה עתיקה (-1400 עד 0 לפנה"ס):</strong> הסיפור מתחיל עם יציאת מצרים 
+                        <strong>תקופה עתיקה (-1312 עד 0 לפנה"ס):</strong> הסיפור מתחיל עם יציאת מצרים 
                         והקמת ממלכת ישראל. צפו איך קהילות נוצרות במזרח הקרוב העתיק.
                     </p>
                     <p class="text-blue-600 font-medium" style="direction: rtl; text-align: right;">
@@ -2113,7 +2113,7 @@ function initializeMap() {
                         ציר הזמן מכסה תקופות מרכזיות בהיסטוריה היהודית:
                     </p>
                     <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4" style="direction: rtl; text-align: right;">
-                        <li><strong>תקופה עתיקה</strong> (1400 לפנה"ס - 70 לספירה) - זמנים מקראיים, בית ראשון ושני</li>
+                        <li><strong>תקופה עתיקה</strong> (1312 לפנה"ס - 70 לספירה) - זמנים מקראיים, בית ראשון ושני</li>
                         <li><strong>תקופה רבנית</strong> (70 - 500 לספירה) - פיתוח המשנה והתלמוד</li>
                         <li><strong>תקופה מימי הביניים</strong> (500 - 1500 לספירה) - קהילות גולה, תור הזהב של ספרד</li>
                         <li><strong>תקופה מודרנית מוקדמת</strong> (1500 - 1800 לספירה) - גירושים, הגירות, קהילות חדשות</li>
@@ -2327,7 +2327,7 @@ function initializeMap() {
                         communautés juives se sont développées et répandues dans le monde.
                     </p>
                     <p class="text-gray-700 leading-relaxed mb-4">
-                        <strong>Période Ancienne (-1400 à 0 AEC) :</strong> L'histoire commence avec l'Exode 
+                        <strong>Période Ancienne (-1312 à 0 AEC) :</strong> L'histoire commence avec l'Exode 
                         et l'établissement du Royaume d'Israël. Regardez comment les communautés se forment dans 
                         l'ancien Proche-Orient.
                     </p>
