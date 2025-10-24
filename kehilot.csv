@@ -3792,4 +3792,33 @@ Babylon,Shushan,48.2500,32.2000,-597,-597,-538,300,500,high,1,1,Shushan,שושן
 Babylon,Mahoz,44.3500,33.1500,200,200,1000,2000,3000,high,1,1,Mahoz,מחוזא,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish academy city in Babylon during Talmudic period
 Babylon,Sura,44.2000,33.1000,200,200,1000,5000,8000,high,1,1,Sura,סורא,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Major Jewish academy city in Babylon during Talmudic period
 Babylon,Mata Mehasya,44.1500,33.0500,200,200,1000,1500,2500,high,1,1,Mata Mehasya,מתא מחסיא,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%95%D7%AA_%D7%91%D7%91%D7%9C,Jewish community near Sura during Talmudic period
+Israel,Bethlehem,35.2024,31.7054,-1300,-1300,2000,30,3000,high,1,1,Bethlehem,בית לחם,,,,https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%AA_%D7%9C%D7%97%D7%9D,Biblical town - birthplace of King David
+Israel,Hebron,35.0998,31.5326,-1300, -1300,2000,30,1500,high,1,1,Hebron,חברון,,,,https://he.wikipedia.org/wiki/%D7%97%D7%91%D7%A8%D7%95%D7%9F,Biblical town - burial place of the patriarchs
+Israel,Jericho,35.4500,31.8667,-1300,-1300,200,30,2000,high,1,1,Jericho,יריחו,,,,https://he.wikipedia.org/wiki/%D7%99%D7%A8%D7%99%D7%97%D7%95,Biblical town - first city conquered by Joshua
+Israel,Shechem,35.2819,32.2139,-1300,-1300,400,30,2000,high,1,1,Shechem,שכם,,,,https://he.wikipedia.org/wiki/%D7%A9%D7%9B%D7%9D,Biblical town - center of northern Israel
+Israel,Bethel,35.1833,31.8333,-1300,-1300,400,800,1500,high,1,1,Bethel,בית אל,,,,https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%AA_%D7%90%D7%9C,Biblical town - site of Jacob's dream
+Israel,Gibeon,35.1833,31.8333,-1300,-1300,400,600,1200,high,1,1,Gibeon,גבעון,,,,https://he.wikipedia.org/wiki/%D7%92%D7%91%D7%A2%D7%95%D7%9F,Biblical town - Canaanite city that made peace with Joshua
+Israel,Shiloh,35.2819,32.2139,-1300,-1300,400,1000,2000,high,1,1,Shiloh,שילה,,,,https://he.wikipedia.org/wiki/%D7%A9%D7%99%D7%9C%D7%94,Biblical town - site of the Tabernacle
+Israel,Dan,35.4500,33.2500,-1300,-1300,400,800,1500,high,1,1,Dan,דן,,,,https://he.wikipedia.org/wiki/%D7%93%D7%9F,Biblical town - northernmost city of Israel
+Israel,Beersheba,34.7915,31.2518,-2000,-1300,400,600,1200,high,1,1,Beersheba,באר שבע,,,,https://he.wikipedia.org/wiki/%D7%91%D7%90%D7%A8_%D7%A9%D7%91%D7%A2,Biblical town - southern boundary of Israel
+Israel,Hazor,35.5710,33.0115,-1300,-1300,400,2000,4000,high,1,1,Hazor,חצור,,,,https://he.wikipedia.org/wiki/%D7%97%D7%A6%D7%95%D7%A8,Biblical town - major Canaanite city
+Israel,Megiddo,35.1828,32.5842,-1300,-1300,400,1500,3000,high,1,1,Megiddo,מגידו,,,,https://he.wikipedia.org/wiki/%D7%9E%D7%92%D7%99%D7%93%D7%95,Biblical town - strategic city in Jezreel Valley
+Israel,Gaza,34.4560,31.5069,-1300,-1300,-1000,1000,2000,high,1,1,Gaza,עזה,,,,https://he.wikipedia.org/wiki/%D7%A2%D7%96%D7%94,Biblical town - Philistine city
+Israel,En Gedi,35.4500,31.4500,-1300,-1300,-1000,300,600,high,1,1,En Gedi,עין גדי,,,,https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%9F_%D7%92%D7%93%D7%99,Biblical town - oasis on Dead Sea shore
+Israel,Azekah,34.6435,31.8014,-1300,-1300,-1000,600,1200,high,1,1,Azekah,עזקה,,,,https://he.wikipedia.org/wiki/%D7%A2%D7%96%D7%A7%D7%94,Biblical town - fortified city in Judah
+Israel,Adullam,34.6435,31.8014,-1300,-1300,-1000,400,800,high,1,1,Adullam,עדולם,,,,https://he.wikipedia.org/wiki/%D7%A2%D7%93%D7%95%D7%9C%D7%9D,Biblical town - cave of Adullam
+Israel,Tekoa,35.2370,31.6450,-1300,-1300,-1000,500,1000,high,1,1,Tekoa,תקוע,,,,https://he.wikipedia.org/wiki/%D7%AA%D7%A7%D7%95%D7%A2,Biblical town - home of the prophet Amos
+Israel,Ramah,35.1833,31.8333,-1300,-1300,-1000,600,1200,high,1,1,Ramah,רמה,,,,https://he.wikipedia.org/wiki/%D7%A8%D7%9E%D7%94,Biblical town - city in Benjamin
+Israel,Mizpah,35.1833,31.8333,-1300,-1300,-1000,800,1500,high,1,1,Mizpah,מצפה,,,,https://he.wikipedia.org/wiki/%D7%9E%D7%A6%D7%A4%D7%94,Biblical town - gathering place for Israel
+Israel,Gilgal,35.4500,31.8667,-1300,-1300,-1000,400,800,high,1,1,Gilgal,גלגל,,,,https://he.wikipedia.org/wiki/%D7%92%D7%9C%D7%92%D7%9C,Biblical town - first camp of Israel in Canaan
+Israel,Ai,35.1833,31.8333,-1300,-1300,-1000,300,600,high,1,1,Ai,עי,,,,https://he.wikipedia.org/wiki/%D7%A2%D7%99,Biblical town - second city conquered by Joshua
+Israel,Samaria,35.1961,32.2700,-1300,-1300,4000,3000,6000,high,1,1,Samaria,שומרון,,,,https://he.wikipedia.org/wiki/%D7%A9%D7%95%D7%9E%D7%A8%D7%95%D7%9F,Biblical town - capital of northern kingdom
+Israel,Tyre,35.1961,33.2700,-1300,-1300,4000,2000,4000,high,1,1,Tyre,צור,,,,https://he.wikipedia.org/wiki/%D7%A6%D7%95%D7%A8,Biblical town - Phoenician city
+Israel,Sidon,35.3750,33.5600,-1300,-1300,400,1500,3000,high,1,1,Sidon,צידון,,,,https://he.wikipedia.org/wiki/%D7%A6%D7%99%D7%93%D7%95%D7%9F,Biblical town - Phoenician city
+Israel,Acre,35.0818,32.9271,-1300,-1300,400,800,1500,high,1,1,Acre,עכו,,,,https://he.wikipedia.org/wiki/%D7%A2%D7%9B%D7%95,Biblical town - port city in northern Israel
+Israel,Dor,34.6435,32.6000,-1300,-1300,400,600,1200,high,1,1,Dor,דור,,,,https://he.wikipedia.org/wiki/%D7%93%D7%95%D7%A8,Biblical town - Canaanite port city
+Israel,Aphek,34.6435,32.1000,-1300,-1300,-1000,500,1000,high,1,1,Aphek,אפק,,,,https://he.wikipedia.org/wiki/%D7%90%D7%A4%D7%A7,Biblical town - strategic city
+Israel,Beth Shean,35.5000,32.5000,-1300,-1300,500,1000,2000,high,1,1,Beth Shean,בית שאן,,,,https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%AA_%D7%A9%D7%90%D7%9F,Biblical town - major city in Jezreel Valley
+Israel,Shunem,35.333878,32.605819,-1300,-1300,500,30,800,high,1,1,Shunem,שונם,,,,https://he.wikipedia.org/wiki/%D7%A9%D7%95%D7%A0%D7%9D, Biblical town - city in Issachar
+Israel,Jabesh Gilead,35.5000,32.5000,-1300,-1300,400,30,1200,high,1,1,Jabesh Gilead,יביש גלעד,,,,https://he.wikipedia.org/wiki/%D7%99%D7%91%D7%A9_%D7%92%D7%9C%D7%A2%D7%93,Biblical town - city in Gilead
 
