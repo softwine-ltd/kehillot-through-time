@@ -9,6 +9,8 @@
     "about": "À propos",
     "startTour": "Commencer la Visite",
     "print": "Imprimer",
+    "suggestData": "Suggérer des Données",
+    "cancel": "Annuler",
     "close": "Fermer",
     "previous": "Précédent",
     "next": "Suivant",
@@ -126,5 +128,24 @@
   "yearLabels": {
     "bce": "AEC",
     "ce": "EC"
+  },
+  "suggestData": {
+    "title": "Suggérer de Nouvelles Données",
+    "townName": "Nom de la Ville",
+    "country": "Pays",
+    "searchingLocation": "Recherche du lieu...",
+    "confirmLocation": "Confirmer le lieu:",
+    "selectLocation": "Sélectionner le Bon Lieu",
+    "dataEntries": "Entrées de Données de Population",
+    "addEntry": "+ Ajouter une Entrée",
+    "comment": "Commentaire (Optionnel)",
+    "yourDetails": "Vos Coordonnées (Optionnel)",
+    "yourName": "Votre Nom",
+    "yourEmail": "Votre Email",
+    "send": "Envoyer",
+    "step1Description": "D'abord, sélectionnez la ville pour laquelle vous souhaitez ajouter des données :",
+    "continue": "Continuer",
+    "dataEntryTitle": "Ajouter des Données de Population",
+    "selectedTown": "Ville Sélectionnée :"
   }
 }

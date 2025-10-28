@@ -9,6 +9,8 @@
     "about": "About",
     "startTour": "Start Tour",
     "print": "Print",
+    "suggestData": "Suggest Data",
+    "cancel": "Cancel",
     "close": "Close",
     "previous": "Previous",
     "next": "Next",
@@ -126,6 +128,25 @@
   "yearLabels": {
     "bce": "BCE",
     "ce": "CE"
+  },
+  "suggestData": {
+    "title": "Suggest New Data",
+    "townName": "Town Name",
+    "country": "Country",
+    "searchingLocation": "Searching location...",
+    "confirmLocation": "Confirm location:",
+    "selectLocation": "Select Correct Location",
+    "dataEntries": "Population Data Entries",
+    "addEntry": "+ Add Entry",
+    "comment": "Comment (Optional)",
+    "yourDetails": "Your Details (Optional)",
+    "yourName": "Your Name",
+    "yourEmail": "Your Email",
+    "send": "Send",
+    "step1Description": "First, select the town you want to add data for:",
+    "continue": "Continue",
+    "dataEntryTitle": "Add Population Data",
+    "selectedTown": "Selected Town:"
   }
 }
 

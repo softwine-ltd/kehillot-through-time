@@ -9,6 +9,8 @@
     "about": "אודות",
     "startTour": "התחל סיור",
     "print": "הדפס",
+    "suggestData": "הצע נתונים",
+    "cancel": "בטל",
     "close": "סגור",
     "previous": "הקודם",
     "next": "הבא",
@@ -126,6 +128,25 @@
   "yearLabels": {
     "bce": "לפנה\"ס",
     "ce": "לספירה"
+  },
+  "suggestData": {
+    "title": "הצע נתונים חדשים",
+    "townName": "שם העיר",
+    "country": "מדינה",
+    "searchingLocation": "מחפש מיקום...",
+    "confirmLocation": "אשר מיקום:",
+    "selectLocation": "בחר מיקום נכון",
+    "dataEntries": "ערכי אוכלוסיה",
+    "addEntry": "+ הוסף ערך",
+    "comment": "הערה (אופציונלי)",
+    "yourDetails": "פרטיך (אופציונלי)",
+    "yourName": "שמך",
+    "yourEmail": "כתובת הדוא\"ל שלך",
+    "send": "שלח",
+    "step1Description": "ראשית, בחר את העיר שאתה רוצה להוסיף עבורה נתונים:",
+    "continue": "המשך",
+    "dataEntryTitle": "הוסף נתוני אוכלוסייה",
+    "selectedTown": "עיר שנבחרה:"
   }
 }
 

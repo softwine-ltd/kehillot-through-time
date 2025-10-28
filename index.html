@@ -98,6 +98,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css" />
 
     <script src="i18n.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="helpers.js"></script>
     <link rel="stylesheet" href="./styles.css" />
 </head>
@@ -129,6 +130,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
                     </svg>
                     <span data-i18n="ui.print">Print</span>
+                </button>
+                <button id="suggestDataButton" class="px-2 py-1 lg:px-4 lg:py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors text-xs lg:text-base" data-i18n="ui.suggestData">
+                    Suggest Data
                 </button>
             </div>
         </div>
@@ -422,6 +426,151 @@
     <!-- Tour Overlay -->
     <div id="tourOverlay" class="fixed inset-0 pointer-events-none z-40 hidden">
         <div id="tourHighlight" class="absolute border-4 border-blue-500 rounded-lg shadow-lg bg-blue-500 bg-opacity-20 transition-all duration-500"></div>
+    </div>
+
+    <!-- Suggest Data Modal - Town Selection -->
+    <div id="suggestDataModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900" data-i18n="suggestData.title">Suggest New Data</h2>
+                    <button id="closeSuggestModal" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">
+                        ×
+                    </button>
+                </div>
+                
+                <div class="space-y-6">
+                    <!-- Step Indicator -->
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="flex-1 flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">1</div>
+                            <div class="flex-1 h-1 bg-blue-600 mx-2"></div>
+                        </div>
+                        <div class="flex-1 flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold">2</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4" data-i18n="suggestData.step1Description">First, select the town you want to add data for:</p>
+                    
+                    <!-- Town Selection -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="suggestData.townName">Town Name</label>
+                        <input type="text" id="townName" class="w-full px-3 py-2 border border-gray-300 rounded-md" required placeholder="e.g., Jerusalem">
+                    </div>
+                    
+                    <!-- Country Selection -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="suggestData.country">Country</label>
+                        <input type="text" id="country" class="w-full px-3 py-2 border border-gray-300 rounded-md" required placeholder="e.g., Israel">
+                    </div>
+                    
+                    <!-- Location Map -->
+                    <div id="townLocationMap" style="height: 300px; margin: 15px 0;" class="border border-gray-300 rounded-md">
+                        <div class="flex items-center justify-center h-full text-gray-500" data-i18n="suggestData.searchingLocation">Searching location...</div>
+                    </div>
+                    
+                    <div id="locationConfirmation" class="hidden bg-blue-50 border border-blue-200 rounded-md p-4">
+                        <p class="text-blue-800 font-semibold" data-i18n="suggestData.confirmLocation">Please confirm the location:</p>
+                        <p class="text-sm text-gray-600 mb-3" id="locationDetails"></p>
+                        <p class="text-xs text-gray-500 mb-3">You can drag the red marker to fine-tune the location. Click anywhere else on the map to move it.</p>
+                        <div class="flex gap-2">
+                            <button type="button" id="confirmLocationBtn" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 font-medium">
+                                ✓ Confirm This Location
+                            </button>
+                            <button type="button" id="rejectLocationBtn" class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 font-medium">
+                                ✗ Reject & Search Again
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Multiple Identifications -->
+                    <div id="multipleIdentifications" class="hidden">
+                        <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="suggestData.selectLocation">Select Correct Location</label>
+                        <div id="identificationOptions" class="space-y-2"></div>
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-end gap-4 pt-4 border-t">
+                        <button type="button" id="cancelSuggestData" class="px-6 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors" data-i18n="ui.cancel">Cancel</button>
+                        <button type="button" id="continueToDataEntry" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" data-i18n="suggestData.continue">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Entry Modal -->
+    <div id="dataEntryModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900" data-i18n="suggestData.dataEntryTitle">Add Population Data</h2>
+                    <button id="closeDataEntryModal" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">
+                        ×
+                    </button>
+                </div>
+                
+                <div class="space-y-6">
+                    <!-- Step Indicator -->
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="flex-1 flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold">✓</div>
+                            <div class="flex-1 h-1 bg-green-600 mx-2"></div>
+                        </div>
+                        <div class="flex-1 flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">2</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Selected Town Info -->
+                    <div class="bg-blue-50 border border-blue-200 rounded-md p-4 mb-4">
+                        <p class="text-sm text-gray-600 mb-1" data-i18n="suggestData.selectedTown">Selected Town:</p>
+                        <p class="text-lg font-semibold text-blue-900" id="selectedTownInfo"></p>
+                    </div>
+                    
+                    <!-- Form -->
+                    <form id="dataEntryForm">
+                        <!-- Data Entry Table -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="block text-sm font-medium text-gray-700" data-i18n="suggestData.dataEntries">Population Data Entries</label>
+                                <button type="button" id="addDataEntry" class="text-blue-600 hover:text-blue-800 text-sm font-medium" data-i18n="suggestData.addEntry">+ Add Entry</button>
+                            </div>
+                            <div id="dataEntries" class="space-y-2">
+                                <!-- Data entries will be added here dynamically -->
+                            </div>
+                        </div>
+                        
+                        <!-- Optional Comment -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="suggestData.comment">Comment (Optional)</label>
+                            <textarea id="comment" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="Any additional information or notes..."></textarea>
+                        </div>
+                        
+                        <!-- User Details -->
+                        <div class="border-t pt-4">
+                            <h3 class="text-sm font-medium text-gray-700 mb-3" data-i18n="suggestData.yourDetails">Your Details (Optional)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="suggestData.yourName">Your Name</label>
+                                    <input type="text" id="yourName" class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="John Doe">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="suggestData.yourEmail">Your Email</label>
+                                    <input type="email" id="yourEmail" class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="john@example.com">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="flex justify-end gap-4 pt-4 border-t">
+                            <button type="button" id="backToTownSelection" class="px-6 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors" data-i18n="ui.previous">Back</button>
+                            <button type="submit" class="px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors" data-i18n="suggestData.send">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>

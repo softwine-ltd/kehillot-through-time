@@ -1424,6 +1424,437 @@ function initializeMap() {
         }
     });
 
+    // Suggest Data functionality - Two Window Approach
+    const suggestDataButton = document.getElementById('suggestDataButton');
+    const suggestDataModal = document.getElementById('suggestDataModal');
+    const dataEntryModal = document.getElementById('dataEntryModal');
+    
+    if (suggestDataButton && suggestDataModal && dataEntryModal) {
+        const closeSuggestModalBtn = document.getElementById('closeSuggestModal');
+        const closeDataEntryModalBtn = document.getElementById('closeDataEntryModal');
+        const cancelSuggestData = document.getElementById('cancelSuggestData');
+        const dataEntryForm = document.getElementById('dataEntryForm');
+        const townNameInput = document.getElementById('townName');
+        const countryInput = document.getElementById('country');
+        const townLocationMapDiv = document.getElementById('townLocationMap');
+        const dataEntriesDiv = document.getElementById('dataEntries');
+        const addDataEntryBtn = document.getElementById('addDataEntry');
+        const continueToDataEntryBtn = document.getElementById('continueToDataEntry');
+        const backToTownSelectionBtn = document.getElementById('backToTownSelection');
+        const selectedTownInfo = document.getElementById('selectedTownInfo');
+        
+        let townLocationMap = null;
+        let confirmedCoords = null;
+        let dataEntryCounter = 0;
+        let selectedTownName = '';
+        let selectedCountry = '';
+
+        // Open suggest data modal (Step 1: Town Selection)
+        suggestDataButton.addEventListener('click', () => {
+            suggestDataModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            initializeTownLocationMap();
+            // Reset continue button
+            continueToDataEntryBtn.disabled = true;
+            continueToDataEntryBtn.classList.add('disabled:opacity-50', 'disabled:cursor-not-allowed');
+        });
+
+        // Close town selection modal
+        function closeTownSelectionModal() {
+            suggestDataModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            if (townLocationMap) {
+                townLocationMap.remove();
+                townLocationMap = null;
+            }
+            // Reset form
+            townNameInput.value = '';
+            countryInput.value = '';
+            confirmedCoords = null;
+        }
+
+        // Close data entry modal
+        function closeDataEntryModal() {
+            dataEntryModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            // Reset form
+            dataEntriesDiv.innerHTML = '';
+            document.getElementById('comment').value = '';
+            document.getElementById('yourName').value = '';
+            document.getElementById('yourEmail').value = '';
+            dataEntryCounter = 0;
+        }
+
+        // Event listeners for closing modals
+        closeSuggestModalBtn.addEventListener('click', closeTownSelectionModal);
+        closeDataEntryModalBtn.addEventListener('click', closeDataEntryModal);
+        cancelSuggestData.addEventListener('click', closeTownSelectionModal);
+    
+        suggestDataModal.addEventListener('click', (e) => {
+            if (e.target === suggestDataModal) {
+                closeTownSelectionModal();
+            }
+        });
+
+        dataEntryModal.addEventListener('click', (e) => {
+            if (e.target === dataEntryModal) {
+                closeDataEntryModal();
+            }
+        });
+
+        // Continue to data entry (from town selection to data entry)
+        continueToDataEntryBtn.addEventListener('click', () => {
+            if (!confirmedCoords) {
+                alert('Please confirm the location on the map before continuing.');
+                return;
+            }
+            
+            // Store selected town info
+            selectedTownName = townNameInput.value;
+            selectedCountry = countryInput.value;
+            
+            // Hide town selection modal
+            suggestDataModal.classList.add('hidden');
+            
+            // Show data entry modal
+            dataEntryModal.classList.remove('hidden');
+            
+            // Update selected town info display
+            selectedTownInfo.textContent = `${selectedTownName}, ${selectedCountry}`;
+        });
+
+        // Back to town selection (from data entry to town selection)
+        backToTownSelectionBtn.addEventListener('click', () => {
+            closeDataEntryModal();
+            suggestDataModal.classList.remove('hidden');
+        });
+
+        // Add data entry row
+        addDataEntryBtn.addEventListener('click', () => {
+            dataEntryCounter++;
+            const entryDiv = document.createElement('div');
+            entryDiv.className = 'border border-gray-300 rounded-md p-3';
+            entryDiv.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+                    <div>
+                        <label class="block text-xs font-medium text-gray-600 mb-1">Year</label>
+                        <input type="number" class="year-input w-full px-2 py-1 border border-gray-300 rounded" placeholder="e.g., 1945" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-600 mb-1">Population</label>
+                        <input type="number" class="population-input w-full px-2 py-1 border border-gray-300 rounded" placeholder="e.g., 3000" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-600 mb-1">Source</label>
+                        <input type="text" class="source-input w-full px-2 py-1 border border-gray-300 rounded" placeholder="URL or text" required>
+                    </div>
+                    <div class="flex items-end">
+                        <button type="button" class="remove-entry-btn px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 text-sm">Remove</button>
+                    </div>
+                </div>
+            `;
+            dataEntriesDiv.appendChild(entryDiv);
+            
+            // Add remove functionality
+            entryDiv.querySelector('.remove-entry-btn').addEventListener('click', () => {
+                entryDiv.remove();
+            });
+        });
+
+        // Initialize town location map
+        function initializeTownLocationMap() {
+            // Wait a bit for modal to be visible
+            setTimeout(() => {
+                townLocationMap = L.map('townLocationMap').setView([35.5, 35], 2);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(townLocationMap);
+                
+                // Add click listener to map for user to select location
+                townLocationMap.on('click', function(e) {
+                    confirmedCoords = { lat: e.latlng.lat, lon: e.latlng.lng };
+                    
+                    // Add/update marker
+                    if (townLocationMap._marker) {
+                        townLocationMap.removeLayer(townLocationMap._marker);
+                    }
+                    townLocationMap._marker = L.marker([confirmedCoords.lat, confirmedCoords.lon], {draggable: true}).addTo(townLocationMap);
+                    
+                    // Update marker position when dragged
+                    townLocationMap._marker.on('dragend', function(e) {
+                        const newPos = e.target.getLatLng();
+                        confirmedCoords = { lat: newPos.lat, lon: newPos.lng };
+                        document.getElementById('locationDetails').textContent = `Updated: ${newPos.lat.toFixed(4)}, ${newPos.lng.toFixed(4)}`;
+                    });
+                    
+                    // Update location confirmation
+                    document.getElementById('locationDetails').textContent = `Selected: ${confirmedCoords.lat.toFixed(4)}, ${confirmedCoords.lon.toFixed(4)}`;
+                    document.getElementById('locationConfirmation').classList.remove('hidden');
+                    
+                    // Center on marker
+                    townLocationMap.setView([confirmedCoords.lat, confirmedCoords.lon], 13);
+                    
+                    // Enable continue button when location is clicked
+                    continueToDataEntryBtn.disabled = false;
+                    continueToDataEntryBtn.classList.remove('disabled:opacity-50', 'disabled:cursor-not-allowed');
+                });
+            }, 100);
+            
+            // Add search functionality when inputs change
+            let searchTimeout;
+            const triggerSearch = () => {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    const townName = townNameInput.value.trim();
+                    const country = countryInput.value.trim();
+                    if (townName && country) {
+                        searchAndDisplayLocation(townName, country);
+                    } else {
+                        // Reset map view
+                        if (townLocationMap) {
+                            townLocationMap.setView([35.5, 35], 2);
+                            if (townLocationMap._marker) {
+                                townLocationMap.removeLayer(townLocationMap._marker);
+                                delete townLocationMap._marker;
+                            }
+                        }
+                    }
+                }, 500);
+            };
+            
+            townNameInput.addEventListener('input', triggerSearch);
+            countryInput.addEventListener('input', triggerSearch);
+        }
+
+        // Search and display location
+        function searchAndDisplayLocation(townName, country) {
+            const query = `${townName}, ${country}`;
+            
+            // Use Nominatim API for geocoding
+            fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&addressdetails=1&limit=5`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length === 0) {
+                        townLocationMapDiv.querySelector('.flex').textContent = 'Location not found. Please check the town and country names.';
+                        return;
+                    }
+                    
+                    if (data.length === 1) {
+                        // Single result - show on map
+                        displayLocation(data[0]);
+                    } else {
+                        // Multiple results - show options
+                        showMultipleLocations(data);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error searching location:', error);
+                    townLocationMapDiv.querySelector('.flex').textContent = 'Error searching location.';
+                });
+        }
+
+        function displayLocation(location) {
+            const lat = parseFloat(location.lat);
+            const lon = parseFloat(location.lon);
+            
+            townLocationMap.setView([lat, lon], 13);
+            
+            // Remove existing marker if any
+            if (townLocationMap._marker) {
+                townLocationMap.removeLayer(townLocationMap._marker);
+            }
+            
+            // Add new marker (draggable)
+            townLocationMap._marker = L.marker([lat, lon], {draggable: true}).addTo(townLocationMap);
+            
+            // Update marker position when dragged
+            townLocationMap._marker.on('dragend', function(e) {
+                const newPos = e.target.getLatLng();
+                confirmedCoords = { lat: newPos.lat, lon: newPos.lng };
+                document.getElementById('locationDetails').textContent = `Updated: ${location.display_name} (${newPos.lat.toFixed(4)}, ${newPos.lng.toFixed(4)})`;
+            });
+            
+            confirmedCoords = { lat, lon };
+            
+            document.getElementById('locationDetails').textContent = location.display_name;
+            document.getElementById('locationConfirmation').classList.remove('hidden');
+            
+            // Update confirm button to hide confirmation and show it's confirmed
+            const confirmBtn = document.getElementById('confirmLocationBtn');
+            const rejectBtn = document.getElementById('rejectLocationBtn');
+            
+            confirmBtn.onclick = () => {
+                document.getElementById('locationConfirmation').classList.add('hidden');
+                // Enable continue button
+                continueToDataEntryBtn.disabled = false;
+                continueToDataEntryBtn.classList.remove('disabled:opacity-50', 'disabled:cursor-not-allowed');
+                
+                // Show success indicator
+                const successDiv = document.createElement('div');
+                successDiv.className = 'bg-green-50 border border-green-200 rounded-md p-3 mb-3';
+                successDiv.innerHTML = `
+                    <div class="flex items-center gap-2">
+                        <span class="text-green-600 text-lg">✓</span>
+                        <p class="text-green-800 font-medium">Location confirmed! You can still drag the marker to adjust if needed.</p>
+                    </div>
+                `;
+                townLocationMapDiv.parentNode.insertBefore(successDiv, townLocationMapDiv.nextSibling);
+                
+                // Remove success message after 5 seconds
+                setTimeout(() => successDiv.remove(), 5000);
+            };
+            
+            rejectBtn.onclick = () => {
+                confirmedCoords = null;
+                if (townLocationMap._marker) {
+                    townLocationMap.removeLayer(townLocationMap._marker);
+                    delete townLocationMap._marker;
+                }
+                document.getElementById('locationConfirmation').classList.add('hidden');
+                townLocationMap.setView([35.5, 35], 2);
+            };
+        }
+
+        function showMultipleLocations(locations) {
+            const optionsDiv = document.getElementById('identificationOptions');
+            optionsDiv.innerHTML = '';
+            
+            locations.forEach(location => {
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'border border-gray-300 rounded-md p-3 hover:bg-gray-50 cursor-pointer';
+                optionDiv.innerHTML = `
+                    <p class="font-medium">${location.display_name}</p>
+                `;
+                optionDiv.addEventListener('click', () => {
+                    displayLocation(location);
+                    document.getElementById('multipleIdentifications').classList.add('hidden');
+                });
+                optionsDiv.appendChild(optionDiv);
+            });
+            
+            document.getElementById('multipleIdentifications').classList.remove('hidden');
+        }
+
+        // Form submission (for data entry modal)
+        dataEntryForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            if (dataEntriesDiv.querySelectorAll('.border.border-gray-300').length === 0) {
+                alert('Please add at least one data entry.');
+                return;
+            }
+            
+            const data = {
+                townName: selectedTownName,
+                country: selectedCountry,
+                coordinates: confirmedCoords,
+                entries: [],
+                comment: document.getElementById('comment').value,
+                userName: document.getElementById('yourName').value,
+                userEmail: document.getElementById('yourEmail').value
+            };
+            
+            // Collect all data entries
+            document.querySelectorAll('#dataEntries > div').forEach(entryDiv => {
+                data.entries.push({
+                    year: entryDiv.querySelector('.year-input').value,
+                    population: entryDiv.querySelector('.population-input').value,
+                    source: entryDiv.querySelector('.source-input').value
+                });
+            });
+            
+            // Show loading state
+            const submitButton = dataEntryForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            
+            try {
+                // Send email via EmailJS
+                await sendSuggestionsEmail(data);
+                
+                closeDataEntryModal();
+                closeTownSelectionModal();
+                alert('Thank you! Your suggestions have been sent successfully.');
+            } catch (error) {
+                console.error('Error sending email:', error);
+                alert('Failed to send suggestions. Please try again later or contact us directly.');
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }
+        });
+
+        async function sendSuggestionsEmail(data) {
+            // Initialize EmailJS with your public key
+            emailjs.init("ov5yGPv3-TafycZvw"); // TODO: Replace with your EmailJS public key
+            
+            // Create formatted message
+            const entriesText = data.entries.map((entry, index) => 
+                `${index + 1}. Year: ${entry.year}, Population: ${entry.population}, Source: ${entry.source}`
+            ).join('\n');
+            
+            const message = `
+New Data Suggestion Submitted
+
+Town: ${data.townName}
+Country: ${data.country}
+Coordinates: ${data.coordinates.lat}, ${data.coordinates.lon}
+
+Population Data:
+${entriesText}
+
+Comment: ${data.comment || 'None'}
+
+Submitted by: ${data.userName || 'Anonymous'}
+Email: ${data.userEmail || 'Not provided'}
+Submitted at: ${new Date().toISOString()}
+            `.trim();
+            
+            // Email template parameters
+            const templateParams = {
+                town_name: data.townName,
+                country: data.country,
+                coordinates: `${data.coordinates.lat}, ${data.coordinates.lon}`,
+                entries: entriesText,
+                comment: data.comment || 'None',
+                user_name: data.userName || 'Anonymous',
+                user_email: data.userEmail || 'Not provided',
+                message: message,
+                // For CSV download backup
+                csv_data: data.entries.map(entry => {
+                    return `${data.country},${data.townName},${data.coordinates.lon},${data.coordinates.lat},,${entry.year},${entry.population},high,1,1,,,,,,${entry.source},"Suggested by: ${data.userName || 'Anonymous'}, Comment: ${data.comment || 'None'}, Submitted: ${new Date().toISOString()}"`;
+                }).join('\n')
+            };
+            
+            // Send email
+            // TODO: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your EmailJS service and template IDs
+            return await emailjs.send('service_3pe6xpc', 'template_kem4oy5', templateParams);
+        }
+        
+        // Also keep the CSV download function as a backup
+        function saveSuggestionsToFile(data) {
+            // Create CSV entry
+            const timestamp = new Date().toISOString();
+            const csvEntries = data.entries.map(entry => {
+                return `${data.country},${data.townName},${data.coordinates.lon},${data.coordinates.lat},,${entry.year},${entry.population},high,1,1,,,,,,${entry.source},"Suggested by: ${data.userName || 'Anonymous'}, Comment: ${data.comment || 'None'}, Submitted: ${timestamp}"`;
+            }).join('\n');
+            
+            // Try to download the file
+            const blob = new Blob([csvEntries], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `suggestions_${timestamp.replace(/:/g, '-')}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            console.log('Data saved:', data);
+        }
+    }
+
     // Tour functionality
     const startTourButton = document.getElementById('startTourButton');
     const languageModal = document.getElementById('languageModal');
