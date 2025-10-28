@@ -146,7 +146,11 @@
     "step1Description": "First, select the town you want to add data for:",
     "continue": "Continue",
     "dataEntryTitle": "Add Population Data",
-    "selectedTown": "Selected Town:"
+    "selectedTown": "Selected Town:",
+    "manualCoordinates": "Manual Coordinates (Optional)",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "coordinatesHelp": "You can enter coordinates manually or use the map below to select a location."
   }
 }
 

@@ -608,15 +608,44 @@ function updateMarkers(kehilot) {
         //             </div>
         // `;
 
+        const currentLangForPopup = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
+        const isRtlLang = currentLangForPopup === 'he';
+        const textDir = isRtlLang ? 'rtl' : 'ltr';
+        const textAlign = isRtlLang ? 'right' : 'left';
+        const popupLabels = {
+            he: {
+                population: 'אוכלוסייה',
+                jewishPresenceStart: 'תחילת נוכחות יהודית',
+                source: 'מקור',
+                notes: 'הערות',
+                other: 'אחר'
+            },
+            en: {
+                population: 'Population',
+                jewishPresenceStart: 'Start of Jewish presence',
+                source: 'Source',
+                notes: 'Notes',
+                other: 'Other'
+            },
+            fr: {
+                population: 'Population',
+                jewishPresenceStart: 'Début de présence juive',
+                source: 'Source',
+                notes: 'Remarques',
+                other: 'Autre'
+            }
+        };
+        const labels = popupLabels[currentLangForPopup] || popupLabels.en;
+
         const commentDetails = kehila.comment === undefined || kehila.comment === '' ? '' : `
                     <div style="margin: 8px 0;">
-                        <strong> הערות:</strong> ${kehila.comment}
+                        <strong> ${labels.notes}:</strong> ${kehila.comment}
                     </div>
         `;
 
         // Create popup content
         const popupContent = `
-            <div style="direction: rtl; text-align: right;">
+            <div style="direction: ${textDir}; text-align: ${textAlign};">
                 <strong style="font-size: 16px;">${kehila.name_he}</strong>
                 <br>
                 ${kehila.name}
@@ -624,9 +653,9 @@ function updateMarkers(kehilot) {
                 ${kehila.names.english ? `English: ${kehila.names.english} <br>` : ''}                
                 ${kehila.names.yiddish ? `ייִדיש: ${kehila.names.yiddish} <br>` : ''}                
                 ${kehila.names.german ? `Deutsch: ${kehila.names.german} <br>` : ''}                
-                ${kehila.names.other ? `אחר: ${kehila.names.other} <br>` : ''}
+                ${kehila.names.other ? `${labels.other}: ${kehila.names.other} <br>` : ''}
                 <div style="margin: 8px 0;">
-                    <strong> אוכלוסייה:</strong> ${formatPopulation(kehila.actual_pop)}
+                    <strong> ${labels.population}:</strong> ${formatPopulation(kehila.actual_pop)}
                 </div>
   
                 <div style="
@@ -641,11 +670,11 @@ function updateMarkers(kehilot) {
                 </div>
                 <div style="margin-top: 8px;">
                     <small>
-                        שנת ייסוד: ${kehila.year_estab < 0 ? Math.abs(kehila.year_estab) + ' BCE' : kehila.year_estab + ' CE'}
+                        ${labels.jewishPresenceStart}: ${kehila.year_estab < 0 ? Math.abs(kehila.year_estab) + ' BCE' : kehila.year_estab + ' CE'}
                         (${numberToHebrewLetters(convertToHebrewYear(kehila.year_estab))})
                     </small>
                     <br>
-                    <small>מקור: ${formatSource(kehila.source)}</small>
+                    <small>${labels.source}: ${formatSource(kehila.source)}</small>
                     <br>
                     ${commentDetails}
                 </div>
@@ -656,6 +685,10 @@ function updateMarkers(kehilot) {
             maxWidth: 300,
             className: 'custom-popup'
         });
+        
+        // Store the kehila data on the marker for language regeneration
+        marker.kehilaData = kehila;
+        
         currentMarkers.push(marker);
         markersLayer.addLayer(marker);
     });
@@ -949,11 +982,23 @@ function initializeMap() {
                 });
                 
                 // Add popup with search result info
+                const currentLangForPopup = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
+                const isRtlLang = currentLangForPopup === 'he';
+                const textDir = isRtlLang ? 'rtl' : 'ltr';
+                const textAlign = isRtlLang ? 'right' : 'left';
+                
+                const searchLabels = {
+                    he: 'תוצאת חיפוש',
+                    en: 'Search result',
+                    fr: 'Résultat de recherche'
+                };
+                const searchLabel = searchLabels[currentLangForPopup] || searchLabels.en;
+                
                 searchMarker.bindPopup(`
-                    <div style="direction: rtl; text-align: right;">
+                    <div style="direction: ${textDir}; text-align: ${textAlign};">
                         <strong>${result.display_name}</strong>
                         <br>
-                        <small>Search result</small>
+                        <small>${searchLabel}</small>
                     </div>
                 `);
                 
@@ -1436,6 +1481,8 @@ function initializeMap() {
         const dataEntryForm = document.getElementById('dataEntryForm');
         const townNameInput = document.getElementById('townName');
         const countryInput = document.getElementById('country');
+        const manualLatitudeInput = document.getElementById('manualLatitude');
+        const manualLongitudeInput = document.getElementById('manualLongitude');
         const townLocationMapDiv = document.getElementById('townLocationMap');
         const dataEntriesDiv = document.getElementById('dataEntries');
         const addDataEntryBtn = document.getElementById('addDataEntry');
@@ -1470,6 +1517,8 @@ function initializeMap() {
             // Reset form
             townNameInput.value = '';
             countryInput.value = '';
+            manualLatitudeInput.value = '';
+            manualLongitudeInput.value = '';
             confirmedCoords = null;
         }
 
@@ -1504,9 +1553,18 @@ function initializeMap() {
 
         // Continue to data entry (from town selection to data entry)
         continueToDataEntryBtn.addEventListener('click', () => {
-            if (!confirmedCoords) {
-                alert('Please confirm the location on the map before continuing.');
+            // Check if coordinates are provided either manually or via map
+            const manualLat = parseFloat(manualLatitudeInput.value);
+            const manualLon = parseFloat(manualLongitudeInput.value);
+            
+            if (!confirmedCoords && (isNaN(manualLat) || isNaN(manualLon))) {
+                alert('Please either confirm the location on the map or enter manual coordinates before continuing.');
                 return;
+            }
+            
+            // Use manual coordinates if provided, otherwise use map coordinates
+            if (!isNaN(manualLat) && !isNaN(manualLon)) {
+                confirmedCoords = { lat: manualLat, lon: manualLon };
             }
             
             // Store selected town info
@@ -1521,6 +1579,11 @@ function initializeMap() {
             
             // Update selected town info display
             selectedTownInfo.textContent = `${selectedTownName}, ${selectedCountry}`;
+
+            // If no entries exist yet, auto-add one entry row
+            if (dataEntriesDiv.children.length === 0) {
+                addDataEntryBtn.click();
+            }
         });
 
         // Back to town selection (from data entry to town selection)
@@ -1585,6 +1648,10 @@ function initializeMap() {
                         const newPos = e.target.getLatLng();
                         confirmedCoords = { lat: newPos.lat, lon: newPos.lng };
                         document.getElementById('locationDetails').textContent = `Updated: ${newPos.lat.toFixed(4)}, ${newPos.lng.toFixed(4)}`;
+                        
+                        // Update manual coordinate inputs
+                        manualLatitudeInput.value = newPos.lat.toFixed(6);
+                        manualLongitudeInput.value = newPos.lng.toFixed(6);
                     });
                     
                     // Update location confirmation
@@ -1624,6 +1691,73 @@ function initializeMap() {
             
             townNameInput.addEventListener('input', triggerSearch);
             countryInput.addEventListener('input', triggerSearch);
+            
+            // Handle manual coordinate input
+            manualLatitudeInput.addEventListener('input', () => {
+                const lat = parseFloat(manualLatitudeInput.value);
+                const lon = parseFloat(manualLongitudeInput.value);
+                
+                if (!isNaN(lat) && !isNaN(lon) && townLocationMap) {
+                    // Update map view and marker
+                    townLocationMap.setView([lat, lon], 13);
+                    
+                    // Remove existing marker if any
+                    if (townLocationMap._marker) {
+                        townLocationMap.removeLayer(townLocationMap._marker);
+                    }
+                    
+                    // Add new marker
+                    townLocationMap._marker = L.marker([lat, lon], {draggable: true}).addTo(townLocationMap);
+                    
+                    // Update confirmed coordinates
+                    confirmedCoords = { lat, lon };
+                    
+                    // Enable continue button
+                    continueToDataEntryBtn.disabled = false;
+                    continueToDataEntryBtn.classList.remove('disabled:opacity-50', 'disabled:cursor-not-allowed');
+                    
+                    // Update marker position when dragged
+                    townLocationMap._marker.on('dragend', function(e) {
+                        const newPos = e.target.getLatLng();
+                        confirmedCoords = { lat: newPos.lat, lon: newPos.lng };
+                        manualLatitudeInput.value = newPos.lat.toFixed(6);
+                        manualLongitudeInput.value = newPos.lng.toFixed(6);
+                    });
+                }
+            });
+            
+            manualLongitudeInput.addEventListener('input', () => {
+                const lat = parseFloat(manualLatitudeInput.value);
+                const lon = parseFloat(manualLongitudeInput.value);
+                
+                if (!isNaN(lat) && !isNaN(lon) && townLocationMap) {
+                    // Update map view and marker
+                    townLocationMap.setView([lat, lon], 13);
+                    
+                    // Remove existing marker if any
+                    if (townLocationMap._marker) {
+                        townLocationMap.removeLayer(townLocationMap._marker);
+                    }
+                    
+                    // Add new marker
+                    townLocationMap._marker = L.marker([lat, lon], {draggable: true}).addTo(townLocationMap);
+                    
+                    // Update confirmed coordinates
+                    confirmedCoords = { lat, lon };
+                    
+                    // Enable continue button
+                    continueToDataEntryBtn.disabled = false;
+                    continueToDataEntryBtn.classList.remove('disabled:opacity-50', 'disabled:cursor-not-allowed');
+                    
+                    // Update marker position when dragged
+                    townLocationMap._marker.on('dragend', function(e) {
+                        const newPos = e.target.getLatLng();
+                        confirmedCoords = { lat: newPos.lat, lon: newPos.lng };
+                        manualLatitudeInput.value = newPos.lat.toFixed(6);
+                        manualLongitudeInput.value = newPos.lng.toFixed(6);
+                    });
+                }
+            });
         }
 
         // Search and display location
@@ -1672,6 +1806,10 @@ function initializeMap() {
                 const newPos = e.target.getLatLng();
                 confirmedCoords = { lat: newPos.lat, lon: newPos.lng };
                 document.getElementById('locationDetails').textContent = `Updated: ${location.display_name} (${newPos.lat.toFixed(4)}, ${newPos.lng.toFixed(4)})`;
+                
+                // Update manual coordinate inputs
+                manualLatitudeInput.value = newPos.lat.toFixed(6);
+                manualLongitudeInput.value = newPos.lng.toFixed(6);
             });
             
             confirmedCoords = { lat, lon };
@@ -2895,7 +3033,8 @@ Submitted at: ${new Date().toISOString()}
 
     function showTourStep(stepIndex) {
         const currentLang = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
-        const steps = window.i18n ? window.i18n.t('tour.steps') : tourSteps[tourLanguage];
+        // Use hardcoded tourSteps since i18n tour.steps might not be available
+        const steps = tourSteps[tourLanguage] || tourSteps['en'];
         const step = steps[stepIndex];
         currentTourStep = stepIndex;
         
@@ -3064,13 +3203,163 @@ Submitted at: ${new Date().toISOString()}
     });
 
     // Listen for language changes to update tour and tooltips
-    window.addEventListener('languageChanged', (e) => {
+    window.addEventListener('languageChanged', async (e) => {
         tourLanguage = e.detail.language;
         if (!tourModal.classList.contains('hidden')) {
             showTourStep(currentTourStep);
         }
         // Refresh event markers with new language
         addEventMarkers();
+        
+        // Regenerate all popups with new language
+        regenerateAllPopups();
+        
+        // Regenerate events with new language (since they get recreated)
+        const currentYear = parseInt(document.getElementById('timeline').noUiSlider.get());
+        await updateEvents(currentYear);
+    });
+}
+
+// Function to regenerate all popups when language changes
+function regenerateAllPopups() {
+    // Regenerate community marker popups
+    currentMarkers.forEach(marker => {
+        const kehila = marker.kehilaData; // Assuming we store the data on the marker
+        if (kehila) {
+            const currentLangForPopup = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
+            const isRtlLang = currentLangForPopup === 'he';
+            const textDir = isRtlLang ? 'rtl' : 'ltr';
+            const textAlign = isRtlLang ? 'right' : 'left';
+            
+            const popupLabels = {
+                he: {
+                    population: 'אוכלוסייה',
+                    jewishPresenceStart: 'תחילת נוכחות יהודית',
+                    source: 'מקור',
+                    notes: 'הערות',
+                    other: 'אחר'
+                },
+                en: {
+                    population: 'Population',
+                    jewishPresenceStart: 'Start of Jewish presence',
+                    source: 'Source',
+                    notes: 'Notes',
+                    other: 'Other'
+                },
+                fr: {
+                    population: 'Population',
+                    jewishPresenceStart: 'Début de présence juive',
+                    source: 'Source',
+                    notes: 'Remarques',
+                    other: 'Autre'
+                }
+            };
+            const labels = popupLabels[currentLangForPopup] || popupLabels.en;
+
+            const commentDetails = kehila.comment === undefined || kehila.comment === '' ? '' : `
+                        <div style="margin: 8px 0;">
+                            <strong> ${labels.notes}:</strong> ${kehila.comment}
+                        </div>
+            `;
+
+            const popupContent = `
+                <div style="direction: ${textDir}; text-align: ${textAlign};">
+                    <strong style="font-size: 16px;">${kehila.name_he}</strong>
+                    <br>
+                    ${kehila.name}
+                    <br>
+                    ${kehila.names.english ? `English: ${kehila.names.english} <br>` : ''}                
+                    ${kehila.names.yiddish ? `ייִדיש: ${kehila.names.yiddish} <br>` : ''}                
+                    ${kehila.names.german ? `Deutsch: ${kehila.names.german} <br>` : ''}                
+                    ${kehila.names.other ? `${labels.other}: ${kehila.names.other} <br>` : ''}
+                    <div style="margin: 8px 0;">
+                        <strong> ${labels.population}:</strong> ${formatPopulation(kehila.actual_pop)}
+                    </div>
+      
+                    <div style="
+                        padding: 4px 8px;
+                        background: ${getConfidenceColor(kehila.confidence)}22;
+                        border-radius: 4px;
+                        display: inline-block;
+                        color: ${getConfidenceColor(kehila.confidence)};
+                        font-size: 12px;
+                    ">
+                        ${getConfidenceText(kehila.confidence)}
+                    </div>
+                    <div style="margin-top: 8px;">
+                        <small>
+                            ${labels.jewishPresenceStart}: ${kehila.year_estab < 0 ? Math.abs(kehila.year_estab) + ' BCE' : kehila.year_estab + ' CE'}
+                            (${numberToHebrewLetters(convertToHebrewYear(kehila.year_estab))})
+                        </small>
+                        <br>
+                        <small>${labels.source}: ${formatSource(kehila.source)}</small>
+                        <br>
+                        ${commentDetails}
+                    </div>
+                </div>
+            `;
+            
+            marker.setPopupContent(popupContent);
+        }
+    });
+    
+    // Regenerate historical arrow popups
+    currentArrows.forEach(arrow => {
+        const arrowData = arrow.arrowData; // Assuming we store the data on the arrow
+        if (arrowData) {
+            const currentLangForPopup = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
+            const isRtlLang = currentLangForPopup === 'he';
+            const textDir = isRtlLang ? 'rtl' : 'ltr';
+            const textAlign = isRtlLang ? 'right' : 'left';
+            
+            const arrowLabels = {
+                he: {
+                    period: 'תקופה',
+                    description: 'תיאור',
+                    learnMore: 'למידע נוסף ↗'
+                },
+                en: {
+                    period: 'Period',
+                    description: 'Description',
+                    learnMore: 'Learn more ↗'
+                },
+                fr: {
+                    period: 'Période',
+                    description: 'Description',
+                    learnMore: 'En savoir plus ↗'
+                }
+            };
+            const labels = arrowLabels[currentLangForPopup] || arrowLabels.en;
+            
+            const linkHtml = arrowData.url ? `
+                        <div class="tooltip-link" style="margin-top:6px;">
+                            <a href="${arrowData.url}" target="_blank" style="color: #3b82f6; text-decoration: underline; font-size: 12px;">
+                                ${labels.learnMore}
+                            </a>
+                        </div>
+                    ` : '';
+
+            const popupContent = `
+                <div style="direction: ${textDir}; text-align: ${textAlign};">
+                    <strong style="font-size: 16px;">${arrowData.titleHe}</strong>
+                    <br>
+                    ${arrowData.titleEn}
+                    <br>
+                    <div style="margin: 8px 0;">
+                        <strong>${labels.period}:</strong> 
+                        ${arrowData.yearStart < 0 ? Math.abs(arrowData.yearStart) + ' BCE' : arrowData.yearStart + ' CE'} - 
+                        ${arrowData.yearEnd < 0 ? Math.abs(arrowData.yearEnd) + ' BCE' : arrowData.yearEnd + ' CE'}
+                    </div>
+                    <div style="margin: 8px 0;">
+                        <strong>${labels.description}:</strong> ${arrowData.description}
+                    </div>
+                    ${linkHtml}
+                </div>
+            `;
+            
+            arrow.polyline.setPopupContent(popupContent);
+            arrow.arrowhead.setPopupContent(popupContent);
+        }
     });
 }
 
@@ -3256,27 +3545,51 @@ function createArrow(arrowData) {
     });
 
     // Create popup content for the arrow
+    const currentLangForPopup = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
+    const isRtlLang = currentLangForPopup === 'he';
+    const textDir = isRtlLang ? 'rtl' : 'ltr';
+    const textAlign = isRtlLang ? 'right' : 'left';
+    
+    const arrowLabels = {
+        he: {
+            period: 'תקופה',
+            description: 'תיאור',
+            learnMore: 'למידע נוסף ↗'
+        },
+        en: {
+            period: 'Period',
+            description: 'Description',
+            learnMore: 'Learn more ↗'
+        },
+        fr: {
+            period: 'Période',
+            description: 'Description',
+            learnMore: 'En savoir plus ↗'
+        }
+    };
+    const labels = arrowLabels[currentLangForPopup] || arrowLabels.en;
+    
     const linkHtml = arrowData.url ? `
             <div class="tooltip-link" style="margin-top:6px;">
                 <a href="${arrowData.url}" target="_blank" style="color: #3b82f6; text-decoration: underline; font-size: 12px;">
-                    Learn more ↗
+                    ${labels.learnMore}
                 </a>
             </div>
         ` : '';
 
     const popupContent = `
-        <div style="direction: rtl; text-align: right;">
+        <div style="direction: ${textDir}; text-align: ${textAlign};">
             <strong style="font-size: 16px;">${arrowData.titleHe}</strong>
             <br>
             ${arrowData.titleEn}
             <br>
             <div style="margin: 8px 0;">
-                <strong>תקופה:</strong> 
+                <strong>${labels.period}:</strong> 
                 ${arrowData.yearStart < 0 ? Math.abs(arrowData.yearStart) + ' BCE' : arrowData.yearStart + ' CE'} - 
                 ${arrowData.yearEnd < 0 ? Math.abs(arrowData.yearEnd) + ' BCE' : arrowData.yearEnd + ' CE'}
             </div>
             <div style="margin: 8px 0;">
-                <strong>תיאור:</strong> ${arrowData.description}
+                <strong>${labels.description}:</strong> ${arrowData.description}
             </div>
             ${linkHtml}
         </div>
@@ -3291,8 +3604,10 @@ function createArrow(arrowData) {
         maxWidth: 300,
         className: 'custom-popup'
     });
-
-    return { polyline, arrowhead };
+    
+    // Store the arrow data for language regeneration
+    const arrowObject = { polyline, arrowhead, arrowData };
+    return arrowObject;
 }
 
 function getArrowRotation(startLat, startLon, endLat, endLon) {
@@ -3333,11 +3648,18 @@ function formatSource(source) {
     const isUrl = source.startsWith('http://') || source.startsWith('https://') || source.startsWith('www.');
 
     if (isUrl) {
+        const currentLangForPopup = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
+        const linkTextMap = {
+            he: 'מקור מקוון ↗',
+            en: 'Online source ↗',
+            fr: 'Source en ligne ↗'
+        };
+        const linkText = linkTextMap[currentLangForPopup] || linkTextMap.en;
         return `<a href="${source}" target="_blank" style="
             color: #2563eb;
             text-decoration: underline;
             font-weight: 500;
-        ">מקור מקוון ↗</a>`;
+        ">${linkText}</a>`;
     }
 
     return source;
@@ -3509,25 +3831,52 @@ function addEventPopup(polygon, ev) {
     }
 
     const eventTitles = getEventTitles(ev.type);
+    const currentLangForPopup = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
+    const isRtlLang = currentLangForPopup === 'he';
+    const textDir = isRtlLang ? 'rtl' : 'ltr';
+    const textAlign = isRtlLang ? 'right' : 'left';
+    
+    const eventLabels = {
+        he: {
+            period: 'תקופה',
+            description: 'תיאור',
+            source: 'מקור'
+        },
+        en: {
+            period: 'Period',
+            description: 'Description',
+            source: 'Source'
+        },
+        fr: {
+            period: 'Période',
+            description: 'Description',
+            source: 'Source'
+        }
+    };
+    const labels = eventLabels[currentLangForPopup] || eventLabels.en;
+    
     const popupContent = `
-    <div style="direction: rtl; text-align: right;">
+    <div style="direction: ${textDir}; text-align: ${textAlign};">
         <div style="font-weight: 600; margin-bottom: 4px;">${eventTitles.he}</div>
         <div style="font-weight: 500; margin-bottom: 8px; color: #666; font-size: 14px;">${eventTitles.en}</div>
         <div style="margin: 6px 0;">
-            <strong>תקופה:</strong> ${ev.yearStart < 0 ? Math.abs(ev.yearStart) + ' BCE' : ev.yearStart + ' CE'}
+            <strong>${labels.period}:</strong> ${ev.yearStart < 0 ? Math.abs(ev.yearStart) + ' BCE' : ev.yearStart + ' CE'}
             ${ev.yearEnd !== undefined ? ' - ' + (ev.yearEnd < 0 ? Math.abs(ev.yearEnd) + ' BCE' : ev.yearEnd + ' CE') : ''}
         </div>
         ${ev.descriptionEng || ev.descriptionHeb ? `
             <div style="margin: 6px 0;">
-                <strong>תיאור:</strong>
+                <strong>${labels.description}:</strong>
                 ${ev.descriptionHeb ? `<div style="margin: 2px 0;">${ev.descriptionHeb}</div>` : ''}
                 ${ev.descriptionEng ? `<div style="margin: 2px 0; color: #666; font-size: 12px;">${ev.descriptionEng}</div>` : ''}
             </div>
         ` : ''}
-        ${ev.source ? `<div style="margin: 6px 0;"><strong>מקור:</strong> ${formatSource(ev.source)}</div>` : ''}
+        ${ev.source ? `<div style="margin: 6px 0;"><strong>${labels.source}:</strong> ${formatSource(ev.source)}</div>` : ''}
     </div>`;
 
     polygon.bindPopup(popupContent, { maxWidth: 320, className: 'custom-popup' });
+    
+    // Store the event data on the polygon for language regeneration
+    polygon.eventData = ev;
 }
 
 // Parse polygon coordinates from string format like "((35, 32),(35.2,32),(35.2,32.2),(35.1,32.3),(35,32.2),(34.9,32.1))"

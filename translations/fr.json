@@ -146,6 +146,10 @@
     "step1Description": "D'abord, sélectionnez la ville pour laquelle vous souhaitez ajouter des données :",
     "continue": "Continuer",
     "dataEntryTitle": "Ajouter des Données de Population",
-    "selectedTown": "Ville Sélectionnée :"
+    "selectedTown": "Ville Sélectionnée :",
+    "manualCoordinates": "Coordonnées Manuelles (Optionnel)",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "coordinatesHelp": "Vous pouvez saisir les coordonnées manuellement ou utiliser la carte ci-dessous pour sélectionner un emplacement."
   }
 }

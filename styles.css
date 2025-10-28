@@ -659,6 +659,22 @@ body {
         line-height: 1.1;
     }
     
+    /* Responsive font sizing for different languages */
+    @media (min-width: 1024px) {
+        header h1 {
+            font-size: 1.125rem; /* 18px instead of 20px for better fit */
+            line-height: 1.2;
+        }
+    }
+    
+    /* Even smaller font for very large displays to prevent wrapping */
+    @media (min-width: 1920px) {
+        header h1 {
+            font-size: 1rem; /* 16px for 4K displays */
+            line-height: 1.1;
+        }
+    }
+    
     header button {
         padding: 0.25rem 0.5rem;
         font-size: 0.75rem;
