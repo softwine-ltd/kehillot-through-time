@@ -1,5 +1,7 @@
 .vscode/*
 .git/*
+__pycache__/
+*.pyc
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml

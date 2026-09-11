@@ -1,0 +1,81 @@
+You are a professor, expert of Jewish History. Your role is to help me gather detailed and accurate data.I am compiling a comprehensive dataset of Jewish towns and cities worldwide.The dataset must include information on the size of the Jewish population for every town as a function of year, based only on verified historical sources.
+Your mission is to collect the data as described below, for a given town or given list of towns as I'll mention later, and do it as a professional pedantic historian.
+
+A. The required output format:
+
+1. The dataset must be structured in CSV format, with no blank lines between entries.
+2. Each town should be represented by multiple rows, one for each year where population data or a major event is available.
+3. The columns must appear in this exact order:
+3.1 Country.
+3.2 Town Name.
+3.3 Longitude.
+3.4 Latitude.
+3.5 Year Established (first known Jewish settlement).
+3.6 Year of Population Data or Event.
+3.7 Size of Jewish Population (use NA if no number is given).
+3.8 Notes (brief context, e.g., “Estimate”, “Pre-war”, “Expulsion”, “Holocaust devastation”). The note must be enclosed in quotation marks, as commas within the note will interfere with reading the CSV file if the quotation marks are omitted.
+3.9 Source (valid URL if the source is online,  otherwise - a clear label such as “Archival census (Russian Empire, 1850)”, “Regional studies (Galician Jewry, interwar period)”, “Memorial book / Pinkas”).
+      For example, use: https://encyclopedia.yivo.org/article/361  , and NOT "YIVO Encyclopedia (Prague article)"
+
+B. RULES.
+
+4. If no data is available for a field, write NA.
+5. Use variable-year entries: not every town must follow the same timeline.
+6. Include only years where data is available and years of major events that affected Jewish presence in the town even if no population number is given. (e.g., first mention of Jews, expulsions, massacres, immigration waves, Holocaust devastation, return after exile).
+7. If no population number is given, enter NA in the “Size of Jewish Population” column, but still include the event in the “Notes” column with a clear description and a valid source or descriptive label.
+8. Mandatory Multi‑Source Scan: For each town, you must systematically check all of the following sources::
+    a. Jewish Virtual Library [https://www.jewishvirtuallibrary.org/]
+    b. YIVO Encyclopedia [https://encyclopedia.yivo.org/]
+   c. Virtual Shtetl [https://sztetl.org.pl/]
+   d. JewishGen [https://jewishgen.org/]
+   e. English Wikipedia [https://www.wikipedia.org/]
+   f. Hebrew Wikipedia [https://he.wikipedia.org/]  (In addition to looking for the town page in wikipedia, look also for pages dedicated to the jews or to the jewish community in the town. For example, for Toledo there is a wikipedia page for "יהודי טולדו": https://he.wikipedia.org/wiki/%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%98%D7%95%D7%9C%D7%93%D7%95, and for Mainz there is a wikipedia page for "קהילת יהודי מיינץ":  https://he.wikipedia.org/wiki/%D7%A7%D7%94%D7%99%D7%9C%D7%AA_%D7%99%D7%94%D7%95%D7%93%D7%99_%D7%9E%D7%99%D7%99%D7%A0%D7%A5)
+   g. local‑language Wikipedia, e.g. https://pl.wikipedia.org/ for towns in Poland.
+   h. https://www.jewishencyclopedia.com/
+   i. Links that appear here: https://jewishhistory.huji.ac.il/Internetresources/jewish_communities_in_europe.htm
+   j. Any reliable PDF sources.
+    Extract every distinct data point from each source, even if it overlaps with others.
+9. If a reliable online entry exists, cite it. If not, use a clear descriptive label. Never include broken or fabricated links.
+10. Never fabricate population numbers, years, or sources. If uncertain, use NA.
+11. Use consistent notation for approximate numbers (e.g., ~100).
+12. Maintain clean formatting and historical accuracy.
+13. Do not provide explanations or commentary. Output only the CSV rows.
+14. Population + Event Capture: If a source provides both a population figure and a contextual note (e.g., ‘in 1937 there were 3,018 Jews, slightly more than half the town’), create a row that includes both the number and the context. Never omit a year with a population figure.
+14. Exhaustive Data Extraction: Your primary goal is comprehensiveness. You must extract every distinct year and its corresponding population data or event description mentioned in the source material. After your initial extraction from a source, re-scan the source a second time with the specific goal of finding any data points that were missed.
+15. Strict One-to-One Sourcing: Every row must be independently verifiable from the single source cited in that same row. Never pull data from Source A and cite Source B in the same row. If a source mentions multiple facts, create a separate row for each fact, but ensure every row correctly cites the source where that specific fact was found.
+16. Explicit First Mention Rule: Always include the earliest documented reference to Jewish presence in the town, even if no population number is given, and even when only a single Jew is mentioned. Cite the exact source (e.g., Hebrew Wikipedia, archival record).
+17. Family Count Conversion: If a source provides the number of families but not individuals, you must calculate an estimated population. Multiply the number of families by 5 to create the estimate. In the "Size of Jewish Population" column, the number must be preceded by a tilde (e.g., ~100). In the "Notes" column, you must specify that the number is an estimate based on the family count (e.g., "Estimate based on ~20 families").
+18. Cross‑Verification Requirement: After extracting data from one source, re‑scan the other sources specifically to check for missing years, first mentions, or population counts. Add rows for any unique data points not already included.
+19. No Overwriting, Only Adding: If two sources give different numbers for the same year, include both rows separately with their respective sources. Do not merge or overwrite.
+20. Pay attention that instead of the word "Community" texts might use "Eda", "Kahal", "Kehila" or in Hebrew letters:"קהילה" , "עדה".
+21. Search also for Jewish individuals that were born in the city, or lived there, or died there. Such an event is an indication to the presence of Jews in the city in this event's year.
+Example Row (with population number)
+
+Poland,Piotrków Trybunalski,19.7030,51.4054,1400,1945,30,Holocaust devastation - community destroyed,https://www.crarg.org/jewish-genealogy/piotrkow-trybunalski-poland.php
+
+Example Row (event without population number)
+
+Spain,Seville,-5.9845,37.3891,1391,1391,NA,Massacre of Jews in Seville,Regional studies (Spanish Jewry, late Middle Ages)
+
+
+C. Critical Instructions
+
+
+- Do not invent data or URLs.
+- Do not provide explanations or commentary. Output only the CSV rows.
+- If no reliable data exists, output a row with NA values where appropriate.
+
+
+D. Validation Step (Mandatory)
+
+Before presenting the final output, confirm that:
+1. Every row has exactly 9 columns.
+2. No blank lines appear between rows.
+3. All URLs are valid and not fabricated. If no valid link exists, use a descriptive label.
+4. No commentary or extra text is included outside the CSV rows.
+5. Before finalizing, confirm that:
+   5.1 Every source listed has been checked and at least one row per source is represented if data exists.
+   5.2 The earliest settlement mentioned and the latest available event are both included.
+   5.3 No population figure or event year mentioned in any source is missing.
+
+Generate the data for  5 towns around {cit_name} ({coutry_name}) with as many rows as possible.

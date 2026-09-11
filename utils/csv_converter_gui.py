@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 import re
 import pyperclip
 import threading
+from datetime import datetime
 
 class CSVConverterGUI:
     def __init__(self, root):
@@ -26,7 +27,8 @@ class CSVConverterGUI:
         self.original_data = None
         self.converted_data = None
         self.df = None
-        self.input_file_path = None  # Store the input file path
+        self.input_file_path = None  # Store the input file path (for single file mode)
+        self.input_file_paths = []  # Store multiple input file paths
         self.input_format = "unknown"  # Format detection: "input", "kehilot", "unknown"
         
         # City names cache
@@ -45,7 +47,7 @@ class CSVConverterGUI:
         file_frame = ttk.LabelFrame(main_frame, text="File Selection", padding="5")
         file_frame.grid(row=0, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=(0, 10))
         
-        ttk.Button(file_frame, text="Select CSV File", command=self.select_file).grid(row=0, column=0, padx=(0, 10))
+        ttk.Button(file_frame, text="Select CSV File(s)", command=self.select_file).grid(row=0, column=0, padx=(0, 10))
         self.file_label = ttk.Label(file_frame, text="No file selected")
         self.file_label.grid(row=0, column=1, sticky=tk.W)
         
@@ -167,17 +169,29 @@ class CSVConverterGUI:
         self.status_label.grid(row=4, column=0, columnspan=2, sticky=tk.W, pady=(10, 0))
         
     def select_file(self):
-        """Select CSV file to convert"""
-        file_path = filedialog.askopenfilename(
-            title="Select CSV file",
+        """Select CSV file(s) to convert"""
+        file_paths = filedialog.askopenfilenames(
+            title="Select CSV file(s)",
             filetypes=[("CSV files", "*.csv"), ("All files", "*.*")]
         )
         
-        if file_path:
-            self.input_file_path = file_path  # Store the input file path
-            self.file_label.config(text=file_path)
-            self.status_label.config(text=f"File selected: {file_path}")
-            self.load_original_data(file_path)
+        if file_paths:
+            self.input_file_paths = list(file_paths)  # Store the input file paths
+            self.input_file_path = file_paths[0] if len(file_paths) == 1 else None  # For backward compatibility
+            
+            # Update file label to show selected files
+            if len(file_paths) == 1:
+                self.file_label.config(text=file_paths[0])
+                self.status_label.config(text=f"File selected: {file_paths[0]}")
+                self.load_original_data(file_paths[0])
+            else:
+                file_list = "\n".join([f"  • {os.path.basename(f)}" for f in file_paths[:5]])
+                if len(file_paths) > 5:
+                    file_list += f"\n  ... and {len(file_paths) - 5} more"
+                self.file_label.config(text=f"{len(file_paths)} files selected")
+                self.status_label.config(text=f"{len(file_paths)} files selected - ready to convert")
+                # For multiple files, don't load immediately - wait for convert button
+                self.original_data = None
     
     def load_original_data(self, file_path):
         """Load the original CSV data and detect format"""
@@ -239,23 +253,280 @@ class CSVConverterGUI:
         except Exception as e:
             messagebox.showerror("Error", f"Failed to display data: {str(e)}")
     
+    def should_skip_file(self, file_data, file_format):
+        """Check if file should be skipped (only header + one data row with population 0 or NA)"""
+        if file_format != "input":
+            return False  # Only check input format files
+        
+        if len(file_data) < 2:
+            return False  # Need at least header + one row
+        
+        # Check if first row is a header
+        first_row = file_data[0]
+        has_header = any(header_word in str(first_row[0]).lower() for header_word in ['country', 'town', 'name'])
+        
+        # Count data rows (excluding header)
+        data_rows = file_data[1:] if has_header else file_data
+        
+        # Only skip if there's exactly one data row
+        if len(data_rows) != 1:
+            return False
+        
+        # Check the population value in the single data row
+        row = data_rows[0]
+        if len(row) < 7:
+            return False
+        
+        population = row[6].strip().replace('~', '').replace('>', '').replace('<', '')
+        
+        # Skip if population is 0, NA, empty, or None
+        if not population or population.upper() == 'NA' or population == '0':
+            return True
+        
+        # Try to parse as number
+        try:
+            pop_value = float(population)
+            if pop_value == 0:
+                return True
+        except ValueError:
+            pass
+        
+        return False
+    
+    def convert_coordinate_to_decimal(self, coord_str):
+        """Convert coordinate from degrees/minutes/seconds format to decimal degrees
+        
+        Examples:
+        "18° 0′ 5″ E" -> 18.001389
+        "53° 7′ 31″ N" -> 53.125278
+        "18.001389" -> 18.001389 (already decimal)
+        """
+        if not coord_str:
+            return coord_str
+        
+        coord_str = str(coord_str).strip()
+        
+        # If it's already a decimal number, return as is
+        try:
+            # Try to parse as float - if successful, it's already decimal
+            float_val = float(coord_str)
+            return str(float_val)
+        except ValueError:
+            pass
+        
+        # Check if it contains degree symbols (indicating DMS format)
+        if '°' not in coord_str and 'º' not in coord_str:
+            # Not in DMS format, return as is (might be invalid, but preserve it)
+            return coord_str
+        
+        # Parse DMS format: "18° 0′ 5″ E" or "53° 7′ 31″ N"
+        # Extract direction (E/W for longitude, N/S for latitude)
+        direction = ""
+        coord_upper = coord_str.upper()
+        
+        # Check for direction at the end
+        if coord_upper.endswith(' E') or (coord_upper.endswith('E') and not coord_upper.endswith('°E')):
+            direction = "E"
+            coord_str = coord_str.rstrip('Ee ').strip()
+        elif coord_upper.endswith(' W') or (coord_upper.endswith('W') and not coord_upper.endswith('°W')):
+            direction = "W"
+            coord_str = coord_str.rstrip('Ww ').strip()
+        elif coord_upper.endswith(' N') or (coord_upper.endswith('N') and not coord_upper.endswith('°N')):
+            direction = "N"
+            coord_str = coord_str.rstrip('Nn ').strip()
+        elif coord_upper.endswith(' S') or (coord_upper.endswith('S') and not coord_upper.endswith('°S')):
+            direction = "S"
+            coord_str = coord_str.rstrip('Ss ').strip()
+        
+        # Extract degrees, minutes, seconds
+        # Handle various separators: °, ′, ″ or °, ', " or just spaces
+        import re
+        
+        # Pattern to match: degrees, minutes, seconds
+        # Examples: "18° 0′ 5″", "18° 0' 5\"", "18 0 5", "18°0'5\""
+        # Match degrees (with optional decimal), then optional minutes, then optional seconds
+        # Match degrees followed by degree symbol, optional minutes with prime, optional seconds with double prime
+        pattern = r'(\d+(?:\.\d+)?)\s*[°º]\s*(\d+(?:\.\d+)?)?\s*[′\']?\s*(\d+(?:\.\d+)?)?\s*[″"]?'
+        match = re.search(pattern, coord_str)
+        
+        if not match:
+            # Couldn't parse, return original
+            return coord_str
+        
+        degrees = float(match.group(1))
+        minutes = float(match.group(2)) if match.group(2) else 0.0
+        seconds = float(match.group(3)) if match.group(3) else 0.0
+        
+        # Convert to decimal degrees
+        decimal = degrees + (minutes / 60.0) + (seconds / 3600.0)
+        
+        # Apply direction (negative for W and S)
+        if direction in ['W', 'S']:
+            decimal = -decimal
+        
+        return str(decimal)
+    
     def convert_data(self):
         """Convert the data to kehilot.csv format"""
-        if not self.original_data:
-            messagebox.showwarning("Warning", "Please select a file first")
-            return
-        
-        self.progress.start()
-        self.status_label.config(text="Converting data...")
-        
-        # Run conversion in a separate thread to prevent GUI freezing
-        thread = threading.Thread(target=self._convert_data_thread)
-        thread.daemon = True
-        thread.start()
+        # Check if we have files to process
+        if not self.input_file_paths:
+            if not self.original_data:
+                messagebox.showwarning("Warning", "Please select a file first")
+                return
+            # Single file mode (backward compatibility)
+            self.progress.start()
+            self.status_label.config(text="Converting data...")
+            thread = threading.Thread(target=self._convert_data_thread)
+            thread.daemon = True
+            thread.start()
+        else:
+            # Multiple files mode
+            if len(self.input_file_paths) == 0:
+                messagebox.showwarning("Warning", "Please select at least one file first")
+                return
+            
+            self.progress.start()
+            self.status_label.config(text=f"Converting {len(self.input_file_paths)} files...")
+            
+            # Run conversion in a separate thread to prevent GUI freezing
+            thread = threading.Thread(target=self._convert_multiple_files_thread)
+            thread.daemon = True
+            thread.start()
+    
+    def _convert_multiple_files_thread(self):
+        """Convert multiple files in a separate thread"""
+        try:
+            all_converted_rows = []
+            total_files = len(self.input_file_paths)
+            
+            for file_index, file_path in enumerate(self.input_file_paths):
+                # Update status
+                def update_status(f=file_path, i=file_index, t=total_files):
+                    self.status_label.config(text=f"Processing file {i+1}/{t}: {os.path.basename(f)}")
+                self.root.after(0, update_status)
+                
+                # Load the file
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        reader = csv.reader(f)
+                        file_data = list(reader)
+                except Exception as e:
+                    print(f"Error loading file {file_path}: {e}")
+                    continue
+                
+                if not file_data:
+                    continue
+                
+                # Detect format
+                first_row = file_data[0]
+                file_format = "unknown"
+                if len(first_row) == 19:
+                    file_format = "kehilot"
+                elif len(first_row) == 9:
+                    file_format = "input"
+                
+                # Check if file should be skipped (only header + one data row with population 0 or NA)
+                if self.should_skip_file(file_data, file_format):
+                    def skip_status(f=file_path):
+                        self.status_label.config(text=f"Skipped {os.path.basename(f)}: No Jewish population (0 or NA)")
+                    self.root.after(0, skip_status)
+                    print(f"Skipping file {file_path}: Only one data row with population 0 or NA")
+                    continue
+                
+                # Convert based on format
+                converted_rows = []
+                
+                if file_format == "kehilot":
+                    # Already in kehilot.csv format - just use as is (skip header if present)
+                    data_rows = file_data
+                    # Check if first row is a header
+                    if any(header_word in str(first_row[0]).lower() for header_word in ['country', 'city']):
+                        data_rows = data_rows[1:]  # Skip header
+                    
+                    for row in data_rows:
+                        if len(row) >= 19:  # Ensure we have enough columns for kehilot format
+                            converted_rows.append(row)
+                
+                elif file_format == "input":
+                    # Input format - convert to kehilot.csv format
+                    data_rows = file_data
+                    # Check if first row is a header
+                    if any(header_word in str(first_row[0]).lower() for header_word in ['country', 'town', 'name']):
+                        data_rows = data_rows[1:]  # Skip header
+                    
+                    for i, row in enumerate(data_rows):
+                        if len(row) < 9:  # Ensure we have enough columns
+                            continue
+                        
+                        # Extract data from input format
+                        country = row[0].strip()
+                        city = row[1].strip()
+                        longitude_str = row[2].strip()
+                        latitude_str = row[3].strip()
+                        year_estab = row[4].strip()
+                        year_data = row[5].strip()
+                        population = row[6].strip().replace('~', '').replace('>', '').replace('<', '')
+                        notes = row[7].strip()
+                        source = row[8].strip()
+                        
+                        # Convert coordinates to decimal degrees if needed
+                        longitude = self.convert_coordinate_to_decimal(longitude_str)
+                        latitude = self.convert_coordinate_to_decimal(latitude_str)
+                        
+                        # Convert to kehilot.csv format
+                        converted_row = self.convert_single_row(
+                            country, city, longitude, latitude, year_estab, 
+                            year_data, population, notes, source, i, data_rows
+                        )
+                        
+                        if converted_row:
+                            converted_rows.append(converted_row)
+                
+                # Add converted rows from this file to the combined list
+                all_converted_rows.extend(converted_rows)
+            
+            # Store all converted data
+            self.converted_data = all_converted_rows
+            self.df = pd.DataFrame(all_converted_rows) if all_converted_rows else pd.DataFrame()
+            
+            # Save to timestamped file
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            default_dir = os.path.dirname(self.input_file_paths[0]) if self.input_file_paths else "."
+            output_filename = f"kehilot_combined_{timestamp}.csv"
+            output_path = os.path.join(default_dir, output_filename)
+            
+            # Write the combined CSV file
+            try:
+                with open(output_path, 'w', encoding='utf-8', newline='') as f:
+                    writer = csv.writer(f)
+                    
+                    # Write header
+                    header = ['country', 'city', 'long', 'lat', 'year_estab', 'year_start', 'year_end', 
+                             'pop_start', 'pop_end', 'probability', 'type', 'symbol', 'city_english', 
+                             'city_hebrew', 'city_yid', 'city_german', 'city_other', 'source', 'comment']
+                    writer.writerow(header)
+                    
+                    # Write data
+                    writer.writerows(all_converted_rows)
+                
+                # Update GUI in main thread
+                self.root.after(0, lambda: self._multiple_files_conversion_complete(output_path, len(all_converted_rows)))
+                
+            except Exception as e:
+                self.root.after(0, lambda: self._conversion_error(f"Failed to save combined file: {str(e)}"))
+            
+        except Exception as e:
+            self.root.after(0, lambda: self._conversion_error(str(e)))
     
     def _convert_data_thread(self):
         """Convert data in a separate thread"""
         try:
+            # Check if file should be skipped (only header + one data row with population 0 or NA)
+            if self.input_format == "input" and self.original_data:
+                if self.should_skip_file(self.original_data, self.input_format):
+                    self.root.after(0, lambda: self._conversion_error("File skipped: Only one data row with population 0 or NA (no Jewish population)"))
+                    return
+            
             converted_rows = []
             
             if self.input_format == "kehilot":
@@ -283,13 +554,17 @@ class CSVConverterGUI:
                     # Extract data from input format
                     country = row[0].strip()
                     city = row[1].strip()
-                    longitude = row[2].strip()
-                    latitude = row[3].strip()
+                    longitude_str = row[2].strip()
+                    latitude_str = row[3].strip()
                     year_estab = row[4].strip()
                     year_data = row[5].strip()
-                    population = row[6].strip()
+                    population = row[6].strip().replace('~', '').replace('>', '').replace('<', '')
                     notes = row[7].strip()
                     source = row[8].strip()
+                    
+                    # Convert coordinates to decimal degrees if needed
+                    longitude = self.convert_coordinate_to_decimal(longitude_str)
+                    latitude = self.convert_coordinate_to_decimal(latitude_str)
                     
                     # Convert to kehilot.csv format
                     converted_row = self.convert_single_row(
@@ -324,12 +599,12 @@ class CSVConverterGUI:
             # Find next row for same city to determine year_end and pop_end
             year_end = "2024"  # Default for last row
             pop_end = ""  # Default for last row
-            
+            population = population.replace('~', '').replace('>', '').replace('<', '')
             # Look for next row with same city
             for j in range(row_index + 1, len(all_rows)):
                 if len(all_rows[j]) >= 7 and all_rows[j][1].strip() == city:
                     next_year = all_rows[j][5].strip()
-                    next_pop = all_rows[j][6].strip()
+                    next_pop = all_rows[j][6].strip().replace('~', '').replace('>', '').replace('<', '')
                     if next_year and next_year != 'NA':
                         try:
                             year_end = str(int(next_year) - 1)
@@ -887,6 +1162,13 @@ class CSVConverterGUI:
         self.progress.stop()
         self.status_label.config(text=f"Conversion complete: {len(self.converted_data)} rows")
         self.refresh_display()
+    
+    def _multiple_files_conversion_complete(self, output_path, num_rows):
+        """Called when multiple file conversion is complete"""
+        self.progress.stop()
+        self.status_label.config(text=f"Conversion complete: {num_rows} rows from {len(self.input_file_paths)} files")
+        self.refresh_display()
+        messagebox.showinfo("Success", f"Converted {len(self.input_file_paths)} files and saved {num_rows} rows to:\n{output_path}")
     
     def _conversion_error(self, error_msg):
         """Called when conversion encounters an error"""
