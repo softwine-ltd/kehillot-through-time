@@ -5,7 +5,13 @@
 ``` Python
 python3 -m http.server 8000
 ```
-Then surf to http://0.0.0.0:8000
+Then surf to http://localhost:8000
+
+**Do not open `index.html` directly (double-click / "Open with browser")** — the map data and
+translations are loaded via `fetch()`, which browsers block for local `file://` pages. You must
+serve the folder over HTTP as above. Also avoid `http://0.0.0.0:8000`: that address means "listen
+on every interface" for the *server*, but most browsers refuse to navigate to it as a *client*
+address — use `localhost` or `127.0.0.1` instead.
 
 
 

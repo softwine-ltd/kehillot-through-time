@@ -6,6 +6,31 @@ the population-over-time dataset behind the "Kehillot Through Time" map. It is a
 reconstruction* from file contents, README/CLAUDE.md notes, git history, and log files — none of
 this was documented in one place before.
 
+## ⚠️ Status update (2026-09-14) — read this before the rest of the doc
+
+The research below (written 2026-09-10) describes the pipeline **as it was found**, including
+several problems that have since been fixed through follow-up engineering work. Where a claim
+below is now out of date, it's marked inline, but in short:
+
+- The hardcoded Gemini API key described in the "Security note" was **revoked and replaced**
+  (2026-09-10/13). No key is hardcoded anywhere anymore.
+- Both Gemini models the pipeline used (`gemini-3-pro-preview`, `gemini-2.0-flash`) had actually
+  been **shut down by Google** (2026-03-09 and 2026-06-01 respectively) — discovered and fixed
+  2026-09-13. The pipeline could not have run at all until this fix.
+- The pipeline is now **concurrent** (5 towns at once instead of 1), **skips already-processed
+  towns** automatically, uses **country-aware search queries** instead of hardcoding a
+  Poland-specific site for every country, **writes failed towns to their own file**, and the
+  verification agent can now be **run at country scale** from the command line.
+- France and Italy's already-collected data (see "Actionable finding" below) **has since been
+  merged** — Poland, France, and Italy are now all substantially represented in `kehilot.csv`;
+  Germany is the one still-unmerged country from the four already processed.
+
+Full details, dates, and reasoning for every change: `AnacondaProjects/python_310/jew_hist/CHANGELOG.md`
+(outside this repo, at `C:\Users\oferm\OneDrive\Ofer\AnacondaProjects\python_310\jew_hist\CHANGELOG.md`
+— that's where the actual pipeline code lives). This
+document remains useful as the record of how the pipeline came to exist and how the four
+locations relate to each other — that part hasn't changed.
+
 ## The four locations
 
 | Location | Role |
@@ -79,12 +104,17 @@ This is what `try_old_lenovo/HistorianDataExtractor.py` is a fragment of. The **
 version lives in `AnacondaProjects/python_310/jew_hist/`, and it is by far the largest effort of
 the four locations:
 
-**Architecture — 4 cooperating scripts:**
+**Architecture — 4 cooperating scripts** (model IDs and query logic below reflect the
+2026-09-13/14 fixes — see the status update at the top of this doc; originally this ran
+`gemini-2.0-flash`/`gemini-3-pro-preview`, both since discovered to have been shut down by
+Google, and Scout's third query used to hardcode Poland's site for every country):
 1. **`ScoutAgentURLSearcher.py`** (`ScoutAgent`) — runs 3 targeted Google-search queries per town
-   via Gemini 2.0 Flash's built-in Google Search tool (quoted town name + country, plus
-   `site:sztetl.org.pl OR site:jewishgen.org` and Yizkor/Pinkas-book-specific queries), extracts
-   and de-duplicates URLs from the grounding metadata, and resolves Google's redirect URLs to
-   final destinations.
+   via Gemini 3.8 Flash's built-in Google Search tool (quoted town name + country, plus a
+   Yizkor/Pinkas-book query and a third query that now uses a per-country specialty archive —
+   `sztetl.org.pl` for Poland, `alemannia-judaica.de` for Germany, `cdec.it` for Italy,
+   `judaisme-alsalor.fr` for France, falling back to JewishGen+YIVO for any other country),
+   extracts and de-duplicates URLs from the grounding metadata, and resolves Google's redirect
+   URLs to final destinations.
 2. **`LibrarianAgentContentFetcher.py`** (`LibrarianAgent`) — fetches each URL, detects login
    walls/CAPTCHAs (special-cased for JewishGen, which returns HTTP 200 with a login prompt),
    extracts clean text from HTML (BeautifulSoup) or PDF (PyMuPDF/`fitz`), auto-follows "download
@@ -92,20 +122,24 @@ the four locations:
    (3,909 town folders currently on disk), and validates the town name actually appears in the
    fetched text before using it.
 3. **`HistorianDataExtractor.py`** (`HistorianOrchestrator`) — feeds all the combined source text
-   to **Gemini 3 Pro Preview** with a detailed extraction prompt (PhD-historian persona; strict
+   to **Gemini 3.1 Pro Preview** with a detailed extraction prompt (PhD-historian persona; strict
    rules distinguishing *Jewish* population from general town population; family-count→individuals
    ×5 conversion with `~` prefix; one-row-per-fact with exact source citation; a mandatory "no
    evidence found" row when nothing turns up). Output: `jew_hist/csv_files/city_data_<Town>_<Country>.csv`
    (everything) plus `city_data_population_only_<Town>_<Country>.csv` (rows with an actual number).
-4. **`DataVerificationAgent.py`** (`DataVerifier`) — a separate QA pass: re-fetches each cited URL
-   and asks Gemini to confirm the specific claim (year/population/note) is actually supported by
-   that source text, logging PASS/FAIL/mismatch per row to a `verification_report_*.log`.
+4. **`DataVerificationAgent.py`** (`DataVerifier`) — a QA pass, now runnable at country scale
+   (`python DataVerificationAgent.py --country Italy`): re-fetches each cited URL and asks Gemini
+   to confirm the specific claim (year/population/note) is actually supported by that source
+   text, logging PASS/FAIL/mismatch per row to `verification_report_*.log` and printing a final
+   verified/mismatch/name-mismatch/inaccessible summary.
 
 **Orchestrated per-country** by `historical_data_extraction_poland.py` (the filename is stale —
 it's a generic loop; as last saved it was configured for `target_country = 'Italy'`), which reads
-the master Excel town list, filters to one country, and calls the pipeline per town with retry/
-backoff on rate limits. Progress is logged to `jew_hist/log_files/extraction_log_*.log` — the
-largest log file is 2.9MB, consistent with a run spanning thousands of towns.
+the master Excel town list, filters to one country, skips towns already processed, and runs the
+rest concurrently (5 towns at once) with retry/backoff on rate limits. Any town that still fails
+after 3 retries is written to `log_files/failed_towns_<country>_<timestamp>.csv` for easy retry.
+Progress is logged to `jew_hist/log_files/extraction_log_*.log` — the largest log file is 2.9MB,
+consistent with a run spanning thousands of towns.
 
 **Scale actually achieved** (counting files in `jew_hist/csv_files/` as of this research):
 
@@ -116,16 +150,16 @@ largest log file is 2.9MB, consistent with a run spanning thousands of towns.
 | Germany | 1,086 | 521 |
 | Poland | 741 | 356 |
 
-**⚠️ Actionable finding — a lot of already-collected data was never merged into the live site.**
-Comparing the table above to how many rows each country currently has in `kehillot-through-time/kehilot.csv`:
-Poland has 2,200 rows (consistent with all 356 population-bearing towns being merged, at several
-rows/periods each), but **France has only 177 rows despite 842 researched towns with real data,
-and Italy only 89 rows despite 650** — Germany's 567 rows look roughly complete relative to its
-521. In other words: **France and Italy have hundreds of already-researched, already-verified-ish
-towns sitting in `jew_hist/csv_files/city_data_population_only_*_France.csv` /
-`*_Italy.csv` that never got run through `csv_converter_gui.py` and merged into `kehilot.csv`.**
-This is very likely the fastest way to grow the site's dataset right now — no new AI calls needed,
-just the merge step.
+**⚠️ Actionable finding (as of 2026-09-10; RESOLVED for France/Italy by 2026-09-14) — a lot of
+already-collected data was never merged into the live site.**
+At the time of this research, Poland had 2,200 rows in `kehilot.csv` (consistent with all 356
+population-bearing towns being merged), but France had only 177 rows despite 842 researched
+towns with real data, and Italy only 89 despite 650 — Germany's 567 looked roughly complete
+relative to its 521. **France and Italy have since been run through
+`utils/batch_convert_to_kehilot.py`** (the headless replacement for `csv_converter_gui.py`, see
+the engineering changelog) and merged. **Germany remains the one country from this batch that
+still hasn't been merged** — same command, pointed at
+`city_data_population_only_*_Germany.csv`, is the next fastest win.
 
 **Confirmed link back to the site:** two files sitting directly in `jew_hist/csv_files/` —
 `kehilot_combined_20251226_144218.csv` (19 rows) and `kehilot_combined_20251227_233616.csv` (321
@@ -149,16 +183,14 @@ timestamp — evidence of repeated prompt-tuning passes on the same handful of t
 Toledo/Lublin, before scaling up). `filter_not_found_communities.py` prunes an Excel town list of
 rows already marked "not found"/"no evidence" — a helper for managing what's left to research.
 
-⚠️ **Security note — a real Gemini API key is hardcoded in plaintext across at least 6 files in
-two separate project folders**: `AnacondaProjects/python_310/jew_hist/ScoutAgentURLSearcher.py`,
-`HistorianDataExtractor.py`, `DataVerificationAgent.py` (as a fallback), `try_gemini_api.py`, and
-both copies of `HistorianDataExtractor.py` (here and in `try_old_lenovo/`) — all using the literal
-key `AIzaSyD1OABi79dPEEe7KqZ01p0HHpGL85GIzfA`. The `AnacondaProjects` `CLAUDE.md` already flags
-this as a known issue and recommends reading secrets via `os.getenv(...)` with no hardcoded
-fallback (a `.env` file with `GEMINI_API_KEY` already exists there, but several scripts fall back
-to the literal key instead of requiring it). Given how widely this key is copy-pasted, **treat it
-as burned — rotate/revoke it in Google AI Studio and update `.env`**, then remove the hardcoded
-fallbacks.
+✅ **Security note — RESOLVED 2026-09-10/13** (originally: a real Gemini API key was hardcoded in
+plaintext across 10 files in two project folders — `ScoutAgentURLSearcher.py`,
+`HistorianDataExtractor.py` (both copies), `DataVerificationAgent.py`, `historical_data_extraction_poland.py`,
+`try_gemini_api.py`, `check_gemini_model.py`, `check_models.py`, plus `research_ideas_config.json`/
+`research_ideas_vor_config.json` for an unrelated tool). The key was revoked in Google AI Studio,
+every hardcoded fallback was removed in favor of `os.getenv("GEMINI_API_KEY")` with no literal
+fallback, and a new key was set in `.env` on 2026-09-13. No key is hardcoded anywhere anymore —
+see `jew_hist/CHANGELOG.md` for the full file list and dates.
 
 ## Chronology
 
@@ -174,24 +206,50 @@ fallbacks.
 | 2025-12-21 → 2025-12-23 | `jew_hist/` 4-agent pipeline built (Scout, Librarian, Historian, Verifier) |
 | 2025-12-22 → 2025-12-29 | First large `jew_hist/` extraction runs (log files up to 1.2MB); `kehilot_combined_*.csv` merges produced — Poland-heavy |
 | 2025-12-26 → 2025-12-29 | `kehillot-through-time/utils/` alt-name enrichment scripts added |
-| 2026-01-16 → 2026-02-10 | Large `jew_hist/` runs continue for France, Italy, Germany (multi-MB logs, thousands of towns) — **this output does not appear fully merged into `kehilot.csv` yet** |
+| 2026-01-16 → 2026-02-10 | Large `jew_hist/` runs continue for France, Italy, Germany (multi-MB logs, thousands of towns) |
+| 2026-09-10 → 2026-09-14 | Engineering pass: hardcoded API key removed (10 files), both deprecated Gemini models replaced, temperature corrected for Gemini 3.x, pipeline made concurrent with skip-logic/country-aware queries/failure tracking, verification agent made batchable, France and Italy merged into `kehilot.csv` — full details in `jew_hist/CHANGELOG.md` |
+
+## Site bugs found and fixed (2026-09-11)
+
+Unrelated to the data pipeline, but discovered in the same investigation: the site appeared to
+show raw translation keys (`ui.speed`, `mspLabels.local`, etc.) instead of translated text, and
+the map was completely empty. Root cause was how the page was being opened, not a code
+regression: opening `index.html` directly (`file://...`) has every `fetch()` call (translations
+*and* map data) blocked by the browser's CORS policy for local files, and `http://0.0.0.0:8000`
+(the URL the README told you to use) isn't something a browser can actually navigate to —
+`0.0.0.0` is a server bind address, not a client address. Fixed `README.md` to say
+`http://localhost:8000` and to warn against opening `index.html` directly. Also fixed one real,
+separate bug found while investigating: `i18n.js`'s `document.body.classList` call had no null
+guard and could throw if the page's DOM wasn't fully parsed yet when it ran (a timing-dependent
+race, not what caused the symptoms above, but worth closing) — `i18n.js`'s `init()` now waits for
+`DOMContentLoaded` before touching the DOM. **Both fixes are currently uncommitted** in this repo
+(`git status` shows `i18n.js` and `README.md` as modified) — say the word if you want them
+committed and pushed.
 
 ## If you want to resume this work
 
-1. **Fastest win: merge what's already collected.** Point `utils/csv_converter_gui.py` at
-   `jew_hist/csv_files/city_data_population_only_*_France.csv` and `*_Italy.csv` (842 and 650
-   town files respectively) to pull in data that's already been researched and filtered but never
-   made it into `kehilot.csv`.
+1. **Fastest remaining win: merge Germany.** Point `utils/batch_convert_to_kehilot.py` (the
+   headless replacement for `csv_converter_gui.py` — no GUI needed, and it merges straight into
+   `kehilot.csv` with an automatic backup and duplicate-row skipping) at
+   `jew_hist/csv_files/city_data_population_only_*_Germany.csv`. France and Italy's equivalent
+   files have already been merged this way.
 2. **To collect more towns the AI way**: re-run `jew_hist/historical_data_extraction_poland.py`
-   with `target_country` set to whatever's left uncovered in the master Excel list, after rotating
-   the exposed API key and fixing the `.env` fallback pattern.
-3. **To run the verification pass**: `jew_hist/DataVerificationAgent.py` can fact-check any
-   `city_data_*.csv` against its cited sources before you trust it enough to merge — worth running
-   on France/Italy before the bulk merge in step 1, given the AI extraction's known hallucination
-   risk (the prompts themselves are full of anti-hallucination rules precisely because this was a
-   real problem during development).
+   with `target_country` set to whatever's left uncovered in the master Excel list (Spain is the
+   largest untouched country: 7,143 towns). It's now concurrent and skips already-done towns
+   automatically, so re-running a partially-done country is safe and won't re-bill finished work.
+   Watch the log for repeated `429`/rate-limit retries and lower `MAX_WORKERS` if you see a lot of
+   them — 5 is an untested guess at a safe concurrency level.
+3. **To run the verification pass**: `python jew_hist/DataVerificationAgent.py --country <Name>`
+   now fact-checks every collected town for a country in one command and prints a pass/fail
+   summary — worth running on Germany before merging it, given the AI extraction's known
+   hallucination risk (the prompts themselves are full of anti-hallucination rules precisely
+   because this was a real problem during development).
 4. **To add more towns the old manual way**: `utils/prompt1.txt` (or the more refined
    `AnacondaProjects/python_310/prompt_in_grok_api.txt`) against an LLM chat, then
-   `csv_converter_gui.py` as before.
+   `utils/batch_convert_to_kehilot.py` as before.
 5. **`iijg/` is not worth continuing as-is** — it never solved the population-extraction problem,
    only place names.
+6. **Before any of the above**: `AnacondaProjects/python_310/venv/` is broken (its `pyvenv.cfg`
+   points at a Python 3.11 install that no longer exists on this machine) — recreate it, or use a
+   small dedicated venv with just `google-genai pandas openpyxl requests beautifulsoup4
+   python-dotenv pymupdf` installed, before running any `jew_hist/` script.

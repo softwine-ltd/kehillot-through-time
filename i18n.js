@@ -25,10 +25,18 @@ class I18n {
 
         // Load translations
         await this.loadTranslations();
-        
+
+        // i18n.js loads via a blocking <script> in <head>, so this can resume
+        // before <body> (and the data-i18n elements in it) exist yet -- wait
+        // for the DOM if so, otherwise applyLanguage()/setupLanguageSwitcher()
+        // either throw on document.body being null or silently update nothing.
+        if (document.readyState === 'loading') {
+            await new Promise(resolve => document.addEventListener('DOMContentLoaded', resolve, { once: true }));
+        }
+
         // Apply initial language
         this.applyLanguage();
-        
+
         // Set up language switcher
         this.setupLanguageSwitcher();
     }

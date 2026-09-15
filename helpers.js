@@ -574,10 +574,31 @@ async function loadData(year) {
                 };
             });
 
+        // Many towns are recorded as a chain of consecutive segments (one row's year_end
+        // equal to the next row's year_start). Treating both ends as inclusive would make
+        // the boundary year match both segments at once, double-rendering that town for
+        // that one year. Build a lookup of which (country, town) + year combinations are a
+        // segment's start, so we can tell "another segment picks up right here" (exclusive
+        // upper bound, avoids the double-render) apart from "this is the town's actual
+        // final segment" (kept inclusive, so it still shows on its own end year).
+        const segmentStartYears = new Map(); // "country||name" -> Set of year_start values
+        kehilot.forEach(kehila => {
+            const key = `${kehila.country}||${kehila.name}`;
+            if (!segmentStartYears.has(key)) {
+                segmentStartYears.set(key, new Set());
+            }
+            segmentStartYears.get(key).add(kehila.year_start);
+        });
+
         // Filter data based on the given year
-        const relevantKehilot = kehilot.filter(kehila =>
-            kehila.year_start <= year && (kehila.year_end === undefined || kehila.year_end >= year)
-        );
+        const relevantKehilot = kehilot.filter(kehila => {
+            if (kehila.year_start > year) return false;
+            if (kehila.year_end === undefined) return true;
+            const hasSuccessorSegment = segmentStartYears
+                .get(`${kehila.country}||${kehila.name}`)
+                .has(kehila.year_end);
+            return hasSuccessorSegment ? year < kehila.year_end : year <= kehila.year_end;
+        });
 
         updateMarkers(relevantKehilot);
     } catch (error) {
@@ -592,6 +613,16 @@ function updateMarkers(kehilot) {
 
     // Add new markers
     kehilot.forEach(kehila => {
+        // A handful of rows (mostly regional/thematic entries like "Prussia" or
+        // "Rhineland massacres" that were never meant to be a single point) have no real
+        // coordinates. Skip just that row rather than letting L.marker's exception on an
+        // invalid LatLng abort this whole loop and blank out every other marker for the
+        // current year.
+        if (isNaN(parseFloat(kehila.lat)) || isNaN(parseFloat(kehila.lon))) {
+            console.warn(`Skipping marker with invalid coordinates: ${kehila.country} / ${kehila.name}`);
+            return;
+        }
+
         const marker = createCustomMarker(kehila);
 
         // const endYearDetails = kehila.year_end === undefined || kehila.year_end === '' ? '' : `

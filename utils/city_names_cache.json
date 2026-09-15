@@ -754,5 +754,5304 @@
     "yiddish": "",
     "german": "",
     "other": "Кастельнуово-ди-Порта"
+  },
+  "aachen|germany": {
+    "english": "Aachen",
+    "hebrew": "אאכן",
+    "yiddish": "",
+    "german": "Orsbach",
+    "other": "Aken"
+  },
+  "adelsdorf|germany": {
+    "english": "Adelsdorf",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Adelsdorf"
+  },
+  "adelsheim|germany": {
+    "english": "Adelsheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Adelsheim",
+    "other": "Adelsheim"
+  },
+  "adorf|germany": {
+    "english": "Adorf",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Adorf/Vogtl.",
+    "other": "آدورف"
+  },
+  "affaltrach|germany": {
+    "english": "Affaltrach",
+    "hebrew": "אוברסולם",
+    "yiddish": "",
+    "german": "Obersulm",
+    "other": "Obersulm"
+  },
+  "aichach|germany": {
+    "english": "Aichach",
+    "hebrew": "אייכאך",
+    "yiddish": "",
+    "german": "Aichach",
+    "other": "Aichach"
+  },
+  "ainring|germany": {
+    "english": "Ainring",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Ainring",
+    "other": "أينرينغ"
+  },
+  "albigowa|poland": {
+    "english": "Albigowa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Albigowa",
+    "other": "البیقوا"
+  },
+  "alheim (heinebach)|germany": {
+    "english": "Alheim (Heinebach)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "allendorf an der lumda|germany": {
+    "english": "Allendorf an der Lumda",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "alpen|germany": {
+    "english": "Alpen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Alpen"
+  },
+  "alsbach|germany": {
+    "english": "Alsbach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Alsbach",
+    "other": "Alsbach"
+  },
+  "alsfeld|germany": {
+    "english": "Alsfeld",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Alsfeld",
+    "other": "آلسفلد"
+  },
+  "alsheim|germany": {
+    "english": "Alsheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Alsheim",
+    "other": "Альсхайм"
+  },
+  "alt-hohenschönhausen|germany": {
+    "english": "Alt-Hohenschönhausen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Berlin-Alt-Hohenschönhausen",
+    "other": "Alt-Hohenschönhausen"
+  },
+  "altenberg|germany": {
+    "english": "Altenberg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Altenberg",
+    "other": "Altenberg"
+  },
+  "altenburg|germany": {
+    "english": "Altenburg",
+    "hebrew": "אלטנבורג",
+    "yiddish": "",
+    "german": "Altenburg",
+    "other": "Altenburg"
+  },
+  "altenkirchen|germany": {
+    "english": "Altenkirchen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Altenkirchen"
+  },
+  "altenkunstadt|germany": {
+    "english": "Altenkunstadt",
+    "hebrew": "אלטנקונשטאדט",
+    "yiddish": "",
+    "german": "Altenkunstadt",
+    "other": "Альтенкунштадт"
+  },
+  "altentreptow|germany": {
+    "english": "Altentreptow",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Altentreptow",
+    "other": "آلتنتربتوو"
+  },
+  "alzey|germany": {
+    "english": "Alzey",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Alzey",
+    "other": "Alzey"
+  },
+  "mülhausen|germany": {
+    "english": "Mülhausen",
+    "hebrew": "מילוז",
+    "yiddish": "",
+    "german": "Paul Wolff",
+    "other": "Mülhausen"
+  },
+  "arnsberg|germany": {
+    "english": "Arnsberg",
+    "hebrew": "ארנסברג",
+    "yiddish": "",
+    "german": "Grafschaft Arnsberg",
+    "other": "آرنسبرغ"
+  },
+  "arnstadt|germany": {
+    "english": "Arnstadt",
+    "hebrew": "ארנשטאדט",
+    "yiddish": "",
+    "german": "Arnstadt",
+    "other": "Arnstadt"
+  },
+  "aschaffenburg|germany": {
+    "english": "Aschaffenburg",
+    "hebrew": "אשפנבורג",
+    "yiddish": "",
+    "german": "Hugo Karpf",
+    "other": "Aschaffenburg"
+  },
+  "aschau am inn|germany": {
+    "english": "Aschau am Inn",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Ашау-ам-Инн"
+  },
+  "aschersleben|germany": {
+    "english": "Aschersleben",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Matthias Puhle",
+    "other": "Aschersleben"
+  },
+  "aufseß|germany": {
+    "english": "Aufseß",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Aufseß",
+    "other": "Aufseß"
+  },
+  "augsburg|germany": {
+    "english": "Augsburg",
+    "hebrew": "אאוגסבורג",
+    "yiddish": "",
+    "german": "Grumsiner Forst/Redernswalde",
+    "other": "Augsburg"
+  },
+  "aurich|germany": {
+    "english": "Aurich",
+    "hebrew": "אאוריך",
+    "yiddish": "",
+    "german": "Aurich",
+    "other": "Aurich"
+  },
+  "aßlar|germany": {
+    "english": "Aßlar",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Aßlar",
+    "other": "آسلار"
+  },
+  "babenhausen|germany": {
+    "english": "Babenhausen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Babenhausen",
+    "other": "Babenhausen"
+  },
+  "bad arolsen|germany": {
+    "english": "Bad Arolsen",
+    "hebrew": "באד ארולזן",
+    "yiddish": "",
+    "german": "Rudolf Klapp",
+    "other": "باد آرولزن"
+  },
+  "bad bentheim|germany": {
+    "english": "Bad Bentheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bad Bentheim",
+    "other": "بادبنتهايم"
+  },
+  "bad bergzabern|germany": {
+    "english": "Bad Bergzabern",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bad Bergzabern",
+    "other": "باد بيرغتسابرن"
+  },
+  "bad berleburg|germany": {
+    "english": "Bad Berleburg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bad Berleburg",
+    "other": "باد برلهبورغ"
+  },
+  "niederbreisig|germany": {
+    "english": "Niederbreisig",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Burg Rheineck",
+    "other": "باد برايزيغ"
+  },
+  "oberbreisig|germany": {
+    "english": "Oberbreisig",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bad breisig|germany": {
+    "english": "Bad Breisig",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Burg Rheineck",
+    "other": "باد برايزيغ"
+  },
+  "brohl|germany": {
+    "english": "Brohl",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Brohl",
+    "other": "Броль"
+  },
+  "bad brückenau|germany": {
+    "english": "Bad Brückenau",
+    "hebrew": "באד בריקנאו",
+    "yiddish": "",
+    "german": "David Schuster",
+    "other": "Bad Brückenau"
+  },
+  "bad buchau|germany": {
+    "english": "Bad Buchau",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bad Buchau",
+    "other": "Bad Buchau"
+  },
+  "bad camberg|germany": {
+    "english": "Bad Camberg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Taunusstraße",
+    "other": "باد كامبرغ"
+  },
+  "usingen|germany": {
+    "english": "Usingen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Usingen",
+    "other": "Usingen"
+  },
+  "bad freienwalde|germany": {
+    "english": "Bad Freienwalde",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "باد فراينفالده"
+  },
+  "bad herrenalb|germany": {
+    "english": "Bad Herrenalb",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bad Herrenalb",
+    "other": "Bad Herrenalb"
+  },
+  "bad hersfeld|germany": {
+    "english": "Bad Hersfeld",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bad Hersfeld",
+    "other": "Bad Hersfeld"
+  },
+  "bad homburg vor der höhe|germany": {
+    "english": "Bad Homburg vor der Höhe",
+    "hebrew": "באד הומבורג",
+    "yiddish": "",
+    "german": "Alexander Hetjes",
+    "other": "Бад-Гомбург"
+  },
+  "bad karlshafen|germany": {
+    "english": "Bad Karlshafen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bad Karlshafen",
+    "other": "باد كارلسهافن"
+  },
+  "bad kissingen|germany": {
+    "english": "Bad Kissingen",
+    "hebrew": "באד קיסינגן",
+    "yiddish": "",
+    "german": "Krankenkasse",
+    "other": "Bad Kissingen"
+  },
+  "bad kreuznach|germany": {
+    "english": "Bad Kreuznach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Ache",
+    "other": "Bad Kreuznach"
+  },
+  "bad könig|germany": {
+    "english": "Bad König",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bad König",
+    "other": "باد كونيغ"
+  },
+  "bad königshofen im grabfeld|germany": {
+    "english": "Bad Königshofen im Grabfeld",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "باد كونيغسهوفن"
+  },
+  "bad liebenstein|germany": {
+    "english": "Bad Liebenstein",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "باد ليبنشتاين"
+  },
+  "bad liebenzell|germany": {
+    "english": "Bad Liebenzell",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bad Liebenzell",
+    "other": "Bad Liebenzell"
+  },
+  "bad lippspringe|germany": {
+    "english": "Bad Lippspringe",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bad Lippspringe",
+    "other": "باد ليبشبرينغه"
+  },
+  "bad münster am stein-ebernburg|germany": {
+    "english": "Bad Münster am Stein-Ebernburg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Otto Kuhlmann",
+    "other": "Штайн-Эбернбург-тӀера-Бад-Муьнстер"
+  },
+  "bad neuenahr-ahrweiler|germany": {
+    "english": "Bad Neuenahr-Ahrweiler",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bad Neuenahr-Ahrweiler",
+    "other": "Bad Neuenahr-Ahrweiler"
+  },
+  "bad neustadt an der saale|germany": {
+    "english": "Bad Neustadt an der Saale",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Бад-Нойштадт-ан-дер-Зале"
+  },
+  "bad orb|germany": {
+    "english": "Bad Orb",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Burkhard Oly",
+    "other": "باد اورب"
+  },
+  "bad rappenau|germany": {
+    "english": "Bad Rappenau",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bad Rappenau",
+    "other": "Bad Rappenau"
+  },
+  "bad reichenhall|germany": {
+    "english": "Bad Reichenhall",
+    "hebrew": "באד רייכנהאל",
+    "yiddish": "",
+    "german": "Bad Reichenhall",
+    "other": "Bad Reichenhall"
+  },
+  "borken|germany": {
+    "english": "Borken",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Borken"
+  },
+  "bovenden|germany": {
+    "english": "Bovenden",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bovenden",
+    "other": "Бовендэн"
+  },
+  "brakel|germany": {
+    "english": "Brakel",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Brakel"
+  },
+  "brandenburg an der havel|germany": {
+    "english": "Brandenburg an der Havel",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Брандэнбург-на-Гафэле"
+  },
+  "braunfels|germany": {
+    "english": "Braunfels",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Braunfels",
+    "other": "براونفلز"
+  },
+  "braunsbach|germany": {
+    "english": "Braunsbach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Rabbinatsmuseum Braunsbach",
+    "other": "Braunsbach"
+  },
+  "breisach am rhein|germany": {
+    "english": "Breisach am Rhein",
+    "hebrew": "ברייזאך",
+    "yiddish": "",
+    "german": "Breisacher Stephansmünster",
+    "other": "برايزاخ"
+  },
+  "breitenbach am herzberg|germany": {
+    "english": "Breitenbach am Herzberg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "ブライテンバッハ・アム・ヘルツベルク"
+  },
+  "bremen|germany": {
+    "english": "Bremen",
+    "hebrew": "ברמן",
+    "yiddish": "",
+    "german": "Edition Temmen",
+    "other": "Bremen"
+  },
+  "bremerhaven|germany": {
+    "english": "Bremerhaven",
+    "hebrew": "ברמרהאפן",
+    "yiddish": "",
+    "german": "Hochschule Bremerhaven",
+    "other": "Bremerhaven"
+  },
+  "bretten|germany": {
+    "english": "Bretten",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bretten",
+    "other": "Bretten"
+  },
+  "breuna|germany": {
+    "english": "Breuna",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Breuna",
+    "other": "Breuna"
+  },
+  "brilon|germany": {
+    "english": "Brilon",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Brilon",
+    "other": "بريلون"
+  },
+  "bruchhausen-vilsen|germany": {
+    "english": "Bruchhausen-Vilsen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bruchhausen-Vilsen",
+    "other": "Бруххаузен-Филзен"
+  },
+  "urspringen|germany": {
+    "english": "Urspringen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Urspringen",
+    "other": "Urspringen"
+  },
+  "brüel|germany": {
+    "english": "Brüel",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Hinstorff Verlag",
+    "other": "برويل"
+  },
+  "buchach|ukraine": {
+    "english": "Buchach",
+    "hebrew": "בוצ'אץ'",
+    "yiddish": "",
+    "german": "Butschatsch",
+    "other": "بوتشاتش"
+  },
+  "bad wildungen|germany": {
+    "english": "Bad Wildungen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bad Wildungen",
+    "other": "باد فيلدونغن"
+  },
+  "burghaun (hessen)|germany": {
+    "english": "Burghaun (Hessen)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "burgau (bayern)|germany": {
+    "english": "Burgau (Bayern)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "burgbrohl|germany": {
+    "english": "Burgbrohl",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Burgbrohl",
+    "other": "Бургброль"
+  },
+  "burghaslach|germany": {
+    "english": "Burghaslach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Burghaslach",
+    "other": "Burghaslach"
+  },
+  "burghaun|germany": {
+    "english": "Burghaun",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Burghaun",
+    "other": "Бургхаун"
+  },
+  "burgkunstadt|germany": {
+    "english": "Burgkunstadt",
+    "hebrew": "בורגקונשטאדט",
+    "yiddish": "",
+    "german": "Burgkunstadt",
+    "other": "Burgkunstadt"
+  },
+  "burgschwalbach|germany": {
+    "english": "Burgschwalbach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Burgschwalbach",
+    "other": "Бургшвальбах"
+  },
+  "burgsinn|germany": {
+    "english": "Burgsinn",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Münchshöfener Kultur",
+    "other": "Burgsinn"
+  },
+  "busenberg|germany": {
+    "english": "Busenberg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Busenberg",
+    "other": "Busenberg"
+  },
+  "buttenheim|germany": {
+    "english": "Buttenheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Buttenheim",
+    "other": "بوتينهايم"
+  },
+  "buttenwiesen|germany": {
+    "english": "Buttenwiesen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Buttenwiesen",
+    "other": "Buttenwiesen"
+  },
+  "büdingen|germany": {
+    "english": "Büdingen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Büdingen",
+    "other": "بودينغن"
+  },
+  "bürstadt|germany": {
+    "english": "Bürstadt",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bürstadt",
+    "other": "بيورشتات"
+  },
+  "büttelborn|germany": {
+    "english": "Büttelborn",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Büttelborn",
+    "other": "Буьттельборн"
+  },
+  "bütthard|germany": {
+    "english": "Bütthard",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bütthard",
+    "other": "Bütthard"
+  },
+  "calden|germany": {
+    "english": "Calden",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Calden",
+    "other": "Кальден"
+  },
+  "castrop-rauxel|germany": {
+    "english": "Castrop-Rauxel",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Castrop-Rauxel",
+    "other": "كاستروب راوكسل"
+  },
+  "celle|germany": {
+    "english": "Celle",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Celle",
+    "other": "Celle"
+  },
+  "cham|germany": {
+    "english": "Cham",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Cham",
+    "other": "Cham"
+  },
+  "chemnitz|germany": {
+    "english": "Chemnitz",
+    "hebrew": "קמניץ",
+    "yiddish": "קעמניץ",
+    "german": "Flugplatz Chemnitz-Jahnsdorf",
+    "other": "Chemnitz"
+  },
+  "clenze|germany": {
+    "english": "Clenze",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Clenze",
+    "other": "Clenze"
+  },
+  "coburg|germany": {
+    "english": "Coburg",
+    "hebrew": "קובורג",
+    "yiddish": "",
+    "german": "Samba-Festival Coburg",
+    "other": "Coburg"
+  },
+  "coesfeld|germany": {
+    "english": "Coesfeld",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Coesfeld",
+    "other": "كوسفلد"
+  },
+  "colditz|germany": {
+    "english": "Colditz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Colditz",
+    "other": "Colditz"
+  },
+  "colmberg|germany": {
+    "english": "Colmberg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Colmberg",
+    "other": "كولمبيرغ"
+  },
+  "coppenbrügge|germany": {
+    "english": "Coppenbrügge",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Rittergut Voldagsen",
+    "other": "Коппенбруьгге"
+  },
+  "cottbus|germany": {
+    "english": "Cottbus",
+    "hebrew": "קוטבוס",
+    "yiddish": "",
+    "german": "Groß Gaglow",
+    "other": "Cottbus"
+  },
+  "dachau|germany": {
+    "english": "Dachau",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Alexander Reiner",
+    "other": "Dachau-konsentrasiekamp"
+  },
+  "dahn|germany": {
+    "english": "Dahn",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Dahn",
+    "other": "Dahn"
+  },
+  "eschwege|germany": {
+    "english": "Eschwege",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Eschwege",
+    "other": "Eschwege"
+  },
+  "essen|germany": {
+    "english": "Essen",
+    "hebrew": "אסן",
+    "yiddish": "עסען",
+    "german": "Radio Essen",
+    "other": "Essen, Duitsland"
+  },
+  "estenfeld|germany": {
+    "english": "Estenfeld",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Estenfeld",
+    "other": "Эстенфельд"
+  },
+  "esterwegen|germany": {
+    "english": "Esterwegen",
+    "hebrew": "אסטרווגן",
+    "yiddish": "",
+    "german": "KZ Esterwegen",
+    "other": "Эстервеген"
+  },
+  "euerbach|germany": {
+    "english": "Euerbach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Euerbach",
+    "other": "Euerbach"
+  },
+  "obbach|germany": {
+    "english": "Obbach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "feldafing|germany": {
+    "english": "Feldafing",
+    "hebrew": "פלדאפינג",
+    "yiddish": "",
+    "german": "Feldafing",
+    "other": "Feldafing"
+  },
+  "fellheim|germany": {
+    "english": "Fellheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Fellheim",
+    "other": "Fellheim"
+  },
+  "felsberg|germany": {
+    "english": "Felsberg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Felsberg",
+    "other": "Felsberg"
+  },
+  "feuchtwangen|germany": {
+    "english": "Feuchtwangen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Feuchtwangen",
+    "other": "Feuchtwangen"
+  },
+  "fischach|germany": {
+    "english": "Fischach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Fischach",
+    "other": "Fischach"
+  },
+  "flieden|germany": {
+    "english": "Flieden",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Flieden",
+    "other": "Флиден"
+  },
+  "flonheim|germany": {
+    "english": "Flonheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Flonheim",
+    "other": "Флонхайм"
+  },
+  "florstadt|germany": {
+    "english": "Florstadt",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Florstadt",
+    "other": "فلورشتات"
+  },
+  "flossenbürg|germany": {
+    "english": "Flossenbürg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Erla Maschinenwerk",
+    "other": "Flossenbürg-konsentrasiekamp"
+  },
+  "floß|germany": {
+    "english": "Floß",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Floß"
+  },
+  "flöha|germany": {
+    "english": "Flöha",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Flöha",
+    "other": "Flöha"
+  },
+  "flörsheim am main|germany": {
+    "english": "Flörsheim am Main",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Флоьрсхайм-ам-Майн"
+  },
+  "nieder-flörsheim|germany": {
+    "english": "Nieder-Flörsheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "forchheim|germany": {
+    "english": "Forchheim",
+    "hebrew": "פורשהיים",
+    "yiddish": "",
+    "german": "Forchheim",
+    "other": "Forchheim"
+  },
+  "framersheim|germany": {
+    "english": "Framersheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Framersheim",
+    "other": "Фрамерсхайм"
+  },
+  "frankfurt (oder)|germany": {
+    "english": "Frankfurt (Oder)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Frankfurt-na-Oder"
+  },
+  "frankfurt am main|germany": {
+    "english": "Frankfurt am Main",
+    "hebrew": "פרנקפורט",
+    "yiddish": "פראנקפורט",
+    "german": "U60311",
+    "other": "ፍራንክፉርት"
+  },
+  "freiburg im breisgau|germany": {
+    "english": "Freiburg im Breisgau",
+    "hebrew": "פרייבורג",
+    "yiddish": "",
+    "german": "Burg Kybfelsen",
+    "other": "فرايبورغ"
+  },
+  "freudental|germany": {
+    "english": "Freudental",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Freudental",
+    "other": "Freudental"
+  },
+  "friedland|germany": {
+    "english": "Friedland",
+    "hebrew": "פרידלנד",
+    "yiddish": "",
+    "german": "Friedland",
+    "other": "Friedland"
+  },
+  "fronhausen|germany": {
+    "english": "Fronhausen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Fronhausen",
+    "other": "Фронхаузен"
+  },
+  "fuhlsbüttel|germany": {
+    "english": "Fuhlsbüttel",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Hamburg-Fuhlsbüttel",
+    "other": "Fuhlsbüttel"
+  },
+  "fulda|germany": {
+    "english": "Fulda",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Fulda",
+    "other": "Fulda"
+  },
+  "fußgönheim|germany": {
+    "english": "Fußgönheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Maxdorf",
+    "other": "Fußgönheim"
+  },
+  "fürfeld|germany": {
+    "english": "Fürfeld",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Fürfeld",
+    "other": "فورفيلد"
+  },
+  "fürstenwalde|germany": {
+    "english": "Fürstenwalde",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Fürstenwalde/Spree",
+    "other": "Fürstenwalde"
+  },
+  "fürth|germany": {
+    "english": "Fürth",
+    "hebrew": "",
+    "yiddish": "פיורדא",
+    "german": "Fürth",
+    "other": "Fürth"
+  },
+  "gaienhofen|germany": {
+    "english": "Gaienhofen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Gaienhofen",
+    "other": "Gaienhofen"
+  },
+  "adamów|poland": {
+    "english": "Adamów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Adamow",
+    "other": "Adamów"
+  },
+  "andrychów|poland": {
+    "english": "Andrychów",
+    "hebrew": "אנדריכוב",
+    "yiddish": "",
+    "german": "Andrychów",
+    "other": "Andrychów"
+  },
+  "annopol|poland": {
+    "english": "Annopol",
+    "hebrew": "אנופול",
+    "yiddish": "",
+    "german": "Annopol",
+    "other": "Annopol"
+  },
+  "chełm|poland": {
+    "english": "Chełm",
+    "hebrew": "חלם",
+    "yiddish": "כעלם",
+    "german": "Chełm",
+    "other": "Chełm"
+  },
+  "chełmno|poland": {
+    "english": "Chełmno",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Chełmno",
+    "other": "Chełmno"
+  },
+  "chmielnik|poland": {
+    "english": "Chmielnik",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Chmielnik"
+  },
+  "chmielnik rzeszowski|poland": {
+    "english": "Chmielnik Rzeszowski",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "chodecz|poland": {
+    "english": "Chodecz",
+    "hebrew": "חודץ'",
+    "yiddish": "",
+    "german": "Chodecz",
+    "other": "خودچ"
+  },
+  "chorzele|poland": {
+    "english": "Chorzele",
+    "hebrew": "חוז'לה",
+    "yiddish": "",
+    "german": "Chorzele",
+    "other": "Хажэлі"
+  },
+  "chrzanów|poland": {
+    "english": "Chrzanów",
+    "hebrew": "כשאנוב",
+    "yiddish": "קשאנאוו",
+    "german": "Chrzanów",
+    "other": "Chrzanów"
+  },
+  "ciechanowiec|poland": {
+    "english": "Ciechanowiec",
+    "hebrew": "צ'חנוביץ",
+    "yiddish": "",
+    "german": "Ciechanowiec",
+    "other": "Цеханавец"
+  },
+  "ciechanów|poland": {
+    "english": "Ciechanów",
+    "hebrew": "צ'חאנוב",
+    "yiddish": "",
+    "german": "Ciechanów",
+    "other": "Ciechanów"
+  },
+  "ciechocinek|poland": {
+    "english": "Ciechocinek",
+    "hebrew": "צ'חוצ'ינק",
+    "yiddish": "",
+    "german": "Ciechocinek",
+    "other": "Ciechocinek"
+  },
+  "cieszanów|poland": {
+    "english": "Cieszanów",
+    "hebrew": "צ'שאנוב",
+    "yiddish": "ציעשינאוו",
+    "german": "Cieszanów",
+    "other": "Цяшанаў"
+  },
+  "cisna|poland": {
+    "english": "Cisna",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Тисна"
+  },
+  "cmolas|poland": {
+    "english": "Cmolas",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "كومولاس"
+  },
+  "czarnków|poland": {
+    "english": "Czarnków",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Czarnków",
+    "other": "چارنکوو"
+  },
+  "czarny dunajec|poland": {
+    "english": "Czarny Dunajec",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "چارن دونایتس"
+  },
+  "czchów|poland": {
+    "english": "Czchów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Czchów",
+    "other": "Чхоў"
+  },
+  "czeladź|poland": {
+    "english": "Czeladź",
+    "hebrew": "צ'לאדז'",
+    "yiddish": "",
+    "german": "Czeladź",
+    "other": "Czeladź"
+  },
+  "czeremcha|poland": {
+    "english": "Czeremcha",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Чарэмха"
+  },
+  "czermin|poland": {
+    "english": "Czermin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Czermin",
+    "other": "Czermin"
+  },
+  "czudec|poland": {
+    "english": "Czudec",
+    "hebrew": "צ'ודץ",
+    "yiddish": "",
+    "german": "Czudec",
+    "other": "چودتس"
+  },
+  "czyżew|poland": {
+    "english": "Czyżew",
+    "hebrew": "צ'יז'ב",
+    "yiddish": "",
+    "german": "Czyżew",
+    "other": "Чыжаў"
+  },
+  "częstochowa|poland": {
+    "english": "Częstochowa",
+    "hebrew": "צ'נסטוחובה",
+    "yiddish": "",
+    "german": "Częstochowa",
+    "other": "Częstochowa"
+  },
+  "człuchów|poland": {
+    "english": "Człuchów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Człuchów",
+    "other": "Члухаў"
+  },
+  "darłowo|poland": {
+    "english": "Darłowo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Schießplatz Rügenwalde-Bad",
+    "other": "داروووو"
+  },
+  "dobra|poland": {
+    "english": "Dobra",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Dobra",
+    "other": "Добра"
+  },
+  "drawsko pomorskie|poland": {
+    "english": "Drawsko Pomorskie",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Drawsko Pomorskie",
+    "other": "Драўска Паморске"
+  },
+  "drobin|poland": {
+    "english": "Drobin",
+    "hebrew": "דרובין",
+    "yiddish": "",
+    "german": "Drobin",
+    "other": "دروبين"
+  },
+  "drohiczyn|poland": {
+    "english": "Drohiczyn",
+    "hebrew": "דרוהיצ'ין",
+    "yiddish": "",
+    "german": "Drohiczyn",
+    "other": "Дрохичин"
+  },
+  "drzewica|poland": {
+    "english": "Drzewica",
+    "hebrew": "דז'וויצה",
+    "yiddish": "",
+    "german": "Drzewica",
+    "other": "جویتسا"
+  },
+  "dubiecko|poland": {
+    "english": "Dubiecko",
+    "hebrew": "דובצק",
+    "yiddish": "",
+    "german": "",
+    "other": "Дубецко"
+  },
+  "dubienka|poland": {
+    "english": "Dubienka",
+    "hebrew": "דוביינקה",
+    "yiddish": "",
+    "german": "",
+    "other": "Dubienka"
+  },
+  "dukla|poland": {
+    "english": "Dukla",
+    "hebrew": "דוקלה",
+    "yiddish": "",
+    "german": "",
+    "other": "Dukla"
+  },
+  "krzywe (dydnia)|poland": {
+    "english": "Krzywe (Dydnia)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dynów|poland": {
+    "english": "Dynów",
+    "hebrew": "דינוב",
+    "yiddish": "דינאוו",
+    "german": "Dynów",
+    "other": "دنوو"
+  },
+  "działoszyce|poland": {
+    "english": "Działoszyce",
+    "hebrew": "דז'יאלושיצה",
+    "yiddish": "",
+    "german": "Działoszyce",
+    "other": "Дзялашыцы"
+  },
+  "działoszyn|poland": {
+    "english": "Działoszyn",
+    "hebrew": "דז'יאלושין",
+    "yiddish": "",
+    "german": "Działoszyn",
+    "other": "جاووشن"
+  },
+  "dzików stary|poland": {
+    "english": "Dzików Stary",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dąbrowa białostocka|poland": {
+    "english": "Dąbrowa Białostocka",
+    "hebrew": "דומברובה ביאלוסטוצקה",
+    "yiddish": "",
+    "german": "Dąbrowa Białostocka",
+    "other": "Домброва-Бялостоцка"
+  },
+  "dąbrowa górnicza|poland": {
+    "english": "Dąbrowa Górnicza",
+    "hebrew": "דומברובה גורניצ'ה",
+    "yiddish": "",
+    "german": "Dąbrowa Górnicza",
+    "other": "Dąbrowa Górnicza"
+  },
+  "dąbrowice|poland": {
+    "english": "Dąbrowice",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Dąbrowice"
+  },
+  "dębica|poland": {
+    "english": "Dębica",
+    "hebrew": "דמביצה",
+    "yiddish": "",
+    "german": "Dębica",
+    "other": "Dębica"
+  },
+  "dęblin|poland": {
+    "english": "Dęblin",
+    "hebrew": "דמבלין",
+    "yiddish": "",
+    "german": "Dęblin",
+    "other": "دنبلين"
+  },
+  "filipów|poland": {
+    "english": "Filipów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Filipów",
+    "other": "Філіпаў"
+  },
+  "fordon|poland": {
+    "english": "Fordon",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Fordon"
+  },
+  "frampol|poland": {
+    "english": "Frampol",
+    "hebrew": "פראמפול",
+    "yiddish": "",
+    "german": "Frampol",
+    "other": "Фрампаль"
+  },
+  "frysztak|poland": {
+    "english": "Frysztak",
+    "hebrew": "פרישטאק",
+    "yiddish": "פריסטיק",
+    "german": "Frysztak",
+    "other": "فرشتاک"
+  },
+  "garwolin|poland": {
+    "english": "Garwolin",
+    "hebrew": "גרבולין",
+    "yiddish": "",
+    "german": "Garwolin",
+    "other": "Гарволін"
+  },
+  "gać|poland": {
+    "english": "Gać",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Gać",
+    "other": "Gać"
+  },
+  "gdańsk|poland": {
+    "english": "Gdańsk",
+    "hebrew": "גדנסק",
+    "yiddish": "דאנציג",
+    "german": "Danzig",
+    "other": "Gdansk"
+  },
+  "giedlarowa|poland": {
+    "english": "Giedlarowa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Giedlarowa",
+    "other": "قیدلارووا"
+  },
+  "golina|poland": {
+    "english": "Golina",
+    "hebrew": "גולינה",
+    "yiddish": "",
+    "german": "Golina",
+    "other": "Golina"
+  },
+  "golub-dobrzyń|poland": {
+    "english": "Golub-Dobrzyń",
+    "hebrew": "גולוב-דובז'ין",
+    "yiddish": "",
+    "german": "Golub-Dobrzyń",
+    "other": "Golub-Dobrzyń"
+  },
+  "goniadz|poland": {
+    "english": "Goniadz",
+    "hebrew": "גוניונדז",
+    "yiddish": "",
+    "german": "Goniądz",
+    "other": "Гонядзь"
+  },
+  "goraj|poland": {
+    "english": "Goraj",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Goraj",
+    "other": "Goraj"
+  },
+  "gorlice|poland": {
+    "english": "Gorlice",
+    "hebrew": "גורליצה",
+    "yiddish": "",
+    "german": "Gorlice",
+    "other": "Gorlice"
+  },
+  "gostynin|poland": {
+    "english": "Gostynin",
+    "hebrew": "גוסטינין",
+    "yiddish": "",
+    "german": "Gostynin",
+    "other": "Гастынін"
+  },
+  "gowarczów|poland": {
+    "english": "Gowarczów",
+    "hebrew": "גוברצ'וב",
+    "yiddish": "",
+    "german": "Gowarczów",
+    "other": "قووارچوو"
+  },
+  "goworowo|poland": {
+    "english": "Goworowo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gołańcz|poland": {
+    "english": "Gołańcz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Gołańcz",
+    "other": "غولانتش"
+  },
+  "grabowiec|poland": {
+    "english": "Grabowiec",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Grabowiec",
+    "other": "Грабавец"
+  },
+  "grabów|poland": {
+    "english": "Grabów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Grabow",
+    "other": "Грабаў"
+  },
+  "grajewo|poland": {
+    "english": "Grajewo",
+    "hebrew": "גרייבו",
+    "yiddish": "",
+    "german": "Grajewo",
+    "other": "Grajewo"
+  },
+  "grodzisk mazowiecki|poland": {
+    "english": "Grodzisk Mazowiecki",
+    "hebrew": "גרודז'יסק מזובייצקי",
+    "yiddish": "",
+    "german": "Grodzisk Mazowiecki",
+    "other": "Grodzisk Mazowiecki"
+  },
+  "grodzisko dolne|poland": {
+    "english": "Grodzisko Dolne",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "قروجیسکو دولنه"
+  },
+  "grojec|poland": {
+    "english": "Grojec",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Grojec",
+    "other": "Grojec"
+  },
+  "grybów|poland": {
+    "english": "Grybów",
+    "hebrew": "גריבוב",
+    "yiddish": "גריבאוו",
+    "german": "Grybów",
+    "other": "قربوو"
+  },
+  "gryfice|poland": {
+    "english": "Gryfice",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Gryfice",
+    "other": "غريفيتسه"
+  },
+  "grębów|poland": {
+    "english": "Grębów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gubin|poland": {
+    "english": "Gubin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Губин"
+  },
+  "góra kalwaria|poland": {
+    "english": "Góra Kalwaria",
+    "hebrew": "גורה קלוואריה",
+    "yiddish": "גער",
+    "german": "Góra Kalwaria",
+    "other": "Гура Кальварыя"
+  },
+  "kobyla góra|poland": {
+    "english": "Kobyla Góra",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "górno|poland": {
+    "english": "Górno",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Górno"
+  },
+  "gąbin|poland": {
+    "english": "Gąbin",
+    "hebrew": "גומבין",
+    "yiddish": "",
+    "german": "Gąbin",
+    "other": "Гомбін"
+  },
+  "głogów małopolski|poland": {
+    "english": "Głogów Małopolski",
+    "hebrew": "גלוגוב מלופולסקי",
+    "yiddish": "",
+    "german": "Głogów Małopolski",
+    "other": "Глогаў Малапольскі"
+  },
+  "głubczyce|poland": {
+    "english": "Głubczyce",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Głubczyce",
+    "other": "Głubczyce"
+  },
+  "głuszyca|poland": {
+    "english": "Głuszyca",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Głuszyca",
+    "other": "Głuszyca"
+  },
+  "hajnówka|poland": {
+    "english": "Hajnówka",
+    "hebrew": "היינווקה",
+    "yiddish": "",
+    "german": "Hajnówka",
+    "other": "Hajnówka"
+  },
+  "horodło|poland": {
+    "english": "Horodło",
+    "hebrew": "הורודלו",
+    "yiddish": "",
+    "german": "Horodło",
+    "other": "خورودوو"
+  },
+  "hrubieszów|poland": {
+    "english": "Hrubieszów",
+    "hebrew": "הרוביישוב",
+    "yiddish": "",
+    "german": "Hrubieszów",
+    "other": "خروبیشوو"
+  },
+  "husów|poland": {
+    "english": "Husów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Husów",
+    "other": "Гусив"
+  },
+  "inowrocław|poland": {
+    "english": "Inowrocław",
+    "hebrew": "אינוברוצלב",
+    "yiddish": "",
+    "german": "Inowrocław",
+    "other": "Inowrocław"
+  },
+  "iwaniska|poland": {
+    "english": "Iwaniska",
+    "hebrew": "איווניסקה",
+    "yiddish": "",
+    "german": "Iwaniska",
+    "other": "ایوانقسکا"
+  },
+  "izabelin|belarus": {
+    "english": "Izabelin",
+    "hebrew": "איזבלין",
+    "yiddish": "",
+    "german": "Izabelin",
+    "other": "Ізабелін"
+  },
+  "izbica kujawska|poland": {
+    "english": "Izbica Kujawska",
+    "hebrew": "איזביצה קויאווסקה",
+    "yiddish": "",
+    "german": "Izbica Kujawska",
+    "other": "إزبيتسا كويافسكا"
+  },
+  "izbica|poland": {
+    "english": "Izbica",
+    "hebrew": "איזביצה",
+    "yiddish": "איזשביצע",
+    "german": "Izbica",
+    "other": "إزبيكا"
+  },
+  "jadów|poland": {
+    "english": "Jadów",
+    "hebrew": "יאדוב",
+    "yiddish": "",
+    "german": "Jadów",
+    "other": "یادوو"
+  },
+  "januszkowice|poland": {
+    "english": "Januszkowice",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Januszkowice",
+    "other": "Januszkowice"
+  },
+  "janów lubelski|poland": {
+    "english": "Janów Lubelski",
+    "hebrew": "יאנוב לובלסקי",
+    "yiddish": "",
+    "german": "Janów Lubelski",
+    "other": "Янаў Любэльскі"
+  },
+  "janów podlaski|poland": {
+    "english": "Janów Podlaski",
+    "hebrew": "יאנוב פודלאסקי",
+    "yiddish": "",
+    "german": "Janów Podlaski",
+    "other": "یانوف پودلاسکی"
+  },
+  "janów sokółki|poland": {
+    "english": "Janów Sokółki",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "janów (częstochowa)|poland": {
+    "english": "Janów (Częstochowa)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "jarocin|poland": {
+    "english": "Jarocin",
+    "hebrew": "ירוצ'ין",
+    "yiddish": "",
+    "german": "Jarocin",
+    "other": "Jarocin"
+  },
+  "jarosław|poland": {
+    "english": "Jarosław",
+    "hebrew": "ירוסלב",
+    "yiddish": "",
+    "german": "Jarosław",
+    "other": "Jarosław"
+  },
+  "jasienica|poland": {
+    "english": "Jasienica",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Jasienica",
+    "other": "Jasienica"
+  },
+  "jasienica rosielna|poland": {
+    "english": "Jasienica Rosielna",
+    "hebrew": "ישייניצה רושיילנה",
+    "yiddish": "",
+    "german": "Jasienica Rosielna",
+    "other": "یاشنقتسا روشلنا"
+  },
+  "jasionówka|poland": {
+    "english": "Jasionówka",
+    "hebrew": "יאשינובקה",
+    "yiddish": "",
+    "german": "",
+    "other": "Ясянёўка"
+  },
+  "jasło|poland": {
+    "english": "Jasło",
+    "hebrew": "יאסלו",
+    "yiddish": "",
+    "german": "Jasło",
+    "other": "Jasło"
+  },
+  "jawor|poland": {
+    "english": "Jawor",
+    "hebrew": "יאבור",
+    "yiddish": "",
+    "german": "Jawor",
+    "other": "Jawor"
+  },
+  "jaworzno|poland": {
+    "english": "Jaworzno",
+    "hebrew": "יאבוז'נו",
+    "yiddish": "",
+    "german": "Bezirk Chrzanów",
+    "other": "Jaworzno"
+  },
+  "jedlicze|poland": {
+    "english": "Jedlicze",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Jedlicze",
+    "other": "Ядлічэ"
+  },
+  "jedwabne|poland": {
+    "english": "Jedwabne",
+    "hebrew": "ידוובנה",
+    "yiddish": "יעדוואבנע",
+    "german": "Jedwabne",
+    "other": "Ядвабна"
+  },
+  "jeżów|poland": {
+    "english": "Jeżów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Jeżów"
+  },
+  "jodłowa|poland": {
+    "english": "Jodłowa",
+    "hebrew": "יודלובה",
+    "yiddish": "",
+    "german": "Jodłowa",
+    "other": "یودوووا"
+  },
+  "jordanów|poland": {
+    "english": "Jordanów",
+    "hebrew": "יורדאנוב",
+    "yiddish": "",
+    "german": "Jordanów",
+    "other": "یوردانوو"
+  },
+  "jutrosin|poland": {
+    "english": "Jutrosin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Jutrosin",
+    "other": "Ютросін"
+  },
+  "józefów|poland": {
+    "english": "Józefów",
+    "hebrew": "יוזפוב",
+    "yiddish": "",
+    "german": "",
+    "other": "Józefów"
+  },
+  "józefów nad wisłą|poland": {
+    "english": "Józefów nad Wisłą",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Юзефув-над-Вислон"
+  },
+  "jędrzejów|poland": {
+    "english": "Jędrzejów",
+    "hebrew": "ינדז'יוב",
+    "yiddish": "",
+    "german": "Jędrzejów",
+    "other": "Jędrzejów"
+  },
+  "kalisz|poland": {
+    "english": "Kalisz",
+    "hebrew": "קאליש",
+    "yiddish": "קאליש",
+    "german": "Kalisz",
+    "other": "Kalisz"
+  },
+  "kamieńsk|poland": {
+    "english": "Kamieńsk",
+    "hebrew": "קאמיינסק",
+    "yiddish": "",
+    "german": "Kamieńsk",
+    "other": "کامینسک"
+  },
+  "kamionka (bialystok)|poland": {
+    "english": "Kamionka (Bialystok)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kamionka (lublin)|poland": {
+    "english": "Kamionka (Lublin)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kamionka (tarnopol)|poland": {
+    "english": "Kamionka (Tarnopol)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kamionka-strumilowa|poland": {
+    "english": "Kamionka-Strumilowa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kamionka (bialystok region)|poland": {
+    "english": "Kamionka (Bialystok Region)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "katowice|poland": {
+    "english": "Katowice",
+    "hebrew": "קטוביץ",
+    "yiddish": "קאטאוויץ",
+    "german": "Katowice",
+    "other": "Катовице"
+  },
+  "kałuszyn|poland": {
+    "english": "Kałuszyn",
+    "hebrew": "קאלושין",
+    "yiddish": "",
+    "german": "Kałuszyn",
+    "other": "Калушын"
+  },
+  "kańczuga|poland": {
+    "english": "Kańczuga",
+    "hebrew": "קנצ'וגה",
+    "yiddish": "",
+    "german": "Kańczuga",
+    "other": "Каньчуга"
+  },
+  "kcynia|poland": {
+    "english": "Kcynia",
+    "hebrew": "קציניה",
+    "yiddish": "",
+    "german": "Kcynia",
+    "other": "کتسنیا"
+  },
+  "kielce|poland": {
+    "english": "Kielce",
+    "hebrew": "קיילצה",
+    "yiddish": "קעלץ",
+    "german": "Philipp Ther",
+    "other": "Kielce"
+  },
+  "kiernozia|poland": {
+    "english": "Kiernozia",
+    "hebrew": "קיירנוז'יה",
+    "yiddish": "",
+    "german": "Kiernozia",
+    "other": "کیرنوژا"
+  },
+  "kleczew|poland": {
+    "english": "Kleczew",
+    "hebrew": "קלצ'ב",
+    "yiddish": "",
+    "german": "Kleczew",
+    "other": "كليتشيو"
+  },
+  "klimontów|poland": {
+    "english": "Klimontów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Klimontow",
+    "other": "Klimontów"
+  },
+  "knyszyn|poland": {
+    "english": "Knyszyn",
+    "hebrew": "קנישין",
+    "yiddish": "קנישין",
+    "german": "Knyszyn",
+    "other": "Кнышын"
+  },
+  "kock|poland": {
+    "english": "Kock",
+    "hebrew": "קוצק",
+    "yiddish": "",
+    "german": "",
+    "other": "Коцк"
+  },
+  "kolbuszowa|poland": {
+    "english": "Kolbuszowa",
+    "hebrew": "קולבושובה",
+    "yiddish": "קאלבאסאוו",
+    "german": "Kolbuszowa",
+    "other": "کولبوشووا"
+  },
+  "kolno|poland": {
+    "english": "Kolno",
+    "hebrew": "קולנה",
+    "yiddish": "",
+    "german": "Kolno",
+    "other": "Колно"
+  },
+  "kołaczyce|poland": {
+    "english": "Kołaczyce",
+    "hebrew": "קולאצ'יצה",
+    "yiddish": "",
+    "german": "",
+    "other": "Калачыцы"
+  },
+  "kłobuck|poland": {
+    "english": "Kłobuck",
+    "hebrew": "קלובוצק",
+    "yiddish": "",
+    "german": "Kłobuck",
+    "other": "Клобуцк"
+  },
+  "kłodawa|poland": {
+    "english": "Kłodawa",
+    "hebrew": "קלודאווה",
+    "yiddish": "",
+    "german": "Kłodawa",
+    "other": "Кладава"
+  },
+  "aleksandrów kujawski|poland": {
+    "english": "Aleksandrów Kujawski",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "aleksandrów|poland": {
+    "english": "Aleksandrów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "aleksandrów łódzki|poland": {
+    "english": "Aleksandrów Łódzki",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "babiak|poland": {
+    "english": "Babiak",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "baligród|poland": {
+    "english": "Baligród",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "baranowo|poland": {
+    "english": "Baranowo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "barczewo|poland": {
+    "english": "Barczewo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "barlinek|poland": {
+    "english": "Barlinek",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bartoszyce|poland": {
+    "english": "Bartoszyce",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "batorz|poland": {
+    "english": "Batorz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bałtów|poland": {
+    "english": "Bałtów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "białaczów|poland": {
+    "english": "Białaczów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bielawa|poland": {
+    "english": "Bielawa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bieliny|poland": {
+    "english": "Bieliny",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bieżuń|poland": {
+    "english": "Bieżuń",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bircza|poland": {
+    "english": "Bircza",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "biszcza|poland": {
+    "english": "Biszcza",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bisztynek|poland": {
+    "english": "Bisztynek",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bojanów|poland": {
+    "english": "Bojanów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "borki|poland": {
+    "english": "Borki",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "borkowice|poland": {
+    "english": "Borkowice",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "burzenin|poland": {
+    "english": "Burzenin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "błażowa|poland": {
+    "english": "Błażowa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "chełmża|poland": {
+    "english": "Chełmża",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "chojnice|poland": {
+    "english": "Chojnice",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "cieszyn|poland": {
+    "english": "Cieszyn",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "cyców|poland": {
+    "english": "Cyców",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "czajków|poland": {
+    "english": "Czajków",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "czarna|poland": {
+    "english": "Czarna",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "czarnocin|poland": {
+    "english": "Czarnocin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "czemierniki|poland": {
+    "english": "Czemierniki",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "czerwin|poland": {
+    "english": "Czerwin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "daleszyce|poland": {
+    "english": "Daleszyce",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dobre miasto|poland": {
+    "english": "Dobre Miasto",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "domaradz|poland": {
+    "english": "Domaradz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "drezdenko|poland": {
+    "english": "Drezdenko",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ełk|poland": {
+    "english": "Ełk",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "firlej|poland": {
+    "english": "Firlej",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gdynia|poland": {
+    "english": "Gdynia",
+    "hebrew": "גדיניה",
+    "yiddish": "",
+    "german": "Gdynia",
+    "other": "Gdynia"
+  },
+  "gidle|poland": {
+    "english": "Gidle",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gniew|poland": {
+    "english": "Gniew",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "godziszów|poland": {
+    "english": "Godziszów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "goleszów|poland": {
+    "english": "Goleszów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gomunice|poland": {
+    "english": "Gomunice",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gorzkowice|poland": {
+    "english": "Gorzkowice",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gorzów wielkopolski|poland": {
+    "english": "Gorzów Wielkopolski",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "granica|poland": {
+    "english": "Granica",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "grodzisk wielkopolski|poland": {
+    "english": "Grodzisk Wielkopolski",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "grodzisko górne|poland": {
+    "english": "Grodzisko Górne",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gromnik|poland": {
+    "english": "Gromnik",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "grudki|poland": {
+    "english": "Grudki",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "górowo iławeckie|poland": {
+    "english": "Górowo Iławeckie",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gąsawa|poland": {
+    "english": "Gąsawa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "jabłonka|poland": {
+    "english": "Jabłonka",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "janowice|poland": {
+    "english": "Janowice",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "janowiec|poland": {
+    "english": "Janowiec",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "jastrowie|poland": {
+    "english": "Jastrowie",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "jawornik|poland": {
+    "english": "Jawornik",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "jawornik polski|poland": {
+    "english": "Jawornik Polski",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "jaśliska|poland": {
+    "english": "Jaśliska",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "jedlińsk|poland": {
+    "english": "Jedlińsk",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kamyk|poland": {
+    "english": "Kamyk",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "karczew|poland": {
+    "english": "Karczew",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kazimierz biskupi|poland": {
+    "english": "Kazimierz Biskupi",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kleszczów|poland": {
+    "english": "Kleszczów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "klwów|poland": {
+    "english": "Klwów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kodeń|poland": {
+    "english": "Kodeń",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lutocin|poland": {
+    "english": "Lutocin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lutowiska|poland": {
+    "english": "Lutowiska",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lututów|poland": {
+    "english": "Lututów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lwówek|poland": {
+    "english": "Lwówek",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "maciejowice|poland": {
+    "english": "Maciejowice",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "majdan królewski|poland": {
+    "english": "Majdan Królewski",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "maków mazowiecki|poland": {
+    "english": "Maków Mazowiecki",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "maków|poland": {
+    "english": "Maków",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "malanów|poland": {
+    "english": "Malanów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "malbork|poland": {
+    "english": "Malbork",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "manasterz|poland": {
+    "english": "Manasterz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "maniowy|poland": {
+    "english": "Maniowy",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "margonin|poland": {
+    "english": "Margonin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "marki|poland": {
+    "english": "Marki",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "małkinia górna|poland": {
+    "english": "Małkinia Górna",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "małogoszcz|poland": {
+    "english": "Małogoszcz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "medyka|poland": {
+    "english": "Medyka",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "miastko|poland": {
+    "english": "Miastko",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "michalowo|poland": {
+    "english": "Michalowo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "michałowo|poland": {
+    "english": "Michałowo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "michałów|poland": {
+    "english": "Michałów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "wola michów|poland": {
+    "english": "Wola Michów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "miechów charsznica|poland": {
+    "english": "Miechów Charsznica",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "miechów|poland": {
+    "english": "Miechów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "miedzna|poland": {
+    "english": "Miedzna",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mikołajki|poland": {
+    "english": "Mikołajki",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mikstat|poland": {
+    "english": "Mikstat",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "miączyn|poland": {
+    "english": "Miączyn",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "międzybrodzie bialskie|poland": {
+    "english": "Międzybrodzie Bialskie",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "międzychód|poland": {
+    "english": "Międzychód",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "międzyrzec podlaski|poland": {
+    "english": "Międzyrzec Podlaski",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "międzyrzecz|poland": {
+    "english": "Międzyrzecz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "miłakowo|poland": {
+    "english": "Miłakowo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "miłosław|poland": {
+    "english": "Miłosław",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "łużna|poland": {
+    "english": "Łużna",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "alcalá de henares|spain": {
+    "english": "Alcalá de Henares",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "قلعة هنارة"
+  },
+  "barcelona|spain": {
+    "english": "Barcelona",
+    "hebrew": "ברצלונה",
+    "yiddish": "בארצעלאנע",
+    "german": "Barcelona",
+    "other": "La Cinètika"
+  },
+  "cuenca|spain": {
+    "english": "Cuenca",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "girona|spain": {
+    "english": "Girona",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "granada|spain": {
+    "english": "Granada",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "guadalajara|spain": {
+    "english": "Guadalajara",
+    "hebrew": "",
+    "yiddish": "גוואדאלאכארע",
+    "german": "",
+    "other": "Гвадалахара"
+  },
+  "hervás|spain": {
+    "english": "Hervás",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "huesca|spain": {
+    "english": "Huesca",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "llerena|spain": {
+    "english": "Llerena",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "madrid|spain": {
+    "english": "Madrid",
+    "hebrew": "מדריד",
+    "yiddish": "מאדריד",
+    "german": "Madrid",
+    "other": "bartolillos"
+  },
+  "plasencia|spain": {
+    "english": "Plasencia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sagunto|spain": {
+    "english": "Sagunto",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bologna|italy": {
+    "english": "Bologna",
+    "hebrew": "בולוניה",
+    "yiddish": "",
+    "german": "Bologna",
+    "other": "Bologna"
+  },
+  "brindisi|italy": {
+    "english": "Brindisi",
+    "hebrew": "ברינדיזי",
+    "yiddish": "",
+    "german": "Brindisi",
+    "other": "Brándiz"
+  },
+  "cesena|italy": {
+    "english": "Cesena",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "minturno|italy": {
+    "english": "Minturno",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "palermo|italy": {
+    "english": "Palermo",
+    "hebrew": "פלרמו",
+    "yiddish": "פאלערמא",
+    "german": "Palermo",
+    "other": "Palermo"
+  },
+  "pisa|italy": {
+    "english": "Pisa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "siena|italy": {
+    "english": "Siena",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "trani|italy": {
+    "english": "Trani",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "trapani|italy": {
+    "english": "Trapani",
+    "hebrew": "טרפאני",
+    "yiddish": "",
+    "german": "Trapani",
+    "other": "Trapani"
+  },
+  "bassano del grappa|italy": {
+    "english": "Bassano del Grappa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Бассано-дель-Граппа"
+  },
+  "genoa|italy": {
+    "english": "Genoa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gorizia|italy": {
+    "english": "Gorizia",
+    "hebrew": "גוריציה",
+    "yiddish": "",
+    "german": "Gorizia",
+    "other": "غرتسية"
+  },
+  "livorno|italy": {
+    "english": "Livorno",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "venice|italy": {
+    "english": "Venice",
+    "hebrew": "ונציה",
+    "yiddish": "ווענעציע",
+    "german": "Venedig",
+    "other": "Уанаҿа"
+  },
+  "pitigliano|italy": {
+    "english": "Pitigliano",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "medina|saudi arabia": {
+    "english": "Medina",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "alexandroupolis|greece": {
+    "english": "Alexandroupolis",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Alexandroupoli",
+    "other": "Alexandroupoli"
+  },
+  "argostoli|greece": {
+    "english": "Argostoli",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "athens|greece": {
+    "english": "Athens",
+    "hebrew": "אתונה",
+    "yiddish": "אטען",
+    "german": "Athen",
+    "other": "Athene"
+  },
+  "chania|greece": {
+    "english": "Chania",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "chios|greece": {
+    "english": "Chios",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "corfu|greece": {
+    "english": "Corfu",
+    "hebrew": "קורפו",
+    "yiddish": "",
+    "german": "Korfu",
+    "other": "Corfu"
+  },
+  "corinth|greece": {
+    "english": "Corinth",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "florina|greece": {
+    "english": "Florina",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ioannina|greece": {
+    "english": "Ioannina",
+    "hebrew": "יואנינה",
+    "yiddish": "",
+    "german": "Ioannina",
+    "other": "Ioánina"
+  },
+  "kavala|greece": {
+    "english": "Kavala",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kos|greece": {
+    "english": "Kos",
+    "hebrew": "קוס",
+    "yiddish": "",
+    "german": "Kos",
+    "other": "جزيرة كوس"
+  },
+  "lamia|greece": {
+    "english": "Lamia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mystras|greece": {
+    "english": "Mystras",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "naoussa|greece": {
+    "english": "Naoussa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "oropos|greece": {
+    "english": "Oropos",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rhodes|greece": {
+    "english": "Rhodes",
+    "hebrew": "רודוס",
+    "yiddish": "",
+    "german": "Rhodos",
+    "other": "Rhodos"
+  },
+  "serres|greece": {
+    "english": "Serres",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "thebes|greece": {
+    "english": "Thebes",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "thessaloniki|greece": {
+    "english": "Thessaloniki",
+    "hebrew": "סלוניקי",
+    "yiddish": "סאלאניקי",
+    "german": "Thessaloniki",
+    "other": "Thessaloniki"
+  },
+  "trikala|greece": {
+    "english": "Trikala",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "volos|greece": {
+    "english": "Volos",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "xanthi|greece": {
+    "english": "Xanthi",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Xanthi",
+    "other": "Dimos Xanthi"
+  },
+  "zakynthos|greece": {
+    "english": "Zakynthos",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "delphi|greece": {
+    "english": "Delphi",
+    "hebrew": "דלפי",
+    "yiddish": "דעלפי",
+    "german": "Delphi",
+    "other": "Delphi"
+  },
+  "delos|greece": {
+    "english": "Delos",
+    "hebrew": "דלוס",
+    "yiddish": "",
+    "german": "Delos",
+    "other": "Delos"
+  },
+  "taenarum|greece": {
+    "english": "Taenarum",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "plataea|greece": {
+    "english": "Plataea",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "alwernia|poland": {
+    "english": "Alwernia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bełchatów|poland": {
+    "english": "Bełchatów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bełżec|poland": {
+    "english": "Bełżec",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "białobrzegi|poland": {
+    "english": "Białobrzegi",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "biecz|poland": {
+    "english": "Biecz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bielsko-biala|poland": {
+    "english": "Bielsko-Biala",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bieruń|poland": {
+    "english": "Bieruń",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bolszewo|poland": {
+    "english": "Bolszewo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bychawa|poland": {
+    "english": "Bychawa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "chocznia|poland": {
+    "english": "Chocznia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "choroszcz|poland": {
+    "english": "Choroszcz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dorohusk|poland": {
+    "english": "Dorohusk",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "duczki|poland": {
+    "english": "Duczki",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dzierżoniów|poland": {
+    "english": "Dzierżoniów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dębów|poland": {
+    "english": "Dębów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "grójec|poland": {
+    "english": "Grójec",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "iłża|poland": {
+    "english": "Iłża",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kalwaria zebrzydowska|poland": {
+    "english": "Kalwaria Zebrzydowska",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kazimierz dolny|poland": {
+    "english": "Kazimierz Dolny",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "luzino|poland": {
+    "english": "Luzino",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "markuszów|poland": {
+    "english": "Markuszów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "miedzno|poland": {
+    "english": "Miedzno",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "milejczyce|poland": {
+    "english": "Milejczyce",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "międzybórz|poland": {
+    "english": "Międzybórz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "alagón|spain": {
+    "english": "Alagón",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "albarracín|spain": {
+    "english": "Albarracín",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "badajoz|spain": {
+    "english": "Badajoz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "baza|spain": {
+    "english": "Baza",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "benavente|spain": {
+    "english": "Benavente",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "besalú|spain": {
+    "english": "Besalú",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "burgos|spain": {
+    "english": "Burgos",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "béjar|spain": {
+    "english": "Béjar",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "calatayud|spain": {
+    "english": "Calatayud",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "cervera|spain": {
+    "english": "Cervera",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ciudad rodrigo|spain": {
+    "english": "Ciudad Rodrigo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "córdoba|spain": {
+    "english": "Córdoba",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "guadix|spain": {
+    "english": "Guadix",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "illescas|spain": {
+    "english": "Illescas",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "inca|spain": {
+    "english": "Inca",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "laguardia|spain": {
+    "english": "Laguardia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "león|spain": {
+    "english": "León",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lucena|spain": {
+    "english": "Lucena",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "miranda de ebro|spain": {
+    "english": "Miranda de Ebro",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "monforte de lemos|spain": {
+    "english": "Monforte de Lemos",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "monzón|spain": {
+    "english": "Monzón",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "málaga|spain": {
+    "english": "Málaga",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "palma de mallorca|spain": {
+    "english": "Palma de Mallorca",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pontevedra|spain": {
+    "english": "Pontevedra",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ribadavia|spain": {
+    "english": "Ribadavia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sahagún|spain": {
+    "english": "Sahagún",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "salamanca|spain": {
+    "english": "Salamanca",
+    "hebrew": "סלמנקה",
+    "yiddish": "",
+    "german": "Salamanca",
+    "other": "Salamanca"
+  },
+  "santa coloma de queralt|spain": {
+    "english": "Santa Coloma de Queralt",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "segovia|spain": {
+    "english": "Segovia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "seville|spain": {
+    "english": "Seville",
+    "hebrew": "סביליה",
+    "yiddish": "סעווילא",
+    "german": "Sevilla",
+    "other": "Sevilla"
+  },
+  "sigüenza|spain": {
+    "english": "Sigüenza",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sineu|spain": {
+    "english": "Sineu",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tarazona|spain": {
+    "english": "Tarazona",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tarragona|spain": {
+    "english": "Tarragona",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "teruel|spain": {
+    "english": "Teruel",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "toledo|spain": {
+    "english": "Toledo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "toro|spain": {
+    "english": "Toro",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tortosa|spain": {
+    "english": "Tortosa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "trujillo|spain": {
+    "english": "Trujillo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tudela|spain": {
+    "english": "Tudela",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tui|spain": {
+    "english": "Tui",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tàrrega|spain": {
+    "english": "Tàrrega",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "valencia|spain": {
+    "english": "Valencia",
+    "hebrew": "ולנסיה",
+    "yiddish": "וואלענציע",
+    "german": "Valencia",
+    "other": "Valencia, Spanje"
+  },
+  "valladolid|spain": {
+    "english": "Valladolid",
+    "hebrew": "ואיאדוליד",
+    "yiddish": "",
+    "german": "Valladolid",
+    "other": "Valladolid"
+  },
+  "viana|spain": {
+    "english": "Viana",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "vitoria-gasteiz|spain": {
+    "english": "Vitoria-Gasteiz",
+    "hebrew": "ויטוריה",
+    "yiddish": "וויטאריע",
+    "german": "Vitoria-Gasteiz",
+    "other": "Vitoria-Gasteiz"
+  },
+  "zamora|spain": {
+    "english": "Zamora",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "zaragoza|spain": {
+    "english": "Zaragoza",
+    "hebrew": "סרגוסה",
+    "yiddish": "סאראגאסא",
+    "german": "Saragossa",
+    "other": "Zaragoza"
+  },
+  "ávila|spain": {
+    "english": "Ávila",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "acqui|italy": {
+    "english": "Acqui",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "agrigento|italy": {
+    "english": "Agrigento",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "alcamo|italy": {
+    "english": "Alcamo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "alessandria|italy": {
+    "english": "Alessandria",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "alghero|italy": {
+    "english": "Alghero",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "aquileia|italy": {
+    "english": "Aquileia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "arezzo|italy": {
+    "english": "Arezzo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "asiago|italy": {
+    "english": "Asiago",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "asolo|italy": {
+    "english": "Asolo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "badia polesine|italy": {
+    "english": "Badia Polesine",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bagnoli irpino|italy": {
+    "english": "Bagnoli Irpino",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Bagnoli Irpino",
+    "other": "باجنولي ايربينو"
+  },
+  "barletta|italy": {
+    "english": "Barletta",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "belluno|italy": {
+    "english": "Belluno",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bova marina|italy": {
+    "english": "Bova Marina",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bozzolo|italy": {
+    "english": "Bozzolo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "cagliari|italy": {
+    "english": "Cagliari",
+    "hebrew": "קליארי",
+    "yiddish": "",
+    "german": "Cagliari",
+    "other": "Cagliari"
+  },
+  "calascibetta|italy": {
+    "english": "Calascibetta",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "calvanico|italy": {
+    "english": "Calvanico",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "capua|italy": {
+    "english": "Capua",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "carmagnola|italy": {
+    "english": "Carmagnola",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "casacalenda|italy": {
+    "english": "Casacalenda",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "castelmola|italy": {
+    "english": "Castelmola",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "castrovillari|italy": {
+    "english": "Castrovillari",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "cento|italy": {
+    "english": "Cento",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "chieri|italy": {
+    "english": "Chieri",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "città di castello|italy": {
+    "english": "Città di Castello",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "como|italy": {
+    "english": "Como",
+    "hebrew": "קומו",
+    "yiddish": "",
+    "german": "Como",
+    "other": "Como"
+  },
+  "conegliano|italy": {
+    "english": "Conegliano",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "corleone|italy": {
+    "english": "Corleone",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "cosenza|italy": {
+    "english": "Cosenza",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "cremona|italy": {
+    "english": "Cremona",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "erice|italy": {
+    "english": "Erice",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ferrara|italy": {
+    "english": "Ferrara",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "forlì|italy": {
+    "english": "Forlì",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "fossano|italy": {
+    "english": "Fossano",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lamezia terme|italy": {
+    "english": "Lamezia Terme",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lecce|italy": {
+    "english": "Lecce",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lentini|italy": {
+    "english": "Lentini",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lugo|italy": {
+    "english": "Lugo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Lugo",
+    "other": "Lugo"
+  },
+  "manfredonia|italy": {
+    "english": "Manfredonia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mantua|italy": {
+    "english": "Mantua",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "marsala|italy": {
+    "english": "Marsala",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "merano|italy": {
+    "english": "Merano",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "messina|italy": {
+    "english": "Messina",
+    "hebrew": "מסינה",
+    "yiddish": "",
+    "german": "Messina",
+    "other": "Messina, Italië"
+  },
+  "milazzo|italy": {
+    "english": "Milazzo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "modena|italy": {
+    "english": "Modena",
+    "hebrew": "מודנה",
+    "yiddish": "",
+    "german": "Modena",
+    "other": "Modena"
+  },
+  "molfetta|italy": {
+    "english": "Molfetta",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mondovì|italy": {
+    "english": "Mondovì",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "norcia|italy": {
+    "english": "Norcia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "orvieto|italy": {
+    "english": "Orvieto",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pesaro|italy": {
+    "english": "Pesaro",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "piacenza|italy": {
+    "english": "Piacenza",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "piove di sacco|italy": {
+    "english": "Piove di Sacco",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pistoia|italy": {
+    "english": "Pistoia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pompeii|italy": {
+    "english": "Pompeii",
+    "hebrew": "פומפיי",
+    "yiddish": "",
+    "german": "Pompeji",
+    "other": "Pompeii"
+  },
+  "pozzuoli|italy": {
+    "english": "Pozzuoli",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "prato|italy": {
+    "english": "Prato",
+    "hebrew": "פראטו",
+    "yiddish": "",
+    "german": "",
+    "other": "براتو"
+  },
+  "ragusa|italy": {
+    "english": "Ragusa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ravenna|italy": {
+    "english": "Ravenna",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "reggio calabria|italy": {
+    "english": "Reggio Calabria",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Legio Campana",
+    "other": "Reggio Calabria"
+  },
+  "reggio emilia|italy": {
+    "english": "Reggio Emilia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sabbioneta|italy": {
+    "english": "Sabbioneta",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "salemi|italy": {
+    "english": "Salemi",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "saluzzo|italy": {
+    "english": "Saluzzo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "san daniele del friuli|italy": {
+    "english": "San Daniele del Friuli",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "san gimignano|italy": {
+    "english": "San Gimignano",
+    "hebrew": "סן ג'ימיניאנו",
+    "yiddish": "",
+    "german": "San Gimignano",
+    "other": "San Gimignano"
+  },
+  "san nicandro garganico|italy": {
+    "english": "San Nicandro Garganico",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sciacca|italy": {
+    "english": "Sciacca",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "senigallia|italy": {
+    "english": "Senigallia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "spoleto|italy": {
+    "english": "Spoleto",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "taormina|italy": {
+    "english": "Taormina",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "terni|italy": {
+    "english": "Terni",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tivoli|italy": {
+    "english": "Tivoli",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "treviso|italy": {
+    "english": "Treviso",
+    "hebrew": "טרוויזו",
+    "yiddish": "טראוויזיע",
+    "german": "Treviso",
+    "other": "Treviso"
+  },
+  "venosa|italy": {
+    "english": "Venosa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "vicenza|italy": {
+    "english": "Vicenza",
+    "hebrew": "ויצ'נצה",
+    "yiddish": "",
+    "german": "Vicenza",
+    "other": "Vicenza"
+  },
+  "viterbo|italy": {
+    "english": "Viterbo",
+    "hebrew": "ויטרבו",
+    "yiddish": "",
+    "german": "Viterbo",
+    "other": "Viterbo"
+  },
+  "vittorio veneto|italy": {
+    "english": "Vittorio Veneto",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "vizzini|italy": {
+    "english": "Vizzini",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "aegina|greece": {
+    "english": "Aegina",
+    "hebrew": "אגינה",
+    "yiddish": "",
+    "german": "Gabriel Welter",
+    "other": "أجانيط"
+  },
+  "agrinio|greece": {
+    "english": "Agrinio",
+    "hebrew": "אגריניו",
+    "yiddish": "",
+    "german": "Agrinio",
+    "other": "Agrinio"
+  },
+  "argos|greece": {
+    "english": "Argos",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "arta|greece": {
+    "english": "Arta",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "chalkida|greece": {
+    "english": "Chalkida",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "didymoteicho|greece": {
+    "english": "Didymoteicho",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "drama|greece": {
+    "english": "Drama",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "edessa|greece": {
+    "english": "Edessa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "heraklion|greece": {
+    "english": "Heraklion",
+    "hebrew": "הרקליון",
+    "yiddish": "",
+    "german": "Iraklio",
+    "other": "Heraklion"
+  },
+  "kalamata|greece": {
+    "english": "Kalamata",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kastoria|greece": {
+    "english": "Kastoria",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kissamos|greece": {
+    "english": "Kissamos",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "komotini|greece": {
+    "english": "Komotini",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "koroni|greece": {
+    "english": "Koroni",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kozani|greece": {
+    "english": "Kozani",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "larissa|greece": {
+    "english": "Larissa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lefkada|greece": {
+    "english": "Lefkada",
+    "hebrew": "לפקדה",
+    "yiddish": "",
+    "german": "Andreas Birken",
+    "other": "ليفكادا"
+  },
+  "lemnos|greece": {
+    "english": "Lemnos",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "leros|greece": {
+    "english": "Leros",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "livadeia|greece": {
+    "english": "Livadeia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "methoni|greece": {
+    "english": "Methoni",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nafpaktos|greece": {
+    "english": "Nafpaktos",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "naxos|greece": {
+    "english": "Naxos",
+    "hebrew": "נקסוס",
+    "yiddish": "",
+    "german": "Naxos",
+    "other": "Naxos"
+  },
+  "patmos|greece": {
+    "english": "Patmos",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "patras|greece": {
+    "english": "Patras",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "philippi|greece": {
+    "english": "Philippi",
+    "hebrew": "פיליפי",
+    "yiddish": "",
+    "german": "Philippi",
+    "other": "Филипи"
+  },
+  "piraeus|greece": {
+    "english": "Piraeus",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "preveza|greece": {
+    "english": "Preveza",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Preveza",
+    "other": "Preveza"
+  },
+  "rethymno|greece": {
+    "english": "Rethymno",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "samos|greece": {
+    "english": "Samos",
+    "hebrew": "סאמוס",
+    "yiddish": "",
+    "german": "Samos",
+    "other": "ساموس"
+  },
+  "sparta|greece": {
+    "english": "Sparta",
+    "hebrew": "ספרטה",
+    "yiddish": "",
+    "german": "Sparta",
+    "other": "Sparta"
+  },
+  "tripoli|greece": {
+    "english": "Tripoli",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "veria|greece": {
+    "english": "Veria",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "fadak|saudi arabia": {
+    "english": "Fadak",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "فدك"
+  },
+  "khaybar|saudi arabia": {
+    "english": "Khaybar",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "maqna|saudi arabia": {
+    "english": "Maqna",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "amizmiz|morocco": {
+    "english": "Amizmiz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Amizmiz",
+    "other": "أمزميز"
+  },
+  "azemmour|morocco": {
+    "english": "Azemmour",
+    "hebrew": "אזמור",
+    "yiddish": "",
+    "german": "Azemmour",
+    "other": "أزمور"
+  },
+  "debdou|morocco": {
+    "english": "Debdou",
+    "hebrew": "דבדו",
+    "yiddish": "",
+    "german": "Debdou",
+    "other": "دبدو"
+  },
+  "demnate|morocco": {
+    "english": "Demnate",
+    "hebrew": "דמנאת",
+    "yiddish": "",
+    "german": "Demnate",
+    "other": "دمنات"
+  },
+  "ifrane anti-atlas|morocco": {
+    "english": "Ifrane Anti-Atlas",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "larache|morocco": {
+    "english": "Larache",
+    "hebrew": "לאראש",
+    "yiddish": "",
+    "german": "Larache",
+    "other": "العرائش"
+  },
+  "ouarzazate|morocco": {
+    "english": "Ouarzazate",
+    "hebrew": "ורזאזאת",
+    "yiddish": "",
+    "german": "Ouarzazate",
+    "other": "ورزازات"
+  },
+  "safi|morocco": {
+    "english": "Safi",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Safi"
+  },
+  "sale|morocco": {
+    "english": "Sale",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Sale",
+    "other": "Sale"
+  },
+  "sefrou|morocco": {
+    "english": "Sefrou",
+    "hebrew": "צפרו",
+    "yiddish": "",
+    "german": "Sefrou",
+    "other": "صفرو"
+  },
+  "taroudant|morocco": {
+    "english": "Taroudant",
+    "hebrew": "תרודאנת",
+    "yiddish": "",
+    "german": "Taroudant",
+    "other": "تارودانت"
+  },
+  "taza|morocco": {
+    "english": "Taza",
+    "hebrew": "תאזה",
+    "yiddish": "",
+    "german": "Taza",
+    "other": "تازة"
+  },
+  "taznakht|morocco": {
+    "english": "Taznakht",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Taznakht",
+    "other": "تازناخت"
+  },
+  "tetouan|morocco": {
+    "english": "Tetouan",
+    "hebrew": "תטואן",
+    "yiddish": "",
+    "german": "Tétouan",
+    "other": "Tétouan"
+  },
+  "tinghir|morocco": {
+    "english": "Tinghir",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Tinghir",
+    "other": "تنغير"
+  },
+  "zagora|morocco": {
+    "english": "Zagora",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Zagora",
+    "other": "Загора"
+  },
+  "ben gardane|tunisia": {
+    "english": "Ben Gardane",
+    "hebrew": "בן גרדאן",
+    "yiddish": "",
+    "german": "Ben Gardane",
+    "other": "بنقردان"
+  },
+  "carthage|tunisia": {
+    "english": "Carthage",
+    "hebrew": "קרתגו",
+    "yiddish": "",
+    "german": "Karthago",
+    "other": "Kartago"
+  },
+  "gafsa|tunisia": {
+    "english": "Gafsa",
+    "hebrew": "גאפסה",
+    "yiddish": "",
+    "german": "Gafsa",
+    "other": "قفصة"
+  },
+  "le kef|tunisia": {
+    "english": "Le Kef",
+    "hebrew": "אל-כאף",
+    "yiddish": "",
+    "german": "El Kef",
+    "other": "الكاف"
+  },
+  "nabeul|tunisia": {
+    "english": "Nabeul",
+    "hebrew": "נאבל",
+    "yiddish": "",
+    "german": "Nabeul",
+    "other": "نابل"
+  },
+  "testour|tunisia": {
+    "english": "Testour",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Testour",
+    "other": "تستور"
+  },
+  "zarzis|tunisia": {
+    "english": "Zarzis",
+    "hebrew": "ז'רז'יס",
+    "yiddish": "",
+    "german": "Zarzis",
+    "other": "جرجيس"
+  },
+  "amadiya|iraq": {
+    "english": "Amadiya",
+    "hebrew": "אל-עמאדיה",
+    "yiddish": "",
+    "german": "Amediye",
+    "other": "العمادية"
+  },
+  "diwaniyah|iraq": {
+    "english": "Diwaniyah",
+    "hebrew": "א-דיוואניה",
+    "yiddish": "",
+    "german": "Diwaniyya",
+    "other": "الديوانيه"
+  },
+  "firuz shabur|iraq": {
+    "english": "Firuz Shabur",
+    "hebrew": "אנבאר",
+    "yiddish": "",
+    "german": "",
+    "other": "Al-Anbar"
+  },
+  "seleucia|iraq": {
+    "english": "Seleucia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Seleukië"
+  },
+  "sulaymaniyah|iraq": {
+    "english": "Sulaymaniyah",
+    "hebrew": "סולימאניה",
+    "yiddish": "",
+    "german": "Sulaimaniyya",
+    "other": "Sulaymaniyah"
+  },
+  "zakho|iraq": {
+    "english": "Zakho",
+    "hebrew": "זאכו",
+    "yiddish": "זאכא",
+    "german": "Zaxo",
+    "other": "زاخو"
+  },
+  "mansoura|egypt": {
+    "english": "Mansoura",
+    "hebrew": "אל-מנסורה",
+    "yiddish": "",
+    "german": "",
+    "other": "المنصوره"
+  },
+  "aghmat|morocco": {
+    "english": "Aghmat",
+    "hebrew": "אגמאת",
+    "yiddish": "",
+    "german": "Aghmat",
+    "other": "أغمات"
+  },
+  "akka|morocco": {
+    "english": "Akka",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Akka",
+    "other": "Akka"
+  },
+  "el jadida|morocco": {
+    "english": "El Jadida",
+    "hebrew": "אל-ג'דידה",
+    "yiddish": "",
+    "german": "El Jadida",
+    "other": "الجديدة"
+  },
+  "erfoud|morocco": {
+    "english": "Erfoud",
+    "hebrew": "ארפוד",
+    "yiddish": "",
+    "german": "Erfoud",
+    "other": "أرفود"
+  },
+  "errachidia|morocco": {
+    "english": "Errachidia",
+    "hebrew": "א-רשידיה",
+    "yiddish": "",
+    "german": "Errachidia",
+    "other": "الراشيدية"
+  },
+  "goulmima|morocco": {
+    "english": "Goulmima",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Goulmima",
+    "other": "كلميمة"
+  },
+  "midelt|morocco": {
+    "english": "Midelt",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Midelt",
+    "other": "ميدلت"
+  },
+  "nador|morocco": {
+    "english": "Nador",
+    "hebrew": "נאדור",
+    "yiddish": "נאדור",
+    "german": "Nador",
+    "other": "ناضور"
+  },
+  "ouazzane|morocco": {
+    "english": "Ouazzane",
+    "hebrew": "וזאן",
+    "yiddish": "",
+    "german": "Ouezzane",
+    "other": "وزان"
+  },
+  "rissani|morocco": {
+    "english": "Rissani",
+    "hebrew": "ריסאני",
+    "yiddish": "",
+    "german": "Rissani",
+    "other": "الريصاني"
+  },
+  "sijilmasa|morocco": {
+    "english": "Sijilmasa",
+    "hebrew": "סיג'ילמסה",
+    "yiddish": "",
+    "german": "Sidschilmasa",
+    "other": "Sichilmasa"
+  },
+  "volubilis|morocco": {
+    "english": "Volubilis",
+    "hebrew": "וולוביליס",
+    "yiddish": "",
+    "german": "Volubilis",
+    "other": "وليلي"
+  },
+  "hammam lif|tunisia": {
+    "english": "Hammam Lif",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Hammam-Lif",
+    "other": "حمام الأنف"
+  },
+  "mahdia|tunisia": {
+    "english": "Mahdia",
+    "hebrew": "מהדיה",
+    "yiddish": "",
+    "german": "Mahdia",
+    "other": "Mahdía"
+  },
+  "tozeur|tunisia": {
+    "english": "Tozeur",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Tozeur",
+    "other": "توزر"
+  },
+  "hillah|iraq": {
+    "english": "Hillah",
+    "hebrew": "אל-חלה",
+    "yiddish": "",
+    "german": "Hilla",
+    "other": "الحلة"
+  },
+  "khanaqin|iraq": {
+    "english": "Khanaqin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Chanaqin",
+    "other": "خانقين"
+  },
+  "nehardea|iraq": {
+    "english": "Nehardea",
+    "hebrew": "נהרדעא",
+    "yiddish": "נהרדעא",
+    "german": "Nehardea",
+    "other": "نيهارديا"
+  },
+  "pumbedita|iraq": {
+    "english": "Pumbedita",
+    "hebrew": "פומבדיתא",
+    "yiddish": "פומבדיתא",
+    "german": "Pumbedita",
+    "other": "Pumbedita"
+  },
+  "sura|iraq": {
+    "english": "Sura",
+    "hebrew": "סורה",
+    "yiddish": "",
+    "german": "Sure",
+    "other": "Soera"
+  },
+  "tahpanhes|egypt": {
+    "english": "Tahpanhes",
+    "hebrew": "תחפנחס",
+    "yiddish": "",
+    "german": "Tahpanhes",
+    "other": "تل دفنه"
+  },
+  "zifta|egypt": {
+    "english": "Zifta",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Zifta",
+    "other": "زفتى"
+  },
+  "ba'dan|yemen": {
+    "english": "Ba'dan",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bayhan|yemen": {
+    "english": "Bayhan",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Baihan al-Kisab",
+    "other": "بيحان"
+  },
+  "habban|yemen": {
+    "english": "Habban",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Habban"
+  },
+  "mocha|yemen": {
+    "english": "Mocha",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Mocha",
+    "other": "Mocha"
+  },
+  "jobar|syria": {
+    "english": "Jobar",
+    "hebrew": "ג'ובר",
+    "yiddish": "",
+    "german": "Dschubar",
+    "other": "جوبر"
+  },
+  "qamishli|syria": {
+    "english": "Qamishli",
+    "hebrew": "קמישלי",
+    "yiddish": "",
+    "german": "Qamischli",
+    "other": "القامشلي"
+  },
+  "jadu|libya": {
+    "english": "Jadu",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Jadu",
+    "other": ""
+  },
+  "yafran|libya": {
+    "english": "Yafran",
+    "hebrew": "יפרן",
+    "yiddish": "",
+    "german": "Yafran",
+    "other": "يفرن"
+  },
+  "hasbaya|lebanon": {
+    "english": "Hasbaya",
+    "hebrew": "חאצביא",
+    "yiddish": "",
+    "german": "Hasbaya",
+    "other": "حاصبيا"
+  },
+  "bejaia|algeria": {
+    "english": "Bejaia",
+    "hebrew": "בג'איה",
+    "yiddish": "",
+    "german": "Bejaia",
+    "other": "Bochía"
+  },
+  "ghardaia|algeria": {
+    "english": "Ghardaia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Ghardaia",
+    "other": "غرداية"
+  },
+  "setif|algeria": {
+    "english": "Setif",
+    "hebrew": "סטיף",
+    "yiddish": "",
+    "german": "Sétif",
+    "other": "Sétif"
+  },
+  "sidi bel abbes|algeria": {
+    "english": "Sidi Bel Abbes",
+    "hebrew": "סידי בל-עבאס",
+    "yiddish": "",
+    "german": "",
+    "other": "سيدي بلعباس"
+  },
+  "mawza|yemen": {
+    "english": "Mawza",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "مديرية موزع"
+  },
+  "rada'a|yemen": {
+    "english": "Rada'a",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "zafar|yemen": {
+    "english": "Zafar",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Zafar",
+    "other": "ظفر"
+  },
+  "al-marj|libya": {
+    "english": "Al-Marj",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Al-Mardsch",
+    "other": "Əl Məric"
+  },
+  "cyrene|libya": {
+    "english": "Cyrene",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Cyrene",
+    "other": "키레네"
+  },
+  "gharyan|libya": {
+    "english": "Gharyan",
+    "hebrew": "ע'ריאן",
+    "yiddish": "",
+    "german": "Garian",
+    "other": "غريان"
+  },
+  "susa|libya": {
+    "english": "Susa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Walther Hinz",
+    "other": "Susa"
+  },
+  "tajura|libya": {
+    "english": "Tajura",
+    "hebrew": "תאג'ורא",
+    "yiddish": "",
+    "german": "Tagiura",
+    "other": "تاجوراء"
+  },
+  "aley|lebanon": {
+    "english": "Aley",
+    "hebrew": "עאליי",
+    "yiddish": "",
+    "german": "",
+    "other": "Aley"
+  },
+  "bhamdoun|lebanon": {
+    "english": "Bhamdoun",
+    "hebrew": "בחמדון",
+    "yiddish": "",
+    "german": "Bhamdoun",
+    "other": "بحمدون"
+  },
+  "deir al-qamar|lebanon": {
+    "english": "Deir al-Qamar",
+    "hebrew": "דיר אל-קמר",
+    "yiddish": "",
+    "german": "Dair al-Qamar",
+    "other": "دير القمر"
+  },
+  "mukhtara|lebanon": {
+    "english": "Mukhtara",
+    "hebrew": "אל-מוח'תארה",
+    "yiddish": "",
+    "german": "",
+    "other": "مختاره"
+  },
+  "djelfa|algeria": {
+    "english": "Djelfa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "El Djelfa",
+    "other": "الجلفة"
+  },
+  "touggourt|algeria": {
+    "english": "Touggourt",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Touggourt",
+    "other": "تقرت"
+  },
+  "manisa|turkey": {
+    "english": "Manisa",
+    "hebrew": "מניסה",
+    "yiddish": "",
+    "german": "Manisa",
+    "other": "مانيسا"
+  },
+  "tokat|turkey": {
+    "english": "Tokat",
+    "hebrew": "טוקט",
+    "yiddish": "",
+    "german": "Tokat",
+    "other": "توقاد"
+  },
+  "borujerd|iran": {
+    "english": "Borujerd",
+    "hebrew": "בורוג'רד",
+    "yiddish": "",
+    "german": "Borudscherd",
+    "other": "بروجرد"
+  },
+  "amman|jordan": {
+    "english": "Amman",
+    "hebrew": "עמאן",
+    "yiddish": "אמאן, יארדאניע",
+    "german": "Amman",
+    "other": "Amman"
+  },
+  "amasya|turkey": {
+    "english": "Amasya",
+    "hebrew": "אמסיה",
+    "yiddish": "",
+    "german": "Amasya",
+    "other": "أماسية"
+  },
+  "aydin|turkey": {
+    "english": "Aydin",
+    "hebrew": "איידן",
+    "yiddish": "",
+    "german": "Aydın",
+    "other": "أيدين"
+  },
+  "ephesus|turkey": {
+    "english": "Ephesus",
+    "hebrew": "אפסוס",
+    "yiddish": "",
+    "german": "Ephesos",
+    "other": "Efese"
+  },
+  "sardis|turkey": {
+    "english": "Sardis",
+    "hebrew": "סרדיס",
+    "yiddish": "",
+    "german": "Sardes",
+    "other": "سارد"
+  },
+  "rey|iran": {
+    "english": "Rey",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Rey",
+    "other": "Rey"
+  },
+  "shushtar|iran": {
+    "english": "Shushtar",
+    "hebrew": "שושתר",
+    "yiddish": "",
+    "german": "Schuschtar",
+    "other": "تستر"
+  },
+  "susa|iran": {
+    "english": "Susa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Walther Hinz",
+    "other": "Susa"
+  },
+  "hisban|jordan": {
+    "english": "Hisban",
+    "hebrew": "חסבאן",
+    "yiddish": "",
+    "german": "",
+    "other": "حسبان، عمان"
+  },
+  "jerash|jordan": {
+    "english": "Jerash",
+    "hebrew": "ג'רש",
+    "yiddish": "",
+    "german": "",
+    "other": "جرش"
+  },
+  "naharayim|jordan": {
+    "english": "Naharayim",
+    "hebrew": "נהריים",
+    "yiddish": "",
+    "german": "",
+    "other": "الباقوره"
+  },
+  "pella|jordan": {
+    "english": "Pella",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Пела"
+  },
+  "umm qais|jordan": {
+    "english": "Umm Qais",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Umm Qais",
+    "other": "ام قيس"
+  },
+  "birgu|malta": {
+    "english": "Birgu",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sliema|malta": {
+    "english": "Sliema",
+    "hebrew": "סלימה",
+    "yiddish": "",
+    "german": "Sliema",
+    "other": "سليمة"
+  },
+  "valletta|malta": {
+    "english": "Valletta",
+    "hebrew": "ולטה",
+    "yiddish": "וואלעטא",
+    "german": "Valletta",
+    "other": "Valletta"
+  },
+  "nicosia|cyprus": {
+    "english": "Nicosia",
+    "hebrew": "ניקוסיה",
+    "yiddish": "ניקאסיע",
+    "german": "Nikosia",
+    "other": "Nikosia"
+  },
+  "paphos|cyprus": {
+    "english": "Paphos",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ibiza|spain": {
+    "english": "Ibiza",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kalkara|malta": {
+    "english": "Kalkara",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "marsa|malta": {
+    "english": "Marsa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mdina|malta": {
+    "english": "Mdina",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Mdina",
+    "other": "Мдзіна"
+  },
+  "mtarfa|malta": {
+    "english": "Mtarfa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rabat|malta": {
+    "english": "Rabat",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "san gwann|malta": {
+    "english": "San Gwann",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "senglea|malta": {
+    "english": "Senglea",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "athienou|cyprus": {
+    "english": "Athienou",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "famagusta|cyprus": {
+    "english": "Famagusta",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "larnaca|cyprus": {
+    "english": "Larnaca",
+    "hebrew": "לרנקה",
+    "yiddish": "",
+    "german": "Larnaka",
+    "other": "لارنكا"
+  },
+  "limassol|cyprus": {
+    "english": "Limassol",
+    "hebrew": "לימסול",
+    "yiddish": "",
+    "german": "Limassol",
+    "other": "اللمسون"
+  },
+  "salamis|cyprus": {
+    "english": "Salamis",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bastia|france": {
+    "english": "Bastia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ajaccio|france": {
+    "english": "Ajaccio",
+    "hebrew": "אז'אקסיו",
+    "yiddish": "",
+    "german": "Ajaccio",
+    "other": "Ajaccio"
+  },
+  "palmyra|syria": {
+    "english": "Palmyra",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dura-europos|syria": {
+    "english": "Dura-Europos",
+    "hebrew": "דורה אירופוס",
+    "yiddish": "",
+    "german": "Dura Europos",
+    "other": "دورا أوربوس"
+  },
+  "nawa|syria": {
+    "english": "Nawa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "raqqa|syria": {
+    "english": "Raqqa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "antakya|turkey": {
+    "english": "Antakya",
+    "hebrew": "אנטקיה",
+    "yiddish": "",
+    "german": "Antakya",
+    "other": "Анҭақиа"
+  },
+  "baskale|turkey": {
+    "english": "Baskale",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "canakkale|turkey": {
+    "english": "Canakkale",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "corlu|turkey": {
+    "english": "Corlu",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "diyarbakir|turkey": {
+    "english": "Diyarbakir",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gelibolu|turkey": {
+    "english": "Gelibolu",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kirklareli|turkey": {
+    "english": "Kirklareli",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nusaybin|turkey": {
+    "english": "Nusaybin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sanliurfa|turkey": {
+    "english": "Sanliurfa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "siverek|turkey": {
+    "english": "Siverek",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bergama|turkey": {
+    "english": "Bergama",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bodrum|turkey": {
+    "english": "Bodrum",
+    "hebrew": "בודרום",
+    "yiddish": "",
+    "german": "Bodrum",
+    "other": "Bodrum"
+  },
+  "cermik|turkey": {
+    "english": "Cermik",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "cizre|turkey": {
+    "english": "Cizre",
+    "hebrew": "ג'יזרה",
+    "yiddish": "",
+    "german": "Cizre",
+    "other": "Cizrə"
+  },
+  "iskenderun|turkey": {
+    "english": "Iskenderun",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tekirdag|turkey": {
+    "english": "Tekirdag",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "van|turkey": {
+    "english": "Van",
+    "hebrew": "מסחרית",
+    "yiddish": "",
+    "german": "Kleintransporter",
+    "other": "Furgoneta"
   }
 }

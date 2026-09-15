@@ -32,6 +32,9 @@ from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
 
+sys.stdout.reconfigure(encoding="utf-8")
+sys.stderr.reconfigure(encoding="utf-8")
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_KEHILOT_CSV = os.path.join(SCRIPT_DIR, "..", "kehilot.csv")
 DEFAULT_CACHE_FILE = os.path.join(SCRIPT_DIR, "city_names_cache.json")
