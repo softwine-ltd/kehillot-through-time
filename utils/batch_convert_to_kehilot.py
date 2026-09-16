@@ -174,6 +174,7 @@ YEAR_RANGE_RE = re.compile(r'^(\d{3,4})\s*-\s*(\d{3,4})$')
 YEAR_CIRCA_RE = re.compile(r'^c\.?\s*(\d{1,4})$', re.IGNORECASE)
 YEAR_APPROX_RE = re.compile(r'^~\s*(\d{1,4})$')
 YEAR_BARE_BCE_RE = re.compile(r'^(\d{1,4})\s*bce?$')
+YEAR_BARE_CE_RE = re.compile(r'^(\d{1,4})\s*ce$')
 YEAR_CENTURY_RE = re.compile(r'(\d{1,2})(?:st|nd|rd|th)\s+century', re.IGNORECASE)
 YEAR_ORDINAL_BCE_RE = re.compile(r'^(\d{1,2})(?:st|nd|rd|th)\s+bce?$')
 YEAR_ANY_4DIGIT_RE = re.compile(r'(\d{3,4})')
@@ -189,6 +190,18 @@ YEAR_ERA_MAP = {
     'pre-wwii': 1930, 'before wwii': 1930,
     'post-wwii': 1950, 'after wwii': 1950, 'post-war': 1950, 'interwar period': 1930,
     'pre-1939': 1930, 'post-1789': 1800,
+    # Biblical/ancient-Israel eras -- point estimates picked at the traditional midpoint of
+    # each period/figure's usual dating in Jewish-history sources (all BCE unless noted).
+    'time of the divided kingdoms': -800, 'time of the judges': -1150, 'time of judges': -1150,
+    "period of joshua's conquest": -1200, 'conquest of canaan': -1200,
+    'post-babylonian exile': -500, 'babylonian period': -580,
+    'after assyrian conquest': -700, 'assyrian period': -722,
+    'hasmonean period': -100, 'maccabean period': -160, 'bar kokhba revolt': 132,
+    'reign of solomon': -950, 'reign of david': -1000, 'reign of saul': -1050,
+    'time of solomon': -950, 'time of david': -1000, 'time of saul': -1050,
+    'time of elijah': -850, 'time of jeremiah': -600, 'time of ezra': -450,
+    'time of abram': -1800, 'time of jacob': -1700,
+    'biblical era': -1200, 'biblical period': -1200,
 }
 YEAR_ERA_MAP_BY_LENGTH = sorted(YEAR_ERA_MAP.items(), key=lambda kv: -len(kv[0]))
 
@@ -239,6 +252,14 @@ def sanitize_year(value):
             if pattern is YEAR_ORDINAL_BCE_RE:
                 return str(-((num - 1) * 100 + 50))
             return str(-num)
+
+    # A bare small year with an explicit "CE" marker ("68 CE") isn't caught by the
+    # 3-4-digit last-resort fallback below -- ancient-era years under 100 are common enough
+    # (1st-2nd century CE events) to be worth a dedicated, unambiguous pattern rather than
+    # loosening that fallback (which would risk matching stray numbers in unrelated text).
+    m = YEAR_BARE_CE_RE.match(lower)
+    if m:
+        return str(int(m.group(1)))
 
     m = YEAR_RANGE_RE.match(value)
     if m:
