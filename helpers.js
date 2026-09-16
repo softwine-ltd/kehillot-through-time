@@ -650,10 +650,42 @@ async function loadData(year) {
                 return { ...kehila, actual_pop: actualPop };
             });
 
-        updateMarkers(relevantKehilot);
+        updateMarkers(mergeSameYearFacts(relevantKehilot));
     } catch (error) {
         console.error('Error loading kehilot data:', error);
     }
+}
+
+function mergeSameYearFacts(kehilot) {
+    // Some towns have several independently-sourced historical facts that fall on the exact
+    // same year (e.g. multiple distinct 1942 deportation/massacre records for one town) --
+    // each one real and separately cited, so none should be dropped. But rendering one marker
+    // per row would stack several overlapping markers on the identical coordinate, making one
+    // town look like several communities. Combine every currently-active row for a town into a
+    // single marker, carrying all of that year's facts for display in one popup.
+    const groups = new Map();
+    kehilot.forEach(kehila => {
+        const key = `${kehila.country}||${kehila.name}`;
+        if (!groups.has(key)) groups.set(key, []);
+        groups.get(key).push(kehila);
+    });
+
+    const merged = [];
+    groups.forEach(items => {
+        if (items.length === 1) {
+            merged.push(items[0]);
+            return;
+        }
+        const primary = items.reduce((best, k) =>
+            (Number.isFinite(k.actual_pop) ? k.actual_pop : 0) > (Number.isFinite(best.actual_pop) ? best.actual_pop : 0) ? k : best,
+            items[0]);
+        merged.push({
+            ...primary,
+            actual_pop: Math.max(...items.map(k => Number.isFinite(k.actual_pop) ? k.actual_pop : 0)),
+            events: items.map(k => ({ pop: k.actual_pop, comment: k.comment, source: k.source }))
+        });
+    });
+    return merged;
 }
 
 function updateMarkers(kehilot) {
@@ -718,11 +750,22 @@ function updateMarkers(kehilot) {
         };
         const labels = popupLabels[currentLangForPopup] || popupLabels.en;
 
-        const commentDetails = kehila.comment === undefined || kehila.comment === '' ? '' : `
+        const commentDetails = kehila.events && kehila.events.length > 1 ? `
+                    <div style="margin: 8px 0;">
+                        <strong> ${labels.notes} (${kehila.events.length}):</strong>
+                        ${kehila.events.map(e => `
+                            <div style="margin: 6px 0; padding-inline-start: 8px; border-inline-start: 2px solid rgba(0,0,0,0.15);">
+                                ${Number.isFinite(e.pop) ? `<strong>${labels.population}:</strong> ${formatPopulation(e.pop)}<br>` : ''}
+                                ${e.comment ? `${escapeHtml(e.comment)}<br>` : ''}
+                                <small>${labels.source}: ${formatSource(e.source)}</small>
+                            </div>
+                        `).join('')}
+                    </div>
+        ` : (kehila.comment === undefined || kehila.comment === '' ? '' : `
                     <div style="margin: 8px 0;">
                         <strong> ${labels.notes}:</strong> ${escapeHtml(kehila.comment)}
                     </div>
-        `;
+        `);
 
         // Create popup content
         const popupContent = `
@@ -3341,11 +3384,22 @@ function regenerateAllPopups() {
             };
             const labels = popupLabels[currentLangForPopup] || popupLabels.en;
 
-            const commentDetails = kehila.comment === undefined || kehila.comment === '' ? '' : `
+            const commentDetails = kehila.events && kehila.events.length > 1 ? `
+                        <div style="margin: 8px 0;">
+                            <strong> ${labels.notes} (${kehila.events.length}):</strong>
+                            ${kehila.events.map(e => `
+                                <div style="margin: 6px 0; padding-inline-start: 8px; border-inline-start: 2px solid rgba(0,0,0,0.15);">
+                                    ${Number.isFinite(e.pop) ? `<strong>${labels.population}:</strong> ${formatPopulation(e.pop)}<br>` : ''}
+                                    ${e.comment ? `${escapeHtml(e.comment)}<br>` : ''}
+                                    <small>${labels.source}: ${formatSource(e.source)}</small>
+                                </div>
+                            `).join('')}
+                        </div>
+            ` : (kehila.comment === undefined || kehila.comment === '' ? '' : `
                         <div style="margin: 8px 0;">
                             <strong> ${labels.notes}:</strong> ${escapeHtml(kehila.comment)}
                         </div>
-            `;
+            `);
 
             const popupContent = `
                 <div style="direction: ${textDir}; text-align: ${textAlign};">
