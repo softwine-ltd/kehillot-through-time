@@ -18660,5 +18660,26 @@
     "yiddish": "ווילנע",
     "german": "Vilnius",
     "other": "Turniškės"
+  },
+  "chernivtsi|ukraine": {
+    "english": "Chernivtsi",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "galați|romania": {
+    "english": "Galați",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "iași|romania": {
+    "english": "Iași",
+    "hebrew": "יאשי",
+    "yiddish": "יאס",
+    "german": "Iași",
+    "other": "Iași"
   }
 }
