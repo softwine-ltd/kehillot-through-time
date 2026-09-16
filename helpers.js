@@ -554,7 +554,12 @@ async function loadData(year) {
 
                     // If year_end is empty, use current year
                     const actualYearEnd = year_end == undefined || year_end.trim() === '' ? undefined : parseInt(year_end);
-                    const actualPopEnd = pop_end == undefined || pop_end.trim() === '' ? parseInt(pop_start) : parseInt(pop_end);
+                    // A handful of source rows carry a non-numeric population placeholder
+                    // ("-", a range like "20-30", or stray free text from a CSV misalignment)
+                    // that parseInt can't handle -- fall back to 0 rather than letting NaN
+                    // propagate into the interpolation below and show up as "NaN" on the map.
+                    const popStartNum = parseInt(pop_start) || 0;
+                    const actualPopEnd = pop_end == undefined || pop_end.trim() === '' ? popStartNum : (parseInt(pop_end) || 0);
 
                     return {
                         name: city, // Fallback to city if English name not available
@@ -564,7 +569,7 @@ async function loadData(year) {
                         year_estab: parseInt(year_estab),
                         year_start: parseInt(year_start),
                         year_end: actualYearEnd,
-                        population_start: parseInt(pop_start),
+                        population_start: popStartNum,
                         population_end: actualPopEnd,
                         confidence: probability, // Using probability as confidence indicator
                         type: parseInt(type),
@@ -617,7 +622,9 @@ async function loadData(year) {
                     actualPop = kehila.population_start;
                 } else {
                     const years_span = kehila.year_end - kehila.year_start;
-                    actualPop = Math.floor(
+                    // A zero-length segment (year_start === year_end) would otherwise divide
+                    // by zero -- both ends are the same point in time, so just use it directly.
+                    actualPop = years_span === 0 ? kehila.population_start : Math.floor(
                         ((kehila.year_end - year) * kehila.population_start +
                             (year - kehila.year_start) * kehila.population_end) / years_span
                     );
@@ -3483,6 +3490,9 @@ function getConfidenceText(confidence) {
 }
 
 function formatPopulation(population) {
+    // Bad source data (non-numeric population fields, or a zero-length year span in the
+    // interpolation below) can still produce NaN/Infinity -- never show that to a visitor.
+    if (!Number.isFinite(population)) return '0';
     if (population >= 1000000) {
         return (population / 1000000).toFixed(1) + 'M';
     } else if (population >= 1000) {

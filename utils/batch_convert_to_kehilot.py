@@ -138,6 +138,37 @@ def convert_coordinate_to_decimal(coord_str):
     return str(decimal)
 
 
+POPULATION_RANGE_RE = re.compile(r'^(\d[\d,]*)\s*-\s*(\d[\d,]*)$')
+
+
+def sanitize_population(value):
+    """Coerce a raw population field to a clean integer string, or '' if it carries no
+    reliable number at all.
+
+    Source rows have used several placeholders besides a clean integer: a bare "-"/"--"
+    meaning "no estimate", a numeric range like "20-30", and -- from an older CSV-quoting
+    bug -- stray free text that leaked into this column from the notes field. Passing any
+    of those straight into kehilot.csv makes the site's JS parseInt() it into NaN, which
+    then surfaces as a literal "NaN" population badge on the map (and can poison an entire
+    marker cluster's summed total, since one bad marker taints the whole sum). A range is
+    reduced to its midpoint -- a reasonable point estimate is more useful than discarding
+    the only number the source actually gave us -- and anything else unparseable is dropped
+    (blank), matching the meaning of "no reliable number" used elsewhere in this pipeline.
+    """
+    value = value.strip()
+    if not value or value.upper() == 'NA':
+        return ''
+    cleaned = value.replace('~', '').replace('>', '').replace('<', '').replace(',', '')
+    range_match = POPULATION_RANGE_RE.match(cleaned)
+    if range_match:
+        lo, hi = int(range_match.group(1)), int(range_match.group(2))
+        return str((lo + hi) // 2)
+    try:
+        return str(int(cleaned))
+    except ValueError:
+        return ''
+
+
 def should_skip_file(file_data, file_format):
     """Skip a raw-input file whose only data row shows no Jewish population (0/NA/empty)."""
     if file_format != "input":
@@ -332,17 +363,17 @@ def convert_single_row(country, city, longitude, latitude, year_estab, year_data
 
         year_end = "2024"
         pop_end = ""
-        population = population.replace('~', '').replace('>', '').replace('<', '')
+        population = sanitize_population(population)
         for j in range(row_index + 1, len(all_rows)):
             if len(all_rows[j]) >= 7 and all_rows[j][1].strip() == city:
                 next_year = all_rows[j][5].strip()
-                next_pop = all_rows[j][6].strip().replace('~', '').replace('>', '').replace('<', '')
+                next_pop = sanitize_population(all_rows[j][6])
                 if next_year and next_year != 'NA':
                     try:
                         year_end = str(int(next_year) - 1)
                     except ValueError:
                         year_end = "2024"
-                if next_pop and next_pop != 'NA':
+                if next_pop:
                     pop_end = next_pop
                 break
 
@@ -356,7 +387,7 @@ def convert_single_row(country, city, longitude, latitude, year_estab, year_data
 
         return [
             country, city, longitude, latitude, year_estab, year_start, year_end,
-            population if population != 'NA' else "", pop_end, probability, "1", "1",
+            population, pop_end, probability, "1", "1",
             city_names.get('english', city), city_names.get('hebrew', ''),
             city_names.get('yiddish', ''), city_names.get('german', ''),
             city_names.get('other', ''), source, notes,
