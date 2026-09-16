@@ -19115,5 +19115,173 @@
     "yiddish": "",
     "german": "",
     "other": ""
+  },
+  "beersheba|israel": {
+    "english": "Beersheba",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "megiddo|israel": {
+    "english": "Megiddo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "shechem|israel": {
+    "english": "Shechem",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tekoa|israel": {
+    "english": "Tekoa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sidon|lebanon": {
+    "english": "Sidon",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "acre|israel": {
+    "english": "Acre",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "adullam|israel": {
+    "english": "Adullam",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "aphek|israel": {
+    "english": "Aphek",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "azekah|israel": {
+    "english": "Azekah",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bethel|israel": {
+    "english": "Bethel",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bethlehem|israel": {
+    "english": "Bethlehem",
+    "hebrew": "בית לחם",
+    "yiddish": "בית לחם",
+    "german": "Bethlehem",
+    "other": "Betlehem"
+  },
+  "dan|israel": {
+    "english": "Dan",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dor|israel": {
+    "english": "Dor",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "en gedi|israel": {
+    "english": "En Gedi",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gaza|israel": {
+    "english": "Gaza",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Gaza",
+    "other": "Gaza"
+  },
+  "gibeon|israel": {
+    "english": "Gibeon",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gilgal|israel": {
+    "english": "Gilgal",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "hebron|israel": {
+    "english": "Hebron",
+    "hebrew": "חברון",
+    "yiddish": "חברון",
+    "german": "Hebron",
+    "other": "Hebron"
+  },
+  "jabesh gilead|israel": {
+    "english": "Jabesh Gilead",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "jericho|israel": {
+    "english": "Jericho",
+    "hebrew": "יריחו",
+    "yiddish": "יריחו",
+    "german": "Jericho",
+    "other": "Jerigo"
+  },
+  "mizpah|israel": {
+    "english": "Mizpah",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "samaria|israel": {
+    "english": "Samaria",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "shunem|israel": {
+    "english": "Shunem",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tyre|lebanon": {
+    "english": "Tyre",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Tyre",
+    "other": "Tyre"
   }
 }
