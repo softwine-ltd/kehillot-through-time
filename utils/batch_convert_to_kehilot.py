@@ -169,6 +169,115 @@ def sanitize_population(value):
         return ''
 
 
+YEAR_DECADE_RE = re.compile(r'(\d{2,3})0s')
+YEAR_RANGE_RE = re.compile(r'^(\d{3,4})\s*-\s*(\d{3,4})$')
+YEAR_CIRCA_RE = re.compile(r'^c\.?\s*(\d{1,4})$', re.IGNORECASE)
+YEAR_APPROX_RE = re.compile(r'^~\s*(\d{1,4})$')
+YEAR_BARE_BCE_RE = re.compile(r'^(\d{1,4})\s*bce?$')
+YEAR_CENTURY_RE = re.compile(r'(\d{1,2})(?:st|nd|rd|th)\s+century', re.IGNORECASE)
+YEAR_ORDINAL_BCE_RE = re.compile(r'^(\d{1,2})(?:st|nd|rd|th)\s+bce?$')
+YEAR_ANY_4DIGIT_RE = re.compile(r'(\d{3,4})')
+# Named eras with no specific number in the text at all -- point estimates picked to fall
+# roughly in the middle of what the phrase usually refers to in a Jewish-history context.
+# Checked longest-key-first (see below) so a specific compound phrase like "post-wwii" is
+# matched before the shorter "wwii" it happens to contain.
+YEAR_ERA_MAP = {
+    'middle ages': 1000, 'medieval': 1000,
+    'roman times': 100, 'roman era': 100,
+    'pre-holocaust': 1938,
+    'world war ii': 1942, 'wwii': 1942, 'holocaust': 1942, 'shoah': 1942,
+    'pre-wwii': 1930, 'before wwii': 1930,
+    'post-wwii': 1950, 'after wwii': 1950, 'post-war': 1950, 'interwar period': 1930,
+    'pre-1939': 1930, 'post-1789': 1800,
+}
+YEAR_ERA_MAP_BY_LENGTH = sorted(YEAR_ERA_MAP.items(), key=lambda kv: -len(kv[0]))
+
+
+def sanitize_year(value):
+    """Coerce a raw year field (year_estab, year_start/"Year of Data", or a year_end
+    look-ahead) to a clean integer string (negative for BCE), or '' if it carries no usable
+    year at all ("Unknown", "Undated", "?", a bare "Present", etc.).
+
+    Source rows have used a wide variety of approximate-date phrasing instead of a plain
+    year: centuries ("15th century", "Late 16th Century", "5th BCE"), decades ("1940s"),
+    ranges ("1939-1945"), circa notation ("c. 1334"), and a handful of named eras ("Middle
+    Ages", "WWII"). Passing any of these straight through makes the site's JS parseInt() it
+    into NaN -- for year_start specifically that is worse than a bad population number,
+    since any comparison against NaN is false, so the row's "don't show before it starts"
+    check never fires and it renders at literally every point on the timeline. Centuries/
+    decades/ranges are reduced to a reasonable point estimate (a century's early/late/mid
+    wording shifts where in that century the estimate falls); genuinely date-free text is
+    dropped (blank) rather than guessed at.
+    """
+    if value is None:
+        return ''
+    value = value.strip()
+    if not value or value.upper() in ('NA', 'N/A', 'UNKNOWN', 'UNDATED', 'PRESENT',
+                                       'CURRENT', 'NOT SPECIFIED', 'NOT STATED',
+                                       'NOT PROVIDED', 'N.D.', '?', '.'):
+        return ''
+    try:
+        return str(int(value))
+    except ValueError:
+        pass
+
+    # Normalize away punctuation ("B.C.E." -> "bce") so every pattern below can match a
+    # plain lowercase word regardless of how the source spelled out BCE/BC.
+    lower = re.sub(r'[.,]', '', value.lower())
+    is_bce = bool(re.search(r'\bbce?\b', lower))
+
+    for pattern in (YEAR_CIRCA_RE, YEAR_APPROX_RE):
+        m = pattern.match(value)
+        if m:
+            year = int(m.group(1))
+            return str(-year if is_bce else year)
+
+    for pattern in (YEAR_BARE_BCE_RE, YEAR_ORDINAL_BCE_RE):
+        m = pattern.match(lower)
+        if m:
+            num = int(m.group(1))
+            if pattern is YEAR_ORDINAL_BCE_RE:
+                return str(-((num - 1) * 100 + 50))
+            return str(-num)
+
+    m = YEAR_RANGE_RE.match(value)
+    if m:
+        lo, hi = int(m.group(1)), int(m.group(2))
+        mid = (lo + hi) // 2
+        return str(-mid if is_bce else mid)
+
+    m = YEAR_CENTURY_RE.search(value)
+    if m:
+        century = int(m.group(1))
+        if any(w in lower for w in ('early', 'beginning', 'first half')):
+            offset = 15
+        elif any(w in lower for w in ('late', 'end', 'second half')):
+            offset = 85
+        else:
+            offset = 50
+        year = (century - 1) * 100 + offset
+        return str(-year if is_bce else year)
+
+    m = YEAR_DECADE_RE.search(lower)
+    if m:
+        year = int(m.group(1)) * 10
+        return str(-year if is_bce else year)
+
+    for era, year in YEAR_ERA_MAP_BY_LENGTH:
+        if era in lower:
+            return str(year)
+
+    # Last resort: if a plain 3-4 digit year is sitting in an otherwise-unparsed phrase
+    # ("Shortly after 1468", "Before 1143", "November 1938", "Pre-1118"), that's still a
+    # far more useful point estimate than dropping the row entirely.
+    m = YEAR_ANY_4DIGIT_RE.search(value)
+    if m:
+        year = int(m.group(1))
+        return str(-year if is_bce else year)
+
+    return ''
+
+
 def should_skip_file(file_data, file_format):
     """Skip a raw-input file whose only data row shows no Jewish population (0/NA/empty)."""
     if file_format != "input":
@@ -359,16 +468,23 @@ def get_city_names(city, country, cache, do_lookup=True):
 def convert_single_row(country, city, longitude, latitude, year_estab, year_data,
                         population, notes, source, row_index, all_rows, cache, do_lookup=True):
     try:
-        year_start = year_data if year_data and year_data != 'NA' else year_estab
+        year_estab = sanitize_year(year_estab)
+        year_data = sanitize_year(year_data)
+        year_start = year_data if year_data else year_estab
+        if not year_start:
+            # Neither field carried a usable year -- there's no sensible point in time to
+            # place this row at, so drop it rather than merge a row that (pre-fix) would
+            # have rendered at every year on the timeline.
+            return None
 
         year_end = "2024"
         pop_end = ""
         population = sanitize_population(population)
         for j in range(row_index + 1, len(all_rows)):
             if len(all_rows[j]) >= 7 and all_rows[j][1].strip() == city:
-                next_year = all_rows[j][5].strip()
+                next_year = sanitize_year(all_rows[j][5])
                 next_pop = sanitize_population(all_rows[j][6])
-                if next_year and next_year != 'NA':
+                if next_year:
                     try:
                         year_end = str(int(next_year) - 1)
                     except ValueError:

@@ -584,7 +584,13 @@ async function loadData(year) {
                         source: source ? source.replace(/"/g, '') : '', // Remove quotes from source, handle undefined
                         comment
                     };
-                });
+                })
+                // A handful of rows carry a non-numeric year_start (a century/decade/era
+                // description, a "?", etc.) that parseInt() turns into NaN. Left in, such a
+                // row would render at literally every year -- any comparison against NaN is
+                // false, so the "kehila.year_start > year" exclusion check never fires -- so
+                // drop these here rather than let them show up at nonsensical points in time.
+                .filter(kehila => !isNaN(kehila.year_start));
 
             // Many towns are recorded as a chain of consecutive segments (one row's year_end
             // equal to the next row's year_start). Treating both ends as inclusive would make
