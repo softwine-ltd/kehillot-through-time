@@ -198,10 +198,14 @@
                     </div>
                     <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
                         <label for="clusterRadius" class="text-xs lg:text-sm text-gray-600 hidden lg:inline" data-i18n="ui.clustering">Clustering:</label>
-                        <input type="range" id="clusterRadius" min="10" max="200" value="80" 
+                        <input type="range" id="clusterRadius" min="10" max="200" value="80"
                                class="w-16 sm:w-20 lg:w-24 h-1.5 lg:h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
                         <span id="clusterValue" class="text-xs lg:text-sm text-gray-500 w-4 sm:w-6 lg:w-8">80px</span>
                     </div>
+                    <button id="markerOpacityToggle" type="button" aria-pressed="false"
+                            class="px-1.5 py-0.5 lg:px-2 lg:py-1 text-xs lg:text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200 transition-colors flex-shrink-0"
+                            data-i18n="ui.fadeMarkers"
+                            title="Fade markers so map labels underneath stay visible">Fade Markers</button>
                 </div>
                 
                 <div id="timeline" class="relative h-2 bg-gray-200 rounded-full">

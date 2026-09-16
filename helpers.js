@@ -995,6 +995,9 @@ function initializeMap() {
     // Add clustering control functionality
     addClusteringControl();
 
+    // Add marker opacity control functionality
+    addMarkerOpacityControl();
+
     const playButton = document.getElementById('playButton');
     let isPlaying = false;
 
@@ -4262,6 +4265,37 @@ function addClusteringControl() {
     
     // Initialize display
     updateClusterValue();
+}
+
+// Add marker opacity toggle functionality -- lets users fade community markers so the
+// base map's own town-name labels stay readable underneath the (often large) circles.
+function addMarkerOpacityControl() {
+    const toggleButton = document.getElementById('markerOpacityToggle');
+    const FULL_OPACITY = '1';
+    const FADED_OPACITY = '0.33';
+    let faded = false;
+
+    // Applied via a CSS variable (see styles.css) rather than touching marker creation
+    // code, so it stays in effect across marker/cluster re-renders (language switches,
+    // cluster-radius changes, timeline scrubbing, etc.) without extra bookkeeping.
+    function applyMarkerOpacity() {
+        document.documentElement.style.setProperty('--marker-opacity', faded ? FADED_OPACITY : FULL_OPACITY);
+        toggleButton.setAttribute('aria-pressed', String(faded));
+        toggleButton.classList.toggle('bg-blue-600', faded);
+        toggleButton.classList.toggle('text-white', faded);
+        toggleButton.classList.toggle('hover:bg-blue-700', faded);
+        toggleButton.classList.toggle('bg-gray-100', !faded);
+        toggleButton.classList.toggle('text-gray-700', !faded);
+        toggleButton.classList.toggle('hover:bg-gray-200', !faded);
+    }
+
+    toggleButton.addEventListener('click', function() {
+        faded = !faded;
+        applyMarkerOpacity();
+    });
+
+    // Initialize display and CSS variable
+    applyMarkerOpacity();
 }
 
 // Update cluster radius

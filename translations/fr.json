@@ -21,6 +21,7 @@
     "labels": "Étiquettes:",
     "view": "Vue:",
     "clustering": "Regroupement:",
+    "fadeMarkers": "Estomper",
     "cityPlaceholder": "Ville...",
     "clearSearch": "Effacer la recherche"
   },

@@ -21,6 +21,7 @@
     "labels": "תוויות:",
     "view": "תצוגה:",
     "clustering": "קיבוץ קהילות:",
+    "fadeMarkers": "עמעם קהילות",
     "cityPlaceholder": "עיר...",
     "clearSearch": "נקה חיפוש"
   },

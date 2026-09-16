@@ -717,6 +717,13 @@ body {
     background-color: #2563eb !important;
 }
 
+/* Marker opacity toggle (see #markerOpacityToggle) -- only the outer circle gets the
+   variable, not its child divs, since applying it to both would compound and make the
+   count/population text inside fade out faster than the circle itself. */
+.custom-cluster-icon > div {
+    opacity: var(--marker-opacity, 1) !important;
+}
+
 /* Community marker styles */
 .custom-marker {
     transition: all 0.3s ease;
@@ -742,6 +749,7 @@ body {
     font-weight: bold;
     text-align: center;
     line-height: 1;
+    opacity: var(--marker-opacity, 1) !important;
 }
 
 .population-marker-small {

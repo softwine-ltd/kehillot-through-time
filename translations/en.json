@@ -21,6 +21,7 @@
     "labels": "Labels:",
     "view": "View:",
     "clustering": "Clustering:",
+    "fadeMarkers": "Fade Markers",
     "cityPlaceholder": "City...",
     "clearSearch": "Clear search"
   },
