@@ -477,18 +477,30 @@ def convert_single_row(country, city, longitude, latitude, year_estab, year_data
             # have rendered at every year on the timeline.
             return None
 
-        year_end = "2024"
+        year_end = str(datetime.now().year)
         pop_end = ""
         population = sanitize_population(population)
+        own_year = int(year_start)
         for j in range(row_index + 1, len(all_rows)):
             if len(all_rows[j]) >= 7 and all_rows[j][1].strip() == city:
                 next_year = sanitize_year(all_rows[j][5])
                 next_pop = sanitize_population(all_rows[j][6])
-                if next_year:
-                    try:
-                        year_end = str(int(next_year) - 1)
-                    except ValueError:
-                        year_end = "2024"
+                if not next_year:
+                    continue
+                try:
+                    next_year_num = int(next_year)
+                except ValueError:
+                    continue
+                # The Historian frequently records several distinct facts under the same
+                # year (a census figure, a notable event, a second source, all dated e.g.
+                # "1938"), and occasionally years arrive out of order. Either way, a
+                # sibling row whose year isn't strictly later than this row's own year_start
+                # is not really "the next segment" -- using it would set year_end to
+                # (that year - 1), which is before this row even starts. Keep scanning
+                # forward until a genuinely later year turns up.
+                if next_year_num <= own_year:
+                    continue
+                year_end = str(next_year_num - 1)
                 if next_pop:
                     pop_end = next_pop
                 break
