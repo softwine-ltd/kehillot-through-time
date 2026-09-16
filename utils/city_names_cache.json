@@ -15846,5 +15846,719 @@
     "yiddish": "",
     "german": "",
     "other": ""
+  },
+  "berat|albania": {
+    "english": "Berat",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "korçë|albania": {
+    "english": "Korçë",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "shkodër|albania": {
+    "english": "Shkodër",
+    "hebrew": "שקודרה",
+    "yiddish": "",
+    "german": "Shkodra",
+    "other": "Shkodra"
+  },
+  "vlorë|albania": {
+    "english": "Vlorë",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "banja luka|bosnia and herzegovina": {
+    "english": "Banja Luka",
+    "hebrew": "באניה לוקה",
+    "yiddish": "",
+    "german": "Banja Luka",
+    "other": "Banja Luka"
+  },
+  "bijeljina|bosnia and herzegovina": {
+    "english": "Bijeljina",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "brčko|bosnia and herzegovina": {
+    "english": "Brčko",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sarajevo|bosnia and herzegovina": {
+    "english": "Sarajevo",
+    "hebrew": "סרייבו",
+    "yiddish": "סאראיעווא",
+    "german": "Sarajevo",
+    "other": "Sarajevo"
+  },
+  "travnik|bosnia and herzegovina": {
+    "english": "Travnik",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "zenica|bosnia and herzegovina": {
+    "english": "Zenica",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bjelovar|croatia": {
+    "english": "Bjelovar",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "daruvar|croatia": {
+    "english": "Daruvar",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dubrovnik|croatia": {
+    "english": "Dubrovnik",
+    "hebrew": "דוברובניק",
+    "yiddish": "ראגוזא",
+    "german": "Dubrovnik",
+    "other": "Dubrovnik"
+  },
+  "koprivnica|croatia": {
+    "english": "Koprivnica",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kutina|croatia": {
+    "english": "Kutina",
+    "hebrew": "קוטינה",
+    "yiddish": "",
+    "german": "Kutina",
+    "other": "Kutina"
+  },
+  "nova gradiška|croatia": {
+    "english": "Nova Gradiška",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "osijek|croatia": {
+    "english": "Osijek",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "požega|croatia": {
+    "english": "Požega",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rijeka|croatia": {
+    "english": "Rijeka",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "samobor|croatia": {
+    "english": "Samobor",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "senj|croatia": {
+    "english": "Senj",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "slavonski brod|croatia": {
+    "english": "Slavonski Brod",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "split|croatia": {
+    "english": "Split",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "varaždin|croatia": {
+    "english": "Varaždin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "vinkovci|croatia": {
+    "english": "Vinkovci",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "virovitica|croatia": {
+    "english": "Virovitica",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "vukovar|croatia": {
+    "english": "Vukovar",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "čakovec|croatia": {
+    "english": "Čakovec",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "đakovo|croatia": {
+    "english": "Đakovo",
+    "hebrew": "ג'קובו",
+    "yiddish": "",
+    "german": "Đakovo",
+    "other": "Đakovo"
+  },
+  "mitrovica|kosovo": {
+    "english": "Mitrovica",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pristina|kosovo": {
+    "english": "Pristina",
+    "hebrew": "פרישטינה",
+    "yiddish": "",
+    "german": "Pristina",
+    "other": "Pristina"
+  },
+  "prizren|kosovo": {
+    "english": "Prizren",
+    "hebrew": "פריזרן",
+    "yiddish": "",
+    "german": "Prizren",
+    "other": "برزرين"
+  },
+  "budva|montenegro": {
+    "english": "Budva",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ulcinj|montenegro": {
+    "english": "Ulcinj",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bitola|north macedonia": {
+    "english": "Bitola",
+    "hebrew": "ביטולה",
+    "yiddish": "",
+    "german": "Bitola",
+    "other": "بوتلي"
+  },
+  "štip|north macedonia": {
+    "english": "Štip",
+    "hebrew": "שטיפ",
+    "yiddish": "",
+    "german": "Štip",
+    "other": "شتيب"
+  },
+  "bačka palanka|serbia": {
+    "english": "Bačka Palanka",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "beograd|serbia": {
+    "english": "Beograd",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kikinda|serbia": {
+    "english": "Kikinda",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "loznica|serbia": {
+    "english": "Loznica",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "niš|serbia": {
+    "english": "Niš",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "novi sad|serbia": {
+    "english": "Novi Sad",
+    "hebrew": "נובי סאד",
+    "yiddish": "",
+    "german": "Novi Sad",
+    "other": "Novi Sad"
+  },
+  "pančevo|serbia": {
+    "english": "Pančevo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pirot|serbia": {
+    "english": "Pirot",
+    "hebrew": "פירוט",
+    "yiddish": "",
+    "german": "Pirot",
+    "other": "Pirot"
+  },
+  "ruma|serbia": {
+    "english": "Ruma",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "senta|serbia": {
+    "english": "Senta",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "smederevo|serbia": {
+    "english": "Smederevo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sombor|serbia": {
+    "english": "Sombor",
+    "hebrew": "סומבור",
+    "yiddish": "",
+    "german": "Sombor",
+    "other": "سومبور"
+  },
+  "sremska mitrovica|serbia": {
+    "english": "Sremska Mitrovica",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "subotica|serbia": {
+    "english": "Subotica",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "vrbas|serbia": {
+    "english": "Vrbas",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "zemun|serbia": {
+    "english": "Zemun",
+    "hebrew": "זמון",
+    "yiddish": "",
+    "german": "Zemun",
+    "other": "Земун"
+  },
+  "zrenjanin|serbia": {
+    "english": "Zrenjanin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "šabac|serbia": {
+    "english": "Šabac",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "beltinci|slovenia": {
+    "english": "Beltinci",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kranj|slovenia": {
+    "english": "Kranj",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lendava|slovenia": {
+    "english": "Lendava",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "murska sobota|slovenia": {
+    "english": "Murska Sobota",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nova gorica|slovenia": {
+    "english": "Nova Gorica",
+    "hebrew": "נובה גוריצה",
+    "yiddish": "",
+    "german": "Nova Gorica",
+    "other": "نوفا جوريتسا"
+  },
+  "durrës|albania": {
+    "english": "Durrës",
+    "hebrew": "דורס",
+    "yiddish": "דוררעס",
+    "german": "Durrës",
+    "other": "Durrës"
+  },
+  "elbasan|albania": {
+    "english": "Elbasan",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "fier|albania": {
+    "english": "Fier",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kavajë|albania": {
+    "english": "Kavajë",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sarandë|albania": {
+    "english": "Sarandë",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tiranë|albania": {
+    "english": "Tiranë",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bihać|bosnia and herzegovina": {
+    "english": "Bihać",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "cazin|bosnia and herzegovina": {
+    "english": "Cazin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "doboj|bosnia and herzegovina": {
+    "english": "Doboj",
+    "hebrew": "דובוי",
+    "yiddish": "",
+    "german": "Doboj",
+    "other": "دوبوي"
+  },
+  "jajce|bosnia and herzegovina": {
+    "english": "Jajce",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mostar|bosnia and herzegovina": {
+    "english": "Mostar",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tuzla|bosnia and herzegovina": {
+    "english": "Tuzla",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "visoko|bosnia and herzegovina": {
+    "english": "Visoko",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "višegrad|bosnia and herzegovina": {
+    "english": "Višegrad",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "hvar|croatia": {
+    "english": "Hvar",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "karlovac|croatia": {
+    "english": "Karlovac",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pula|croatia": {
+    "english": "Pula",
+    "hebrew": "",
+    "yiddish": "פולא",
+    "german": "Pula",
+    "other": "Pula"
+  },
+  "sisak|croatia": {
+    "english": "Sisak",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gjakova|kosovo": {
+    "english": "Gjakova",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gjilan|kosovo": {
+    "english": "Gjilan",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "herceg novi|montenegro": {
+    "english": "Herceg Novi",
+    "hebrew": "הרצג נובי",
+    "yiddish": "",
+    "german": "Herceg Novi",
+    "other": "هرسك نوفي"
+  },
+  "kotor|montenegro": {
+    "english": "Kotor",
+    "hebrew": "קוטור",
+    "yiddish": "",
+    "german": "Kotor",
+    "other": "Kotor"
+  },
+  "nikšić|montenegro": {
+    "english": "Nikšić",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "podgorica|montenegro": {
+    "english": "Podgorica",
+    "hebrew": "פודגוריצה",
+    "yiddish": "",
+    "german": "Podgorica",
+    "other": "Podgorica"
+  },
+  "kumanovo|north macedonia": {
+    "english": "Kumanovo",
+    "hebrew": "קומאנובו",
+    "yiddish": "",
+    "german": "Kumanovo",
+    "other": "كومانوفو"
+  },
+  "ohrid|north macedonia": {
+    "english": "Ohrid",
+    "hebrew": "אוחריד",
+    "yiddish": "",
+    "german": "Ohrid",
+    "other": "Agrida"
+  },
+  "prilep|north macedonia": {
+    "english": "Prilep",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "struga|north macedonia": {
+    "english": "Struga",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "strumica|north macedonia": {
+    "english": "Strumica",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tetovo|north macedonia": {
+    "english": "Tetovo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bečej|serbia": {
+    "english": "Bečej",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kragujevac|serbia": {
+    "english": "Kragujevac",
+    "hebrew": "קראגויבאץ",
+    "yiddish": "",
+    "german": "Kragujevac",
+    "other": "كراغوييفاتس"
+  },
+  "leskovac|serbia": {
+    "english": "Leskovac",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "užice|serbia": {
+    "english": "Užice",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "vršac|serbia": {
+    "english": "Vršac",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "čačak|serbia": {
+    "english": "Čačak",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "koper|slovenia": {
+    "english": "Koper",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "novo mesto|slovenia": {
+    "english": "Novo Mesto",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "piran|slovenia": {
+    "english": "Piran",
+    "hebrew": "פיראן",
+    "yiddish": "",
+    "german": "Piran",
+    "other": "Piran"
+  },
+  "ptuj|slovenia": {
+    "english": "Ptuj",
+    "hebrew": "פטוי",
+    "yiddish": "",
+    "german": "Ptuj",
+    "other": "Ptuj"
+  },
+  "radovljica|slovenia": {
+    "english": "Radovljica",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Radovljica",
+    "other": "رادوفليجيتسا"
+  },
+  "slovenj gradec|slovenia": {
+    "english": "Slovenj Gradec",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "turnišče|slovenia": {
+    "english": "Turnišče",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
   }
 }
