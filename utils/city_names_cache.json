@@ -17246,5 +17246,880 @@
     "yiddish": "",
     "german": "",
     "other": ""
+  },
+  "akron|usa": {
+    "english": "Akron",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "anchorage|usa": {
+    "english": "Anchorage",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "atlantic city|usa": {
+    "english": "Atlantic City",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "birmingham|usa": {
+    "english": "Birmingham",
+    "hebrew": "ברמינגהאם",
+    "yiddish": "בירמינגהאם",
+    "german": "Birmingham",
+    "other": "Birmingham"
+  },
+  "boise|united states": {
+    "english": "Boise",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bridgeport|usa": {
+    "english": "Bridgeport",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "burlington|united states": {
+    "english": "Burlington",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "columbus|usa": {
+    "english": "Columbus",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dayton|usa": {
+    "english": "Dayton",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "deadwood|usa": {
+    "english": "Deadwood",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Deadwood",
+    "other": "Deadwood"
+  },
+  "des moines|usa": {
+    "english": "Des Moines",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "easton|usa": {
+    "english": "Easton",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "fort wayne|united states": {
+    "english": "Fort Wayne",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "galveston|usa": {
+    "english": "Galveston",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "grand rapids|usa": {
+    "english": "Grand Rapids",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "harrisburg|usa": {
+    "english": "Harrisburg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "hartford|usa": {
+    "english": "Hartford",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "helena|usa": {
+    "english": "Helena",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "indianapolis|usa": {
+    "english": "Indianapolis",
+    "hebrew": "אינדיאנפוליס",
+    "yiddish": "אינדיאנאפאליס",
+    "german": "Indianapolis",
+    "other": "Indianapolis"
+  },
+  "jackson|usa": {
+    "english": "Jackson",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "jacksonville|usa": {
+    "english": "Jacksonville",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kansas city|usa": {
+    "english": "Kansas City",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lancaster|usa": {
+    "english": "Lancaster",
+    "hebrew": "לנקסטר",
+    "yiddish": "",
+    "german": "Lancaster",
+    "other": "Lancaster"
+  },
+  "leadville|united states": {
+    "english": "Leadville",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "little rock|usa": {
+    "english": "Little Rock",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "louisville|usa": {
+    "english": "Louisville",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "madison|usa": {
+    "english": "Madison",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "manchester|usa": {
+    "english": "Manchester",
+    "hebrew": "מנצ'סטר",
+    "yiddish": "מאנטשעסטער",
+    "german": "Manchester",
+    "other": "Manchester"
+  },
+  "miami|usa": {
+    "english": "Miami",
+    "hebrew": "מיאמי",
+    "yiddish": "מיאמי",
+    "german": "Miami",
+    "other": "Miami"
+  },
+  "minneapolis|united states": {
+    "english": "Minneapolis",
+    "hebrew": "מיניאפוליס",
+    "yiddish": "",
+    "german": "Minneapolis",
+    "other": "Minneapolis"
+  },
+  "mobile|united states": {
+    "english": "Mobile",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "मोबाइल"
+  },
+  "nashville|usa": {
+    "english": "Nashville",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "natchez|usa": {
+    "english": "Natchez",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "new brunswick|usa": {
+    "english": "New Brunswick",
+    "hebrew": "ניו ברנזוויק",
+    "yiddish": "ניו בראנזוויק",
+    "german": "New Brunswick",
+    "other": "Nieu-Brunswyk"
+  },
+  "new orleans|united states": {
+    "english": "New Orleans",
+    "hebrew": "ניו אורלינס",
+    "yiddish": "ניו ארלינס",
+    "german": "New Orleans",
+    "other": "New Orleans"
+  },
+  "norfolk|united states": {
+    "english": "Norfolk",
+    "hebrew": "",
+    "yiddish": "נארפאלק",
+    "german": "Norfolk",
+    "other": "Norfolk"
+  },
+  "omaha|united states": {
+    "english": "Omaha",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "paterson|united states": {
+    "english": "Paterson",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pensacola|united states": {
+    "english": "Pensacola",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "peoria|united states": {
+    "english": "Peoria",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "phoenix|united states": {
+    "english": "Phoenix",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pueblo|usa": {
+    "english": "Pueblo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "richmond|usa": {
+    "english": "Richmond",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sacramento|usa": {
+    "english": "Sacramento",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "san diego|usa": {
+    "english": "San Diego",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "san jose|usa": {
+    "english": "San Jose",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "santa fe|usa": {
+    "english": "Santa Fe",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "scranton|usa": {
+    "english": "Scranton",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "seattle|usa": {
+    "english": "Seattle",
+    "hebrew": "סיאטל",
+    "yiddish": "סיאטל",
+    "german": "Seattle",
+    "other": "Seattle"
+  },
+  "south bend|united states": {
+    "english": "South Bend",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "spokane|usa": {
+    "english": "Spokane",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "st. paul|united states": {
+    "english": "St. Paul",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "stockton|usa": {
+    "english": "Stockton",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tacoma|united states": {
+    "english": "Tacoma",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tampa|usa": {
+    "english": "Tampa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "toledo|usa": {
+    "english": "Toledo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "trenton|usa": {
+    "english": "Trenton",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tucson|united states": {
+    "english": "Tucson",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "vicksburg|united states": {
+    "english": "Vicksburg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "virginia city|usa": {
+    "english": "Virginia City",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "waco|usa": {
+    "english": "Waco",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "wilkes-barre|united states": {
+    "english": "Wilkes-Barre",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "wilmington|usa": {
+    "english": "Wilmington",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "york|usa": {
+    "english": "York",
+    "hebrew": "יורק",
+    "yiddish": "יארק",
+    "german": "York",
+    "other": "York"
+  },
+  "youngstown|usa": {
+    "english": "Youngstown",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "brandon|canada": {
+    "english": "Brandon",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "calgary|canada": {
+    "english": "Calgary",
+    "hebrew": "קלגרי",
+    "yiddish": "",
+    "german": "Calgary",
+    "other": "Calgary"
+  },
+  "charlottetown|canada": {
+    "english": "Charlottetown",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "edmonton|canada": {
+    "english": "Edmonton",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "guelph|canada": {
+    "english": "Guelph",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "halifax|canada": {
+    "english": "Halifax",
+    "hebrew": "הליפקס",
+    "yiddish": "",
+    "german": "Halifax",
+    "other": "Halifax"
+  },
+  "hamilton|canada": {
+    "english": "Hamilton",
+    "hebrew": "המילטון",
+    "yiddish": "",
+    "german": "Hamilton",
+    "other": "هاميلتون"
+  },
+  "kingston|canada": {
+    "english": "Kingston",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kitchener|canada": {
+    "english": "Kitchener",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "moose jaw|canada": {
+    "english": "Moose Jaw",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "niagara falls|canada": {
+    "english": "Niagara Falls",
+    "hebrew": "מפלי ניאגרה",
+    "yiddish": "ניאגארא פאלס",
+    "german": "",
+    "other": "ናያግራ ፏፏቴዎች"
+  },
+  "ottawa|canada": {
+    "english": "Ottawa",
+    "hebrew": "אוטווה",
+    "yiddish": "אטאווא",
+    "german": "Ottawa",
+    "other": "Ottawa"
+  },
+  "peterborough|canada": {
+    "english": "Peterborough",
+    "hebrew": "פיטרבורו",
+    "yiddish": "",
+    "german": "Peterborough",
+    "other": "Peterborough"
+  },
+  "quebec city|canada": {
+    "english": "Quebec City",
+    "hebrew": "קוויבק סיטי",
+    "yiddish": "",
+    "german": "",
+    "other": "Quebecstad"
+  },
+  "regina|canada": {
+    "english": "Regina",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "saint john|canada": {
+    "english": "Saint John",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "saskatoon|canada": {
+    "english": "Saskatoon",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sault ste. marie|canada": {
+    "english": "Sault Ste. Marie",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sherbrooke|canada": {
+    "english": "Sherbrooke",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "st. catharines|canada": {
+    "english": "St. Catharines",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sudbury|canada": {
+    "english": "Sudbury",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "thunder bay|canada": {
+    "english": "Thunder Bay",
+    "hebrew": "ת'אנדר ביי",
+    "yiddish": "",
+    "german": "",
+    "other": "Thunder Bay"
+  },
+  "vancouver|canada": {
+    "english": "Vancouver",
+    "hebrew": "ונקובר",
+    "yiddish": "",
+    "german": "Vancouver",
+    "other": "Vancouver"
+  },
+  "victoria|canada": {
+    "english": "Victoria",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "windsor|canada": {
+    "english": "Windsor",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "winnipeg|canada": {
+    "english": "Winnipeg",
+    "hebrew": "ויניפג",
+    "yiddish": "",
+    "german": "Winnipeg",
+    "other": "Winnipeg"
+  },
+  "aguascalientes|mexico": {
+    "english": "Aguascalientes",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "campeche|mexico": {
+    "english": "Campeche",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "guadalajara|mexico": {
+    "english": "Guadalajara",
+    "hebrew": "",
+    "yiddish": "גוואדאלאכארע",
+    "german": "",
+    "other": "Гвадалахара"
+  },
+  "guanajuato|mexico": {
+    "english": "Guanajuato",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Guanajuato"
+  },
+  "mazatlan|mexico": {
+    "english": "Mazatlan",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "monterrey|mexico": {
+    "english": "Monterrey",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "oaxaca|mexico": {
+    "english": "Oaxaca",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pachuca|mexico": {
+    "english": "Pachuca",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "queretaro|mexico": {
+    "english": "Queretaro",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tijuana|mexico": {
+    "english": "Tijuana",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tlaxcala|mexico": {
+    "english": "Tlaxcala",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "veracruz|mexico": {
+    "english": "Veracruz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "albuquerque|usa": {
+    "english": "Albuquerque",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "allentown|usa": {
+    "english": "Allentown",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "austin|usa": {
+    "english": "Austin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "key west|usa": {
+    "english": "Key West",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "las vegas|usa": {
+    "english": "Las Vegas",
+    "hebrew": "לאס וגאס",
+    "yiddish": "לאס וועגאס",
+    "german": "Las Vegas",
+    "other": "Las Vegas"
+  },
+  "memphis|usa": {
+    "english": "Memphis",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "milwaukee|usa": {
+    "english": "Milwaukee",
+    "hebrew": "מילווקי",
+    "yiddish": "מילוואקי",
+    "german": "Milwaukee",
+    "other": "Milwaukee"
+  },
+  "montgomery|usa": {
+    "english": "Montgomery",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "new haven|usa": {
+    "english": "New Haven",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "oakland|usa": {
+    "english": "Oakland",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "reno|usa": {
+    "english": "Reno",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rockford|usa": {
+    "english": "Rockford",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "salt lake city|usa": {
+    "english": "Salt Lake City",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": "Sealtmeresburg"
+  },
+  "san antonio|usa": {
+    "english": "San Antonio",
+    "hebrew": "סן אנטוניו",
+    "yiddish": "סאן אנטאניא",
+    "german": "San Antonio",
+    "other": "San Antonio"
+  },
+  "tombstone|usa": {
+    "english": "Tombstone",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tyler|usa": {
+    "english": "Tyler",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ciudad de mexico|mexico": {
+    "english": "Ciudad de Mexico",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ciudad juarez|mexico": {
+    "english": "Ciudad Juarez",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "cuernavaca|mexico": {
+    "english": "Cuernavaca",
+    "hebrew": "קוארנבקה",
+    "yiddish": "",
+    "german": "Cuernavaca",
+    "other": "Cuernavaca"
+  },
+  "durango|mexico": {
+    "english": "Durango",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "merida|mexico": {
+    "english": "Merida",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tampico|mexico": {
+    "english": "Tampico",
+    "hebrew": "טמפיקו",
+    "yiddish": "",
+    "german": "Tampico",
+    "other": "تامبيكو"
   }
 }
