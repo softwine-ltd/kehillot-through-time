@@ -19486,5 +19486,75 @@
     "yiddish": "",
     "german": "",
     "other": ""
+  },
+  "philadelphia|usa": {
+    "english": "Philadelphia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "boston|united states": {
+    "english": "Boston",
+    "hebrew": "בוסטון",
+    "yiddish": "באסטאן",
+    "german": "Boston",
+    "other": "Boston"
+  },
+  "san francisco|usa": {
+    "english": "San Francisco",
+    "hebrew": "סן פרנסיסקו",
+    "yiddish": "סאן פראנציסקא",
+    "german": "San Francisco",
+    "other": "San Francisco"
+  },
+  "fort lauderdale|usa": {
+    "english": "Fort Lauderdale",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "west palm beach|usa": {
+    "english": "West Palm Beach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mexico city|mexico": {
+    "english": "Mexico City",
+    "hebrew": "מקסיקו סיטי",
+    "yiddish": "מעקסיקע שטאט",
+    "german": "Mexiko-Stadt",
+    "other": "Banda Meksiko"
+  },
+  "rosario|argentina": {
+    "english": "Rosario",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "córdoba|argentina": {
+    "english": "Córdoba",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "porto alegre|brazil": {
+    "english": "Porto Alegre",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "montevideo|uruguay": {
+    "english": "Montevideo",
+    "hebrew": "מונטווידאו",
+    "yiddish": "מאנטעווידעא",
+    "german": "Montevideo",
+    "other": "Монтевидео"
   }
 }
