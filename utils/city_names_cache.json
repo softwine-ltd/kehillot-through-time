@@ -18681,5 +18681,26 @@
     "yiddish": "יאס",
     "german": "Iași",
     "other": "Iași"
+  },
+  "cologne|germany": {
+    "english": "Cologne",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "hannover|germany": {
+    "english": "Hannover",
+    "hebrew": "הנובר",
+    "yiddish": "האנאווער",
+    "german": "Hannover",
+    "other": "Hannover"
+  },
+  "munich|germany": {
+    "english": "Munich",
+    "hebrew": "מינכן",
+    "yiddish": "מינכען",
+    "german": "Werksviertel",
+    "other": "München"
   }
 }
