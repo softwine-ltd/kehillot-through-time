@@ -614,6 +614,18 @@ async function loadData(year) {
             .filter(kehila => {
                 if (kehila.year_start > year) return false;
                 if (kehila.year_end === undefined) return true;
+                if (kehila.year_start === kehila.year_end) {
+                    // A genuine single-point-in-time fact (e.g. a "presence attested"
+                    // row, or two adjacent yearly segments that happen to collapse to a
+                    // single year). The exclusive-boundary check below asks "does some
+                    // OTHER segment pick up exactly where I end, so I should yield the
+                    // boundary year to it" -- but this row's own year_start trivially
+                    // equals its year_end, so it always matched itself and excluded
+                    // itself from ever rendering, even alone with no real successor.
+                    // A single-instant fact has no span to be exclusive about: it
+                    // belongs on its own year, full stop.
+                    return year === kehila.year_start;
+                }
                 const hasSuccessorSegment = cachedSegmentStartYears
                     .get(`${kehila.country}||${kehila.name}`)
                     .has(kehila.year_end);
