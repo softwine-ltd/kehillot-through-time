@@ -247,7 +247,7 @@ function addEventMarkers() {
         // Create structured tooltip content
         const linkHtml = event.url ? `
             <div class="tooltip-link">
-                <a href="${event.url}" target="_blank" style="color: #3b82f6; text-decoration: underline; font-size: 11px;">
+                <a href="${escapeHtml(event.url)}" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline; font-size: 11px;">
                     Learn more ↗
                 </a>
             </div>
@@ -368,6 +368,20 @@ function parseCSVLine(line) {
     result.push(current); // Push the last field
 
     return result;
+}
+
+// Every popup/tooltip below interpolates text pulled from kehilot.csv/events.csv (populated
+// by an automated web-research pipeline) or from third-party geocoding results (Nominatim,
+// backed by crowdsourced OpenStreetMap place names) -- neither is trusted input, so anything
+// going into innerHTML must be escaped first to prevent stored/reflected XSS.
+function escapeHtml(value) {
+    if (value === undefined || value === null) return '';
+    return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
 }
 
 
@@ -681,21 +695,21 @@ function updateMarkers(kehilot) {
 
         const commentDetails = kehila.comment === undefined || kehila.comment === '' ? '' : `
                     <div style="margin: 8px 0;">
-                        <strong> ${labels.notes}:</strong> ${kehila.comment}
+                        <strong> ${labels.notes}:</strong> ${escapeHtml(kehila.comment)}
                     </div>
         `;
 
         // Create popup content
         const popupContent = `
             <div style="direction: ${textDir}; text-align: ${textAlign};">
-                <strong style="font-size: 16px;">${kehila.name_he}</strong>
+                <strong style="font-size: 16px;">${escapeHtml(kehila.name_he)}</strong>
                 <br>
-                ${kehila.name}
+                ${escapeHtml(kehila.name)}
                 <br>
-                ${kehila.names.english ? `English: ${kehila.names.english} <br>` : ''}                
-                ${kehila.names.yiddish ? `ייִדיש: ${kehila.names.yiddish} <br>` : ''}                
-                ${kehila.names.german ? `Deutsch: ${kehila.names.german} <br>` : ''}                
-                ${kehila.names.other ? `${labels.other}: ${kehila.names.other} <br>` : ''}
+                ${kehila.names.english ? `English: ${escapeHtml(kehila.names.english)} <br>` : ''}
+                ${kehila.names.yiddish ? `ייִדיש: ${escapeHtml(kehila.names.yiddish)} <br>` : ''}
+                ${kehila.names.german ? `Deutsch: ${escapeHtml(kehila.names.german)} <br>` : ''}
+                ${kehila.names.other ? `${labels.other}: ${escapeHtml(kehila.names.other)} <br>` : ''}
                 <div style="margin: 8px 0;">
                     <strong> ${labels.population}:</strong> ${formatPopulation(kehila.actual_pop)}
                 </div>
@@ -1042,7 +1056,7 @@ function initializeMap() {
                 
                 searchMarker.bindPopup(`
                     <div style="direction: ${textDir}; text-align: ${textAlign};">
-                        <strong>${result.display_name}</strong>
+                        <strong>${escapeHtml(result.display_name)}</strong>
                         <br>
                         <small>${searchLabel}</small>
                     </div>
@@ -1907,7 +1921,7 @@ function initializeMap() {
                 const optionDiv = document.createElement('div');
                 optionDiv.className = 'border border-gray-300 rounded-md p-3 hover:bg-gray-50 cursor-pointer';
                 optionDiv.innerHTML = `
-                    <p class="font-medium">${location.display_name}</p>
+                    <p class="font-medium">${escapeHtml(location.display_name)}</p>
                 `;
                 optionDiv.addEventListener('click', () => {
                     displayLocation(location);
@@ -3304,20 +3318,20 @@ function regenerateAllPopups() {
 
             const commentDetails = kehila.comment === undefined || kehila.comment === '' ? '' : `
                         <div style="margin: 8px 0;">
-                            <strong> ${labels.notes}:</strong> ${kehila.comment}
+                            <strong> ${labels.notes}:</strong> ${escapeHtml(kehila.comment)}
                         </div>
             `;
 
             const popupContent = `
                 <div style="direction: ${textDir}; text-align: ${textAlign};">
-                    <strong style="font-size: 16px;">${kehila.name_he}</strong>
+                    <strong style="font-size: 16px;">${escapeHtml(kehila.name_he)}</strong>
                     <br>
-                    ${kehila.name}
+                    ${escapeHtml(kehila.name)}
                     <br>
-                    ${kehila.names.english ? `English: ${kehila.names.english} <br>` : ''}                
-                    ${kehila.names.yiddish ? `ייִדיש: ${kehila.names.yiddish} <br>` : ''}                
-                    ${kehila.names.german ? `Deutsch: ${kehila.names.german} <br>` : ''}                
-                    ${kehila.names.other ? `${labels.other}: ${kehila.names.other} <br>` : ''}
+                    ${kehila.names.english ? `English: ${escapeHtml(kehila.names.english)} <br>` : ''}
+                    ${kehila.names.yiddish ? `ייִדיש: ${escapeHtml(kehila.names.yiddish)} <br>` : ''}
+                    ${kehila.names.german ? `Deutsch: ${escapeHtml(kehila.names.german)} <br>` : ''}
+                    ${kehila.names.other ? `${labels.other}: ${escapeHtml(kehila.names.other)} <br>` : ''}
                     <div style="margin: 8px 0;">
                         <strong> ${labels.population}:</strong> ${formatPopulation(kehila.actual_pop)}
                     </div>
@@ -3379,7 +3393,7 @@ function regenerateAllPopups() {
             
             const linkHtml = arrowData.url ? `
                         <div class="tooltip-link" style="margin-top:6px;">
-                            <a href="${arrowData.url}" target="_blank" style="color: #3b82f6; text-decoration: underline; font-size: 12px;">
+                            <a href="${escapeHtml(arrowData.url)}" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline; font-size: 12px;">
                                 ${labels.learnMore}
                             </a>
                         </div>
@@ -3387,17 +3401,17 @@ function regenerateAllPopups() {
 
             const popupContent = `
                 <div style="direction: ${textDir}; text-align: ${textAlign};">
-                    <strong style="font-size: 16px;">${arrowData.titleHe}</strong>
+                    <strong style="font-size: 16px;">${escapeHtml(arrowData.titleHe)}</strong>
                     <br>
-                    ${arrowData.titleEn}
+                    ${escapeHtml(arrowData.titleEn)}
                     <br>
                     <div style="margin: 8px 0;">
-                        <strong>${labels.period}:</strong> 
-                        ${arrowData.yearStart < 0 ? Math.abs(arrowData.yearStart) + ' BCE' : arrowData.yearStart + ' CE'} - 
+                        <strong>${labels.period}:</strong>
+                        ${arrowData.yearStart < 0 ? Math.abs(arrowData.yearStart) + ' BCE' : arrowData.yearStart + ' CE'} -
                         ${arrowData.yearEnd < 0 ? Math.abs(arrowData.yearEnd) + ' BCE' : arrowData.yearEnd + ' CE'}
                     </div>
                     <div style="margin: 8px 0;">
-                        <strong>${labels.description}:</strong> ${arrowData.description}
+                        <strong>${labels.description}:</strong> ${escapeHtml(arrowData.description)}
                     </div>
                     ${linkHtml}
                 </div>
@@ -3617,7 +3631,7 @@ function createArrow(arrowData) {
     
     const linkHtml = arrowData.url ? `
             <div class="tooltip-link" style="margin-top:6px;">
-                <a href="${arrowData.url}" target="_blank" style="color: #3b82f6; text-decoration: underline; font-size: 12px;">
+                <a href="${escapeHtml(arrowData.url)}" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline; font-size: 12px;">
                     ${labels.learnMore}
                 </a>
             </div>
@@ -3625,17 +3639,17 @@ function createArrow(arrowData) {
 
     const popupContent = `
         <div style="direction: ${textDir}; text-align: ${textAlign};">
-            <strong style="font-size: 16px;">${arrowData.titleHe}</strong>
+            <strong style="font-size: 16px;">${escapeHtml(arrowData.titleHe)}</strong>
             <br>
-            ${arrowData.titleEn}
+            ${escapeHtml(arrowData.titleEn)}
             <br>
             <div style="margin: 8px 0;">
-                <strong>${labels.period}:</strong> 
-                ${arrowData.yearStart < 0 ? Math.abs(arrowData.yearStart) + ' BCE' : arrowData.yearStart + ' CE'} - 
+                <strong>${labels.period}:</strong>
+                ${arrowData.yearStart < 0 ? Math.abs(arrowData.yearStart) + ' BCE' : arrowData.yearStart + ' CE'} -
                 ${arrowData.yearEnd < 0 ? Math.abs(arrowData.yearEnd) + ' BCE' : arrowData.yearEnd + ' CE'}
             </div>
             <div style="margin: 8px 0;">
-                <strong>${labels.description}:</strong> ${arrowData.description}
+                <strong>${labels.description}:</strong> ${escapeHtml(arrowData.description)}
             </div>
             ${linkHtml}
         </div>
@@ -3701,14 +3715,14 @@ function formatSource(source) {
             fr: 'Source en ligne ↗'
         };
         const linkText = linkTextMap[currentLangForPopup] || linkTextMap.en;
-        return `<a href="${source}" target="_blank" style="
+        return `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer" style="
             color: #2563eb;
             text-decoration: underline;
             font-weight: 500;
         ">${linkText}</a>`;
     }
 
-    return source;
+    return escapeHtml(source);
 }
 
 // Parse and update events (ellipses and polygons) for a given year
@@ -3912,8 +3926,8 @@ function addEventPopup(polygon, ev) {
         ${ev.descriptionEng || ev.descriptionHeb ? `
             <div style="margin: 6px 0;">
                 <strong>${labels.description}:</strong>
-                ${ev.descriptionHeb ? `<div style="margin: 2px 0;">${ev.descriptionHeb}</div>` : ''}
-                ${ev.descriptionEng ? `<div style="margin: 2px 0; color: #666; font-size: 12px;">${ev.descriptionEng}</div>` : ''}
+                ${ev.descriptionHeb ? `<div style="margin: 2px 0;">${escapeHtml(ev.descriptionHeb)}</div>` : ''}
+                ${ev.descriptionEng ? `<div style="margin: 2px 0; color: #666; font-size: 12px;">${escapeHtml(ev.descriptionEng)}</div>` : ''}
             </div>
         ` : ''}
         ${ev.source ? `<div style="margin: 6px 0;"><strong>${labels.source}:</strong> ${formatSource(ev.source)}</div>` : ''}
