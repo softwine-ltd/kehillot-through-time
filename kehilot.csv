@@ -405,7 +405,6 @@ USA,Houston,-95.3698,29.7604,1870,1870,2023,100,175655,,,,,יוסטון,יוסט
 USA,Dallas,-96.7970,32.7767,1870,1870,2023,100,175655,,,,,דאלאס,דאלאס,Dallas,Dallas,https://www.jewishvirtuallibrary.org/dallas-texas,Jewish community established in 1870s
 USA,Denver,-104.9903,39.7392,1870,1870,2023,100,98400,,,,,דנוור,דנוור,Denver,Denver,https://www.jewishvirtuallibrary.org/denver-colorado,Jewish community established in 1870s
 Argentina,Buenos Aires,-58.3816,-34.6037,1880,1880,2023,1000,170000,,,,,בואנוס איירס,בואנוס איירס,Buenos Aires,Buenos Aires,https://www.jewishvirtuallibrary.org/buenos-aires-argentina,Largest Jewish community in South America - established in 1880s
-Brazil,São Paulo,-46.6333,-23.5505,1900,1900,2023,500,60000,,,,,סאו פאולו,סאו פאולו,São Paulo,São Paulo,https://www.jewishvirtuallibrary.org/sao-paulo-brazil,Second largest Jewish community in South America - established in 1900s
 Brazil,Rio de Janeiro,-43.1729,-22.9068,1900,1900,2023,300,30000,,,,,ריו דה ז'ניירו,ריו דה ז'ניירו,Rio de Janeiro,Rio de Janeiro,https://www.jewishvirtuallibrary.org/rio-de-janeiro-brazil,Jewish community established in 1900s
 Uruguay,Montevideo,-56.1645,-34.9011,1910,1910,2023,200,16100,,,,,מונטווידאו,מונטווידאו,Montevideo,Montevideo,https://www.jewishvirtuallibrary.org/montevideo-uruguay,Jewish community established in 1910s
 Chile,Santiago,-70.6693,-33.4489,1920,1920,2023,150,15500,,,,,סנטיאגו,סנטיאגו,Santiago,Santiago,https://www.jewishvirtuallibrary.org/santiago-chile,Jewish community established in 1920s
@@ -703,10 +702,6 @@ Germany,Bacharach,7.76948,50.05725,1125,1125,1942,30,30,,,,,בכרך,,,,https://
 Germany,Bad Buchau,9.6104768,48.0614616,1382,1382,1942,30,30,,,,, באד בוכאו,,,,https://dbs.anumuseum.org.il/skn/he/c6/e179067/%D7%9E%D7%A7%D7%95%D7%9D/%D7%91%D7%90%D7%93_%D7%91%D7%95%D7%9B%D7%90%D7%95,
 Switzerland,Baden-in-Aargau,8.3,47.466667,1349,1349,1942,30,30,,,,,באדן,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Baiersdorf,11.0352214,49.6609162,1400,1400,1942,30,30,,,,,באיירסדורף,,,,https://www.jewishvirtuallibrary.org/baiersdorf,
-Germany,Bamberg,10.90067,49.89873,1000,1000,1942,30,30,,,,,במברג,,,,https://www.jewishencyclopedia.com/articles/2422-bamberg,
-Germany,Bamberg,10.90067,49.89873,1349,1349,1942,30,30,,,,,במברג,,,,BLACK DEATH - JewishEncyclopedia.com,
-Germany,Bamberg,10.89779,49.89873,1090,1090,1942,30,30,,,,,במברג,,,,https://www.jewishvirtuallibrary.org/bamberg,
-Germany,Bamberg,10.89779,49.89873,1060,1060,1942,30,30,,,,,במברג,,,,https://www.jewishvirtuallibrary.org/bamberg,
 Ukraine,Bar,27.67611,49.075,1542,1542,1942,30,30,,,,,באר (אוקראינה),,,,https://he.wikipedia.org/wiki/%D7%91%D7%90%D7%A8_(%D7%90%D7%95%D7%A7%D7%A8%D7%90%D7%99%D7%A0%D7%94),
 Poland,Baranów Sandomierski,18.0047,51.26342,1350,1350,1942,30,30,,,,,ברנוב (פודקרפאטי),ברנוב סנדומיירסקי,,,https://he.wikipedia.org/wiki/%D7%91%D7%A8%D7%A0%D7%95%D7%91_(%D7%A4%D7%95%D7%93%D7%A7%D7%A8%D7%A4%D7%90%D7%98%D7%99),
 Slovakia ,"Bardejov, Bartfa, Bartfeldt, Bardiów",21.2756031,49.2926871,1200,1200,1942,30,30,,,,,ברדיוב,,,,https://www.jewishvirtuallibrary.org/bardejov,
@@ -733,10 +728,6 @@ Ukraine,Berestechko,25.11071,50.36047,1570,1570,1942,30,30,,,,,ברסטצ'קה,,
 France,Bergheim,7.3625,48.2058,1350,1350,1942,30,30,,,,,ברגהיים,,,,https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%AA_%D7%94%D7%9B%D7%A0%D7%A1%D7%AA_%D7%A9%D7%9C_%D7%91%D7%A8%D7%92%D7%94%D7%99%D7%99%D7%9D,
 "(Haut-Rhin, France, OR North Rhine-Westphalia, Germany)",Bergheim,13.0221612,47.8408541,1349,1349,1942,30,30,,,,,ברגהיים,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Berk,6.4600826,50.3857436,1349,1349,1942,30,30,,,,,ברק,,,,BLACK DEATH - JewishEncyclopedia.com,
-Germany,Berlin,13.408126,52.507192,1244,1244,1942,30,30,,,,,ברלין,,,,https://he.wikipedia.org/wiki/%D7%A7%D7%94%D7%99%D7%9C%D7%AA_%D7%99%D7%94%D7%95%D7%93%D7%99_%D7%91%D7%A8%D7%9C%D7%99%D7%9F,
-Germany,Berlin,13.408126,52.507192,1295,1295,1942,30,30,,,,,ברלין,,,,https://www.jewishvirtuallibrary.org/berlin-germany-jewish-history-tour,
-Germany,Berlin,13.408126,52.507192,1349,1349,1942,30,30,,,,,ברלין,,,,BLACK DEATH - JewishEncyclopedia.com,
-Germany,Berlin,13.408126,52.507192,1295,1295,1942,30,30,,,,,ברלין,,,,https://www.jewishvirtuallibrary.org/berlin,
 Switzerland,Bern,7.570549,46.855135,1250,1250,1942,30,30,,,,,ברן,,,,https://he.wikipedia.org/wiki/%D7%91%D7%A8%D7%9F,
 Switzerland,Bern,7.570549,46.855135,1262,1262,1942,30,30,,,,,ברן,,,,https://www.jewishvirtuallibrary.org/berne,
 Switzerland,Bern,7.570549,46.855135,1259,1259,1942,30,30,,,,,ברן,,,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Bern,
@@ -748,10 +739,6 @@ France,Béziers,3.21402,43.34122,506,506,1942,30,30,,,,,בזייה,"בדרש, ב
 Poland,Biała (Opole Voivodeship),17.6599107,50.3853609,1250,1250,1942,30,30,,,,,"יהודי צילץ, ביאלה",Zülz,,,https://he.wikipedia.org/wiki/%D7%A7%D7%94%D7%99%D7%9C%D7%AA_%D7%99%D7%94%D7%95%D7%93%D7%99_%D7%A6%D7%99%D7%9C%D7%A5,
 Germany,Biberach,8.03333,48.33333,1349,1349,1942,30,30,,,,,ביבראך,,,,BLACK DEATH - JewishEncyclopedia.com,
 Switzerland,Biel,7.24656,47.13613,1300,1300,1942,30,30,,,,,ביל,,,,https://www.jewishvirtuallibrary.org/biel-2,
-Germany,Bielefeld,8.531007,52.0191005,1345,1345,1942,30,30,,,,,בילפלד,,,,https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%9C%D7%A4%D7%9C%D7%93#%D7%99%D7%94%D7%95%D7%93%D7%99%D7%9D,
-Germany,Bielefeld,8.531007,52.0191005,1345,1345,1942,30,30,,,,,בילפלד,,,,https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%9C%D7%A4%D7%9C%D7%93,
-Germany,Bielefeld,8.531007,52.0191005,1349,1349,1942,30,30,,,,,בילפלד,,,,BLACK DEATH - JewishEncyclopedia.com,
-Germany,Bielefeld,8.531007,52.0191005,1340,1340,1942,30,30,,,,,בילפלד,,,,https://www.jewishvirtuallibrary.org/bielefeld,
 Germany,Bingen,9.27238,48.11127,1349,1349,1942,30,30,,,,,בינגן,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Bingen,9.27238,48.11127,1150,1150,1942,30,30,,,,,בינגן,,,,https://www.jewishvirtuallibrary.org/bingen,
 Germany,"Bischofsheim-on-the-Tauber, Tauberbischofsheim",9.66278,49.62472,1349,1349,1942,30,30,,,,,בישופשיים,,,,BLACK DEATH - JewishEncyclopedia.com,
@@ -797,24 +784,6 @@ Germany,"Brunswick, Braunschweig",10.52673,52.26594,1110,1110,1942,30,30,,,,,ב�
 Poland,Brzeg,17.4641245,50.8588648,1324,1324,1942,30,30,,,,,בז'ג,,,,https://en.wikipedia.org/wiki/Brzeg#History_of_the_Jewish_population,
 Ukraine,Buchach,25.39496,49.06234,1500,1500,1942,30,30,,,,,בוצ'אץ',"בוטשאטש, בעטשאָטש",,,https://he.wikipedia.org/wiki/%D7%91%D7%95%D7%A6%27%D7%90%D7%A5%27,
 Germany,Buchen,9.32389,49.52417,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
-Hungary,Budapest,19.084269,47.482728,1096,1096,1942,30,30,,,,, בודפשט,,,,https://he.wikipedia.org/wiki/%D7%A7%D7%94%D7%99%D7%9C%D7%AA_%D7%99%D7%94%D7%95%D7%93%D7%99_%D7%91%D7%95%D7%93%D7%A4%D7%A9%D7%98,
-Hungary,Budapest,19.084269,47.482728,1251,1251,1942,30,30,,,,,יהודי בודפשט,,,,First documented Jews in Buda,
-Hungary,Budapest,19.084269,47.482728,1252,1278,1942,30,30,,,,,יהודי בודפשט,,,,Early Jewish community development,
-Hungary,Budapest,19.084269,47.482728,1279,1359,1942,30,30,,,,,יהודי בודפשט,,,,Jewish privileges granted by King Ladislaus IV,
-Hungary,Budapest,19.084269,47.482728,1360,1525,1942,30,30,,,,,יהודי בודפשט,,,,Jewish community established in Pest,
-Hungary,Budapest,19.084269,47.482728,1526,1685,1942,30,30,,,,,יהודי בודפשט,,,,Ottoman conquest - Jews under Turkish rule,
-Hungary,Budapest,19.084269,47.482728,1686,1782,1942,30,30,,,,,יהודי בודפשט,,,,Habsburg reconquest - new restrictions,
-Hungary,Budapest,19.084269,47.482728,1783,1839,1942,30,30,,,,,יהודי בודפשט,,,,Joseph II tolerates Jewish settlement,
-Hungary,Budapest,19.084269,47.482728,1840,1858,1942,30,30,,,,,יהודי בודפשט,,,,Jewish community growth in 19th century,
-Hungary,Budapest,19.084269,47.482728,1859,1866,1942,30,30,,,,,יהודי בודפשט,,,,Dohány Street Synagogue built,
-Hungary,Budapest,19.084269,47.482728,1867,1899,1942,30,30,,,,,יהודי בודפשט,,,,Jewish emancipation in Hungary,
-Hungary,Budapest,19.084269,47.482728,1900,1919,1942,30,30,,,,,יהודי בודפשט,,,,Golden age - 200000 Jews in Budapest,
-Hungary,Budapest,19.084269,47.482728,1920,1937,1942,30,30,,,,,יהודי בודפשט,,,,White Terror - anti-Jewish violence,
-Hungary,Budapest,19.084269,47.482728,1938,1943,1942,30,30,,,,,יהודי בודפשט,,,,First Anti-Jewish Law in Hungary,
-Hungary,Budapest,19.084269,47.482728,1944,1944,1942,30,30,,,,,יהודי בודפשט,,,,German occupation - ghettoization begins,
-Hungary,Budapest,19.084269,47.482728,1945,1955,1942,30,30,,,,,יהודי בודפשט,,,,Liberation - survivors return,
-Hungary,Budapest,19.084269,47.482728,1956,1988,1942,30,30,,,,,יהודי בודפשט,,,,Hungarian Revolution - Jewish emigration,
-Hungary,Budapest,19.084269,47.482728,1989,1989,1942,30,30,,,,,יהודי בודפשט,,,,Fall of communism - Jewish revival,
 Romania,Bukovina,25.75,47.75,1250,1250,1942,30,30,,,,, בוקובינה,,,,https://www.jewishvirtuallibrary.org/bukovina,
 Germany,Büren (dist. Münster),8.55956,51.55109,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Switzerland,Burgdorf,7.6237466,47.0571316,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
@@ -875,10 +844,6 @@ Germany,Diez (Dietz),8.00735,50.37419,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH -
 Germany,Dillingen,6.72781,49.35557,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Dinkelsbühl,10.31985,49.06942,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Dormagen,6.83167,51.09683,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
-Germany,Dortmund,7.466,51.51494,1074,1074,1942,30,30,,,,,דורטמונד,,,,https://he.wikipedia.org/wiki/%D7%93%D7%95%D7%A8%D7%98%D7%9E%D7%95%D7%A0%D7%93,
-Germany,Dortmund,7.466,51.51494,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
-Germany,Dortmund,7.46667,51.51667,1074,1074,1942,30,30,,,,,דורטמונד,,,,https://www.jewishvirtuallibrary.org/dortmund,
-Germany,Dortmund,7.46667,51.51667,1050,1050,1942,30,30,,,,,דורטמונד,,,,https://www.jewishvirtuallibrary.org/dortmund,
 Germany,Dresden,13.7381437,51.0493286,1265,1265,1942,30,30,,,,,יהדות דרזדן,,,,https://he.wikipedia.org/wiki/%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%93%D7%A8%D7%96%D7%93%D7%9F,
 Germany,Dresden,13.7381437,51.0493286,1310,1310,1942,30,30,,,,,דרזדן,,,,https://www.jewishvirtuallibrary.org/dresden,
 Germany,Dresden,13.7381437,51.0493286,1200,1200,1942,30,30,,,,,דרזדן,,,,https://he.wikipedia.org/wiki/%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%93%D7%A8%D7%96%D7%93%D7%9F,
@@ -1022,10 +987,6 @@ Germany,Heideck,11.12726,49.13365,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - Jew
 Germany,Heidelberg,8.694724,49.4093582,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Heidelberg,8.694724,49.4093582,1250,1250,1942,30,30,,,,,היידלברג,,,,https://www.jewishvirtuallibrary.org/heidelberg,
 Germany,Heidingsfeld,9.94031,49.76281,1290,1290,1942,30,30,,,,,היידינגספלד ,,,,https://www.jewishvirtuallibrary.org/heidingsfeld,
-Germany,Heilbronn,9.22054,49.13995,1050,1050,1942,30,30,,,,,יהדות היילברון,,,,https://he.wikipedia.org/wiki/%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%94%D7%99%D7%99%D7%9C%D7%91%D7%A8%D7%95%D7%9F,
-Germany,Heilbronn,9.22054,49.13995,1050,1050,1942,30,30,,,,,היילברון,,,,https://he.wikipedia.org/wiki/%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%94%D7%99%D7%99%D7%9C%D7%91%D7%A8%D7%95%D7%9F,
-Germany,Heilbronn,9.22054,49.13995,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
-Germany,Heilbronn,9.22054,49.13995,1075,1075,1942,30,30,,,,,היילברון,,,,https://www.jewishvirtuallibrary.org/heilbronn,
 Germany,Heiligenstadt,11.17185,49.86303,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Heimbach,7.53333,50.45,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Heppenheim,8.63889,49.64306,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
@@ -1215,26 +1176,6 @@ France,Nantes ,-1.552453,47.203649,900,900,1942,30,30,,,,,נאנט,,,,https://ww
 France,Narbonne,3.0042121,43.1837661,810,810,1942,30,30,,,,,נרבון,,,,https://he.wikipedia.org/wiki/%D7%A0%D7%A8%D7%91%D7%95%D7%9F,
 Germany,Nauheim,8.4535626,49.9452137,1303,1303,1942,30,30,,,,,נאוהיים,,,,https://www.jewishvirtuallibrary.org/nauheim,
 Germany,Naumburg,11.80979,51.14987,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
-Poland,Nysa,17.33639,50.47333,1349,1349,1942,30,30,,,,,ניסה,,Neisse,,BLACK DEATH - JewishEncyclopedia.com,
-Poland,Nysa,17.33639,50.47333,1300,1300,1942,30,30,,,,,ניסה,,Neisse,,Early Jewish settlement in Upper Silesia - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1400,1400,1942,30,30,,,,,ניסה,,Neisse,,Jewish community re-established after Black Death - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1500,1500,1942,30,30,,,,,ניסה,,Neisse,,Jewish community during Renaissance period - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1600,1600,1942,30,30,,,,,ניסה,,Neisse,,Jewish community in 17th century - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1700,1700,1942,30,30,,,,,ניסה,,Neisse,,Jewish community in 18th century - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1800,1800,1942,30,30,,,,,ניסה,,Neisse,,Jewish community in 19th century - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1840,1840,1942,30,30,,,,,ניסה,,Neisse,,Jewish population: 1840 - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1850,1850,1942,30,30,,,,,ניסה,,Neisse,,Jewish population: 1850 - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1860,1860,1942,30,30,,,,,ניסה,,Neisse,,Jewish population: 1860 - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1870,1870,1942,30,30,,,,,ניסה,,Neisse,,Jewish population: 1870 - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1880,1880,1942,30,30,,,,,ניסה,,Neisse,,Jewish population: 1880 - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1890,1890,1942,30,30,,,,,ניסה,,Neisse,,Jewish population: 1890 - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1900,1900,1942,30,30,,,,,ניסה,,Neisse,,Jewish population: 1900 - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1910,1910,1942,30,30,,,,,ניסה,,Neisse,,Jewish population: 1910 - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1920,1920,1942,30,30,,,,,ניסה,,Neisse,,Jewish population: 1920 - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1930,1930,1942,30,30,,,,,ניסה,,Neisse,,Jewish population: 1930 - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1938,1938,1942,30,30,,,,,ניסה,,Neisse,,Kristallnacht - synagogue destroyed - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1940,1940,1942,30,30,,,,,ניסה,,Neisse,,Jewish community during WWII - Hebrew Wikipedia,
-Poland,Nysa,17.33639,50.47333,1945,1945,1942,30,30,,,,,ניסה,,Neisse,,Post-war Jewish community - Hebrew Wikipedia,
 Netherlands,Netherlands,5.2913,52.1326,1100,1100,1942,30,30,,,,,הולנד,,,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_the_Netherlands,
 Switzerland,Neuchâtel,6.933,47.000,1288,1288,1942,30,30,,,,,נושטל,,,,https://www.jewishvirtuallibrary.org/neuch-x00e2-tel,
 Germany,Neuenburg,7.56194,47.81472,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
@@ -1255,13 +1196,6 @@ Slovakia,Nitra,18.0894593,48.31295,1113,1113,1942,30,30,,,,,ניטרה,,,,https:
 Germany,Nordhausen,10.7957,51.5018,1200,1200,1942,30,30,,,,,נורדהאוזן,,,,https://he.wikipedia.org/wiki/%D7%A0%D7%95%D7%A8%D7%93%D7%94%D7%90%D7%95%D7%96%D7%9F,
 Germany,Nordhausen,10.7957,51.5018,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Nordhausen,10.7957,51.5018,1290,1290,1942,30,30,,,,,נורדהאוזן,,,,https://www.jewishvirtuallibrary.org/nordhausen,
-Germany,Nördlingen,10.48868,48.85122,1100,1100,1942,30,30,,,,, נרדלינגן,"מרלינגן, נוירדלינגן, נורדלינגן, נורדלינגא, נורלינגא, נורלינגען, נערליגן",,,https://dbs.anumuseum.org.il/skn/he/c6/e187604/%D7%9E%D7%A7%D7%95%D7%9D/%D7%A0%D7%A8%D7%93%D7%9C%D7%99%D7%A0%D7%92%D7%9F,
-Germany,Nördlingen,10.48868,48.85122,1349,1349,1942,30,30,,,,,נורדלינגן,"מרלינגן, נוירדלינגן, נורדלינגן, נורדלינגא, נורלינגא, נורלינגען, נערליגן",,,BLACK DEATH - JewishEncyclopedia.com,
-Germany,Nördlingen,10.48868,48.85122,1200,1200,1942,30,30,,,,,נורדלינגן,"מרלינגן, נוירדלינגן, נורדלינגן, נורדלינגא, נורלינגא, נורלינגען, נערליגן",,,https://jhva.wordpress.com/2010/11/09/%D7%91%D7%99%D7%AA-%D7%94%D7%A7%D7%91%D7%A8%D7%95%D7%AA-%D7%94%D7%99%D7%94%D7%95%D7%93%D7%99-%D7%A9%D7%9C-%D7%A0%D7%95%D7%A8%D7%93%D7%9C%D7%99%D7%A0%D7%92%D7%9F/,
-Germany,Nördlingen,10.48868,48.85122,1100,1100,1942,30,30,,,,,נורדלינגן,"מרלינגן, נוירדלינגן, נורדלינגן, נורדלינגא, נורלינגא, נורלינגען, נערליגן",,,https://dbs.anumuseum.org.il/skn/en/c6/e187604/Place/Noerdlingen,
-Germany,Nördlingen,10.48868,48.85122,1241,1241,1942,30,30,,,,,נורדלינגן,"מרלינגן, נוירדלינגן, נורדלינגן, נורדלינגא, נורלינגא, נורלינגען, נערליגן",,,EhemaligeSynagogeOberdorf-Katalog-englisch-2013.pdf,
-Germany,Nördlingen,10.48868,48.85122,1100,1100,1942,30,30,,,,,נורדלינגן,"מרלינגן, נוירדלינגן, נורדלינגן, נורדלינגא, נורלינגא, נורלינגען, נערליגן",,,https://www.jewishvirtuallibrary.org/noerdlingen,
-Germany,Nördlingen,10.48868,48.85122,1100,1100,1942,30,30,,,,,נורדלינגן,"מרלינגן, נוירדלינגן, נורדלינגן, נורדלינגא, נורלינגא, נורלינגען, נערליגן",,,https://www.jewishencyclopedia.com/articles/11589-nordlingen,
 North Macedonia,North Macedonia,,,300,300,1942,30,30,,,,,יהדות מקדוניה הצפונית,,,,https://he.wikipedia.org/wiki/%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%9E%D7%A7%D7%93%D7%95%D7%A0%D7%99%D7%94_%D7%94%D7%A6%D7%A4%D7%95%D7%A0%D7%99%D7%AA,
 Norway,Norway,8.73701,61.3109,1400,1400,1942,30,30,,,,,נורווגיה,,,,https://en.wikipedia.org/wiki/History_of_the_Jews_in_Norway,
 Germany,Nossen,13.29652,51.05798,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
@@ -1274,7 +1208,6 @@ Germany,Nuremberg,11.077298,49.453872,1146,1146,1942,30,30,,,,,נירנברג,,,
 Germany,Nuremberg,11.077298,49.453872,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Nürnberg,11.077298,49.453872,1050,1050,1942,30,30,,,,,יהדות נירנברג,,,,https://he.wikipedia.org/wiki/%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%A0%D7%99%D7%A8%D7%A0%D7%91%D7%A8%D7%92,
 France,Nyons,5.14052,44.36082,1300,1300,1942,30,30,,,,,ניוז,,,,https://jewishencyclopedia.com/articles/11637-nyons,
-Poland,Nysa,17.3324733,50.4738029,1319,1319,1942,30,30,,,,,יהודי ניסה,,,,https://he.wikipedia.org/wiki/%D7%A7%D7%94%D7%99%D7%9C%D7%AA_%D7%99%D7%94%D7%95%D7%93%D7%99_%D7%A0%D7%99%D7%A1%D7%94,
 Germany,Ober-Moschel,7.77278,49.72694,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Oberwesel,7.72522,50.10777,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Odernheim,7.70427,49.76511,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
@@ -1335,27 +1268,7 @@ France,POITIERS,0.340196,46.5802596,1200,1200,1942,30,30,,,,,פואטייה,,,,h
 Germany,Pomerania,,,1200,1200,1942,30,30,,,,,פומרניה,,,,https://www.jewishvirtuallibrary.org/pomerania,
 France,"Posquières, Vauvert",4.27587,43.69386,1150,1150,1942,30,30,,,,,פושקירה,"פּוֹסְקְיֶיר , וווה",,,POSQUIÈRES - JewishEncyclopedia.com,
 Poland,"Poznań, Posen",16.92993,52.40692,1200,1200,1942,30,30,,,,,פוזנן,,,,https://he.wikipedia.org/wiki/%D7%A4%D7%95%D7%96%D7%A0%D7%9F,
-Czech,Prague,14.4378,50.0755,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Czech,"Prague, Praha",14.4378,50.0755,965,965,1942,30,30,,,,,יהדות פראג,,,,https://he.wikipedia.org/wiki/%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%A4%D7%A8%D7%90%D7%92,
-Czech,Prague,14.4378,50.0755,1091,1091,1942,30,30,,,,,יהדות פראג,,,,First documented Jewish settlement in Prague,
-Czech,Prague,14.4378,50.0755,1092,1141,1942,30,30,,,,,יהדות פראג,,,,Early Jewish community development,
-Czech,Prague,14.4378,50.0755,1142,1269,1942,30,30,,,,,יהדות פראג,,,,Jewish quarter established in Prague,
-Czech,Prague,14.4378,50.0755,1270,1388,1942,30,30,,,,,יהדות פראג,,,,Alt-Neu Synagogue construction and medieval period,
-Czech,Prague,14.4378,50.0755,1389,1399,1942,30,30,,,,,יהדות פראג,,,,Prague pogrom - Jewish quarter attacked,
-Czech,Prague,14.4378,50.0755,1400,1591,1942,30,30,,,,,יהדות פראג,,,,Jewish community rebuilds and golden age,
-Czech,Prague,14.4378,50.0755,1592,1647,1942,30,30,,,,,יהדות פראג,,,,Rabbi Judah Loew ben Bezalel (Maharal) era,
-Czech,Prague,14.4378,50.0755,1648,1744,1942,30,30,,,,,יהדות פראג,,,,Jews defend Prague against Swedish siege,
-Czech,Prague,14.4378,50.0755,1745,1747,1942,30,30,,,,,יהדות פראג,,,,Empress Maria Theresa expels Jews,
-Czech,Prague,14.4378,50.0755,1748,1780,1942,30,30,,,,,יהדות פראג,,,,Jews allowed to return to Prague,
-Czech,Prague,14.4378,50.0755,1781,1847,1942,30,30,,,,,יהדות פראג,,,,Joseph II Edict of Toleration and emancipation,
-Czech,Prague,14.4378,50.0755,1848,1866,1942,30,30,,,,,יהדות פראג,,,,Jewish emancipation in Austrian Empire,
-Czech,Prague,14.4378,50.0755,1867,1882,1942,30,30,,,,,יהדות פראג,,,,Full civil rights granted to Jews,
-Czech,Prague,14.4378,50.0755,1883,1899,1942,30,30,,,,,יהדות פראג,,,,Spanish Synagogue built,
-Czech,Prague,14.4378,50.0755,1900,1917,1942,30,30,,,,,יהדות פראג,,,,Peak of Prague Jewish community - 25000 Jews,
-Czech,Prague,14.4378,50.0755,1918,1938,1942,30,30,,,,,יהדות פראג,,,,Czechoslovak independence - Jewish rights protected,
-Czech,Prague,14.4378,50.0755,1939,1941,1942,30,30,,,,,יהדות פראג,,,,Nazi occupation - persecution begins,
-Czech,Prague,14.4378,50.0755,1942,1944,1942,30,30,,,,,יהדות פראג,,,,Mass deportations to concentration camps,
-Czech,Prague,14.4378,50.0755,1945,1945,1942,30,30,,,,,יהדות פראג,,,,Liberation - few survivors return,
 Czech,"Prostějov, PROSSNITZ",17.1068,49.4724,1450,1450,1942,30,30,,,,,פרוסטיוב,,,,https://jewishencyclopedia.com/articles/12394-prossnitz,
 Poland,Pruchnik,22.51554,49.9062,1563,1563,1942,30,30,,,,,פרוחניק,,,,https://he.wikipedia.org/wiki/%D7%A4%D7%A8%D7%95%D7%97%D7%A0%D7%99%D7%A7,
 Poland,Prudnik,17.5801041,50.3217212,1350,1350,1942,30,30,,,,,יהודי פרודניק,,,,https://he.wikipedia.org/wiki/%D7%A7%D7%94%D7%99%D7%9C%D7%AA_%D7%99%D7%94%D7%95%D7%93%D7%99_%D7%A4%D7%A8%D7%95%D7%93%D7%A0%D7%99%D7%A7,
@@ -1509,23 +1422,6 @@ Ukraine,"Velyki Mezhyrichi, Великі Межирічі",26.86472,50.65667,130
 Italy,Verona,10.9916,45.4384,850,850,1942,30,30,,,,,ורונה,,,,https://he.wikipedia.org/wiki/%D7%95%D7%A8%D7%95%D7%A0%D7%94,
 Bulgaria,Vidin,22.8679,43.9962,550,550,1942,30,30,,,,,יהדות וידין,,,,https://he.wikipedia.org/wiki/%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%95%D7%99%D7%93%D7%99%D7%9F,
 Bulgaria,Vidin,22.8679,43.9962,500,500,1942,30,30,,,,,וידין,,,,https://he.wikipedia.org/wiki/%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%95%D7%99%D7%93%D7%99%D7%9F,
-Austria,Vienna,16.3738,48.2082,1194,1194,1942,30,30,,,,,יהדות וינה,,,,First documented Jewish presence in Vienna,
-Austria,Vienna,16.3738,48.2082,1195,1203,1942,30,30,,,,,יהדות וינה,,,,Early Jewish community development,
-Austria,Vienna,16.3738,48.2082,1204,1237,1942,30,30,,,,,יהדות וינה,,,,Jewish quarter established in Vienna,
-Austria,Vienna,16.3738,48.2082,1238,1420,1942,30,30,,,,,יהדות וינה,,,,First synagogue built and medieval period,
-Austria,Vienna,16.3738,48.2082,1421,1511,1942,30,30,,,,,יהדות וינה,,,,Wiener Gesera - expulsion of Jews from Vienna,
-Austria,Vienna,16.3738,48.2082,1512,1623,1942,30,30,,,,,יהדות וינה,,,,Jews allowed to return under special permits,
-Austria,Vienna,16.3738,48.2082,1624,1669,1942,30,30,,,,,יהדות וינה,,,,Jewish community re-established,
-Austria,Vienna,16.3738,48.2082,1670,1781,1942,30,30,,,,,יהדות וינה,,,,Court Jews serve Habsburg emperors,
-Austria,Vienna,16.3738,48.2082,1782,1825,1942,30,30,,,,,יהדות וינה,,,,Joseph II Edict of Toleration,
-Austria,Vienna,16.3738,48.2082,1826,1866,1942,30,30,,,,,יהדות וינה,,,,Stadttempel synagogue built,
-Austria,Vienna,16.3738,48.2082,1867,1899,1942,30,30,,,,,יהדות וינה,,,,Full emancipation of Austrian Jews,
-Austria,Vienna,16.3738,48.2082,1900,1919,1942,30,30,,,,,יהדות וינה,,,,Golden age - 175000 Jews in Vienna,
-Austria,Vienna,16.3738,48.2082,1920,1937,1942,30,30,,,,,יהדות וינה,,,,Interwar period - cultural flowering,
-Austria,Vienna,16.3738,48.2082,1938,1941,1942,30,30,,,,,יהדות וינה,,,,Anschluss - Nazi persecution begins,
-Austria,Vienna,16.3738,48.2082,1942,1944,1942,30,30,,,,,יהדות וינה,,,,Mass deportations to concentration camps,
-Austria,Vienna,16.3738,48.2082,1945,1959,1942,30,30,,,,,יהדות וינה,,,,Liberation - small community survives,
-Austria,Vienna,16.3738,48.2082,1960,1960,1942,30,30,,,,,יהדות וינה,,,,Post-war Jewish community rebuilds,
 Austria,Villach,13.8500268,46.6167284,1350,1350,1942,30,30,,,,,קהילת יהודי וילאך,פילאך,,,https://dbs.anumuseum.org.il/skn/he/c6/e175727/%D7%9E%D7%A7%D7%95%D7%9D/%D7%95%D7%99%D7%9C%D7%90%D7%9A,
 Austria,Villach,13.8500268,46.6167284,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
 Germany,Villingen,8.45861,48.06028,1310,1310,1942,30,30,,,,,וילינגן-שוונינגן,,,,https://www.jewishvirtuallibrary.org/villingen,
@@ -1533,24 +1429,6 @@ Ukraine,"Volhynia, Wołyń",,,1025,1025,1942,30,30,,,,,ווהלין,װאָלין
 Ukraine,Volodymyr ,24.322222,50.848056,1100,1100,1942,30,30,,,,,לודמיר,,,,https://he.wikipedia.org/wiki/%D7%9C%D7%95%D7%93%D7%9E%D7%99%D7%A8,
 Austria,Vorarlberg,,,1300,1300,1942,30,30,,,,,פורארלברג,,,,https://www.jewishvirtuallibrary.org/vorarlberg,
 Germany,Wachenheim,8.18041,49.44045,1349,1349,1942,30,30,,,,,,,,,BLACK DEATH - JewishEncyclopedia.com,
-Poland,Warsaw,21.0122287,52.2296756,1349,1414,1942,30,30,,,,,יהדות ווארשה,,,,First Jewish settlement in Warsaw,
-Poland,Warsaw,21.0122287,52.2296756,1349,1526,1942,30,30,,,,,יהדות ווארשה,,,,Early Jewish community development,
-Poland,Warsaw,21.0122287,52.2296756,1349,1579,1942,30,30,,,,,יהדות ווארשה,,,,Jewish privileges granted by King Sigismund,
-Poland,Warsaw,21.0122287,52.2296756,1349,1647,1942,30,30,,,,,יהדות ווארשה,,,,Jewish quarter established,
-Poland,Warsaw,21.0122287,52.2296756,1349,1767,1942,30,30,,,,,יהדות ווארשה,,,,Chmielnicki massacres - refugees arrive,
-Poland,Warsaw,21.0122287,52.2296756,1349,1793,1942,30,30,,,,,יהדות ווארשה,,,,Council of Four Lands meets in Warsaw,
-Poland,Warsaw,21.0122287,52.2296756,1349,1806,1942,30,30,,,,,יהדות ווארשה,,,,Kościuszko Uprising - Jewish participation,
-Poland,Warsaw,21.0122287,52.2296756,1349,1861,1942,30,30,,,,,יהדות ווארשה,,,,Duchy of Warsaw - Jewish rights expanded,
-Poland,Warsaw,21.0122287,52.2296756,1349,1896,1942,30,30,,,,,יהדות ווארשה,,,,Great Synagogue of Warsaw built,
-Poland,Warsaw,21.0122287,52.2296756,1349,1917,1942,30,30,,,,,יהדות ווארשה,,,,Bund founded in Warsaw,
-Poland,Warsaw,21.0122287,52.2296756,1349,1938,1942,30,30,,,,,יהדות ווארשה,,,,Polish independence - largest Jewish community,
-Poland,Warsaw,21.0122287,52.2296756,1349,1939,1942,30,30,,,,,יהדות ווארשה,,,,German invasion - 375000 Jews in Warsaw,
-Poland,Warsaw,21.0122287,52.2296756,1349,1941,1942,30,30,,,,,יהדות ווארשה,,,,Warsaw Ghetto established,
-Poland,Warsaw,21.0122287,52.2296756,1349,1942,1942,30,30,,,,,יהדות ווארשה,,,,Great Deportation to Treblinka,
-Poland,Warsaw,21.0122287,52.2296756,1349,1944,1942,30,30,,,,,יהדות ווארשה,,,,Warsaw Ghetto Uprising,
-Poland,Warsaw,21.0122287,52.2296756,1349,1967,1942,30,30,,,,,יהדות ווארשה,,,,Liberation - few survivors remain,
-Poland,Warsaw,21.0122287,52.2296756,19134968,1988,1942,30,30,,,,,יהדות ווארשה,,,,Anti-Semitic campaign - Jewish emigration,
-Poland,Warsaw,21.0122287,52.2296756,1349,1989,1942,30,30,,,,,יהדות ווארשה,,,,Fall of communism - Jewish revival begins,
 Poland,Kielce,20.6286,50.8661,1819,1819,1845,100,500,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,First Jewish settlement - Jews begin settling in Kielce
 Poland,Kielce,20.6286,50.8661,1819,1845,1846,500,40,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,Jews expelled from Kielce (1845) - ban officially lifted in 1863
 Poland,Kielce,20.6286,50.8661,1819,1846,1862,50,700,,,,,קיילצה,,Kielce,Kielce,https://www.crarg.org/jewish-genealogy/kielce-poland.php,Jews expelled from Kielce (1845) - ban officially lifted in 1863
@@ -5642,12 +5520,6 @@ France,Amiens,2.2952,49.8941,1900,1930,1989,250,300,high,1,1,Amiens,אמיין,,
 France,Amiens,2.2952,49.8941,1900,1990,2016,300,300,high,1,1,Amiens,אמיין,,Amiens,Amiens,https://grokipedia.com/page/amiens_synagogue,"""Estimate based on families (~60 families) 'by the late 20th century'"""
 France,Amiens,2.2952,49.8941,1900,2017,2024,300,,high,1,1,Amiens,אמיין,,Amiens,Amiens,https://grokipedia.com/page/amiens_synagogue,"""Estimate based on families (~60 families) reported at inauguration; Rabbi Richard Benazera; President Annick Hanau"""
 France,Anduze,3.98675,44.0536,2025,2025,2024,1,,high,1,1,Anduze,,,Anduze,Andusa,https://www.israelnationalnews.com/news/407742,"""Presence of a Jewish individual confirmed; a 70-year-old Jewish man wearing a kippah and tzitzit was the victim of an antisemitic assault in the town."""
-France,Annemasse,6.2364,46.1958,1000,1000,2024,,,high,1,1,Annemasse,,,Annemasse,Annemasse,https://jguideeurope.org/en/site/place-jean-deffaugt/,"""Source states Jewish presence probably dates back to the Middle Ages but was quite small."""
-France,Annemasse,6.2364,46.1958,1000,1915,2024,,,high,1,1,Annemasse,,,Annemasse,Annemasse,https://jguideeurope.org/en/site/place-jean-deffaugt/,"""Town developed mainly in the early 20th century (context of Jewish history)."""
-France,Annemasse,6.2364,46.1958,1000,1000,2024,,,high,1,1,Annemasse,,,Annemasse,Annemasse,https://jguideeurope.org/en/site/synagogue-of-annemasse/,"""Source states Jewish presence probably dates back to the Middle Ages but was quite small."""
-France,Annemasse,6.2364,46.1958,1000,1915,2024,,,high,1,1,Annemasse,,,Annemasse,Annemasse,https://jguideeurope.org/en/site/synagogue-of-annemasse/,"""Town developed mainly in the early 20th century (context of Jewish history)."""
-France,Annemasse,6.2364,46.1958,1000,1800,2024,,,high,1,1,Annemasse,,,Annemasse,Annemasse,https://jguideeurope.org/en/site/place-jean-deffaugt/,"""Jewish presence changed with the emancipation of the Jews of France following the Revolution."""
-France,Annemasse,6.2364,46.1958,1000,1800,2024,,,high,1,1,Annemasse,,,Annemasse,Annemasse,https://jguideeurope.org/en/site/synagogue-of-annemasse/,"""Jewish presence changed with the emancipation of the Jews of France following the Revolution."""
 France,Antibes,7.1251,43.5804,1960,1960,1989,,,high,1,1,Antibes,אנטיב,,Antibes,Antibes,"following the arrival of Jews from North Africa.""","""The Jewish community of Antibes-Juan-les-Pins was created in the 1960s"
 France,Antibes,7.1251,43.5804,1960,1990,2023,,,high,1,1,Antibes,אנטיב,,Antibes,Antibes,https://jguideeurope.org/en/site/synagogue-of-antibes/,"""The Synagogue of Antibes was built in 1990 and also houses a cultural centre."""
 France,Antibes,7.1251,43.5804,1960,2024,2023,,,high,1,1,Antibes,אנטיב,,Antibes,Antibes,Juan-les-Pins,"""Source notes that sizable Jewish communities can be found in the cities of Antibes"
@@ -19585,3 +19457,136 @@ Venezuela,Maracaibo,-71.6444,10.6427,1550,1550,2024,1,,high,1,1,Maracaibo,,,,,ht
 Guyana,Georgetown,-58.1553,6.8013,1906,1906,2024,1,,high,1,1,Georgetown,,,,,https://jewishguyana.com/,"The Jewish Community of Guyana maintains a presence in Georgetown, describing itself as a small but growing community serving residents, expats, and visitors."
 Guatemala,Quetzaltenango,-91.518,14.8347,1850,1850,2024,1,,high,1,1,Quetzaltenango,,,,,https://www.worldjewishcongress.org/en/about/communities/GT,German Jewish immigrants originally settled in Quetzaltenango
 Panama,Colon,-79.9,9.3592,1890,1890,2024,1,,high,1,1,Colon,,,,Колон,https://cdp.jewishgen.org/british-isles,"With the construction of the Panama Canal, Jews from Syria and Turkey founded Ahvat Ahim in Colon."
+Austria,Vienna,16.3738,48.2082,1238,1757,1859,454,6200,high,1,1,Vienna,וינה,וויען,Wien,Вена,https://www.worldjewishcongress.org/en/about/communities/AT,"About 454 Jews, all members of 12 prominent families, lived in Vienna."
+Austria,Vienna,16.3738,48.2082,1238,1860,1869,6200,40200,high,1,1,Vienna,וינה,וויען,Wien,Вена,https://www.worldjewishcongress.org/en/about/communities/AT,"The Jewish community numbered 6,200."
+Austria,Vienna,16.3738,48.2082,1238,1870,1899,40200,147000,high,1,1,Vienna,וינה,וויען,Wien,Вена,https://www.worldjewishcongress.org/en/about/communities/AT,"The Jewish community grew to 40,200."
+Austria,Vienna,16.3738,48.2082,1238,1900,1934,147000,180000,high,1,1,Vienna,וינה,וויען,Wien,Вена,https://www.worldjewishcongress.org/en/about/communities/AT,"The Jewish community grew to 147,000."
+Austria,Vienna,16.3738,48.2082,1238,1935,1936,180000,180000,high,1,1,Vienna,וינה,וויען,Wien,Вена,https://www.worldjewishcongress.org/en/about/communities/AT,"By the mid-1930s, some 180,000 Jews lived in Vienna."
+Austria,Vienna,16.3738,48.2082,1238,1937,1937,180000,180000,high,1,1,Vienna,וינה,וויען,Wien,Вена,https://www.claimscon.org/our-work/compensation/background/austria/history-of-the-austrian-jewish-community/,"There were 180,000 Jews in Vienna, who led a comfortable and pleasant life before 1938."
+Austria,Vienna,16.3738,48.2082,1238,1938,1939,180000,50000,high,1,1,Vienna,וינה,וויען,Wien,Вена,https://www.wien.info/resource/blob/322718/db38d1b5ea0a728aff99ad1eb7bca727/juedisches-wien-de-data.pdf,"Whereas the IKG had around 180,000 members before 1938."
+Austria,Vienna,16.3738,48.2082,1238,1940,1944,50000,3955,high,1,1,Vienna,וינה,וויען,Wien,Вена,https://www.claimscon.org/our-work/compensation/background/austria/history-of-the-austrian-jewish-community/,"By December 1940, there were still about 50,000 to 60,000 Jews living in Vienna."
+Austria,Vienna,16.3738,48.2082,1238,1945,1949,3955,6514,high,1,1,Vienna,וינה,וויען,Wien,Вена,https://www.wien.info/resource/blob/322718/db38d1b5ea0a728aff99ad1eb7bca727/juedisches-wien-de-data.pdf,"By 1945, the IKG had 3,955 members."
+Austria,Vienna,16.3738,48.2082,1238,1950,2022,6514,12000,high,1,1,Vienna,וינה,וויען,Wien,Вена,https://www.wien.info/resource/blob/322718/db38d1b5ea0a728aff99ad1eb7bca727/juedisches-wien-de-data.pdf,"6,514 Jews are registered in Vienna."
+Austria,Vienna,16.3738,48.2082,1238,2023,2024,12000,8000,medium,1,1,Vienna,וינה,וויען,Wien,Вена,https://www.worldjewishcongress.org/en/about/communities/AT,"The Israelite Religious Community (IKG) of Vienna recorded approximately 12,000 Jews living in Vienna as of 2023."
+Austria,Vienna,16.3738,48.2082,1238,2025,2024,8000,,high,1,1,Vienna,וינה,וויען,Wien,Вена,https://www.wien.info/resource/blob/322718/db38d1b5ea0a728aff99ad1eb7bca727/juedisches-wien-de-data.pdf,"The Jewish Community (IKG) of Vienna has some 8,000 members."
+Czech Republic,Prague,14.4378,50.0755,965,1943,2024,1216,,high,1,1,Prague,פראג,פראג,Prag,Praha,https://www.ushmm.org/online/hsv/source_view.php?SourceId=32535,Jewish children living in Prague in 1943-44
+Hungary,Budapest,19.084269,47.482728,132,1939,1938,200000,200000,medium,1,1,Budapest,בודפשט,בודאפעשט,Budapest,Ínség-szikla,https://encyclopedia.ushmm.org/content/en/article/budapest,"Before World War II, approximately 200,000 Jews lived in Budapest, making it the center of Hungarian Jewish cultural life."
+Hungary,Budapest,19.084269,47.482728,132,1939,1940,200000,185000,high,1,1,Budapest,בודפשט,בודאפעשט,Budapest,Ínség-szikla,https://www.yadvashem.org/articles/general/prewar-jewish-life-in-budapest.html,"On the eve of World War II, there were about 200,000 Jews in Budapest."
+Hungary,Budapest,19.084269,47.482728,132,1941,1940,185000,220000,medium,1,1,Budapest,בודפשט,בודאפעשט,Budapest,Ínség-szikla,https://portal.ehri-project.eu/units/il-002798-7538131,"According to the 1941 census, approximately 185,000 Jews lived in Budapest."
+Hungary,Budapest,19.084269,47.482728,132,1941,1943,184000,200000,high,1,1,Budapest,בודפשט,בודאפעשט,Budapest,Ínség-szikla,https://www.worldjewishcongress.org/en/about/communities/HU,"According to a 1941 census, 184,000 people classified as Jewish according to their religious affiliation lived in Budapest."
+Hungary,Budapest,19.084269,47.482728,132,1944,1944,200000,100000,high,1,1,Budapest,בודפשט,בודאפעשט,Budapest,Ínség-szikla,https://encyclopedia.ushmm.org/content/en/article/the-holocaust-in-hungary,"In July 1944, the large Jewish community of Budapest numbered some 200,000 people."
+Hungary,Budapest,19.084269,47.482728,132,1945,2024,100000,,high,1,1,Budapest,בודפשט,בודאפעשט,Budapest,Ínség-szikla,https://encyclopedia.ushmm.org/content/en/article/budapest,"Soviet forces liberated Budapest on February 13, 1945, and more than 100,000 Jews remained in the city at liberation."
+Poland,Warsaw,21.0122287,52.2296756,1414,1863,1877,1,100000,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://www.worldjewishcongress.org/en/about/communities/PL,Rabbi Dov Ber Meisels was arrested by the Russians for his patriotic activism in the January Uprising and expelled from Warsaw
+Poland,Warsaw,21.0122287,52.2296756,1414,1878,1877,100000,100000,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://www.jewishgen.org/yizkor/warsaw/warsaw.html,Warsaw numbered one hundred thousand Jewish souls
+Poland,Warsaw,21.0122287,52.2296756,1414,1878,1938,100000,350000,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://www.jewishgen.org/yizkor/warsaw1/war005.html,Warsaw numbered one hundred thousand Jewish souls
+Poland,Warsaw,21.0122287,52.2296756,1414,1939,1938,350000,300000,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://encyclopedia.ushmm.org/content/en/article/warsaw,"Prewar Jewish population, constituting about 30 percent of the city's total population"
+Poland,Warsaw,21.0122287,52.2296756,1414,1939,1939,300000,400000,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://www.worldjewishcongress.org/en/about/communities/PL,"Jewish population on the eve of the Second World War, representing more than 30% of the city's population"
+Poland,Warsaw,21.0122287,52.2296756,1414,1940,1939,400000,1,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://encyclopedia.ushmm.org/content/en/article/warsaw,"Population of the ghetto, increased by Jews compelled to move in from nearby towns"
+Poland,Warsaw,21.0122287,52.2296756,1414,1940,1939,375000,450000,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://www.nationalww2museum.org/war/articles/warsaw-ghetto-uprising,"Jewish population of Warsaw prior to relocating to the ghetto, the largest of any city in Europe"
+Poland,Warsaw,21.0122287,52.2296756,1414,1940,1941,80000,83000,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://www.nationalww2museum.org/war/articles/warsaw-ghetto-uprising,People died in the ghetto as a result of the inhumane conditions prior to deportations
+Poland,Warsaw,21.0122287,52.2296756,1414,1942,1941,83000,265000,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://encyclopedia.ushmm.org/content/en/article/warsaw,Jews died of starvation and disease between 1940 and mid-1942
+Poland,Warsaw,21.0122287,52.2296756,1414,1942,1941,1,1,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://www.nationalww2museum.org/war/articles/warsaw-ghetto-uprising,"Jacob Grojanowski, a Polish Jew who had been imprisoned at the Chelmno death camp, escaped and traveled back to the ghetto to give his report"
+Poland,Warsaw,21.0122287,52.2296756,1414,1942,1942,2,60000,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://www.nationalww2museum.org/war/articles/warsaw-ghetto-uprising,"Two representatives of ZOB met with Jan Karski, smuggling him into the ghetto"
+Poland,Warsaw,21.0122287,52.2296756,1414,1943,1942,60000,5000,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://encyclopedia.ushmm.org/content/en/article/warsaw,Remaining Jews in the ghetto in January when SS and police units returned to deport them
+Poland,Warsaw,21.0122287,52.2296756,1414,1943,1942,1000,4500,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://www.nationalww2museum.org/war/articles/warsaw-ghetto-uprising,Jews had been killed during the German forces' occupation of the ghetto until January 22
+Poland,Warsaw,21.0122287,52.2296756,1414,1943,1943,42000,1,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://www.nationalww2museum.org/war/articles/warsaw-ghetto-uprising,People were rounded up and deported to Treblinka and other camps during the Uprising
+Poland,Warsaw,21.0122287,52.2296756,1414,1944,2024,1,,high,1,1,Warsaw,ורשה,ווארשע,Warschau,Warszawa,https://encyclopedia.ushmm.org/content/en/article/remaining-jewish-population-of-europe-in-1945,Leah Hammerstein Silverstein fought with a Jewish unit in the Armia Ludowa (People's Army) during the Warsaw Polish uprising
+Germany,Berlin,13.408126,52.507192,1729,1925,1932,160000,160000,high,1,1,Berlin,ברלין,בערלין,Washingtonplatz,Берлин,https://encyclopedia.ushmm.org/content/en/article/germany-jewish-population-in-1933,"The largest Jewish population center was in Berlin (about 160,000 in 1925)"
+Germany,Berlin,13.408126,52.507192,1729,1933,1938,160000,80000,high,1,1,Berlin,ברלין,בערלין,Washingtonplatz,Берлин,https://encyclopedia.ushmm.org/content/en/article/berlin,"According to a census of June 16, 1933, the Jewish population of Berlin was about 160,000"
+Germany,Berlin,13.408126,52.507192,1729,1939,1989,80000,200,high,1,1,Berlin,ברלין,בערלין,Washingtonplatz,Берлин,https://encyclopedia.ushmm.org/content/en/article/berlin,"Berlin's Jewish population fell to about 80,000 people as a result of emigration from Nazi Germany between 1933 and 1939"
+Germany,Berlin,13.408126,52.507192,1729,1990,2013,200,12000,high,1,1,Berlin,ברלין,בערלין,Washingtonplatz,Берлин,https://kehilalinks.jewishgen.org/berlin/Ryker.html,By 1990 the community in East Berlin counted a mere 200 members
+Germany,Berlin,13.408126,52.507192,1729,2014,2024,12000,,high,1,1,Berlin,ברלין,בערלין,Washingtonplatz,Берлин,https://kehilalinks.jewishgen.org/berlin/Ryker.html,"Berlin has the largest Jewish community in Germany, with 12,000 registered members and eight synagogues"
+Germany,Bielefeld,8.531007,52.0191005,1345,1345,1369,300,25,high,1,1,Bielefeld,,,,,https://www.ushmm.org/online/hsv/source_view.php?SourceId=30731,"Alphabetical list of c. 300 Jews formerly resident in Bielefeld, Germany, including deportations."
+Germany,Bielefeld,8.531007,52.0191005,1345,1370,1553,25,0,high,1,1,Bielefeld,,,,,https://cdp.jewishgen.org/germany/nordrhein-westfalen-north-rhine-westphalia/bielefeld,"Estimate based on families. On 12 February 1370, Count of Ravensberg allowed Jews to return (5 families named: Saul Vinoes, Jutta Simon, Nennkun of Hamelen, Nennken un Rethberghe, Joan of Hamme)."
+Germany,Bielefeld,8.531007,52.0191005,1345,1554,1585,0,5,high,1,1,Bielefeld,,,,,https://cdp.jewishgen.org/germany/nordrhein-westfalen-north-rhine-westphalia/bielefeld,Since the mid-16th Century probably no Jewish residents because Duke Wilhelm V of Julich excluded Jews in 1554.
+Germany,Bielefeld,8.531007,52.0191005,1345,1586,1820,5,184,high,1,1,Bielefeld,,,,,https://cdp.jewishgen.org/germany/nordrhein-westfalen-north-rhine-westphalia/bielefeld,"Estimate based on families. On 11 July 1586, a family Hertz paid 20 for a short stay in the city."
+Germany,Bielefeld,8.531007,52.0191005,1345,1821,1879,184,653,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,The Jewish population rose from 184 in 1821.
+Germany,Bielefeld,8.531007,52.0191005,1345,1880,1899,653,793,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,Jewish population rose to 653 in 1880.
+Germany,Bielefeld,8.531007,52.0191005,1345,1900,1904,793,750,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,Jewish population was 793 in 1900.
+Germany,Bielefeld,8.531007,52.0191005,1345,1905,1904,750,800,high,1,1,Bielefeld,,,,,https://www.yadvashem.org/holocaust/this-month/december/1941.html,"The synagogue on Turnerstrasse, which was established in 1905 and had 750 seats, was set alight (capacity used as presence metric)."
+Germany,Bielefeld,8.531007,52.0191005,1345,1905,1924,800,883,high,1,1,Bielefeld,,,,,https://cdp.jewishgen.org/germany/nordrhein-westfalen-north-rhine-westphalia/bielefeld,"On 20 September 1905, the synagogue was inaugurated for 800 Jews."
+Germany,Bielefeld,8.531007,52.0191005,1345,1925,1932,883,800,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,"In 1925, in the Weimar period, the Jewish population reached a peak of 883."
+Germany,Bielefeld,8.531007,52.0191005,1345,1933,1932,800,800,high,1,1,Bielefeld,,,,,https://www.yadvashem.org/holocaust/this-month/december/1941.html,"Some 800 Jews lived in Bielefeld, Germany."
+Germany,Bielefeld,8.531007,52.0191005,1345,1933,1932,800,860,high,1,1,Bielefeld,,,,,https://www.memorialmuseums.org/memorialmuseum/bielefeld-memorial?locale=en,"In 1933, there were about 800 Jews in Bielefeld."
+Germany,Bielefeld,8.531007,52.0191005,1345,1933,1937,860,10,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,Jewish population was 860.
+Germany,Bielefeld,8.531007,52.0191005,1345,1938,1937,10,50,medium,1,1,Bielefeld,,,,,https://www.yadvashem.org/holocaust/this-month/december/1941.html,"In October 1938, approximately ten Jews of eastern European origin were evicted from Bielefeld as part of the expulsion to Zbaszyn."
+Germany,Bielefeld,8.531007,52.0191005,1345,1938,1937,50,13,high,1,1,Bielefeld,,,,,https://www.memorialmuseums.org/memorialmuseum/bielefeld-memorial?locale=en,"On November 12, the National Socialists deported 406 Jews - of whom 40 to 50 came from Bielefeld - from the Bielefeld main station to the Buchenwald concentration camp."
+Germany,Bielefeld,8.531007,52.0191005,1345,1938,1937,13,500,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,"On 28-29 Oct. 1938, at least 11-13 Jews of East European origin were expelled."
+Germany,Bielefeld,8.531007,52.0191005,1345,1938,1938,50,17,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,"About 40-50 Jewish men were arrested, most of them shopkeepers. About 30 were sent to the Buchenwald concentration camp."
+Germany,Bielefeld,8.531007,52.0191005,1345,1939,1938,17,30,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,The community started a Jewish school for 17 Jewish students in September 1939.
+Germany,Bielefeld,8.531007,52.0191005,1345,1939,1940,75,500,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,A camp holding an average of 75 nonresident Jews engaged in forced labor was also set up.
+Germany,Bielefeld,8.531007,52.0191005,1345,1941,1940,500,431,high,1,1,Bielefeld,,,,,https://www.yadvashem.org/holocaust/this-month/december/1941.html,"In the fall of 1941, some 500 Jews lived in Bielefeld, about 100 of them married to Christians."
+Germany,Bielefeld,8.531007,52.0191005,1345,1941,1940,420,88,high,1,1,Bielefeld,,,,,https://www.memorialmuseums.org/memorialmuseum/bielefeld-memorial?locale=en,"The first deportation from Bielefeld took place on December 13, 1941: About 420 Jews from the area of Bielefeld were deported on that day."
+Germany,Bielefeld,8.531007,52.0191005,1345,1941,1940,88,400,high,1,1,Bielefeld,,,,,https://cdp.jewishgen.org/germany/nordrhein-westfalen-north-rhine-westphalia/bielefeld,"On 13 December 1941, 88 Jews from Bielefeld disguised as 'deportation' were taken to Riga."
+Germany,Bielefeld,8.531007,52.0191005,1345,1941,1940,400,431,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,"In fall 1941, 400 Jews were left in the city in addition to another 100 in mixed marriages."
+Germany,Bielefeld,8.531007,52.0191005,1345,1941,1941,88,160,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,88 Jews were deported to the Riga ghetto on 13 December.
+Germany,Bielefeld,8.531007,52.0191005,1345,1942,1941,160,45,high,1,1,Bielefeld,,,,,https://www.yadvashem.org/holocaust/this-month/december/1941.html,"By July 1942, 160 additional Jews had been deported from Bielefeld to ghettos and camps."
+Germany,Bielefeld,8.531007,52.0191005,1345,1942,1941,45,32,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,45 Jews were deported to the Warsaw ghetto or to the Lublin district (Poland) on 31 March 1942.
+Germany,Bielefeld,8.531007,52.0191005,1345,1942,1942,145,84,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,145 Jews were deported to the Theresienstadt ghetto on 31 July (mostly elderly Jews).
+Germany,Bielefeld,8.531007,52.0191005,1345,1943,1942,84,29,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,84 Jews were deported to Auschwitz on 2 March 1943 (including about 63 from the forced labor camp).
+Germany,Bielefeld,8.531007,52.0191005,1345,1943,1943,8,40,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,8 Jews were deported to Theresienstadt on 28 June.
+Germany,Bielefeld,8.531007,52.0191005,1345,1944,1944,40,420,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,"Subsequently another 20 were deported in small groups and on 19 September 1944, 30-40 Jews in mixed marriages were deported to Zeitz and Elben."
+Germany,Bielefeld,8.531007,52.0191005,1345,1945,1944,420,509,high,1,1,Bielefeld,,,,,https://www.memorialmuseums.org/memorialmuseum/bielefeld-memorial?locale=en,About 420 Jews were deported from Bielefeld overall. Only a few more than 60 survived.
+Germany,Bielefeld,8.531007,52.0191005,1345,1945,1944,509,60,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,At least 509 Jews perished in the Holocaust.
+Germany,Bielefeld,8.531007,52.0191005,1345,1945,1979,60,30,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,A community of 50-60 survivors was established after the war.
+Germany,Bielefeld,8.531007,52.0191005,1345,1980,2024,30,,high,1,1,Bielefeld,,,,,https://yv360.yadvashem.org/api/Places/GetFullDetails?lang=en&id=5422650,"In the 1980s, about 30 Jews remained."
+Germany,Dortmund,7.466,51.51494,1085,1450,1379,0,50,high,1,1,Dortmund,,,,,https://holocaustresearchproject.net/nazioccupation/dortmund.html,No Jews remained in the city.
+Germany,Dortmund,7.466,51.51494,1085,1380,1595,50,0,high,1,1,Dortmund,,,,,https://holocaustresearchproject.net/nazioccupation/dortmund.html,Estimate based on families. Ten protected Jewish families were present with Shimshon ben Shemuel of Dueren as their Rabbi.
+Germany,Dortmund,7.466,51.51494,1085,1596,1845,0,190,high,1,1,Dortmund,,,,,https://holocaustresearchproject.net/nazioccupation/dortmund.html,"Jews were expelled, ending Jewish presence until the modern era."
+Germany,Dortmund,7.466,51.51494,1085,1846,1899,190,1942,high,1,1,Dortmund,,,,,https://holocaustresearchproject.net/nazioccupation/dortmund.html,Estimate based on families. 38 Jewish families were living in difficult economic circumstances.
+Germany,Dortmund,7.466,51.51494,1085,1900,1924,1942,3820,high,1,1,Dortmund,,,,,https://holocaustresearchproject.net/nazioccupation/dortmund.html,"A new synagogue with a seating capacity of 1,200 was consecrated."
+Germany,Dortmund,7.466,51.51494,1085,1925,1932,3820,4108,high,1,1,Dortmund,,,,,https://holocaustresearchproject.net/nazioccupation/dortmund.html,East European Jews represented a third of the population.
+Germany,Dortmund,7.466,51.51494,1085,1933,1937,4108,2600,high,1,1,Dortmund,,,,,https://holocaustresearchproject.net/nazioccupation/dortmund.html,"Population as of June 1933; during 1933, 217 Jews were arrested."
+Germany,Dortmund,7.466,51.51494,1085,1938,1938,2600,1444,high,1,1,Dortmund,,,,,https://holocaustresearchproject.net/nazioccupation/dortmund.html,August: Jewish community reduced to this number.
+Germany,Dortmund,7.466,51.51494,1085,1939,1940,1444,1222,high,1,1,Dortmund,,,,,https://holocaustresearchproject.net/nazioccupation/dortmund.html,Population as of May 1939.
+Germany,Dortmund,7.466,51.51494,1085,1941,1944,1222,45,high,1,1,Dortmund,,,,,https://holocaustresearchproject.net/nazioccupation/dortmund.html,Population as of June 1941.
+Germany,Dortmund,7.466,51.51494,1085,1945,1961,45,420,high,1,1,Dortmund,,,,,https://holocaustresearchproject.net/nazioccupation/dortmund.html,Estimate of 40-50 survivors forming a new community after the war.
+Germany,Dortmund,7.466,51.51494,1085,1962,1992,420,1310,high,1,1,Dortmund,,,,,https://holocaustresearchproject.net/nazioccupation/dortmund.html,"Community grew to 420, making it the largest in Westphalia."
+Germany,Dortmund,7.466,51.51494,1085,1993,2024,1310,,high,1,1,Dortmund,,,,,https://holocaustresearchproject.net/nazioccupation/dortmund.html,Jews arriving from the former Soviet bloc increased the community.
+Germany,Heilbronn,9.22054,49.13995,1050,1298,1407,143,1,high,1,1,Heilbronn,,,,,https://cdp.jewishgen.org/germany/baden-wuerttemberg-baden-wuerttemberg/heilbronn,143 Jews were killed during the Rintfleisch-Pogrom.
+Germany,Heilbronn,9.22054,49.13995,1050,1408,1419,1,1,high,1,1,Heilbronn,,,,,https://cdp.jewishgen.org/germany/baden-wuerttemberg-baden-wuerttemberg/heilbronn,A Jewish gravestone from the Middle Ages is dated 1408.
+Germany,Heilbronn,9.22054,49.13995,1050,1420,1466,1,0,high,1,1,Heilbronn,,,,,https://cdp.jewishgen.org/germany/baden-wuerttemberg-baden-wuerttemberg/heilbronn,A Jewish gravestone embedded in the southern cemetery wall is dated 1420.
+Germany,Heilbronn,9.22054,49.13995,1050,1467,1489,0,0,high,1,1,Heilbronn,,,,,https://cdp.jewishgen.org/germany/baden-wuerttemberg-baden-wuerttemberg/heilbronn,Jews were expelled from Heilbronn when the synagogue and the cemetery became properties of the Emperor.
+Germany,Heilbronn,9.22054,49.13995,1050,1490,1489,0,0,high,1,1,Heilbronn,,,,,https://cdp.jewishgen.org/germany/baden-wuerttemberg-baden-wuerttemberg/heilbronn,Jews were evicted from the city with the blessing of Emperor Frederick III; former Jewish properties were sold to the City.
+Germany,Heilbronn,9.22054,49.13995,1050,1490,1523,0,0,high,1,1,Heilbronn,,,,,https://kids.kiddle.co/Heilbronn,Jews were forced to leave the city.
+Germany,Heilbronn,9.22054,49.13995,1050,1524,1884,0,994,high,1,1,Heilbronn,,,,,https://kids.kiddle.co/Heilbronn,Jews were not allowed to settle in the city again for a long time following the Protestant Reformation.
+Germany,Heilbronn,9.22054,49.13995,1050,1885,1913,994,30,high,1,1,Heilbronn,,,,,https://cdp.jewishgen.org/germany/baden-wuerttemberg-baden-wuerttemberg/heilbronn,Jewish population recorded.
+Germany,Heilbronn,9.22054,49.13995,1050,1914,1932,30,970,high,1,1,Heilbronn,,,,,https://cdp.jewishgen.org/germany/baden-wuerttemberg-baden-wuerttemberg/heilbronn,30 fallen Heilbronn Jewish soldiers in World War I.
+Germany,Heilbronn,9.22054,49.13995,1050,1933,1942,970,4,high,1,1,Heilbronn,,,,,https://cdp.jewishgen.org/germany/baden-wuerttemberg-baden-wuerttemberg/heilbronn,Jewish population recorded.
+Germany,Heilbronn,9.22054,49.13995,1050,1943,1944,4,350,medium,1,1,Heilbronn,,,,,https://cdp.jewishgen.org/germany/baden-wuerttemberg-baden-wuerttemberg/heilbronn,Four to six unknown Jewish persons were buried in the eastern part of the cemetery.
+Germany,Heilbronn,9.22054,49.13995,1050,1945,1944,350,235,high,1,1,Heilbronn,,,,,https://cdp.jewishgen.org/germany/baden-wuerttemberg-baden-wuerttemberg/heilbronn,350 Jews were eventually murdered during the Holocaust.
+Germany,Heilbronn,9.22054,49.13995,1050,1945,2024,415,,high,1,1,Heilbronn,,,,,https://www.ushmm.org/online/hsv/source_view.php?SourceId=30661,"Alphabetical lists name 415 deportees and victims who perished from Heilbronn, Sontheim, Stuttgart, and environs (1050-1945)."
+Germany,Nördlingen,10.48868,48.85122,1290,1298,1407,8,15,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://hdbg.eu/juedisches_leben/pdf/ort/09779194,8 Nördlingen Jews murdered in the Rintfleisch-Pogrom
+Germany,Nördlingen,10.48868,48.85122,1290,1408,1447,15,35,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://hdbg.eu/juedisches_leben/pdf/ort/09779194,Estimate based on families (3 tax-paying households)
+Germany,Nördlingen,10.48868,48.85122,1290,1448,1452,35,0,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://hdbg.eu/juedisches_leben/pdf/ort/09779194,Estimate based on families (7 tax-paying households)
+Germany,Nördlingen,10.48868,48.85122,1290,1453,1452,0,0,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/noerdlingen_synagoge.htm,"For 6 years, no Jews were in the city"
+Germany,Nördlingen,10.48868,48.85122,1290,1453,1499,0,55,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://hdbg.eu/juedisches_leben/pdf/ort/09779194,Jews expelled for the next six years
+Germany,Nördlingen,10.48868,48.85122,1290,1500,1859,55,5,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://hdbg.eu/juedisches_leben/pdf/ort/09779194,Estimate based on families (11 house fathers with their dependents)
+Germany,Nördlingen,10.48868,48.85122,1290,1860,1860,5,1,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/noerdlingen_synagoge.htm,Estimate based on families. 1 Jewish family moved into the city; Eduard Höchstädter was the first
+Germany,Nördlingen,10.48868,48.85122,1290,1861,1860,1,1,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/images/Images%20385/Noerdlingen%20Synagoge%20Kurzreferat%202014de.pdf,Eduard Höchstädter from Mönchsdeggingen obtained the right of residence
+Germany,Nördlingen,10.48868,48.85122,1290,1861,1866,1,61,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/images/Images%20385/Noerdlingen%20Synagoge%20Kurzreferat%202014en.pdf,Leather trader Eduard Höchstädter from nearby Mönchsdeggingen successfully fought for the right of permanent residence
+Germany,Nördlingen,10.48868,48.85122,1290,1867,1866,61,60,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/noerdlingen_synagoge.htm,Jewish inhabitants
+Germany,Nördlingen,10.48868,48.85122,1290,1867,1870,60,176,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://hdbg.eu/juedisches_leben/pdf/ort/09779194,Over 60 Jews had settled in the city
+Germany,Nördlingen,10.48868,48.85122,1290,1871,1870,176,176,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/noerdlingen_synagoge.htm,Jewish inhabitants (about 25 families)
+Germany,Nördlingen,10.48868,48.85122,1290,1871,1874,176,375,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://hdbg.eu/juedisches_leben/pdf/ort/09779194,Jewish persons
+Germany,Nördlingen,10.48868,48.85122,1290,1875,1879,375,347,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/noerdlingen_synagoge.htm,Estimate based on families (70 to 80 families)
+Germany,Nördlingen,10.48868,48.85122,1290,1880,1879,347,350,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/noerdlingen_synagoge.htm,Jewish inhabitants
+Germany,Nördlingen,10.48868,48.85122,1290,1880,1885,350,500,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://hdbg.eu/juedisches_leben/pdf/ort/09779194,Jewish inhabitants
+Germany,Nördlingen,10.48868,48.85122,1290,1886,1885,500,500,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/images/Images%20385/Noerdlinen%20Augsburger%20Abendz%2017091886.pdf,"Estimate based on families. Community grown to almost 100 families; new synagogue inaugurated on September 17, 1886"
+Germany,Nördlingen,10.48868,48.85122,1290,1886,1885,500,425,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/images/Images%20385/Noerdlinen%20Augsburger%20Abendz%2017091886en.pdf,"Estimate based on families. Community grown to almost 100 families; new synagogue inaugurated on September 17, 1886"
+Germany,Nördlingen,10.48868,48.85122,1290,1886,1889,425,469,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/noerdlingen_synagoge.htm,Estimate based on families (85 community members/heads of families) in April; new synagogue inaugurated September 17
+Germany,Nördlingen,10.48868,48.85122,1290,1890,1894,469,500,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/noerdlingen_synagoge.htm,Jewish inhabitants
+Germany,Nördlingen,10.48868,48.85122,1290,1895,1898,500,489,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://hdbg.eu/juedisches_leben/pdf/ort/09779194,Almost 500 persons; largest membership reached
+Germany,Nördlingen,10.48868,48.85122,1290,1899,1899,489,408,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/noerdlingen_synagoge.htm,Highest number of Jewish inhabitants counted
+Germany,Nördlingen,10.48868,48.85122,1290,1900,1909,408,314,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/noerdlingen_synagoge.htm,Jewish inhabitants; Israelitischer Frauenverein founded
+Germany,Nördlingen,10.48868,48.85122,1290,1910,1923,314,250,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/noerdlingen_synagoge.htm,Jewish inhabitants
+Germany,Nördlingen,10.48868,48.85122,1290,1924,1932,250,186,medium,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/noerdlingen_synagoge.htm,Approximately 250 persons belonged to the Jewish community
+Germany,Nördlingen,10.48868,48.85122,1290,1933,1932,186,190,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://www.alemannia-judaica.de/noerdlingen_synagoge.htm,Jewish persons lived in the city
+Germany,Nördlingen,10.48868,48.85122,1290,1933,1938,190,70,medium,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://hdbg.eu/juedisches_leben/pdf/ort/09779194,Approximately 190 members in the religious community
+Germany,Nördlingen,10.48868,48.85122,1290,1939,1946,70,11,medium,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://hdbg.eu/juedisches_leben/pdf/ort/09779194,Approximately 70 persons remained; community sold the synagogue and other properties to the city
+Germany,Nördlingen,10.48868,48.85122,1290,1947,2024,11,,high,1,1,Nördlingen,נרדלינגן,,Nördlingen,Nördlingen,https://hdbg.eu/juedisches_leben/pdf/ort/09779194,Jews residing in Nördlingen
+Germany,Bamberg,10.90067,49.89873,1007,1007,2024,1,,high,1,1,Bamberg,,,,,https://en.bamberg.info/juedischesleben/,First Jewish settlements in Bamberg go back to this year
+Poland,Nysa,17.3324733,50.4738029,1319,1319,2024,1,,high,1,1,Nysa,,,,,https://www.jewishgen.org/yizkor/Czestochowa6/cze1_073.html,Earliest mention of Jews in Nysa (Neisse) in Silesia.
+Poland,Słupsk,17.02872,54.46405,1939,1939,2024,1,,high,1,1,Słupsk,,,,,https://kids.kiddle.co/S%C5%82upsk,Mention of a former Jewish funeral home located on dr Max Joseph Street.
+Poland,Toruń,18.59814,53.01375,1450,1450,2024,1,,high,1,1,Toruń,,,,,https://visittorun.com/en/page/toru%C5%84%E2%80%99s-lesser-known-gems,"Jews were forbidden to settle in Toruń, but Jewish merchants still penetrated the area."
+France,Annemasse,6.2364,46.1958,1940,1940,2024,1,,high,1,1,Annemasse,,,Annemasse,Annemasse,https://cdp.jewishgen.org/western-europe/france/,Listed as a burial location in the JewishGen Cemetery Discovery Project.

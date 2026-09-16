@@ -17176,5 +17176,75 @@
     "yiddish": "",
     "german": "",
     "other": "Колон"
+  },
+  "vienna|austria": {
+    "english": "Vienna",
+    "hebrew": "וינה",
+    "yiddish": "וויען",
+    "german": "Wien",
+    "other": "Вена"
+  },
+  "budapest|hungary": {
+    "english": "Budapest",
+    "hebrew": "בודפשט",
+    "yiddish": "בודאפעשט",
+    "german": "Budapest",
+    "other": "Ínség-szikla"
+  },
+  "warsaw|poland": {
+    "english": "Warsaw",
+    "hebrew": "ורשה",
+    "yiddish": "ווארשע",
+    "german": "Warschau",
+    "other": "Warszawa"
+  },
+  "berlin|germany": {
+    "english": "Berlin",
+    "hebrew": "ברלין",
+    "yiddish": "בערלין",
+    "german": "Washingtonplatz",
+    "other": "Берлин"
+  },
+  "bielefeld|germany": {
+    "english": "Bielefeld",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dortmund|germany": {
+    "english": "Dortmund",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "heilbronn|germany": {
+    "english": "Heilbronn",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nördlingen|germany": {
+    "english": "Nördlingen",
+    "hebrew": "נרדלינגן",
+    "yiddish": "",
+    "german": "Nördlingen",
+    "other": "Nördlingen"
+  },
+  "bamberg|germany": {
+    "english": "Bamberg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nysa|poland": {
+    "english": "Nysa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
   }
 }
