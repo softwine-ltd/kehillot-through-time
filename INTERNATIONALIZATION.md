@@ -6,7 +6,7 @@ This document describes the internationalization system implemented for the Jewi
 
 The i18n system provides comprehensive language support with the following features:
 
-- **Multi-language support**: English and Hebrew
+- **Multi-language support**: English, Hebrew, and French
 - **RTL (Right-to-Left) language support**: Automatic layout adjustments for Hebrew
 - **Browser language detection**: Automatically detects user's preferred language
 - **Persistent language choice**: Saves user preference in localStorage
@@ -19,7 +19,8 @@ The i18n system provides comprehensive language support with the following featu
 ├── i18n.js                    # Main i18n system
 ├── translations/
 │   ├── en.json               # English translations
-│   └── he.json               # Hebrew translations
+│   ├── he.json               # Hebrew translations
+│   └── fr.json               # French translations
 ├── index.html                # Updated with data-i18n attributes
 ├── helpers.js                # Updated to use i18n system
 └── styles.css                # RTL support styles
@@ -55,7 +56,7 @@ Translation files use a nested JSON structure for organization:
 
 ### Adding New Translations
 
-1. Add the new key-value pair to both `en.json` and `he.json`
+1. Add the new key-value pair to `en.json`, `he.json`, and `fr.json`
 2. Use the key in HTML with `data-i18n="key.path"` attribute
 3. Use the key in JavaScript with `window.i18n.t('key.path')`
 

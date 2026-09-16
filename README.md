@@ -36,8 +36,18 @@ Kehillot Through Time offers a comprehensive visual exploration of Jewish demogr
 - Population statistics and trends
 - Sources and methodological notes
 - Educational resources for teachers and researchers
+- A "Fade Markers" toggle for viewing the base map's own town labels underneath dense clusters
 
 Our mission is to preserve and present the geographical history of the Jewish people, making complex demographic data accessible and meaningful for researchers, educators, students, and anyone interested in Jewish history and culture.
+
+## Project status
+
+As of 2026-09-17, `kehilot.csv` holds **21,276 rows across 131 countries** (4,682 distinct
+town/country entries). The dataset is under active, ongoing expansion and correction — see
+[`DATA_COLLECTION_PIPELINE.md`](DATA_COLLECTION_PIPELINE.md) for the full collection pipeline,
+its provenance, current known gaps, and in-progress work (most notably closing the gap between
+this dataset's pre-WW2 Europe estimate and the accepted historical figure, concentrated in Poland
+and the former Pale of Settlement).
 
 ## Meta Keywords
 Jewish demographics, Jewish history, population maps, Jewish communities, kehillot, Jewish diaspora, historical maps, Jewish migration, interactive timeline, Jewish geography, demographic changes, Jewish population data

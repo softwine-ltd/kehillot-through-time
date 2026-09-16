@@ -31,6 +31,143 @@ Full details, dates, and reasoning for every change: `AnacondaProjects/python_31
 document remains useful as the record of how the pipeline came to exist and how the four
 locations relate to each other — that part hasn't changed.
 
+## ⚠️ Status update (2026-09-17) — read this too
+
+Three days of intensive, mostly-Claude-Code-driven work happened between the 2026-09-14 update
+above and now — far more than fits in a paragraph. This section summarizes it by theme; `git log`
+in this repo has the full commit-by-commit detail (each commit message is written to stand alone,
+with root causes and row counts). The single biggest takeaway: **`kehilot.csv` grew from roughly
+19,200 rows to 21,276 rows across 131 countries (4,682 distinct town/country pairs)**, while also
+going through the most thorough data-quality pass this dataset has ever had.
+
+### Pipeline code fixes (`utils/batch_convert_to_kehilot.py`)
+
+- **The year_end lookahead bug** (fixed 2026-09-16, commit `84cbf95`): the converter computed a
+  row's `year_end` from *the very next row in the raw research file*, without checking whether
+  that next row shared the same year — extremely common, since the Historian often logs several
+  facts under one year. This silently produced `year_start > year_end` on **2,760 rows across 799
+  towns** (found by scanning all 5,069 raw research files: 30% had same-year sibling rows). Fixed
+  by scanning forward past same-year/out-of-order siblings, and by replacing a hardcoded
+  `year_end = "2024"` fallback with `datetime.now().year`. All 719 towns with a matching raw file
+  were re-converted and repaired; 75 towns (182 rows) with no matching raw file were left
+  untouched rather than guessed at.
+- **A second, related bug — "no evidence found" rows fabricating growth trends** (2026-09-16,
+  `3d94bc0`, plus the original discovery in `f1471a9`): the same lookahead mechanism could chain a
+  row whose own source explicitly found *no* evidence of Jewish presence to a much later,
+  unrelated real value, producing a fake smooth-growth interpolation across the entire gap (e.g.
+  Nowy Sącz showing a fabricated population of ~57 at 147 CE, chained from a real 1763 figure).
+  Audited the whole dataset for this exact pattern and capped 15 more instances at pop_end=0
+  across 6 towns (Aix-en-Provence, Antakya, Forbach, Ignalina, Sherbrooke, Prudnik).
+- **`sanitize_year()` extended** (2026-09-16, `d2c5d80`) with biblical/ancient-era phrasing (`"time
+  of Solomon"`, `"Babylonian period"`, `"Bar Kokhba revolt"`, etc.) and a `YEAR_BARE_CE_RE` pattern
+  for small bare years with an explicit "CE" marker (`"68 CE"`) — needed to unlock ancient-Israel
+  research (see below); previously these dates were silently dropped or mis-parsed.
+
+### Security & performance (frontend, `helpers.js`)
+
+- **Stored/reflected XSS fixed** (2026-09-16, `785e246`): every popup/tooltip builder interpolated
+  data-derived text (from `kehilot.csv`, an automated scrape with no per-field sanitization, and
+  from crowdsourced Nominatim geocoding) straight into `innerHTML`/Leaflet popups with no escaping
+  anywhere in the codebase. Added a single `escapeHtml()` helper applied at every interpolation
+  site, plus `rel="noopener noreferrer"` on every data-built external link.
+- **Timeline dragging performance** (2026-09-15, `0e479d3`): `loadData()` was re-parsing the full
+  CSV on every timeline slider tick. Now parsed once and cached, with markers bulk-inserted via a
+  single `addLayers()` call — cut per-year-change cost from ~220ms to 15-60ms.
+- **Marker opacity toggle** (2026-09-17, `0ffd466`): a "Fade Markers" button in the toolbar toggles
+  all community markers between full opacity and 33%, via a CSS custom property
+  (`--marker-opacity`) so it survives marker re-creation on timeline scrubbing, clustering changes,
+  and language switches without touching marker-creation code. Lets the base map's own town-name
+  labels show through when markers would otherwise cover them.
+
+### Massive data growth: ~1,900 new towns merged across every populated continent
+
+Five large batch-merge commits (2026-09-15/16) added towns that had long existed in the
+master town list but were never run through the pipeline or never merged: ~767 across Poland,
+Germany, France, Spain, Portugal, UK, Hungary; ~724 across Czech Republic, Slovakia, Romania,
+Moldova, Bulgaria, Russia, Ukraine, Belarus, Lithuania, Latvia; ~131 across the Balkans (Albania,
+Bosnia, Croatia, Kosovo, Montenegro, North Macedonia, Serbia, Slovenia); ~126 across 19 South/
+Central American countries; ~151 across USA, Canada, and Mexico.
+
+### Systematic data-quality campaigns
+
+A long sequence of targeted fixes, mostly 2026-09-16: CSV comma-splitting corruption (551 rows
+across 403 towns), all malformed rows (8 missing a comment field, 251 over-length), name-spelling
+collisions merged (Würzburg/Speyer/Hrubieszów, Volodymyr/Volodymyr-Volynskyi, and others),
+chronology inversions (Niederbreisig, Jasionówka, Oghuz's fabricated 1750 BCE settlement date, 8
+Azerbaijan errors, Brody), the "zigzag" pattern (an incidental/subset number mistaken for total
+population, causing implausible dips — fixed in ~20 towns including Łódź's 1918-1938 trajectory
+and Nowy Sącz), duplicate/overlapping markers merged into single popups showing every fact, and
+fresh research merged for dozens of major and mid-sized population centers that were missing,
+stubbed, or had only thin single-row placeholders (Warsaw, Łódź, Kyiv, Bucharest, Munich, Hannover,
+Leipzig, Cologne, Wrocław/Breslau, Königsberg, Rostov-on-Don, Poltava, Gomel, Kremenchuk, Łowicz,
+Sanok, Chernivtsi, Galați, Iași, and more).
+
+### New historical depth: ancient Israel, Ephesus region, and Roman Dacia
+
+- **Ancient Israel** (pre-5th-century-BCE settlements): 29 fabricated placeholder rows removed,
+  then 222 *real* rows recovered from raw research files that the pipeline's own bugs had lost
+  (the `sanitize_year()` gap above, plus a `should_skip_file()` edge case wrongly treating a
+  meaningful "population=0" claim the same as a genuine no-evidence placeholder) — see
+  `c83ba34`/`8f8fcfc`.
+- **Asia Minor**: added missing Sardis/Pergamon/Smyrna rows and corrected Ephesus's understated
+  population, all citing the same 4th-century-BCE Turkish-Jewish-settlements source.
+- **Roman Dacia** (106-271 CE) and Plovdiv: 8 rows added from a user-supplied Hebrew map/text
+  citing archaeological finds (Bar Kokhba-era coins, a Star-of-David object, a Tetragrammaton
+  curse tablet) at Sarmizegetusa, Apulum, Porolissum, Tibiscum, Dierna, Ilișua, Poiana, and
+  Plovdiv's ancient synagogue — all using the dataset's "presence attested" convention
+  (population=1) since these are epigraphic/archaeological finds, not censuses.
+
+### The Poland / former-Pale-of-Settlement long tail (ongoing initiative)
+
+Prompted by comparing the dataset's pre-WW2 Europe total (~6.17M in 1939, computed from the data)
+against the accepted historical figure (~9.5M) — the ~3.3M gap concentrates in Poland and the
+former Pale of Settlement (much of which now falls under Ukraine/Belarus/Lithuania borders). Two
+batches so far, both cross-referencing Wikipedia's shtetl lists against existing town coverage:
+a 32-town pilot (27 yielded data, +68K to the estimate) and a 301-town follow-up (in progress as
+of this writing). A third, smaller batch targeted CRARG's (Częstochowa-Radomsko Area Research
+Group) named "core towns" specifically, since that site states with certainty a community existed
+in each one — 36 of 38 core towns were already covered; the 2 gaps plus 15 gaps from CRARG's wider
+"towns in the area" list are queued.
+
+### Americas coverage audit
+
+A user-prompted spot-check of major North/South American Jewish population centers found 4
+outright gaps (Mexico City, Fort Lauderdale, West Palm Beach, Berkeley) and 10 towns with only a
+single placeholder row spanning 80-180+ years (Chicago, Philadelphia, Boston, San Francisco,
+Oakland, and 5 South American cities) — the same fabricated-smooth-interpolation risk pattern
+described above, just never caught because these are outside Europe. Ran all 15 through the
+pipeline: 9 yielded clean real data (merged), Philadelphia's raw extraction was 46 near-duplicate
+rows breaking one 1970 census down by neighborhood rather than a timeline (filtered to its 2
+genuine city/metro figures before merging), and 5 (Chicago, Oakland, Berkeley, Rio de Janeiro,
+Santiago) found 30+ sources apiece but zero extractable population numbers — a real pipeline
+limitation, not a settings issue. When a user supplies specific working links for a town the
+pipeline can't crack (as happened for Chęciny, Poland — see Hebrew Wikipedia + Yad Vashem's ghetto
+encyclopedia), manually curating a sourced timeline from those pages works well as a fallback.
+
+### Current scale (measured 2026-09-17)
+
+| Metric | Value |
+|---|---:|
+| Total data rows | 21,276 |
+| Distinct countries | 131 |
+| Distinct (country, city) pairs | 4,682 |
+| Poland rows / distinct towns | 4,814 / 560 |
+| Europe pre-WW2 (1939) population estimate | ~6.24M (accepted historical figure: ~9.5M) |
+
+### If you want to resume *this* work specifically
+
+1. Merge the 301-town and CRARG batches once their background runs finish (candidates/scripts for
+   CRARG are prepared in the session's scratchpad as of this writing, if it hasn't run yet).
+2. The long tail is far from closed — one Wikipedia list page isn't exhaustive. A proper push
+   needs a more comprehensive gazetteer (JewishGen's Communities Database would be the gold
+   standard) and/or revisiting existing towns whose population estimate rests on interpolation
+   rather than a real census-year data point.
+3. Chicago, Oakland, Berkeley, Rio de Janeiro, and Santiago need either better search queries or
+   user-supplied source links (per the Chęciny pattern above) — the automated pipeline has now
+   failed on all of them twice.
+4. See the original "If you want to resume this work" section below for the still-relevant
+   Germany-merge and Spain-collection pointers from the 2026-09-14 update.
+
 ## The four locations
 
 | Location | Role |
