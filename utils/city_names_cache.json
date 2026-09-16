@@ -18709,5 +18709,411 @@
     "yiddish": "",
     "german": "",
     "other": ""
+  },
+  "kobryn|belarus": {
+    "english": "Kobryn",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "novogrudok|belarus": {
+    "english": "Novogrudok",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "shklow|belarus": {
+    "english": "Shklow",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "eišiškės|lithuania": {
+    "english": "Eišiškės",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "telšiai|lithuania": {
+    "english": "Telšiai",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "trakai|lithuania": {
+    "english": "Trakai",
+    "hebrew": "טרקאי",
+    "yiddish": "טראק",
+    "german": "Trakai",
+    "other": "Trakai"
+  },
+  "valkininkai|lithuania": {
+    "english": "Valkininkai",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "soroca|moldova": {
+    "english": "Soroca",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "inowłódz|poland": {
+    "english": "Inowłódz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "konin|poland": {
+    "english": "Konin",
+    "hebrew": "קונין",
+    "yiddish": "",
+    "german": "Konin",
+    "other": "Konin"
+  },
+  "kowal|poland": {
+    "english": "Kowal",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "krasnystaw|poland": {
+    "english": "Krasnystaw",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "krosno|poland": {
+    "english": "Krosno",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "krynki|poland": {
+    "english": "Krynki",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kutno|poland": {
+    "english": "Kutno",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nowy korczyn|poland": {
+    "english": "Nowy Korczyn",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nowy żmigród|poland": {
+    "english": "Nowy Żmigród",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "oels|poland": {
+    "english": "Oels",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "opatów|poland": {
+    "english": "Opatów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "opole|poland": {
+    "english": "Opole",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "oświęcim|poland": {
+    "english": "Oświęcim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pacanów|poland": {
+    "english": "Pacanów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "plock|poland": {
+    "english": "Plock",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pruchnik|poland": {
+    "english": "Pruchnik",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "prudnik|poland": {
+    "english": "Prudnik",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pułtusk|poland": {
+    "english": "Pułtusk",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rzeszów|poland": {
+    "english": "Rzeszów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "siedlce|poland": {
+    "english": "Siedlce",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sieradz|poland": {
+    "english": "Sieradz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sokołów podlaski|poland": {
+    "english": "Sokołów Podlaski",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "szydłów|poland": {
+    "english": "Szydłów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tarnopol|poland": {
+    "english": "Tarnopol",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tykocin|poland": {
+    "english": "Tykocin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "warta|poland": {
+    "english": "Warta",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Warthe",
+    "other": "نهر فارتا"
+  },
+  "wieliczka|poland": {
+    "english": "Wieliczka",
+    "hebrew": "וייליצ'קה",
+    "yiddish": "",
+    "german": "Wieliczka",
+    "other": "Wieliczka"
+  },
+  "wiślica|poland": {
+    "english": "Wiślica",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "wodzisław|poland": {
+    "english": "Wodzisław",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "zakroczym|poland": {
+    "english": "Zakroczym",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "zamość|poland": {
+    "english": "Zamość",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "zator|poland": {
+    "english": "Zator",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "zbąszyń|poland": {
+    "english": "Zbąszyń",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "łęczna|poland": {
+    "english": "Łęczna",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bar|ukraine": {
+    "english": "Bar",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "berestechko|ukraine": {
+    "english": "Berestechko",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dubno|ukraine": {
+    "english": "Dubno",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dubrovytsia|ukraine": {
+    "english": "Dubrovytsia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gliniany|ukraine": {
+    "english": "Gliniany",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "horokhiv|ukraine": {
+    "english": "Horokhiv",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kerch|ukraine": {
+    "english": "Kerch",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lutsk|ukraine": {
+    "english": "Lutsk",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "medzhybizh|ukraine": {
+    "english": "Medzhybizh",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "novoselytsia|ukraine": {
+    "english": "Novoselytsia",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ostroh|ukraine": {
+    "english": "Ostroh",
+    "hebrew": "אוסטרוה",
+    "yiddish": "",
+    "german": "Ostroh",
+    "other": "أوستروه"
+  },
+  "rohatyn|ukraine": {
+    "english": "Rohatyn",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sambir|ukraine": {
+    "english": "Sambir",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sataniv|ukraine": {
+    "english": "Sataniv",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sniatyn|ukraine": {
+    "english": "Sniatyn",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "volodymyr|ukraine": {
+    "english": "Volodymyr",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
   }
 }
