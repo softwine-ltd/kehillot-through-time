@@ -18569,5 +18569,96 @@
     "yiddish": "",
     "german": "",
     "other": ""
+  },
+  "brest|belarus": {
+    "english": "Brest",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gomel|belarus": {
+    "english": "Gomel",
+    "hebrew": "הומל",
+    "yiddish": "",
+    "german": "Homel",
+    "other": "Homel"
+  },
+  "grodno|belarus": {
+    "english": "Grodno",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kovel|ukraine": {
+    "english": "Kovel",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kraków|poland": {
+    "english": "Kraków",
+    "hebrew": "קרקוב",
+    "yiddish": "קראקע",
+    "german": "Krakau",
+    "other": "Krakow"
+  },
+  "kyiv|ukraine": {
+    "english": "Kyiv",
+    "hebrew": "קייב",
+    "yiddish": "קיעוו",
+    "german": "Kiew",
+    "other": "Мліївська республіка"
+  },
+  "lublin|poland": {
+    "english": "Lublin",
+    "hebrew": "לובלין",
+    "yiddish": "לובלין",
+    "german": "Lublin",
+    "other": "Lublin"
+  },
+  "minsk|belarus": {
+    "english": "Minsk",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mogilev|belarus": {
+    "english": "Mogilev",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pinsk|belarus": {
+    "english": "Pinsk",
+    "hebrew": "פינסק",
+    "yiddish": "פינסק",
+    "german": "Pinsk",
+    "other": "بينسك"
+  },
+  "przemyśl|poland": {
+    "english": "Przemyśl",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tarnów|poland": {
+    "english": "Tarnów",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "vilnius|lithuania": {
+    "english": "Vilnius",
+    "hebrew": "וילנה",
+    "yiddish": "ווילנע",
+    "german": "Vilnius",
+    "other": "Turniškės"
   }
 }
