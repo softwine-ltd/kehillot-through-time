@@ -705,6 +705,16 @@ function updateMarkers(kehilot) {
             return;
         }
 
+        // A population of exactly 0 for the active year means either "no Jews here at
+        // this point" or "no evidence of Jewish presence found" -- neither should draw a
+        // marker on the map. This relies on the underlying data using a small positive
+        // placeholder (not 0) for the separate, legitimate case of "Jews are known to
+        // have been present here but no specific count was given by the source" --
+        // see kehilot.csv's own convention for that distinction.
+        if (kehila.actual_pop <= 0) {
+            return;
+        }
+
         const marker = createCustomMarker(kehila);
 
         // const endYearDetails = kehila.year_end === undefined || kehila.year_end === '' ? '' : `
