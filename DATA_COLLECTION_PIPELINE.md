@@ -419,10 +419,16 @@ post-war citation at all (an honest gap now, not a fabricated one) rather than r
    re-run for Poland this round) and consider going even lower, or extending to Western/Southern
    Europe — this bug class keeps surfacing every time the threshold drops, which strongly suggests
    it isn't fully exhausted yet.
-2. **Fix the pipeline-side gap, not just the data**: see `jew_hist/CHANGELOG.md`'s new "Known
-   issues" entry — until `HistorianDataExtractor.py`'s prompt (or a merge-time guard) stops letting
-   a single dated citation default to an open-ended/current-year end, every future collection run
-   risks reintroducing this exact bug on new towns, as it already did once today on Lublin.
+2. ✅ **Done (2026-09-17, evening)** — the pipeline-side gap is now fixed, not just the data: see
+   `jew_hist/CHANGELOG.md`'s "Fixed both recurring bugs behind today's population-inflation
+   findings" entry. `HistorianDataExtractor.py`'s prompt now has an explicit rule against recording
+   regional/camp/death-toll/event numbers as town population, and both
+   `utils/batch_convert_to_kehilot.py` and `utils/csv_converter_gui.py` now default an unresolved
+   row's `year_end` to its own `year_start` (a point-in-time citation) instead of the current year —
+   both changes tested in isolation, no real files touched. Not addressed: actively searching for a
+   *more recent* data point when the last known one is old (the safer default just stops asserting
+   stability that was never evidenced), and the separate Kaunas-style "civic subset count mistaken
+   for population" pattern, which has no prompt guard yet.
 3. Everything from the previous "If you want to resume" list (items 1-5 above) is still open and
    unaffected by today's work.
 

@@ -498,7 +498,18 @@ def convert_single_row(country, city, longitude, latitude, year_estab, year_data
             # have rendered at every year on the timeline.
             return None
 
-        year_end = str(datetime.now().year)
+        # Default when no later sibling row exists (below): a single point-in-time
+        # citation (year_end == year_start), NOT "held true through the present day".
+        # This used to default to str(datetime.now().year), which silently asserted
+        # that a town's LAST known citation -- often a wartime ghetto count or a single
+        # postwar survivor tally -- remained true for decades afterward, including
+        # straight through the Holocaust in towns with no later citation to contradict
+        # it (found 2026-09-17: this alone accounted for a ~400,000-person inflation of
+        # Poland's implied 2020 Jewish population, e.g. Belzec's camp-wide death toll
+        # rendering as the village's own population every year from 1942 to today). A
+        # later real citation for this same city (handled by the loop below) still
+        # correctly overrides this default with a real year_end.
+        year_end = year_start
         pop_end = ""
         population = sanitize_population(population)
         own_year = int(year_start)

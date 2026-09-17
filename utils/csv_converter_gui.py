@@ -597,7 +597,14 @@ class CSVConverterGUI:
             year_start = year_data if year_data and year_data != 'NA' else year_estab
             
             # Find next row for same city to determine year_end and pop_end
-            year_end = "2024"  # Default for last row
+            # Default when no later sibling row is found below: a single point-in-time
+            # citation (year_end == year_start), not a hardcoded "still true in 2024".
+            # A stale hardcoded year silently asserts the town's LAST known citation --
+            # often a wartime ghetto count -- remained true for decades afterward,
+            # including through the Holocaust in towns with nothing later to contradict
+            # it (see batch_convert_to_kehilot.py's convert_single_row for the same fix
+            # and the 2026-09-17 finding that motivated it).
+            year_end = year_start  # Default for last row
             pop_end = ""  # Default for last row
             population = population.replace('~', '').replace('>', '').replace('<', '')
             # Look for next row with same city
@@ -609,7 +616,7 @@ class CSVConverterGUI:
                         try:
                             year_end = str(int(next_year) - 1)
                         except ValueError:
-                            year_end = "2024"
+                            year_end = year_start
                     if next_pop and next_pop != 'NA':
                         pop_end = next_pop
                     break
