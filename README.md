@@ -42,12 +42,12 @@ Our mission is to preserve and present the geographical history of the Jewish pe
 
 ## Project status
 
-As of 2026-09-17, `kehilot.csv` holds **26,594 rows across 131 countries** (5,116 distinct
-town/country entries; Poland alone is 5,898 rows across 644 towns). The dataset is under active,
+As of 2026-09-17, `kehilot.csv` holds **25,819 rows across 131 countries** (5,113 distinct
+town/country entries; Poland alone is 5,123 rows across 641 towns). The dataset is under active,
 ongoing expansion and correction — see [`DATA_COLLECTION_PIPELINE.md`](DATA_COLLECTION_PIPELINE.md)
 for the full collection pipeline, its provenance, current known gaps, and in-progress work (most
-notably closing the gap between this dataset's pre-WW2 Europe estimate, currently ~6.84M, and the
-accepted historical figure of ~9.5M — concentrated in Poland and the former Pale of Settlement).
+notably closing the gap between this dataset's pre-WW2 Europe estimate and the accepted historical
+figure of ~9.5M — concentrated in Poland and the former Pale of Settlement).
 
 Also under active repair: a recurring data-quality bug where a large number describing something
 *other* than a town's own resident population (a regional death toll, a deportation-in-transit

@@ -343,6 +343,89 @@ decline correctly on their own without any intervention.
    proper gazetteer (JewishGen's Communities Database) is still the real fix for "one Wikipedia
    list isn't exhaustive."
 
+## ⚠️ Status update (2026-09-17, evening) — fabricated citations, and item 2 above came true
+
+Item 2 in the previous update ("extend the post-Holocaust integrity audit... a lower threshold...
+would likely surface more") turned out to be right the same day, from two separate user reports.
+
+### 41 of 43 sztetl.org.pl citations in the dataset were fabricated, not dead
+
+A user flagged one specific Lublin citation
+(`sztetl.org.pl/en/towns/l/1037-lublin/99-history/137447-history-of-community`) as a 404. Checking
+it revealed something worse than link rot: **two different towns shared byte-identical "citations"**
+(Lublin and Radomsko both resolved to town-ID 1037/page-ID 137447; Sulmierzyce and Wodzisław Śląski
+both resolved to 1049/137459) — impossible on a real site, and the page-ID tracked the town-ID by a
+near-constant +136410 offset, the signature of a sequentially-incremented guess, not a fetched URL.
+Checking all 43 unique sztetl.org.pl URLs in the live dataset directly in a browser (plain
+HTTP/curl gets Cloudflare-blocked regardless of URL validity — this needed real browser navigation)
+found 41 return the site's own "Page not found" page; only 2 (Warsaw, Szamotuły) are real and
+content-verified. Traced to `data_temp/poland_grok.txt`, a raw hand-pasted Grok-chat research dump
+from this project's pre-agentic phase (confirmed via a matching fabricated Kalisz URL sitting in
+that same file). Checked the other 20 `*_grok.txt` files from the same era and the dataset's other
+34 heavily-reused-URL cases for the same collision signature — found nothing else at this severity;
+it looks isolated to this one batch. Deleted all 1,008 affected rows (41 dead URLs + a dead
+Wikipedia link riding along in the same Lublin block) across 35 towns, then re-ran the real
+Scout→Librarian→Historian pipeline against all 35: all 35 succeeded, 238 new genuinely-sourced rows
+merged (3 towns — Kamień Pomorski, Kamień Śląski, Nowy Tomyśl — came back "no evidence found," a
+legitimate outcome for small villages, not a pipeline failure). Confirmed the fix worked: Scout
+found real, *different* sztetl.org.pl town IDs this time (real Żarnowiec is town 433, not the
+fabricated 1048; real Wodzisław is 702, not 1049).
+
+### Poland's implied Jewish population was inflated by roughly 400,000 people
+
+Separately, a user pointed out that Poland's post-WW2 Jewish population is well documented at
+~250,000, but many individual towns in the dataset still showed population > 100 despite clear
+evidence of near-total elimination. Quantified it by computing, per the app's own interpolation
+logic, what population the dataset implies for *all* of Poland at a given year: **530,764 in 1946**
+(vs. the real ~250,000) and, far more tellingly, **402,028 in 2020** — modern Poland's actual
+Jewish population is universally documented in the low thousands. This was the same "held flat"
+bug already fixed for the ≥10,000 cohort elsewhere in Eastern Europe, just never extended to
+Poland's ~640 towns at a realistic threshold. Systematically re-scanned every Poland row at
+threshold ≥100, found 467 rows across ~280 towns that were perfectly flat (`pop_start == pop_end`
+— no decline was *ever* modeled, so nothing needed re-bridging) left open-ended or extended to
+2024/2026, and shortened every one to a point-in-time citation. Also found and fixed 3 towns with a
+related bug — a single row spanning 100-400+ years (Baranów Sandomierski, Chodecz, Gidle) smoothing
+a real pre-war figure across the entire modern era, directly overlapping and out-voting (via
+`mergeSameYearFacts`'s max-across-simultaneous-rows behavior) an otherwise-correct declining
+sequence already sitting in the data for the same town.
+
+While merging the 35 re-researched towns above, the *exact same bug* reappeared in brand-new,
+non-fabricated data: Lublin's fresh pipeline output included a real jewishgen.org-sourced row
+("6,662 Jews were in the city," 1946) left open-ended, which the merge turned into "6,662 Jews,
+1946 through 2026." This confirms the bug isn't purely legacy — it's a live methodology gap (see
+`jew_hist/CHANGELOG.md`'s "Known issues" for the pipeline-side writeup and fix recommendation).
+Re-scanned Poland once more at threshold ≥20 (excluding two genuinely-modern citations, Bytom 2020
+and Bielsko-Biała 2005, that are reasonably held forward a few years rather than defaulting across
+an 80-year gap): 130 more rows fixed the same way.
+
+**Result**: Poland's implied total is now 159,533 (1946) / 123,266 (1950) / 39,914 (1970) / 6,123
+(2020) — all within a defensible range of the historical record, down from 530,764 / 402,028
+before today. The 1946 figure sitting below the real ~250,000 reflects towns with genuinely no
+post-war citation at all (an honest gap now, not a fabricated one) rather than remaining inflation.
+
+### Current scale (measured 2026-09-17, evening)
+
+| Metric | Value |
+|---|---:|
+| Total data rows | 25,819 |
+| Distinct countries | 131 |
+| Distinct (country, city) pairs | 5,113 |
+| Poland rows / distinct towns | 5,123 / 641 |
+| Poland implied Jewish population, 2020 | ~6,100 (was ~402,000 this morning) |
+
+### If you want to resume *this* work specifically
+
+1. **Extend the ≥20 threshold post-Holocaust audit to the rest of Eastern Europe** (it was only
+   re-run for Poland this round) and consider going even lower, or extending to Western/Southern
+   Europe — this bug class keeps surfacing every time the threshold drops, which strongly suggests
+   it isn't fully exhausted yet.
+2. **Fix the pipeline-side gap, not just the data**: see `jew_hist/CHANGELOG.md`'s new "Known
+   issues" entry — until `HistorianDataExtractor.py`'s prompt (or a merge-time guard) stops letting
+   a single dated citation default to an open-ended/current-year end, every future collection run
+   risks reintroducing this exact bug on new towns, as it already did once today on Lublin.
+3. Everything from the previous "If you want to resume" list (items 1-5 above) is still open and
+   unaffected by today's work.
+
 ## The four locations
 
 | Location | Role |
