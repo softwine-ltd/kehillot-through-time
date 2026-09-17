@@ -432,6 +432,41 @@ post-war citation at all (an honest gap now, not a fabricated one) rather than r
 3. Everything from the previous "If you want to resume" list (items 1-5 above) is still open and
    unaffected by today's work.
 
+## ⚠️ Status update (2026-09-17, night) — the "0 means two different things" bug
+
+A user observed that many towns with a genuinely defunct Jewish community still drew a map
+marker (an empty "0" bubble) — the map had no concept of "don't draw this." Fixing that safely
+required a companion data fix, since `kehilot.csv` had been using `population = 0` for two
+opposite situations: "confirmed no Jews" *and* "a source documents Jewish presence — a birth
+record, a synagogue, a named individual — but gives no specific count." Suppressing all
+zero-population markers without fixing the second case would have made every thinly-documented
+town silently vanish instead of showing at all.
+
+**Code**: `helpers.js`'s `updateMarkers` now skips any row with `actual_pop <= 0`, right alongside
+the existing invalid-coordinates skip. Verified live: 490 towns worldwide (Port Moresby,
+Bridgetown, Reykjavik, etc.) whose only active rows at 2024 are zero-population are now correctly
+absent instead of showing an empty marker.
+
+**Data**: found 1,001 rows worldwide where `pop_start` and `pop_end` both resolved to 0. A first
+attempt at a regex keyword classifier (negative phrases → confirmed zero, "community"/"synagogue"
+→ presence) had a 30-40% false-positive rate in *both* directions — natural language has too many
+ways to say "gone" (vanished, dissolved, extinguished, disbanded, "former", sold to non-Jewish
+use...) for a blocklist to catch reliably, and just as many ways to mention a synagogue/community
+*in the context of it ending*. Abandoned the regex approach and read all 1,001 rows directly
+instead, classifying each by hand into: confirmed zero (560, left at 0), small documented presence
+with no count given (307, set to population 3 with an explanatory note), or an organized
+community/synagogue with no count given (134, set to population 20 with a note) — this matches the
+convention the user asked for. See commit `03e8416` for the full row-by-row reasoning in the
+commit message's category breakdown.
+
+**Not done**: this was a one-time pass over the *current* dataset. Nothing prevents a future
+collection run from writing a fresh 0/0 row for a "presence documented, no count" source — the
+extraction prompt has no rule about this distinction yet (unlike the regional-aggregate and
+open-ended-year_end rules added earlier today). Worth a future prompt addition: when a source
+documents presence without a number, the Historian should note that explicitly (e.g. "Population:
+UNKNOWN — presence documented") rather than defaulting to 0, so a future audit doesn't have to
+redo this same 1,001-row manual read.
+
 ## The four locations
 
 | Location | Role |
