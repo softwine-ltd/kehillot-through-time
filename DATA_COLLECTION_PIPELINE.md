@@ -144,7 +144,7 @@ limitation, not a settings issue. When a user supplies specific working links fo
 pipeline can't crack (as happened for Chęciny, Poland — see Hebrew Wikipedia + Yad Vashem's ghetto
 encyclopedia), manually curating a sourced timeline from those pages works well as a fallback.
 
-### Current scale (measured 2026-09-17)
+### Current scale (measured 2026-09-17, morning)
 
 | Metric | Value |
 |---|---:|
@@ -156,17 +156,192 @@ encyclopedia), manually curating a sourced timeline from those pages works well 
 
 ### If you want to resume *this* work specifically
 
-1. Merge the 301-town and CRARG batches once their background runs finish (candidates/scripts for
-   CRARG are prepared in the session's scratchpad as of this writing, if it hasn't run yet).
+1. ✅ **Done** — the 301-town Poland/Pale batch and the CRARG follow-up batch (19 towns) both
+   completed and merged the same day.
 2. The long tail is far from closed — one Wikipedia list page isn't exhaustive. A proper push
    needs a more comprehensive gazetteer (JewishGen's Communities Database would be the gold
    standard) and/or revisiting existing towns whose population estimate rests on interpolation
    rather than a real census-year data point.
 3. Chicago, Oakland, Berkeley, Rio de Janeiro, and Santiago need either better search queries or
    user-supplied source links (per the Chęciny pattern above) — the automated pipeline has now
-   failed on all of them twice.
+   failed on all of them twice. (Update: 9 of the original 15 Americas gaps *did* yield clean data
+   the same day — see the next status update below — these 5 are the ones that still haven't.)
 4. See the original "If you want to resume this work" section below for the still-relevant
    Germany-merge and Spain-collection pointers from the 2026-09-14 update.
+
+## ⚠️ Status update (2026-09-17, continued) — a second full day of work, and a new bug class
+
+Everything below happened *after* the update immediately above, same day. Two things dominated:
+closing out the Europe long-tail work that was "in progress" above, and discovering a data-quality
+bug class much bigger than anything found before — population figures that were never a town's own
+resident count at all, several of them silently implying large, thriving Jewish communities in
+towns whose community is a matter of settled historical record to have been destroyed.
+
+### More batches completed: Americas gap-fill, underrepresented Europe, Belgium/Romania, and the Germany/Poland/Pale long tail
+
+- **Americas**: the 15-town gap list above ran; 9 yielded clean data (merged), Portland OR needed
+  a manual fix for a blank-year bug that chained a real 2024 "57,000+ Jews" figure backward into a
+  fabricated 1850-1868 decline, and Chicago/Oakland/Berkeley/Rio de Janeiro/Santiago remain a
+  genuine pipeline limitation (30+ sources found, zero extractable numbers) — still open.
+- **User-supplied Americas data**: a large table of North/South American cities' historical Jewish
+  populations, supplied directly by the user from their own spreadsheet, replaced ~20-28 rows that
+  had been silently fabricated in an earlier session (a contiguous block using an "established in
+  the 19xxs" placeholder template with no real source).
+- **200 towns across underrepresented European countries** (target: Hungary, Russia, Romania,
+  Belgium, Netherlands): 183 of 185 candidates succeeded and merged. A single-town Belgium re-run
+  (Seraing) confirmed "no evidence found" — Belgium appears to be at its practical research
+  ceiling with this pipeline and these sources.
+- **Germany + Poland/Pale-of-Settlement long tail, ≥400-town target**: delivered 384 (205 Germany
+  Black-Death-placeholder towns re-researched, 146 Poland/Pale/Ukraine/Belarus/Lithuania towns with
+  only a single thin citation enriched, 33 genuinely new towns added — 8 Galicia, 25 Latvia). A
+  first pass silently skipped 148 towns because of stale pre-existing raw research files (the
+  collection script's own "skip if output exists" logic, tripped by thin files left over from an
+  earlier partial run) — caught via log-diffing, stale files deleted, and all 148 successfully
+  retried. **Still 16 short of the literal "at least 400" target — not revisited, flagged here for
+  whoever picks this up next.**
+- **Romania round 2**: 51 of 53 candidates merged (13 of an original 69 excluded as
+  Bessarabia/Bukovina towns that fall in modern Moldova/Ukraine, not Romania). Recovered
+  **Bucharest**, which was found to have zero rows under any spelling despite three earlier-session
+  commits specifically about it — root cause not fully identified (likely lost in a later unrelated
+  consolidation edit), just re-added via fresh research.
+
+### The "Black Death" legacy fabrication (Germany)
+
+A batch import of JewishEncyclopedia.com's list of towns hit by the 1349 Black Death pogroms had
+been converted, at some point in this dataset's history, into fake flat-population-of-30 rows
+spanning 1349-1942 — as if "this town appears on a medieval pogrom list" meant "and its population
+was a constant 30 people for the next 600 years." Found via `'BLACK DEATH' in comment.upper()`:
+219 rows total, 205 of them the *only* row for that (country, city) in Germany specifically (the
+rest scattered across France, Switzerland, Austria, Netherlands, Belgium, Czech Republic, Poland).
+All 205 Germany rows deleted and re-researched: **88 came back with real population data, 117 came
+back with sources confirming a medieval community but no extractable population figure** — still
+an improvement, since the false "30 people, 600 years" claim is gone either way.
+
+### Kaunas: a dedicated pass on a scrambled trajectory
+
+17 of Kaunas's 39 rows were civic/organizational subset counts — Folksbank membership, Hebrew
+Gymnasia enrollment, municipal election results, a Marksmen-association membership figure, annual
+death counts, a newly-annexed suburb's own count — that had been extracted and chained in as if
+each one were the town's *total* Jewish population, producing swings like 3,526 → 6 → 38,000 → 224
+→ 27,580 across 1929-1937. Before fixing it, checked the frontend's actual rendering logic
+(`helpers.js`): each row interpolates independently over its own year span, and
+`mergeSameYearFacts` takes the **max** across every row simultaneously active for a town — so the
+"leave it at 0" convention used elsewhere in this dataset for narrative-only citations would have
+produced fake population-*crash* years wherever nothing else happened to cover that exact span,
+trading one wrong chart for another. Fix: built a trend curve from only the 22 genuinely-sourced
+rows (keyed on each row's own `pop_start`, deliberately ignoring `pop_end` — several of those had
+themselves been corrupted by the same bug), interpolated the 17 bad rows along that curve instead
+of using their own headcount, and rebuilt every row's `pop_end` to chain correctly. Vilnius was
+checked as a comparison and found clean — this looks Kaunas-specific, not systemic to Lithuania.
+
+### New major bug class: population figures that were never the town's own residents
+
+Discovered via a user report that **Bełżec** — the extermination camp, built at/near a real but
+tiny Polish village — showed a Jewish population of 500,000 continuing indefinitely after the
+Holocaust. Root cause: the camp's total *victim count* (drawn from all over Poland) had been
+recorded as if it were the village's own resident population. This turned out to be one instance
+of a pattern found in dozens of places once specifically searched for:
+
+- **Regional/multi-town aggregates mislabeled as one town's population**: whole-*region* statistics
+  (Upper Silesia, Wołyń Province, Cetatea Albă "entire county/district" — the source's own words)
+  plotted as if they were a single town's count; a Nazi resettlement-plan deportee total (the
+  **Nisko Plan**) attributed to the tiny village of Nisko itself; a combined 3-city estimate
+  (Vladivostok + Khabarovsk + Birobidzhan) attributed to just one of the three; regional
+  Transnistria transit-camp/deportee totals (Mohyliv-Podilskyi, Bershad, Yarmolyntsi, Sarny)
+  attributed to whichever town happened to host the camp.
+- **Camp-wide or massacre-wide death tolls used as a town's population**: **Brzezinka** (the
+  village Auschwitz-Birkenau was built at/named after) showing the camp's full 1,000,000-victim
+  toll; **Bogdanovka** showing the ~54,000-victim regional massacre toll; several Poland/Ukraine
+  ghetto-liquidation and deportation-to-death-camp counts (Lublin ×3, Kozienice, Kovel's own
+  memorial *victim* count) recorded as living population, not a body count.
+- **A grave/cemetery count used as a population figure**: **Panevėžys** — "the Jewish cemetery
+  contained 17,000 graves [as of 1945]" (a count accumulated over centuries) was chained in as the
+  town's post-Holocaust population, the exact same *shape* of bug as Bełżec's 500,000.
+  
+- **Tourist/pilgrimage attendance used as resident population — the most surprising find**:
+  **Uman**'s annual Rosh Hashanah pilgrimage (Breslov Hasidim gathering at Rabbi Nachman's grave
+  for a few days a year, drawing from *outside* Ukraine) had its attendance figures — 2,000 (1990)
+  climbing to a fabricated-looking 50,000 (2019) — recorded as the town's growing year-round
+  resident population, even though the same dataset separately and correctly states "more than 100
+  Hasidic families live in Uman year-round" (~500 people) for the present day. Six rows deleted.
+- **A pre-Holocaust snapshot silently held flat for 60-100+ years, right through the community's
+  well-documented destruction** — the largest category by row count. A real, well-sourced figure
+  (a census, a ghetto count, "before the Nazis arrived") was left open-ended (blank `pop_end`), so
+  it silently continues at that value indefinitely with no later citation acknowledging what
+  actually happened. Affected towns include Pinsk, Rivne, Minsk, Vilnius, Brest, Bobruisk, Zamość,
+  Ternopil, Włocławek, Częstochowa, Rzeszów, Chernihiv, Opole, Bryansk, Mogilev, Bălți, Galați,
+  Bacău, Kozienice, Płońsk, Stryi, Polatsk, Nyíregyháza, and Volodymyr-Volynskyi. Two further cases
+  (Vitebsk, Berdychiv) were a related-but-distinct variant: a *single row* spanning 60-100+ years
+  linearly smoothed a real pre-war figure into a real post-war figure, implying a gradual decline
+  where the actual history was an abrupt 1941-42 collapse.
+
+**Fix methodology**: built a scanner mirroring the frontend's own interpolation logic
+(`helpers.js loadData`) that computes, for every Eastern-European (country, city), the population
+the map would actually display at a set of post-Holocaust checkpoint years (1946, 1950, ... 2020).
+Flagged 73 candidates at ≥10,000; every one was individually checked against its full row history
+and cited source before acting, rather than pattern-matched and bulk-deleted. Net effect: **28 rows
+deleted** outright (numbers that were never any town's own population, however sourced) and **44
+rows shortened** to a single point-in-time citation (a real fact about that town, just no longer
+implying it held steady for decades afterward). Several neighboring rows whose `pop_end` had been
+chained from a since-deleted row's value were individually re-bridged to the next surviving real
+figure (or, where none exists, to their own row's own stated value) so nothing is left pointing at
+a number that no longer exists anywhere in the file.
+
+**Left alone after review** — genuinely large, well-evidenced surviving or rebuilt communities:
+Moscow, Budapest, Kyiv, Bucharest, Łódź, Warsaw, Kraków, Chișinău, Dnipro, Saint Petersburg, and a
+handful of Soviet-era regional-migration cities (Vinnytsia, Kropyvnytskyi, Sokyriany) that already
+decline correctly on their own without any intervention.
+
+**Flagged but deliberately not touched — needs a human call, not a heuristic:**
+- **Iași, Bacău, Galați** and similar Romanian cities: Romanian Jewish wartime survival patterns
+  genuinely differed from Poland/Ukraine's (deportation to Transnistria camps rather than
+  on-the-spot extermination for large parts of the "Old Kingdom," with substantial return
+  migration), so a multi-decade single-row "smoothing" citation in these specific cities *might* be
+  closer to real history than the same pattern in a Polish shtetl — Bacău and Galați were
+  eventually shortened anyway (the *held-flat-to-2026* half of the bug is unambiguous regardless of
+  wartime survival nuance), but Iași's 1899-2006 single-row span was left as-is pending a closer
+  read of that city's specific history.
+- **Birobidzhan**: a row's `pop_start` looks like it may be chained from an aspirational
+  *settlement-plan target* ("10,000 Jewish families over five years") rather than an achieved
+  population, mirroring the Nisko Plan bug — flagged, not fixed, because the source material on
+  this one is too thin to be confident either way.
+- **Bogdanovka is geocoded to the wrong place** — 42°E/52.9°N, inside Russia, rather than the real
+  Holocaust-era massacre site in Ukraine's Mykolaiv Oblast (~31.3°E/47.65°N). Almost certainly
+  resolved to a same-named village elsewhere during geocoding; not fixed.
+- The general pattern that made Kaunas so scrambled — a small civic/organizational subset count
+  (school enrollment, club membership, election results) mistaken for total population — was only
+  chased down comprehensively for Kaunas itself. It's reasonable to assume it exists in other towns
+  that haven't been individually audited this way.
+
+### Current scale (measured 2026-09-17, end of day)
+
+| Metric | Value |
+|---|---:|
+| Total data rows | 26,594 |
+| Distinct countries | 131 |
+| Distinct (country, city) pairs | 5,116 |
+| Poland rows / distinct towns | 5,898 / 644 |
+| Europe pre-WW2 (1939) population estimate | ~6.84M (accepted historical figure: ~9.5M) |
+
+### If you want to resume *this specific* work
+
+1. **Close the last 16 towns of the "≥400" Germany/Poland/Pale target** (384 delivered).
+2. **Extend the post-Holocaust integrity audit beyond Eastern Europe** and beyond the ≥10,000
+   threshold used this round — the same bug class (regional aggregate, death toll, or subset
+   headcount mistaken for a town's population) is a *methodology* problem in how research gets
+   converted to rows, not something specific to the towns already found. A lower threshold, or a
+   Western/Southern-Europe pass, would likely surface more.
+3. **Make a human call on Iași/Bacău/Galați** (and similarly-shaped Romanian cities) specifically —
+   the automated fix criteria used elsewhere may be too aggressive or not aggressive enough for
+   Romania's different wartime demographic history.
+4. **Minor, low-effort cleanup**: country-label inconsistencies sitting in the data right now —
+   `Polamd` (1 row, typo for Poland), `Czech`/`Czech ` vs `Czech Republic` (14 + 2 vs 522 rows),
+   `Slovakia ` with a trailing space (1 row vs 312 for the clean spelling), `North Macedonia ` with
+   a trailing space (2 rows vs 27). None of these lose data, they just fragment a handful of rows
+   away from their country's main bucket in any per-country aggregation.
+5. Continue the Poland/Pale long-tail work per the note above (item 2 in the previous update) — a
+   proper gazetteer (JewishGen's Communities Database) is still the real fix for "one Wikipedia
+   list isn't exhaustive."
 
 ## The four locations
 
@@ -257,7 +432,15 @@ Google, and Scout's third query used to hardcode Poland's site for every country
    extracts clean text from HTML (BeautifulSoup) or PDF (PyMuPDF/`fitz`), auto-follows "download
    PDF" links found on the page, saves everything to `jew_hist/downloaded_sources/<Town>_<Country>/`
    (3,909 town folders currently on disk), and validates the town name actually appears in the
-   fetched text before using it.
+   fetched text before using it. **Not everything saved to disk here reaches the Historian**: a
+   page is saved as soon as it's successfully fetched, but is then excluded from what gets sent to
+   extraction if the town's name isn't found in its text, it's under 300 characters, the per-town
+   150,000-combined-character budget is already spent, or it's past the 25,000-char-per-source
+   truncation point. So a `downloaded_sources` folder can legitimately contain more/different
+   content than what actually informed that town's `city_data_*.csv` — check the extraction log's
+   `SKIPPING:` lines for a given town if a saved file looks like it should have produced data but
+   didn't. Manual intervention pages (CAPTCHA/login walls) are never saved at all — that check
+   happens before the save step.
 3. **`HistorianDataExtractor.py`** (`HistorianOrchestrator`) — feeds all the combined source text
    to **Gemini 3.1 Pro Preview** with a detailed extraction prompt (PhD-historian persona; strict
    rules distinguishing *Jewish* population from general town population; family-count→individuals

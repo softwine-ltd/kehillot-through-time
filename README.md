@@ -42,12 +42,20 @@ Our mission is to preserve and present the geographical history of the Jewish pe
 
 ## Project status
 
-As of 2026-09-17, `kehilot.csv` holds **21,276 rows across 131 countries** (4,682 distinct
-town/country entries). The dataset is under active, ongoing expansion and correction — see
-[`DATA_COLLECTION_PIPELINE.md`](DATA_COLLECTION_PIPELINE.md) for the full collection pipeline,
-its provenance, current known gaps, and in-progress work (most notably closing the gap between
-this dataset's pre-WW2 Europe estimate and the accepted historical figure, concentrated in Poland
-and the former Pale of Settlement).
+As of 2026-09-17, `kehilot.csv` holds **26,594 rows across 131 countries** (5,116 distinct
+town/country entries; Poland alone is 5,898 rows across 644 towns). The dataset is under active,
+ongoing expansion and correction — see [`DATA_COLLECTION_PIPELINE.md`](DATA_COLLECTION_PIPELINE.md)
+for the full collection pipeline, its provenance, current known gaps, and in-progress work (most
+notably closing the gap between this dataset's pre-WW2 Europe estimate, currently ~6.84M, and the
+accepted historical figure of ~9.5M — concentrated in Poland and the former Pale of Settlement).
+
+Also under active repair: a recurring data-quality bug where a large number describing something
+*other* than a town's own resident population (a regional death toll, a deportation-in-transit
+count, a multi-town massacre site, even a tourist/pilgrimage headcount) got recorded as if it were
+that town's population, often left open-ended so it silently "holds flat" for decades — including
+past the Holocaust, in towns whose Jewish community is well documented to have been destroyed. See
+`DATA_COLLECTION_PIPELINE.md`'s "Post-Holocaust population integrity" section for what's been
+found and fixed so far, and what's still open.
 
 ## Meta Keywords
 Jewish demographics, Jewish history, population maps, Jewish communities, kehillot, Jewish diaspora, historical maps, Jewish migration, interactive timeline, Jewish geography, demographic changes, Jewish population data

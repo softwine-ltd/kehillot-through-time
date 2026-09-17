@@ -137,6 +137,7 @@ The system detects user language preference in this order:
 
 - **English (en)**: Default language
 - **Hebrew (he)**: RTL language with full support
+- **French (fr)**: Full support (`translations/fr.json`)
 
 ## Adding New Languages
 
