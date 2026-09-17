@@ -24281,5 +24281,26 @@
     "yiddish": "",
     "german": "",
     "other": ""
+  },
+  "wrocław|poland": {
+    "english": "Wrocław",
+    "hebrew": "ורוצלב",
+    "yiddish": "ברעסלוי",
+    "german": "Breslau",
+    "other": "Wrocław"
+  },
+  "gliwice|poland": {
+    "english": "Gliwice",
+    "hebrew": "גליביצה",
+    "yiddish": "",
+    "german": "Großstadt",
+    "other": "Gliwice"
+  },
+  "nowa ruda|poland": {
+    "english": "Nowa Ruda",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
   }
 }
