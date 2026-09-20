@@ -41,18 +41,22 @@ def find_col(header, *patterns, exclude=()):
 
 def main():
     out = {}
-    for y in range(2012, 2025):
+    for y in range(2003, 2025):
         p = glob.glob(os.path.join(DIR, f"cbs_{y}.*"))[0]
         rows = load(p)
-        h = rows[0]
-        c_name = 0
+        hi = next(i for i, r in enumerate(rows[:4]) if any("סמל יישוב" in str(c) or str(c).strip() == "סמל" for c in r))
+        h = rows[hi]
+        rows = rows[hi:]
+        c_name = find_col(h, r"^שם יישוב$", r"^שם יישוב מלא$")
+        if c_name is None:
+            c_name = 0
         c_code = find_col(h, r"^סמל$", r"^סמל יישוב$")
         c_en = find_col(h, r"תעתיק", r"אנגלית")
-        c_tot = find_col(h, r"סך הכל אוכלוסייה")
-        c_jo = find_col(h, r"^יהודים ואחרים")
-        c_found = find_col(h, r"שנת ייסוד")
+        c_tot = find_col(h, r"סך הכל\s+אוכלוסייה", r"סה\"כ\s+אוכלוסייה")
+        c_jo = find_col(h, r"^יהודים ואחרים", r"^מזה: יהודים ואחר")
+        c_found = find_col(h, r"שנת ייסוד", r"שנת יסוד")
         c_type = find_col(h, r"צורת יישוב")
-        c_coord = find_col(h, r"קואורדינטות")
+        c_coord = find_col(h, r"קואורדינטות", r"נקודת ציון")
         for r in rows[1:]:
             code = num(r[c_code])
             if code is None:

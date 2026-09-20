@@ -617,7 +617,9 @@ class CSVConverterGUI:
                             year_end = str(int(next_year) - 1)
                         except ValueError:
                             year_end = year_start
-                    if next_pop and next_pop != 'NA':
+                    # Only chain the next row's population onto a row that has its own; a narrative
+                    # row inheriting it draws a false ramp from 0 (see batch_convert_to_kehilot.py).
+                    if next_pop and next_pop != 'NA' and population and population != 'NA':
                         pop_end = next_pop
                     break
             

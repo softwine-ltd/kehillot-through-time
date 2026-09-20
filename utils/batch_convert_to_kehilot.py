@@ -533,7 +533,13 @@ def convert_single_row(country, city, longitude, latitude, year_estab, year_data
                 if next_year_num <= own_year:
                     continue
                 year_end = str(next_year_num - 1)
-                if next_pop:
+                # Chain the next row's population onto THIS row only if this row has a population of
+                # its own. A narrative row (no number) inheriting the next row's number got a blank
+                # start and a real end, which the map reads as 0 -> N: a false ramp from zero over
+                # the whole span (London 1936-2000 climbing to 149,789; Wroclaw 1100-1938 climbing
+                # to 20,000). Found 2026-09-20: 510 rows across 222 towns. The next row's number is
+                # still present as that row's own starting population, so nothing is lost.
+                if next_pop and population:
                     pop_end = next_pop
                 break
 
