@@ -24407,5 +24407,96 @@
     "yiddish": "נייטרא",
     "german": "Nitra",
     "other": "Nitra"
+  },
+  "havana|cuba": {
+    "english": "Havana",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kingston|jamaica": {
+    "english": "Kingston",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Kingston",
+    "other": "Kingston"
+  },
+  "bridgetown|barbados": {
+    "english": "Bridgetown",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "san juan|puerto rico": {
+    "english": "San Juan",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "santo domingo|dominican republic": {
+    "english": "Santo Domingo",
+    "hebrew": "סנטו דומינגו",
+    "yiddish": "",
+    "german": "Santo Domingo",
+    "other": "Santo Domingo"
+  },
+  "port of spain|trinidad and tobago": {
+    "english": "Port of Spain",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "port-au-prince|haiti": {
+    "english": "Port-au-Prince",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "fort-de-france|martinique": {
+    "english": "Fort-de-France",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "oranjestad|aruba": {
+    "english": "Oranjestad",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nassau|bahamas": {
+    "english": "Nassau",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "hamilton|bermuda": {
+    "english": "Hamilton",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "willemstad|curaçao": {
+    "english": "Willemstad",
+    "hebrew": "וילמסטאד",
+    "yiddish": "",
+    "german": "Willemstad",
+    "other": "Willemstad"
+  },
+  "charlotte amalie|u.s. virgin islands": {
+    "english": "Charlotte Amalie",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
   }
 }
