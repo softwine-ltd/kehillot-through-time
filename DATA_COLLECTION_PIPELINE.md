@@ -619,32 +619,98 @@ they were **dropped, not restored**; only Jerusalem's genuinely multi-point hist
 low. CBS quirks: 2012-2017 "Jews and others" is stored in thousands, so those years are derived as
 total population × the locality's 2018 Jewish share; the file has no localities pre-2012.
 
-**Consequence to be aware of**: Israeli localities now have real data for 2012-2024 and a founding-year
-marker, but **nothing in between** — the map draws 989 Israeli markers in 2020 but only ~31 in 2000.
-That gap is honest, not a bug: the previous fake data covered it.
+**Israeli history back to 1948 (second pass, same day).** The "nothing before 2012" gap above did not
+survive contact with the CBS site. (1) The 2003-2011 locality files *are* downloadable — the path just
+uses lowercase `doclib` (`…/doclib/2019/ishuvim/bycode<YEAR>.xls`; the `DocLib` casing that works for
+2012+ returns a placeholder for older years). (2) Statistical Abstract of Israel 2018 **table 2.24**
+(`…/doclib/2018/2.%20shnatonpopulation/st02_24.xls`) gives locality populations for the census years
+1948, 1955, 1961, 1972, 1983, 1995 and 2008 for every locality with 5,000+ residents — with Jews-only rows
+for the eight mixed cities (Haifa, Jerusalem, Tel Aviv-Yafo, Akko, Lod, Ramla, Nazareth Illit,
+Ma'alot-Tarshiha). Joined into one series per locality: annual values from 2003 for all 967 rebuilt
+localities, plus census history from 1948 for the 105 above 5,000 (Tel Aviv 244,600 Jews in 1948;
+Jerusalem 82,900, bridged from the genuine 1931 Mandate census figure). Census years use total
+population (Jews only for the mixed cities); 2003-2017 annual values are total × the locality's 2018
+"Jews and others" share, since those files store that column in thousands. The map now draws ~120 Israeli
+markers in 1948, ~136 in 1995 and ~990 from 2010. Six settlements evacuated in 2005 (Nezarim, Elei
+Sinai, Dugit, Ramat Pinkas, Ramat Ef'al, Kefar Azar) were restored from the 2003-2007 files; about 40
+others (Gush Katif and outposts with no coordinates or no CBS record) remain deleted. Scripts:
+`utils/cbs_israel/`.
 
-### Current scale (measured 2026-09-20)
-- **31,569 total rows**, ~5,000 distinct (country, city) pairs, 123 countries.
-- Israel: 985 towns, 5,728 rows.
+**A converter bug that had been drawing false ramps from zero (found while auditing London).**
+`convert_single_row` gave every row the *next* row's population as its end value — even a narrative row
+with no number of its own. A blank start reads as 0 in the app, so a Cable Street fact dated 1936 drew a
+line climbing from 0 to London's 2001 census figure (149,789) over 64 years, and three Wrocław rows
+climbed from 0 to 20,000 over 838 years (the model had written `Population=0` for sources that merely
+mention Breslau, and the converter chained that 0 to the 1938 figure). 248 blank-start rows and 154
+explicit-zero ramps spanning more than 10 years were neutralized; both converters
+(`batch_convert_to_kehilot.py` and `csv_converter_gui.py`) now chain only when the row has its own number.
+The value that was inherited is still present as the next row's own starting population, so nothing is lost.
+
+**The old `year_end = now` artifact was still live outside Poland.** The default was fixed in code and
+Poland's data on 2026-09-17, but existing rows elsewhere still held pre-1960 counts flat to 2024/2026:
+1,202 rows in 796 towns (Lithuania 232, Ukraine 176, Germany 150, Belarus 106...). The worst rendered as
+false modern markers — Firuz Shabur (Iraq) at 90,000 from 656 CE, Amadiya at 25,000 from 1170, Yafran at
+40,000 from 70 CE. All converted to point-in-time facts. What remains of "pre-war count held across the
+Holocaust" is 2 rows (Moscow's 1939 census figure held to 1969, plausibly, and one Italian village).
+
+**Western/Central Europe's population=30 placeholders** (the 2026-09-18 "not done" item). 182 towns
+researched fresh, 147 produced rows (86 with population numbers); the 35 that found nothing (mostly
+Alsatian/Swiss villages from the Black Death list) now have no marker, as Germany's 117 did. 30 keys
+were delete-only (town already had other rows, or a spelling duplicate); 20 were regions/countries/junk
+(Bavaria, Savoie, "Netherlands", a Frankfurt street...). Names were cleaned by hand ("Alès ,Alez, Alais" →
+Alès). Nevis (Charlestown) now has a sourced fact — Jews were about a quarter of the town's ~300 whites in
+the 1720s — and Pointe-à-Pitre a presence marker.
+
+**Fetch-failure rerun.** 104 towns across the pipeline's whole history had been recorded as "no source
+text could be retrieved" — 18 of them the parenthesis bug. Reran all 104 with the fixed code: 35 now have
+data (Portland (Oregon), among others); 69 still find nothing. (2,644 other raw files record the model
+*reading* sources and finding no Jewish content; those are genuine findings and were not touched.)
+
+**Census-focused pass on the 18 flagged world towns.** Same pipeline plus three census-oriented Scout
+queries per town. London (2001/2011/2021 censuses: 149,789 / 150,329 / 145,466) and São Paulo (2000/2010
+censuses) now show real numbers where the fabricated 200,000-250,000 and 54,000-60,000 stood. Rule: modern-era
+(1945+) fresh rows override the flagged approximations over the years they cover; medieval claims of
+20,000+ are dropped as hyperbole; the flagged skeleton stays elsewhere. The other towns' fresh data was too
+sparse to change much (Toronto has 1911: 18,000 against the old 3,000, then nothing).
+
+**Pipeline code fixes (all in `jew_hist/`; originals kept as `*.bak_20260920`).**
+- `LibrarianAgentContentFetcher.py`: the check "town name appears in the fetched page" now strips a
+  parenthesized qualifier (`match_name`) — a query name like "Willemstad (Curaçao)" could never match any page,
+  so every source was dropped silently.
+- `ScoutAgentURLSearcher.py`: queries no longer embed the qualifier.
+- `HistorianDataExtractor.py`: a fetch failure is written as `RETRIEVAL FAILED … (this is NOT evidence that no
+  Jews lived here)` with a blank population; the extraction prompt gained (a) a guard against demographic or
+  organizational subset counts ("1,216 Jewish children" is not a town's population) and (b) "presence without
+  a count: leave Population blank, never 0".
+
+**Other cleanup.** Bogdanovka (Transnistria camp) deleted — its rows were death and survivor counts;
+`Germany `/`North Macedonia ` label spaces trimmed; a corrupted Drohobych row (a whole CSV row pasted into a
+comment field, containing a line break that made the app's line splitter crash rendering for every year) fixed;
+embedded newlines are now stripped from all fields; coordinates corrected for Guatemala City, Mbale and Addis
+Ababa (their kept-flagged rows still carried the old wrong ones).
+
+### Current scale (measured 2026-09-20, end of day)
+- **39,044 total rows**, ~5,150 distinct (country, city) pairs. `kehilot.csv` is 9.5 MB; first load
+  (fetch + parse + render) measured at ~240 ms locally.
+- Israel: 986+ towns, ~9,100 rows.
 
 ### If you want to resume *this* work specifically
-1. **Israeli pre-2012 population** — needs CBS historical data: locality populations for the census
-   years (1948, 1961, 1972, 1983, 1995, 2008) and/or the 2003-2011 yearly locality files, which the
-   CBS page lists behind a "show all" control that isn't in its HTML (so the URLs can't be scraped;
-   the `bycode<YEAR>` pattern did not resolve for 2003-2011). The 2022 census tables at
-   `census.cbs.gov.il/he/tables` are another source. Once available, extend the CBS import to
-   interpolate between census points.
-2. **The 51 unmatched Israeli placeholders** are in the session scratchpad's `israel_unmatched.txt`
-   (mostly Gush Katif/Sinai settlements evacuated 1982/2005 and 1990s outposts) — research or drop.
-3. **The 18 flagged-low world towns** — find real series (a targeted census-focused pipeline pass for
-   London, Toronto, Buenos Aires, etc. would help; the Historian's general-history sources rarely
-   carry a full population time series for a metropolis).
-4. **Guadeloupe and St. Kitts/Nevis** — the pipeline found nothing under "Basse-Terre"/"Basseterre";
-   Nevis (Charlestown) has a documented 17th-18th-century community worth a targeted query.
-5. **Western/Central Europe's pop=30/1942 placeholders** (~230 towns) — still open, see the 2026-09-18
-   section; same three-way triage applies.
-6. **Pipeline code**: strip parenthesized disambiguators from search queries, and don't write a
-   "no evidence found" row when the failure was "no source text could be retrieved".
+1. **~40 Israeli settlements with no CBS record** (Gush Katif's Kefar Darom, Morag, Katif, Bedolah; outposts) — need
+   coordinates and populations from another source (their 2003-2004 rows exist in the CBS files for some).
+2. **Israeli localities under 5,000 have no pre-2003 history** beyond a founding-year marker; only the 105
+   larger ones have census points. Older Statistical Abstract editions (localities of 2,000+) or the individual
+   census publications might extend this.
+3. **The 69 fetch-failure towns that still find nothing, and the 35 Western European towns with no data** —
+   `bigrun_empty.json` in the session scratchpad; a local-language Scout query (`include_local_language_query`)
+   might help.
+4. **The flagged-low towns still without real series** (Madrid, Toronto after 1920, Buenos Aires, Tokyo, Auckland,
+   Wellington, San José, Panama City, Addis Ababa, Gondar, Mbale, Ghazni) — a census-focused pass helps only where
+   sources publish counts; consider country-level statistics offices.
+5. **Human calls left open**: Iași/Bacău/Galați (Romanian cities with different wartime survival patterns; century-spanning
+   rows left untouched), the Birobidzhan settlement-plan-target row.
+6. **CSV size**: 9.5 MB and growing. If load time on slow connections becomes a problem, options are gzip
+   (already effective), splitting narrative-only rows into a lazily loaded second file, or dropping the long
+   repeated comment strings.
 
 ## The four locations
 

@@ -25107,5 +25107,1104 @@
     "yiddish": "מודיעין עילית",
     "german": "Modiʿin Illit",
     "other": "موديعين عيليت"
+  },
+  "feldkirch|austria": {
+    "english": "Feldkirch",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "graz|austria": {
+    "english": "Graz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "innsbruck|austria": {
+    "english": "Innsbruck",
+    "hebrew": "אינסברוק",
+    "yiddish": "אינסברוק",
+    "german": "Stift Wilten",
+    "other": "Innsbruck"
+  },
+  "judenburg|austria": {
+    "english": "Judenburg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "klagenfurt|austria": {
+    "english": "Klagenfurt",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "krems|austria": {
+    "english": "Krems",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "linz am rhein|germany": {
+    "english": "Linz am Rhein",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rechnitz|austria": {
+    "english": "Rechnitz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "salzburg|austria": {
+    "english": "Salzburg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "wien|austria": {
+    "english": "Wien",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "wiener neustadt|austria": {
+    "english": "Wiener Neustadt",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "antwerpen|belgium": {
+    "english": "Antwerpen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "liège|belgium": {
+    "english": "Liège",
+    "hebrew": "לייז'",
+    "yiddish": "ליעזש",
+    "german": "Lüttich",
+    "other": "Lüttich"
+  },
+  "canterbury|united kingdom": {
+    "english": "Canterbury",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "alès|france": {
+    "english": "Alès",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "auxerre|france": {
+    "english": "Auxerre",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "benfeld|france": {
+    "english": "Benfeld",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bergheim|france": {
+    "english": "Bergheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "carcassonne|france": {
+    "english": "Carcassonne",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "chalon-sur-saône|france": {
+    "english": "Chalon-sur-Saône",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "clermont-ferrand|france": {
+    "english": "Clermont-Ferrand",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "colmar|france": {
+    "english": "Colmar",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ensisheim|france": {
+    "english": "Ensisheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "erstein|france": {
+    "english": "Erstein",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "falaise|france": {
+    "english": "Falaise",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "haguenau|france": {
+    "english": "Haguenau",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kaysersberg|france": {
+    "english": "Kaysersberg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "la rochelle|france": {
+    "english": "La Rochelle",
+    "hebrew": "לה רושל",
+    "yiddish": "",
+    "german": "La Rochelle",
+    "other": "La Rochelle"
+  },
+  "lauterburg|france": {
+    "english": "Lauterburg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "le mans|france": {
+    "english": "Le Mans",
+    "hebrew": "לה מאן",
+    "yiddish": "",
+    "german": "Le Mans",
+    "other": "Le Mans"
+  },
+  "lunel|france": {
+    "english": "Lunel",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "marseille|france": {
+    "english": "Marseille",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "montpellier|france": {
+    "english": "Montpellier",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mâcon|france": {
+    "english": "Mâcon",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nantes|france": {
+    "english": "Nantes",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "narbonne|france": {
+    "english": "Narbonne",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nice|france": {
+    "english": "Nice",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nyons|france": {
+    "english": "Nyons",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "poitiers|france": {
+    "english": "Poitiers",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "perpignan|france": {
+    "english": "Perpignan",
+    "hebrew": "פרפיניאן",
+    "yiddish": "פערפיניאן",
+    "german": "Perpignan",
+    "other": "Perpignan"
+  },
+  "vauvert|france": {
+    "english": "Vauvert",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rouen|france": {
+    "english": "Rouen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "saverne|france": {
+    "english": "Saverne",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "cernay|france": {
+    "english": "Cernay",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "strasbourg|france": {
+    "english": "Strasbourg",
+    "hebrew": "שטרסבורג",
+    "yiddish": "שטראסבורג",
+    "german": "Straßburg",
+    "other": "Straatsburg"
+  },
+  "thann|france": {
+    "english": "Thann",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "toulouse|france": {
+    "english": "Toulouse",
+    "hebrew": "טולוז",
+    "yiddish": "טולוז",
+    "german": "Toulouse",
+    "other": "Toulouse"
+  },
+  "trinquetaille|france": {
+    "english": "Trinquetaille",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "troyes|france": {
+    "english": "Troyes",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "wattwiller|france": {
+    "english": "Wattwiller",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "wissembourg|france": {
+    "english": "Wissembourg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "zellenberg|france": {
+    "english": "Zellenberg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "aach|germany": {
+    "english": "Aach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "amberg|germany": {
+    "english": "Amberg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "baiersdorf|germany": {
+    "english": "Baiersdorf",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bochum|germany": {
+    "english": "Bochum",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "boppard|germany": {
+    "english": "Boppard",
+    "hebrew": "בופארד",
+    "yiddish": "",
+    "german": "Boppard",
+    "other": "بوبارد"
+  },
+  "konstanz|germany": {
+    "english": "Konstanz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Carola Zwick",
+    "other": "Konstanz"
+  },
+  "deggendorf|germany": {
+    "english": "Deggendorf",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "duisburg|germany": {
+    "english": "Duisburg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "emden|germany": {
+    "english": "Emden",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gemen|germany": {
+    "english": "Gemen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "görlitz|germany": {
+    "english": "Görlitz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "goslar|germany": {
+    "english": "Goslar",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "hagenbach|germany": {
+    "english": "Hagenbach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "hainsfarth|germany": {
+    "english": "Hainsfarth",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "halberstadt|germany": {
+    "english": "Halberstadt",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "halle|germany": {
+    "english": "Halle",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "hameln|germany": {
+    "english": "Hameln",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "heidingsfeld|germany": {
+    "english": "Heidingsfeld",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "jülich|germany": {
+    "english": "Jülich",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kassel|germany": {
+    "english": "Kassel",
+    "hebrew": "קאסל",
+    "yiddish": "",
+    "german": "Heinrich Stilling",
+    "other": "Kassel"
+  },
+  "bad bad kissingen|germany": {
+    "english": "Bad Bad Kissingen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "koblenz|germany": {
+    "english": "Koblenz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lauda-königshofen|germany": {
+    "english": "Lauda-Königshofen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lauingen|germany": {
+    "english": "Lauingen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lüneburg, germany|germany": {
+    "english": "Lüneburg, Germany",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mainz|germany": {
+    "english": "Mainz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mansbach|germany": {
+    "english": "Mansbach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "memmingen|germany": {
+    "english": "Memmingen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "münster|germany": {
+    "english": "Münster",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nauheim|germany": {
+    "english": "Nauheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "niederstetten|germany": {
+    "english": "Niederstetten",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "oettingen in bayern|germany": {
+    "english": "Oettingen in Bayern",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "offenbach am main|germany": {
+    "english": "Offenbach am Main",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "oldenburg|germany": {
+    "english": "Oldenburg",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "paderborn|germany": {
+    "english": "Paderborn",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "recklinghausen|germany": {
+    "english": "Recklinghausen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rostock|germany": {
+    "english": "Rostock",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "schopfloch|germany": {
+    "english": "Schopfloch",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sondershausen|germany": {
+    "english": "Sondershausen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "stadtlengsfeld|germany": {
+    "english": "Stadtlengsfeld",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "talheim|germany": {
+    "english": "Talheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tauberbischofsheim|germany": {
+    "english": "Tauberbischofsheim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "trier|germany": {
+    "english": "Trier",
+    "hebrew": "טריר",
+    "yiddish": "",
+    "german": "Grumsiner Forst/Redernswalde",
+    "other": "Trier"
+  },
+  "villingen|germany": {
+    "english": "Villingen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "weil der stadt|germany": {
+    "english": "Weil der Stadt",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "wiesbaden|germany": {
+    "english": "Wiesbaden",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "worms|germany": {
+    "english": "Worms",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "xanten|germany": {
+    "english": "Xanten",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "überlingen|germany": {
+    "english": "Überlingen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "asti|italy": {
+    "english": "Asti",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bolzano|italy": {
+    "english": "Bolzano",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "casale monferrato|italy": {
+    "english": "Casale Monferrato",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "cuneo|italy": {
+    "english": "Cuneo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "milan|italy": {
+    "english": "Milan",
+    "hebrew": "מילאנו",
+    "yiddish": "מילאן",
+    "german": "Mailand",
+    "other": "Milaan"
+  },
+  "padua|italy": {
+    "english": "Padua",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "trento|italy": {
+    "english": "Trento",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "turin|italy": {
+    "english": "Turin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "verona|italy": {
+    "english": "Verona",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "echternach|luxembourg": {
+    "english": "Echternach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "luxembourg city|luxembourg": {
+    "english": "Luxembourg City",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "deventer|netherlands": {
+    "english": "Deventer",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rotterdam|netherlands": {
+    "english": "Rotterdam",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "skopje|north macedonia": {
+    "english": "Skopje",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "stobi|north macedonia": {
+    "english": "Stobi",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "belgrade|serbia": {
+    "english": "Belgrade",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "celje|slovenia": {
+    "english": "Celje",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ljubljana|slovenia": {
+    "english": "Ljubljana",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "maribor|slovenia": {
+    "english": "Maribor",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "geneva|switzerland": {
+    "english": "Geneva",
+    "hebrew": "ז'נבה",
+    "yiddish": "גענף",
+    "german": "Genf",
+    "other": "Genève"
+  },
+  "lausanne|switzerland": {
+    "english": "Lausanne",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "neuchâtel|switzerland": {
+    "english": "Neuchâtel",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rheinfelden|switzerland": {
+    "english": "Rheinfelden",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "winterthur|switzerland": {
+    "english": "Winterthur",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "edirne|turkey": {
+    "english": "Edirne",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ansbach|germany": {
+    "english": "Ansbach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "babimost|poland": {
+    "english": "Babimost",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "balaguer|spain": {
+    "english": "Balaguer",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "castelló d'empúries|spain": {
+    "english": "Castelló d'Empúries",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "feodosia (феодосія, феодосия)|ukraine": {
+    "english": "Feodosia (Феодосія, Феодосия)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "london (ontario)|canada": {
+    "english": "London (Ontario)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "maków podhalański|poland": {
+    "english": "Maków Podhalański",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "maszewo|poland": {
+    "english": "Maszewo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "miasteczko krajeńskie|poland": {
+    "english": "Miasteczko Krajeńskie",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "miedźna|poland": {
+    "english": "Miedźna",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "münster (gregorienthal)|germany": {
+    "english": "Münster (Gregorienthal)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nehavand|iran": {
+    "english": "Nehavand",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "niebla|spain": {
+    "english": "Niebla",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nikopolis|greece": {
+    "english": "Nikopolis",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ourense|spain": {
+    "english": "Ourense",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "portland|united states": {
+    "english": "Portland",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "radzymin|poland": {
+    "english": "Radzymin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "remagen|germany": {
+    "english": "Remagen",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "sant'antioco|italy": {
+    "english": "Sant'Antioco",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "schwäbisch hall (swabia)|germany": {
+    "english": "Schwäbisch Hall (Swabia)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "soest (zoest)|germany": {
+    "english": "Soest (Zoest)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "soufli|greece": {
+    "english": "Soufli",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "springfield|united states": {
+    "english": "Springfield",
+    "hebrew": "ספרינגפילד",
+    "yiddish": "",
+    "german": "Springfield",
+    "other": "Springfield"
+  },
+  "tauste|spain": {
+    "english": "Tauste",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "valencia de alcántara|spain": {
+    "english": "Valencia de Alcántara",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "wojsławice (chelm district)|poland": {
+    "english": "Wojsławice (Chelm district)",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "xàtiva|spain": {
+    "english": "Xàtiva",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "úbeda|spain": {
+    "english": "Úbeda",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "łyszkowice|poland": {
+    "english": "Łyszkowice",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "charlestown|st. kitts and nevis": {
+    "english": "Charlestown",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pointe-à-pitre|guadeloupe": {
+    "english": "Pointe-à-Pitre",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
   }
 }
