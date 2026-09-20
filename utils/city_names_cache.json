@@ -24498,5 +24498,614 @@
     "yiddish": "",
     "german": "",
     "other": ""
+  },
+  "kabul|afghanistan": {
+    "english": "Kabul",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "herat|afghanistan": {
+    "english": "Herat",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "balkh|afghanistan": {
+    "english": "Balkh",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ghazni|afghanistan": {
+    "english": "Ghazni",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rome|italy": {
+    "english": "Rome",
+    "hebrew": "רומא",
+    "yiddish": "רוים",
+    "german": "Rom",
+    "other": "Roma"
+  },
+  "london|united kingdom": {
+    "english": "London",
+    "hebrew": "לונדון",
+    "yiddish": "לאנדאן",
+    "german": "London",
+    "other": "Лондон"
+  },
+  "amsterdam|netherlands": {
+    "english": "Amsterdam",
+    "hebrew": "אמסטרדם",
+    "yiddish": "אמסטערדאם",
+    "german": "Amsterdam",
+    "other": "Amsterdam"
+  },
+  "toronto|canada": {
+    "english": "Toronto",
+    "hebrew": "טורונטו",
+    "yiddish": "טאראנטא",
+    "german": "Toronto",
+    "other": "Toronto"
+  },
+  "montreal|canada": {
+    "english": "Montreal",
+    "hebrew": "מונטריאול",
+    "yiddish": "מאנטרעאל",
+    "german": "Montreal",
+    "other": "Montreal"
+  },
+  "buenos aires|argentina": {
+    "english": "Buenos Aires",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "são paulo|brazil": {
+    "english": "São Paulo",
+    "hebrew": "סאו פאולו",
+    "yiddish": "סאו פאולא",
+    "german": "São Paulo",
+    "other": "Сан-Паулу"
+  },
+  "tokyo|japan": {
+    "english": "Tokyo",
+    "hebrew": "טוקיו",
+    "yiddish": "טאקיא",
+    "german": "",
+    "other": "多摩郡"
+  },
+  "melbourne|australia": {
+    "english": "Melbourne",
+    "hebrew": "מלבורן",
+    "yiddish": "מעלבארן",
+    "german": "Melbourne",
+    "other": "Мельбурн"
+  },
+  "sydney|australia": {
+    "english": "Sydney",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "hong kong|hong kong": {
+    "english": "Hong Kong",
+    "hebrew": "הונג קונג",
+    "yiddish": "האנג קאנג",
+    "german": "Hongkong",
+    "other": "Ҳонконг"
+  },
+  "auckland|new zealand": {
+    "english": "Auckland",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Auckland",
+    "other": "Auckland"
+  },
+  "wellington|new zealand": {
+    "english": "Wellington",
+    "hebrew": "",
+    "yiddish": "װעלינגטאן",
+    "german": "Wellington",
+    "other": "Wellington"
+  },
+  "christchurch|new zealand": {
+    "english": "Christchurch",
+    "hebrew": "כרייסטצ'רץ'",
+    "yiddish": "",
+    "german": "Christchurch",
+    "other": "Christchurch"
+  },
+  "dunedin|new zealand": {
+    "english": "Dunedin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "san josé|costa rica": {
+    "english": "San José",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "guatemala city|guatemala": {
+    "english": "Guatemala City",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tegucigalpa|honduras": {
+    "english": "Tegucigalpa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "san pedro sula|honduras": {
+    "english": "San Pedro Sula",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "san salvador|el salvador": {
+    "english": "San Salvador",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "managua|nicaragua": {
+    "english": "Managua",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "panama city|panama": {
+    "english": "Panama City",
+    "hebrew": "פנמה סיטי",
+    "yiddish": "פאנאמא-שטאט",
+    "german": "Panama-Stadt",
+    "other": "Banda Panama"
+  },
+  "addis ababa|ethiopia": {
+    "english": "Addis Ababa",
+    "hebrew": "אדיס אבבה",
+    "yiddish": "אדיס אבאבא",
+    "german": "Addis Abeba",
+    "other": "አዲስ አበባ"
+  },
+  "gondar|ethiopia": {
+    "english": "Gondar",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "casablanca|morocco": {
+    "english": "Casablanca",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "marrakech|morocco": {
+    "english": "Marrakech",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mbale|uganda": {
+    "english": "Mbale",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "jerusalem|israel": {
+    "english": "Jerusalem",
+    "hebrew": "ירושלים",
+    "yiddish": "ירושלים",
+    "german": "Jerusalem",
+    "other": "Al-Quds"
+  },
+  "tel aviv|israel": {
+    "english": "Tel Aviv",
+    "hebrew": "תל אביב",
+    "yiddish": "תל אביב",
+    "german": "Tel Aviv",
+    "other": ""
+  },
+  "haifa|israel": {
+    "english": "Haifa",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rishon lezion|israel": {
+    "english": "Rishon LeZion",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "petah tikva|israel": {
+    "english": "Petah Tikva",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ashdod|israel": {
+    "english": "Ashdod",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "netanya|israel": {
+    "english": "Netanya",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bnei brak|israel": {
+    "english": "Bnei Brak",
+    "hebrew": "קריית ויז'ניץ",
+    "yiddish": "בני ברק",
+    "german": "Bnei Berak",
+    "other": "Bnei Brak"
+  },
+  "holon|israel": {
+    "english": "Holon",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ramat gan|israel": {
+    "english": "Ramat Gan",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rehovot|israel": {
+    "english": "Rehovot",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bat yam|israel": {
+    "english": "Bat Yam",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ashkelon|israel": {
+    "english": "Ashkelon",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "herzliya|israel": {
+    "english": "Herzliya",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kfar saba|israel": {
+    "english": "Kfar Saba",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "hadera|israel": {
+    "english": "Hadera",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "modi'in|israel": {
+    "english": "Modi'in",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "beit shemesh|israel": {
+    "english": "Beit Shemesh",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "lod|israel": {
+    "english": "Lod",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "eilat|israel": {
+    "english": "Eilat",
+    "hebrew": "אלי לנקרי",
+    "yiddish": "אילת",
+    "german": "Eilat",
+    "other": "Eilat"
+  },
+  "safed|israel": {
+    "english": "Safed",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tiberias|israel": {
+    "english": "Tiberias",
+    "hebrew": "יוסי נבעה",
+    "yiddish": "טבריה",
+    "german": "Tiberias",
+    "other": "Tiberias"
+  },
+  "afula|israel": {
+    "english": "Afula",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "karmiel|israel": {
+    "english": "Karmiel",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kiryat shmona|israel": {
+    "english": "Kiryat Shmona",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kiryat gat|israel": {
+    "english": "Kiryat Gat",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "dimona|israel": {
+    "english": "Dimona",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ofakim|israel": {
+    "english": "Ofakim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nahariya|israel": {
+    "english": "Nahariya",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "rosh haayin|israel": {
+    "english": "Rosh HaAyin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "givatayim|israel": {
+    "english": "Givatayim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "or yehuda|israel": {
+    "english": "Or Yehuda",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ra'anana|israel": {
+    "english": "Ra'anana",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "hod hasharon|israel": {
+    "english": "Hod HaSharon",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "yehud-monosson|israel": {
+    "english": "Yehud-Monosson",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kiryat bialik|israel": {
+    "english": "Kiryat Bialik",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kiryat ata|israel": {
+    "english": "Kiryat Ata",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kiryat yam|israel": {
+    "english": "Kiryat Yam",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kiryat motzkin|israel": {
+    "english": "Kiryat Motzkin",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kiryat tivon|israel": {
+    "english": "Kiryat Tivon",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kiryat malakhi|israel": {
+    "english": "Kiryat Malakhi",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kiryat ono|israel": {
+    "english": "Kiryat Ono",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ariel|israel": {
+    "english": "Ariel",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "nazareth illit|israel": {
+    "english": "Nazareth Illit",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "migdal haemek|israel": {
+    "english": "Migdal HaEmek",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "yokneam|israel": {
+    "english": "Yokneam",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "bet she'an|israel": {
+    "english": "Bet She'an",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ramla|israel": {
+    "english": "Ramla",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "mitzpe ramon|israel": {
+    "english": "Mitzpe Ramon",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "tirat carmel|israel": {
+    "english": "Tirat Carmel",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "netivot|israel": {
+    "english": "Netivot",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "yeruham|israel": {
+    "english": "Yeruham",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "kiryat arba|israel": {
+    "english": "Kiryat Arba",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "ma'ale adumim|israel": {
+    "english": "Ma'ale Adumim",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "beitar illit|israel": {
+    "english": "Beitar Illit",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "modi'in illit|israel": {
+    "english": "Modi'in Illit",
+    "hebrew": "מודיעין עילית",
+    "yiddish": "מודיעין עילית",
+    "german": "Modiʿin Illit",
+    "other": "موديعين عيليت"
   }
 }

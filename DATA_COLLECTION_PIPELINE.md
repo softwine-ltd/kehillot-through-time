@@ -556,6 +556,96 @@ placeholder, not investigated further.
 3. **The 109-row "(citation lost)" remnants** above, if worth the time — much lower value per row
    than what this pass targeted.
 
+## ⚠️ Status update (2026-09-20) — the "eight communities near Antarctica", and the rest of that batch
+
+A user noticed eight communities plotted near Antarctica, south of South Africa. Tracing them exposed
+the largest single block of old-model data found so far: **rows ~1063-1652 of `kehilot.csv` were one
+early hand-typed batch** (sources all point at `jewishvirtuallibrary.org/…virtual-jewish-history-tour`
+pages; round numbers; generic comments like "Early settlement - Sephardic Jews arrive"), plus **1,018
+Israeli localities** from a second early batch. Everything below is now fixed or explicitly flagged.
+
+**Swapped coordinates.** Ten Caribbean towns (Havana, Willemstad, Port-au-Prince, Oranjestad, George
+Town, Charlotte Amalie, Basseterre, Basse-Terre, Port of Spain, Fort-de-France) had longitude and
+latitude in each other's columns — Havana was stored at lat -82.4, which is open ocean south of
+Africa. Eight German towns and Będzin (Poland) had the same swap, and Wellington had a longitude of
+184.78. 203 rows fixed. The scan that found them flags points >1,500 km from their country's median
+where swapping the columns lands much closer, so a swap inside a small country would not be caught.
+
+**The Caribbean block was fabricated as a template.** Eight islands shared an identical population
+schedule (50→100→200→300→500→800→600→400→300, "Peak population - 800 Jews"). Re-researched through the
+real pipeline: Havana, Curaçao, Barbados, Aruba, Bermuda and the Virgin Islands got real series;
+Kingston, San Juan, Santo Domingo, Port of Spain, Port-au-Prince, Fort-de-France, Nassau and Hamilton
+got narrative-only results (the pipeline correctly refuses country-level aggregates), so they now
+carry presence markers by the project convention (3 = a few Jews documented, 20 = an organized
+community/synagogue) with a note; Cayman got its one sourced datum (15); Guadeloupe and St. Kitts
+produced nothing and their fabricated rows were removed. **Pipeline bug found here**: queries with a
+parenthesized disambiguator ("Willemstad (Curaçao)") made the fetch fail and the Historian wrote
+"No evidence of Jewish presence found — no source text could be retrieved", which looks like a finding
+but is a failure. Rerunning with plain names fixed Curaçao and Charlotte Amalie. Worth stripping
+parentheses from Scout/Librarian queries in code.
+
+**Batch 2 (95 towns: world cities, Afghanistan, Central America, NZ, Israeli cities).** Audited old
+vs. fresh values at 1900/1939/1950/2000/2020 per town. Findings: identical curves across different
+towns (Ofakim = Yehud-Monosson, Kiryat Bialik = Kiryat Motzkin, Migdal HaEmek = Arad, the four
+Central American capitals, Christchurch = Dunedin); old values several-fold off where fresh data
+exists (Montreal 24K vs a sourced 64K in 1939; Toronto 14.5K vs 49K); but fresh data is *not*
+uniformly better — London's fresh rows leave 1900-1950 at ~1,755 (a held-flat artifact) against a
+plausible ~200K. So no single threshold works. Policy applied: template towns → old rows deleted;
+fresh data adequate and self-consistent (≥2 anchor years, no >15× jumps, within 8× of old) →
+replaced (Kabul, Rome, Montreal, Melbourne, Sydney, Casablanca); everything else → old rows kept but
+set to `probability = low` (the app already renders that as a lighter marker plus a "lower
+confidence" badge) with an "unverified approximation" note, and only the fresh *narrative* rows
+added. 18 towns are in that flagged state (London, Amsterdam, Madrid, Toronto, Buenos Aires, São
+Paulo, Tokyo, Hong Kong, Auckland, Wellington, San José, Guatemala City, Panama City, Addis Ababa,
+Gondar, Marrakech, Mbale, Ghazni). Firoz Koh and the Central American/NZ template towns lost their
+markers outright until real data is found.
+
+**The 1,018 Israeli placeholders** (population 30 from founding to 2023, coordinates rounded to
+0.1°, sourced to Hebrew Wikipedia URLs that were themselves reverse-transliterated from English and
+often garbled — e.g. `ראשון לצייון`). Old coordinates were up to ~110 km off (Bet Hilqiyya, Mekhora).
+Replaced using the **Israel Central Bureau of Statistics locality files** — the user pointed at the
+CBS site, and the yearly files turned out to be direct downloads:
+`https://www.cbs.gov.il/he/publications/DocLib/2019/ishuvim/bycode<YEAR>.xlsx` (2018-2024; `.xls` for
+2012-2017; 2023 is `bycode2023Sofi.xlsx`). Each has ~1,480 localities with Hebrew name, English
+transliteration, founding year, locality type, ITM coordinates, total population and "Jews and
+others". Matched 907 of the placeholders on the English transliteration (plus a hand-verified list of
+spelling variants), converted ITM→WGS84 (`pyproj`, EPSG:2039), and wrote a founding-year presence
+marker (20, by convention) plus the 2012-2024 "Jews and others" series compressed to piecewise-linear
+rows. 60 placeholders duplicated a big city already in the dataset and were deleted; 51 had no CBS
+match (mostly settlements evacuated in 2005 and institutional sites) and were deleted. The 62 big
+Israeli cities from batch 2 got the same CBS series and coordinates. Their old pre-2012 skeletons were
+mostly just two endpoints joined by a straight line (Tel Aviv: 1,000 in 1909 to 418,730 in 2011), so
+they were **dropped, not restored**; only Jerusalem's genuinely multi-point history is kept, flagged
+low. CBS quirks: 2012-2017 "Jews and others" is stored in thousands, so those years are derived as
+total population × the locality's 2018 Jewish share; the file has no localities pre-2012.
+
+**Consequence to be aware of**: Israeli localities now have real data for 2012-2024 and a founding-year
+marker, but **nothing in between** — the map draws 989 Israeli markers in 2020 but only ~31 in 2000.
+That gap is honest, not a bug: the previous fake data covered it.
+
+### Current scale (measured 2026-09-20)
+- **31,569 total rows**, ~5,000 distinct (country, city) pairs, 123 countries.
+- Israel: 985 towns, 5,728 rows.
+
+### If you want to resume *this* work specifically
+1. **Israeli pre-2012 population** — needs CBS historical data: locality populations for the census
+   years (1948, 1961, 1972, 1983, 1995, 2008) and/or the 2003-2011 yearly locality files, which the
+   CBS page lists behind a "show all" control that isn't in its HTML (so the URLs can't be scraped;
+   the `bycode<YEAR>` pattern did not resolve for 2003-2011). The 2022 census tables at
+   `census.cbs.gov.il/he/tables` are another source. Once available, extend the CBS import to
+   interpolate between census points.
+2. **The 51 unmatched Israeli placeholders** are in the session scratchpad's `israel_unmatched.txt`
+   (mostly Gush Katif/Sinai settlements evacuated 1982/2005 and 1990s outposts) — research or drop.
+3. **The 18 flagged-low world towns** — find real series (a targeted census-focused pipeline pass for
+   London, Toronto, Buenos Aires, etc. would help; the Historian's general-history sources rarely
+   carry a full population time series for a metropolis).
+4. **Guadeloupe and St. Kitts/Nevis** — the pipeline found nothing under "Basse-Terre"/"Basseterre";
+   Nevis (Charlestown) has a documented 17th-18th-century community worth a targeted query.
+5. **Western/Central Europe's pop=30/1942 placeholders** (~230 towns) — still open, see the 2026-09-18
+   section; same three-way triage applies.
+6. **Pipeline code**: strip parenthesized disambiguators from search queries, and don't write a
+   "no evidence found" row when the failure was "no source text could be retrieved".
+
 ## The four locations
 
 | Location | Role |
