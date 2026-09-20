@@ -712,6 +712,55 @@ Ababa (their kept-flagged rows still carried the old wrong ones).
    (already effective), splitting narrative-only rows into a lazily loaded second file, or dropping the long
    repeated comment strings.
 
+## ⚠️ Status update (2026-09-20, late) — cheaper-than-Gemini-Pro extraction: what a benchmark showed
+
+Question asked: what would cost less than Gemini 3.1 Pro (the extraction model in `HistorianDataExtractor.py`)
+without losing accuracy? Measured, not guessed. Harness: `jew_hist/model_benchmark/` (builds one fixed input per town
+from the Librarian's saved downloads, runs the *production prompt* through each model, scores the output).
+30 towns: 8 known-failure "trap" towns (Bełżec, Brzezinka, Bogdanovka, Uman, Wrocław, Kaunas, Sarny, Yarmolyntsi)
+plus 22 random recent towns. Sample inputs averaged 43K tokens (heavier than a typical production town), so these
+per-town costs are on the high side. Prices are Google's published list prices at the time; tokens are measured
+(`usage_metadata`), including thinking tokens, which are billed as output.
+
+| Configuration | $/town | vs Pro | numeric agreement with Pro (recall / precision) | notes |
+|---|---|---|---|---|
+| **3.1 Pro, default thinking (baseline)** | 0.186 | — | — | ~7K thinking tokens/town ≈ 45% of the cost; **not ground truth** (see below) |
+| 3.1 Pro, thinking LOW | 0.111 | −40% | 0.72 / 0.77 | half the rows; worse — don't |
+| 3.1 Pro, input trimmed to ±1,200 chars around Jewish terms | 0.125 | −33% | 0.83 / 0.97 | input shrinks to 30% but thinking dominates the bill; loses table rows (Kaunas 1857/1864 censuses) — don't |
+| **3.8 Flash, default thinking** | 0.077 | −59% | 0.90 / 0.96 | 100% of numbers found in the source text, 0 trap violations |
+| **3.8 Flash, thinking LOW** | 0.036 | −81% | 0.83 / 0.89 (≈0.90 after adjudication) | **zero thinking tokens**, ~4 s/town; every one of its extra rows was valid |
+| 3 Flash preview, default / LOW | 0.049 / 0.027 | −74% / −85% | 0.85/0.86 · 0.86/0.75 | subset errors; LOW variant put Bogdanovka's camp count (50,000) in as population — don't |
+| 2.5 Flash | 0.036 | −81% | 0.84 / 0.75 | **25 column-shifted rows** (a year written into Population) — don't |
+| 3.1 Flash-Lite | 0.011 | −94% | 0.77 / 0.81 | ~10 of its 15 extra rows were wrong (a Poland-wide figure as one city's population; "450 Jews" ×5 as if families; a 3-village combined count; a cemetery's 1,000 graves ×5; massacre tolls) — not usable as the extractor |
+
+**Caveats that change the arithmetic.** (1) `gemini-3.8-flash` is on **promotional pricing through 2026-12-31**
+($0.75/$3.75 per 1M tokens); from 2027-01-01 it is $1.50/$7.50, so its rows above roughly double
+(default ≈ $0.15, LOW ≈ $0.07 per town — still ~60% below Pro-default at LOW). (2) The Batch API is 50% off on top
+of any of these. (3) `gemini-2.5-flash-lite` is no longer available to new keys. (4) 30 towns / ~80 numeric facts:
+differences of a few percent are noise.
+
+**Pro is not ground truth.** Adjudicating disagreements by reading the source text: Pro itself entered Wrocław's
+"10,000" (a Poland-wide estimate) and Baden's "250" (survivors moved to a town) as populations despite the town-resident
+rule; cheaper models that omitted them were right to. Conversely 3.8 Flash missed a few genuine facts (Adamów 1,724,
+Korczyna 1,600, Uman's 450 in the 1750s).
+
+**The extraction-prompt rules work on cheap models too.** Zero of the trap-town violations occurred for any
+default-thinking model — the town-resident / camp-count / subset rules added on 2026-09-17/20 carry across model tiers
+(the one exception was the 3 Flash preview LOW variant above).
+
+**Other levers measured offline.** A keyword pre-filter ("does any Jewish-related term occur within 3,000 characters of
+the town name?") never wrongly skipped a town that yielded data (0 of 90) but caught only 37% of the "found nothing"
+towns, because generic words (cemetery, Holocaust, Hebrew) appear near almost any town. Recent runs are only ~11% "found
+nothing" (historic bulk runs were ~40%), so the saving is modest.
+
+**Suggested next steps (not yet done — production still uses 3.1 Pro at default thinking):** make the model and
+`thinking_level` configurable in `HistorianDataExtractor.py`; validate `gemini-3.8-flash` at LOW on ~100 more towns
+(especially large cities and camp/massacre sites) before switching bulk runs; keep Pro for major cities and re-run
+automatically on Pro any town where a model emits a Population ≥ 20,000 whose Notes mention killed/murdered/deported;
+add a cheap row validator to the pipeline (Population that looks like a year, shifted columns) since format failures
+occur; use the Batch API for bulk. Claude models were **not** benchmarked (no Anthropic key in the pipeline `.env`);
+at list prices Sonnet 5 ($2/$10) is barely cheaper than Pro, Haiku 4.5 ($1/$5) is roughly Flash-tier.
+
 ## The four locations
 
 | Location | Role |
