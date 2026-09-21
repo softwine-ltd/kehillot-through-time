@@ -753,13 +753,58 @@ the town name?") never wrongly skipped a town that yielded data (0 of 90) but ca
 towns, because generic words (cemetery, Holocaust, Hebrew) appear near almost any town. Recent runs are only ~11% "found
 nothing" (historic bulk runs were ~40%), so the saving is modest.
 
-**Suggested next steps (not yet done — production still uses 3.1 Pro at default thinking):** make the model and
-`thinking_level` configurable in `HistorianDataExtractor.py`; validate `gemini-3.8-flash` at LOW on ~100 more towns
-(especially large cities and camp/massacre sites) before switching bulk runs; keep Pro for major cities and re-run
-automatically on Pro any town where a model emits a Population ≥ 20,000 whose Notes mention killed/murdered/deported;
-add a cheap row validator to the pipeline (Population that looks like a year, shifted columns) since format failures
-occur; use the Batch API for bulk. Claude models were **not** benchmarked (no Anthropic key in the pipeline `.env`);
-at list prices Sonnet 5 ($2/$10) is barely cheaper than Pro, Haiku 4.5 ($1/$5) is roughly Flash-tier.
+**Suggested next steps — status (2026-09-21):** (1) *done* — `HistorianDataExtractor.py` now takes `model` /
+`thinking_level` (constructor args, or env `HISTORIAN_MODEL` / `HISTORIAN_THINKING_LEVEL`); defaults are unchanged
+(3.1 Pro, default thinking) and each call logs its token usage. (2) *done* — the larger validation is below.
+Still open: a row-format validator (Population that looks like a year, shifted columns), the Batch API for bulk runs.
+Claude models were **not** benchmarked (no Anthropic key in the pipeline `.env`); at list prices Sonnet 5 ($2/$10) is barely
+cheaper than Pro, Haiku 4.5 ($1/$5) is roughly Flash-tier.
+
+### Validation on 101 harder towns (2026-09-21) — camps, massacre sites, large cities
+
+Set: 30 camp/massacre towns (Auschwitz/Oświęcim, Treblinka, Sobibór, Mauthausen, Stutthof/Sztutowo, Chełmno, Jasenovac,
+Maly Trostenets, Bergen-Belsen, Drancy, Westerbork, Kyiv, Vilnius, Riga, Lviv …), 60 large cities (Warsaw, Kraków, Łódź,
+Vienna, Budapest, Thessaloniki, Odessa …) and 11 unused random towns. Sources for 15 of the camp towns were fetched fresh.
+Mean input 36K tokens/town. Harness: `jew_hist/model_benchmark/` (`RESUME.md`, `bench_score.py`, `bench_disagree.py`,
+`bench_bycat.py`, `bench_validator.py`; run with `BENCH_SET=val`).
+
+| Configuration | $/town | vs Pro | recall / precision vs Pro | clear rule violations* | notes |
+|---|---|---|---|---|---|
+| 3.1 Pro, default thinking (baseline) | 0.221 | — | — | ~5 of ~575 numeric rows (1%) | ~9K thinking tokens/town, ~80 s |
+| **3.8 Flash, default thinking** | 0.081 | −63% | 0.88 / 0.93 | 2 rows (Słonim) of ~555 | 97.5% of numbers appear literally in the source; ~36 s |
+| 3.8 Flash, thinking LOW | 0.036 | −84% | 0.87 / 0.86 | ~13 of ~600 (2%) | 94% grounded; ~5 s; no thinking tokens |
+
+\*Adjudicated by reading the source text around each number (Pro is not ground truth). "Clear violation" = a regional
+aggregate, subset count, survivor/toll figure or ghetto through-count entered as the town's own population.
+
+**What the cheap models get wrong.** Flash LOW: regional aggregates (Tarashcha's Population = the Kiev-guberniya total
+433,700; Gomel + its uyezd; Bucharest ← Romania's 2011 census figure), death tolls read as populations (Słonim 1850 = 10,000
+and 1650 = 1,200 — both are massacre-site sentences), Łódź's 210,000 "forced to live in the ghetto" (a cumulative through-count),
+male-adults-only (Minsk 1766), single-trade counts (Odessa 1842), one congregation (Gdańsk 1757). It also missed real peaks
+(Vienna 170,000–200,000, Częstochowa 30,000–40,000, Lviv 1941). Flash default made only the two Słonim errors of that kind
+but still missed ~12% of Pro's facts (Lviv 1941 150,000, Kielce 1939 25,000, Oradea 1920, Zamość 1939, Riga 1885); about a
+third of Pro's rows that it omitted were themselves debatable subset rows (Amsterdam's Ashkenazi-only/Sephardi-only counts)
+or percentage-derived figures. The extra rows Flash produced that Pro lacked were mostly valid (Dnipro 80,000, Frankfurt 26,000,
+Cluj 1870, Ioannina 164, Vilnius census table, Zamość 1857/1899).
+Neither Flash configuration violated the earlier trap rules (Bełżec / Brzezinka / Bogdanovka-type camp counts): the camp-count
+rule from 2026-09-17/20 carries over — the failures are the subtler ones above, where the toll sentence never mentions a camp.
+
+**Can a cheap validator gate them?** Escalating a town to Pro when any numeric row (a) has a scope/toll word in its *own Notes*
+or is ≥ 20,000 with killing notes flags only 15–23% of towns, but misses silent errors (Słonim, whose Notes say only "Jewish
+population by the mid-17th century"). Adding "toll words within ±60 characters of the number in the source text" catches
+Słonim but flags 34–36% of this set (camps 20–23%, large cities 43%, random towns 18–27%); the flagged share on ordinary
+small towns should be near the random-town rate. Hybrid cost with the strict gate on this heavy set: Flash default
+$0.167/town (−24% vs Pro), Flash LOW $0.126 (−43%) with 4 of 13 bad rows still slipping through (Amsterdam, Bucharest, Gdańsk,
+Minsk). On the 11 ordinary towns Flash default + strict gate is roughly −40%.
+
+**Bottom line.** *Do not switch the production default.* 3.8 Flash at LOW is not a like-for-like replacement (≈2% of rows are
+rule violations, some absurd). 3.8 Flash at default thinking is close — −63% cost, 0.93 precision, ≈ Pro-level rule violations —
+and is a reasonable opt-in for **ordinary small-town bulk runs** with the notes/context gate and Pro re-runs of flagged
+towns; keep **large cities and camp/massacre sites on Pro**. Two cost caveats: (1) 3.8 Flash's price is promotional until
+2026-12-31 — from 2027-01-01 its default-thinking cost roughly doubles to ≈ $0.16/town (only −27% vs Pro) and LOW to ≈ $0.07;
+(2) the Batch API is 50% off on top of any of these. To opt in, set `HISTORIAN_MODEL=gemini-3.8-flash` in the environment or `.env` before running
+`historical_data_extraction_poland.py` (it has no command-line flags; leave `HISTORIAN_THINKING_LEVEL` unset for default
+thinking) and try it on one ordinary batch first.
 
 ## The four locations
 
