@@ -806,6 +806,62 @@ towns; keep **large cities and camp/massacre sites on Pro**. Two cost caveats: (
 `historical_data_extraction_poland.py` (it has no command-line flags; leave `HISTORIAN_THINKING_LEVEL` unset for default
 thinking) and try it on one ordinary batch first.
 
+## ⚠️ Status update (2026-09-22) — coverage-gap run: which 2,000+-Jew communities had never been through the pipeline
+
+Question asked: is there any town, worldwide, that has or had 2,000+ Jews and has not been through the full Scout → Librarian →
+Historian pipeline? A per-town comparison of `kehilot.csv` against the saved pipeline outputs (`jew_hist/csv_files`,
+`downloaded_sources`), plus a recall check against ~2,150 communities I listed from memory (**not** an authoritative list — a
+JewishGen/Yad Vashem/census-based list would be the rigorous way to finish this), found three kinds of gap. The report is
+`jew_hist/coverage_gap_report_2026-09-21.csv`; the scripts and the per-town outcome (`gaprun_plan.json`) are in `jew_hist/gap_run_2026-09-21/`.
+
+| Gap | Towns | What it was |
+|---|---|---|
+| **A** in the dataset, peak ≥ 2,000, never piped | 140 (+103 Israeli towns, deliberately excluded — CBS is a better source) | one-row MENA/Iran/Yemen/Central-Asia/India entries with round numbers and years (Cairo 80,000 in the year 1000, Algiers 30,000 in 1200 — JVL/Wikipedia single rows), `crarg.org`'s flat 3,000-in-1939 for nine Częstochowa-region towns, ~36 US metros from user-supplied or web-study rows, plus 7 towns whose pipeline file was a stale "no evidence" (Nowy Sącz 25,000, Zamość 14,000, Bistrița 6,000 …) |
+| **B** absent from the dataset | 111 high-confidence (of 691 names from my list not found; the rest speculative) | Kryvyi Rih, Zaporizhzhia, Mariupol, Simferopol, Sevastopol and ~25 other Pale/Ukrainian towns; ~18 Belarusian towns; Tbilisi, Kutaisi; Copenhagen, Stockholm, Dublin, Lisbon, Zagreb, Trieste, Metz, Poznań; ~30 US/Canadian communities (Boca Raton, Monsey, Côte-Saint-Luc …) |
+| **C** in the dataset, peak far below the real size | 126 clearly-large ones (of 563 with a peak < 1,000) | the pipeline *had* run but produced no counts: Prague peaked at 1,216 (a children-only figure; real ≈ 35,000), Brussels/Rotterdam/The Hague had rows but no numbers, Essen one row, Novosibirsk/Irkutsk/Perm/Ufa a single "presence" row |
+
+**The run.** 377 towns (A 140, B 111 incl. 3 geocoded by hand, C 126) through the production pipeline — gemini-3.1-pro-preview at default
+thinking, plus a *census-focused* Scout (three extra statistics-oriented Serper queries per town, because the C towns were thin
+precisely when the generic queries returned heritage narrative) — 377/377 processed, 0 failures. **Measured cost $75.65**
+(17.6M input + 3.4M output tokens, $0.20/town; my estimate was ~$75). The first attempt at 6 workers ran ~1.3 min/town; raising it to
+12 workers (nothing was CPU-bound; no 429s) finished the rest in ~1.6 h.
+
+**Merge policy** (`merge_gaprun.py`): B → add. A → a fresh series with ≥ 3 numeric rows and self-consistent replaces the *templated* old
+rows (one-row JVL entries, `crarg.org`, single-row Wikipedia); otherwise those rows are kept at `low` confidence with the
+"[Unverified approximation…]" note and the fresh rows are added next to them. C → replace the old rows when the fresh series has ≥ 3
+numeric rows, otherwise keep them and add the fresh ones. **Never touched:** rows marked "User-supplied…" and real-sourced rows
+(e.g. Minneapolis 64,800 in 2018, Boston's 2025 community study). Fresh rows are auto-marked `low` when they are a medieval figure ≥ 20,000
+or ≥ 10× the town's neighbouring rows (7 rows: e.g. Isfahan's quoted "100,000 Jews as late as the 19th century" beside 1,500 in
+1828/1850/1884; Samarkand's 50,000 from Benjamin of Tudela).
+
+**Result:** `kehilot.csv` 39,044 → **45,710 rows** (+6,956 fresh rows, −231 templated rows, 111 old rows flagged low, 57 exact duplicates and
+2 wrong rows removed), ~5,060 distinct (country, town) keys (was 4,959), 11.2 MB. 247 of 377 towns now have numbers
+(A 111/140, B 69/111, C 67/126); 194 have a peak ≥ 2,000 (A 84, B 64, C 46). Milan 1,600 → 10,591, Athens 1,578 → 10,000, Harbin 500 → 13,000,
+Sokółka 522 → 9,000, Plovdiv → 6,000, Cardiff → 5,000; Tbilisi/Kryvyi Rih/Trieste/Stockholm and 100+ others are on the map now.
+
+**Fixed while merging:** ten of the "missing" Belarusian towns already existed under the Belarusian transliteration (Mozyr/Mazyr,
+Dokshitsy/Dokshytsy, Antopol/Antopal, Bereza/Byaroza, Bykhov/Bykhaw …) — the 264 fresh rows were re-keyed onto the existing towns
+instead of creating duplicate pins; a wrong-entity Dubrovna row (3 Jews in a *different* village of that name, chained into a false
+3 → 3,440 ramp) and a mis-dated Great Neck row (22,000 in 1928 next to 1,800 in 1937) were deleted.
+
+**Still open — the honest part.** 130 of the 377 towns still have **no numbers** after the run (C 59, A 29, B 42):
+Prague, Rotterdam, The Hague, Essen, Kassel, Duisburg, Turin, Montpellier, Timișoara, Basel, Liège and 17 Soviet cities
+(Novosibirsk, Irkutsk, Perm, Ufa, Chelyabinsk …); Tehran, Oran, Damascus-region towns; Zaporizhzhia, Mariupol; several Miami-area and
+Montreal-suburb communities. Prague's saved sources (41 files) contain heritage narrative but the statistics never reached the model. The most
+likely cause is the Librarian's cap of 25K characters per source, which keeps the *start* of a long article (Wikipedia's "History of the Jews in
+Prague", the JVL entries) and can drop the population figures that sit deep in it — unconfirmed. A fix worth testing: for sources over the cap, keep
+the ±1,200-character windows around demographic cues (Jewish/Jews near a number, census, inhabitants) instead of the head, as
+`jew_hist/model_benchmark/bench_trim_inputs.py` did in the model benchmark, then re-run just these ~130 towns (~$0.15–0.20 each).
+
+**Two pre-existing display effects this run made more visible** (not introduced by it): (1) the map draws a town only where a row with a
+positive population covers the year, and numeric rows are chained only to the immediately following row, so a town with sparse census
+points blinks out between them — Milan is absent 1933–1944, 431 towns blink and 78 of them peaked above 5,000 (Washington, Atlanta,
+Marseille, Lviv, Baghdad …); (2) 278 rows go from a presence marker (≤ 25) to a number ≥ 20× larger over more than 10 years, which the
+app interpolates as smooth growth (New York 23 in 1654 → 40,000 in 1859). Both are converter/design choices that need a decision, not a
+quick fix. Also: 761 exact-duplicate rows (same town/years/numbers/comment, different source) existed before this run and were left alone; a
+`Poland/Lviv` duplicate pin (38 rows) sits beside `Ukraine/Lviv`; 11 ambiguous US names were skipped for lack of a state qualifier (Long Beach,
+Norwalk, Waterbury, Lynn, Lowell, Lawrence, Elizabeth, Lakewood, Pasadena, Hollywood, Plantation).
+
 ## The four locations
 
 | Location | Role |
