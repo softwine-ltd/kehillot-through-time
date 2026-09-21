@@ -39,6 +39,7 @@ Kehillot Through Time offers a comprehensive visual exploration of Jewish demogr
 - Sources and methodological notes
 - Educational resources for teachers and researchers
 - A "Fade Markers" toggle for viewing the base map's own town labels underneath dense clusters
+- A per-town history drawer (a side panel, or a bottom sheet on phones): click "Full history" in a marker's popup, or right-click a marker, to see that town's own population points and events in year order, with a population-over-time chart; it follows the timeline slider and any entry can jump the map to its year
 
 Our mission is to preserve and present the geographical history of the Jewish people, making complex demographic data accessible and meaningful for researchers, educators, students, and anyone interested in Jewish history and culture.
 
