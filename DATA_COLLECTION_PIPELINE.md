@@ -862,6 +862,43 @@ quick fix. Also: 761 exact-duplicate rows (same town/years/numbers/comment, diff
 `Poland/Lviv` duplicate pin (38 rows) sits beside `Ukraine/Lviv`; 11 ambiguous US names were skipped for lack of a state qualifier (Long Beach,
 Norwalk, Waterbury, Lynn, Lowell, Lawrence, Elizabeth, Lakewood, Pasadena, Hollywood, Plantation).
 
+## ⚠️ Status update (2026-09-22, later) — the "window fix": why 130 large towns came back with no numbers, and what fixed a third of them
+
+**Diagnosis (offline, no model spend).** Prague's 32 saved sources contained ~1,135 "population statistic" candidates (a number within 150 characters
+of both a Jewish term and a demographic word); the Librarian's packing kept 104 of them (9%). Two mechanisms: (1) a source over the 25K-character cap
+is cut to its *head*, so statistics deep in a long article are lost; (2) the 150K total budget is filled *first-come-first-served*, so ~20 of the 32
+sources — including the most statistic-rich (240, 157, 115 candidates) — were skipped after earlier, statistic-free pages (a 190K-character
+oral-history ethics PDF with zero) had used it up. The census-focused Scout made this worse: its extra URLs were appended through a `set()`, i.e. in
+arbitrary order.
+
+**The fix (opt-in, `LIBRARIAN_WINDOWED=1`, default off — production behaviour unchanged).** `LibrarianAgentContentFetcher.py` now, when the flag is on:
+a source over the per-source cap is reduced to its first 2,000 characters plus the ±700-character windows around statistic candidates (best windows
+first, falling back to head-truncation when there are none); and when the sources together exceed the 150K budget, the highest-scoring sources are kept
+instead of the earliest. Sources under the cap are included whole, and the caps themselves are unchanged. Offline over the 130 towns it keeps **3.5×** more
+statistic candidates (14% of the candidates in all fetched text, against 4%); 109 of the 130 towns keep more than 1.5×.
+
+**Result.** Pilot on 6 towns (3 got numbers), then all 130 — no failures, **$20.82** (5.99M input + 0.74M output tokens, $0.16/town). **36 of the 130 towns
+gained population numbers** (A 7, B 14, C 15; ~28 with a peak ≥ 2,000): Prague 35,425 (1930), Oran 35,000 (1955), Boynton Beach 58,000 (2005), Monsey 30,000
+(2017), Côte-Saint-Luc 17,845 (2021), Derbent 17,000 (1990), Timișoara 13,000 (1929), Khust 11,276 (1939), The Hague 5,591 (1899), Turin 4,500 (1871),
+Toulon 10,000, Basel 2,653 (1929). With the first merge that makes **283 of the 377 coverage-gap towns with numbers; 94 still have none** — mostly Soviet
+cities (Novosibirsk, Irkutsk, Perm, Ufa …), small Hungarian/Slovak towns, Iberian towns, plus Rotterdam, Essen, Kassel, Duisburg, Charleroi, Tehran, Homs,
+Hama and a few Ukrainian towns; for those the fetched text simply does not contain usable statistics, so windowing cannot help and different sources would be needed.
+
+**A side effect to know about.** Stats-first packing discards narrative-rich pages that have few numbers. For seven towns (Oni, Gorki, Berkeley, Romny,
+Orenburg, Gothenburg, Ksar el-Kebir) the re-run returned "no evidence" or a single row where the first run had real narrative (Berkeley's Jewish Community
+Center and Otto Stern, Gorki's census records, Oni's synagogue). So the windowed run is best used as a **second pass for towns that lack numbers, not as the default**,
+and the merge (`merge_windowrun.py`) keeps every row the first merge added, adds the new rows (numeric ones always; narrative ones unless a near-duplicate — same
+year ±1, ≥ 60% text similarity — of a row already present: 250 skipped), and applies the same protection/replace policy to the original rows. `kehilot.csv`
+45,710 → **46,481 rows** (834 first-run rows kept, 39 templated/thin originals removed, 40 flagged low, 2 new towns), ~5,060 distinct (country, town) keys, 11.4 MB. Load and
+year-change timing is unchanged by the merge (A/B in the same browser session: 119–127 ms with the previous file, 110–123 ms with this one, five years, three runs).
+
+**Two converter hazards found (handled in the merge script's raw cleaning; the converter itself still has them).** A population row with no "Year of Data" falls
+back to the town's founding year (Caracas 4,000 → 1650), and "Turn of the 21st century" is parsed as 2050 (Toulon 10,000), which also chained the preceding row into
+a false ramp. The merge script drops blank-year population rows and maps "turn of the Nth century" to 100·(N−1).
+
+Artifacts: `jew_hist/gap_run_2026-09-21/` (`merge_windowrun.py`, `collect_windowrun.py`, `windowrun_candidates.csv`, `windowrun_pilot.csv`); the code change is
+`jew_hist/LibrarianAgentContentFetcher.py` (backup `.bak_20260922`), and `eval_windowing.py` reproduces the offline before/after.
+
 ## The four locations
 
 | Location | Role |

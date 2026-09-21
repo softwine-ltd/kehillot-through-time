@@ -27921,5 +27921,75 @@
     "yiddish": "",
     "german": "",
     "other": ""
+  },
+  "annaba|algeria": {
+    "english": "Annaba",
+    "hebrew": "ענאבה",
+    "yiddish": "",
+    "german": "Annaba",
+    "other": "Annaba"
+  },
+  "qom|iran": {
+    "english": "Qom",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "Ghom",
+    "other": "Qom"
+  },
+  "taiz|yemen": {
+    "english": "Taiz",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "newport|usa": {
+    "english": "Newport",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "providence|usa": {
+    "english": "Providence",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "new rochelle|usa": {
+    "english": "New Rochelle",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "pohrebyshche|ukraine": {
+    "english": "Pohrebyshche",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "medvedivka|ukraine": {
+    "english": "Medvedivka",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "monsey|united states": {
+    "english": "Monsey",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "deerfield beach|usa": {
+    "english": "Deerfield Beach",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
   }
 }
