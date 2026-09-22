@@ -885,6 +885,37 @@ function initializeMap() {
     // Add default tile layer
     osmTileLayer.addTo(map);
 
+    // Leaflet reads its container's pixel size once, when the map is created, and never re-checks it on
+    // its own except via its OWN built-in window 'resize' tracking (options.trackResize, on by default).
+    // That is not enough by itself: (1) a container can still be settling into its final CSS-driven size
+    // a frame or two after this point -- late web fonts, a slow-loading stylesheet, or (on this page
+    // specifically) the fact that MarkerCluster's script is fetched dynamically after DOMContentLoaded
+    // and this whole function only runs once THAT finishes, racing against Tailwind's own CDN stylesheet;
+    // (2) a sibling element can change #map's flex-computed size without the window itself resizing; and
+    // (3) measured directly in this codebase, Leaflet's own internal resize tracking does not reliably
+    // fire for every real resize either (its "this._size.clone is not a function" is a latent bug in
+    // Leaflet 1.9.4 itself, reproducible even without any of this code, when a resize lands while it is
+    // mid-recompute) -- so this does not rely on Leaflet's own handling alone. Observed on tablets:
+    // without correcting for all of this, the rendered map got stuck at a small, stale size in one corner
+    // of its (correctly-sized) container until the user did something that happened to fix Leaflet's own
+    // internal state (e.g. the mobile browser's address-bar auto-hide as you scroll/interact) -- matching
+    // "the map grows as I press Play". Every trigger below funnels through one debounced call: an earlier
+    // version called invalidateSize() separately from each listener, and the resulting overlapping calls
+    // raced inside Leaflet's own internal animation bookkeeping and hit that same "_size.clone" error.
+    let resizeSettleTimer = null;
+    const resettleMapSize = () => {
+        clearTimeout(resizeSettleTimer);
+        resizeSettleTimer = setTimeout(() => map.invalidateSize(), 150);
+    };
+    requestAnimationFrame(() => map.invalidateSize());
+    setTimeout(() => map.invalidateSize(), 300);
+    setTimeout(() => map.invalidateSize(), 1500);
+    window.addEventListener('resize', resettleMapSize);
+    window.addEventListener('orientationchange', resettleMapSize);
+    if (window.ResizeObserver) {
+        new ResizeObserver(resettleMapSize).observe(document.getElementById('map'));
+    }
+
     // Initialize markers layer with custom cluster icon
     markersLayer = L.markerClusterGroup({
         maxClusterRadius: 80, // Default cluster radius

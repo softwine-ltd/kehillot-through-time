@@ -1,10 +1,34 @@
+/* Layout: the map fills whatever vertical space is left after the banner/header/timeline-section,
+   instead of a fixed "80vh" share of the viewport. A flat vh split ignores that the chrome above the
+   map (banner + header + timeline-section) has a roughly FIXED pixel height, not one that scales with
+   viewport height -- so "80vh for the map, 20vh for everything else" only happens to fit on tall enough
+   screens. Measured: at 2560x1440 the page fit exactly; at 1920x1200 (a shorter, still-common laptop
+   resolution) the same markup needed 50px of scrolling, because 20% of 1200px (240px) is less than the
+   chrome's actual height (~270-290px) while 20% of 1440px (288px) was just barely enough. Flexbox removes
+   the guesswork: html/body form a full-height column, the chrome keeps its natural height, and #map
+   (via .map-container) takes 100% of the remainder on any screen, with zero scrolling.
+   See also initializeMap()'s invalidateSize() calls in helpers.js -- required because Leaflet reads its
+   container's pixel size once at creation time and never re-checks it on its own except on a window
+   'resize' event; a flex-sized container can still settle to its final size a frame or two after
+   creation (fonts/late CSS), which without those calls left Leaflet's own rendering stuck at a stale,
+   too-small size until something else happened to fire a resize event (observed on tablets: the map
+   rendered at roughly half width/height in one corner after load, then snapped to full size only once
+   the browser's own resize handling kicked in from later interaction). */
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #map {
-    height: 80vh;
+    flex: 1 1 auto;
+    min-height: 0; /* let a flex child actually shrink/grow to the remaining space instead of hugging its content */
     width: 100%;
     position: relative;
     z-index: 1;
@@ -420,8 +444,16 @@ body {
 
 .map-container {
     position: relative;
-    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0; /* see #map's own comment: lets this flex child shrink below its content's natural height */
     background-color: #f8fafc;
+}
+
+/* The white timeline-section wrapper: natural (content-based) height, never stretched or shrunk by flex */
+.map-container > .bg-white {
+    flex: 0 0 auto;
 }
 
 /* Arrow styling */
