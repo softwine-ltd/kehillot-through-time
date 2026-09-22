@@ -1234,8 +1234,14 @@ function initializeMap() {
             const currentYear = Math.round(timeline.noUiSlider.get());
             const yearDisplay = currentYear < 0 ? `${Math.abs(currentYear)} BCE` : `${currentYear} CE`;
             
-            // Check if this is Edge browser
-            const isEdge = /Edg\/|Edge|Trident|MSIE/.test(navigator.userAgent);
+            // Legacy-EdgeHTML/IE detection only -- NOT modern Edge. "Edg/" is Chromium-based Edge's own UA
+            // token (Edge has been Chromium since 2020); matching it here used to route every current Edge
+            // user into createTemporaryMapForPrint()'s much more bug-prone path below (which even hardcodes
+            // the wrong map center) instead of the properly-fixed standard path, for a browser that renders
+            // print CSS exactly like Chrome and never needed the workaround. Legacy EdgeHTML itself
+            // (Trident/MSIE) is unsupported and effectively extinct at this point, but the check is kept,
+            // harmlessly, in case it still matters to someone.
+            const isEdge = /Trident|MSIE/.test(navigator.userAgent);
             console.log('Is Edge detected:', isEdge);
             
             if (isEdge) {
@@ -1243,7 +1249,12 @@ function initializeMap() {
                 createTemporaryMapForPrint(center, zoom, yearDisplay);
             } else {
                 console.log('Using standard print approach');
-                printWithStandardApproach(center, zoom, yearDisplay);
+                // The on-screen container and the print container (CSS forces #map to 90vh -- see the
+                // print stylesheet) very rarely share the same aspect ratio, so keeping the same center +
+                // zoom across that resize shows a DIFFERENT geographic extent than what was on screen
+                // (more of one direction, less of another). Capture the actual visible bounds now and
+                // re-fit to them after the print-time resize, so the printed map shows the same area.
+                printWithStandardApproach(center, zoom, map.getBounds(), yearDisplay);
             }
             
         } catch (error) {
@@ -1253,7 +1264,7 @@ function initializeMap() {
     });
 
     // Standard print approach for non-Edge browsers
-    function printWithStandardApproach(center, zoom, yearDisplay) {
+    function printWithStandardApproach(center, zoom, bounds, yearDisplay) {
         // Create a simple print view by hiding controls and printing the current page
         const originalControls = document.querySelector('.controls');
         const originalTimeline = document.querySelector('#timeline');
@@ -1315,84 +1326,90 @@ function initializeMap() {
         `;
         document.body.insertBefore(printHeader, document.body.firstChild);
         
-        // Ensure map is properly sized for print
-        const mapElement = document.getElementById('map');
-        if (mapElement) {
-            mapElement.style.height = '90vh';
-            mapElement.style.width = '100%';
-            mapElement.style.maxWidth = '100%';
-            
-            // Trigger map resize to ensure proper rendering
+        // The print stylesheet (@media print) already resizes #map for print on its own and self-reverts
+        // the instant print mode ends -- this used to ALSO set #map's height/width/maxWidth here directly
+        // via inline styles, redundantly, and that inline style is what actually caused the reported bug:
+        // it does not self-revert like a CSS media rule does, so it silently kept overriding the on-screen
+        // flex-based layout (permanently pinning #map to a fixed 90vh) after printing, bringing back a
+        // scrollbar. Nothing needs to touch #map's inline style at all; only Leaflet needs telling that the
+        // container's size changed once the print stylesheet has applied it.
+        const restoreAfterPrint = () => {
+            try {
+                if (map && map.invalidateSize) {
+                    map.invalidateSize();
+                    map.setView(center, zoom, { animate: false }); // undo the print-only fitBounds() below
+                }
+                // Restore main elements
+                if (originalControls) originalControls.style.display = '';
+                if (originalTimeline) originalTimeline.style.display = '';
+                if (originalYearSteps) originalYearSteps.style.display = '';
+                if (originalTitle) originalTitle.style.display = '';
+                if (originalSubtitle) originalSubtitle.style.display = '';
+                if (timelineLabels) timelineLabels.style.display = '';
+                if (yearDisplayElement) yearDisplayElement.style.display = '';
+                if (speedDisplay) speedDisplay.style.display = '';
+
+                // Restore Leaflet controls
+                leafletControls.forEach(control => {
+                    control.style.display = '';
+                });
+
+                // Restore all buttons
+                buttons.forEach(button => {
+                    button.style.display = '';
+                });
+
+                // Restore all select elements
+                selects.forEach(select => {
+                    select.style.display = '';
+                });
+
+                // Restore all input elements
+                inputs.forEach(input => {
+                    input.style.display = '';
+                });
+
+                // Restore all labels
+                labels.forEach(label => {
+                    label.style.display = '';
+                });
+
+                // Remove print header
+                if (printHeader) printHeader.remove();
+
+            } catch (restoreError) {
+                console.error('Error restoring controls:', restoreError);
+                // Force reload if restoration fails
+                location.reload();
+            }
+        };
+
+        // beforeprint/afterprint are the browser's own, reliably-timed hooks for this -- unlike a guessed
+        // setTimeout delay, afterprint fires the moment the print dialog closes, WHETHER THE USER PRINTED
+        // OR CANCELLED, so restoreAfterPrint() always runs either way (the previous setTimeout(2000)-after-
+        // window.print() approach happened to work for the same reason on browsers where print() blocks
+        // until the dialog closes, but wasn't tied to the actual event and left an unbounded, over-long
+        // window where cancelling early could still show stale content mid-restore).
+        window.addEventListener('beforeprint', function onBeforePrint() {
+            window.removeEventListener('beforeprint', onBeforePrint);
+            // Give the @media print stylesheet a moment to finish applying #map's print-time size before
+            // asking Leaflet to re-measure it.
             setTimeout(() => {
                 if (map && map.invalidateSize) {
                     map.invalidateSize();
+                    // Re-fit to the ORIGINAL on-screen bounds rather than trusting the same center+zoom to
+                    // still be correct: #map's aspect ratio changes for print (screen vs. ~90vh-tall page),
+                    // so the same center+zoom would show a visibly different area than what was on screen.
+                    map.fitBounds(bounds, { animate: false });
                 }
-            }, 100);
-        }
-        
-        // Trigger print after a short delay to ensure map is properly sized
-        setTimeout(() => {
-            console.log('Printing with map center:', map.getCenter(), 'zoom:', map.getZoom());
-            window.print();
-            
-            // Restore controls after printing
-            setTimeout(() => {
-                try {
-                    // Restore main elements
-                    if (originalControls) originalControls.style.display = '';
-                    if (originalTimeline) originalTimeline.style.display = '';
-                    if (originalYearSteps) originalYearSteps.style.display = '';
-                    if (originalTitle) originalTitle.style.display = '';
-                    if (originalSubtitle) originalSubtitle.style.display = '';
-                    if (timelineLabels) timelineLabels.style.display = '';
-                    if (yearDisplayElement) yearDisplayElement.style.display = '';
-                    if (speedDisplay) speedDisplay.style.display = '';
-                    
-                    // Restore Leaflet controls
-                    if (leafletControls) {
-                        leafletControls.forEach(control => {
-                            control.style.display = '';
-                        });
-                    }
-                    
-                    // Restore all buttons
-                    if (buttons) {
-                        buttons.forEach(button => {
-                            button.style.display = '';
-                        });
-                    }
-                    
-                    // Restore all select elements
-                    if (selects) {
-                        selects.forEach(select => {
-                            select.style.display = '';
-                        });
-                    }
-                    
-                    // Restore all input elements
-                    if (inputs) {
-                        inputs.forEach(input => {
-                            input.style.display = '';
-                        });
-                    }
-                    
-                    // Restore all labels
-                    if (labels) {
-                        labels.forEach(label => {
-                            label.style.display = '';
-                        });
-                    }
-                    
-                    // Remove print header
-                    if (printHeader) printHeader.remove();
-                    
-                } catch (restoreError) {
-                    console.error('Error restoring controls:', restoreError);
-                    // Force reload if restoration fails
-                    location.reload();
-                }
-            }, 2000);
-        }, 200);
+            }, 50);
+        });
+        window.addEventListener('afterprint', function onAfterPrint() {
+            window.removeEventListener('afterprint', onAfterPrint);
+            restoreAfterPrint();
+        });
+
+        window.print();
     }
 
     // Edge-specific print approach using temporary map
