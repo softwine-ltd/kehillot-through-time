@@ -343,42 +343,83 @@ function addEventMarkers() {
     });
 }
 
-// Creates (or re-creates) the noUiSlider timeline, matching its `direction` option to the
-// page's current text direction. This matters because noUiSlider only reads `direction`
-// once, at creation time, and never reacts to the <html dir> attribute changing afterward
-// the way plain CSS-positioned elements do. Left out of sync (e.g. after switching to
-// Hebrew, which flips <html dir> to "rtl" without reloading the page), the slider's handle
-// transform math keeps assuming the OLD direction while its own CSS renders in the NEW one;
-// the resulting mismatched offset pushes .noUi-origin far outside the visible track (seen
-// up to ~1800px off to the left), widening the whole page with a wide, blank,
-// horizontally-scrollable margin -- the map itself was never actually the wrong size, it
-// just occupied its correct share of a page that had silently gotten much wider.
+// Creates the noUiSlider timeline. Always ltr, deliberately NOT matching the page's text
+// direction: the timeline is meant to read oldest-on-the-left, newest-on-the-right in every
+// language, Hebrew included (unlike prose, which does flip). `timeline.style.direction`
+// pins the element's own CSS `direction` (which noUiSlider also reads once, at creation, to
+// pick a `noUi-txt-dir-ltr`/`-rtl` styling class) to ltr regardless of the page's <html dir>,
+// so its positioning CSS can't disagree with the `direction: 'ltr'` option below.
+//
+// The self-correction scheduled at the bottom works around a separate, narrower bug: on some
+// loads, noUiSlider's very FIRST create() on the page bakes in a handle/origin transform that
+// simply doesn't match its own already-correct value/range/options (confirmed by direct
+// inspection: value, range, and every direction-related class were already right when this
+// happened -- .noUi-origin still ended up positioned as if translated clear off the left edge
+// of its track, ~1800px past the visible page, silently forcing the whole page to grow a
+// wide, blank, horizontally-scrollable margin to fit it -- the map itself was never actually
+// the wrong size, it just occupied its correct share of a page that had gotten much wider).
+// Reproduced specifically on loads that start in Hebrew, which does more i18n work before the
+// page settles (loading translations, rewriting many more `data-i18n` text nodes than
+// English's no-op) -- consistent with this being a timing/layout race in noUiSlider's first
+// call rather than anything RTL-specific in its own mechanics. A destroy+create with
+// IDENTICAL options reliably produces the correct transform (confirmed directly; the lighter
+// `updateOptions({}, false)` does not), but ONLY once layout has actually settled -- doing it
+// immediately, back to back, reproduces the same bad transform right along with the first
+// create, and how much settle time is actually needed varies (a fixed 50ms delay measured
+// fine 4 times out of 5 in testing, then missed once) -- so rather than trust one fixed
+// delay, verifyAndFixOverflow() below checks for the actual symptom (the page having grown
+// wider than its own viewport) and, if it's still there, waits longer and tries again, up to
+// a few attempts. setTimeout, not requestAnimationFrame: rAF is fully suspended (never fires,
+// not just throttled) on a backgrounded/hidden tab, and this has to keep working regardless
+// of whether the tab happens to be focused when the page loads.
 function createTimelineSlider(startValue) {
     const timeline = document.getElementById('timeline');
-    noUiSlider.create(timeline, {
-        start: [startValue],
+    timeline.style.direction = 'ltr';
+    const baseOptions = {
         range: {
             'min': [startYear0],
             'max': [endYear0]
         },
         step: 1,
         tooltips: false,
-        direction: document.documentElement.dir === 'rtl' ? 'rtl' : 'ltr'
-    });
-    timeline.noUiSlider.on('update', function (values) {
-        const year = parseInt(values[0]);
-        const yearDisplay = document.getElementById('year-display');
-        const jewishYear = convertToHebrewYear(year);
-        const hebrewLetters = numberToHebrewLetters(jewishYear);
-        const yearText = year < 0
-            ? `${Math.abs(year)} BCE (${hebrewLetters})`
-            : `${year} CE (${hebrewLetters})`;
-        yearDisplay.textContent = yearText;
-        loadData(year);
-        updateArrows(year);
-        updateEvents(year);
-        if (window.historyDrawerOnYear) historyDrawerOnYear(year); // no-op unless the town history drawer is open
-    });
+        direction: 'ltr'
+    };
+    const attachUpdateHandler = () => {
+        timeline.noUiSlider.on('update', function (values) {
+            const year = parseInt(values[0]);
+            const yearDisplay = document.getElementById('year-display');
+            const jewishYear = convertToHebrewYear(year);
+            const hebrewLetters = numberToHebrewLetters(jewishYear);
+            const yearText = year < 0
+                ? `${Math.abs(year)} BCE (${hebrewLetters})`
+                : `${year} CE (${hebrewLetters})`;
+            yearDisplay.textContent = yearText;
+            loadData(year);
+            updateArrows(year);
+            updateEvents(year);
+            if (window.historyDrawerOnYear) historyDrawerOnYear(year); // no-op unless the town history drawer is open
+        });
+    };
+    const recreate = () => {
+        const currentValue = parseInt(timeline.noUiSlider.get());
+        timeline.noUiSlider.destroy(); // also clears #timeline's other children -- addEventMarkers()'s .timeline-marker divs
+        noUiSlider.create(timeline, Object.assign({ start: [currentValue] }, baseOptions));
+        attachUpdateHandler();
+        addEventMarkers();
+    };
+    const verifyAndFixOverflow = (delays) => {
+        if (delays.length === 0) return;
+        setTimeout(() => {
+            if (document.body.scrollWidth > window.innerWidth) {
+                recreate();
+                verifyAndFixOverflow(delays.slice(1));
+            }
+        }, delays[0]);
+    };
+
+    noUiSlider.create(timeline, Object.assign({ start: [startValue] }, baseOptions));
+    attachUpdateHandler();
+    verifyAndFixOverflow([50, 150, 400, 1000, 2000]);
 }
 
 // Parse CSV while respecting quotes
@@ -3415,21 +3456,6 @@ Submitted at: ${new Date().toISOString()}
         tourLanguage = e.detail.language;
         if (!tourModal.classList.contains('hidden')) {
             showTourStep(currentTourStep);
-        }
-
-        // i18n.js has already flipped <html dir> by the time this fires. If that changed
-        // the slider's own ltr/rtl-ness, it needs to be destroyed and recreated to match --
-        // see createTimelineSlider()'s comment for why simply leaving it as-is silently
-        // widens the whole page instead of just looking wrong.
-        const timelineEl = document.getElementById('timeline');
-        if (timelineEl && timelineEl.noUiSlider) {
-            const wantRTL = document.documentElement.dir === 'rtl';
-            const sliderIsRTL = timelineEl.noUiSlider.options.direction === 'rtl';
-            if (wantRTL !== sliderIsRTL) {
-                const yearBeforeRecreate = parseInt(timelineEl.noUiSlider.get());
-                timelineEl.noUiSlider.destroy();
-                createTimelineSlider(yearBeforeRecreate);
-            }
         }
 
         // Refresh event markers with new language
