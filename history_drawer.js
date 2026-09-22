@@ -272,7 +272,7 @@
                 <line id="hdYearLine" x1="0" y1="0" x2="0" y2="${H}" class="hd-yearline" style="display:none"/>
                 <rect x="0" y="0" width="${W}" height="${H}" fill="transparent" class="hd-hit"><title>${esc(tr('history.clickToJump', 'Click to jump to this year'))}</title></rect>
             </svg>
-            <div class="hd-chart-axis"><span>${esc(fmtYear(x0))}</span><span>${esc(tr('history.maxPop', 'max {{pop}}', { pop: fmtNum(pMax) }))}</span><span>${esc(fmtYear(x1))}</span></div>`;
+            <div class="hd-chart-axis" dir="ltr"><span>${esc(fmtYear(x0))}</span><span>${esc(tr('history.maxPop', 'max {{pop}}', { pop: fmtNum(pMax) }))}</span><span>${esc(fmtYear(x1))}</span></div>`;
         const svg = els.chart.querySelector('svg');
         svg.addEventListener('click', e => {
             const g = els.chart._geom;
