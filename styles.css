@@ -988,6 +988,14 @@ body {
     flex-direction: row-reverse;
 }
 
+/* Suggests landscape by default (browsers vary in how much weight they give this -- it's a hint, not a
+   guarantee, so the print button/menu still needs the user to pick it if their browser ignores it) and
+   sets a modest, predictable page margin. */
+@page {
+    size: landscape;
+    margin: 10mm;
+}
+
 /* Print styles */
 @media print {
     .controls {
@@ -1040,26 +1048,31 @@ body {
         display: none !important;
     }
     
+    /* 78vh, not 90vh: a browser's own "Headers and footers" print option (page title + date/time, URL +
+       page number) reserves extra space at the top/bottom of the page OUTSIDE the @page margin above --
+       90vh of the raw page height left no room for that, so the last sliver (just the footer line) spilled
+       onto a blank second page. 78vh leaves enough slack for that reserved space on common paper sizes
+       whether or not the user has headers/footers enabled, while still keeping the map itself large. */
     #map {
-        height: 90vh !important;
+        height: 78vh !important;
         width: 100% !important;
         max-width: 100% !important;
         position: relative !important;
     }
-    
+
     .leaflet-container {
-        height: 90vh !important;
+        height: 78vh !important;
         width: 100% !important;
         max-width: 100% !important;
     }
-    
+
     .leaflet-map-pane {
-        height: 90vh !important;
+        height: 78vh !important;
         width: 100% !important;
     }
-    
+
     .leaflet-tile-pane {
-        height: 90vh !important;
+        height: 78vh !important;
         width: 100% !important;
     }
     
@@ -1076,7 +1089,7 @@ body {
     /* Ensure the map takes full width and height */
     .map-container {
         width: 100% !important;
-        height: 90vh !important;
+        height: 78vh !important;
     }
     
     /* Edge-specific print fixes - more aggressive approach */
