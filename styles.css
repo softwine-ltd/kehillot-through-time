@@ -1047,55 +1047,83 @@ body {
     .leaflet-control-container {
         display: none !important;
     }
-    
-    /* 78vh, not 90vh: a browser's own "Headers and footers" print option (page title + date/time, URL +
-       page number) reserves extra space at the top/bottom of the page OUTSIDE the @page margin above --
-       90vh of the raw page height left no room for that, so the last sliver (just the footer line) spilled
-       onto a blank second page. 78vh leaves enough slack for that reserved space on common paper sizes
-       whether or not the user has headers/footers enabled, while still keeping the map itself large. */
+
+    /* The tour's "Press Here" hint next to the Play button: the button itself is hidden above (every
+       <button>, via JS), but this is a plain <div>, not a button, so it isn't covered by that and used to
+       print floating with no button next to it. */
+    #playButtonArrow {
+        display: none !important;
+    }
+
+    /* Same leftover-wrapper issue as .timeline-section below: <header>'s own <h1> and buttons are already
+       hidden individually (via JS), but the wrapper <div>s around them (with their own px-4/py-1 etc.
+       padding) were never targeted, so the now-empty header still took up its own real space. Its entire
+       purpose (title) is already duplicated by our own .print-header, so hide the whole element. */
+    header {
+        display: none !important;
+    }
+
+    /* Padding alone wasn't enough here: .timeline-section's own children are hidden individually above
+       (#timeline, #historical-periods, every <button>/<select>/<input>/<label>), but the plain <div>
+       WRAPPERS around them (the flex row of controls, the per-control "flex items-center" groups) were
+       never targeted and, empty as they now are, still contribute their own margin/gap to layout.
+       Simplest and most robust: this section has nothing left worth printing once its contents are
+       hidden, so hide the whole thing rather than fighting each wrapper's leftover box individually. */
+    .timeline-section {
+        display: none !important;
+    }
+
+    /* max-height, not height: #map/.map-container are flex:1 1 auto children, and flex-grow stretches a
+       flex item PAST an explicit "height" (that height only sets its starting flex-basis) to fill whatever
+       space the flex container has -- confirmed by testing 78/84/88/90vh here and getting an identical
+       render every time. max-height is the one property flex-grow actually respects as a hard ceiling.
+       82vh (of the raw page height, outside the @page margin) leaves slack for the browser's own "Headers
+       and footers" print option (page title + date/time, URL + page number) whether or not the user has it
+       enabled -- verified via headless-Chrome print-to-pdf: ~53pt clear above the footer reservation on
+       Letter landscape, vs. under 5pt when this was a plain (flex-grow-overridden) height:78vh. */
     #map {
-        height: 78vh !important;
+        max-height: 82vh !important;
         width: 100% !important;
         max-width: 100% !important;
         position: relative !important;
     }
 
     .leaflet-container {
-        height: 78vh !important;
+        max-height: 82vh !important;
         width: 100% !important;
         max-width: 100% !important;
     }
 
     .leaflet-map-pane {
-        height: 78vh !important;
+        max-height: 82vh !important;
         width: 100% !important;
     }
 
     .leaflet-tile-pane {
-        height: 78vh !important;
+        max-height: 82vh !important;
         width: 100% !important;
     }
-    
+
     body {
         margin: 0 !important;
         padding: 0 !important;
         width: 100% !important;
     }
-    
+
     .print-header {
         margin-bottom: 10px !important;
     }
-    
+
     /* Ensure the map takes full width and height */
     .map-container {
         width: 100% !important;
-        height: 78vh !important;
+        max-height: 82vh !important;
     }
     
     /* Edge-specific print fixes - more aggressive approach */
     @supports (-ms-ime-align: auto) {
         #map {
-            height: 100vh !important;
+            height: 82vh !important;
             width: 100vw !important;
             position: fixed !important;
             top: 0 !important;
@@ -1104,7 +1132,7 @@ body {
         }
         
         .leaflet-container {
-            height: 100vh !important;
+            height: 82vh !important;
             width: 100vw !important;
             position: fixed !important;
             top: 0 !important;
@@ -1145,7 +1173,7 @@ body {
     /* Additional Edge print compatibility */
     @media print and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         #map {
-            height: 100vh !important;
+            height: 82vh !important;
             width: 100vw !important;
             position: fixed !important;
             top: 0 !important;
@@ -1154,7 +1182,7 @@ body {
         }
         
         .leaflet-container {
-            height: 100vh !important;
+            height: 82vh !important;
             width: 100vw !important;
             position: fixed !important;
             top: 0 !important;
