@@ -343,6 +343,44 @@ function addEventMarkers() {
     });
 }
 
+// Creates (or re-creates) the noUiSlider timeline, matching its `direction` option to the
+// page's current text direction. This matters because noUiSlider only reads `direction`
+// once, at creation time, and never reacts to the <html dir> attribute changing afterward
+// the way plain CSS-positioned elements do. Left out of sync (e.g. after switching to
+// Hebrew, which flips <html dir> to "rtl" without reloading the page), the slider's handle
+// transform math keeps assuming the OLD direction while its own CSS renders in the NEW one;
+// the resulting mismatched offset pushes .noUi-origin far outside the visible track (seen
+// up to ~1800px off to the left), widening the whole page with a wide, blank,
+// horizontally-scrollable margin -- the map itself was never actually the wrong size, it
+// just occupied its correct share of a page that had silently gotten much wider.
+function createTimelineSlider(startValue) {
+    const timeline = document.getElementById('timeline');
+    noUiSlider.create(timeline, {
+        start: [startValue],
+        range: {
+            'min': [startYear0],
+            'max': [endYear0]
+        },
+        step: 1,
+        tooltips: false,
+        direction: document.documentElement.dir === 'rtl' ? 'rtl' : 'ltr'
+    });
+    timeline.noUiSlider.on('update', function (values) {
+        const year = parseInt(values[0]);
+        const yearDisplay = document.getElementById('year-display');
+        const jewishYear = convertToHebrewYear(year);
+        const hebrewLetters = numberToHebrewLetters(jewishYear);
+        const yearText = year < 0
+            ? `${Math.abs(year)} BCE (${hebrewLetters})`
+            : `${year} CE (${hebrewLetters})`;
+        yearDisplay.textContent = yearText;
+        loadData(year);
+        updateArrows(year);
+        updateEvents(year);
+        if (window.historyDrawerOnYear) historyDrawerOnYear(year); // no-op unless the town history drawer is open
+    });
+}
+
 // Parse CSV while respecting quotes
 function parseCSVLine(line) {
     const result = [];
@@ -981,15 +1019,7 @@ function initializeMap() {
     const timeline = document.getElementById('timeline');
     const yearDisplay = document.getElementById('year-display');
 
-    noUiSlider.create(timeline, {
-        start: [startYear0],
-        range: {
-            'min': [startYear0],
-            'max': [endYear0]
-        },
-        step: 1,
-        tooltips: false
-    });
+    createTimelineSlider(startYear0);
     addEventMarkers();
 
     // Add window resize handler to reposition markers
@@ -1009,21 +1039,6 @@ function initializeMap() {
         updateArrows(initialYear);
         updateEvents(initialYear);
     })();
-    
-    // Update year display and trigger data loading
-    timeline.noUiSlider.on('update', function (values) {
-        const year = parseInt(values[0]);
-        const jewishYear = convertToHebrewYear(year);
-        const hebrewLetters = numberToHebrewLetters(jewishYear);
-        const yearText = year < 0
-            ? `${Math.abs(year)} BCE (${hebrewLetters})`
-            : `${year} CE (${hebrewLetters})`;
-        yearDisplay.textContent = yearText;
-        loadData(year);
-        updateArrows(year);
-        updateEvents(year);
-        if (window.historyDrawerOnYear) historyDrawerOnYear(year); // no-op unless the town history drawer is open
-    });
 
     // Add click functionality to year display for direct year input
     yearDisplay.addEventListener('click', function() {
@@ -3401,12 +3416,26 @@ Submitted at: ${new Date().toISOString()}
         if (!tourModal.classList.contains('hidden')) {
             showTourStep(currentTourStep);
         }
+
+        // i18n.js has already flipped <html dir> by the time this fires. If that changed
+        // the slider's own ltr/rtl-ness, it needs to be destroyed and recreated to match --
+        // see createTimelineSlider()'s comment for why simply leaving it as-is silently
+        // widens the whole page instead of just looking wrong.
+        const timelineEl = document.getElementById('timeline');
+        const wantRTL = document.documentElement.dir === 'rtl';
+        const sliderIsRTL = timelineEl.noUiSlider.options.direction === 'rtl';
+        if (wantRTL !== sliderIsRTL) {
+            const yearBeforeRecreate = parseInt(timelineEl.noUiSlider.get());
+            timelineEl.noUiSlider.destroy();
+            createTimelineSlider(yearBeforeRecreate);
+        }
+
         // Refresh event markers with new language
         addEventMarkers();
-        
+
         // Regenerate all popups with new language
         regenerateAllPopups();
-        
+
         // Regenerate events with new language (since they get recreated)
         const currentYear = parseInt(document.getElementById('timeline').noUiSlider.get());
         await updateEvents(currentYear);
