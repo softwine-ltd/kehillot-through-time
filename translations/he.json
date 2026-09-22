@@ -25,6 +25,28 @@
     "cityPlaceholder": "עיר...",
     "clearSearch": "נקה חיפוש"
   },
+  "history": {
+    "title": "היסטוריית היישוב",
+    "openButton": "היסטוריה מלאה",
+    "close": "סגירה",
+    "filterAll": "הכול",
+    "filterPopulation": "אוכלוסייה",
+    "filterEvents": "אירועים",
+    "hideLowConfidence": "הסתר ודאות נמוכה",
+    "entries": "{{count}} רשומות",
+    "peak": "שיא: {{pop}} ({{year}})",
+    "maxPop": "מקסימום {{pop}}",
+    "chartTitle": "אוכלוסייה יהודית לאורך זמן",
+    "clickToJump": "לחצו כדי לעבור לשנה זו",
+    "jumpToYear": "הצגת שנה זו על המפה",
+    "noPopulation": "לא תועדו נתוני אוכלוסייה ליישוב זה.",
+    "noEntries": "אין רשומות התואמות את הסינון.",
+    "bce": "לפנה\"ס",
+    "confidenceHigh": "רמת ודאות גבוהה",
+    "confidenceMedium": "רמת ודאות בינונית",
+    "confidenceLow": "רמת ודאות נמוכה",
+    "confidenceUnknown": "רמת ודאות לא ידועה"
+  },
   "mapLabels": {
     "local": "מקומי",
     "englishCartoDB": "אנגלית (CartoDB)",

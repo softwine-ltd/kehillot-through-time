@@ -25,6 +25,28 @@
     "cityPlaceholder": "Ville...",
     "clearSearch": "Effacer la recherche"
   },
+  "history": {
+    "title": "Histoire de la localité",
+    "openButton": "Historique complet",
+    "close": "Fermer",
+    "filterAll": "Tout",
+    "filterPopulation": "Population",
+    "filterEvents": "Événements",
+    "hideLowConfidence": "Masquer la faible fiabilité",
+    "entries": "{{count}} entrées",
+    "peak": "pic : {{pop}} ({{year}})",
+    "maxPop": "max {{pop}}",
+    "chartTitle": "Population juive au fil du temps",
+    "clickToJump": "Cliquez pour aller à cette année",
+    "jumpToYear": "Afficher cette année sur la carte",
+    "noPopulation": "Aucun chiffre de population enregistré pour cette localité.",
+    "noEntries": "Aucune entrée ne correspond au filtre.",
+    "bce": "av. J.-C.",
+    "confidenceHigh": "Fiabilité élevée",
+    "confidenceMedium": "Fiabilité moyenne",
+    "confidenceLow": "Fiabilité faible",
+    "confidenceUnknown": "Fiabilité inconnue"
+  },
   "mapLabels": {
     "local": "Local",
     "englishCartoDB": "Anglais (CartoDB)",

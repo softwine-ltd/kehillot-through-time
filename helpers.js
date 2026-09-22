@@ -811,6 +811,7 @@ function updateMarkers(kehilot) {
                     <small>${labels.source}: ${formatSource(kehila.source)}</small>
                     <br>
                     ${commentDetails}
+                    ${window.historyButtonHtml ? window.historyButtonHtml(kehila) : ''}
                 </div>
             </div>
         `;
@@ -933,6 +934,8 @@ function initializeMap() {
             });
         }
     });
+    if (window.attachHistoryHandlers) attachHistoryHandlers(markersLayer); // right-click a marker -> town history drawer
+    if (window.initHistoryDrawer) initHistoryDrawer(map);
     map.addLayer(markersLayer);
 
     // Initialize arrows layer
@@ -988,6 +991,7 @@ function initializeMap() {
         loadData(year);
         updateArrows(year);
         updateEvents(year);
+        if (window.historyDrawerOnYear) historyDrawerOnYear(year); // no-op unless the town history drawer is open
     });
 
     // Add click functionality to year display for direct year input
@@ -3447,10 +3451,11 @@ function regenerateAllPopups() {
                         <small>${labels.source}: ${formatSource(kehila.source)}</small>
                         <br>
                         ${commentDetails}
+                        ${window.historyButtonHtml ? window.historyButtonHtml(kehila) : ''}
                     </div>
                 </div>
             `;
-            
+
             marker.setPopupContent(popupContent);
         }
     });
@@ -4369,6 +4374,8 @@ function updateClusterRadius(radius) {
             }
         });
         
+        if (window.attachHistoryHandlers) attachHistoryHandlers(markersLayer);
+
         // Add markers back to the new cluster group
         currentMarkers.forEach(marker => {
             markersLayer.addLayer(marker);

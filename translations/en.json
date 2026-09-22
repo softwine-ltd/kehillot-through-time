@@ -25,6 +25,28 @@
     "cityPlaceholder": "City...",
     "clearSearch": "Clear search"
   },
+  "history": {
+    "title": "Town history",
+    "openButton": "Full history",
+    "close": "Close",
+    "filterAll": "All",
+    "filterPopulation": "Population",
+    "filterEvents": "Events",
+    "hideLowConfidence": "Hide low-confidence",
+    "entries": "{{count}} entries",
+    "peak": "peak {{pop}} ({{year}})",
+    "maxPop": "max {{pop}}",
+    "chartTitle": "Jewish population over time",
+    "clickToJump": "Click to jump to this year",
+    "jumpToYear": "Show this year on the map",
+    "noPopulation": "No population figures recorded for this town.",
+    "noEntries": "No entries match the current filter.",
+    "bce": "BCE",
+    "confidenceHigh": "High confidence",
+    "confidenceMedium": "Medium confidence",
+    "confidenceLow": "Low confidence",
+    "confidenceUnknown": "Confidence unknown"
+  },
   "mapLabels": {
     "local": "Local",
     "englishCartoDB": "English (CartoDB)",
