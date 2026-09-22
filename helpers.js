@@ -3422,12 +3422,14 @@ Submitted at: ${new Date().toISOString()}
         // see createTimelineSlider()'s comment for why simply leaving it as-is silently
         // widens the whole page instead of just looking wrong.
         const timelineEl = document.getElementById('timeline');
-        const wantRTL = document.documentElement.dir === 'rtl';
-        const sliderIsRTL = timelineEl.noUiSlider.options.direction === 'rtl';
-        if (wantRTL !== sliderIsRTL) {
-            const yearBeforeRecreate = parseInt(timelineEl.noUiSlider.get());
-            timelineEl.noUiSlider.destroy();
-            createTimelineSlider(yearBeforeRecreate);
+        if (timelineEl && timelineEl.noUiSlider) {
+            const wantRTL = document.documentElement.dir === 'rtl';
+            const sliderIsRTL = timelineEl.noUiSlider.options.direction === 'rtl';
+            if (wantRTL !== sliderIsRTL) {
+                const yearBeforeRecreate = parseInt(timelineEl.noUiSlider.get());
+                timelineEl.noUiSlider.destroy();
+                createTimelineSlider(yearBeforeRecreate);
+            }
         }
 
         // Refresh event markers with new language

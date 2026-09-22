@@ -151,17 +151,12 @@ class I18n {
         }
 
         this.currentLanguage = langCode;
-        
+
         // Save preference
         localStorage.setItem('preferredLanguage', langCode);
-        
-        // Apply language changes
+
+        // Apply language changes (dispatches 'languageChanged' itself, see below)
         this.applyLanguage();
-        
-        // Trigger custom event for other components
-        window.dispatchEvent(new CustomEvent('languageChanged', {
-            detail: { language: langCode }
-        }));
     }
 
     /**
@@ -170,22 +165,35 @@ class I18n {
     applyLanguage() {
         // Update HTML lang attribute
         document.documentElement.lang = this.currentLanguage;
-        
+
         // Update dir attribute for RTL languages
         const isRTL = this.rtlLanguages.includes(this.currentLanguage);
         document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
-        
+
         // Update body class for RTL styling
         document.body.classList.toggle('rtl', isRTL);
-        
+
         // Update meta tags
         this.updateMetaTags();
-        
+
         // Update all translatable elements
         this.updateTranslatableElements();
-        
+
         // Update language switcher
         this.updateLanguageSwitcher();
+
+        // Trigger custom event for other components. Dispatched here (rather than only from
+        // switchLanguage()) so init()'s own initial call -- which applies a language restored
+        // from localStorage/browser detection before the user ever touches the switcher --
+        // fires it too. That initial call races against helpers.js's own DOMContentLoaded
+        // handler (which waits on a *dynamically loaded* MarkerCluster <script> before running
+        // initializeMap()), so whichever finishes first, listeners like the timeline-slider's
+        // direction check below need this event to know the page's real text direction --
+        // relying only on the user-initiated path left a page that *loads* straight into
+        // Hebrew (a returning visitor's saved preference) with a slider stuck in ltr.
+        window.dispatchEvent(new CustomEvent('languageChanged', {
+            detail: { language: this.currentLanguage }
+        }));
     }
 
     /**
