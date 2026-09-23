@@ -941,17 +941,13 @@ function initializeMap() {
         attribution: '&copy; OpenStreetMap contributors'
     });
     
-    // CartoDB tile layer with English labels
-    const cartoDbTileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 20
-    });
-    
-    // OpenMapTiles with English labels (requires API key, using demo)
-    const openMapTilesEnLayer = L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=get_your_own_OpIi9ZULNHzrESv6T2vL', {
-        attribution: '&copy; <a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a> &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-        maxZoom: 20
+    // Esri World Street Map: English labels worldwide, no API key. Replaced the CARTO and MapTiler
+    // "English" options -- CARTO's free basemaps now require an API key (every style returns an
+    // "API KEY REQUIRED" image tile) and the MapTiler URL only ever had a placeholder key, so both
+    // showed an error picture instead of a map. Note Esri's server takes {z}/{y}/{x}, not {z}/{x}/{y}.
+    const esriStreetTileLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; <a href="https://www.esri.com/" target="_blank">Esri</a> &mdash; Esri, HERE, Garmin, USGS, &copy; OpenStreetMap contributors, and the GIS User Community',
+        maxZoom: 19
     });
     
     // OpenStreetMap France with French labels
@@ -1126,11 +1122,8 @@ function initializeMap() {
             case 'osm-de':
                 currentTileLayer = osmDeTileLayer;
                 break;
-            case 'cartodb':
-                currentTileLayer = cartoDbTileLayer;
-                break;
-            case 'maptiler':
-                currentTileLayer = openMapTilesEnLayer;
+            case 'esri':
+                currentTileLayer = esriStreetTileLayer;
                 break;
             case 'osm-france':
                 currentTileLayer = osmFranceTileLayer;

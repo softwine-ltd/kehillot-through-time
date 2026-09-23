@@ -49,8 +49,7 @@
   },
   "mapLabels": {
     "local": "Local",
-    "englishCartoDB": "English (CartoDB)",
-    "englishMapTiler": "English (MapTiler)",
+    "englishEsri": "English (Esri)",
     "french": "French",
     "german": "German",
     "europeMiddleEast": "Europe & Middle East",
