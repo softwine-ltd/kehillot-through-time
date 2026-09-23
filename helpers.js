@@ -1272,7 +1272,32 @@ function initializeMap() {
 
     // Print functionality
     const printButton = document.getElementById('printButton');
-    
+
+    // Print the map exactly as it is on screen: pin #map's print-time box to the size Leaflet last
+    // rendered it at, and scale that box down to fit the page (see the @media print rules for #map in
+    // styles.css). Registered once rather than per Print-button click, so the browser's own Print
+    // command (Ctrl+P, the menu) gets the same treatment. It has to happen synchronously inside
+    // 'beforeprint', which fires before the browser lays the page out for print; anything deferred
+    // (setTimeout, a tile 'load' event) runs too late in Chrome, whose window.print() blocks JavaScript
+    // until the print dialog closes.
+    // Largest map box, in CSS px (96/in), that fits a landscape US Letter or A4 page inside the 10mm
+    // @page margins, less ~90px for the print header and some slack: 11in / 297mm wide minus margins
+    // -> ~980px, 8.5in / 210mm tall -> ~718px.
+    const PRINT_MAP_BOX = { width: 960, height: 600 };
+    const PRINT_MAP_VARS = ['--print-map-width', '--print-map-height', '--print-map-zoom'];
+    window.addEventListener('beforeprint', () => {
+        const size = map.getSize(); // what Leaflet actually rendered tiles and markers for
+        if (!size.x || !size.y) return;
+        const rootStyle = document.documentElement.style;
+        rootStyle.setProperty('--print-map-width', `${size.x}px`);
+        rootStyle.setProperty('--print-map-height', `${size.y}px`);
+        rootStyle.setProperty('--print-map-zoom',
+            Math.min(1, PRINT_MAP_BOX.width / size.x, PRINT_MAP_BOX.height / size.y));
+    });
+    window.addEventListener('afterprint', () => {
+        PRINT_MAP_VARS.forEach(name => document.documentElement.style.removeProperty(name));
+    });
+
     printButton.addEventListener('click', () => {
         console.log('Print button clicked');
         try {
@@ -1305,12 +1330,7 @@ function initializeMap() {
                 createTemporaryMapForPrint(center, zoom, yearDisplay);
             } else {
                 console.log('Using standard print approach');
-                // The on-screen container and the print container (CSS forces #map to 90vh -- see the
-                // print stylesheet) very rarely share the same aspect ratio, so keeping the same center +
-                // zoom across that resize shows a DIFFERENT geographic extent than what was on screen
-                // (more of one direction, less of another). Capture the actual visible bounds now and
-                // re-fit to them after the print-time resize, so the printed map shows the same area.
-                printWithStandardApproach(center, zoom, map.getBounds(), yearDisplay);
+                printWithStandardApproach(center, zoom, yearDisplay);
             }
             
         } catch (error) {
@@ -1320,7 +1340,7 @@ function initializeMap() {
     });
 
     // Standard print approach for non-Edge browsers
-    function printWithStandardApproach(center, zoom, bounds, yearDisplay) {
+    function printWithStandardApproach(center, zoom, yearDisplay) {
         // Create a simple print view by hiding controls and printing the current page
         const originalControls = document.querySelector('.controls');
         const originalTimeline = document.querySelector('#timeline');
@@ -1387,14 +1407,10 @@ function initializeMap() {
         // via inline styles, redundantly, and that inline style is what actually caused the reported bug:
         // it does not self-revert like a CSS media rule does, so it silently kept overriding the on-screen
         // flex-based layout (permanently pinning #map to a fixed 90vh) after printing, bringing back a
-        // scrollbar. Nothing needs to touch #map's inline style at all; only Leaflet needs telling that the
-        // container's size changed once the print stylesheet has applied it.
+        // scrollbar. Nothing needs to touch #map's inline style at all (its print-time size comes from the
+        // 'beforeprint' handler registered next to the Print button).
         const restoreAfterPrint = () => {
             try {
-                if (map && map.invalidateSize) {
-                    map.invalidateSize();
-                    map.setView(center, zoom, { animate: false }); // undo the print-only fitBounds() below
-                }
                 // Restore main elements
                 if (originalControls) originalControls.style.display = '';
                 if (originalTimeline) originalTimeline.style.display = '';
@@ -1433,6 +1449,15 @@ function initializeMap() {
                 // Remove print header
                 if (printHeader) printHeader.remove();
 
+                // Hiding the header controls above let #map grow on screen while the print dialog was
+                // open, so re-measure it now that they are back (not before -- that measured the
+                // temporarily taller map and left Leaflet ~70px out of step with its container) and put
+                // the view back exactly where the user left it.
+                if (map && map.invalidateSize) {
+                    map.invalidateSize();
+                    map.setView(center, zoom, { animate: false });
+                }
+
             } catch (restoreError) {
                 console.error('Error restoring controls:', restoreError);
                 // Force reload if restoration fails
@@ -1440,26 +1465,12 @@ function initializeMap() {
             }
         };
 
-        // beforeprint/afterprint are the browser's own, reliably-timed hooks for this -- unlike a guessed
-        // setTimeout delay, afterprint fires the moment the print dialog closes, WHETHER THE USER PRINTED
+        // afterprint is the browser's own, reliably-timed hook for this -- unlike a guessed setTimeout
+        // delay, it fires the moment the print dialog closes, WHETHER THE USER PRINTED
         // OR CANCELLED, so restoreAfterPrint() always runs either way (the previous setTimeout(2000)-after-
         // window.print() approach happened to work for the same reason on browsers where print() blocks
         // until the dialog closes, but wasn't tied to the actual event and left an unbounded, over-long
         // window where cancelling early could still show stale content mid-restore).
-        window.addEventListener('beforeprint', function onBeforePrint() {
-            window.removeEventListener('beforeprint', onBeforePrint);
-            // Give the @media print stylesheet a moment to finish applying #map's print-time size before
-            // asking Leaflet to re-measure it.
-            setTimeout(() => {
-                if (map && map.invalidateSize) {
-                    map.invalidateSize();
-                    // Re-fit to the ORIGINAL on-screen bounds rather than trusting the same center+zoom to
-                    // still be correct: #map's aspect ratio changes for print (screen vs. ~90vh-tall page),
-                    // so the same center+zoom would show a visibly different area than what was on screen.
-                    map.fitBounds(bounds, { animate: false });
-                }
-            }, 50);
-        });
         window.addEventListener('afterprint', function onAfterPrint() {
             window.removeEventListener('afterprint', onAfterPrint);
             restoreAfterPrint();
