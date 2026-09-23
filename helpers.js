@@ -598,8 +598,13 @@ async function loadData(year) {
                     // ("-", a range like "20-30", or stray free text from a CSV misalignment)
                     // that parseInt can't handle -- fall back to 0 rather than letting NaN
                     // propagate into the interpolation below and show up as "NaN" on the map.
-                    const popStartNum = parseInt(pop_start) || 0;
-                    const actualPopEnd = pop_end == undefined || pop_end.trim() === '' ? popStartNum : (parseInt(pop_end) || 0);
+                    // A BLANK population is its own state, not 0: "Jews are documented here but
+                    // no count is known" -> null, drawn as a presence-only marker. 0 is kept for
+                    // documented absence ("no Jews lived here"), which draws nothing. See
+                    // HistorianDataExtractor.py's extraction rules for the same convention.
+                    const isBlank = v => v == undefined || v.trim() === '';
+                    const popStartNum = isBlank(pop_start) ? null : (parseInt(pop_start) || 0);
+                    const actualPopEnd = isBlank(pop_end) ? popStartNum : (parseInt(pop_end) || 0);
 
                     return {
                         name: city, // Fallback to city if English name not available
@@ -676,7 +681,9 @@ async function loadData(year) {
                 // values for the current year, so it can only be computed once we know
                 // which year we're rendering -- this is the one field that can't be cached.
                 let actualPop;
-                if (kehila.year_end === undefined) {
+                if (kehila.population_start === null) {
+                    actualPop = null; // presence without a count: nothing to interpolate
+                } else if (kehila.year_end === undefined) {
                     actualPop = kehila.population_start;
                 } else {
                     const years_span = kehila.year_end - kehila.year_start;
@@ -719,9 +726,12 @@ function mergeSameYearFacts(kehilot) {
         const primary = items.reduce((best, k) =>
             (Number.isFinite(k.actual_pop) ? k.actual_pop : 0) > (Number.isFinite(best.actual_pop) ? best.actual_pop : 0) ? k : best,
             items[0]);
+        // Presence-only facts (null) carry no number, so only real counts compete for the max;
+        // if every fact this year is presence-only, the town stays presence-only (null).
+        const counts = items.map(k => k.actual_pop).filter(Number.isFinite);
         merged.push({
             ...primary,
-            actual_pop: Math.max(...items.map(k => Number.isFinite(k.actual_pop) ? k.actual_pop : 0)),
+            actual_pop: counts.length ? Math.max(...counts) : null,
             events: items.map(k => ({ pop: k.actual_pop, comment: k.comment, source: k.source }))
         });
     });
@@ -745,13 +755,10 @@ function updateMarkers(kehilot) {
             return;
         }
 
-        // A population of exactly 0 for the active year means either "no Jews here at
-        // this point" or "no evidence of Jewish presence found" -- neither should draw a
-        // marker on the map. This relies on the underlying data using a small positive
-        // placeholder (not 0) for the separate, legitimate case of "Jews are known to
-        // have been present here but no specific count was given by the source" --
-        // see kehilot.csv's own convention for that distinction.
-        if (kehila.actual_pop <= 0) {
+        // A population of 0 means documented absence ("no Jews lived here at this point"), so
+        // draw nothing. A null population (blank in kehilot.csv) means Jews are documented here
+        // but no count is known: that DOES get a marker, a presence-only one (createCustomMarker).
+        if (kehila.actual_pop !== null && !(kehila.actual_pop > 0)) {
             return;
         }
 
@@ -829,7 +836,7 @@ function updateMarkers(kehilot) {
                 ${kehila.names.german ? `Deutsch: ${escapeHtml(kehila.names.german)} <br>` : ''}
                 ${kehila.names.other ? `${labels.other}: ${escapeHtml(kehila.names.other)} <br>` : ''}
                 <div style="margin: 8px 0;">
-                    <strong> ${labels.population}:</strong> ${formatPopulation(kehila.actual_pop)}
+                    <strong> ${labels.population}:</strong> ${popupPopulationText(kehila.actual_pop, currentLangForPopup)}
                 </div>
   
                 <div style="
@@ -955,51 +962,7 @@ function initializeMap() {
     // Initialize markers layer with custom cluster icon
     markersLayer = L.markerClusterGroup({
         maxClusterRadius: 80, // Default cluster radius
-        iconCreateFunction: function(cluster) {
-            const childCount = cluster.getChildCount();
-            let totalPopulation = 0;
-            
-            // Calculate total population for all markers in this cluster
-            cluster.getAllChildMarkers().forEach(marker => {
-                // Access the population data from the marker's popup content or stored data
-                if (marker.kehilaData && marker.kehilaData.actual_pop) {
-                    totalPopulation += marker.kehilaData.actual_pop;
-                }
-            });
-            
-            // Format population with shorter format for large numbers
-            const formattedPopulation = formatPopulation(totalPopulation);
-            
-            // Calculate cluster size based on total population using the same function as individual markers
-            const clusterSize = getMarkerSize(totalPopulation);
-            const iconSize = Math.max(32, clusterSize * 2.5); // Increased multiplier and minimum size for better readability
-            const iconAnchor = iconSize / 2; // Center the anchor
-            
-            // Create cluster icon with count and population
-            return L.divIcon({
-                html: `<div style="
-                    background-color: #3b82f6;
-                    color: white;
-                    border-radius: 50%;
-                    width: ${iconSize}px;
-                    height: ${iconSize}px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    font-weight: bold;
-                    font-size: ${Math.max(12, Math.min(18, iconSize * 0.3))}px;
-                    border: 2px solid white;
-                    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-                ">
-                    <div>${childCount}</div>
-                    <div style="font-size: ${Math.max(9, Math.min(14, iconSize * 0.25))}px; margin-top: -2px;">${formattedPopulation}</div>
-                </div>`,
-                className: 'custom-cluster-icon',
-                iconSize: [iconSize, iconSize],
-                iconAnchor: [iconAnchor, iconAnchor]
-            });
-        }
+        iconCreateFunction: createClusterIcon
     });
     if (window.attachHistoryHandlers) attachHistoryHandlers(markersLayer); // right-click a marker -> town history drawer
     if (window.initHistoryDrawer) initHistoryDrawer(map);
@@ -3499,7 +3462,7 @@ function regenerateAllPopups() {
                     ${kehila.names.german ? `Deutsch: ${escapeHtml(kehila.names.german)} <br>` : ''}
                     ${kehila.names.other ? `${labels.other}: ${escapeHtml(kehila.names.other)} <br>` : ''}
                     <div style="margin: 8px 0;">
-                        <strong> ${labels.population}:</strong> ${formatPopulation(kehila.actual_pop)}
+                        <strong> ${labels.population}:</strong> ${popupPopulationText(kehila.actual_pop, currentLangForPopup)}
                     </div>
       
                     <div style="
@@ -3663,7 +3626,84 @@ function formatPopulation(population) {
 }
 
 
+// Popup text for a town's population: the number, or for a presence-only fact (null
+// population) a note that Jews are documented there but no count is known.
+function popupPopulationText(population, lang) {
+    if (population !== null) return formatPopulation(population);
+    return { he: 'לא ידוע (נוכחות מתועדת)', fr: 'inconnue (présence attestée)' }[lang]
+        || 'unknown (presence documented)';
+}
+
+// Marker for a presence-only fact: Jews documented here, no count known. A small hollow ring
+// in the confidence colour with no number, so it can't be mistaken for a counted community.
+function createPresenceMarker(kehila) {
+    const color = getConfidenceColor(kehila.confidence);
+    const icon = L.divIcon({
+        className: 'custom-marker',
+        html: `<div class="population-marker presence-marker" style="
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.85);
+            border: 3px solid ${color};
+            border-radius: 50%;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+            cursor: pointer;
+        "></div>`,
+        iconSize: [18, 18],
+        iconAnchor: [9, 9]
+    });
+    const marker = L.marker([kehila.lat, kehila.lon], { icon });
+    marker.kehilaData = kehila;
+    return marker;
+}
+
+// Cluster icon: number of communities, and the sum of the known counts. Presence-only
+// communities add to the first but not the second; a cluster with no known count at all
+// shows "?" rather than a misleading 0.
+function createClusterIcon(cluster) {
+    const childCount = cluster.getChildCount();
+    let totalPopulation = 0;
+    let anyCount = false;
+    cluster.getAllChildMarkers().forEach(marker => {
+        const pop = marker.kehilaData && marker.kehilaData.actual_pop;
+        if (Number.isFinite(pop)) {
+            totalPopulation += pop;
+            anyCount = true;
+        }
+    });
+
+    const formattedPopulation = anyCount ? formatPopulation(totalPopulation) : '?';
+    const clusterSize = getMarkerSize(totalPopulation);
+    const iconSize = Math.max(32, clusterSize * 2.5); // minimum size for readability
+    const iconAnchor = iconSize / 2;
+
+    return L.divIcon({
+        html: `<div style="
+            background-color: #3b82f6;
+            color: white;
+            border-radius: 50%;
+            width: ${iconSize}px;
+            height: ${iconSize}px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: ${Math.max(12, Math.min(18, iconSize * 0.3))}px;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        ">
+            <div>${childCount}</div>
+            <div style="font-size: ${Math.max(9, Math.min(14, iconSize * 0.25))}px; margin-top: -2px;">${formattedPopulation}</div>
+        </div>`,
+        className: 'custom-cluster-icon',
+        iconSize: [iconSize, iconSize],
+        iconAnchor: [iconAnchor, iconAnchor]
+    });
+}
+
 function createCustomMarker(kehila) {
+    if (kehila.actual_pop === null) return createPresenceMarker(kehila);
     const size = getMarkerSize(kehila.actual_pop);
     const color = getConfidenceColor(kehila.confidence);
     
@@ -4398,50 +4438,7 @@ function updateClusterRadius(radius) {
         // Create new cluster group with updated radius
         markersLayer = L.markerClusterGroup({
             maxClusterRadius: radius,
-            iconCreateFunction: function(cluster) {
-                const childCount = cluster.getChildCount();
-                let totalPopulation = 0;
-                
-                // Calculate total population for all markers in this cluster
-                cluster.getAllChildMarkers().forEach(marker => {
-                    if (marker.kehilaData && marker.kehilaData.actual_pop) {
-                        totalPopulation += marker.kehilaData.actual_pop;
-                    }
-                });
-                
-                // Format population with shorter format for large numbers
-                const formattedPopulation = formatPopulation(totalPopulation);
-                
-                // Calculate cluster size based on total population using the same function as individual markers
-                const clusterSize = getMarkerSize(totalPopulation);
-                const iconSize = Math.max(32, clusterSize * 2.5);
-                const iconAnchor = iconSize / 2;
-                
-                // Create cluster icon with count and population
-                return L.divIcon({
-                    html: `<div style="
-                        background-color: #3b82f6;
-                        color: white;
-                        border-radius: 50%;
-                        width: ${iconSize}px;
-                        height: ${iconSize}px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        font-weight: bold;
-                        font-size: ${Math.max(12, Math.min(18, iconSize * 0.3))}px;
-                        border: 2px solid white;
-                        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-                    ">
-                        <div>${childCount}</div>
-                        <div style="font-size: ${Math.max(9, Math.min(14, iconSize * 0.25))}px; margin-top: -2px;">${formattedPopulation}</div>
-                    </div>`,
-                    className: 'custom-cluster-icon',
-                    iconSize: [iconSize, iconSize],
-                    iconAnchor: [iconAnchor, iconAnchor]
-                });
-            }
+            iconCreateFunction: createClusterIcon
         });
         
         if (window.attachHistoryHandlers) attachHistoryHandlers(markersLayer);
