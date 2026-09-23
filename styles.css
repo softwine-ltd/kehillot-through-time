@@ -594,6 +594,35 @@ body {
     max-width: none;
     width: 100%;
     padding: 0 5%;
+    /* noUiSlider's .noUi-origin is a track-wide box that it slides sideways by translate(); for most
+       values it sticks out far past one end of the track (to the left when the slider was created on
+       an ltr page, to the right when created on an rtl one). Overflow past the page's start edge is
+       normally unreachable, but once the language switches the page's direction, that same box
+       overflows past the scrollable edge and silently widens the whole page into a blank,
+       horizontally-scrollable margin. Clip it here, at a box as wide as the page: the track and handle
+       sit well inside it. `clip`, not `hidden`, so this does not become a scroll container. */
+    overflow-x: clip;
+}
+
+/* Keep the slider handle above the timeline's event markers (.timeline-marker, z-index 5) -- the
+   first marker (Exodus, 1313 BCE) sits right where the handle starts, and covered it on page load.
+   The handle can't be raised on its own: noUiSlider puts it inside .noUi-origin, whose inline
+   z-index (4) makes it a stacking context, inside .noUi-base, whose z-index (1, from noUiSlider's
+   own CSS) makes that one too. So drop the base's z-index and raise the origin instead. The origin
+   is a transparent box as wide as the whole track, so it must not catch the mouse, or markers
+   underneath it would lose their tooltips and clicks; only the handle does (the base still gets
+   plain track clicks, below the markers, as before). */
+#timeline .noUi-base {
+    z-index: auto;
+}
+
+#timeline .noUi-origin {
+    z-index: 6 !important;
+    pointer-events: none;
+}
+
+#timeline .noUi-handle {
+    pointer-events: auto;
 }
 
 /* Responsive padding for different screen sizes */
