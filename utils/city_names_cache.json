@@ -27991,5 +27991,54 @@
     "yiddish": "",
     "german": "",
     "other": ""
+  },
+  "perth|australia": {
+    "english": "Perth",
+    "hebrew": "פרת'",
+    "yiddish": "",
+    "german": "Perth",
+    "other": "Perth"
+  },
+  "brisbane|australia": {
+    "english": "Brisbane",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "gold coast|australia": {
+    "english": "Gold Coast",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
+  },
+  "adelaide|australia": {
+    "english": "Adelaide",
+    "hebrew": "אדלייד",
+    "yiddish": "",
+    "german": "Adelaide",
+    "other": "Аделаида"
+  },
+  "canberra|australia": {
+    "english": "Canberra",
+    "hebrew": "קנברה",
+    "yiddish": "קאנבערא",
+    "german": "Canberra",
+    "other": "Канберра"
+  },
+  "ballarat|australia": {
+    "english": "Ballarat",
+    "hebrew": "בלאראט",
+    "yiddish": "",
+    "german": "Ballarat",
+    "other": "بالارات"
+  },
+  "bendigo|australia": {
+    "english": "Bendigo",
+    "hebrew": "",
+    "yiddish": "",
+    "german": "",
+    "other": ""
   }
 }
