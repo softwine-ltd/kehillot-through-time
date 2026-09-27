@@ -1,0 +1,16 @@
+OK https://www.jewishvirtuallibrary.org/tabriz
+FAILED https://www.iranjewish.com/Essay/Essay_51_bina_14AzarBayeJan.htm
+OK https://fa.wikipedia.org/wiki/%DB%8C%D9%87%D9%88%D8%AF%DB%8C%D8%A7%D9%86_%D8%A2%D8%B0%D8%B1%D8%A8%D8%A7%DB%8C%D8%AC%D8%A7%D9%86
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Iran
+OK https://en.wikipedia.org/wiki/Tabriz
+FAILED https://www.iranicaonline.org/articles/judeo-persian-communities-of-iran-i-introduction/
+OK https://www.encyclopedia.com/places/asia/iranian-political-geography/tabriz
+FAILED https://www.iranicaonline.org/articles/tabriz-05-city-in-19th-cent/
+OK https://en.wikipedia.org/wiki/Iranian_Jews
+OK https://en.wikipedia.org/wiki/Timeline_of_Tabriz
+OK https://eleven.co.il/diaspora/regions-and-countries/10098/
+OK https://he.wikipedia.org/wiki/תבריז
+OK https://en.wikipedia.org/wiki/Exodus_of_Iranian_Jews
+OK https://fa.wikipedia.org/wiki/%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2
+FAILED https://web.archive.org/web/20090216230511/http://iranurbanstudies.com/ShowViews.aspx?vid=214
+FAILED http://www.geschichteinchronologie.ch/as/aserbaidschan/EncJud_juden-in-Aserbaidschan-ENGL.html
