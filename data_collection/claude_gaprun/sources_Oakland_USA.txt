@@ -1,0 +1,20 @@
+OK https://jewishvirtuallibrary.org/oakland
+OK https://www.oaklandsinai.org/history
+OK https://www.bethjacoboakland.org/bjc-history.html
+OK https://www.bjpa.org/content/upload/bjpa/jewi/Jewish%20Population%201927.pdf (WebFetch could not parse; text extracted locally with pymupdf)
+OK https://www.bjpa.org/content/upload/bjpa/1945/1945_1946_13_Statistics.pdf (WebFetch could not parse; text extracted locally with pymupdf)
+OK https://www.jewishdatabank.org/content/upload/bjdb/604/C-CA-East_Bay_2011-Main_Report.pdf (WebFetch could not parse; text extracted locally)
+FAILED https://www.jewishaz.com/families_lifestyle/oakland-a-vibrant-partner-of-san-francisco/article_743fa468-dfa6-11e9-bcbe-4f96c918f211.html
+OK https://www.jewishencyclopedia.com/articles/3924-california
+OK https://www.jewishoakland.org/main/our-history/
+OK https://jweekly.com/2004/07/23/plenty-of-jewish-there-in-oakland-too/
+OK https://jewishvirtuallibrary.org/san-francisco-bay-area
+OK https://en.wikipedia.org/wiki/Temple_Sinai_(Oakland,_California)
+OK https://www.jewishdatabank.org/api/download/?studyId=874&mediaId=bjdb\1917_Statistics_of_Jews_US_and_World_%28AJYB_1917-18%29.pdf (WebFetch could not parse; text extracted locally)
+OK https://www.bjpa.org/content/upload/bjpa/numb/Number%20and%20Distribution.pdf (WebFetch could not parse; text extracted locally)
+OK https://en.wikipedia.org/wiki/Timeline_of_Oakland,_California
+OK https://www.tbaoakland.org/about/short-history/
+FAILED https://oac.cdlib.org/findaid/ark:/13030/kt7b69s12t/entire_text/
+FAILED https://localwiki.org/oakland/Home_of_Eternity_Cemetery
+OK https://magnes.berkeley.edu/collections/archives/jewish-federation-of-the-greater-east-bay-records-1881-1999/
+OK https://jewishvirtuallibrary.org/california-jewish-history
