@@ -60,8 +60,8 @@ n,town,country,lon,lat,alt_name,status
 59,Nalchik,Russia,43.61889,43.49806,,pending
 60,Kursk,Russia,36.18712,51.73758,,done
 61,Tula,Russia,37.61822,54.19609,,pending
-62,Chelyabinsk,Russia,61.42915,55.15402,,pending
-63,Perm,Russia,56.25017,58.01046,,pending
+62,Chelyabinsk,Russia,61.42915,55.15402,,done
+63,Perm,Russia,56.25017,58.01046,,done
 64,Ufa,Russia,55.96779,54.74306,,pending
 65,Krasnoyarsk,Russia,92.90765,56.02668,,pending
 66,Astrakhan,Russia,48.04076,46.34968,,pending
