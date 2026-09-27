@@ -1,0 +1,14 @@
+OK https://www.encyclopedia.com/places/spain-portugal-italy-greece-and-balkans/spanish-and-portuguese-political-geography/segovia
+OK https://www.jewishencyclopedia.com/articles/13391-segovia
+OK https://jguideeurope.org/en/region/spain/castile-mancha-castile-leon/segovia/
+OK https://redjuderias.org/segovia/
+OK https://www.radiosefarad.com/segovia/
+OK https://es.wikipedia.org/wiki/Judería_de_Segovia
+FAILED http://juderia.turismodesegovia.com/es/informacion-historica
+OK https://turismodesegovia.com/sites/default/files/Media/Files/2020-11/GUIA%20DE%20SEGOVIA%20DE%20LA%20RED%20DE%20JUDER%C3%8DAS.pdf
+OK https://en.wikipedia.org/wiki/Old_main_synagogue,_Segovia
+OK https://www.rutasconhistoria.es/loc/juderia-de-segovia
+OK https://es.wikipedia.org/wiki/Expulsi%C3%B3n_de_los_jud%C3%ADos_de_Espa%C3%B1a
+OK https://esefarad.com/?p=16129
+FAILED https://www.jewishvirtuallibrary.org/segovia
+OK https://en.wikipedia.org/wiki/Segovia
