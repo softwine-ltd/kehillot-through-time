@@ -1,0 +1,17 @@
+OK https://www.jewishgen.org/yizkor/pinkas_slovakia/slo295.html
+OK https://mek.oszk.hu/04000/04093/html/szocikk/13004.htm
+OK https://en.wikipedia.org/wiki/Lu%C4%8Denec
+OK https://forumszemle.eu/2015/06/07/holokauszt-nogradban/
+FAILED https://emlekhelyek.csemadok.sk/emlekhelyek/a-holocaust-losonci-aldozatainak-emlekmuve/
+OK https://www.ujno.sk/losonci-zsinagoga
+OK https://www.lukus.sk/synagoga/historia/
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/lucenec
+OK https://hu.wikipedia.org/wiki/Losonc
+OK https://sk.wikipedia.org/wiki/Lu%C4%8Denec
+OK https://en.wikipedia.org/wiki/Lu%C4%8Denec_Synagogue
+OK https://regionnovohrad.sk/polozka/zidovska-synagoga-v-lucenci/
+FAILED https://mek.oszk.hu/04700/04757/pdf/toredek8.pdf
+OK https://zidianaslovensku.sk/wp-content/uploads/2021/11/Lu%C4%8Denec-ako-s%C3%ADdlo-%C5%BEidovskej-komunity-v-1.-polovici-20.-storo%C4%8Dia.pdf
+OK https://www.upn.gov.sk/projekty/pocty-zidov-juzne-slovensko/
+FAILED http://iajgscemetery.org/eastern-europe/slovakia/lucenec
+OK https://cdp.jewishgen.org/eastern-europe/slovakia/lucenec
