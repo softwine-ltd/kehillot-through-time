@@ -1,0 +1,92 @@
+n,town,country,lon,lat,alt_name,status
+1,Kassel,Germany,9.4979,51.3158,,done-locally
+2,Duisburg,Germany,6.76667,51.43333,,done-locally
+3,Székesfehérvár,Hungary,18.41034,47.18995,,done-locally
+4,Rotterdam,Netherlands,4.4777,51.9244,,done-locally
+5,Charleroi,Belgium,4.444528,50.4116233,,done-locally
+6,Zaporizhzhia,Ukraine,35.11829,47.85079,,done-locally
+7,Romny,Ukraine,33.48770,50.74207,,done-locally
+8,Pohrebyshche,Ukraine,29.25792,49.48482,,done-locally
+9,Vasylkiv,Ukraine,30.31750,50.17814,,done-locally
+10,Medvedivka,Ukraine,32.37744,49.17224,,done-locally
+11,Lubny,Ukraine,33.00308,50.01182,,done-locally
+12,Hlukhiv,Ukraine,33.90930,51.67831,,done-locally
+13,Krolevets,Ukraine,33.38760,51.55487,,done-locally
+14,Oleksandriia,Ukraine,33.11697,48.67061,,done-locally
+15,Molodechno,Belarus,26.85071,54.31328,,done-locally
+16,Gorki,Belarus,30.98108,54.28946,,done-locally
+17,Chita,Russia,113.40505,52.02799,,done-locally
+18,Novocherkassk,Russia,40.10199,47.41066,,done-locally
+19,Grozny,Russia,45.70657,43.30864,,done-locally
+20,Orenburg,Russia,55.09785,51.76712,,done-locally
+21,Oni,Georgia,43.44273,42.58534,,done-locally
+22,Constanța,Romania,28.65076,44.17672,,done-locally
+23,Créteil,France,2.45307,48.77715,,done-locally
+24,Ksar el-Kebir,Morocco,-5.89872,34.99922,,done-locally
+25,Kenitra,Morocco,-6.57017,34.26457,,done-locally
+26,Hillah,Iraq,44.43281,32.48224,,done-locally
+27,Ba'quba,Iraq,44.61872,33.74491,,done-locally
+28,Berkeley,USA,-122.27286,37.87084,,done-locally
+29,Miami Beach,USA,-80.13530,25.79292,,done-locally
+30,Deerfield Beach,USA,-80.09963,26.31834,,done-locally
+31,Coral Springs,USA,-80.27060,26.27119,,done-locally
+32,Dollard-des-Ormeaux,Canada,-73.80645,45.48423,,done-locally
+33,Gothenburg,Sweden,11.96702,57.70723,,done-locally
+34,Port Elizabeth,South Africa,25.5701,-33.9608,,done-locally
+35,Yonkers,USA,-73.8988,40.9312,,done-locally
+36,Derna,Libya,22.6367,32.7670,,done-locally
+37,Ismailia,Egypt,32.2654,30.5900,,done-locally
+38,Luxor,Egypt,32.6396,25.6872,,done-locally
+39,Aswan,Egypt,32.9078,24.0889,,done-locally
+40,Najaf,Iraq,44.3299,31.9921,,done-locally
+41,Homs,Syria,36.7138,34.7324,,done-locally
+42,Hama,Syria,36.7578,35.1318,,done-locally
+43,Latakia,Syria,35.7806,35.5196,,done-locally
+44,Tripoli,Lebanon,35.8500,34.4333,,done-locally
+45,Tehran,Iran,51.3890,35.6892,,done-locally
+46,Hamadan,Iran,48.5167,34.8000,,done-locally
+47,Qom,Iran,50.8833,34.6500,,done-locally
+48,Taiz,Yemen,44.0209,13.5795,,done-locally
+49,Al Hudaydah,Yemen,42.9545,14.7970,,done-locally
+50,Końskie,Poland,20.4167,51.2000,,done-locally
+51,Kłomnice,Poland,19.3667,50.9167,,done-locally
+52,Krotoszyn,Poland,17.4353,51.6998,,done-locally
+53,Chęciny,Poland,20.4574,50.7959,,done-locally
+54,Newport,USA,-71.3126,41.4901,,done-locally
+55,Nizhny Novgorod,Russia,44.00205,56.32867,,done-locally
+56,Volgograd,Russia,44.50183,48.71939,,done-locally
+57,Novosibirsk,Russia,82.94339,55.03442,,done-locally
+58,Irkutsk,Russia,104.29585,52.29795,,done-locally
+59,Nalchik,Russia,43.61889,43.49806,,pending
+60,Kursk,Russia,36.18712,51.73758,,pending
+61,Tula,Russia,37.61822,54.19609,,pending
+62,Chelyabinsk,Russia,61.42915,55.15402,,pending
+63,Perm,Russia,56.25017,58.01046,,pending
+64,Ufa,Russia,55.96779,54.74306,,pending
+65,Krasnoyarsk,Russia,92.90765,56.02668,,pending
+66,Astrakhan,Russia,48.04076,46.34968,,pending
+67,Taganrog,Russia,38.9053,47.23627,,pending
+68,Vladivostok,Russia,131.87353,43.10562,,pending
+69,Makhachkala,Russia,47.50236,42.97638,,pending
+70,Oryol,Russia,36.08,52.97,,pending
+71,Bradford,United Kingdom,-1.75206,53.79391,,pending
+72,Kecskemét,Hungary,19.69128,46.90618,,pending
+73,Hódmezővásárhely,Hungary,20.33333,46.41667,,pending
+74,Szolnok,Hungary,20.2,47.18333,,pending
+75,Baja,Hungary,18.95307,46.18299,,pending
+76,Cegléd,Hungary,19.79952,47.17266,,pending
+77,Balassagyarmat,Hungary,19.29614,48.07296,,pending
+78,Lučenec,Slovakia,19.66708,48.33249,,pending
+79,Trebišov,Slovakia,21.71954,48.62858,,pending
+80,Rimavská Sobota,Slovakia,20.02239,48.38284,,pending
+81,Lucena,Spain,-4.48522,37.40881,,pending
+82,Palma de Mallorca,Spain,2.65024,39.56939,,pending
+83,Segovia,Spain,-4.1088,40.9429,,pending
+84,Shumen,Bulgaria,26.92286,43.27064,,pending
+85,Kraśnik,Poland,22.22706,50.9236,,pending
+86,Urmia,Iran,45.0667,37.5500,,pending
+87,Tabriz,Iran,46.2919,38.0800,,pending
+88,Curitiba,Brazil,-49.2733,-25.4284,,pending
+89,Valparaíso,Chile,-71.6127,-33.0472,,pending
+90,Providence,USA,-73.7329,43.0006,,pending
+91,Oakland,USA,-122.2712,37.8044,,pending
