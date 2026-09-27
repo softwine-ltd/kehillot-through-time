@@ -1,5 +1,4 @@
 Country,Town Name,Longitude,Latitude,Year Established,Year of Data,Population,Notes,Source
-Poland,Kraśnik,22.22706,50.9236,1531,1377,,"Source claims 'Jewish presence here dates from 1377'; not supported by scholarly sources, which give 1531 as first mention",https://cdp.jewishgen.org/eastern-europe/poland/krasnik
 Poland,Kraśnik,22.22706,50.9236,1531,1531,,First documented mention: Jewish merchants (Moses and Solomon) trading with Gdansk and visiting Lublin fairs,https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/krasnik
 Poland,Kraśnik,22.22706,50.9236,1531,1531,,Jews in the area in 1531 per historical accounts (first mention),https://en.wikipedia.org/wiki/Kra%C5%9Bnik
 Poland,Kraśnik,22.22706,50.9236,1531,1531,,Pierwsza wzmianka (first mention) of Jews in Kraśnik dates from 1531,https://shz-mykwa.pl/ydzi-kranik-i-okolice/
@@ -45,5 +44,5 @@ Poland,Kraśnik,22.22706,50.9236,1531,1942,,After Dec 1942 up to 350 men left in
 Poland,Kraśnik,22.22706,50.9236,1531,1942,,"Budzyń camp (~3000 Jews, subcamp of Majdanek) and WIFO labor camp (~3000) in Kraśnik area held prisoners from elsewhere",https://en.wikipedia.org/wiki/Kra%C5%9Bnik
 Poland,Kraśnik,22.22706,50.9236,1531,1944,,June 1944: 295 surviving Jews in Krasnik's two labour camps sent to Plaszow (camp inmates),https://www.holocausthistoricalsociety.org.uk/contents/ghettosj-r/krasnik.html
 Poland,Kraśnik,22.22706,50.9236,1531,1944,,"After liberation in summer 1944 a committee of Polish Jews in Krasnik registered up to 300 Jews (registrations, may include non-residents)",https://www.jewishgen.org/yizkor/krasnik/kra293.html
-Poland,Kraśnik,22.22706,50.9236,1531,1945,0,'Estimated Jewish Population at end of WWII: 0'; community annihilated (conflicts with 1944 registration of up to 300),https://hmh.mwmdigital.com/community/65/
+Poland,Kraśnik,22.22706,50.9236,1531,1945,,'Estimated Jewish Population at end of WWII: 0'; community annihilated (conflicts with 1944 registration of up to 300) [Review fix: Population 0 removed - conflicts with the 1944 registration of up to 300; not a clearly documented absence],https://hmh.mwmdigital.com/community/65/
 Poland,Kraśnik,22.22706,50.9236,1531,1945,,"Only an estimated 350 of more than 5000 Kraśnik Jews survived the Holocaust; most or all survivors left Poland (survivor count, not residents)",https://en.wikipedia.org/wiki/Kra%C5%9Bnik
