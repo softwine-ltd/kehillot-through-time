@@ -1,0 +1,22 @@
+OK https://cyclowiki.org/wiki/%D0%95%D0%B2%D1%80%D0%B5%D0%B8_%D0%B2_%D0%A2%D1%83%D0%BB%D0%B5
+OK https://1tulatv.ru/novosti-reportazhi/185836-evrei-v-tule-s-chego-nachinalas-istoriya-obshchiny.html
+OK https://feor.ru/administrative-units/tula/
+OK https://tiam-tula.ru/iudejskoe-kladbishhe/
+OK https://tula.aif.ru/society/persona/gde_rodinu_iskat_o_evreyskom_voprose_i_trudolyubii
+OK https://www.demoscope.ru/weekly/ssp/rus_lan_97_uezd.php?reg=1544
+OK https://www.demoscope.ru/weekly/ssp/rus_lan_97_uezd.php?reg=1540
+OK https://jewtula.ru/o-nas/istorija-centra/
+OK https://tulaneshama.livejournal.com/128224.html
+OK https://tulalmanac.blogspot.com/2012/03/1916-1917.html
+OK https://www.jta.org/1999/09/01/lifestyle/ten-years-after-the-wall-russian-citys-jews-reconnect-with-heritage-and-one-another
+OK https://jweekly.com/1999/09/24/one-russian-town-epitomizes-jewish-reconnection/
+OK https://keroor.org/tula
+OK https://stmegi.com/posts/141191/gostepriimnaya-evreyskaya-tula-laureat-tikunlab-2026-otkryvaet-neizvestnuyu-istoriyu-oruzheynoy-stol/
+OK https://en.wikipedia.org/wiki/Tula,_Russia
+OK https://www.demoscope.ru/weekly/ssp/rus_lan_97_uezd.php?reg=1604 (wrong region: Kharkov; not used)
+OK https://www.jewishencyclopedia.com/articles/14514-tula (wrong article: Triesch; not used)
+FAILED https://gato.tularegion.ru/jewish
+FAILED https://forum.j-roots.info/viewtopic.php?t=3049
+FAILED https://www.forum.j-roots.info/viewtopic.php?t=3049&start=20
+FAILED https://en.visittula.com/routes/turisticheskij-marshrut-tula-evrejskaya/
+FAILED http://minuvshee.com/evrei
