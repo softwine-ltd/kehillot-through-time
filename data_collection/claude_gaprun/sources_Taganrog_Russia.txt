@@ -1,0 +1,14 @@
+OK https://www.jewishvirtuallibrary.org/taganrog
+OK https://cyclowiki.org/wiki/%D0%95%D0%B2%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D1%89%D0%B8%D0%BD%D0%B0_%D0%A2%D0%B0%D0%B3%D0%B0%D0%BD%D1%80%D0%BE%D0%B3%D0%B0
+OK https://www.holocaust.su/taganrog-synagogue
+OK https://www.holocaust.su/holocaust-taganrog
+OK https://holocaust.su/ekaterinoslavskaya-guberniya
+OK https://cities.blacksea.gr/ru/taganrog/3-3-2-1/
+OK https://feor.ru/administrative-units/taganrog/
+OK https://en.wikipedia.org/wiki/Taganrog_during_World_War_II
+OK https://jewsencyclopedia.com/index.php/ТАГАНРОГ
+FAILED https://61.rosstat.gov.ru/storage//2023/09-05/LOVYPmbp/%D0%A2%D0%90%D0%93%D0%90%D0%9D%D0%A0%D0%9E%D0%93.pdf
+OK https://sites.google.com/site/istoriceskijtaganrog/%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D1%8F/%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8/%D0%BD%D0%B0%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5
+OK https://ru.wikipedia.org/wiki/Таганрог
+OK https://www.encyclopedia.com/places/commonwealth-independent-states-and-baltic-nations/cis-and-baltic-political-geography/taganrog
+OK https://www.jewishgen.org/ukraine/GEO_town.asp?id=629
