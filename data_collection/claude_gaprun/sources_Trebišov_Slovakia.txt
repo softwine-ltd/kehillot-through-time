@@ -1,0 +1,17 @@
+OK https://www.pamiatkynaslovensku.sk/trebisov-synagoga
+OK https://en.wikipedia.org/wiki/Trebi%C5%A1ov
+OK https://www.xn--jdische-gemeinden-22b.de/index.php/gemeinden/s-t/2451-trebischau-trebisov-slowakei
+OK https://www.jewishgen.org/yizkor/pinkas_slovakia/pinkas_slovakia.html
+OK https://www.jewishgen.org/yizkor/pinkas_slovakia/slo258.html
+OK https://www.upn.gov.sk/projekty/supis-zidov/zoznam-obci/?okres=451
+OK https://www.upn.gov.sk/projekty/supis-zidov/
+FAILED https://dbs.bh.org.il/place/trebisov
+OK https://artsandculture.google.com/asset/pointed-finger/ZQH5Hj209SM_JQ?childAssetId=WgHOxzTH28ScRg
+OK https://sk.wikipedia.org/wiki/Trebi%C5%A1ov
+OK https://hu.wikipedia.org/wiki/T%C5%91keterebes
+OK https://www.minv.sk/swift_data/source/verejna_sprava/saba_psa/publikacie/Archivum_Sala_4_SK-full.pdf
+OK https://bratislavskykraj.sk/wp-content/uploads/2022/09/zbornik-zidovske-stavebne-dedicstvo-05-2022-2.pdf
+OK https://www.sav.sk/journals/uploads/04031927SN.2022.1.04.pdf
+OK https://kehilalinks.jewishgen.org/secovce/wintner.html
+OK https://www.jewishgen.org/yizkor/pinkas_slovakia/slo414.html
+FAILED https://www.esjf-cemeteries.org/survey/trebisov-jewish-cemetery/
