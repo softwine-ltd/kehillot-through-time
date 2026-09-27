@@ -1,0 +1,20 @@
+OK https://jewishvirtuallibrary.org/majorca
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_the_Balearic_Islands
+OK https://jguideeurope.org/en/region/spain/the-balearic-islands/palma-de-mallorca/
+OK https://es.wikipedia.org/wiki/Comunidad_jud%C3%ADa_de_Mallorca
+OK https://en.wikipedia.org/wiki/Xueta
+OK https://www.allmallorca.com/en/legacy/the-chuetas/history-jews-mallorca-chronology/
+OK https://jewishencyclopedia.com/articles/11874-palma
+OK https://ca.wikipedia.org/wiki/Jueus_mallorquins
+OK https://ca.wikipedia.org/wiki/Revolta_mallorquina_de_1391
+OK https://dialnet.unirioja.es/descarga/articulo/5044054.pdf (WebFetch could not parse PDF; downloaded and extracted locally with pymupdf)
+OK https://www.ynetnews.com/articles/0,7340,L-4705046,00.html
+OK https://en.wikipedia.org/wiki/Timeline_of_Palma_de_Mallorca
+OK https://esefarad.com/historia-de-los-judios-mallorquines/
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/chuetas
+OK https://www.jewishwikipedia.info/chuetas1.html
+OK https://en.wikipedia.org/wiki/Massacre_of_1391
+FAILED https://www.worldjewishtravel.org/listing/synagogue-of-palma-de-majorca/
+OK https://www.timesofisrael.com/for-mallorcas-jews-first-public-sukkah-is-triumph-over-spanish-inquisition/
+OK https://jewishcurrents.org/august-24-the-jews-of-majorca
+OK https://www.ultimahora.es/noticias/local/2023/09/03/2005517/ultimos-judios.html
