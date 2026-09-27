@@ -1,0 +1,12 @@
+OK https://jewishvirtuallibrary.org/lucena-spain-virtual-jewish-history-tour
+OK https://en.wikipedia.org/wiki/Lucena,_C%C3%B3rdoba
+OK https://en.wikipedia.org/wiki/Jewish_cemetery,_Lucena
+OK https://redjuderias.org/lucena/
+OK https://www.jewishencyclopedia.com/articles/10175-lucena
+OK https://es.wikipedia.org/wiki/Lucena
+OK https://andalfarad.com/historia-de-lucena-sefardi/
+OK https://en.andalucia.org/blog/post/lucena-the-pearl-of-sefarad/
+OK https://www.visit-andalucia.com/guide-to-lucena-cordoba/
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/lucena
+OK https://he.wikipedia.org/wiki/%D7%9C%D7%95%D7%A1%D7%A0%D7%94
+FAILED https://www.academia.edu/39056074/Enrique_Soria_Mesa_Judaizantes_o_marqueses_Los_judeoconversos_de_Lucena_C%C3%B3rdoba_entre_los_siglos_XV_y_XVII_Una_primera_aproximaci%C3%B3n_a_su_estudio_en_Enrique_Soria_Mesa_y_Antonio_J_D%C3%ADaz_Rodr%C3%ADguez_Eds_Los_judeoconversos_en_el_mundo_ib%C3%A9rico_C%C3%B3rdoba_Ucopress_2019_pp_127_140
