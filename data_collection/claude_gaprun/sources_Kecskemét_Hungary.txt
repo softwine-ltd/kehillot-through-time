@@ -1,0 +1,17 @@
+OK https://jewishvirtuallibrary.org/kecskemet
+OK https://jguideeurope.org/en/region/hungary/kecskemet/
+FAILED https://digit.kjmk.hu/kecskemet-es-a-holokauszt/
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/kecskemet
+OK https://hu.wikipedia.org/wiki/Kecskem%C3%A9ti_zsinag%C3%B3ga
+OK https://www.csillagoshazak.hu/kronologia/1944/majus/15-21
+OK https://mnl.gov.hu/mnl/bkml/multbanezo_9_6
+OK https://mek.oszk.hu/11500/11506/html/4.brahamkotet2.htm
+OK https://kecsup.hu/2022/04/a-kecskemeti-zsidok-lakasait-elvettek-majd-a-halalba-kuldtek-oket-aprilis-16-a-holokauszt-aldozatainak-emleknapja/
+OK https://neokohn.hu/2020/07/04/a-kecskemeti-uj-zsinagoga-marvanytablajanak-margojara/
+FAILED https://library.hungaricana.hu/hu/view/BKKM_Lf_02_Hornyik/
+OK https://en.wikipedia.org/wiki/Kecskem%C3%A9t
+OK https://jonagolem.wordpress.com/az-eloadas/kecskemet/
+FAILED https://www.sulinet.hu/oroksegtar/data/telepulesek_ertekei/Kecskemet/pages/a_foter/013_tudomany.htm
+OK https://hu.wikipedia.org/wiki/Kecskem%C3%A9t
+OK https://mek.oszk.hu/13500/13596/13596.pdf
+OK http://mek.oszk.hu/04000/04093/html/szocikk/12505.htm
