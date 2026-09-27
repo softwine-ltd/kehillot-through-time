@@ -1,0 +1,23 @@
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/szolnok
+OK https://mek.oszk.hu/04000/04093/html/szocikk/14916.htm
+OK https://en.wikipedia.org/wiki/Szolnok_Synagogue
+FAILED https://www.szoljon.hu/helyi-kultura/2024/08/szolnoki-galeria-zsido-emlekev-hay-ignac
+FAILED https://www.szoljon.hu/helyi-kozelet/2018/04/tudta-hogy-a-mai-pelikan-szallo-teruleten-volt-egykor-a-zsidogetto
+OK https://zsima.hu/2022/07/10/a-szolnoki-martirokra-emlekezunk/
+OK https://szol24.hu/2024/08/05/125-eves-a-szolnoki-zsinagoga/
+OK https://mazsihisz.hu/hirek-a-zsido-vilagbol/megemlekezesek/szolnoki-getto-szotlanul-vartuk-sorsunk-beteljesuleset
+OK https://szeged.hu/cikk/mi-tortent-a-szolnoki-zsidosaggal-1944-ben-megjelent-molnar-judit-es-frojimovics-kinga-uj-konyve-a-szolnokrol-es-kornyekerol-elhurcoltakrol
+OK https://mnl.gov.hu/mnl/jnszml/hirek/cukorgyari_emlekek
+OK https://www.gordogok.hu/html/szolnok950/place.php?placeid=237
+OK https://megsemmisitve.hu/fejezet/csillag-gettositas-es-deportalas-1944-tol
+OK https://zounuk.hu/hu/wiki/zsido-hitkozseg-kulturhaza-szolnok
+OK https://szol24.hu/2023/02/02/szolnok-legszebb-helyei-galeria/
+OK https://mult-kor.hu/mar-a-gettositasrol-szolo-rendelet-megjelenese-elott-megkezdodott-a-zsidok-osszegyujtese-20160416
+OK https://hu.wikipedia.org/wiki/Szolnoki_Gal%C3%A9ria
+OK http://mek.oszk.hu/11500/11506/html/haromoldal/Braham696.htm
+OK https://mek.oszk.hu/11500/11506/html/haromoldal/Braham686.htm
+OK https://portal.vfmk.hu/node/14118
+FAILED https://library.hungaricana.hu/hu/view/JNSM_Lk_12/?query=zsid%C3%B3&pg=65
+FAILED https://drive.google.com/file/d/1MlbVaRR9kS7V8CjmYI4B4bd4hhpFN9wK/view?usp=sharing (WebFetch could not render PDF; downloaded and text-extracted locally with pymupdf - OK)
+OK https://hu.wikipedia.org/wiki/Szolnok
+OK https://en.wikipedia.org/wiki/Szolnok
