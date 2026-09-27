@@ -1,0 +1,17 @@
+OK https://www.jewishvirtuallibrary.org/baja
+FAILED https://bajaihonpolgar.hu/2021/01/fejezetek-a-bajai-zsidosages-a-zsinagoga-tortenetebol/
+OK https://cdp.jewishgen.org/eastern-europe/hungary/baja
+FAILED https://www.jewishencyclopedia.com/articles/2335-baja
+FAILED https://www.baon.hu/helyi-kozelet/2020/09/a-bajai-zsinagoga-tortenelmi-evfordulojat-unneplik
+OK https://hu.wikipedia.org/wiki/Bajai_zsinagóga
+OK https://www.jewishencyclopedia.com/articles/2376-baja
+OK https://en.wikipedia.org/wiki/Baja,_Hungary
+OK https://mek.oszk.hu/11500/11506/html/4.brahamkotet2.htm
+OK https://hu.wikipedia.org/wiki/Baja
+OK https://www.csillagoshazak.hu/kronologia/1944/majus/15-21
+FAILED https://bajaiertektar.hu/index.php/ertekeink/epitett-kornyezet/229-bajai-zsinagoga
+OK https://www.bacskiskun.hu/ertekek/bajai-zsinagoga
+OK https://mazsihisz.hu/accessible/vakbarat/hirek-a-zsido-vilagbol/mazsihisz-hirek/tudastar-virtualisan-is-bejarhato-a-bajai-es-a-karcagi-zsinagoga
+FAILED http://www.bacskiskunmegyenemzetiertekei.hu/megyei_ertekek/1331-bajai-zsinag-ga
+OK https://www.mek.oszk.hu/04000/04093/html/szocikk/10302.htm
+OK https://zsigorobert.hu/bajarol/tortenete/
