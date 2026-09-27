@@ -1,0 +1,15 @@
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/krasnik
+FAILED https://teatrnn.pl/leksykon/artykuly/krasnik-sztetl/
+OK https://www.holocausthistoricalsociety.org.uk/contents/ghettosj-r/krasnik.html
+OK https://en.wikipedia.org/wiki/Kra%C5%9Bnik
+OK https://cdp.jewishgen.org/eastern-europe/poland/krasnik
+OK https://www.jewishgen.org/yizkor/krasnik/kra293.html
+OK https://www.jewishgen.org/Yizkor/krasnik/kra010.html
+FAILED http://www.regionalista.pl/zydzi.htm
+FAILED https://sztetl.org.pl/en/towns/k/688-krasnik/99-history/137536-history-of-community
+OK https://shz-mykwa.pl/ydzi-kranik-i-okolice/
+OK https://pl.wikipedia.org/wiki/Kraśnik
+OK https://jri-poland.org/blog/the-developing-krasnik-town-fund-project-in-the-lublin-area/
+FAILED https://teatrnn.pl/leksykon/artykuly/krasnik-historia-miasta/
+OK https://ru.wikisource.org/wiki/ЕЭБЕ/Красник
+OK https://hmh.mwmdigital.com/community/65/
