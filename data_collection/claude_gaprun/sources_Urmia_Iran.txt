@@ -1,0 +1,15 @@
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/rizaieh
+OK https://www.7dorim.com/en/pictures/urmia/
+OK https://en.wikipedia.org/wiki/Urmia
+OK https://en.wikipedia.org/wiki/Jewish_Neo-Aramaic_dialect_of_Urmia
+OK https://nashdidan.co.il/en/nash-didan/
+OK https://fa.wikipedia.org/wiki/یهودیان_آذربایجان
+OK https://fa.wikipedia.org/wiki/جمعیت‌شناسی_تاریخی_منطقه_ارومیه
+FAILED http://archive.diarna.org/site/detail/public/2830/
+OK https://he.wikipedia.org/wiki/קהילת_יהודי_אורמיה
+OK https://he.wikipedia.org/wiki/אורמיה
+OK https://nashdidan.co.il/העיר-אורמי-אורמיה-עדות/
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Kurdistan
+OK https://diarna.org/exhibits/exploring-urmia-iran/
+FAILED https://files.ybz.org.il/periodicals/Etmol/208/Etmol_208.7.pdf
+OK https://www.jewishencyclopedia.com/articles/12045-persia
