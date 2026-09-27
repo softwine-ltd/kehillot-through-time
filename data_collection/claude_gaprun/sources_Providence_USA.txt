@@ -1,0 +1,16 @@
+OK https://jewishvirtuallibrary.org/rhode-island
+FAILED https://dbs.anumuseum.org.il/skn/en/c6/e198410/Place/Providence_RI
+OK https://www.jewishencyclopedia.com/articles/12726-rhode-island
+OK https://rijha.org/wp-content/uploads/2012/08/jewsri-search.pdf (WebFetch could not parse PDF; text extracted locally with pymupdf)
+OK https://www.rijha.org/wp-content/uploads/2013/01/6-1-Nov-71-36-75.pdf (WebFetch could not parse PDF; text extracted locally with pymupdf)
+OK https://www.jewishdatabank.org/content/upload/bjdb/707/AJYB-1927_1928_Statistics.pdf (WebFetch could not parse PDF; text extracted locally with pymupdf)
+OK https://www.bjpa.org/content/upload/bjpa/jewi/Jewish%20Population%201927.pdf (WebFetch could not parse PDF; text extracted locally with pymupdf)
+OK https://www.jewishdatabank.org/content/upload/bjdb/1937_The_Jews_of_the_United_States_(Linfield,_AJYB_1939-1940)_plus_1938_World_Jewish_Population_(AJYB_1939-40).pdf (downloaded; no Providence city figure found)
+OK https://www.jewishdatabank.org/content/upload/bjdb/AJYB-1948a_Jewish_Population_Estimates_of_Selected_US_Cities_(AJYB_1951).pdf (downloaded; Jewish column not extractable)
+FAILED https://www.brandeis.edu/hornstein/sarna/introscommnets/Archive/TheJewsofRhodeIsland.pdf
+OK https://www.jewishencyclopedia.com/articles/12403-providence.html
+OK https://en.wikipedia.org/wiki/Temple_Beth-El_(Providence,_Rhode_Island)
+OK https://momentmag.com/jewish-routes-rhode-island/
+OK https://www.jewishallianceri.org/about/what-we-stand-for/history
+FAILED https://www.jewishdatabank.org/databank/search-results/study/368
+OK https://rhodetour.org/tours/show/47 (not used; unreliable paraphrase)
