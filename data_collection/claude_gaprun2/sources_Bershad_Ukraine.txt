@@ -1,0 +1,10 @@
+FAILED https://eleven.co.il/diaspora/communities/10585/
+OK https://www.jewishencyclopedia.com/articles/3161-bershad
+OK https://en.wikipedia.org/wiki/Bershad
+OK https://myshtetl.org/vinnitskaja/bershad.html
+OK https://kehilalinks.jewishgen.org/Bershad/
+OK https://cyclowiki.org/wiki/Бершадь
+OK https://www.jewishgen.org/ukraine/PTM_Article.asp?id=732
+FAILED http://www.ejwiki.org/wiki/Бершадь_(еврейская_община)
+OK https://www.timesofisrael.com/passed-over-by-nazis-and-communists-remnants-of-ukraines-last-shtetl-prepare-to-celebrate/
+FAILED https://ujew.com.ua/shtetl-bershad-rodina-bershadskih-hasidov
