@@ -1,0 +1,12 @@
+FAILED https://encyclopedia.yivo.org/article/2332
+OK https://kehilalinks.jewishgen.org/Zhovkva/About.html
+OK https://en.wikipedia.org/wiki/Zhovkva
+FAILED https://cdp.jewishgen.org/eastern-europe/ukraine/zhovkva
+OK https://www.jewishgen.org/Yizkor/Zhovkva/Zhovkva.html
+OK https://shtetlroutes.eu/uk/zhowkwa-putvnik/
+OK http://www.jewishheritage.org.ua/ua/5269/evrejska-zhovkva-slidy-mynuvshyny.html
+OK https://jguideeurope.org/en/region/ukraine/eastern-galicia-podolia-and-bukovina/zolkiew-zhovkva/
+FAILED https://www.jewishencyclopedia.com/articles/15283-zolkiev
+OK https://uk.wikipedia.org/wiki/Жовква
+OK https://shtetlroutes.eu/pl/zolkiew-karta-dziedzictwa-kulturowego/
+OK https://localhistory.org.ua/texts/reportazhi/velika-sinagoga-v-zhovkvi-khram-bez-sentimentu/

@@ -13,9 +13,9 @@ n,town,country,lon,lat,alt_name,status
 12,Chudniv,Ukraine,28.11745,50.05204,Chudnov / Chudnow / Czudnów (Zhytomyr oblast),done
 13,Voznesensk,Ukraine,31.33386,47.56796,Voznesensk (Mykolaiv oblast; Kherson guberniya),done
 14,Slavuta,Ukraine,26.86613,50.29609,Slavuta / Sławuta (Khmelnytskyi oblast),done
-15,Novogrudok,Belarus,25.8191,53.5942,Navahrudak / Nowogródek / Novogrudok (Belarus),pending
-16,Zhovkva,Ukraine,23.9726,50.05825,"Zolkiew / Żółkiew / Zholkva / Nesterov 1951-91 (Lviv oblast, Galicia)",pending
-17,Dubrovytsia,Ukraine,26.56503,51.57438,"Dubrovitsa / Dąbrowica / Dubrovytsia (Rivne oblast, Polesia)",pending
+15,Novogrudok,Belarus,25.8191,53.5942,Navahrudak / Nowogródek / Novogrudok (Belarus),done
+16,Zhovkva,Ukraine,23.9726,50.05825,"Zolkiew / Żółkiew / Zholkva / Nesterov 1951-91 (Lviv oblast, Galicia)",done
+17,Dubrovytsia,Ukraine,26.56503,51.57438,"Dubrovitsa / Dąbrowica / Dubrovytsia (Rivne oblast, Polesia)",done
 18,Chashniki,Belarus,29.16645,54.85096,Chashniki / Czaśniki (Vitebsk region),pending
 19,Lyady,Belarus,31.16877,54.60162,Lyady / Liady / Lady (Vitebsk region; Chabad),pending
 20,Lokachi,Ukraine,24.64944,50.737,Lokachi / Łokacze / Lokacze (Volyn oblast),pending

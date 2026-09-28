@@ -1,0 +1,8 @@
+OK https://en.wikipedia.org/wiki/Dubrovytsia
+OK https://ru.wikipedia.org/wiki/Дубровица
+OK https://forum.j-roots.info/viewtopic.php?t=2900
+OK https://ru.wikisource.org/wiki/ЕЭБЕ/Домбровицы
+OK https://www.jewishencyclopedia.com/articles/5263-dombrovitza
+FAILED https://cdp.jewishgen.org/eastern-europe/ukraine/dubrovitsa
+OK https://netormoz.wordpress.com/svitokrezni/volume-2/dombrovica/
+OK https://en.wikipedia.org/wiki/Dombrovitza
