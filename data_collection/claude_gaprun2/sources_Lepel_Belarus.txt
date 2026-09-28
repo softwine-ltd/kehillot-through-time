@@ -1,0 +1,9 @@
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/lepel
+OK https://en.wikipedia.org/wiki/Lyepyel
+OK https://ru.wikipedia.org/wiki/Лепель
+OK https://ru.wikipedia.org/wiki/Лепельское_гетто
+OK https://www.jewishgen.org/belarus/original/shtetls/shtetl_detail.php?filename=slepellv (no data)
+FAILED https://collections.yadvashem.org/en/untold-stories/community/14621889-Lepel
+FAILED https://mishpoha.org/aktualnoe-intervyu/1398-evrejskij-sled-v-istorii-lepelya
+FAILED https://forum.j-roots.info/viewtopic.php?t=5135
+FAILED https://belisrael.info/?p=6835
