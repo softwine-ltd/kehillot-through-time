@@ -1,0 +1,7 @@
+OK https://forum.j-roots.info/viewtopic.php?t=5953
+OK https://en.wikipedia.org/wiki/Bobrinets
+OK https://ru.wikipedia.org/wiki/Бобринец
+OK http://www.maximovy.ru/main/locations/places_bobrinetz/
+OK https://ukrainaincognita.com/kirovogradska-oblast/bobrynetskyi-raion/bobrynets/bobrynets
+OK https://jewua.org/category/kirovohrad-region/
+FAILED https://cdp.jewishgen.org/eastern-europe/ukraine/bobrinets
