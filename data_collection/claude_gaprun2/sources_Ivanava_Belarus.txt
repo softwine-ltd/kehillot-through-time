@@ -1,0 +1,14 @@
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/ivanovo
+OK https://pl.wikipedia.org/wiki/Jan%C3%B3w_(Bia%C5%82oru%C5%9B)
+OK https://ru.wikipedia.org/wiki/Иваново_(Брестская_область)
+OK https://en.wikipedia.org/wiki/Ivanava
+OK https://www.jewishgen.org/yizkor/Ivanovo/Ivanovo.html
+OK https://kehilalinks.jewishgen.org/ivanava/ivanava.html
+OK https://jewishgen.org/yizkor/Ivanovo/iva199.html
+FAILED https://eleven.co.il/diaspora/communities/11673/
+FAILED https://collections.yadvashem.org/en/untold-stories/community/14622433
+FAILED https://cdp.jewishgen.org/eastern-europe/belarus/ivanovo
+FAILED https://sztetl.org.pl/en/towns/i/1505-ivanava/99-history/137396-history-of-community
+FAILED https://sztetl.org.pl/pl/miejscowosci/j/1505-janow-poleski/99-historia-spolecznosci/137396-historia-spolecznosci
+FAILED https://muse.jhu.edu/document/2710
+FAILED https://ru.wikipedia.org/wiki/Иваново_(город,_Брестская_область)
