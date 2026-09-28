@@ -1,0 +1,5 @@
+OK https://jewua.org/savran/
+OK https://myshtetl.org/odesskaja/savran.html
+OK https://en.wikipedia.org/wiki/Savran,_Odessa_Oblast
+OK https://ru.wikipedia.org/wiki/Саврань
+FAILED https://cdp.jewishgen.org/eastern-europe/ukraine/savran
