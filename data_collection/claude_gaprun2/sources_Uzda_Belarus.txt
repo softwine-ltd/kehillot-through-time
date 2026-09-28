@@ -1,0 +1,9 @@
+OK https://en.wikipedia.org/wiki/Uzda
+OK https://ru.wikisource.org/wiki/ЕЭБЕ/Узда
+FAILED https://cdp.jewishgen.org/eastern-europe/belarus/uzda
+FAILED https://mishpoha.org/biblioteka/seriya-zapiski-redaktora-zhurnala-mishpokha/pereletnaya-ptitsa-feniks/1462-mestechko-ushedshee-v-istoriyu-2
+OK https://ru.wikipedia.org/wiki/Гетто_в_Узде
+FAILED http://jewishfreedom.org/page674.html
+OK https://ru.wikipedia.org/wiki/Узда_(город)
+OK https://www.demoscope.ru/weekly/2003/0105/analit03.php
+OK https://ru.wikipedia.org/wiki/Холокост_в_Узденском_районе
