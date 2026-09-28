@@ -1,0 +1,13 @@
+FAILED https://collections.yadvashem.org/en/untold-stories/community/14621636-Chashniki
+FAILED http://iajgscemetery.org/eastern-europe/belarus/chashniki-vitebsk
+OK http://shtetle.com/Shtetls/chashniki/pleshkova_eng.html
+OK https://ru.wikipedia.org/wiki/Чашники
+OK https://en.wikipedia.org/wiki/Chashniki
+OK https://ru.wikipedia.org/wiki/Гетто_в_Чашниках
+OK https://ru.wikisource.org/wiki/МЭСБЕ/Чашники
+OK https://ru.wikisource.org/wiki/ЕЭБЕ/Чашники
+OK https://www.jewishencyclopedia.com/articles/4260-chashniki
+OK https://en.wikipedia.org/wiki/S._An-sky
+FAILED https://pdf.vlib.by/BS-2020/Evrei_na_Vitebschine.pdf
+FAILED https://j-roots.info/forum/viewtopic.php?t=688&start=20
+FAILED http://shtetle.com/Shtetls/chashniki/chashniki_hist.html
