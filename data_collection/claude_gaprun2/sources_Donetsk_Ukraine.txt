@@ -1,0 +1,12 @@
+OK https://www.jewishvirtuallibrary.org/donetsk
+OK https://s.berkovich-zametki.com/y2023/nomer2/giller/
+OK https://www.memorialmuseums.org/memorialmuseum/donetsk-memorials?locale=en
+OK https://en.wikipedia.org/wiki/Donetsk
+OK https://www.encyclopedia.com/places/commonwealth-independent-states-and-baltic-nations/cis-and-baltic-political-geography/donetsk
+OK http://donjetsk-jewish.ucoz.ru/index/0-2
+FAILED https://cyclowiki.org/wiki/Евреи_в_Донецке
+FAILED https://www.jewage.org/wiki/ru/Profile:Doneck_Ukraine
+FAILED https://infodon.org.ua/uzovka/22
+FAILED https://cdp.jewishgen.org/eastern-europe/ukraine/donetsk
+FAILED https://www.kehilalinks.jewishgen.org/Colonies_of_Ukraine/Yuzovka.htm
+FAILED https://www.mif-ua.com/media/uploads/reading_book_full_texts/istoria_don_obch.pdf
