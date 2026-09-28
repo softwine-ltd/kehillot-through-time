@@ -1,0 +1,7 @@
+OK https://jewua.org/pereyaslav/
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/pereyaslav-khmelnitski
+OK https://kehilalinks.jewishgen.org/Pereyaslav_Khmelnytskyy/
+OK http://perejaslav.org.ua/istoria/golokost-na-pereyaslavshini.html
+OK https://en.wikipedia.org/wiki/Pereiaslav
+OK https://uk.wikipedia.org/wiki/Переяслав
+FAILED https://cdp.jewishgen.org/eastern-europe/ukraine/pereyaslav-khmelnitskiy
