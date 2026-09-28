@@ -1,0 +1,8 @@
+OK https://www.jewishvirtuallibrary.org/polotsk
+OK https://www.jewishencyclopedia.com/articles/12257-polotsk-polotzk
+OK https://jewsencyclopedia.com/index.php/%D0%9F%D0%9E%D0%9B%D0%9E%D0%A6%D0%9A
+OK https://ru.wikipedia.org/wiki/Полоцк
+OK https://en.wikipedia.org/wiki/Polotsk
+FAILED https://cyclowiki.org/wiki/Евреи_в_Полоцке
+FAILED https://eleven.co.il/diaspora/communities/13270/ (loader)
+FAILED https://mitzvatemet.com/en/index.php?route=information%2Funivernews&univernews_id=365 (403)
