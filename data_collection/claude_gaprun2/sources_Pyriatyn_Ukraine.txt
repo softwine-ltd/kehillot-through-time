@@ -1,0 +1,10 @@
+OK https://jewua.org/pyriatyn/
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/piryatin
+OK https://www.yadvashem.org/ru/righteous/stories/piryatin.html
+OK https://poltavski.info/ru/eternal-830-pochemu-uspeshnymi-piryatinczami-obychno-byli-evrei-kak-zhila-obshhina-goroda
+OK https://jewsencyclopedia.com/index.php/%D0%9F%D0%98%D0%A0%D0%AF%D0%A2%D0%98%D0%9D
+OK https://en.wikipedia.org/wiki/Pyriatyn
+OK https://ru.wikipedia.org/wiki/%D0%9F%D0%B8%D1%80%D1%8F%D1%82%D0%B8%D0%BD
+FAILED https://www.rujen.ru/index.php/%D0%9F%D0%98%D0%A0%D0%AF%D0%A2%D0%98%D0%9D
+FAILED https://www.jewishgen.org/ukraine/GEO_town.asp?id=405
+FAILED https://tkfshtetl.org/pyriatyn/
