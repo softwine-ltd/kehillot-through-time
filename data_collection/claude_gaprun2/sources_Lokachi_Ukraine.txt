@@ -1,0 +1,8 @@
+OK https://en.wikipedia.org/wiki/Lokachi
+OK https://ru.wikipedia.org/wiki/%D0%9B%D0%BE%D0%BA%D0%B0%D1%87%D0%B8_(%D0%92%D0%BE%D0%BB%D1%8B%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)
+FAILED http://iajgscemetery.org/eastern-europe/ukraine/lokachisee-lokachi
+OK https://www.btstack.com/Lokacze_Documents.html
+OK https://jewua.org/shtetls-of-volyn-gubernia/
+OK https://myshtetl.org/volyn/lokachi.html
+OK https://www.btstack.com/Lokachi%20Kehilalinks.html
+FAILED https://collections.yadvashem.org/en/places/5429874

@@ -17,12 +17,12 @@ n,town,country,lon,lat,alt_name,status
 16,Zhovkva,Ukraine,23.9726,50.05825,"Zolkiew / Żółkiew / Zholkva / Nesterov 1951-91 (Lviv oblast, Galicia)",done
 17,Dubrovytsia,Ukraine,26.56503,51.57438,"Dubrovitsa / Dąbrowica / Dubrovytsia (Rivne oblast, Polesia)",done
 18,Chashniki,Belarus,29.16645,54.85096,Chashniki / Czaśniki (Vitebsk region),done
-19,Lyady,Belarus,31.16877,54.60162,Lyady / Liady / Lady (Vitebsk region; Chabad),pending
-20,Lokachi,Ukraine,24.64944,50.737,Lokachi / Łokacze / Lokacze (Volyn oblast),pending
+19,Lyady,Belarus,31.16877,54.60162,Lyady / Liady / Lady (Vitebsk region; Chabad),done
+20,Lokachi,Ukraine,24.64944,50.737,Lokachi / Łokacze / Lokacze (Volyn oblast),done
 21,Torchyn,Ukraine,24.9333,50.7333,Torchyn / Torczyn / Turchin (Volyn oblast),done
 22,Savran,Ukraine,29.7833,48.15,Savran / Sawrań / Savran' (Odesa oblast),done
 23,Lepel,Belarus,28.7,54.8833,Lepel / Lepiel / Lepl (Vitebsk region),done
-24,Sumy,Ukraine,34.79906,50.91741,Sumy / Sumy (Sumy oblast),pending
+24,Sumy,Ukraine,34.79906,50.91741,Sumy / Sumy (Sumy oblast),done
 25,Novoukrainka,Ukraine,31.52205,48.32506,Novoukrainka / Novoukrainka (Kirovohrad oblast),pending
 26,Bobrynets,Ukraine,32.15938,48.05729,Bobrinets / Bobrynets (Kirovohrad oblast),pending
 27,Uzda,Belarus,27.2137,53.4627,Uzda / Uzda (Minsk region),pending

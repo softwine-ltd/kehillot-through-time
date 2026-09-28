@@ -1,0 +1,10 @@
+OK https://www.jewishvirtuallibrary.org/lyady
+OK https://ru.wikipedia.org/wiki/Гетто_в_Лядах_(Витебская_область)
+OK https://ru.wikipedia.org/wiki/Ляды_(Дубровенский_район)
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/lyady
+OK https://jta.org/1944/03/20/archive/liady-once-famous-as-jewish-religious-center-destroyed-by-germans-all-jews-killed
+OK https://en.wikipedia.org/wiki/Lyady,_Vitebsk_region
+FAILED https://cdp.jewishgen.org/eastern-europe/belarus/lyady-liady-lady-lyadi-ljady-liadi-vitbesk-region
+FAILED http://shtetle.com/Shtetls/lyady/tamarkin3.html
+FAILED https://www.yadvashem.org/untoldstories/database/index.asp?cid=489
+FAILED http://shtetle.com/albom/lyady/lyady.html
