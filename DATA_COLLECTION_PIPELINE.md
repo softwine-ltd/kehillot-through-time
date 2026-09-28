@@ -899,6 +899,72 @@ a false ramp. The merge script drops blank-year population rows and maps "turn o
 Artifacts: `jew_hist/gap_run_2026-09-21/` (`merge_windowrun.py`, `collect_windowrun.py`, `windowrun_candidates.csv`, `windowrun_pilot.csv`); the code change is
 `jew_hist/LibrarianAgentContentFetcher.py` (backup `.bak_20260922`), and `eval_windowing.py` reproduces the offline before/after.
 
+## ⚠️ Status update (2026-09-28) — checking a pasted list of pogroms against sources
+
+A 103-item list of massacres, pogroms and persecutions of Jews in Muslim lands (622-1942 CE) was checked item by item,
+12 groups of related items, one research agent per group (WebSearch + WebFetch, blind to the list's own claims). Per-item
+results, with the verbatim source quote and corrections: `jew_hist/pogrom_check_2026-09-28/results/G1..G12.csv`
+(brief: `BRIEF.md`; the update script: `apply_events.py`).
+
+**Outcome:** 23 confirmed as listed, 34 confirmed with corrections (wrong year, town, perpetrators or
+"Nth pogrom" numbering — the ordinals in the list are its own invention), 22 real but not a massacre (blood libels
+without violence, residence bans, discriminatory laws, the *Struma* sinking), 4 contradicted by sources, 20 not found.
+
+**Applied to the site:** the list's rows in `events.csv` were rewritten with the verified year, town, type, neutral description and
+specific source; 4 events that were missing were added (Mellah confinement 1807-08, Hebron 1834, al-Husseini 1941-45, *Struma* 1942);
+44 town-history rows were added to `kehilot.csv` (no population; Jaffa events sit under Tel Aviv). Region-wide items and
+items tied to no single town got an event but no town-history row.
+
+**Cleanup (same day):** the 3 contradicted items that had a row (Alexandria 629, Aleppo 1850, Shiraz 1911) were removed from `events.csv`,
+and 19 duplicate rows for the same event under a second name (e.g. "Hebron massacre" 1929 next to the list's "3rd Hebron Pogrom")
+were merged into the verified row; `events.csv` went 170 -> 148 rows. Two similar-looking rows were deliberately kept as distinct
+events (the 627 Banu Qurayza massacre, and the 1148-1160 Almohad persecutions, which span longer than the 1146-48 forced-conversion row).
+The 20 "not found" items keep their rows, pending better sources (the item for the 1942 Nile delta had no row).
+
+### Not confirmed (24 items)
+
+"No source found" means the agents searched (2-5 queries each, several languages) and fetched what they could; it is *not verified*,
+not *disproved*. Several key sources refused automated access (below), and most of these items look like blood libels or
+garbled versions of real events rather than massacres.
+
+| Year in list | Claim | Result | What was found instead |
+|---|---|---|---|
+| 629 | 1st Alexandria massacres (Egypt) | contradicted | Searched: 629 Alexandria Jews massacre; Heraclius Alexandria Jews; Alexandria Jews 7th century; Arab conquest 641. Fetched EJ Alexandria (encyclopedia.com): it goes from the expulsion of 414 to 'about 400,000 Jews in Alexandria at the time of its conquest by the Arabs (642)', with no 629 massacre. What actually happened in 629 was the Byzantine massacre and expulsion of Jews in Jerusalem/Galilee after Heraclius retook the city (Jerusalem, lon 35.2137, lat 31.7683). No Muslim massacre of Jews in Alexandria in 629 or at the 641 conquest found. |
+| 1220 | Thousands of Jews killed after being blamed for the Mongol invasion (Turkey / Iraq / Syria / Egypt) | no source found | Searched: Jews blamed for Mongol invasion, massacred 1220 in Turkey/Iraq/Syria/Egypt; Jews blamed Mongols in 13th-century Muslim lands; Damascus 1260 after Ain Jalut. The claim appears only in polemical lists (e.g. jewishrefugees.org.uk, Medium), with no source. The fetched Jewish Encyclopedia 'Egypt' article has nothing like it. Nearest real events: in 1260, after Ain Jalut, Damascus mobs looted CHRISTIAN property for siding with the Mongols; and in 1291, after the Ilkhan Arghun and his Jewish vizier Sa'd al-Dawla died, Jews in the Mongol Ilkhanate were persecuted. Neither matches 1220 or 'thousands of Jews killed'. |
+| 1385 | Khorasan massacres (Iran) | no source found | Searched EN/FR for Jews + Khorasan + 1385 / Timur. Found only Timur's general conquest of Khorasan (1381-85) with massacres of whole city populations (e.g. Nishapur), not anti-Jewish; popular summaries of Shterenshis (Tamerlane and the Jews) say Jews were largely left alone. No reliable source documents a massacre of Jews in Khorasan in 1385; the item appears only in unsourced polemical lists. |
+| 1517 | Marsa ibn Ghazi massacre (Ottoman Libya) | no source found | Marsa ibn Ghazi is an old name of Benghazi. Searched EN/HE for a 1517 massacre of Jews in Benghazi/Ottoman Libya; fetched EJ Benghazi (encyclopedia.com), he.wikipedia Benghazi Jewish community, en.wikipedia History of the Jews in Libya and List of massacres in Libya: none records any 1517 massacre (Tripoli became Ottoman in 1551; Benghazi Ottoman from 1640). The only 1517 anti-Jewish violence found is in Hebron/Safed (Ottoman-Mamluk war), not Libya. Only polemical lists (jewishrefugees.org.uk, Medium) name it. |
+| 1577 | "Passover massacre" (Ottoman empire) -- identify which event this refers to | no source found | Searched 'Passover massacre 1577 Ottoman Jews' and variants; Wikipedia 'Passover massacre' is the 2002 Netanya bombing; lists of Ottoman Syria massacres show nothing between 1517 and 1757; found no 1577 event. |
+| 1820 | "Sahalu Lobiant" massacres (Ottoman Syria) | no source found | Searched 'Sahalu Lobiant' 1820 Syria massacre Jews; name appears only in polemical unsourced lists (kingchill, jewishrefugees). Wikipedia List of massacres in Ottoman Syria has no 1820 entry. Likely garbled or invented. |
+| 1848 | 1st Damascus pogrom | no source found | Searched Damascus 1848 Jews riot/blood libel; fetched Jewish Encyclopedia Damascus, encyclopedia.com Damascus (1848 only a traveller's population estimate), JVL Syria. Only the unsourced list cites a '1st Damascus pogrom 1848'. Nothing found; the 1840 affair is likely what is meant. |
+| 1850 | 1st Aleppo pogrom | contradicted | 1850 Aleppo riots (17-19 Oct 1850, later bombardment) were Muslim attacks on Christian quarters Judayda and Salibeh. Fetched Wikipedia and jaddeyekabir: no Jewish victims mentioned. Not an anti-Jewish pogrom. |
+| 1868 | Eyüp pogrom (Istanbul) | no source found | Searched Eyup/Eyub 1868 Jews pogrom in English; only unsourced list echoes. Fetched Wikipedia Antisemitism in Turkey, Istanbul encyclopedia pages, blood-libel article: no 1868 Eyup event. |
+| 1870 | 1st Istanbul pogrom | no source found | Searched 1870 Istanbul pogrom / blood libel; fetched Jewish Virtual Library Istanbul, encyclopedia.com Istanbul, Wikipedia Antisemitism in Turkey: no 1870 Istanbul event (the 1856 Balat and 1874 blood libels appear instead). |
+| 1872 | Edirne massacres | no source found | Searched Edirne 1872 blood libel / persecution. Only a search snippet mentioned Armenian persecution of Jews in Edirne 1871-72; fetches (Wikipedia Adrianople vilayet, Springer paywalled, JE) gave nothing. No massacre found. |
+| 1874 | 2nd Beirut pogrom | no source found | Searched Beirut 1874 Jews attack/blood libel; JVL Beirut lists only 1862 and 1890; 1874 in sources is Zaki Cohen's school founding. Only the unsourced list mentions a '2nd Beirut pogrom 1874'. Possibly conflated with 1890. |
+| 1882 | Homs massacre (Ottoman Syria) | no source found | Searched Homs Jews 1882 massacre/riot/blood libel; results only echo unsourced lists (jewishrefugees, kingchill). No scholarly source or Wikipedia/EJ mention found. |
+| 1890 | 2nd Cairo massacres | no source found | Searched Cairo 1890 blood libel/massacre Egypt; only a search snippet (Encyclopaedia Judaica-derived) lists a Cairo blood libel in 1890; no fetched page documents it, and no violence found. Fetched JVL says Cairo blood libels 1844, 1881, 1901-1902. |
+| 1891 | 4th Damanhur massacres | no source found | Searched Damanhur 1891 blood libel/massacre; fetched encyclopedia.com Damanhur says blood libels there in 1877 and 1882, no 1891 and no massacre. Damanhur is described as blood-libel accusations, not killings. |
+| 1890 | Tunis massacres | no source found | Searched English/French for Tunis 1890 anti-Jewish massacre/riots; found none. Documented instead: 26-29 March 1898 Tunis riots after a Jewish-Arab brawl, Jews assaulted, homes and shops looted (fr.wikipedia Histoire des Juifs en Tunisie sous le protectorat francais); no deaths stated. |
+| 1901-1907 | 4th Alexandria massacres | no source found | Searched Alexandria 1901-1907 riots/massacre/blood libel; fetched Quest article (Alexandria Jews 1881-1919) documents the 1881 Fornaraki blood libel only; no 1901-1907 violence found. |
+| 1903 | 1st Port Said massacres | no source found | Searched Port Said 1903 blood libel/massacre; fetched Quest article says only that ritual murder accusations spread in Alexandria, Damanhur and Port Said in the 1880s onward; no 1903 event or violence documented in a fetched page (snippets mention 1901/1903 blood libels). |
+| 1908 | 2nd Port Said massacres | no source found | Searched Port Said 1908; only search snippets mention a Port Said blood libel in 1908; no fetched page documents it or any violence. |
+| 1911 | Shiraz pogrom | contradicted | Searched for a 1911 attack on Shiraz Jews; all sources found (Wikipedia Shiraz pogrom, Haaretz, Jewish Currents) describe only the 30 Oct 1910 pogrom, and Wikipedia says the 1910 one was the last of the recurring Shiraz pogroms. No 1911 pogrom found. |
+| 1920 | Irbid massacres (list: British mandate Palestine; Irbid is in Transjordan) | no source found | Searched English/Arabic ('Irbid 1920 Jews massacre', 'إربد 1920 اليهود'); checked Wikipedia lists/timelines of Mandatory Palestine violence and antisemitism in the 20th century: no Irbid event. The phrase appears only in unsourced polemical lists (Medium, Point of No Return). Closest real events: Tel Hai (1 Mar 1920) and the April 1920 Samakh raid by Transjordanian Bedouin, which targeted British forces. |
+| 1922 | Djerba massacres | no source found | Searched for Djerba 1922 massacres; Wikipedia (fr/en), JVL Djerba pages show no violence between the 19th century and 1979; encyclopedia.com mentions only unspecified 'violent incidents in the early 1920s' in Tunisia. |
+| 1928 | "Ikhwan massacres" in Egypt and Mandatory Palestine | no source found | Searched 'Massacres of Ikhwan 1928', 'Ikhwan massacre 1928 Jews Egypt Palestine', Hebrew 'טבח האחים המוסלמים 1928'. No reliable source documents any 1928 massacre of Jews by the Ikhwan (Muslim Brotherhood, founded Ismailia 1928) in Egypt or Palestine. Found instead: Najdi Ikhwan revolt/raids on Iraq, Kuwait, Transjordan 1927-29 (not anti-Jewish); 1928 Western Wall tensions leading to the 1929 riots (items 93/94); Brotherhood-linked anti-Jewish rioting in Egypt came later (1940s). The phrase appears only in unsourced online polemical lists. |
+| 1942 | Nile delta pogroms (Egypt) | contradicted | Searched 1942 Egypt pogrom Nile delta Rommel; found Jews fled Alexandria in July 1942 as Rommel advanced and Einsatzkommando Egypt was planned but no massacres occurred. Fetched Wikipedia: plans were set aside after Second El Alamein. The only comparable wave of anti-Jewish violence is the 1945 riots (5 Jews killed). |
+
+### Which sources blocked the agents
+Not geo-blocking: the same pages return 403 to a plain download from Israel (checked 2026-09-28; the block page carried a
+Cloudflare `cf-ray ...-TLV` header, i.e. served to an Israeli address). They block automated clients:
+- **Cloudflare "managed challenge" (403):** sztetl.org.pl (Virtual Shtetl), iranicaonline.org (Encyclopaedia Iranica).
+- **Other 403/refusals:** yadvashem.org, diarna.org (connection refused to WebFetch), jewishrefugees.org, anumuseum.org, orenburg-gov.ru,
+  miaminewtimes.com, Cambridge Geniza, CJH archive; intermittent 403/500/certificate errors on jewishencyclopedia.com and encyclopedia.com.
+- **Workaround that sometimes worked:** downloading with `curl` and a browser user-agent (used for a few PDFs and pages; each such
+  row is marked in its notes). Untried: fetching through the built-in browser pane, which passes most Cloudflare challenges.
+
+---
+
 ## The four locations
 
 | Location | Role |
