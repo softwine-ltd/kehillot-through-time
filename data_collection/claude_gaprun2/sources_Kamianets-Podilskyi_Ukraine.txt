@@ -1,0 +1,10 @@
+OK https://www.jewishvirtuallibrary.org/jsource/judaica/ejud_0002_0011_0_10663.html
+OK https://kehilalinks.jewishgen.org/Kamyanets-Podilskyy/Home.htm
+OK https://jewua.org/kamenets_podolski/
+OK https://myshtetl.org/khmelnitskaja/kamenec.html
+OK https://www.jewishencyclopedia.com/articles/9181-kamenetz-podolsk
+OK https://encyclopedia.ushmm.org/content/en/article/kamenets-podolsk
+OK https://kehilalinks.jewishgen.org/Kamyanets-Podilskyy/1939-1945.htm
+OK https://ru.wikipedia.org/wiki/Каменец-Подольский
+OK https://en.wikipedia.org/wiki/Kamianets-Podilskyi_massacre
+FAILED https://eleven.co.il/diaspora/communities/11942/
