@@ -1,9 +1,8 @@
 Country,Town Name,Longitude,Latitude,Year Established,Year of Data,Population,Notes,Source
 Belarus,Uzda,27.2137,53.4627,1765,1765,,"263 Jews recorded in 1765 for the town and its parishes (broader than the town alone), so Population left blank",https://ru.wikisource.org/wiki/ЕЭБЕ/Узда
-Belarus,Uzda,27.2137,53.4627,1765,1847,1618,'Uzdensky Jewish society' (kahal) of about 1618 souls per the 1847 revision; may include nearby settlements,https://ru.wikisource.org/wiki/ЕЭБЕ/Узда
+Belarus,Uzda,27.2137,53.4627,1765,1847,,'Uzdensky Jewish society' (kahal) of about 1618 souls per the 1847 revision; may include nearby settlements [Review fix: Population 1618 moved to Notes - kahal-level figure that may include nearby settlements],https://ru.wikisource.org/wiki/ЕЭБЕ/Узда
 Belarus,Uzda,27.2137,53.4627,1765,1886,,Synagogue documented in Uzda in 1886 (organized community); no count,https://en.wikipedia.org/wiki/Uzda
 Belarus,Uzda,27.2137,53.4627,1765,1897,2068,1897 census: 2068 Jews out of 2756 residents,https://ru.wikisource.org/wiki/ЕЭБЕ/Узда
-Belarus,Uzda,27.2137,53.4627,1765,1900,2068,Wikipedia says Jewish population assessed as 2068 in 1900 (same figure as the 1897 census); Jews in trade and logging,https://en.wikipedia.org/wiki/Uzda
 Belarus,Uzda,27.2137,53.4627,1765,1939,1143,1939 Jewish residents of the town,https://ru.wikipedia.org/wiki/Гетто_в_Узде
 Belarus,Uzda,27.2137,53.4627,1765,1941,,Ghetto late June to 17 Oct 1941 with more than 300 Jewish families plus some from Mogilno Losha and Shatsk (mixed with outsiders so no count); 1740-1800 Jews killed at liquidation,https://ru.wikipedia.org/wiki/Гетто_в_Узде
 Belarus,Uzda,27.2137,53.4627,1765,1941,,Occupation 28 June 1941 to 1944: 5599 people killed in town and district including 1740 Jews in the ghetto (death toll not population),https://ru.wikipedia.org/wiki/Узда_(город)
