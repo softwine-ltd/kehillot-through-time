@@ -1,0 +1,31 @@
+n,town,country,lon,lat,alt_name,status
+1,Kamianets-Podilskyi,Ukraine,26.58516,48.67882,Kamenets-Podolsk / Kamenetz-Podolski / Kamieniec Podolski / Kamyanets-Podilskyi (Podolia),pending
+2,Volodarka,Ukraine,29.91023,49.52542,Volodarka / Volodarsk / Wołodarka (Kyiv oblast),pending
+3,Donetsk,Ukraine,37.78098,47.92129,Yuzovka (until 1924) / Stalino (1924-61) / Donetsk / Donezk,pending
+4,Kryvyi Rih,Ukraine,33.39177,47.91027,Krivoy Rog / Kryvyj Rih / Krywy Róg (Dnipropetrovsk oblast),pending
+5,Polatsk,Belarus,28.7856,55.4879,Polotsk / Polock / Polatsk / Plotzk (Vitebsk region),pending
+6,Luhansk,Ukraine,38.91505,49.27246,"Lugansk / Voroshilovgrad (1935-58, 1970-90) / Luhansk",pending
+7,Bershad,Ukraine,29.51463,48.36354,Bershad / Bershad' / Berszada (Podolia),pending
+8,Korosten,Ukraine,28.63855,50.95937,Iskorosten / Iskorost (until 1926) / Korosten (Zhytomyr oblast),pending
+9,Pereiaslav,Ukraine,31.44969,50.06739,Pereyaslav / Pereiaslav-Khmelnytskyi / Perejasław (Kyiv oblast),pending
+10,Pyriatyn,Ukraine,32.50105,50.2363,Piryatin / Pyriatyn / Piriatin (Poltava oblast),pending
+11,Shpola,Ukraine,31.39314,49.01326,Shpola / Szpoła / Spole (Cherkasy oblast),pending
+12,Chudniv,Ukraine,28.11745,50.05204,Chudnov / Chudnow / Czudnów (Zhytomyr oblast),pending
+13,Voznesensk,Ukraine,31.33386,47.56796,Voznesensk (Mykolaiv oblast; Kherson guberniya),pending
+14,Slavuta,Ukraine,26.86613,50.29609,Slavuta / Sławuta (Khmelnytskyi oblast),pending
+15,Novogrudok,Belarus,25.8191,53.5942,Navahrudak / Nowogródek / Novogrudok (Belarus),pending
+16,Zhovkva,Ukraine,23.9726,50.05825,"Zolkiew / Żółkiew / Zholkva / Nesterov 1951-91 (Lviv oblast, Galicia)",pending
+17,Dubrovytsia,Ukraine,26.56503,51.57438,"Dubrovitsa / Dąbrowica / Dubrovytsia (Rivne oblast, Polesia)",pending
+18,Chashniki,Belarus,29.16645,54.85096,Chashniki / Czaśniki (Vitebsk region),pending
+19,Lyady,Belarus,31.16877,54.60162,Lyady / Liady / Lady (Vitebsk region; Chabad),pending
+20,Lokachi,Ukraine,24.64944,50.737,Lokachi / Łokacze / Lokacze (Volyn oblast),pending
+21,Torchyn,Ukraine,24.9333,50.7333,Torchyn / Torczyn / Turchin (Volyn oblast),pending
+22,Savran,Ukraine,29.7833,48.15,Savran / Sawrań / Savran' (Odesa oblast),pending
+23,Lepel,Belarus,28.7,54.8833,Lepel / Lepiel / Lepl (Vitebsk region),pending
+24,Sumy,Ukraine,34.79906,50.91741,Sumy / Sumy (Sumy oblast),pending
+25,Novoukrainka,Ukraine,31.52205,48.32506,Novoukrainka / Novoukrainka (Kirovohrad oblast),pending
+26,Bobrynets,Ukraine,32.15938,48.05729,Bobrinets / Bobrynets (Kirovohrad oblast),pending
+27,Uzda,Belarus,27.2137,53.4627,Uzda / Uzda (Minsk region),pending
+28,Luninets,Belarus,26.80061,52.24864,Luninets / Łuniniec / Luninetz (Brest region),pending
+29,Telekhany,Belarus,25.7333,52.4333,Telekhany / Telechany / Telechany (Brest region),pending
+30,Ivanava,Belarus,25.53198,52.14724,Ivanava / Janów Poleski / Ivanovo / Yanova (Brest region),pending
