@@ -1,0 +1,8 @@
+OK https://jewua.org/voznesensk/
+OK https://www.jewishvirtuallibrary.org/voznesensk
+OK https://myshtetl.org/odesskaja/voznesensk.html
+OK https://ru.wikipedia.org/wiki/Вознесенск
+OK https://www.fjc.org.ua/templates/articlecco_cdo/aid/1439269/jewish/page.htm (no Jewish data)
+FAILED https://cdp.jewishgen.org/eastern-europe/ukraine/voznesensk
+FAILED https://forum.j-roots.info/viewtopic.php?t=3842
+FAILED http://www.mkjcc.org/community/region/voznesensk/
