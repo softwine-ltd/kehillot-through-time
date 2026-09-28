@@ -1,0 +1,7 @@
+OK https://jewsencyclopedia.com/index.php/%D0%9A%D0%A0%D0%98%D0%92%D0%9E%D0%99_%D0%A0%D0%9E%D0%93
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/krivoi-rog
+OK https://krivbass.city/news/view/krivomu-rogu-minus-250-evrejska-istoriya-mista-minus-slidami-kolonij-sinagog-ta-represij
+OK https://history.1kr.ua/publication/1009
+OK https://www.fjc.org.ua/templates/articlecco_cdo/aid/1245321/jewish/-.htm
+FAILED https://cyclowiki.org/wiki/Евреи_в_Кривом_Роге
+FAILED https://cdp.jewishgen.org/eastern-europe/ukraine/krivoy-rog
