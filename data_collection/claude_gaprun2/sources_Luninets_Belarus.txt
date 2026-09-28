@@ -1,0 +1,12 @@
+OK https://en.wikipedia.org/wiki/Luninyets
+OK https://polesie.org/6957/luniniec-zarys-historyczny/
+OK https://www.jewishgen.org/yizkor/luninyets/lun005.html
+OK https://www.jewishgen.org/yizkor/luninyets/lun066.html
+OK https://ru.wikipedia.org/wiki/Гетто_в_Лунинце
+OK https://ru.wikipedia.org/wiki/Холокост_в_Лунинецком_районе_(Брестская_область)
+OK https://ru.wikipedia.org/wiki/Лунинец
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Belarus
+FAILED https://cdp.jewishgen.org/eastern-europe/belarus/luninyets
+FAILED https://sztetl.org.pl/pl/miejscowosci/l/941-luniniec
+FAILED https://sztetl.org.pl/pl/miejscowosci/l/941-luniniec/116-miejsca-martyrologii/48368-getto-w-lunincu
+FAILED https://www.researchgate.net/publication/391527644_LUNINIEC

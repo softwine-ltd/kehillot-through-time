@@ -1,0 +1,14 @@
+OK https://www.yahadmap.org/en/partners/telekhany-brest-belarus/village-472
+OK https://www.jewishgen.org/Yizkor/Telekhany/tel003.html
+OK https://ru.wikipedia.org/wiki/Гетто_в_Телеханах
+OK https://www.jewishgen.org/yizkor/ybip/YBIP_telekhany.html
+OK https://www.jewishgen.org/yizkor/telekhany/tel005.html
+OK https://www.jewishgen.org/yizkor/telekhany/tel071.html
+OK https://en.wikipedia.org/wiki/Tsyelyakhany
+OK https://ru.wikipedia.org/wiki/Телеханы
+OK https://www.jewishgen.org/yizkor/telekhany/telekhany.html
+OK https://jewishgen.org/yizkor/Telekhany/tel028.html
+FAILED https://en.wikipedia.org/wiki/Tsyelyakhany_Ghetto
+FAILED https://collections.yadvashem.org/en/untold-stories/community/14622409
+FAILED http://www.mishpoha.org/n23/23a06.php
+FAILED https://www.yadvashem.org/untold-stories/community/14622409

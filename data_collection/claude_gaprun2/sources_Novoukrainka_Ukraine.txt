@@ -1,0 +1,8 @@
+OK https://forum.j-roots.info/viewtopic.php?t=9114
+OK https://jewua.org/shtetls-of-kherson-gubernia/
+OK https://ru.wikisource.org/wiki/ЕЭБЕ/Херсонская_губерния
+OK https://uk.wikipedia.org/wiki/Новоукраїнка
+OK https://en.wikipedia.org/wiki/Novoukrainka
+OK https://ru.wikipedia.org/wiki/Новоукраинка
+FAILED https://cdp.jewishgen.org/eastern-europe/ukraine/novoukrainka
+FAILED https://collections.yadvashem.org/en/untold-stories/community/14622064-Novo-Ukrainka
