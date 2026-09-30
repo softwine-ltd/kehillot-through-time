@@ -1,0 +1,11 @@
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Colombia
+OK https://njjewishnews.timesofisrael.com/exit-ramp-a-serendipitous-visit-to-the-crypto-jews-of-cartagena/
+OK https://www.shalomisrael.es/mundo-judio/breve-historia-de-los-sefarditas-en-la-costa-caribe-colombiana/
+FAILED https://www.magistrados-santafe.org.ar/wp-content/uploads/2020/05/Revista2013-La_inquisici%C3%B3n_en_Cartagena_de_Indias-pag.412-421.pdf
+OK https://jewishvirtuallibrary.org/colombia-virtual-jewish-history-tour
+OK https://cvc.cervantes.es/artes/sefarad/memoria/memoria_colombia3.htm
+OK https://sephardicgenealogy.com/researching-sephardic-ancestry/sephardim-in-the-americas/sephardic-jews-of-colombia/
+OK https://es.wikipedia.org/wiki/Historia_de_los_jud%C3%ADos_en_Colombia
+OK https://journeyswithsonia.com/columbia-part-4-the-jews-of-cartagena/
+FAILED https://colombians-of-different-heritages.fandom.com/wiki/History_of_the_Jews_in_Colombia
+OK https://www.sdjewishworld.com/2024/12/25/rabbi-whose-family-were-conversos-now-heads-a-colombian-sephardic-congregation/

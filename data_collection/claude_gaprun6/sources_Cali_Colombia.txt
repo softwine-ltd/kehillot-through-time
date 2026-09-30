@@ -1,0 +1,11 @@
+OK https://www.icesi.edu.co/editorial/comunidad-judia-cali/
+OK https://www.shavei.org/blog/2022/02/24/community-spotlight-cali-colombia/
+FAILED https://www.washingtonpost.com/magazine/2021/04/14/converts-judaism-colombia/
+OK https://es.wikipedia.org/wiki/Historia_de_los_jud%C3%ADos_en_Colombia
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Colombia
+OK https://jewishvirtuallibrary.org/colombia-virtual-jewish-history-tour
+OK https://esefarad.com/la-historia-de-los-judios-en-colombia/
+OK https://journals.openedition.org/alhim/535?lang=en
+OK https://es.wikipedia.org/wiki/Cementerio_Hebreo_de_Cali
+OK https://cementerioisraelitacali.com/quienes-somos/
+OK https://www.worldjewishcongress.org/en/about/communities/CO

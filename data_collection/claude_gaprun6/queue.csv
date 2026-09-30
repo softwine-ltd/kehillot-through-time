@@ -5,9 +5,9 @@ n,town,country,lon,lat,alt_name,status
 4,Vinkivtsi,Ukraine,27.23135,49.03403,Vinkivtsi,done
 5,Bácsalmás,Hungary,19.3319128,46.1274127,Bácsalmás,done
 6,Lipno,Poland,19.1757,52.8464,Lipno (Dobrzyń Land/Kuyavian-Pomeranian; not Lipno in Greater Poland or Lipno in Masovia),done
-7,Sulejów,Poland,19.8667,51.35,Sulejów,pending
-8,Maciejowice,Poland,21.5542,51.6928,Maciejowice,pending
+7,Sulejów,Poland,19.8667,51.35,Sulejów,done
+8,Maciejowice,Poland,21.5542,51.6928,Maciejowice,done
 9,Judenburg,Austria,14.66667,47.16667,Judenburg,done
-10,Cartagena,Colombia,-75.5144,10.391,Cartagena,pending
-11,Cali,Colombia,-76.532,3.4516,Cali,pending
-12,Bojanów,Poland,21.950,50.400,Bojanów,pending
+10,Cartagena,Colombia,-75.5144,10.391,Cartagena,done
+11,Cali,Colombia,-76.532,3.4516,Cali,done
+12,Bojanów,Poland,21.950,50.400,Bojanów,done

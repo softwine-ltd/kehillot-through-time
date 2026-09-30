@@ -1,0 +1,13 @@
+OK https://cdp.jewishgen.org/eastern-europe/poland/maciejowice
+OK https://en.wikipedia.org/wiki/Maciejowice
+OK https://bloodandfrogs.com/compendium/poland/masovian/maciejowice
+OK https://maciejowice.pl/o-gminie/historia/
+OK https://pl.wikipedia.org/wiki/Maciejowice
+FAILED https://zapomniane.org/en/miejsce/maciejowice-2/
+FAILED https://sztetl.org.pl/pl/miejscowosci/m/1399-maciejowice/99-historia-spolecznosci/182724-historia-spolecznosci
+FAILED https://sztetl.org.pl/en/towns/m/1399-maciejowice/99-history/182724-history-of-community
+FAILED https://sztetl.org.pl/en/towns/m/1399-maciejowice
+FAILED https://polaneis.pl/miejsca/maciejowice-woj-mazowieckie-historia-dawnego-miasta-zabytki
+FAILED https://bazhum.muzhp.pl/media/texts/rocznik-mazowiecki/2009-tom-21/rocznik_mazowiecki-r2009-t21-s127-139.pdf
+FAILED https://archives.jdc.org/our-collections/finding-aids/warsaw/1939-1941/localities/
+FAILED https://teatrnn.pl/ar/maciejowice-akcja-reinhardt/
