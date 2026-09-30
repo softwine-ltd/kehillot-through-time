@@ -1,0 +1,9 @@
+OK https://en.wikipedia.org/wiki/Sarcelles
+OK https://fr.wikipedia.org/wiki/Sarcelles
+OK https://www.persee.fr/doc/homig_1142-852x_1994_num_1181_1_2325
+OK https://books.openedition.org/pumi/18376?lang=fr
+FAILED http://hapi.sncf.com/fr/la-petite-jerusalem.html
+FAILED https://www.tandfonline.com/doi/full/10.1080/0031322X.2023.2246302
+OK https://getthetrollsout.org/cmfe-articles/suburbs-and-antisemitism-the-case-of-sarcelles-part-2
+OK https://www1.alliancefr.com/actualites/juif-sarcelles-exode-antisemitisme-6065269
+OK https://guitinews.fr/cest-leur-histoire/le-cas-de-sarcelles-zoom-sur-les-nouveaux-visages-de-lantisemitisme-2/
