@@ -1,0 +1,21 @@
+n,town,country,lon,lat,alt_name,status
+1,Chicago,USA,-87.6298,41.8781,Chicago,pending
+2,Boston,USA,-71.0589,42.3601,Boston,pending
+3,Las Vegas,USA,-115.1398,36.1699,Las Vegas/לאס וגאס/לאס וועגאס,pending
+4,Newark,USA,-74.1724,40.7357,ניוארק/Newark,pending
+5,Portland (Oregon),USA,-122.6765,45.5152,Portland,pending
+6,San Jose,USA,-121.8863,37.3382,San Jose,pending
+7,Milwaukee,USA,-87.9065,43.0389,Milwaukee/מילווקי/מילוואקי,pending
+8,Orlando,USA,-81.37905,28.54212,Orlando,pending
+9,Louisville,USA,-85.7585,38.2527,Louisville,pending
+10,Toledo,USA,-83.5379,41.6528,Toledo,pending
+11,Galveston,USA,-94.7977,29.3013,Galveston,pending
+12,Geneva,Switzerland,6.14316,46.20222,Geneva/ז'נבה/גענף/Genf/Genève,pending
+13,Nevers,France,3.159,46.98956,Nevers,pending
+14,Sarcelles,France,2.37962,48.99608,Sarcelles,pending
+15,Chełm,Poland,23.5,51.1333,Chełm/חלם/כעלם,pending
+16,Włocławek,Poland,19.0678,52.64817,Włocławek/ולוצלאווק,pending
+17,Oświęcim,Poland,19.21037,50.03437,Oświęcim,pending
+18,Veracruz,Mexico,-96.1342,19.1738,Veracruz,pending
+19,Thornhill,Canada,-79.4233,43.8161,Thornhill (Vaughan and Markham, Ontario; not Thornhill BC),pending
+20,Yehud-Monosson,Israel,34.88639,32.03320,Yehud-Monosson,pending
