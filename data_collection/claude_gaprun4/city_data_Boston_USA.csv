@@ -1,7 +1,7 @@
 Country,Town Name,Longitude,Latitude,Year Established,Year of Data,Population,Notes,Source
 USA,Boston,-71.0589,42.3601,1649,1649,,"Solomon Franco a Jew arrived in Boston and was subsequently expelled; transient individual presence only",https://www.jewishvirtuallibrary.org/jsource/judaica/ejud_0002_0004_0_03377.html
 USA,Boston,-71.0589,42.3601,1649,1843,,"First congregation Ohabei Shalom formally organized (1843); second congregation Adath Israel 1854; third Mishkan Israel 1858; organized community with synagogues",https://www.jewishvirtuallibrary.org/jsource/judaica/ejud_0002_0004_0_03377.html
-USA,Boston,-71.0589,42.3601,1649,1860,~1000,"New Jewish arrivals from Posen and Pomerania numbered about a thousand on the eve of the Civil War (year 1860 approximate)",https://globalboston.bc.edu/index.php/home/ethnic-groups/jews/
+USA,Boston,-71.0589,42.3601,1649,1860,,"New Jewish arrivals from Posen and Pomerania numbered about a thousand on the eve of the Civil War (year 1860 approximate) [Review fix: Population ~1000 moved to Notes - counts new arrivals, not the resident Jewish population]",https://globalboston.bc.edu/index.php/home/ethnic-groups/jews/
 USA,Boston,-71.0589,42.3601,1649,1875,3000,"Jewish population estimated to number only 3000",https://www.jewishvirtuallibrary.org/jsource/judaica/ejud_0002_0004_0_03377.html
 USA,Boston,-71.0589,42.3601,1649,1900,40000,"By 1900 thanks to Eastern European immigrants it reached 40000",https://www.jewishvirtuallibrary.org/jsource/judaica/ejud_0002_0004_0_03377.html
 USA,Boston,-71.0589,42.3601,1649,1910,,"Roughly 40000 Jews living in the West End neighborhood alone (subset by neighborhood not whole city)",https://globalboston.bc.edu/index.php/home/ethnic-groups/jews/
