@@ -9,3 +9,4 @@ OK (PDF downloaded, text extracted locally) https://www.jewishdatabank.org/conte
 FAILED https://www.jewishdatabank.org/content/upload/bjdb/707/AJYB-1927_1928_Statistics.pdf
 FAILED https://studylight.org/encyclopedias/eng/tje/t/toledo-ohio.html
 FAILED https://ohiomemory.org/digital/collection/p16007coll33/id/16645/
+OK https://www.jewishdatabank.org/content/upload/bjdb/387/C-OH-Toledo-1994-Report.pdf
