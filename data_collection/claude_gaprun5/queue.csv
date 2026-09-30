@@ -11,12 +11,12 @@ n,town,country,lon,lat,alt_name,status
 10,Wyszków,Poland,21.4584,52.59278,Wyszków,done
 11,Palermo,Italy,13.3636,38.1166,Palermo/פלרמו/פאלערמא,done
 12,Vyshnivets,Ukraine,25.74384,49.90087,Vyshnivets,done
-13,Castelo de Vide,Portugal,-7.4568,39.41624,Castelo de Vide,pending
-14,Korsun,Ukraine,31.2533,49.4167,Korsun-Shevchenkivskyi / Korsun-Shevchenkovskiy / Korsuń (Kyiv-Cherkasy area; not Korsun in Donetsk),pending
-15,Beaune,France,4.83887,47.02413,Beaune,pending
-16,Kutaisi,Georgia,42.70545,42.27161,Kutaisi/כותאיסי/Kutaissi/Қәҭешь,pending
-17,Lyuboml,Ukraine,24.03727,51.22601,Lyuboml,pending
-18,Narodychi,Ukraine,29.08228,51.20286,Narodychi,pending
+13,Castelo de Vide,Portugal,-7.4568,39.41624,Castelo de Vide,done
+14,Korsun,Ukraine,31.2533,49.4167,Korsun-Shevchenkivskyi / Korsun-Shevchenkovskiy / Korsuń (Kyiv-Cherkasy area; not Korsun in Donetsk),done
+15,Beaune,France,4.83887,47.02413,Beaune,done
+16,Kutaisi,Georgia,42.70545,42.27161,Kutaisi/כותאיסי/Kutaissi/Қәҭешь,done
+17,Lyuboml,Ukraine,24.03727,51.22601,Lyuboml,done
+18,Narodychi,Ukraine,29.08228,51.20286,Narodychi,done
 19,Vlorë,Albania,19.48318,40.4686,Vlorë,pending
 20,Siedliszcze,Poland,23.1648455,51.1946235,Siedliszcze,pending
 21,Kaniv,Ukraine,31.47003,49.75187,Kaniv,pending

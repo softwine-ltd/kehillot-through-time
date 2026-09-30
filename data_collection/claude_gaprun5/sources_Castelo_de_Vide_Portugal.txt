@@ -1,0 +1,8 @@
+OK https://en.wikipedia.org/wiki/Synagogue_of_Castelo_de_Vide
+OK https://en.wikipedia.org/wiki/Castelo_de_Vide
+FAILED https://www.redejudiariasportugal.com/index.php/en/cidades/castelo-de-vide
+OK https://jguideeurope.org/en/region/portugal/alentejo/castelo-de-vide/
+OK https://www.portugallook.pt/2026/05/06/a-inquisicao-judeus-e-cristaos-novos
+OK https://www.hadassahmagazine.org/2023/11/15/in-portugal-shadows-of-a-jewish-past/
+OK https://en.wikipedia.org/wiki/Garcia_de_Orta
+OK https://portugaldelesales.pt/judiaria-castelo-de-vide/

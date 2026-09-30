@@ -1,0 +1,9 @@
+OK https://eleven.co.il/diaspora/communities/12268/
+OK https://en.wikipedia.org/wiki/Kutaisi_Synagogue
+OK https://he.wikipedia.org/wiki/יהדות_כותאיסי
+OK https://chaikhana.media/en/stories/662/kutaisis-last-remnants
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Georgia
+OK https://pmc.ncbi.nlm.nih.gov/articles/PMC11188619
+OK https://jewishvirtuallibrary.org/georgia-2
+OK https://www.jewsencyclopedia.com/index.php/КУТАИСИ
+FAILED https://jguideeurope.org/en/region/georgia/north-of-georgia/kutaissi/ (no data)

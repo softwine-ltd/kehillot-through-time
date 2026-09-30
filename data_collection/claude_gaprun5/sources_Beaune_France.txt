@@ -1,0 +1,6 @@
+OK https://cdp.jewishgen.org/western-europe/france/beaune-cote-dor-departement-bourgogne-region
+OK https://www.jecpj-france.com/wp-content/uploads/2021/03/Cote-dOr-Toponymes-Juifs.pdf (text extracted locally)
+OK https://www.jewishvirtuallibrary.org/burgundy
+OK https://fr.wikipedia.org/wiki/Beaune (no Jewish content)
+OK https://www.jewishencyclopedia.com/articles/5194-dijon (Dijon only)
+OK https://www.jecpj-france.com/wp-content/uploads/2021/03/Cote-dOr-Toponymes-Juifs.pdf

@@ -1,0 +1,7 @@
+OK https://jewua.org/narodichi/
+FAILED https://tkfshtetl.org/narodichi/
+OK https://en.wikipedia.org/wiki/Narodychi
+OK https://uk.wikipedia.org/wiki/Народичі
+OK https://www.jewishgen.org/ukraine/GEO_town.asp?id=514
+FAILED http://news.dks.ua/index.php/news/zhitomir/26406
+OK https://cyclowiki.org/wiki/Народичский_еврейский_поссовет
