@@ -1,0 +1,7 @@
+OK https://kehilalinks.jewishgen.org/germiston/Pioneers.html
+OK https://www.sajr.co.za/cream-of-the-rabbinate-attend-primrose-consecration/
+OK https://kehilalinks.jewishgen.org/germiston/Home.html
+OK https://kehilalinks.jewishgen.org/germiston/Wiki.html
+OK https://kehilalinks.jewishgen.org/germiston/Synagogue.html
+OK https://en.wikipedia.org/wiki/Germiston
+FAILED https://www.bjpa.org/content/upload/bjpa/sout/SOUTH%20AFRICA%20JEWISH%20POPULATION%20REPORT%20NO%209%20GEO%20DISTRIB%201978.pdf
