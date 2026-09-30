@@ -1,0 +1,11 @@
+OK https://jewishvirtuallibrary.org/toledo-2
+OK https://www.jewishencyclopedia.com/articles/14436-toledo-ohio
+OK https://archive.org/stream/aalh_historyofthetoledojewishcommunity_r305696noe/aalh_historyofthetoledojewishcommunity_r305696noe_djvu.txt
+OK https://www.cbitoledo.org/about-us/history-of-cbi/
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Ohio
+OK https://www.encyclopedia.com/places/united-states-and-canada/us-political-geography/toledo
+OK https://tlcpljewishhistory.omeka.net/
+OK (PDF downloaded, text extracted locally) https://www.jewishdatabank.org/content/upload/bjdb/387/C-OH-Toledo-1994-Report.pdf
+FAILED https://www.jewishdatabank.org/content/upload/bjdb/707/AJYB-1927_1928_Statistics.pdf
+FAILED https://studylight.org/encyclopedias/eng/tje/t/toledo-ohio.html
+FAILED https://ohiomemory.org/digital/collection/p16007coll33/id/16645/
