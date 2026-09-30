@@ -1,0 +1,11 @@
+OK https://www.jewishvirtuallibrary.org/jsource/judaica/ejud_0002_0004_0_03377.html
+OK https://globalboston.bc.edu/index.php/home/ethnic-groups/jews/
+OK https://www.bostonglobe.com/metro/regionals/south/2012/04/14/jewish-history-greater-boston-timeline/pIC3qhki4V1HmHXpoADCvN/story.html
+OK https://jewishheritagecenter.org/jewish-neighborhood-voices/dorchester-and-roxbury
+OK https://thewestendmuseum.org/history/era/west-boston/the-rise-and-fall-of-jewish-life-in-the-west-end/
+OK https://jewishvirtuallibrary.org/boston
+OK https://en.wikipedia.org/wiki/Jewish_population_by_city
+FAILED https://www.studylight.org/encyclopedias/eng/tje/b/boston.html
+FAILED https://www.brandeis.edu/cmjs/community-studies/boston-report.html
+FAILED https://www.jgsgb.org/pdfs/Jewish_Settlement_Patterns_MA.pdf
+FAILED https://www.bjpa.org/content/upload/bjpa/bost/BOSTON%20WHERE%20IT%20ALL%20BEGAN%20HISTORICAL%20PERSPECTIVE%20ON%20BOSTON%20JEWISH%20COMMUNITY.pdf

@@ -1,0 +1,14 @@
+OK https://www.jewishvirtuallibrary.org/las-vegas
+OK https://www.unlv.edu/news/article/las-vegas-valleys-jewish-pioneers
+OK https://jewishvirtuallibrary.org/las-vegas-jewish-history-tour
+OK https://www.jta.org/archive/las-vegas-community-is-growing-but-its-not-an-oasis-yet-survey
+OK https://jewishvirtuallibrary.org/nevada-jewish-history
+OK https://jewishvirtuallibrary.org/nevada
+OK https://study.jewishnevada.org/
+FAILED https://www.onlinenevada.org/articles/jewry-and-judaism-nevada
+FAILED https://special.library.unlv.edu/jewishheritage/judaism
+FAILED https://special.library.unlv.edu/jewishheritage/congregations/temple-beth-sholom
+FAILED https://www.jewishdatabank.org/databank/search-results/study/855
+FAILED https://pluralism.org/news/jewish-community-las-vegas-nv
+FAILED https://jewishjournal.com/news/united-states/13699/
+FAILED https://en.wikipedia.org/wiki/History_of_the_Jews_in_Las_Vegas

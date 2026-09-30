@@ -1,0 +1,7 @@
+OK https://www.jewishencyclopedia.com/articles/4320-chicago
+OK https://jewishvirtuallibrary.org/chicago-2
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Chicago
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Illinois
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/chicago
+FAILED http://www.encyclopedia.chicagohistory.org/pages/674.html
+FAILED https://www.juf.org/news/century.aspx?id=9952

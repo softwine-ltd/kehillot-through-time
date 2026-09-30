@@ -1,0 +1,9 @@
+OK https://www.hadassahmagazine.org/2015/04/28/newark/
+OK https://jewishvirtuallibrary.org/new-jersey-jewish-history
+OK https://riseupnewark.com/chapters/chapter-1/jews/
+FAILED https://jewishpress.com/indepth/front-page/city-of-graveyards-the-demise-of-jewish-newark/2017/08/17/
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_New_Jersey
+OK https://sefaria.jewishencyclopedia.com/articles/11504-newark
+OK https://jewishvirtuallibrary.org/new-jersey
+OK https://libguides.rutgers.edu/c.php?g=336802&p=2272300
+OK https://judaism_enc.en-academic.com/14522/NEW_JERSEY

@@ -1,10 +1,10 @@
 n,town,country,lon,lat,alt_name,status
-1,Chicago,USA,-87.6298,41.8781,Chicago,pending
-2,Boston,USA,-71.0589,42.3601,Boston,pending
-3,Las Vegas,USA,-115.1398,36.1699,Las Vegas/לאס וגאס/לאס וועגאס,pending
-4,Newark,USA,-74.1724,40.7357,ניוארק/Newark,pending
+1,Chicago,USA,-87.6298,41.8781,Chicago,done
+2,Boston,USA,-71.0589,42.3601,Boston,done
+3,Las Vegas,USA,-115.1398,36.1699,Las Vegas/לאס וגאס/לאס וועגאס,done
+4,Newark,USA,-74.1724,40.7357,ניוארק/Newark,done
 5,Portland (Oregon),USA,-122.6765,45.5152,Portland,pending
-6,San Jose,USA,-121.8863,37.3382,San Jose,pending
+6,San Jose,USA,-121.8863,37.3382,San Jose,done
 7,Milwaukee,USA,-87.9065,43.0389,Milwaukee/מילווקי/מילוואקי,pending
 8,Orlando,USA,-81.37905,28.54212,Orlando,pending
 9,Louisville,USA,-85.7585,38.2527,Louisville,pending

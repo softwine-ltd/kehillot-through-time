@@ -1,0 +1,8 @@
+OK https://jewishvirtuallibrary.org/san-jose
+OK https://www.jewishencyclopedia.com/articles/3924-california
+OK https://jweekly.com/1996/02/23/san-jose-temple-marks-its-life-from-abraham-lincoln-to-rabin/
+OK https://jweekly.com/2015/11/06/bay-area-jewish-population-nears-400000/
+OK https://www.jewishdatabank.org/content/upload/bjdb/AJYB-1948a_Jewish_Population_Estimates_of_Selected_US_Cities_(AJYB_1951).pdf
+OK https://www.jvalley.org/the-2024-santa-clara-county-jewish-community-study/
+OK https://en.wikipedia.org/wiki/Jewish_California
+FAILED https://www.policyarchive.org/download/18352
