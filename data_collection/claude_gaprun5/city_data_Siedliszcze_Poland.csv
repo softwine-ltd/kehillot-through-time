@@ -1,0 +1,5 @@
+Country,Town Name,Longitude,Latitude,Year Established,Year of Data,Population,Notes,Source
+Poland,Siedliszcze,23.1648455,51.1946235,1889,1889,650,"Polish Wikipedia quoting Slownik Geograficzny: settlement had a synagogue and 899 inhabitants including 650 Jews; year taken as ~1889 (other sources say 1888); Jewish cemetery also listed",https://pl.wikipedia.org/wiki/Siedliszcze
+Poland,Siedliszcze,23.1648455,51.1946235,1889,1921,666,"1921 census: 666 Jews, 80% of the village population","https://en.wikipedia.org/wiki/Siedliszcze,_Gmina_Siedliszcze"
+Poland,Siedliszcze,23.1648455,51.1946235,1889,1940,,"Ghetto established 1 June 1940 holding about 2000 Jews from Siedliszcze Krakow Lublin and Czechoslovakia combined; mixed deportee count so Population blank","https://en.wikipedia.org/wiki/Siedliszcze,_Gmina_Siedliszcze"
+Poland,Siedliszcze,23.1648455,51.1946235,1889,1942,,"On 18 May 1942 about 630 Jews sent to Sobibor; ghetto liquidated October 1942 with remaining inmates sent to Sobibor (deportation counts include non-residents)","https://en.wikipedia.org/wiki/Siedliszcze,_Gmina_Siedliszcze"

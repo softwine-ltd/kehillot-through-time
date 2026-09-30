@@ -1,0 +1,10 @@
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/valona
+OK https://www.jewishencyclopedia.com/articles/2180-avlona
+OK https://cdp.jewishgen.org/eastern-europe/albania/vlora-68579414
+FAILED https://www.researchgate.net/publication/386197829_Community_Relations_in_the_Ottoman_Balkans_of_the_Suleymanic_Age_The_Case_of_Avlonya_1520-1568
+FAILED https://www.yadvashem.org/articles/general/jews-in-albania.html
+OK https://jguideeurope.org/en/region/albania/vlore/
+OK https://jewishvirtuallibrary.org/valona
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Albania
+OK https://gazetadielli.com/hebrenjte-dhe-vlora/
+OK https://www.fjalaelire.com/post/vlora-dikur-qend%C3%ABr-e-hebraizmit-n%C3%AB-mesdhe

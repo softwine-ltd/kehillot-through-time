@@ -1,0 +1,8 @@
+OK https://jewua.org/zhashkov/
+OK https://cdp.jewishgen.org/eastern-europe/ukraine/zashkov-zashkuv-zhashkiv-cherkassy-region
+OK https://uk.wikipedia.org/wiki/Жашків
+OK https://ru.wikisource.org/wiki/ЕЭБЕ/Жашков
+OK https://www.jewishgen.org/ukraine/GEO_town.asp?id=172
+OK https://encyclopedia.yivo.org/article.aspx/union_of_soviet_socialist_republics
+FAILED https://tkfshtetl.org/zhashkov/
+FAILED https://rujen.ru/index.php/ЖАШКОВ

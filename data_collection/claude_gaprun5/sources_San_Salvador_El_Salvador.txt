@@ -1,0 +1,11 @@
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_El_Salvador
+OK https://www.jta.org/archive/el-salvadors-jewish-population-is-down-to-twenty-families
+FAILED https://sansalvadorshul.org/pages/history-of-jews-in-el-salvador
+OK https://jewishvirtuallibrary.org/el-salvador-virtual-jewish-history-tour
+OK https://cdp.jewishgen.org/central-america/el-salvador/san-salvador-92326912
+FAILED https://elsalvadorhistorico.com/articulos/antropologia-e-historia/205-judios-en-el-salvador.html
+OK https://es.wikipedia.org/wiki/Historia_de_los_jud%C3%ADos_en_El_Salvador
+OK https://en.wikipedia.org/wiki/Comunidad_Israelita_de_El_Salvador
+OK https://www.worldjewishcongress.org/en/about/communities/SV
+OK http://jewswerehere.com/americas/central/el-salvidor/
+OK https://ejewishphilanthropy.com/jewish-life-in-el-salvador/

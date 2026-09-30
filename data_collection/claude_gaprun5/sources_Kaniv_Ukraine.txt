@@ -1,0 +1,6 @@
+OK https://jewua.org/kaniv/
+OK https://kanivrada.com.ua/yevrejskyj-kaniv/
+OK https://jewsencyclopedia.com/index.php/%D0%9A%D0%90%D0%9D%D0%95%D0%92
+OK https://cdp.jewishgen.org/eastern-europe/ukraine/kaniv-kanev-kaniow-kanew-kaniev-kanew-kaniw-cherkasy-oblast
+OK https://ru.wikipedia.org/wiki/Канев
+FAILED https://collections.yadvashem.org/en/untold-stories/community/14622138-Kanev

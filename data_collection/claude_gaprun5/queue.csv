@@ -17,10 +17,10 @@ n,town,country,lon,lat,alt_name,status
 16,Kutaisi,Georgia,42.70545,42.27161,Kutaisi/כותאיסי/Kutaissi/Қәҭешь,done
 17,Lyuboml,Ukraine,24.03727,51.22601,Lyuboml,done
 18,Narodychi,Ukraine,29.08228,51.20286,Narodychi,done
-19,Vlorë,Albania,19.48318,40.4686,Vlorë,pending
-20,Siedliszcze,Poland,23.1648455,51.1946235,Siedliszcze,pending
-21,Kaniv,Ukraine,31.47003,49.75187,Kaniv,pending
-22,Zhashkiv,Ukraine,30.09888,49.2459,Zhashkiv,pending
-23,Lesko,Poland,22.33042,49.4701,Lesko,pending
-24,San Salvador,El Salvador,-89.1872,13.6929,San Salvador,pending
+19,Vlorë,Albania,19.48318,40.4686,Vlorë,done
+20,Siedliszcze,Poland,23.1648455,51.1946235,Siedliszcze,done
+21,Kaniv,Ukraine,31.47003,49.75187,Kaniv,done
+22,Zhashkiv,Ukraine,30.09888,49.2459,Zhashkiv,done
+23,Lesko,Poland,22.33042,49.4701,Lesko,done
+24,San Salvador,El Salvador,-89.1872,13.6929,San Salvador,done
 25,Germiston,South Africa,28.18056,-26.22944,Germiston,pending

@@ -1,0 +1,9 @@
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/lesko
+OK https://en.wikipedia.org/wiki/Lesko
+OK https://shtetlroutes.eu/pl/lesko-karta-dziedzictwa-kulturowego/
+OK https://uncoveringjewishheritage.com/2014/11/17/only-a-few-survived-in-lesko/
+OK https://cdp.jewishgen.org/eastern-europe/poland/lesko
+OK https://jguideeurope.org/en/region/poland/galicia/lesko/
+OK https://en.wikipedia.org/wiki/Lesko_Synagogue
+OK https://shtetlroutes.eu/pl/lesko-przewodnik/
+FAILED https://sztetl.org.pl/pl/miejscowosci/l/140-lesko/99-historia-spolecznosci/137576-historia-spolecznosci
