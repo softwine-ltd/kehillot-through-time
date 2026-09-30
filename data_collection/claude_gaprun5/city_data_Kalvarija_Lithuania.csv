@@ -1,8 +1,8 @@
 Country,Town Name,Longitude,Latitude,Year Established,Year of Data,Population,Notes,Source
 Lithuania,Kalvarija,23.223,54.417,1713,1713,,Charter of privileges to Jews (synagogue; crafts outside guilds) granted 8 Aug 1713; Jewish weavers earlier in village Traby,https://www.jewishencyclopedia.com/articles/9179-kalvariya
 Lithuania,Kalvarija,23.223,54.417,1713,1713,,Jews settled incl. several weaver families received grant of privilege; earliest documented presence,https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/kalvarija
-Lithuania,Kalvarija,23.223,54.417,1713,1765,1000,Jewish census 1764-1765: about 1000 people belonged to Kalvarija Jewish community (kahal) (approximate),https://www.jmuseum.lt/kalvarija/
-Lithuania,Kalvarija,23.223,54.417,1713,1766,1055,"1,055 poll tax payers (taxpayers not total persons; count as reported)",https://cdp.jewishgen.org/eastern-europe/lithuania/kalvarija
+Lithuania,Kalvarija,23.223,54.417,1713,1765,,"Jewish census 1764-1765: about 1000 people belonged to Kalvarija Jewish community (kahal) (approximate) [Review fix: Population 1000 moved to Notes - kahal-level figure (the community district, not the town alone)]",https://www.jmuseum.lt/kalvarija/
+Lithuania,Kalvarija,23.223,54.417,1713,1766,,"1,055 poll tax payers (taxpayers not total persons; count as reported) [Review fix: Population 1055 moved to Notes - poll-tax payers, not all persons]",https://cdp.jewishgen.org/eastern-europe/lithuania/kalvarija
 Lithuania,Kalvarija,23.223,54.417,1713,1856,6508,Over 80% of total population,https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/kalvarija
 Lithuania,Kalvarija,23.223,54.417,1713,1895,7930,Of 10027 total inhabitants (Jewish museum figure; conflicts with 1897 census figure),https://www.jmuseum.lt/kalvarija/
 Lithuania,Kalvarija,23.223,54.417,1713,1897,3581,37-38% of population (Encyclopaedia Judaica; after 1860s emigration),https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/kalvarija

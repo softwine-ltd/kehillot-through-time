@@ -1,10 +1,10 @@
 Country,Town Name,Longitude,Latitude,Year Established,Year of Data,Population,Notes,Source
 Poland,Parczew,22.90057,51.64021,1564,1564,,"Jews owned 11 houses; privilege to settle granted by Sigismund II Augustus; organized community from early 16th century (Wikipedia notes community existed earlier)",https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/parczew
 Poland,Parczew,22.90057,51.64021,1564,1633,,"Wladyslaw IV renewed privileges for synagogue and cemetery; organized community",https://pl.wikipedia.org/wiki/Parczew
-Poland,Parczew,22.90057,51.64021,1564,1674,84,"84 Jews among 331 townsmen who paid the poll tax (taxpayers; likely not whole community)",https://www.jewishvirtuallibrary.org/parczew
+Poland,Parczew,22.90057,51.64021,1564,1674,,"84 Jews among 331 townsmen who paid the poll tax (taxpayers; likely not whole community) [Review fix: Population 84 moved to Notes - poll-tax payers, likely not the whole community]",https://www.jewishvirtuallibrary.org/parczew
 Poland,Parczew,22.90057,51.64021,1564,1718,,"After Northern War only four Jewish households remained (source wording; count of people not given)",https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/parczew
 Poland,Parczew,22.90057,51.64021,1564,1762,,"Jews owned 47 houses",https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/parczew
-Poland,Parczew,22.90057,51.64021,1564,1765,303,"303 Jews paid the poll tax (taxpayers only; may undercount total community)",https://www.jewishvirtuallibrary.org/parczew
+Poland,Parczew,22.90057,51.64021,1564,1765,,"303 Jews paid the poll tax (taxpayers only; may undercount total community) [Review fix: Population 303 moved to Notes - poll-tax payers only, may undercount the community]",https://www.jewishvirtuallibrary.org/parczew
 Poland,Parczew,22.90057,51.64021,1564,1827,1079,"37% of total population",https://www.jewishvirtuallibrary.org/parczew
 Poland,Parczew,22.90057,51.64021,1564,1857,1692,"About 50% of total population",https://www.jewishvirtuallibrary.org/parczew
 Poland,Parczew,22.90057,51.64021,1564,1921,4005,"51% of town population",https://www.jewishvirtuallibrary.org/parczew

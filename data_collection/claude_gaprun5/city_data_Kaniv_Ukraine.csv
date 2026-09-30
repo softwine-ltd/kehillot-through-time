@@ -1,6 +1,6 @@
 Country,Town Name,Longitude,Latitude,Year Established,Year of Data,Population,Notes,Source
 Ukraine,Kaniv,31.47003,49.75187,1622,1622,,A starosta leased a mill and tavern to a Jew named Kapel from Bila Tserkva; earliest documented Jewish presence (individual),https://kanivrada.com.ua/yevrejskyj-kaniv/
-Ukraine,Kaniv,31.47003,49.75187,1622,1765,98,1765 census; figure includes surrounding villages per jewua.org (378 Jews in whole district per kanivrada),https://jewua.org/kaniv/
+Ukraine,Kaniv,31.47003,49.75187,1622,1765,,1765 census; figure includes surrounding villages per jewua.org (378 Jews in whole district per kanivrada) [Review fix: Population 98 moved to Notes - the source says the figure includes surrounding villages],https://jewua.org/kaniv/
 Ukraine,Kaniv,31.47003,49.75187,1622,1768,,Jewish community destroyed in Haidamak uprising and later renewed (no count),https://jewua.org/kaniv/
 Ukraine,Kaniv,31.47003,49.75187,1622,1845,1802,32.7% of population,https://jewsencyclopedia.com/index.php/%D0%9A%D0%90%D0%9D%D0%95%D0%92
 Ukraine,Kaniv,31.47003,49.75187,1622,1847,1635,Kanev Jewish society per 1847 revision,https://jewua.org/kaniv/
