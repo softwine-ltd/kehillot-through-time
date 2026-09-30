@@ -1,0 +1,9 @@
+OK https://www.isjl.org/florida-orlando-encyclopedia.html
+OK https://jewishvirtuallibrary.org/orlando
+OK https://www.ohevshalom.org/our-history.html
+OK https://www.policyarchive.org/handle/10207/10035
+OK https://en.wikipedia.org/wiki/Orlando,_Florida
+FAILED https://en.wikipedia.org/wiki/History_of_the_Jews_in_Orlando,_Florida
+FAILED https://link.springer.com/content/pdf/10.1007/BF02986640.pdf
+FAILED https://www.bjpa.org/content/upload/bjpa/c__c/Sheskin%20Jewish%20Demography%20of%20Florida.pdf
+FAILED https://www.brandeis.edu/cmjs/community-studies/orlando-report.html
