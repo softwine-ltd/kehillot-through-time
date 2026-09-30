@@ -1,0 +1,10 @@
+OK https://cdp.jewishgen.org/eastern-europe/belarus/kamenets-brest
+OK https://kehilalinks.jewishgen.org/Kamyanyets/Kamentz.htm
+OK https://www.thetogetherplan.com/the-story-of-jewish-kamenets-a-tale-that-stretches-across-centuries/
+OK https://ru.wikipedia.org/wiki/Гетто_в_Каменце_(Брестская_область)
+OK https://www.belarusmemorials.com/memorials/brest/kamyanets/
+OK https://kamenets.by/evrejskij-domik-ili-o-zhizni-evreev-v-kamence/
+OK https://en.wikipedia.org/wiki/Kamyenyets
+OK https://www.jewishgen.org/Yizkor/Kamenets/kam021.html
+FAILED https://collections.yadvashem.org/en/untold-stories/community/14622500-Kamieniec-Litewski
+FAILED https://muse.jhu.edu/document/2830

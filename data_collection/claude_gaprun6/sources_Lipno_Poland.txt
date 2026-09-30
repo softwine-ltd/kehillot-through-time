@@ -1,0 +1,10 @@
+OK https://www.jewishgen.org/yizkor/pinkas_poland/pol4_00262.html
+OK https://www.jewishvirtuallibrary.org/lipno
+OK https://cdp.jewishgen.org/eastern-europe/poland/lipno
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/lipno
+OK https://przystanekhistoria.pl/pa2/tematy/zydzi/95048,Zaglada-Zydow-na-Pomorzu-i-Kujawach.html
+OK http://www.zchor.org/lipno/lipno.htm
+OK https://pl.wikipedia.org/wiki/Lipno
+OK https://www.jewishgen.org/yizkor/lipno1/lipno1.html
+FAILED https://sztetl.org.pl/pl/miejscowosci/l/393-lipno/99-historia-spolecznosci/137591-historia-spolecznosci
+FAILED https://sztetl.org.pl/en/towns/l/393-lipno/99-history/137591-history-of-community

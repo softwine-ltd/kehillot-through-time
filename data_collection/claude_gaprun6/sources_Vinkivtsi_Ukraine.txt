@@ -1,0 +1,7 @@
+OK https://www.esjf-cemeteries.org/survey/vinkivtsi-jewish-cemetery/
+OK https://myshtetl.org/khmelnitskaja/vinkovcy.html
+OK https://uk.wikipedia.org/wiki/Віньківці
+OK https://jewua.org/shtetls-of-podolskaya-gubernia/
+OK https://en.wikipedia.org/wiki/Vinkivtsi
+FAILED https://collections.yadvashem.org/en/untold-stories/community/14621913-Vinkovtsy
+FAILED https://collections.yadvashem.org/en/places/5439642

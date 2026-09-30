@@ -1,0 +1,8 @@
+OK https://www.jewishgen.org/Yizkor/voronovo/vor013.html
+OK https://cdp.jewishgen.org/eastern-europe/belarus/voronovo
+OK https://ru.wikipedia.org/wiki/Гетто_в_Вороново_(Гродненская_область)
+OK https://en.wikipedia.org/wiki/Voranava
+OK https://www.jewishgen.org/yizkor/voronovo/vor137.html
+OK https://www.jewishgen.org/yizkor/voronovo1/vor001.html
+OK https://ru.wikipedia.org/wiki/Вороново_(Гродненская_область)
+FAILED https://collections.yadvashem.org/en/untold-stories/community/14622355-Woronow

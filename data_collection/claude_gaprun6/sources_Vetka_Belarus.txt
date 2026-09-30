@@ -1,0 +1,7 @@
+OK https://en.wikipedia.org/wiki/Vyetka
+OK https://www.jewishgen.org/Belarus/misc/mogilev/InfoMogilevGub/index.html
+OK https://www.jewishgen.org/belarus/newsletters/gomel/GomelGhettos/index.html
+OK https://www.jewsencyclopedia.com/index.php/%D0%92%D0%95%D0%A2%D0%9A%D0%90
+OK http://tutejszy.ru/gomelskaya/vetkovskij/vetka/240-evrei-v-vetke
+OK https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D1%82%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)
+FAILED http://shtetle.com/shtetls_gom/vetka/vetka_hist.html

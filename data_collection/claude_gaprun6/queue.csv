@@ -1,10 +1,10 @@
 n,town,country,lon,lat,alt_name,status
-1,Voranava,Belarus,25.31226,54.15387,Voranava,pending
-2,Kamyenyets,Belarus,23.8167,52.3833,Kamyenyets,pending
-3,Vetka,Belarus,31.18067,52.55428,Vetka,pending
-4,Vinkivtsi,Ukraine,27.23135,49.03403,Vinkivtsi,pending
-5,Bácsalmás,Hungary,19.3319128,46.1274127,Bácsalmás,pending
-6,Lipno,Poland,19.1757,52.8464,Lipno (Dobrzyń Land/Kuyavian-Pomeranian; not Lipno in Greater Poland or Lipno in Masovia),pending
+1,Voranava,Belarus,25.31226,54.15387,Voranava,done
+2,Kamyenyets,Belarus,23.8167,52.3833,Kamyenyets,done
+3,Vetka,Belarus,31.18067,52.55428,Vetka,done
+4,Vinkivtsi,Ukraine,27.23135,49.03403,Vinkivtsi,done
+5,Bácsalmás,Hungary,19.3319128,46.1274127,Bácsalmás,done
+6,Lipno,Poland,19.1757,52.8464,Lipno (Dobrzyń Land/Kuyavian-Pomeranian; not Lipno in Greater Poland or Lipno in Masovia),done
 7,Sulejów,Poland,19.8667,51.35,Sulejów,pending
 8,Maciejowice,Poland,21.5542,51.6928,Maciejowice,pending
 9,Judenburg,Austria,14.66667,47.16667,Judenburg,pending
