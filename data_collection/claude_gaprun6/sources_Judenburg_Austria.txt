@@ -1,0 +1,7 @@
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/judenburg
+OK https://www.judenburg.at/mahnmal/mittelalter.html
+OK https://www.jewishencyclopedia.com/articles/9041-judenburg
+OK https://www.judenburg.at/mahnmal/jdische-gemeinde-im-19-und-20-jahrhundert.html
+OK https://www.jta.org/archive/jodenburg-ancient-austrian-town-named-after-jews-does-not-have-a-single-jew
+OK https://www.wina-magazin.at/zwei-ringe-der-erinnerung/
+FAILED https://spotlight.anumuseum.org.il/austria/community/judenburg-middle-ages/
