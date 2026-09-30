@@ -1,0 +1,8 @@
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Milwaukee
+OK https://emke.uwm.edu/entry/jews/
+OK https://jewishvirtuallibrary.org/milwaukee
+OK https://www.bjpa.org/content/upload/bjpa/jewi/Jewish%20Population%201927.pdf
+OK https://www.jewishchronicle.org/2012/01/30/milwaukee-area-jews-number-30000-2011-study/
+OK https://www.jewishdatabank.org/content/upload/bjdb/740/MILWAUKE_JEWISH_POPULATION_STUDY_1964-1965.pdf
+OK https://www.jewishchronicle.org/2026/07/02/34000-people-live-in-jewish-households/
+FAILED https://www.wisconsinhistory.org/Records/Article/CS1872
