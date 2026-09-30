@@ -1,0 +1,8 @@
+OK https://www.jewishencyclopedia.com/articles/11487-nevers
+OK https://www.jewishvirtuallibrary.org/nevers
+OK https://fr.wikipedia.org/wiki/Nevers
+FAILED https://bourgognemedievale.com/parcours-historique/communautes-juives-bourgogne-medievale/
+OK http://www.ajpn.org/commune-Nevers-en-1939-1945-58194.html
+OK http://www.ajpn.org/departement-Nievre-58.html
+OK https://www.gennievre.net/wiki/index.php/Nevers_rue_de_la_Revenderie
+FAILED https://www.telephone.city/guide/religion/synagogue/nevers-22632/
