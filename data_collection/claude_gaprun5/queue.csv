@@ -1,10 +1,10 @@
 n,town,country,lon,lat,alt_name,status
-1,Szeged,Hungary,20.14824,46.253,Szeged,pending
-2,Kalvarija,Lithuania,23.223,54.417,Kalvarija,pending
-3,Chrzanów,Poland,19.4,50.1333,Chrzanów/כשאנוב/קשאנאוו,pending
+1,Szeged,Hungary,20.14824,46.253,Szeged,done
+2,Kalvarija,Lithuania,23.223,54.417,Kalvarija,done
+3,Chrzanów,Poland,19.4,50.1333,Chrzanów/כשאנוב/קשאנאוו,done
 4,Brzeziny,Poland,19.75,51.8,Brzeziny,done
-5,Głowno,Poland,19.71565,51.96463,Głowno,pending
-6,Piaski,Poland,17.07293,51.88497,Piaski,pending
+5,Głowno,Poland,19.71565,51.96463,Głowno,done
+6,Piaski,Poland,17.07293,51.88497,Piaski,done
 7,Parczew,Poland,22.90057,51.64021,Parczew,pending
 8,Mszczonów,Poland,20.5127831,51.9739985,Mszczonów,pending
 9,Lubartów,Poland,22.60952,51.46026,Lubartów,pending

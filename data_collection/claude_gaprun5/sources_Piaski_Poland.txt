@@ -1,0 +1,6 @@
+OK https://projectpiaski.wordpress.com/the-jewish-community-of-sandberg/
+OK https://en.wikipedia.org/wiki/Piaski,_Gosty%C5%84_County
+OK https://projectpiaski.wordpress.com/
+OK https://www.zionismisfreedom.com/remember-jewish-piaski (wrong town, Piaski near Lublin; unused)
+FAILED https://2023.piaski-wlkp.pl/news/w-27371/poczatki-piaskow
+FAILED http://cmentarze-zydowskie.pl/piaski.htm

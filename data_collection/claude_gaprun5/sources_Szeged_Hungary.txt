@@ -1,0 +1,5 @@
+OK https://jewishvirtuallibrary.org/szeged
+OK https://www.jewishencyclopedia.com/articles/14175-szegedin
+OK https://szegedpanorama.blogspot.com/2012/09/beth-hachaim-az-elok-haza-szegedi.html
+OK http://szegedfolyoirat.sk-szeged.hu/2018/08/11/hegedus-reka-holokauszt-szegeden-es-kornyeken/
+FAILED https://www.sulinet.hu/oroksegtar/data/telepulesek_ertekei/szeged/szeged_tortenete_5/pages/009_a_nepesseg_szamanak.htm

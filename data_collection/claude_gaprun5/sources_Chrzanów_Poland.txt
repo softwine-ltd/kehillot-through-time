@@ -1,0 +1,10 @@
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/chryzanow
+OK https://jewish.pl/pl/2017/01/05/zydzi-w-chrzanowie/
+OK https://cdp.jewishgen.org/eastern-europe/poland/chrzanow
+OK https://jewishgen.org/yizkor/Chrzanow/chr000.html
+OK https://en.wikipedia.org/wiki/Chrzan%C3%B3w
+OK https://epatmos.pl/na-zachod/item/sladami-chrzanowskich-zydow-i
+OK https://www.esjf-cemeteries.org/survey/chrzanow-new-jewish-cemetery/
+OK https://hmh.mwmdigital.com/community/19/
+FAILED https://www.zaglembie.org/en/towns-and-villages/chrzan%C3%B3w.html
+FAILED https://sztetl.org.pl/en/towns/c/471-chrzanow/99-history/137178-history-of-community
