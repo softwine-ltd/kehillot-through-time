@@ -1,0 +1,10 @@
+OK https://www.jewishvirtuallibrary.org/parczew
+OK https://en.wikipedia.org/wiki/Parczew
+OK https://sites.google.com/site/marczakfamily/parczew
+OK https://cdp.jewishgen.org/eastern-europe/poland/parczew
+OK https://bridgetopoland.com/new-blog/2019/2/28/a-visit-to
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/parczew
+OK https://pl.wikipedia.org/wiki/Parczew
+FAILED http://easteurotopo.org/indices/view/view.php?map=kdwrindex&section=Parczew
+FAILED https://sztetl.org.pl/pl/miejscowosci/p/272-parczew/99-historia-spolecznosci/137825-historia-spolecznosci
+OK https://bloodandfrogs.com/compendium/poland/lublin/parczew/a-parczew

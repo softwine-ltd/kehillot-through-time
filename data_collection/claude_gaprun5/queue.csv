@@ -5,12 +5,12 @@ n,town,country,lon,lat,alt_name,status
 4,Brzeziny,Poland,19.75,51.8,Brzeziny,done
 5,Głowno,Poland,19.71565,51.96463,Głowno,done
 6,Piaski,Poland,17.07293,51.88497,Piaski,done
-7,Parczew,Poland,22.90057,51.64021,Parczew,pending
-8,Mszczonów,Poland,20.5127831,51.9739985,Mszczonów,pending
-9,Lubartów,Poland,22.60952,51.46026,Lubartów,pending
-10,Wyszków,Poland,21.4584,52.59278,Wyszków,pending
-11,Palermo,Italy,13.3636,38.1166,Palermo/פלרמו/פאלערמא,pending
-12,Vyshnivets,Ukraine,25.74384,49.90087,Vyshnivets,pending
+7,Parczew,Poland,22.90057,51.64021,Parczew,done
+8,Mszczonów,Poland,20.5127831,51.9739985,Mszczonów,done
+9,Lubartów,Poland,22.60952,51.46026,Lubartów,done
+10,Wyszków,Poland,21.4584,52.59278,Wyszków,done
+11,Palermo,Italy,13.3636,38.1166,Palermo/פלרמו/פאלערמא,done
+12,Vyshnivets,Ukraine,25.74384,49.90087,Vyshnivets,done
 13,Castelo de Vide,Portugal,-7.4568,39.41624,Castelo de Vide,pending
 14,Korsun,Ukraine,31.2533,49.4167,Korsun-Shevchenkivskyi / Korsun-Shevchenkovskiy / Korsuń (Kyiv-Cherkasy area; not Korsun in Donetsk),pending
 15,Beaune,France,4.83887,47.02413,Beaune,pending

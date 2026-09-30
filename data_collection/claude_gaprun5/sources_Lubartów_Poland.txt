@@ -1,0 +1,5 @@
+OK https://www.jewishvirtuallibrary.org/lubartow
+OK https://en.wikipedia.org/wiki/Lubart%C3%B3w_Ghetto
+OK https://cdp.jewishgen.org/eastern-europe/poland/lubartow
+OK https://www.holocausthistoricalsociety.org.uk/contents/ghettosj-r/lubartow.html
+FAILED https://sztetl.org.pl/pl/miejscowosci/l/691-lubartow/99-historia-spolecznosci/137597-historia-spolecznosci

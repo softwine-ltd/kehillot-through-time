@@ -1,0 +1,7 @@
+OK https://www.jewishgen.org/yizkor/pinkas_poland/pol1_00199.html
+OK https://www.jewishvirtuallibrary.org/wyszkow
+OK https://cdp.jewishgen.org/eastern-europe/poland/wyszkow
+OK https://www.wyszkow.pl/info/zawartosc/76/
+OK https://kehilalinks.jewishgen.org/wyszkow/Home.html
+FAILED https://bazhum.muzhp.pl/media/texts/rocznik-mazowiecki/2009-tom-21/rocznik_mazowiecki-r2009-t21-s127-139.pdf
+FAILED https://tubawyszkowa.pl/aktualnosci/1159-naukowcy-o-historii-mieszkancow-naszego-miasta
