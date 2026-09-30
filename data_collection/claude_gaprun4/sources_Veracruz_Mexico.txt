@@ -1,0 +1,8 @@
+OK https://www.jta.org/2004/04/04/lifestyle/veracruz-jews-seek-rabbi-acceptance
+OK https://jwa.org/encyclopedia/article/mexico
+OK https://jewishvirtuallibrary.org/mexico-virtual-jewish-history-tour
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Mexico
+OK https://es.chabad.org/jewish-centers/location/1-563/Veracruz-Mexico
+FAILED https://www.milenio.com/estados/celebra-comunidad-judia-100-anos-llegada-veracruz
+FAILED https://www.milenio.com/cultura/conmemoran-la-llegada-de-los-judios-a-veracruz
+FAILED https://www.enlacejudio.com/2013/11/15/desde-veracruz-todas-las-fotos-de-la-develacion-del-monumento-la-inmigracion-judia/

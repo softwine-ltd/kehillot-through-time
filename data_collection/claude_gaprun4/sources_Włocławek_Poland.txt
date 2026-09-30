@@ -1,0 +1,9 @@
+OK https://www.jewishvirtuallibrary.org/wloclawek
+OK https://en.wikipedia.org/wiki/W%C5%82oc%C5%82awek
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/wloclawek
+OK https://cdp.jewishgen.org/eastern-europe/poland/wloclawek
+FAILED https://pl.wikipedia.org/wiki/Ludno%C5%9B%C4%87_W%C5%82oc%C5%82awka (no Jewish data)
+FAILED https://ypsilon.org.pl/o-przeszlosci-czyli-wspomnienie-o-wloclawskich-zydach/
+FAILED https://pl.wikipedia.org/wiki/Historia_%C5%BByd%C3%B3w_we_W%C5%82oc%C5%82awku
+FAILED https://sztetl.org.pl/pl/miejscowosci/w/307-wloclawek/99-historia-spolecznosci/138251-historia-spolecznosci
+FAILED https://www.yadvashem.org/holocaust/this-month/april/1942.html

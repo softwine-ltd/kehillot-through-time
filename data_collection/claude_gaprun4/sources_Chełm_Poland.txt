@@ -1,0 +1,8 @@
+OK https://cdp.jewishgen.org/eastern-europe/poland/chelm-lublin
+OK https://www.jewishgen.org/yizkor/chelm/che099.html
+OK https://jewishgen.org/yizkor/chelm/che179.html
+OK https://www.jewishgen.org/yizkor/chelm/che013.html
+OK https://en.wikipedia.org/wiki/Che%C5%82m
+OK https://fodz.pl/?d=4&id=12&l=pl
+FAILED https://www.yadvashem.org/communities/chelm.html
+FAILED https://cejsh.icm.edu.pl/cejsh/element/bwmeta1.element.ojs-doi-10_56583_sz_581/c/articles-2117379.pdf.pdf

@@ -1,0 +1,11 @@
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/oswiecim
+OK https://ajcfus.org/the-jewish-history-of-oswiecim/
+OK https://pl.wikipedia.org/wiki/Ludno%C5%9B%C4%87_O%C5%9Bwi%C4%99cimia
+OK https://www.jewishgen.org/Yizkor/Oswiecim1/osw077.html
+OK https://www.jewishgen.org/yizkor/oswiecim1/osw017.html
+OK https://jewishgen.org/yizkor/oswiecim1/osw113.html
+OK https://cdp.jewishgen.org/eastern-europe/poland/oswiecim
+OK https://sfi.usc.edu/exhibits/born-city-became-auschwitz
+OK https://en.wikipedia.org/wiki/Auschwitz_Jewish_Center_in_O%C5%9Bwi%C4%99cim
+OK https://en.wikipedia.org/wiki/Oświęcim
+FAILED https://forward.com/culture/198520/when-auschwitz-was-a-jewish-town/
