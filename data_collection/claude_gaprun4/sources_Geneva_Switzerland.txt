@@ -1,0 +1,13 @@
+OK https://www.jewishvirtuallibrary.org/geneva
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Switzerland
+OK https://fr.wikipedia.org/wiki/Histoire_des_Juifs_%C3%A0_Gen%C3%A8ve
+OK https://www.jewishencyclopedia.com/articles/6581-geneva
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Geneva
+OK https://swissjews.ch/fr/services/savoir/fiches/geneve/
+OK https://www.persee.fr/doc/rjuiv_0484-8616_1925_num_80_159_5455
+OK https://www.cath.ch/newsf/quand-geneve-creait-le-premier-ghetto-juif-deurope/
+OK https://blogs.timesofisrael.com/getting-to-know-genevas-jewish-community/
+OK FAILED https://swissjews.ch/pdf/fr/factsheet/FSCI_Factsheet_communaute_juive_Geneve_fr.pdf
+OK FAILED https://de.wikipedia.org/wiki/Geschichte_der_Juden_in_Genf
+OK FAILED https://hls-dhs-dss.ch/fr/articles/008623/
+OK FAILED https://www.timesofisrael.com/getting-to-know-genevas-jewish-community/
