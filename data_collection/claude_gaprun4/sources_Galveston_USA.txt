@@ -1,0 +1,5 @@
+OK https://www.isjl.org/texas-galveston-encyclopedia.html
+OK https://www.jewishencyclopedia.com/articles/6489-galveston
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Galveston,_Texas
+OK https://www.tshaonline.org/handbook/entries/jews
+FAILED https://www.jewishvirtuallibrary.org/galveston-texas-jewish-history

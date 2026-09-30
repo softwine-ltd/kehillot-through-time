@@ -1,0 +1,6 @@
+OK https://www.jewishencyclopedia.com/articles/10125-louisville
+OK https://www.isjl.org/kentucky-louisville-encyclopedia.html
+OK https://jewishvirtuallibrary.org/louisville
+OK https://jewishlouisville.org/community/louisvilles-jewish-community/
+OK https://jewishlouisvillestudy.org/results/
+FAILED https://www.brandeis.edu/cmjs/community-studies/louisville-report.html
