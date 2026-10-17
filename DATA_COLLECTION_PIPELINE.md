@@ -986,8 +986,8 @@ imports. Each batch below is one or more commits in this repo with the row count
   agents × 2 batches hit the 5-hour limit, the weekly limit after ~7 batches), so failed agents are simply re-launched.
 - **Gap runs** (`claude_gaprun_2026-09-23` … `claude_gaprun7_2026-09-30`): 91 coverage-gap towns (merged 2026-09-28), then runs 2–7 for ~250
   more (Greece, Netherlands, Turkey, Baltics, Romania, Moldova, Argentina, Brazil, North Africa, US cities, Poland/Ukraine/Hungary long tail),
-  merged 2026-09-28 → 2026-10-03 with a per-batch merge checklist (`claude_gaprun3_2026-09-29/REVIEW.md`). `claude_gaprun3` still has 7
-  retried and 28 not-started towns.
+  merged 2026-09-28 → 2026-10-03 with a per-batch merge checklist (`claude_gaprun3_2026-09-29/REVIEW.md`). (Superseded: all 84 `claude_gaprun3`
+  towns were finished; the last 46 towns of the original 377-town coverage-gap list became run 8 on 2026-10-17, see the 2026-10-17/18 section below.)
 - **Australia** (`au_towns_2026-09-23`): the Gemini pipeline (with the two-pass windowed Librarian) was run once more for 7 towns with no rows;
   144 rows merged, 4 towns correctly got no number (only "Greater Perth/Brisbane/Adelaide" census aggregates exist).
 - **Virtual Shtetl** (`vs_polish_2026-09-28`): sztetl.org.pl is only readable through the built-in browser pane (Cloudflare blocks WebFetch and
@@ -1273,6 +1273,37 @@ race, not what caused the symptoms above, but worth closing) — `i18n.js`'s `in
 `DOMContentLoaded` before touching the DOM. **Both fixes are currently uncommitted** in this repo
 (`git status` shows `i18n.js` and `README.md` as modified) — say the word if you want them
 committed and pushed.
+
+## ⚠️ Status update (2026-10-17/18) — the big unattended run: Pinkas scrape, gap run 8, US suburbs, and ~100 Pale/Poland towns missing from the map
+
+Standing instruction for the run: merge finished batches directly (backup, dry run, sanity checks, README row count, commit, push). `kehilot.csv`
+went from 57,230 to **59,889 rows** (5,780 town/country entries; last commit `ed0cb43`). Resume file with commands and open items:
+`jew_hist/BIGRUN_2026-10-18.md`.
+
+- **JewishGen Pinkas HaKehillot Poland scrape** (`jew_hist/cloud_longtail_2026-10-17/scrape_pinkas.py`, `build_pinkas_merge.py`): every translated
+  chapter (358 pages, 288 with Year/Total/Jews tables) downloaded directly from jewishgen.org, matched to existing markers (name similarity within
+  15 km) or geocoded; +663 rows, 83 new markers (commit `1ee3fbe`). This replaced eight paid cloud voivodeship agents that had mostly re-read the same pages.
+- **Gap run 8** (`claude_gaprun8_2026-10-17`): the last 46 towns of the 377-town coverage-gap list (Libya/Egypt/Iraq/Yemen/Iran, Belarus shtetls, Essen,
+  Brno, Graz, Lisbon, Caracas, Mariupol, Bila Tserkva, Batumi, Mar del Plata, Belo Horizonte, South African suburbs ...), plus 7 US suburbs (Skokie,
+  Brookline, Silver Spring, Pikesville, Cherry Hill, Scarsdale, Fair Lawn, with new markers) and an Algarve second pass (Faro, Tavira, Lagos, Silves,
+  Estremoz). Boca Raton, Delray Beach, Deerfield Beach, Coral Springs, Berkeley, Beverly Hills, Passaic, Monsey also done. US suburbs yielded almost no
+  town-level counts (Federation studies report county/region totals), mostly presence rows. Merge-time fixes are in `merge_notes.txt`.
+- **Founding years**: eight unsupported `year_estab` values replaced by the earliest documented year (Bovenden 1680, Bełżyce 1500, Ágreda 1493, Olmedo
+  1458, Elvas 1497, Tavira 1386, Ribadavia 1386, Sahagún 1152; commit `2e67f67`). Gostynin 1450 kept (a Pinkas chapter says "mid-15th century").
+  Still unsupported and left as the first data year: Betschdorf, Pontevedra, Berlanga de Duero, Sernancelhe.
+- **1897-gazetteer diff and cloud deep research** (`cloud_longtail_2026-10-17`): the raw Brockhaus-Efron (ЕЭБЕ) gubernia articles on ru.wikisource
+  (`eeb/`, parsed by `parse_eeb.py` -> `eeb_towns.csv`, 1,582 place/count rows) list every town with 500+ Jews in 1897 for the Pale and Congress Poland.
+  Coordinates came from the ru.wikipedia API (`ruwiki_geo.py`; Nominatim failed on Cyrillic with rate limits). Diffed against `kehilot.csv`
+  -> `deep_candidates.csv` (133 towns with 800+ Jews not on the map). About 100 of them were researched by remote cloud agents, three towns per agent
+  (Rzhyshchiv, Velizh, Nevel, Tomashpil, Hlusk, Teplyk, Zinkiv, Koidanovo, Klintsy, Sierpc, Stawiski, Skidel, Kobeliaky ... ; ~75-90K tokens each),
+  merged with `split_deep.py` + `merge_deep.py` in eight batches (commits `0a89ef1` ... `ed0cb43`; ~100 new markers, ~700 rows). Remote agents cannot
+  write local files: their final message holds the CSV, which had to be copied by hand into `deep/raw_NN.txt`. Typical quality: 1897 census plus
+  1-3 further counts and a Holocaust row; the Yad Vashem, ESJF, Virtual Shtetl and Project MUSE pages were blocked for the agents in nearly every case.
+  Review rules applied at copy time: ghetto/death-toll counts and language-speaker counts blank, conflicting same-year counts dropped, taxpayer-only and
+  district-wide counts to Notes, wrong-place matches (Kunev, Bilopillia, Surazh in Vitebsk) left out.
+- **Not done / open**: ~700 gazetteer names still unresolved (mostly uyezd rows and un-geocoded Cyrillic names); Galicia, Bukovina, Hungary, Romania and
+  Baltic towns have no equivalent gazetteer; ANU Museum / Virtual Shtetl pass (sites blocked); the 1897 figures of some towns disagree between the ЕЭБЕ
+  table and the pages the agents found (Orynin 2412 vs 2112, Dzyarechyn 1887 vs 1573, Vidzy 1657 vs 3480).
 
 ## If you want to resume this work
 
