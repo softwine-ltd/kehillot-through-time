@@ -45,12 +45,23 @@ Our mission is to preserve and present the geographical history of the Jewish pe
 
 ## Project status
 
-As of 2026-10-15, `kehilot.csv` holds **57,230 rows across ~122 countries** (~5,030 distinct
+As of 2026-10-15, `kehilot.csv` holds **57,230 rows across 121 countries** (5,520 distinct
 town/country entries). The dataset is under active,
 ongoing expansion and correction — see [`DATA_COLLECTION_PIPELINE.md`](DATA_COLLECTION_PIPELINE.md)
 for the full collection pipeline, its provenance, current known gaps, and in-progress work (most
 notably closing the gap between this dataset's pre-WW2 Europe estimate and the accepted historical
 figure of ~9.5M — concentrated in Poland and the former Pale of Settlement).
+
+**What the data covers.** Besides the modern (16th–21st century) population series built by the AI
+pipeline, the map now has historical layers researched by source-checked sub-agents:
+biblical places (Middle Bronze Age to the Persian period), the Second Temple period (539 BCE–70 CE, with
+doubtful settlements documented in `jew_hist/biblical_2026-10-04/DOUBTFUL_SETTLEMENTS.md`), the
+late medieval period (9th–15th century: Germany, France, England, the Low Countries, Austria,
+Bohemia/Moravia, Hungary, Slovakia, Poland, Italy and Switzerland — about 1,460 rows), and the American Jewish
+Year Book's US community estimates for 1955–1980. Conventions: a count of `0` means a documented absence; a
+**blank** count means documented presence without a number (drawn as a hollow ring); a population is only the
+place's own Jewish population, never a regional total or a victim count; conflicting estimates are kept as
+separate rows, and the weaker ones are marked low confidence.
 
 Also under active repair: a recurring data-quality bug where a large number describing something
 *other* than a town's own resident population (a regional death toll, a deportation-in-transit

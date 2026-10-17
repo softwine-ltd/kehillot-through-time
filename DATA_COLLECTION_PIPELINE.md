@@ -23,7 +23,7 @@ below is now out of date, it's marked inline, but in short:
   verification agent can now be **run at country scale** from the command line.
 - France and Italy's already-collected data (see "Actionable finding" below) **has since been
   merged** — Poland, France, and Italy are now all substantially represented in `kehilot.csv`;
-  Germany is the one still-unmerged country from the four already processed.
+  Germany is the one still-unmerged country from the four already processed. **[Superseded: Germany was merged 2026-09-20, commit `ad4a5ea`.]**
 
 Full details, dates, and reasoning for every change: `AnacondaProjects/python_310/jew_hist/CHANGELOG.md`
 (outside this repo, at `C:\Users\oferm\OneDrive\Ofer\AnacondaProjects\python_310\jew_hist\CHANGELOG.md`
@@ -961,7 +961,109 @@ Cloudflare `cf-ray ...-TLV` header, i.e. served to an Israeli address). They blo
 - **Other 403/refusals:** yadvashem.org, diarna.org (connection refused to WebFetch), jewishrefugees.org, anumuseum.org, orenburg-gov.ru,
   miaminewtimes.com, Cambridge Geniza, CJH archive; intermittent 403/500/certificate errors on jewishencyclopedia.com and encyclopedia.com.
 - **Workaround that sometimes worked:** downloading with `curl` and a browser user-agent (used for a few PDFs and pages; each such
-  row is marked in its notes). Untried: fetching through the built-in browser pane, which passes most Cloudflare challenges.
+  row is marked in its notes). The built-in browser pane (Claude desktop app) passes the Cloudflare challenge on sztetl.org.pl; see
+  the 2026-10-15 section below. It has **not** been tried on anumuseum.org.il, yadvashem.org or Alemannia Judaica's rate-limited pages.
+
+---
+
+## ⚠️ Status update (2026-10-15) — a third source of data (Claude sub-agent research), eight new historical layers, and 11,000 more rows
+
+Between 2026-09-22 and 2026-10-15 `kehilot.csv` grew from **46,481 to 57,230 rows** (121 countries, 5,520 distinct town/country pairs,
+measured 2026-10-15). Only about a fifth of that came from the Gemini pipeline described above. The rest came from a new method — research
+sub-agents running inside Claude Code (WebSearch + WebFetch, one agent per 1–4 places, 6–7 agents at a time) — and from structured
+imports. Each batch below is one or more commits in this repo with the row counts in the message; the working files are in
+`AnacondaProjects/python_310/jew_hist/<batch folder>/`.
+
+### 1. The method change: Claude sub-agent collection (2026-09-23 →)
+
+- **Why:** the Gemini pipeline costs ~$0.16–0.22 per town (the "hundreds of USD" is volume), and a Claude subscription has no per-token
+  charge. A blind pilot re-collected 6 already-piped towns (`claude_pilot_2026-09-23/COMPARISON.md`): 274 rows / 114 with numbers vs
+  Gemini's 137 / 14 — it recovered Essen (Gemini said "no evidence"), Perth and Timișoara; Aach matched exactly. Every cited URL was fetched,
+  and a spot-check of five figures was verbatim-confirmed.
+- **How it runs:** a `BRIEF.md` (the Historian's own rules: only the town's own Jewish residents, no regional aggregates / death tolls / transit
+  counts, families × 5 only when the source gives the family count, blank not 0 for uncounted presence), a queue/groups CSV, one agent per group,
+  and the same 9-column output as the pipeline (`Country,Town Name,Longitude,Latitude,Year Established,Year of Data,Population,Notes,Source`).
+  A row with Year of Data `-1000` means "searched, found nothing" and is dropped at merge time. Cost is plan usage (~100K tokens per town; ~6
+  agents × 2 batches hit the 5-hour limit, the weekly limit after ~7 batches), so failed agents are simply re-launched.
+- **Gap runs** (`claude_gaprun_2026-09-23` … `claude_gaprun7_2026-09-30`): 91 coverage-gap towns (merged 2026-09-28), then runs 2–7 for ~250
+  more (Greece, Netherlands, Turkey, Baltics, Romania, Moldova, Argentina, Brazil, North Africa, US cities, Poland/Ukraine/Hungary long tail),
+  merged 2026-09-28 → 2026-10-03 with a per-batch merge checklist (`claude_gaprun3_2026-09-29/REVIEW.md`). `claude_gaprun3` still has 7
+  retried and 28 not-started towns.
+- **Australia** (`au_towns_2026-09-23`): the Gemini pipeline (with the two-pass windowed Librarian) was run once more for 7 towns with no rows;
+  144 rows merged, 4 towns correctly got no number (only "Greater Perth/Brisbane/Adelaide" census aggregates exist).
+- **Virtual Shtetl** (`vs_polish_2026-09-28`): sztetl.org.pl is only readable through the built-in browser pane (Cloudflare blocks WebFetch and
+  curl). All 641 Polish town names were matched against its alphabetical index; 95 towns gained demography tables (+698 rows, 103 towns with
+  usable Jewish counts); 5 pages rejected by a GPS check.
+- **Cleanups** (`cleanups_2026-09-30`): duplicate markers folded, mixed-name towns split, swapped/missing coordinates fixed, zero rows cut at the
+  next count, event counts moved to Notes. On 2026-09-28 the data was also changed so a count no longer vanishes on its end year (commit `2d31678`); the display rule in
+  `helpers.js` that hides a count on its end year when another row of the town starts that year is still in place.
+
+### 2. New historical layers (all through the sub-agent method)
+
+| Layer | Folder | Rows added | Notes |
+|---|---|---|---|
+| Biblical places (Middle Bronze → Persian) | `biblical_2026-10-04` | ~570 (pilot 161, batch 2 206, batch 3 167, Jerusalem 35) | populations only for *Israelite* settlements and only from a named source; conflicting academic estimates are kept as separate rows. An early commit (`840e244`) entered area × 250/ha figures for Dan, Hazor and Beersheba; the "never compute from area" rule was adopted afterwards |
+| Second Temple (539 BCE – 70 CE) | `biblical_2026-10-04/st_*` | ~500 (pilot 78, Tier A + diaspora 371, Tier B 55), then ~190 revised and ~25 added in two second-pass rounds | pilot 30 places; Tier A (58); diaspora (72); Tier B (Land of Israel villages with Jewish evidence only, 55); passes 2 and 3 re-researched the first-pass rows from NEAEHL, Hadashot and excavation reports. `legacy_cleanup.py` clears the old "population 1" placeholders and 500+ year spans without real counts |
+| American Jewish Year Book, US communities 1955–1980 | `ajyb_us_2026-10-04` | 2,315 | 133 existing towns and 110 new communities; the 1927/1937/1945 volumes were dropped (city totals, not Jewish counts); same-name towns resolved to the figure closest to the town's other data, with outlier filters |
+| Late medieval Europe (c. 800–1500) | `medieval_2026-10-12` | ~1,460 | see section 3 |
+
+`DOUBTFUL_SETTLEMENTS.md` (in `biblical_2026-10-04/`) lists the Second Temple places whose Jewish character is doubtful (sections A–J) and the
+rows that were softened or removed. `SECOND_TEMPLE_PLAN.md` is the original plan; its status block records what was done.
+
+### 3. The medieval layer (`medieval_2026-10-12`)
+
+Goal: fill the 9th–15th century for places the map knew only from the 16th–20th century, plus the well-known medieval communities that had no
+marker. Scope was **Germany/HRE, France, England, the Low Countries** (batches 1–4 and the 100+ small-town groups), then **Austria, Bohemia/Moravia,
+Hungary, Slovakia, Poland** (groups 70–130), then **seven missing markers** (Tübingen, Saarbrücken, Chambéry, Fribourg, Bacharach, Kempten;
+Dordrecht had no evidence), then **Italy, Switzerland, Belgium, Netherlands** (groups 133–168). Spain/Portugal/southern France were already
+well covered (96/105 and 31/40 towns already had pre-1500 rows) and were left.
+
+- **Rows:** pilot 241, batch 2 250, batch 3 157, batch 4 83, small towns 72, CEE 174 + Poland 133, missing markers 30, Italy/CH/BE/NL 322 (≈1,460).
+  About 650 places were checked; roughly half returned the single "no medieval evidence" row and add nothing.
+- **Rules (BRIEF.md + BRIEF_CEE.md + BRIEF_IT.md):** first documented Jews; dated events (1096, 1146, 1298 Rintfleisch, 1336–38 Armleder, 1348–51
+  Black Death, expulsions: England 1290, France 1306/1394, Austria 1420–21 and 1496–98, Hungary 1360, Silesia 1453–54, Sicily 1492/93, many local
+  German expulsions); populations only from a named source — a household count may be entered as households × 5 (marked probability *low*), a
+  massacre victim count never is. **A year taken from a century ("14th c.") is entered as the century's round year and flagged in Notes.**
+- **Tooling:** `groups.csv` (group, place, country, lon, lat, kind), agent outputs `medieval_group<N>.csv` / `names_group<N>.csv` /
+  `sources_group<N>.txt`, and `merge_medieval.py [from=N] [apply]` — it matches an existing marker by normalised name within 12 km, otherwise
+  creates a new marker, skips `-1000` rows, and has per-town coordinate overrides (Mühlhausen, Sulzbürg/Sulzburg, Haslach, Bretzenheim,
+  Enns, Lucca, Salerno, Benevento, Rimini, Chieti, Siracusa → Syracuse; see `coord_fixes_it.txt`). `loose_ends.py` replaced 192 unsupported
+  `year_estab` values at 19 towns and relabelled the Słubice rows (the medieval community was Frankfurt (Oder)'s). Every merge writes a
+  `kehilot_backup_<ts>_pre_*.csv` first.
+- **Known weaknesses:** many agents reached fewer than the brief's 8 searches / 4 non-Wikipedia pages because the evidence stops early. The
+  ANU Museum "Jewish Communities of Austria" pages, Virtual Shtetl and most Yad Vashem/JVL town pages returned 403/empty to the agents;
+  facts that appeared only in search snippets were deliberately left out. Geocoded points for NEW markers were wrong in ~12 cases (namesakes);
+  each was corrected at merge time and the wrong ones are listed in the batch's notes.
+
+### 4. Data conventions that settled during this period
+
+- `0` = documented absence; **blank** = documented presence without a count (shown on the map as a hollow ring); no row if nothing is known.
+- Population is only the place's own Jewish population; regional totals, victim counts, tax amounts, payments and garrison/army figures go to Notes.
+- Conflicting estimates stay as separate rows; the map shows the highest count among overlapping rows, so the best-sourced figure is high-confidence
+  and the others *low*.
+- Point-fact rows have `year_start == year_end` and `pop_start == pop_end`; BCE years are negative.
+- Never compute a population from area × density.
+
+### 5. Site changes in the same period (not data)
+
+Hebrew/RTL layout fixes (page overflow, timeline always left-to-right), basemap labels switched to Esri World Street Map (the CARTO and MapTiler
+options were broken), documented presence without a count now drawn as a hollow ring, a print bug (the printed area differed from the screen)
+fixed and verified on the **live** page via CDP `Page.printToPDF` with the cache disabled, and the per-town history drawer (side panel / phone
+bottom sheet) merged to `main`. GitHub Pages deployment can fail with *"due to in progress deployment"* when two pushes land close together; re-run the
+latest workflow or push an empty commit (2026-10-14).
+
+### 6. Still open (as of 2026-10-15)
+
+- A **browser-pane pass** over the pages agents could not fetch (ANU Museum Austria pages for Friesach, Bruck an der Mur, Retz, Eggenburg, Zwettl, Horn,
+  Marchegg, Traiskirchen…; Virtual Shtetl history narratives; Pinkas pages).
+- Unchecked leads from agents: *Gouda en de Joden* (1972), *Joods Gorcum 1349–1964*, Tiel/Zaltbommel (JCK: Jews "in the Middle Ages", undated),
+  Kluczbork (a possible 1414 mention), Assisi (14th-c. lending), Castrovillari (1480 deeds), Kłodzko (1434 Judengasse), Lazio towns (Cori, Anagni,
+  Velletri, Frosinone: medieval presence not excluded).
+- Founding years still unsupported but untouched: Bovenden 1350, Bełżyce 1420, Gostynin 1450, Betschdorf 1507.
+- **Gemini-pipeline backlog (from the 2026-09-22 coverage-gap run):** 94 large towns still without numbers (the "window fix" gave numbers to 36
+  of 130); `claude_gaprun3` leftovers (7 + 28 towns); 24 unconfirmed items in the pogrom list (table above).
+- Spain/Portugal depth check. The "If you want to resume this work" list at the bottom pre-dates all of the above; its first item (merge Germany)
+  was done on 2026-09-20 (commit `ad4a5ea`), so read this section first.
 
 ---
 
@@ -1099,9 +1201,9 @@ population-bearing towns being merged), but France had only 177 rows despite 842
 towns with real data, and Italy only 89 despite 650 — Germany's 567 looked roughly complete
 relative to its 521. **France and Italy have since been run through
 `utils/batch_convert_to_kehilot.py`** (the headless replacement for `csv_converter_gui.py`, see
-the engineering changelog) and merged. **Germany remains the one country from this batch that
-still hasn't been merged** — same command, pointed at
-`city_data_population_only_*_Germany.csv`, is the next fastest win.
+the engineering changelog) and merged. **Germany remained the one country from this batch that
+had not been merged** — same command, pointed at
+`city_data_population_only_*_Germany.csv` — *[superseded: merged 2026-09-20, commit `ad4a5ea`]*.
 
 **Confirmed link back to the site:** two files sitting directly in `jew_hist/csv_files/` —
 `kehilot_combined_20251226_144218.csv` (19 rows) and `kehilot_combined_20251227_233616.csv` (321
@@ -1150,6 +1252,10 @@ see `jew_hist/CHANGELOG.md` for the full file list and dates.
 | 2025-12-26 → 2025-12-29 | `kehillot-through-time/utils/` alt-name enrichment scripts added |
 | 2026-01-16 → 2026-02-10 | Large `jew_hist/` runs continue for France, Italy, Germany (multi-MB logs, thousands of towns) |
 | 2026-09-10 → 2026-09-14 | Engineering pass: hardcoded API key removed (10 files), both deprecated Gemini models replaced, temperature corrected for Gemini 3.x, pipeline made concurrent with skip-logic/country-aware queries/failure tracking, verification agent made batchable, France and Italy merged into `kehilot.csv` — full details in `jew_hist/CHANGELOG.md` |
+| 2026-09-22 → 2026-09-23 | Coverage-gap run (377 towns) and Librarian "window fix"; Australia towns; Claude sub-agent pilot (6 towns) |
+| 2026-09-23 → 2026-10-03 | Claude sub-agent gap runs 1–7 (~340 towns), Virtual Shtetl bulk import (95 Polish towns, via the browser pane), pogrom-list check, cleanups |
+| 2026-10-04 → 2026-10-12 | Biblical places (≈570 rows), Second Temple (≈500 + two revision passes), American Jewish Year Book US communities 1955–1980 (2,315 rows) |
+| 2026-10-12 → 2026-10-15 | Medieval layer 9th–15th c.: Germany/France/England/Low Countries, Austria/Bohemia/Hungary/Slovakia/Poland, Italy/Switzerland/Belgium/Netherlands (≈1,460 rows); loose-ends cleanup of 19 founding years; `kehilot.csv` = 57,230 rows |
 
 ## Site bugs found and fixed (2026-09-11)
 
@@ -1170,7 +1276,7 @@ committed and pushed.
 
 ## If you want to resume this work
 
-1. **Fastest remaining win: merge Germany.** Point `utils/batch_convert_to_kehilot.py` (the
+1. **~~Fastest remaining win: merge Germany.~~ Done 2026-09-20 (commit `ad4a5ea`).** Point `utils/batch_convert_to_kehilot.py` (the
    headless replacement for `csv_converter_gui.py` — no GUI needed, and it merges straight into
    `kehilot.csv` with an automatic backup and duplicate-row skipping) at
    `jew_hist/csv_files/city_data_population_only_*_Germany.csv`. France and Italy's equivalent
