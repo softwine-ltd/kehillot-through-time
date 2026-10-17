@@ -1277,7 +1277,7 @@ committed and pushed.
 ## ⚠️ Status update (2026-10-17/18) — the big unattended run: Pinkas scrape, gap run 8, US suburbs, and ~100 Pale/Poland towns missing from the map
 
 Standing instruction for the run: merge finished batches directly (backup, dry run, sanity checks, README row count, commit, push). `kehilot.csv`
-went from 57,230 to **59,889 rows** (5,780 town/country entries; last commit `ed0cb43`). Resume file with commands and open items:
+went from 57,230 to **70,477+ rows** (7,897+ town/country entries by the time this section was last updated; see the README for the current count). Resume file with commands and open items:
 `jew_hist/BIGRUN_2026-10-18.md`.
 
 - **JewishGen Pinkas HaKehillot Poland scrape** (`jew_hist/cloud_longtail_2026-10-17/scrape_pinkas.py`, `build_pinkas_merge.py`): every translated
@@ -1304,6 +1304,31 @@ went from 57,230 to **59,889 rows** (5,780 town/country entries; last commit `ed
 - **Not done / open**: ~700 gazetteer names still unresolved (mostly uyezd rows and un-geocoded Cyrillic names); Galicia, Bukovina, Hungary, Romania and
   Baltic towns have no equivalent gazetteer; ANU Museum / Virtual Shtetl pass (sites blocked); the 1897 figures of some towns disagree between the ЕЭБЕ
   table and the pages the agents found (Orynin 2412 vs 2112, Dzyarechyn 1887 vs 1573, Vidzy 1657 vs 3480).
+
+
+**Second half of the run (2026-10-18, after a request for more parallelism): structured-source row files instead of per-town web research.**
+Once the Pale gazetteer showed that almost every town with 500+ Jews in 1897 was already on the map, the cheaper lever was *depth and breadth from
+sources that carry whole tables*. Each source got one agent that enumerated it, diffed it against `kehilot.csv` (name + coordinates within ~5 km) and
+wrote a 9-column row file under `jew_hist/cloud_longtail_2026-10-17/`; every file went through `check_collide.py` (warns when a town name already exists in
+the dataset more than 25 km away), `split_deep.py` (one `city_data` file per town) and `merge_deep.py` (dry run, backup, apply), then `fix_boundary.py`.
+- **Galicia/Bukovina** (35 towns, `claude_gaprun9_2026-10-18`, local per-town agents) and **Baltics/Moldova/Romania/Serbia** (24 towns) and **small Pale
+  towns with 500-799 Jews** (14): +~850 rows, ~70 new markers.
+- **Hungary/Slovakia/Transylvania/Carpathian Ruthenia**: the KSH table "A zsidó népesség száma településenként 1840-1941" (Hungaricana scans, OCR + visual
+  check of every digit), 276 towns, 839 rows with 1880/1910/1920/1930/1941 counts (`hungary_ksh_rows*.csv`).
+- **Germany**: Alemannia Judaica community-page tables for Baden-Wuerttemberg/Rhineland-Palatinate/Saarland (367 communities), Bavaria (256) and Hesse/Thuringia/
+  Lower Saxony and others (368): ~5,700 rows, ~970 new markers. Regex-extracted, ~1 bad series in 40 in spot checks.
+- **USA**: American Jewish Year Book city tables 1918/1927/1937/1954 (134 places; 1948-82 volumes returned 401/403). **UK/Ireland**: JCR-UK population tables
+  (124 communities). **Netherlands/Belgium**: Joods Cultureel Kwartier tables (173 places; the JCK tables are "town and surroundings", so those rows are
+  marked `medium`). **Czech lands/Slovakia**: 1921/1930 official municipal lexica (157 towns). **Poland, Ukraine/Belarus/Russia/Moldova, Balkans/Romania/Greece**:
+  Hebrew Wikipedia crawls plus Polish/German Wikipedia, Shtetl Routes, myshtetl.org and Yahad pages (~1,100 rows, ~440 new markers).
+- **Coordinate audit** (`jew_hist/coord_audit_2026-10-18/`): 6,034 markers checked against GeoNames/Natural Earth, 208 flagged; 15 clear errors fixed (Bad Windsheim,
+  Linz am Rhein, Passaic, Bistrita, Satu Mare, Drohichyn, Casale Monferrato, Hlyniany, Luhansk, Reni, Tetiiv, Trostianets, Tecuci, Turda, Vercelli, Krakes).
+  The rest of `suspect_markers.csv` is leads, not fixes (many are legitimate homonyms).
+- **Mistakes found and fixed during the run**: Bukovina Novoselytsia data had been merged into the Volhynia Novoselytsia marker (name collision, fixed in
+  `7c4f153`); two Galician towns with the same names as other towns (Nemyriv, Sieniawa) were given oblast tags. Lesson: always run `check_collide.py` before merging a file.
+- **Prompt-injection note**: the Ukrainian Wikipedia page for Kulykiv contained text aimed at AI readers; the research agent ignored it.
+- **Still open**: ~700 unresolved gazetteer names; ~130 Bulgarian/Yugoslav/Regat-Romanian communities without sources; Bamberg and other big Bavarian cities (no regular tables);
+  the 1948-82 AJYB volumes; France/Italy/Maghreb/Commonwealth/NRW-East/Austria-Switzerland row files (launched last; see `BIGRUN_2026-10-18.md`).
 
 ## If you want to resume this work
 
