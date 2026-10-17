@@ -966,10 +966,9 @@ Cloudflare `cf-ray ...-TLV` header, i.e. served to an Israeli address). They blo
 
 ---
 
-## ⚠️ Status update (2026-10-15) — a third source of data (Claude sub-agent research), eight new historical layers, and 11,000 more rows
+## ⚠️ Status update (2026-10-15, extended 2026-10-17) — a third source of data (Claude sub-agent research), eight new historical layers, and 11,000 more rows
 
-Between 2026-09-22 and 2026-10-15 `kehilot.csv` grew from **46,481 to 57,230 rows** (121 countries, 5,520 distinct town/country pairs,
-measured 2026-10-15). Only about a fifth of that came from the Gemini pipeline described above. The rest came from a new method — research
+Between 2026-09-22 and 2026-10-17 `kehilot.csv` grew from **46,481 to 58,069 rows** (121 countries; the 57,230-row figure of 2026-10-15 was before the Spain/Portugal pass). Only about a fifth of that came from the Gemini pipeline described above. The rest came from a new method — research
 sub-agents running inside Claude Code (WebSearch + WebFetch, one agent per 1–4 places, 6–7 agents at a time) — and from structured
 imports. Each batch below is one or more commits in this repo with the row counts in the message; the working files are in
 `AnacondaProjects/python_310/jew_hist/<batch folder>/`.
@@ -1015,10 +1014,11 @@ rows that were softened or removed. `SECOND_TEMPLE_PLAN.md` is the original plan
 Goal: fill the 9th–15th century for places the map knew only from the 16th–20th century, plus the well-known medieval communities that had no
 marker. Scope was **Germany/HRE, France, England, the Low Countries** (batches 1–4 and the 100+ small-town groups), then **Austria, Bohemia/Moravia,
 Hungary, Slovakia, Poland** (groups 70–130), then **seven missing markers** (Tübingen, Saarbrücken, Chambéry, Fribourg, Bacharach, Kempten;
-Dordrecht had no evidence), then **Italy, Switzerland, Belgium, Netherlands** (groups 133–168). Spain/Portugal/southern France were already
-well covered (96/105 and 31/40 towns already had pre-1500 rows) and were left.
+Dordrecht had no evidence), then **Italy, Switzerland, Belgium, Netherlands** (groups 133–168). A last round (2026-10-17, groups 169–213) deepened **Spain and Portugal**:
+  although 96/105 Spanish and 31/40 Portuguese towns already had a pre-1500 row, most had exactly one, so the pass added timelines (the 1391 pogroms, the 1412 Valladolid
+  ordinances, the 1478 Inquisition, the 1492 and 1496–97 expulsions, aljama tax lists) for 178 places (839 rows, 73 with a number). Southern France was left.
 
-- **Rows:** pilot 241, batch 2 250, batch 3 157, batch 4 83, small towns 72, CEE 174 + Poland 133, missing markers 30, Italy/CH/BE/NL 322 (≈1,460).
+- **Rows:** pilot 241, batch 2 250, batch 3 157, batch 4 83, small towns 72, CEE 174 + Poland 133, missing markers 30, Italy/CH/BE/NL 322, Spain/Portugal 839 (≈2,300).
   About 650 places were checked; roughly half returned the single "no medieval evidence" row and add nothing.
 - **Rules (BRIEF.md + BRIEF_CEE.md + BRIEF_IT.md):** first documented Jews; dated events (1096, 1146, 1298 Rintfleisch, 1336–38 Armleder, 1348–51
   Black Death, expulsions: England 1290, France 1306/1394, Austria 1420–21 and 1496–98, Hungary 1360, Silesia 1453–54, Sicily 1492/93, many local

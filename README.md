@@ -45,7 +45,7 @@ Our mission is to preserve and present the geographical history of the Jewish pe
 
 ## Project status
 
-As of 2026-10-17, `kehilot.csv` holds **58,069 rows across 121 countries** (5,520 distinct
+As of 2026-10-17, `kehilot.csv` holds **58,069 rows across 121 countries** (5,585 distinct
 town/country entries). The dataset is under active,
 ongoing expansion and correction — see [`DATA_COLLECTION_PIPELINE.md`](DATA_COLLECTION_PIPELINE.md)
 for the full collection pipeline, its provenance, current known gaps, and in-progress work (most
@@ -57,7 +57,7 @@ pipeline, the map now has historical layers researched by source-checked sub-age
 biblical places (Middle Bronze Age to the Persian period), the Second Temple period (539 BCE–70 CE, with
 doubtful settlements documented in `jew_hist/biblical_2026-10-04/DOUBTFUL_SETTLEMENTS.md`), the
 late medieval period (9th–15th century: Germany, France, England, the Low Countries, Austria,
-Bohemia/Moravia, Hungary, Slovakia, Poland, Italy and Switzerland — about 1,460 rows), and the American Jewish
+Bohemia/Moravia, Hungary, Slovakia, Poland, Italy, Switzerland, Spain and Portugal — about 2,300 rows), and the American Jewish
 Year Book's US community estimates for 1955–1980. Conventions: a count of `0` means a documented absence; a
 **blank** count means documented presence without a number (drawn as a hollow ring); a population is only the
 place's own Jewish population, never a regional total or a victim count; conflicting estimates are kept as
