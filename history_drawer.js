@@ -296,7 +296,7 @@
     }
 
     function confLabel(c) {
-        const map = { high: ['history.confidenceHigh', 'High confidence'], medium: ['history.confidenceMedium', 'Medium confidence'], low: ['history.confidenceLow', 'Low confidence'] };
+        const map = { high: ['history.confidenceHigh', 'High confidence'], medium: ['history.confidenceMedium', 'Medium confidence'], low: ['history.confidenceLow', 'Low confidence'], estimate: ['history.confidenceEstimate', 'Estimate (carried forward)'] };
         const e = map[c] || ['history.confidenceUnknown', 'Confidence unknown'];
         return tr(e[0], e[1]);
     }

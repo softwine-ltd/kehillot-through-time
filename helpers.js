@@ -2302,6 +2302,10 @@ Submitted at: ${new Date().toISOString()}
                                 <div class="w-4 h-4 bg-red-300 rounded-full"></div>
                                 <span class="text-sm text-gray-700"><strong>Light red:</strong> Lower confidence data</span>
                             </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 rounded-full" style="background:#d97706"></div>
+                                <span class="text-sm text-gray-700"><strong>Amber:</strong> Estimate &ndash; the last sourced number carried forward</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -3593,6 +3597,8 @@ function getConfidenceColor(confidence) {
             return '#ef4444';  // Medium red
         case 'low':
             return '#f87171';  // Light red
+        case 'estimate':
+            return '#d97706';  // Amber: carried-forward estimate, not a sourced count
         default:
             return '#ef3333';  // Default: Medium red
     }
@@ -3607,6 +3613,8 @@ function getConfidenceText(confidence) {
             return 'רמת ודאות בינונית';
         case 'low':
             return 'רמת ודאות נמוכה';
+        case 'estimate':
+            return 'הערכה (מספר משנה קודמת, לא מקור ישיר)';
         default:
             return 'רמת ודאות לא ידועה';
     }
