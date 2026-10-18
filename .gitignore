@@ -31,3 +31,6 @@ __pycache__/
 # Editor-based HTTP Client
 .idea/httpRequests
 http-client.private.env.json
+# Local safety copies written by the merge scripts (older ones are moved to jew_hist/kehilot_backups_archive)
+kehilot_backup_*.csv
+kehilot_bu_*.csv
