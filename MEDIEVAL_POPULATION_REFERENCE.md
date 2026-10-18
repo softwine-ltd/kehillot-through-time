@@ -79,3 +79,7 @@ Notes: Toch reads Benjamin of Tudela's numbers as heads of households (x5-10) fo
 | Exodus 1492: to Italy | 1492 | 50000 | map 74 text p. 82 (PDF p. 83) | About 50,000 Jews went to Italy and several thousand to Avignon. |
 | Portugal (all inhabitants) | 1497 | 1000000 | map 75 text p. 84 (PDF p. 85) | The atlas describes Portugal as a nation of about one million people when Manuel I replaced the expulsion edict by forced conversion (19 March 1497). |
 | Constantinople / Istanbul | 1453 | 100000 | map 63 callout 5 p. 70 (PDF p. 71) | The map 63 callout reads "Jewish pop. numbers 100,000" after the transfers of 1453; this is far above the online figures (Wikipedia: about 7,000-8,000 in the 1478 census; 30,000 under Bayezid II), so it is kept here and not entered as a town population. |
+
+## Rivka Shpak-Lissak: population estimates for the Land of Israel (Jews, Samaritans, Muslims, Christians; regional, sanjak, urban/rural; 4th c. BCE - 20th c.)
+
+See `LAND_OF_ISRAEL_POPULATION_ESTIMATES.csv` (548 lines, quoting the scholars the books cite: Broshi, Baron, Rapoport, Prawer, Beider's Ottoman census analyses and others). Sources: R. Shpak-Lissak, *When and how the Jewish majority in the Land of Israel was eliminated* (Carmel; 443 e-reader pages) and *When and how the Arabs and Muslims immigrated to the Land of Israel, 640-1914* (Yedioth Ahronoth / Sifrei Hemed; 474 e-reader pages). All figures were checked against the screenshots; several of the books' figures are contradicted by Beider (2023, Genealogy 7(3):49), see the workspace conflict files.
