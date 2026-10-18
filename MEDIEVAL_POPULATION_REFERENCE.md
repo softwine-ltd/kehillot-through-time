@@ -87,3 +87,23 @@ See `LAND_OF_ISRAEL_POPULATION_ESTIMATES.csv` (548 lines, quoting the scholars t
 ## Botticini, Eckstein, Vaturi: Jewish and total populations by region, province and country, 1500-1930
 
 See `POPULATION_1500_1930_REGIONS.csv` (493 lines: Germany-Austria, Poland-Lithuania, Bohemia, Moravia, Wuerttemberg, Saxony, Baden, Bavaria, Hesse, Congress Poland, Galicia, Pale of Settlement, Posen, with the paper's table numbers and the sources it cites). Source: M. Botticini, Z. Eckstein, A. Vaturi, *The Chosen Many: Population Growth and Jewish Childcare in Central-Eastern Europe, 1500-1930*, Pinhas Sapir Center for Development, Tel Aviv University, Discussion Paper 4-16 (2016). Town series from the same paper (Prague, Vienna, Frankfurt, Wroclaw, Warsaw, Lublin, Poznan, Lodz, Kyiv ...) are rows in kehilot.csv; known errors in the paper: Wroclaw 1910 (printed 3,800; the YIVO table gives 20,212), Frankfurt 1817 (3,928 printed, 3,298 in EJ), Vienna 1670 share (20.2% printed, should be 2.0%).
+
+## Na'aman, N., 'Population changes in the Land of Israel following the Assyrian deportations' (Cathedra 54, printed pp. 43-62; lecture at the April 1987 conference on ethnic groups in the Land of Israel; year inferred 1989)
+
+Deportee and captive counts from the Assyrian royal inscriptions (not town populations; not on the map as Population).
+
+| Region | Year | Group | Value | Source quoted |
+|---|---|---|---|---|
+| Lower Galilee and western Jezreel valley (northern districts of Bit-Humria) | -734 to -732 | deportees (Assyrian count) | 13,520 | Na'aman (the paper itself; figures from the Assyrian royal inscriptions), reading a fragment of Tiglath-pileser III's annals |
+| Shimon (Shimron), Lower Galilee | -734 | captives from one town | 650 (two other town entries: 625 and 650, names broken) | Na'aman (the paper itself; figures from the Assyrian royal inscriptions) |
+| Samaria (Assyrian province Samerina) | -720 | deportees (Sargon II) | 27,280 (plus 200 chariots taken; 50 in the annals) | Na'aman (the paper itself; figures from the Assyrian royal inscriptions), quoting the Nimrud Prism |
+| Gaza district around Raphia | -720 | deportees (Sargon II) | 9,033 | Na'aman (the paper itself; figures from the Assyrian royal inscriptions) |
+| Judah | -701 | deportees (Sennacherib's claim) | 200,150 | Na'aman (the paper itself; figures from the Assyrian royal inscriptions), quoting Sennacherib's inscription |
+| Babylonia (Bit-Yakin and neighbouring tribes) | -710 to -709 | deportees (Sargon II), context only | 90,580 | Na'aman (the paper itself; figures from the Assyrian royal inscriptions) |
+| Babylonia (Chaldean tribes) | -745 to -727 | deportees (Tiglath-pileser III), context only | 155,000 | Na'aman (the paper itself; figures from the Assyrian royal inscriptions) |
+| Babylonia (Sennacherib's first campaign) | not dated in the paper | deportees (Sennacherib), context only | 208,000 | Na'aman (the paper itself; figures from the Assyrian royal inscriptions) |
+| Hanigalbat (northern Mesopotamia) | -1263 to -1234 | captives (Shalmaneser I), context only | 14,400 | Na'aman (the paper itself; figures from the Assyrian royal inscriptions) |
+| Land of Hatti beyond the Euphrates | -1233 to -1197 | deportees (Tukulti-Ninurta I), context only | 28,000 | Na'aman (the paper itself; figures from the Assyrian royal inscriptions) |
+| Mushki (Phrygians) and the Kashka and Urumu nomad groups, northeast frontier of Assyria | -1114 to -1076 | deportees (Tiglath-pileser I), context only | 6,000 Mushki; 4,000 from the Kashka and Urumu groups | Na'aman (the paper itself; figures from the Assyrian royal inscriptions) |
+| All regions named in Shalmaneser III's inscriptions | -858 to -824 | deportees (Shalmaneser III), context only | 110,610 in his first 20 years; 167,500 in all his inscriptions | Na'aman (the paper itself; figures from the Assyrian royal inscriptions) |
+| Kalhu (Nimrud), Assyrian capital | -879 | inhabitants of the new city (Assyrian, not Jewish), context only | 16,000 (plus 1,500 officials) | Na'aman (the paper itself; figures from the Assyrian royal inscriptions), from Ashurnasirpal II's dedication text |
