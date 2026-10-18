@@ -45,7 +45,7 @@ Our mission is to preserve and present the geographical history of the Jewish pe
 
 ## Project status
 
-As of 2026-10-18, `kehilot.csv` holds **109,676 rows across 134 countries** (12,852 distinct
+As of 2026-10-18, `kehilot.csv` holds **109,790 rows across 134 countries** (12,873 distinct
 town/country entries). The dataset is under active,
 ongoing expansion and correction — see [`DATA_COLLECTION_PIPELINE.md`](DATA_COLLECTION_PIPELINE.md)
 for the full collection pipeline, its provenance, current known gaps, and in-progress work (most
