@@ -5,7 +5,7 @@ pop_start, unknown probability value, estimate rows without the carry-forward ta
 later than the town's first row. Warnings (printed, exit code unaffected): population 1 (legacy placeholder),
 same-year rows with different counts for one town, ending year beyond 2026.
 Usage: validate_kehilot.py [--verbose]"""
-import csv, os, sys
+import csv, os, re, sys
 from collections import Counter, defaultdict
 sys.stdout.reconfigure(encoding="utf-8")
 KEH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "kehilot.csv")
@@ -36,6 +36,7 @@ for i, r in enumerate(data, start=2):
     if r[7] and fnum(r[7].lstrip("~")) is None: err["pop_start not numeric"].append(i)
     if r[7] == "-1": warn["population -1 (legacy marker)"].append(i)
     if r[7] and fnum(r[7].lstrip("~")) == 1: warn["population 1 (legacy placeholder)"].append(i)
+    if re.search("[A-Za-z]", r[13]): err["Latin text in city_hebrew (placeholder?)"].append(i)
     if r[9] == "": warn["empty probability (legacy rows)"].append(i)
     elif r[9] not in PROBS: err[f"unknown probability {r[9]!r}"].append(i)
     if r[9] == "estimate" and "[carry-forward-estimate]" not in r[18]: err["estimate row without tag"].append(i)
@@ -49,6 +50,7 @@ for t, items in town.items():
     for i, r, _, y in items:
         if r[7] and fnum(r[7].lstrip("~")) and r[9] != "estimate": by[y].add(fnum(r[7].lstrip("~")))
     if any(len(v) > 1 for v in by.values()): warn["same-year rows with different counts"].append(t[1])
+    if len({r[13] for _, r, _, _ in items if r[13]}) > 1: warn["marker with several different city_hebrew names"].append(t[1])
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sort_kehilot  # noqa: E402
 if not sort_kehilot.is_sorted(data):
