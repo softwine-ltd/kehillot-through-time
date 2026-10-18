@@ -1277,7 +1277,7 @@ committed and pushed.
 ## ⚠️ Status update (2026-10-17/18) — the big unattended run: Pinkas scrape, gap run 8, US suburbs, and ~100 Pale/Poland towns missing from the map
 
 Standing instruction for the run: merge finished batches directly (backup, dry run, sanity checks, README row count, commit, push). `kehilot.csv`
-went from 57,230 to **70,477+ rows** (7,897+ town/country entries by the time this section was last updated; see the README for the current count). Resume file with commands and open items:
+went from 57,230 to **77,920 rows** (9,901 town/country entries, 125 countries; last commit 761a40d on 2026-10-18). Resume file with commands and open items:
 `jew_hist/BIGRUN_2026-10-18.md`.
 
 - **JewishGen Pinkas HaKehillot Poland scrape** (`jew_hist/cloud_longtail_2026-10-17/scrape_pinkas.py`, `build_pinkas_merge.py`): every translated
@@ -1327,6 +1327,7 @@ the dataset more than 25 km away), `split_deep.py` (one `city_data` file per tow
 - **Mistakes found and fixed during the run**: Bukovina Novoselytsia data had been merged into the Volhynia Novoselytsia marker (name collision, fixed in
   `7c4f153`); two Galician towns with the same names as other towns (Nemyriv, Sieniawa) were given oblast tags. Lesson: always run `check_collide.py` before merging a file.
 - **Prompt-injection note**: the Ukrainian Wikipedia page for Kulykiv contained text aimed at AI readers; the research agent ignored it.
+- **Later in the same run** (France/Alsace-Lorraine via Alemannia Judaica + judaisme-alsalor.fr; Italy; Turkey/Algeria/Iraq/Egypt/Iran via Jewish Encyclopedia 1906 and Encyclopaedia Judaica tables; Canada/Australia/South Africa incl. ABS 2011-21 Judaism counts; Austria/Switzerland via HLS census tables; Latvia/Lithuania/Estonia via Pinkas Lita; Romania, Poland, Ukraine, Belarus/Moldova/Russia/Slovakia, Czech/Hungary/Germany/France via JewishGen Cemetery Project census sentences; US AJYB 1955-77 via JewishData Bank; Balkans/Greece; NRW via the LWL Westphalia handbook): ~11,000 more rows and ~1,900 more markers. District-wide (JCK Netherlands) and OCR-doubtful (AJYB 1961/68/71) rows carry probability medium/low.
 - **Still open**: ~700 unresolved gazetteer names; ~130 Bulgarian/Yugoslav/Regat-Romanian communities without sources; Bamberg and other big Bavarian cities (no regular tables);
   the 1948-82 AJYB volumes; France/Italy/Maghreb/Commonwealth/NRW-East/Austria-Switzerland row files (launched last; see `BIGRUN_2026-10-18.md`).
 
