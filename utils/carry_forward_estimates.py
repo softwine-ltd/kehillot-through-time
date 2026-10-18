@@ -155,6 +155,11 @@ def main():
         w.writerows(out)
     print("Backup:", backup)
     print(f"kehilot.csv: {len(data)} -> {len(out)} rows")
+    # last step of every run: keep each town one continuous, chronological block (estimate rows were appended at the end)
+    sys.path.insert(0, HERE)
+    import sort_kehilot
+    _, was_sorted = sort_kehilot.sort_file(KEH, apply=True)
+    print("sort_kehilot:", "already sorted" if was_sorted else "sorted")
 
 
 if __name__ == "__main__":

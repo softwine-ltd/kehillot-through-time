@@ -1385,3 +1385,8 @@ the dataset more than 25 km away), `split_deep.py` (one `city_data` file per tow
 - **Backups**: each merge script writes `kehilot_backup_<time>_pre_<step>.csv` next to kehilot.csv (about 7 GB by evening). They are git-ignored now; only the newest five stay in the repo folder, older ones were moved to `AnacondaProjects/python_310/jew_hist/kehilot_backups_archive/`.
 - **Estimate colour** checked in the live page (2023): amber marker, Hebrew "estimate" badge and "carried forward from 2008, not a source" text in the popup.
 - `git push` of main prints "Cannot update this protected ref" lines from another ref; main itself updates fine (check with `git status -sb`).
+
+### kehilot.csv is sorted by town (2026-10-18)
+- `utils/sort_kehilot.py` keeps `kehilot.csv` sorted by country, accent-stripped city name, coordinates, then year, so every town is one continuous, chronological block (this makes duplicate rows and inconsistencies easy to see). The site does not depend on the row order; popups simply list a town's facts chronologically.
+- **Order of the steps after any merge:** merge script (`merge_medieval.py`, `merge_deep.py`, `merge_gaprun9.py` ... they append new rows at the end) -> `fix_boundary.py apply` -> `carry_forward_estimates.py apply` (its last step runs `sort_kehilot.py`) -> `validate_kehilot.py` (warns if the file is not sorted) -> commit. If you change the file in any other way, run `sort_kehilot.py apply` yourself.
+- The sort is stable and verifies that the row set is unchanged before it writes.

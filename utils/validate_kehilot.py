@@ -49,6 +49,10 @@ for t, items in town.items():
     for i, r, _, y in items:
         if r[7] and fnum(r[7].lstrip("~")) and r[9] != "estimate": by[y].add(fnum(r[7].lstrip("~")))
     if any(len(v) > 1 for v in by.values()): warn["same-year rows with different counts"].append(t[1])
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sort_kehilot  # noqa: E402
+if not sort_kehilot.is_sorted(data):
+    warn["file not sorted by town (run utils/sort_kehilot.py apply)"] = [0]
 dups = [k for k, v in seen.items() if v > 1]
 if dups: err["exact duplicate rows"] = [sum(seen[k] - 1 for k in dups)]
 print(f"{len(data)} rows, {len(town)} markers, {len({r[0] for r in data})} countries")
