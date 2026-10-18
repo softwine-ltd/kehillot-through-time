@@ -3922,6 +3922,16 @@ function updateArrows(year) {
 }
 
 function formatSource(source) {
+    // A row can cite several sources, separated by " | ": render each one separately, so that
+    // a string such as "https://a | https://b" does not become one broken link.
+    const parts = String(source || '').split(/\s+\|\s+/).map(s => s.trim()).filter(Boolean);
+    if (parts.length > 1) {
+        return parts.map((p, i) => formatSingleSource(p, i + 1)).join(' &middot; ');
+    }
+    return formatSingleSource(parts[0] || '', 0);
+}
+
+function formatSingleSource(source, number) {
     // Check if the source is a URL
     const isUrl = source.startsWith('http://') || source.startsWith('https://') || source.startsWith('www.');
 
@@ -3932,7 +3942,7 @@ function formatSource(source) {
             en: 'Online source ↗',
             fr: 'Source en ligne ↗'
         };
-        const linkText = linkTextMap[currentLangForPopup] || linkTextMap.en;
+        const linkText = (linkTextMap[currentLangForPopup] || linkTextMap.en).replace(' ↗', number ? ` ${number} ↗` : ' ↗');
         return `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer" style="
             color: #2563eb;
             text-decoration: underline;
