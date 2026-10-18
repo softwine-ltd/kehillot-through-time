@@ -1358,3 +1358,9 @@ the dataset more than 25 km away), `split_deep.py` (one `city_data` file per tow
    points at a Python 3.11 install that no longer exists on this machine) — recreate it, or use a
    small dedicated venv with just `google-genai pandas openpyxl requests beautifulsoup4
    python-dotenv pymupdf` installed, before running any `jew_hist/` script.
+
+### Addendum 2026-10-18 (late): deepening waves and row files
+- Three waves of per-town "deepening" agents (about 85 large towns in Europe, USA and Canada whose series were sparse) were merged with `merge_gaprun9.py`; row files from ISJL (Southern US, 208 places), Nordic/Iberian sources (54 places) and US state histories / AJYB 1907 and 1999-2002 / Jewish Encyclopedia (330 places) were merged through `check_collide.py` -> `split_deep.py` -> `merge_deep.py`.
+- Fixes found on the way: the Landsberg marker pointed at Landsberg (Saalekreis) while its rows are the DP camp at Landsberg am Lech (moved); the Piaski pin is Piaski in Gostyn county while all documented Jewish data is Piaski near Lublin (added as "Piaski (Lublin Voivodeship)"); Wilmington 64,092 and Boynton Beach 58,000 had no source and were moved to Notes.
+- Lessons: agents share a ~200-call WebSearch budget, so later waves are thinner; AJYB volumes 1950-1970 are lending-locked on archive.org (use policyarchive.org / JewishData Bank PDFs); AJYB 1960s-80s "community" estimates often cover metro areas and are marked low.
+- State after this addendum: 80,875 rows, 10,270 towns, 127 countries.
