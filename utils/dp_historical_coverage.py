@@ -16,8 +16,10 @@ KEH = os.path.join(os.path.dirname(HERE), "kehilot.csv")
 EI = {"Israel", "Palestine"}
 ASIA = {"Afghanistan", "Armenia", "Azerbaijan", "Bahrain", "China", "Cyprus", "Georgia", "Hong Kong", "India", "Indonesia", "Iran", "Iraq", "Japan", "Jordan",
         "Kazakhstan", "Kuwait", "Kyrgyzstan", "Lebanon", "Malaysia", "Mongolia", "Myanmar", "Pakistan", "Philippines", "Saudi Arabia", "Singapore", "Sri Lanka",
-        "Syria", "Tajikistan", "Thailand", "Turkey", "Turkmenistan", "Uzbekistan", "Vietnam", "Yemen", "Papua New Guinea"}
-AFRICA = {"Algeria", "Egypt", "Ethiopia", "Kenya", "Libya", "Morocco", "Tunisia", "Uganda", "Cape Verde", "Zambia"}
+        "Syria", "Tajikistan", "Thailand", "Turkey", "Turkmenistan", "Uzbekistan", "Vietnam", "Yemen", "Papua New Guinea",
+        "Bangladesh", "Cambodia", "Macau", "Nepal", "South Korea", "Taiwan"}
+AFRICA = {"Algeria", "Egypt", "Ethiopia", "Kenya", "Libya", "Morocco", "Tunisia", "Uganda", "Cape Verde", "Zambia",
+          "Angola", "Botswana", "Democratic Republic of the Congo", "Eritrea", "Madagascar", "Mauritius", "Mozambique", "Sudan", "Tanzania"}
 AMOC = {"Argentina", "Aruba", "Australia", "Bahamas", "Barbados", "Belize", "Bermuda", "Bolivia", "Brazil", "Canada", "Cayman Islands", "Chile", "Colombia",
         "Costa Rica", "Cuba", "Curaçao", "Dominican Republic", "Ecuador", "El Salvador", "Fiji", "French Polynesia", "Guadeloupe", "Guam", "Guatemala", "Guyana",
         "Haiti", "Honduras", "Jamaica", "Martinique", "Mexico", "Namibia", "New Caledonia", "New Zealand", "Nicaragua", "Panama", "Paraguay", "Peru", "Puerto Rico",
@@ -102,8 +104,8 @@ def table2():
     EB = {"Poland", "Hungary", "Czech Republic", "Slovakia", "Romania", "Bulgaria", "Albania", "Bosnia and Herzegovina", "Croatia", "Kosovo", "Montenegro",
           "North Macedonia", "Serbia", "Slovenia"}
     EU_E = {"Poland", "Hungary", "Czech Republic", "Slovakia", "Romania", "Bulgaria", "Slovenia", "Estonia", "Latvia", "Lithuania"}
-    NAFR = {"Algeria", "Egypt", "Ethiopia", "Libya", "Morocco", "Tunisia"}
-    SAFR = {"South Africa", "Zimbabwe", "Namibia", "Zambia", "Kenya", "Uganda", "Cape Verde"}
+    NAFR = {"Algeria", "Egypt", "Ethiopia", "Libya", "Morocco", "Tunisia", "Eritrea", "Sudan"}
+    SAFR = {"South Africa", "Zimbabwe", "Namibia", "Zambia", "Kenya", "Uganda", "Cape Verde", "Angola", "Botswana", "Democratic Republic of the Congo", "Madagascar", "Mauritius", "Mozambique", "Tanzania"}
     NAM = {"USA", "United States", "Canada"}
     OCE = {"Australia", "New Zealand", "Fiji", "French Polynesia", "Guam", "New Caledonia", "Papua New Guinea", "Samoa", "Vanuatu"}
 
