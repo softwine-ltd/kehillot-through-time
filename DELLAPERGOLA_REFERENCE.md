@@ -126,3 +126,74 @@ Added (9 rows, probability `medium`, Source = the AJYB 2023 volume URL, Notes gi
 * London 2011: the map has 150,329 (JPR census table), DellaPergola's Table 13 has 148.6 thousand (2001 and 2021 agree: 149,789 / 145,466 vs 149.8 / 145.5).
 * Bremen 2023: DellaPergola 739 (ZWST report of 2022) vs the map's 729 (ZWST 31 Dec 2023, parsed earlier): consistent, different year-end.
 * The country totals of the map against the 2024 table are in `utils/data/dp_coverage_report.csv` (regenerate with `utils/dp_coverage_report.py`).
+
+## S. DellaPergola, "Demography and Jewish peoplehood" (Hebrew; chapter 1 of Part 2 of a volume on Jewish people studies; PDF pp. 2-30, printed pp. 58-85; the file is `retzifut/demografia-veamiyut-yehudit.pdf`)
+
+**Table 1 (printed p. 74): world Jewish population by major regions, 1170-1948 (thousands).** DellaPergola's regions: West Europe includes southern Europe; East Europe includes the Russian empire and its successor states and the Balkans; America and Oceania includes South Africa as in the source's own region definition (see the coverage script).
+
+| Year | Eretz Israel | Asia | Africa | West Europe | East Europe | America and Oceania | World |
+|---|---|---|---|---|---|---|---|
+| 1170 | 7 | 973 | 70 | 102.5 | 47.5 | 0.1 | 1,200 |
+| 1300 | 5 | 645 | 100 | 385 | 65 | 0.1 | 1,200 |
+| 1490 | 5 | 570 | 125 | 510 | 90 | 0.1 | 1,300 |
+| 1600 | 15 | 509 | 175 | 200 | 200 | 1 | 1,100 |
+| 1700 | 5 | 200 | 172 | 146 | 573 | 4 | 1,100 |
+| 1800 | 7 | 253 | 212 | 333 | 1,687 | 8 | 2,500 |
+| 1825 | 7 | 293 | 240 | 458 | 2,272 | 11 | 3,281 |
+| 1880 | 24 | 326 | 280 | 1,044 | 5,727 | 262 | 7,663 |
+| 1900 | 50 | 389 | 339 | 1,176 | 7,590 | 1,056 | 10,600 |
+| 1939 | 445 | 555 | 600 | 1,350 | 8,150 | 5,400 | 16,500 |
+| 1948 | 650 | 625 | 700 | 1,035 | 2,715 | 5,775 | 11,500 |
+
+**Table 2 (printed p. 78): world Jewish population by major regions, 1948, 1970, 2008 (thousands; core definition).**
+
+| Region | 1948 | 1970 | 2008 |
+|---|---|---|---|
+| World total | 11,500 | 12,662 | 13,232 |
+| Israel | 650 | 2,582 | 5,478 |
+| Diaspora total | 10,850 | 10,080 | 7,754 |
+| West Europe (2008: incl. the East European EU members) | 1,035 | 1,119 | 1,146 |
+| East Europe and Balkans | 765 | 216 | 21 |
+| Former Soviet Union, Europe | 1,950 | 1,906 | 313 |
+| Former Soviet Union, Asia | 350 | 262 | 20 |
+| Rest of Asia | 275 | 100 | 20 |
+| North Africa (incl. Ethiopia) | 595 | 83 | 4 |
+| South Africa | 105 | 124 | 73 |
+| North America | 5,215 | 5,686 | 5,650 |
+| Latin America | 520 | 514 | 392 |
+| Oceania | 40 | 70 | 115 |
+
+Other figures in the chapter: about 1 million Jews at the start of the second millennium (give or take several hundred thousand); 2.5 million in 1800; 10.6 million around 1900 (the 19th century, mostly East Europe); 16.5 million on the eve of the Second World War; about 11 million in 1945; a little over 13 million in 2000; 13.2 million in 2008 (5.5 million in Israel, 7.75 million in the diaspora). The Jewish share of world population: about 4.5 per 1,000 in 1948, about 2 per 1,000 in 2008. 120+ years of migration from the 1880s to the 2000s: more than 9 million Jews emigrated. It took 13 years to add the first million after 1945 and 47 more years for the second million. Germany: about 30,000 Jews in 1989, about 120,000 in 2008. USA 2008: about 5.3 million core (4.3 million in the 2001 national survey; about 8.3 million in the extended population). About 90% of the world's Jews lived in the most developed countries around 2000; more than half lived in six metropolitan areas.
+
+### Coverage review of kehilot.csv against these tables (script `utils/dp_historical_coverage.py`, data `utils/data/dp_world_regions_*.csv`, full output `utils/data/dp_historical_coverage_report.txt`; real rows only, no carry-forward estimates; a town counts if some row with a Population covers the year, +-5 years for single-year rows)
+
+```
+dataset thousands / DellaPergola thousands (ratio), towns with a count
+ year               eretz_israel                       asia                     africa                west_europe                east_europe            america_oceania
+ 1170      2.8/     7.0 (0.40) n=  13    400.6/   973.0 (0.41) n=  76     34.5/    70.0 (0.49) n=  21     52.1/   102.5 (0.51) n=  74      3.3/    47.5 (0.07) n=   4      0.0/     0.1 (0.00) n=   0
+ 1300      2.5/     5.0 (0.50) n=   5    231.8/   645.0 (0.36) n=  71     42.1/   100.0 (0.42) n=  17     81.6/   385.0 (0.21) n= 102     11.3/    65.0 (0.17) n=  10      0.0/     0.1 (0.00) n=   0
+ 1490      2.5/     5.0 (0.50) n=   7    192.4/   570.0 (0.34) n=  81     36.0/   125.0 (0.29) n=  21     61.7/   510.0 (0.12) n= 176     17.2/    90.0 (0.19) n=  32      0.0/     0.1 (0.00) n=   0
+ 1600      2.5/    15.0 (0.17) n=   6    185.3/   509.0 (0.36) n= 111     58.7/   175.0 (0.34) n=  29     83.0/   200.0 (0.41) n= 181    119.5/   200.0 (0.60) n= 146      2.8/     1.0 (2.78) n=   4
+ 1700      2.5/     5.0 (0.50) n=   6    170.0/   200.0 (0.85) n= 127     70.2/   172.0 (0.41) n=  34    125.5/   146.0 (0.86) n= 304    272.1/   573.0 (0.47) n= 268      5.9/     4.0 (1.48) n=  10
+ 1800      6.8/     7.0 (0.96) n=   8    264.3/   253.0 (1.04) n= 158    114.8/   212.0 (0.54) n=  43    212.3/   333.0 (0.64) n= 696    807.8/  1687.0 (0.48) n= 846     14.7/     8.0 (1.83) n=  23
+ 1825      7.8/     7.0 (1.12) n=  10    190.9/   293.0 (0.65) n= 166     86.9/   240.0 (0.36) n=  44    403.0/   458.0 (0.88) n=1533   1202.9/  2272.0 (0.53) n=1047     19.8/    11.0 (1.80) n=  29
+ 1880     27.1/    24.0 (1.13) n=  13    194.5/   326.0 (0.60) n= 180    158.5/   280.0 (0.57) n=  80    927.0/  1044.0 (0.89) n=2009   3622.1/  5727.0 (0.63) n=2375    302.3/   262.0 (1.15) n= 230
+ 1900     47.4/    50.0 (0.95) n=  21    319.3/   389.0 (0.82) n= 280    254.3/   339.0 (0.75) n=  97   1256.8/  1176.0 (1.07) n=2067   5808.1/  7590.0 (0.77) n=3069   1409.8/  1056.0 (1.34) n= 327
+ 1939    354.3/   445.0 (0.80) n= 190    384.2/   555.0 (0.69) n= 194    420.7/   600.0 (0.70) n=  96   1316.1/  1350.0 (0.97) n= 970   7924.8/  8150.0 (0.97) n=2679   4665.6/  5400.0 (0.86) n=1458
+ 1948    637.5/   650.0 (0.98) n= 405    351.9/   625.0 (0.56) n= 193    453.5/   700.0 (0.65) n=  86    752.0/  1035.0 (0.73) n= 632   2611.7/  2715.0 (0.96) n=1037   5121.4/  5775.0 (0.89) n=1342
+
+Table 2 comparison (dataset thousands / DellaPergola thousands, ratio, towns): 1948 | 1970 | 2008
+israel                          637.5/   650.0 ( 0.98) n= 405 |   2483.3/  2582.0 ( 0.96) n= 514 |   5968.3/  5478.0 ( 1.09) n=1058
+west_europe                     752.0/  1035.0 ( 0.73) n= 632 |    793.4/  1119.0 ( 0.71) n= 500 |   1115.2/  1146.0 ( 0.97) n= 857
+east_europe_balkans            1115.1/   765.0 ( 1.46) n= 625 |    265.7/   216.0 ( 1.23) n= 401 |      4.8/    21.0 ( 0.23) n=  22
+fsu_europe                     1496.7/  1950.0 ( 0.77) n= 412 |   1290.9/  1906.0 ( 0.68) n= 403 |    477.6/   313.0 ( 1.53) n= 193
+fsu_asia                        127.8/   350.0 ( 0.37) n=  50 |    129.4/   262.0 ( 0.49) n=  54 |     25.5/    20.0 ( 1.27) n=  49
+rest_of_asia                    224.1/   275.0 ( 0.81) n= 143 |    123.4/   100.0 ( 1.23) n= 120 |     46.7/    20.0 ( 2.34) n= 109
+north_africa_incl_ethiopia      452.6/   595.0 ( 0.76) n=  84 |    125.8/    83.0 ( 1.52) n=  50 |     16.7/     4.0 ( 4.18) n=  38
+south_africa                     27.3/   105.0 ( 0.26) n=  14 |     98.8/   124.0 ( 0.80) n=  24 |     46.6/    73.0 ( 0.64) n=  13
+north_america                  4921.9/  5215.0 ( 0.94) n=1271 |   5180.2/  5686.0 ( 0.91) n= 892 |   5639.6/  5650.0 ( 1.00) n= 657
+latin_america                   148.4/   520.0 ( 0.29) n=  50 |    469.1/   514.0 ( 0.91) n=  60 |    424.0/   392.0 ( 1.08) n= 487
+oceania                          24.5/    40.0 ( 0.61) n=   9 |     64.3/    70.0 ( 0.92) n=  10 |    109.4/   115.0 ( 0.95) n=  23
+```
+
+**Reading the review.** Coverage is good for 1939 (Eretz Israel 0.80, Asia 0.69, Africa 0.70, West Europe 0.97, East Europe 0.97, Americas/Oceania 0.86) and for 1948 and 1970 in Israel, North America, Oceania and Eastern Europe. The map is much thinner (ratios below 0.6) for: **medieval and early modern Asia and Africa (1170-1600: about 0.3-0.5)**, **West Europe 1300-1490 (0.21 and 0.12)** and **East Europe 1170-1490 (0.07-0.19)** (medieval population counts are scarce: most medieval rows are presence rows), **East Europe 1800-1825 (about 0.5)**, **Asia and Africa in 1880 (0.60 and 0.57)**, **Latin America 1948 (0.29)**, **South Africa and the rest of southern Africa 1948 (0.26)**, **Former Soviet Union Asia 1948-1970 (0.37-0.49)** and **North Africa 1948 (0.76 only after the Maghreb sweeps)**. Over-coverage (ratio well above 1: stale or duplicated population values, or old rows whose interval is stretched across the year, worth a check): **East Europe and Balkans 1948-1970 (1.46, 1.23)**, **the Americas around 1900 (1.34: the USA sum is about 1.36 million against DellaPergola's 1.06 million for all of America and Oceania)**, and 2008 for rest of Asia (2.3), North Africa (4.2) and FSU Europe (1.5), where old counts persist (the map has no later row to end them). Suggested next sweeps: Latin America 1920-1948 (Argentina, Brazil, Chile, Mexico, Uruguay small communities), southern and East Africa, Central Asia/Caucasus 1930s-1970 (Bukharan and Georgian Jews), Ottoman Asia and Persia 1880 (Turkey, Iraq, Iran, Syria, Yemen), the Maghreb 1948, and population-bearing rows for medieval West Europe (Germany, France, England: Toch, Mundill).
