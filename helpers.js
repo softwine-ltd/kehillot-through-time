@@ -887,11 +887,16 @@ function updateMarkers(kehilot) {
 var playIntervalGlobal = null;
 var animationSpeed = 2; // Default speed multiplier
 
+// Starting view and the "Europe & Middle East" view: centred south-east of the Aegean so that Israel and its
+// surroundings (Sinai, Egypt's delta, Lebanon, Syria, Jordan, Cyprus, Turkey, Iraq) are all in view, with Italy,
+// Greece and the Balkans still visible on the west/north edge.
+var EUROPE_MIDDLE_EAST_VIEW = { center: [35, 32], zoom: 5 };
+
 function initializeMap() {
     // Initialize map
     map = L.map('map', {
-        center: [41.9028, 25.4324],
-        zoom: 5,
+        center: EUROPE_MIDDLE_EAST_VIEW.center,
+        zoom: EUROPE_MIDDLE_EAST_VIEW.zoom,
         minZoom: 3,
         maxZoom: 14,
         maxBounds: [
@@ -1066,8 +1071,8 @@ function initializeMap() {
         const selectedCenter = e.target.value;
         
         if (selectedCenter === 'europe') {
-            // Center on Europe & Middle East (Bulgaria)
-            map.setView([41.9028, 25.4324], 5);
+            // Center on Europe & Middle East (same as the starting view)
+            map.setView(EUROPE_MIDDLE_EAST_VIEW.center, EUROPE_MIDDLE_EAST_VIEW.zoom);
         } else if (selectedCenter === 'americas') {
             // Center on Americas (US)
             map.setView([38, -90], 5);
