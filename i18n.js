@@ -19,7 +19,13 @@ class I18n {
      */
     async init() {
         // Load saved language preference or detect browser language
-        const savedLanguage = localStorage.getItem('preferredLanguage');
+        // localStorage is writable by anything running on this origin and can be blocked entirely (private mode),
+        // so only accept a language we actually ship.
+        let savedLanguage = null;
+        try {
+            const stored = localStorage.getItem('preferredLanguage');
+            if (this.isLanguageSupported(stored)) savedLanguage = stored;
+        } catch (_) { /* storage unavailable: fall back to browser detection */ }
         const browserLanguage = this.detectBrowserLanguage();
         this.currentLanguage = savedLanguage || browserLanguage || this.fallbackLanguage;
 
@@ -153,7 +159,7 @@ class I18n {
         this.currentLanguage = langCode;
 
         // Save preference
-        localStorage.setItem('preferredLanguage', langCode);
+        try { localStorage.setItem('preferredLanguage', langCode); } catch (_) { /* storage unavailable */ }
 
         // Apply language changes (dispatches 'languageChanged' itself, see below)
         this.applyLanguage();
@@ -254,7 +260,10 @@ class I18n {
             if (Array.isArray(translation)) {
                 // Handle arrays (like lists)
                 if (element.tagName === 'UL' || element.tagName === 'OL') {
-                    element.innerHTML = translation.map(item => `<li>${item}</li>`).join('');
+                    // Translation text is plain text: escape it rather than trusting the JSON to contain no markup.
+                    const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+                    element.innerHTML = translation.map(item => `<li>${esc(item)}</li>`).join('');
                 } else {
                     element.textContent = translation.join(', ');
                 }

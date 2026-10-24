@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Load MarkerCluster after Leaflet is ready
     var markerClusterScript = document.createElement('script');
     markerClusterScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js';
+    // Subresource Integrity: the browser refuses the script if the CDN ever serves different bytes.
+    markerClusterScript.integrity = 'sha384-RLIyj5q1b5XJTn0tqUhucRZe40nFTocRP91R/NkRJHwAe4XxnTV77FXy/vGLiec2';
+    markerClusterScript.crossOrigin = 'anonymous';
     markerClusterScript.onload = initializeMap;  // Call initialization after MarkerCluster loads
     document.head.appendChild(markerClusterScript);
 });
@@ -245,9 +248,10 @@ function addEventMarkers() {
         tooltip.className = 'timeline-tooltip';
 
         // Create structured tooltip content
-        const linkHtml = event.url ? `
+        const eventUrl = safeUrl(event.url);
+        const linkHtml = eventUrl ? `
             <div class="tooltip-link">
-                <a href="${escapeHtml(event.url)}" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline; font-size: 11px;">
+                <a href="${escapeHtml(eventUrl)}" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline; font-size: 11px;">
                     Learn more ↗
                 </a>
             </div>
@@ -261,11 +265,11 @@ function addEventMarkers() {
         if (currentLang === 'he') {
             tooltipContent = `
                 <div class="tooltip-content">
-                    <div class="tooltip-hebrew">${event.titleHe}</div>
-                    <div class="tooltip-english">${event.titleEn}</div>
+                    <div class="tooltip-hebrew">${escapeHtml(event.titleHe)}</div>
+                    <div class="tooltip-english">${escapeHtml(event.titleEn)}</div>
                     <div class="tooltip-year">
                         ${event.year < 0 ? Math.abs(event.year) + ' BCE' : event.year + ' CE'} 
-                        / ${event.hebrewYear}
+                        / ${escapeHtml(event.hebrewYear)}
                     </div>
                     ${linkHtml}
                 </div>
@@ -273,11 +277,11 @@ function addEventMarkers() {
         } else if (currentLang === 'fr') {
             tooltipContent = `
                 <div class="tooltip-content">
-                    <div class="tooltip-french" style="font-family: 'Arial', sans-serif; font-size: 14px; font-weight: bold;">${event.titleFr}</div>
-                    <div class="tooltip-english" style="font-size: 12px; color: #e2e8f0;">${event.titleEn}</div>
+                    <div class="tooltip-french" style="font-family: 'Arial', sans-serif; font-size: 14px; font-weight: bold;">${escapeHtml(event.titleFr)}</div>
+                    <div class="tooltip-english" style="font-size: 12px; color: #e2e8f0;">${escapeHtml(event.titleEn)}</div>
                     <div class="tooltip-year" style="font-size: 11px; color: #94a3b8; margin-top: 2px;">
                         ${event.year < 0 ? Math.abs(event.year) + ' AEC' : event.year + ' EC'} 
-                        / ${event.hebrewYear}
+                        / ${escapeHtml(event.hebrewYear)}
                     </div>
                     ${linkHtml}
                 </div>
@@ -285,11 +289,11 @@ function addEventMarkers() {
         } else {
             tooltipContent = `
                 <div class="tooltip-content">
-                    <div class="tooltip-hebrew">${event.titleHe}</div>
-                    <div class="tooltip-english">${event.titleEn}</div>
+                    <div class="tooltip-hebrew">${escapeHtml(event.titleHe)}</div>
+                    <div class="tooltip-english">${escapeHtml(event.titleEn)}</div>
                     <div class="tooltip-year">
                         ${event.year < 0 ? Math.abs(event.year) + ' BCE' : event.year + ' CE'} 
-                        / ${event.hebrewYear}
+                        / ${escapeHtml(event.hebrewYear)}
                     </div>
                     ${linkHtml}
                 </div>
@@ -422,6 +426,51 @@ function escapeHtml(value) {
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#39;');
+}
+
+// Escaping does not make a URL safe to put in href: "javascript:..." survives it intact. Every link built from
+// CSV or event data goes through here, which only lets http(s) addresses (and bare "www." ones, made https) through
+// and returns '' for anything else.
+function safeUrl(value) {
+    const s = String(value === undefined || value === null ? '' : value).trim();
+    if (/^https?:\/\//i.test(s)) return s;
+    if (/^www\./i.test(s)) return 'https://' + s;
+    return '';
+}
+
+// Text typed into the "suggest data" form is e-mailed to the maintainers: drop control characters and cap the length.
+function cleanInput(value, maxLen) {
+    return String(value === undefined || value === null ? '' : value)
+        .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, ' ')
+        .trim()
+        .slice(0, maxLen);
+}
+
+// One CSV field with RFC 4180 quoting. A text that starts with = + - @ (or a tab/CR) would be run as a formula when the
+// file is opened in Excel/Sheets, so it gets a leading apostrophe. Numbers go through csvNumber() instead.
+function csvCell(value) {
+    let s = String(value === undefined || value === null ? '' : value)
+        .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, ' ');
+    if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
+    return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+}
+
+function csvNumber(value) {
+    const n = Number(value);
+    return value !== '' && value !== null && value !== undefined && Number.isFinite(n) ? String(n) : '';
+}
+
+// A suggestion as rows in kehilot.csv's own 19-column layout (country, city, long, lat, year_estab, year_start, year_end,
+// pop_start, pop_end, probability, type, symbol, 5 name columns, source, comment). Confidence is 'low': nothing a visitor
+// types has been checked yet.
+function suggestionToCsv(data, timestamp) {
+    return data.entries.map(entry => [
+        csvCell(data.country), csvCell(data.townName), csvNumber(data.coordinates.lon), csvNumber(data.coordinates.lat),
+        csvNumber(entry.year), csvNumber(entry.year), csvNumber(entry.year), csvNumber(entry.population), csvNumber(entry.population),
+        'low', '1', '1', '', '', '', '', '',
+        csvCell(entry.source),
+        csvCell(`Suggested by: ${data.userName || 'Anonymous'}, Comment: ${data.comment || 'None'}, Submitted: ${timestamp}`)
+    ].join(',')).join('\n');
 }
 
 
@@ -1319,7 +1368,7 @@ function initializeMap() {
         printHeader.innerHTML = `
             <div style="text-align: center; margin-bottom: 10px; padding-bottom: 5px;">
                 <h2 style="margin: 0; color: #333; font-size: 16px; font-weight: normal;">Jewish Demographics & Historical Communities Map</h2>
-                <p style="margin: 2px 0 0 0; color: #666; font-size: 12px;">Year: ${yearDisplay}</p>
+                <p style="margin: 2px 0 0 0; color: #666; font-size: 12px;">Year: ${escapeHtml(yearDisplay)}</p>
             </div>
         `;
         document.body.insertBefore(printHeader, document.body.firstChild);
@@ -1479,7 +1528,7 @@ function initializeMap() {
         printHeader.innerHTML = `
             <div style="text-align: center; margin-bottom: 10px; padding-bottom: 5px;">
                 <h2 style="margin: 0; color: #333; font-size: 16px; font-weight: normal;">Jewish Demographics & Historical Communities Map</h2>
-                <p style="margin: 2px 0 0 0; color: #666; font-size: 12px;">Year: ${yearDisplay}</p>
+                <p style="margin: 2px 0 0 0; color: #666; font-size: 12px;">Year: ${escapeHtml(yearDisplay)}</p>
             </div>
         `;
         document.body.insertBefore(printHeader, document.body.firstChild);
@@ -2064,24 +2113,38 @@ function initializeMap() {
                 return;
             }
             
+            // Anti-abuse: a bot that fills every field fills the hidden "website" one too -- pretend it worked and send nothing.
+            const honeypot = document.getElementById('hpWebsite');
+            if (honeypot && honeypot.value) {
+                closeDataEntryModal();
+                closeTownSelectionModal();
+                return;
+            }
+            if (Date.now() - lastSuggestionSentAt < 30000) {
+                alert('Please wait a few seconds before sending another suggestion.');
+                return;
+            }
+
             const data = {
-                townName: selectedTownName,
-                country: selectedCountry,
+                townName: cleanInput(selectedTownName, 120),
+                country: cleanInput(selectedCountry, 80),
                 coordinates: confirmedCoords,
                 entries: [],
-                comment: document.getElementById('comment').value,
-                userName: document.getElementById('yourName').value,
-                userEmail: document.getElementById('yourEmail').value
+                comment: cleanInput(document.getElementById('comment').value, 2000),
+                userName: cleanInput(document.getElementById('yourName').value, 120),
+                userEmail: cleanInput(document.getElementById('yourEmail').value, 200)
             };
             
             // Collect all data entries
             document.querySelectorAll('#dataEntries > div').forEach(entryDiv => {
                 data.entries.push({
-                    year: entryDiv.querySelector('.year-input').value,
-                    population: entryDiv.querySelector('.population-input').value,
-                    source: entryDiv.querySelector('.source-input').value
+                    year: cleanInput(entryDiv.querySelector('.year-input').value, 12),
+                    population: cleanInput(entryDiv.querySelector('.population-input').value, 12),
+                    source: cleanInput(entryDiv.querySelector('.source-input').value, 500)
                 });
             });
+            // The form can add as many rows as the visitor likes: cap what is e-mailed.
+            data.entries = data.entries.slice(0, 50);
             
             // Show loading state
             const submitButton = dataEntryForm.querySelector('button[type="submit"]');
@@ -2092,6 +2155,7 @@ function initializeMap() {
             try {
                 // Send email via EmailJS
                 await sendSuggestionsEmail(data);
+                lastSuggestionSentAt = Date.now();
                 
                 closeDataEntryModal();
                 closeTownSelectionModal();
@@ -2104,6 +2168,8 @@ function initializeMap() {
                 submitButton.textContent = originalText;
             }
         });
+
+        let lastSuggestionSentAt = 0;
 
         async function sendSuggestionsEmail(data) {
             // Initialize EmailJS with your public key
@@ -2142,9 +2208,7 @@ Submitted at: ${new Date().toISOString()}
                 user_email: data.userEmail || 'Not provided',
                 message: message,
                 // For CSV download backup
-                csv_data: data.entries.map(entry => {
-                    return `${data.country},${data.townName},${data.coordinates.lon},${data.coordinates.lat},,${entry.year},${entry.population},high,1,1,,,,,,${entry.source},"Suggested by: ${data.userName || 'Anonymous'}, Comment: ${data.comment || 'None'}, Submitted: ${new Date().toISOString()}"`;
-                }).join('\n')
+                csv_data: suggestionToCsv(data, new Date().toISOString())
             };
             
             // Send email
@@ -2156,9 +2220,7 @@ Submitted at: ${new Date().toISOString()}
         function saveSuggestionsToFile(data) {
             // Create CSV entry
             const timestamp = new Date().toISOString();
-            const csvEntries = data.entries.map(entry => {
-                return `${data.country},${data.townName},${data.coordinates.lon},${data.coordinates.lat},,${entry.year},${entry.population},high,1,1,,,,,,${entry.source},"Suggested by: ${data.userName || 'Anonymous'}, Comment: ${data.comment || 'None'}, Submitted: ${timestamp}"`;
-            }).join('\n');
+            const csvEntries = suggestionToCsv(data, timestamp);
             
             // Try to download the file
             const blob = new Blob([csvEntries], { type: 'text/csv' });
@@ -3530,9 +3592,10 @@ function regenerateAllPopups() {
             };
             const labels = arrowLabels[currentLangForPopup] || arrowLabels.en;
             
-            const linkHtml = arrowData.url ? `
+            const arrowUrl = safeUrl(arrowData.url);
+            const linkHtml = arrowUrl ? `
                         <div class="tooltip-link" style="margin-top:6px;">
-                            <a href="${escapeHtml(arrowData.url)}" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline; font-size: 12px;">
+                            <a href="${escapeHtml(arrowUrl)}" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline; font-size: 12px;">
                                 ${labels.learnMore}
                             </a>
                         </div>
@@ -3852,9 +3915,10 @@ function createArrow(arrowData) {
     };
     const labels = arrowLabels[currentLangForPopup] || arrowLabels.en;
     
-    const linkHtml = arrowData.url ? `
+    const arrowUrl = safeUrl(arrowData.url);
+    const linkHtml = arrowUrl ? `
             <div class="tooltip-link" style="margin-top:6px;">
-                <a href="${escapeHtml(arrowData.url)}" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline; font-size: 12px;">
+                <a href="${escapeHtml(arrowUrl)}" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline; font-size: 12px;">
                     ${labels.learnMore}
                 </a>
             </div>
@@ -3938,9 +4002,9 @@ function formatSource(source) {
 
 function formatSingleSource(source, number) {
     // Check if the source is a URL
-    const isUrl = source.startsWith('http://') || source.startsWith('https://') || source.startsWith('www.');
+    const href = safeUrl(source);
 
-    if (isUrl) {
+    if (href) {
         const currentLangForPopup = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
         const linkTextMap = {
             he: 'מקור מקוון ↗',
@@ -3948,7 +4012,7 @@ function formatSingleSource(source, number) {
             fr: 'Source en ligne ↗'
         };
         const linkText = (linkTextMap[currentLangForPopup] || linkTextMap.en).replace(' ↗', number ? ` ${number} ↗` : ' ↗');
-        return `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer" style="
+        return `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" style="
             color: #2563eb;
             text-decoration: underline;
             font-weight: 500;
