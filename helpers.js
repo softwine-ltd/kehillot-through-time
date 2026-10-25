@@ -4097,12 +4097,45 @@ async function updateEvents(year) {
         // Process polygon events
         await processPolygonEvents(year);
 
+        // Draw the largest shapes first so a small ellipse/polygon inside a bigger one is on top and gets the click
+        stackEventsBySize();
+
         if (!map.hasLayer(eventsLayer)) {
             map.addLayer(eventsLayer);
         }
     } catch (error) {
         console.error('Error loading events data:', error);
     }
+}
+
+// Approximate area (square degrees, longitude scaled by latitude) of an event polygon's outer ring
+function eventShapeArea(layer) {
+    try {
+        let ring = layer.getLatLngs();
+        while (Array.isArray(ring) && Array.isArray(ring[0])) ring = ring[0];
+        if (!Array.isArray(ring) || ring.length < 3) return 0;
+        const k = Math.cos(ring.reduce((s, p) => s + p.lat, 0) / ring.length * Math.PI / 180);
+        let a = 0;
+        for (let i = 0; i < ring.length; i++) {
+            const p = ring[i], q = ring[(i + 1) % ring.length];
+            a += p.lng * k * q.lat - q.lng * k * p.lat;
+        }
+        return Math.abs(a) / 2;
+    } catch (e) {
+        return 0;
+    }
+}
+
+// Re-add the current events to the layer group from largest to smallest (equal sizes keep their order)
+function stackEventsBySize() {
+    const sized = currentEvents.map((layer, i) => ({ layer, i, area: eventShapeArea(layer) }));
+    sized.sort((x, y) => (y.area - x.area) || (x.i - y.i));
+    eventsLayer.clearLayers();
+    currentEvents = [];
+    sized.forEach(s => {
+        eventsLayer.addLayer(s.layer);
+        currentEvents.push(s.layer);
+    });
 }
 
 // Process ellipse events
