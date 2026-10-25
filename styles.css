@@ -286,6 +286,9 @@ body {
 .custom-popup .leaflet-popup-content {
     margin: 12px;
     min-width: 200px;
+    /* a long unbroken string (a URL left in a row's Notes) must wrap instead of running out of the popup */
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .floating-icon {
