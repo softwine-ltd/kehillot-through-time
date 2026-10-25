@@ -34,7 +34,7 @@ Kehillot Through Time offers a comprehensive visual exploration of Jewish demogr
 ### Features:
 - Time-lapse visualizations of population changes
 - Detailed community profiles
-- Historical event overlays
+- Historical event overlays (`events.csv` ellipses, `events_polygon.csv` polygons, `historical_arrows.csv` arrows): an area that is not well defined is an ellipse, an area that can be drawn accurately is a polygon, never both for the same event; smaller shapes are drawn on top of larger ones, so clicking an inner area opens its own popup
 - Population statistics and trends
 - Sources and methodological notes
 - Educational resources for teachers and researchers
@@ -51,6 +51,8 @@ ongoing expansion and correction — see [`DATA_COLLECTION_PIPELINE.md`](DATA_CO
 for the full collection pipeline, its provenance, current known gaps, and in-progress work (most
 notably closing the gap between this dataset's pre-WW2 Europe estimate and the accepted historical
 figure of ~9.5M — concentrated in Poland and the former Pale of Settlement).
+
+**Columns and the public Notes.** `kehilot.csv` has 19 public columns (the ones the site reads) and a 20th, `process_notes`, that the site never reads. The public Notes column is for visitors: what the source says, how to read the figure, caveats about the figure. Remarks about how the data was gathered and processed (page-image reading, OCR, search results, confidence tags, marker matching, coordinate provenance, review/merge logs, extra source links) are kept, verbatim, in `process_notes` for the maintainers; `utils/split_process_notes.py` moves them and runs after every merge (see `DATA_COLLECTION_PIPELINE.md`, "Public Notes vs `process_notes`").
 
 **What the data covers.** Besides the modern (16th–21st century) population series built by the AI
 pipeline, the map now has historical layers researched by source-checked sub-agents:

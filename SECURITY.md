@@ -8,6 +8,7 @@ is the main security question.
 
 * **Data in pages is escaped.** Every value from the CSV files goes through `escapeHtml()` before it reaches `innerHTML` or a popup; there are no inline
   event handlers, no `eval`, and no URL parameters are read.
+* **`process_notes`** (the 20th column of `kehilot.csv`) is download-only: no page code reads or renders it, and `utils/validate_kehilot.py` checks it like the other cells (script-like text, local paths).
 * **Links.** A link is only created for `http(s)://` (and bare `www.`) addresses (`safeUrl()` in `helpers.js`); `javascript:`, `data:` and similar become plain text
   or no link. All external links use `rel="noopener noreferrer"`.
 * **Content-Security-Policy** (a `<meta>` tag in `index.html`): scripts only from this site, the two pinned CDNs and Google Tag Manager; no inline scripts; no

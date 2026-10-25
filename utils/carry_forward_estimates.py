@@ -10,7 +10,9 @@ so a town that has received a newer count loses its estimate automatically (run 
 An estimate row
   * has probability = 'estimate' (the site draws it in its own colour; see helpers.js getConfidenceColor),
   * has source  = "Estimate: carried forward from <year>, not a source",
-  * has comment = "... [carry-forward-estimate]" with the original count, year and source,
+  * has comment = "Estimate, not a measurement: ..." (shown on the site) with the original count, year and source, and
+    process_notes = "Delete this row when a newer count is added. [carry-forward-estimate]" (never shown; the tag is what
+    validate_kehilot.py and this script's own cleanup look for),
   * covers (last real row's end + 1) .. END_YEAR with pop_start = pop_end = the last real count.
 
 Which towns qualify (real row = any row whose probability is not 'estimate'):
@@ -38,7 +40,8 @@ sys.stdout.reconfigure(encoding="utf-8")
 HERE = os.path.dirname(os.path.abspath(__file__))
 KEH = os.path.join(os.path.dirname(HERE), "kehilot.csv")
 C, CITY, LON, LAT, YE, YS, YEND, PS, PE, PROB, TYPE, SYM = range(12)
-SRC, COMMENT = 17, 18
+SRC, COMMENT, PROC = 17, 18, 19      # PROC = process_notes, the 20th column: maintenance remarks the site never reads
+NCOL = 20
 TAG = "[carry-forward-estimate]"
 ESTIMATE = "estimate"
 
@@ -48,6 +51,19 @@ EXCLUDE_COUNTRIES = {
     "Iran", "Iraq", "Syria", "Yemen", "Lebanon", "Libya", "Afghanistan", "Venezuela",   # emigration / crisis
     "Israel", "Palestine",                                            # annual CBS counts exist; growth makes a flat line wrong
 }
+
+
+def first_source(src):
+    """The first source of a Source cell (cut at the first comma outside parentheses, so a citation is never left half open)."""
+    depth = 0
+    for i, ch in enumerate(src):
+        if ch == "(":
+            depth += 1
+        elif ch == ")":
+            depth = max(0, depth - 1)
+        elif ch == "," and depth == 0:
+            return src[:i].strip()
+    return src.strip()
 
 
 def num(s):
@@ -80,6 +96,10 @@ def main():
         rd = csv.reader(f)
         header = next(rd)
         data = list(rd)
+    if len(header) < NCOL:
+        header = header[:19] + ["process_notes"]
+    for r in data:
+        r.extend([""] * (NCOL - len(r)))
     real = [r for r in data if r[PROB] != ESTIMATE]
     removed = len(data) - len(real)
 
@@ -122,14 +142,16 @@ def main():
             continue
         pop = int(num(last[PS])) if num(last[PS]) == int(num(last[PS])) else num(last[PS])
         row = list(last)
+        row.extend([""] * (NCOL - len(row)))
         row[YS], row[YEND] = str(start), str(a.end_year)
         row[PS], row[PE] = str(pop), str(pop)
         row[PROB] = ESTIMATE
         row[SRC] = f"Estimate: carried forward from {ly}, not a source"
-        orig = last[SRC].split(",")[0].strip()
+        orig = first_source(last[SRC])
         row[COMMENT] = (f"Estimate, not a measurement: the last sourced count for this town is {pop:,} in {ly}"
                         f"{' (' + orig + ')' if orig else ''}; no newer count was found, so the same number is carried "
-                        f"forward to {a.end_year}. Delete this row when a newer count is added. {TAG}")
+                        f"forward to {a.end_year}.")
+        row[PROC] = f"Delete this row when a newer count is added. {TAG}"   # maintenance note: not shown on the site
         new.append(row)
         per_country[country][0] += 1
         per_country[country][1] += pop

@@ -17,6 +17,11 @@ UNSAFE = re.compile(r"<\/?[A-Za-z!]|javascript\s*:|vbscript\s*:|data\s*:\s*text/
 BAD_SCHEME = re.compile(r"^\s*(?:javascript|data|vbscript|file|ftp)\s*:", re.I)
 LOCAL_PATH = re.compile(r"(?<![A-Za-z0-9])[A-Za-z]:[\\/]|\\Users\\", re.I)  # a Windows drive path (URLs have "://" after 2+ letters)
 FORMULA = re.compile(r"^[=@]|^[+\-][A-Za-z(]|^[\t\r]")
+# Remarks about OUR data gathering/processing belong in process_notes (the public Notes are for visitors); see utils/split_process_notes.py
+PROCESS_WORDS = re.compile(r"\[(?:Source detail|Also reported by|Review fix|Second-pass|Merge note|Corrected|UNVERIFIED|Unverified approximation|carry-forward)|"
+                           r"\bread from the page image\b|\bNew place \(no map marker|\bMatched to the existing map marker|\bNo online source found\b|"
+                           r"\bDelete this row when\b|\bhand-typed batch\b|\bre-research\b|\bYear Established =|\bTown Name and coordinates are taken|"
+                           r"\bglyph classifiers\b|\btesseract\b", re.I)
 
 
 def fnum(s):
@@ -30,7 +35,7 @@ err, warn = defaultdict(list), defaultdict(list)
 seen = Counter(tuple(r) for r in data)
 town = defaultdict(list)
 for i, r in enumerate(data, start=2):
-    if len(r) != 19: err["column count != 19"].append(i); continue
+    if len(r) != 20: err["column count != 20 (19 public columns + process_notes)"].append(i); continue
     lon, lat = fnum(r[2]), fnum(r[3])
     if lon is None or lat is None or not (-180 <= lon <= 180 and -90 <= lat <= 90): err["bad coordinates"].append(i)
     ys, ye, yest = fnum(r[5]), fnum(r[6]), fnum(r[4])
@@ -45,14 +50,16 @@ for i, r in enumerate(data, start=2):
     if re.search("[A-Za-z]", r[13]): err["Latin text in city_hebrew (placeholder?)"].append(i)
     if r[9] == "": warn["empty probability (legacy rows)"].append(i)
     elif r[9] not in PROBS: err[f"unknown probability {r[9]!r}"].append(i)
-    if r[9] == "estimate" and "[carry-forward-estimate]" not in r[18]: err["estimate row without tag"].append(i)
+    if r[9] == "estimate" and "[carry-forward-estimate]" not in r[19]: err["estimate row without tag (in process_notes)"].append(i)
+    if r[9] != "estimate" and "[carry-forward-estimate]" in r[19]: err["carry-forward tag on a non-estimate row"].append(i)
     # Content safety: the site writes these cells into popups (HTML-escaped) and links, and the owner opens the file in Excel.
-    for c in (r[0], r[1], *r[12:19]):
+    for c in (r[0], r[1], *r[12:20]):
         if UNSAFE.search(c): err["HTML/script-like text in a cell"].append(i); break
     if BAD_SCHEME.search(r[17]): err["source with a javascript:/data:/file: scheme"].append(i)
-    if LOCAL_PATH.search(r[17]) or LOCAL_PATH.search(r[18]): err["local file path in source/comment (privacy)"].append(i)
-    for c in (r[0], r[1], *r[12:19]):
+    if LOCAL_PATH.search(r[17]) or LOCAL_PATH.search(r[18]) or LOCAL_PATH.search(r[19]): err["local file path in source/comment/process_notes (privacy)"].append(i)
+    for c in (r[0], r[1], *r[12:20]):
         if FORMULA.search(c): warn["cell starting with = @ + - (spreadsheet formula)"].append(i); break
+    if PROCESS_WORDS.search(r[18]): warn["process wording left in the public Notes (run utils/split_process_notes.py)"].append(i)
     town[(r[0], r[1], r[2], r[3])].append((i, r, yest, ys))
 for t, items in town.items():
     starts = [y for _, r, _, y in items if y is not None and r[9] != "estimate"]
