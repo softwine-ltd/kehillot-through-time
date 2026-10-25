@@ -201,3 +201,128 @@ oceania                          24.5/    40.0 ( 0.61) n=   9 |     64.3/    70.
 **Reading the review.** Coverage is good for 1939 (Eretz Israel 0.80, Asia 0.69, Africa 0.70, West Europe 0.97, East Europe 0.97, Americas/Oceania 0.86) and for 1948 and 1970 in Israel, North America, Oceania and Eastern Europe. The map is much thinner (ratios below 0.6) for: **medieval and early modern Asia and Africa (1170-1600: about 0.3-0.5)**, **West Europe 1300-1490 (0.21 and 0.12)** and **East Europe 1170-1490 (0.07-0.19)** (medieval population counts are scarce: most medieval rows are presence rows), **East Europe 1800-1825 (about 0.5)**, **Asia and Africa in 1880 (0.60 and 0.57)**, **Latin America 1948 (0.29)**, **South Africa and the rest of southern Africa 1948 (0.26)**, **Former Soviet Union Asia 1948-1970 (0.37-0.49)** and **North Africa 1948 (0.76 only after the Maghreb sweeps)**. Over-coverage (ratio well above 1: stale or duplicated population values, or old rows whose interval is stretched across the year, worth a check): **East Europe and Balkans 1948-1970 (1.46, 1.23)**, **the Americas around 1900 (1.34: the USA sum is about 1.36 million against DellaPergola's 1.06 million for all of America and Oceania)**, and 2008 for rest of Asia (2.3), North Africa (4.2) and FSU Europe (1.5), where old counts persist (the map has no later row to end them). Suggested next sweeps: Latin America 1920-1948 (Argentina, Brazil, Chile, Mexico, Uruguay small communities), southern and East Africa, Central Asia/Caucasus 1930s-1970 (Bukharan and Georgian Jews), Ottoman Asia and Persia 1880 (Turkey, Iraq, Iran, Syria, Yemen), the Maghreb 1948, and population-bearing rows for medieval West Europe (Germany, France, England: Toch, Mundill).
 
 **After sweep 5 (2026-10-19; 15 agents on Latin America 1900-1950, South Africa and the rest of southern/East Africa, Central Asia, the Caucasus, Morocco, Algeria/Tunisia/Libya, and medieval population counts for Iberia, France, Germany/Austria/Bohemia, Italy/Balkans and England/Low Countries).** Re-run of `utils/dp_historical_coverage.py` (country sets extended for the new countries), ratio dataset/DellaPergola before -> after: Latin America 1948 0.29 -> 0.39 (towns with a count 50 -> 231); South Africa and southern Africa 1948 0.26 -> 0.87 and 1970 0.80 -> 0.88; Former Soviet Union in Asia 1970 0.49 -> 0.91 (1948 stays 0.37: the Soviet censuses start in 1926 and resume in 1959, so no town counts near 1948 turned up); North Africa 1948 0.76 -> 0.81; West Europe 1300 0.21 -> 0.22 and 1490 0.12 -> 0.15 (medieval counts are scarce; the five medieval sweeps added 435 rows for about 300 towns, most of them with a population and many of those households x5). These ratios are a guide to where sourced town counts exist, not targets: DellaPergola's totals are one scholar's estimates, no row was scaled or selected to match them, and every agent reported its bottom-up sums beside his figures as an observation only. Over-coverage that remains and deserves a check: East Europe and Balkans 1948-1970 (1.46, 1.23), the Americas around 1900 (1.35), North Africa 1970 (1.52) and 2008 (4.18, stale counts), rest of Asia 2008 (2.35). Source totals found by the agents (censuses, communal surveys, scholars' estimates by country and year; not town rows) are in the `*_totals.csv` files in `jew_hist/sweep_2026-10-18/` and `jew_hist/persecution_2026-10-18/`, and the Mundill thesis totals are in `ENGLAND_1272_1290_MUNDILL_TOTALS.csv`.
+
+
+## M. DellaPergola, "International migration of Jews" (2007 text, published 2009): migration volumes, flows and the 1948-1970-2007 regional table
+
+Source: Sergio DellaPergola, "International Migration of Jews", paper for the International Conference on Transnationalism, Tel Aviv University, 4-6 September 2007; appeared in Eliezer Ben Rafael and Itzchak Sternberg (eds.), *Transnationalism: Diasporas and the Advent of a New (Dis)order*, Leiden/Boston, Brill, 2009, pp. 213-236 (the file in the owner's folder is the author's manuscript from ResearchGate, `https://www.researchgate.net/publication/348686333`, 23 PDF pages: PDF p. 1 is the ResearchGate cover, PDF pp. 2-23 are the manuscript's own pp. 1-22, so **manuscript p. = PDF p. - 1**; the Brill pagination cannot be mapped page by page and is not used below). Short name used below: **Migration 2007**. It has eight figures and three tables, no town-level fact, no country-by-country table and no time series before 1880 (see M.1).
+
+Page references below are "ms p. N (PDF p. N+1)". Numbers printed in a table or in the text are quoted as printed. Numbers marked **(graph)** were read off a chart that carries no data labels (measured on a 130-260 dpi render, accuracy about +-1 percentage point for Figures 4-5 and about +-5,000 persons for Figures 2 and 7): they are approximate and are given only so that the shape of the series is on record.
+
+> **How to use these figures.** They are one scholar's estimates (core Jewish population, a count of migrants whose definition changes between series: see M.7), not ground truth, and better estimates may replace them. They are context for the map's coverage review and for the type-4 (Migration) events, never a target: no row is adjusted, scaled or selected to match them. The coverage review in section S already compares the map with this scholar's 1948 and 1970 region totals; Table 3 below carries the same two columns, so nothing needs to be re-run.
+
+### M.1 What the paper contains and what it does not
+
+It is a conceptual and statistical overview of modern Jewish migration (1880s to 2002) written for a conference on transnationalism. Contents: global volume 1880-2002 (Fig. 2), the 1948-2002 flow system between four blocs (Fig. 3), the 1969-2002 split by period (Figs. 4-5), the link between aliyah frequency and the Human Development Index (Fig. 6), immigration to and emigration from Israel 1947-2006 (Fig. 7, Table 1), the composition of FSU migrants to Israel and the USA (Table 2), the redistribution of world Jewry 1948-2007 (Table 3, Fig. 8), and two lists of determinants and consequences of migration. Not in the paper (the task description in PAPERS11_BRIEF.md says otherwise): a world Jewish population series from about 1000, a table of Israel's immigrants by country of origin (Fig. 6 is an unlabelled scatter plot of 74 points), or a figure of 1.5 million FSU emigrants (the figures given are 1.8 million migrants of all origins in 1989-2002, and about one million FSU immigrants to Israel since 1990). The only places named are the conference city (Tel Aviv), the Jordan River (Fig. 1 is a river-flow chart used as an analogy, not Jewish data) and the countries of Table 1 and Fig. 8.
+
+### M.2 World Jewish population figures given in the text (ms p. 2-3, PDF p. 3-4)
+Total Jewish population "estimated" at 10.5 million in 1900, 16.5 million in 1939, 11 million in 1945 and 13.1 million in 2007 (Table 3 gives 13,155 thousand for 2007). Compare section 2: the AJYB 2023 revised series has 10.6 million for 1900 (original 10.7 million); 1939 and 1945 agree. Between the second half of the 19th century and the start of the 21st "roughly 10 million Jews" moved from, to and across countries (ms p. 2); the same paper later splits this into about 4 million between 1881 and 1948 and about 5 million after 1948 (ms p. 4), while AJYB 2023 and the Hebrew chapter say "over 9 million" / "more than 9 million" (section 6 and section S): the "roughly 10 million" is a rounded figure, not a different estimate.
+
+### M.3 Table 3 (ms p. 16, PDF p. 17): world Jewish population by major regions, 1948, 1970, 2007 (core definition, thousands)
+| Region | 1948 | 1970 | 2007 | % of world 1948 | 1970 | 2007 | % change 1948-70 | 1970-2007 | 1948-2007 |
+|---|---|---|---|---|---|---|---|---|---|
+| World total | 11,500 | 12,662 | 13,155 | 100.0 | 100.0 | 100.0 | +10 | +4 | +14 |
+| Israel | 650 | 2,582 | 5,393 | 5.7 | 20.4 | 41.0 | +297 | +109 | +730 |
+| Total Diaspora | 10,850 | 10,080 | 7,762 | 94.3 | 79.6 | 59.0 | -7 | -23 | -28 |
+| Europe, West (2007: incl. the East European EU members) | 1,035 | 1,119 | 1,149 | 9.0 | 8.9 | 8.7 | +8 | +3 | +11 |
+| Europe, East and Balkan | 765 | 216 | 22 | 6.7 | 1.7 | 0.2 | -72 | -90 | -97 |
+| Former USSR in Europe | 1,950 | 1,906 | 322 | 17.0 | 13.9 (sic, see below) | 2.4 | -2 | -83 | -83 |
+| Former USSR in Asia | 350 | 262 | 20 | 3.0 | 3.1 (sic) | 0.2 | -25 | -92 | -94 |
+| Other Asia | 275 | 100 | 20 | 2.4 | 0.8 | 0.1 | -64 | -80 | -93 |
+| North Africa (incl. Ethiopia) | 595 | 83 | 4 | 5.2 | 0.6 | 0.0 | -86 | -94 | -99 |
+| South Africa | 105 | 124 | 73 | 0.9 | 1.0 | 0.6 | +18 | -42 | -30 |
+| North America | 5,215 | 5,686 | 5,649 | 45.3 | 45.0 | 42.9 | +9 | -1 | +8 |
+| Latin America | 520 | 514 | 392 | 4.5 | 4.1 | 3.0 | -1 | -24 | -25 |
+| Oceania | 40 | 70 | 111 | 0.3 | 0.5 | 0.8 | +75 | +59 | +178 |
+
+Checks (script run on the page image values): the Diaspora rows add up to the printed Diaspora total in all three years, and Israel + Diaspora equals the world total. Every printed percentage change agrees with the counts to +-1. Two printed 1970 shares do not agree with the counts: Former USSR in Europe 13.9% (1,906 / 12,662 = 15.1%) and Former USSR in Asia 3.1% (262 / 12,662 = 2.1%). The counts agree with section S Table 2 and with the printed percentage changes, so the two shares are typos in the paper, not different estimates. The table's footnote letters are also duplicated (two "a" notes: the second, "including Ethiopia", belongs to North Africa, which carries "b"). The footnote "countries in East Europe that joined the European Union were included in Western Europe in 2007" means the 2007 East Europe and West Europe rows are not on the same definition as 1948/1970: the -97% for East Europe and the +11% for West Europe are partly a reclassification.
+
+**Compared with section S Table 2 (the Hebrew chapter, 1948, 1970, 2008).** The 1948 and 1970 columns are identical in every row. The 2007 column differs from the 2008 column of section S by: world 13,155 vs 13,232 (+77); Israel 5,393 vs 5,478 (+85); Diaspora 7,762 vs 7,754; West Europe 1,149 vs 1,146; East Europe and Balkans 22 vs 21; FSU Europe 322 vs 313 (-9 in one year); North America 5,649 vs 5,650; Oceania 111 vs 115; all other rows equal. So the dataset/DellaPergola ratios of section S's 2008 comparison would change by less than 5% in any region if 2007 were used.
+
+**Shares and changes in the text** (ms p. 15-16): between 1948 and 2007 the "old world" (Europe, Asia, Africa, with South Africa counted there) fell from 44% to 12% of world Jewry, the "new world" (America and Oceania) from 50% to 47%, Israel rose from 6% to 41% (the table's rows give 44.2%, 12.2%, 50.1%, 46.7%). East Europe and the Balkans, the FSU in Europe and in Asia, and the Muslim countries of Asia and Africa each lost 83% to 99% of their 1948 Jewish population; Latin America and southern Africa lost 25-30%; West Europe and North America gained 8-11%; Oceania nearly tripled; Israel grew more than eight times (5,393 / 650 = 8.3). Over 80% of Jews lived in the two largest communities, Israel and the USA (41.0% + 42.9% = 83.9%).
+
+### M.4 Volumes and flows of Jewish migration
+* **Totals** (ms p. 4, 6-7): about 4 million migrants between 1881 and the eve of Israel's independence in 1948, most from Eastern Europe to the United States; about 5 million after 1948, a majority to Israel; since World War II about **4.7 million** (46% from Eastern Europe, 30% from Asia and Africa, 14% from Israel, 10% from Western countries): **1.9 million 1948-1968, 1.0 million 1969-1988, 1.8 million 1989-2002**. The 1969-2002 subtotal is 2.8 million (55% from Eastern Europe, 16% from Asia and Africa, 16% from Israel, 13% from the West). Returning Israelis and the foreign-born children of Israelis are not counted (note 4, ms p. 6); the Israel figures include a small share of Arab migrants.
+* **Three peaks of the 20th century** (ms p. 4-5): (a) the movement from the Russian and Habsburg empires to the West, above all the USA, before World War I, peaking in **1905-06**; (b) mass migration to the new State of Israel in the late 1940s and early 1950s, peaking in **1949-51**; (c) the exodus from the Former Soviet Union starting in the last months of **1989**, peaking in **1990-91** and continuing several years; the author says (c) is not smaller in absolute numbers than (a) and (b).
+* **Figure 3 (ms p. 7, PDF p. 8): the six main flows 1948-2002 (persons, % of the 4.7 million)**
+
+| From \ to | Western countries | Israel |
+|---|---|---|
+| Eastern Europe | 751,000 (16%) | 1,409,000 (30%) |
+| Muslim countries of Asia and Africa | 376,000 (8%) | 1,033,000 (22%) |
+| Israel | 657,000 (14%) | - |
+| Western countries | - | 470,000 (10%) |
+
+Sum of the six flows 4,696,000. Israel took 65% of the Eastern Europeans (1,409 / 2,160) and 73% of the migrants from Asia and Africa (1,033 / 1,409), as printed. Immigrants to Israel by the figure's arrows: 1,409 + 1,033 + 470 = **2,912 thousand**, which is exactly Table 1's Israel immigration figure, and Israel's 657 thousand emigrants are Table 1's emigrants.
+* **Figure 4 (ms p. 8, PDF p. 9; percent distribution of the period's migrants, graph)**
+
+| Flow | 1969-76 | 1977-88 | 1989-96 | 1997-2002 |
+|---|---|---|---|---|
+| East Europe to Israel | 32 | 12 | 41 | 36 |
+| East Europe to Western countries | 8 | 29 | 23 | 25 |
+| Asia-Africa to Israel | 9 | 8 | 18 | 9 |
+| Asia-Africa to Western countries | 5 | 7 | 1 | 1 |
+| Israel to Western countries | 20 | 24 | 11 | 17 |
+| Western countries to Israel | 27 | 20 | 5 | 12 |
+
+The columns add up to 99-101. The text (ms p. 7) says Israel received 59% of the 1969-2002 migrants and the West 41%, that emigration from Israel was always 10-25% of the grand total (the graph shows 11-24%), and that migration from the West to Israel was always smaller than the reverse flow. The figure's notes: since 1970 the Western flow to Israel includes immigrant citizens (children of Israelis born abroad); since 1990 the Asian republics of the FSU are counted in Asia-Africa; all emigration from Israel is included in the Israel-to-West flow.
+* **Figure 5 (ms p. 9, PDF p. 10; yearly emigrants per 1,000 Jews in the country or area of origin, graph)**
+
+| Flow | 1969-76 | 1977-88 | 1989-96 | 1997-2002 |
+|---|---|---|---|---|
+| Asia-Africa to Israel | 30 | 40 | 94 | 121 |
+| Asia-Africa to Western countries | 14 | 32 | 42 | 13 |
+| East Europe to Israel | 8 | 4 | 72 | 57 |
+| East Europe to Western countries | 2 | 8 | 38 | 40 |
+| Grand total (all flows) | 4 | 4 | 12 | 7 |
+| Israel to Western countries | 2 | 3 | 4 | 3 |
+| Western countries to Israel | 1 | 1 | 1 | 1 |
+
+The text gives the 1969-2002 averages: 97 per 1,000 per year for Asia and Africa, 51 for Eastern Europe, 4 for Israel, 1 for the West.
+* **Figure 2 (ms p. 4, PDF p. 5): total yearly volume of Jewish international migration 1880-2002 (thousands, graph; raw data and a five-year average).** Raw peaks: about 160 in 1905-06 (five-year average about 145), about 157 in 1913, about 112 in 1921, about 228 in 1949-50 (average about 185), about 139 in 1962-63, about 240 in 1990 (average about 175 around 1992); troughs of about 13-15 in 1917-19 and 1943; the series ends at about 60 in 2002. Its level in 1880-1900 is 30-70.
+* **Figure 7 (ms p. 12, PDF p. 13): immigrants to and emigrants from Israel 1947-2006 (thousands, graph).** Immigration (all Law of Return immigrants, Jews and non-Jews): about 22 in 1947, 119 in 1948, 240 in 1949, 170 in 1950, 175 in 1951, 24 in 1952; about 72 in 1957, about 64 in 1963; about 56 in 1972-73; about 200 in 1990, 176 in 1991, 77 in 1992-93, 56 in 1998, 77 in 1999, 20 in 2006; emigration between about 2 and 27 a year (peak about 27 in 1993). The paper says immigration outnumbered emigration in nearly every year, except for short periods in the 1950s and 1980s; total emigrants / total immigrants 1948-2002 = 23%.
+* **Table 1 (ms p. 13, PDF p. 14; thousands; sources Münz 2002 and Israel CBS 2007): immigration to and re-migration from Germany 1954-1999 and Israel 1948-2002.**
+
+| Country | Population 2000 | Immigrants | Emigrants | Immigrants / population % | Emigrants / immigrants % |
+|---|---|---|---|---|---|
+| Germany, total | 82,282 | 31,334 | 22,344 | 38 | 71 |
+| of which ethnic Germans (Aussiedler) | | 6,064 | 3,755 | 7 | 62 |
+| of which others | | 25,271 | 18,589 | 31 | 74 |
+| Israel, total | 6,369 | 2,912 | 657 | 46 | 23 |
+
+All ratios and the Germany components recompute from the counts (6,064 + 25,271 = 31,335 against the printed 31,334). The paper uses Germany's ethnic-German immigration as the comparison case for Israel's Law of Return; Israel's retention of its immigrants is higher.
+
+### M.5 Table 2 (ms p. 14, PDF p. 15): migrants from the Former Soviet Union to Israel (1990-95) and to the USA (1993-95), percent
+| Characteristic | To Israel | To USA | Ratio Israel/USA | Migrants as % of Jewish population 1989 |
+|---|---|---|---|---|
+| Age 0-20 | 28 | 24 | 115 | 98 |
+| 21-40 | 31 | 27 | 114 | 75 |
+| 41-64 | 27 | 32 | 86 | 41 |
+| 65+ | 14 | 17 | 80 | 34 |
+| Total | 100 | 100 | 100 | 56 |
+| Republic of origin: in Europe | 78 | 85 | 91 | 50 |
+| in Asia | 22 | 15 | 148 | 83 |
+| Occupation before migration: white-collar | 75 | 79 | 95 | |
+| blue-collar | 25 | 21 | 120 | |
+
+Migrants include non-Jewish family members, the 1989 base population does not (note b): the "56%" is therefore an upper estimate of the share of the FSU's Jews who left in those years. Sources: Israel CBS, HIAS, adapted from DellaPergola (1998). The ratio column is the ratio of the two percentages (it differs from the recomputed value by 1-3 points through rounding).
+
+### M.6 Retention and return
+Return from the USA at the peak of Jewish migration in the early 20th century was about 5%, against a total average of over 30% for all groups (ms p. 11). Of the about one million new immigrants from the FSU to Israel since 1990 (immigrants under the Law of Return, so including non-Jewish family members), only about 8% were estimated to have left within five years (ms p. 11-12, from the Israeli Ministry of Immigrant Absorption, 2005). Israeli emigration (yeridah) runs at 3-5 per 1,000 inhabitants a year (ms p. 11).
+
+### M.7 Aliyah and human development (Figs. 6 and 8)
+* **Figure 6 (ms p. 10, PDF p. 11)**: immigrants to Israel per 1,000 Jews in 2001 against the country's rank in the 2000 Human Development Index, for 73 countries (the figure's n = 74: the extra point is Israel's own emigration, marked "Israel yeridah"); correlation -0.66. All FSU republics lie above the exponential fit; the English-speaking countries (USA, Canada, Australia) and most of Latin America lie below it. The highest point (about 30,000 olim per 1,000 Jews, HDI rank about 158) is an Asia-Africa country that the paper does not name (probably Ethiopia, inference only). Numerators include non-Jewish immigrants and denominators are core Jews only.
+* **Figure 8 (ms p. 17, PDF p. 18)**: the 24 countries with more than 30,000 Jews in 1980, ranked by HDI in 1980 (x) and by the 1980-2000 change in their Jewish population (y). **Both axes are ranks 1-24, not percentages**, although the y-axis is labelled "% change". Rank read from the plot (HDI rank, change rank; for the change rank 1 = steepest shrinkage, 24 = fastest growth): Ethiopia (1, 1); Iran (2, 8); South Africa (3, 10); Brazil (4, 15); Moldova (5, 3); Uzbekistan (6, 2); Mexico (7, 20); Azerbaijan (8, 6); Uruguay (9, 11); Ukraine (10, 4); Romania (11, 7); Hungary (12, 12); Belarus (13, 5); Argentina (14, 13); Russia (15, 9); Israel (16, 23); Italy (17, 16); United Kingdom (18, 14); Germany (19, 24); Australia (20.5, 22) and Belgium (20.5, 19) (a tie in HDI rank); France (22, 18); Canada (23, 21); United States (24, 17). Remarks in the text: Ethiopia, all the FSU republics and Romania shrank more than their HDI predicts, as did France (emigration) and the USA (assimilation and ageing); Mexico, Brazil, South Africa and Iran did better than predicted (a segregated, high-achieving community in a polarised society), as did Israel, Germany and Australia (specific incentives).
+
+### M.8 Determinants and consequences (ms p. 18-21)
+Eight determinants (push forces in the country of origin, the legal possibility of leaving, the attractiveness of destinations, the availability of destinations (US quotas), the role of Israeli and international agencies (Jewish Agency, HIAS), the Jewish population's own profile, the quality of absorption and feedback, net balance) and eight consequences (population sizes, migrant characteristics, competition between newcomers and veterans, the balance between the core country and the diaspora, institutions, the positioning of countries in the global system, relations with other populations, the new configuration from which new migrations arise). Future-research points: the blurring boundary between Jews and non-Jews among migrants (core versus Law of Return definitions), multiple identities and citizenships, multi-localism, policy relations between Israel and the diaspora. No facts for the map.
+
+### M.9 Caveats and internal inconsistencies of the paper (found while checking)
+* The text says Israel received **56%** of the 4.7 million migrants and 44% went to the West (ms p. 6), but the paper's own Figure 3 arrows and Table 1 give 2,912 / 4,696 = **62%** to Israel and 1,784 / 4,696 = 38% to the West. The 62% is consistent with the other papers (69% in 1948-68 and 60% in 1969-2015, section 6) and with the 59% for 1969-2002 (it implies about 66% for 1948-68; the 56% would imply about 51%), so the text's 56% looks like a typo. Not changed anywhere.
+* Table 3's two 1970 shares for the FSU (M.3) and its duplicated footnote letters; Figure 8's "% change" label on a rank axis.
+* 73 countries in the text against n = 74 in Figure 6 (the Israel point).
+* Table 3's 2007 East Europe and West Europe rows are not on the same definition as the 1948 and 1970 rows (EU enlargement).
+* The paper dates the world total at "13.1 million in 2007" and "13,155" in the table: the same figure, rounded.
+
+### M.10 What was added to the map from this paper (2026-10-25)
+**Nothing to kehilot.csv**: the paper has no town-level, dated fact (`DPM_rows.csv` is header only). Three type-4 (Migration) events were proposed in `DPM_events.csv` for the owner's review: the emigration from the Russian and Habsburg empires to the West 1881-1914 (peak 1905-06), the mass immigration to Israel 1948-1951 (peak 1949-51), and the FSU exodus from 1989 (peak 1990-91; the end year 2002 is the end of the paper's data, not of the wave). `events.csv` has one type-4 row only (1880-1920, "Migration-era socio-economic zone in Central Europe (Budapest area)", no source); `historical_arrows.csv` already has an arrow for the 1880-1920 East European emigration to America. The figures, tables and per-country numbers above are in `DPM_totals.csv`.
