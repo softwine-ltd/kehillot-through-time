@@ -10,6 +10,8 @@
     "startTour": "Start Tour",
     "print": "Print",
     "suggestData": "Suggest Data",
+    "loadingData": "Loading data…",
+    "loadingFailed": "Could not load the data. Please reload the page.",
     "cancel": "Cancel",
     "close": "Close",
     "previous": "Previous",

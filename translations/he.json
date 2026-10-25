@@ -10,6 +10,8 @@
     "startTour": "התחל סיור",
     "print": "הדפס",
     "suggestData": "הצע נתונים",
+    "loadingData": "טוען נתונים…",
+    "loadingFailed": "לא ניתן לטעון את הנתונים. נא לרענן את הדף.",
     "cancel": "בטל",
     "close": "סגור",
     "previous": "הקודם",

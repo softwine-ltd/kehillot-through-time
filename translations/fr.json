@@ -10,6 +10,8 @@
     "startTour": "Commencer la Visite",
     "print": "Imprimer",
     "suggestData": "Suggérer des Données",
+    "loadingData": "Chargement des données…",
+    "loadingFailed": "Impossible de charger les données. Veuillez recharger la page.",
     "cancel": "Annuler",
     "close": "Fermer",
     "previous": "Précédent",

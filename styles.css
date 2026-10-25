@@ -26,6 +26,52 @@ body {
     flex-direction: column;
 }
 
+/* "Loading data" badge, centred over the map until the first markers are drawn. kehilot.csv is ~60 MB (~9 MB gzipped) and is
+   parsed on the main thread, so for the first seconds the map is empty and sluggish. pointer-events: none keeps the map
+   draggable underneath; the spinner is a transform animation, which keeps turning even while the parse blocks the page. */
+#dataLoading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1100; /* above Leaflet's panes and controls (up to 1000) */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: max-content; /* otherwise left: 50% leaves only half the map's width and the text wraps */
+    max-width: calc(100% - 2rem);
+    padding: 0.75rem 1.25rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    color: #374151;
+    font-size: 1rem;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.data-loading-spinner {
+    flex: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 3px solid #bfdbfe;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: data-loading-spin 0.8s linear infinite;
+}
+
+#dataLoading.failed .data-loading-spinner {
+    display: none;
+}
+
+#dataLoading.failed {
+    color: #b91c1c;
+}
+
+@keyframes data-loading-spin {
+    to { transform: rotate(360deg); }
+}
+
 #map {
     flex: 1 1 auto;
     min-height: 0; /* let a flex child actually shrink/grow to the remaining space instead of hugging its content */

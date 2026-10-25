@@ -389,26 +389,28 @@ function createTimelineSlider(startValue) {
 
 // Parse CSV while respecting quotes
 function parseCSVLine(line) {
+    // Same result as appending one character at a time (quote characters are dropped, commas inside quotes are kept),
+    // but copies whole slices between the special characters: kehilot.csv has ~150,000 rows, so this loop dominates start-up.
     const result = [];
     let current = '';
     let inQuotes = false;
+    let sliceStart = 0;
 
-    for (let i = 0; i < line.length; i++) {
-        const char = line[i];
+    for (let i = 0, n = line.length; i < n; i++) {
+        const code = line.charCodeAt(i);
 
-        if (char === '"') {
+        if (code === 34) { // "
+            current += line.slice(sliceStart, i);
+            sliceStart = i + 1;
             inQuotes = !inQuotes;
-            continue;
-        }
-
-        if (char === ',' && !inQuotes) {
+        } else if (code === 44 && !inQuotes) { // ,
+            current += line.slice(sliceStart, i);
             result.push(current);
             current = '';
-            continue;
+            sliceStart = i + 1;
         }
-
-        current += char;
     }
+    current += line.slice(sliceStart);
     result.push(current); // Push the last field
 
     return result;
@@ -621,87 +623,144 @@ async function loadHistoricalArrows() {
     }
 }
 
+// Removes the "Loading data" badge (#dataLoading in index.html) once the first markers are drawn. If the CSV could not be
+// fetched or parsed, the badge stays and says so instead of spinning forever (getData() caches its promise, so only a
+// page reload retries).
+function finishDataLoadingIndicator(failed) {
+    const badge = document.getElementById('dataLoading');
+    if (!badge) return;
+    if (!failed) {
+        performance.mark('kehilot-first-markers-drawn'); // User Timing: how long the page took to show its first markers
+        badge.remove();
+        return;
+    }
+    badge.classList.add('failed');
+    const text = document.getElementById('dataLoadingText');
+    text.setAttribute('data-i18n', 'ui.loadingFailed');
+    text.textContent = window.i18n ? window.i18n.t('ui.loadingFailed') : 'Could not load the data. Please reload the page.';
+}
+
+// Builds the year-independent record of one kehilot.csv line (actual_pop depends on the year being shown and is
+// computed per call in loadData, only for the rows that survive the year filter).
+function parseKehilaRow(row) {
+    const [
+        country, city, long, lat, year_estab, year_start, year_end,
+        pop_start, pop_end, probability, type, symbol,
+        city_english, city_hebrew, city_yid, city_german,
+        city_other, source, comment
+    ] = parseCSVLine(row).slice(0, 19);
+
+    // If year_end is empty, use current year
+    const actualYearEnd = year_end == undefined || year_end.trim() === '' ? undefined : parseInt(year_end);
+    // A handful of source rows carry a non-numeric population placeholder
+    // ("-", a range like "20-30", or stray free text from a CSV misalignment)
+    // that parseInt can't handle -- fall back to 0 rather than letting NaN
+    // propagate into the interpolation below and show up as "NaN" on the map.
+    // A BLANK population is its own state, not 0: "Jews are documented here but
+    // no count is known" -> null, drawn as a presence-only marker. 0 is kept for
+    // documented absence ("no Jews lived here"), which draws nothing. See
+    // HistorianDataExtractor.py's extraction rules for the same convention.
+    const isBlank = v => v == undefined || v.trim() === '';
+    const popStartNum = isBlank(pop_start) ? null : (parseInt(pop_start) || 0);
+    const actualPopEnd = isBlank(pop_end) ? popStartNum : (parseInt(pop_end) || 0);
+
+    return {
+        name: city, // Fallback to city if English name not available
+        name_he: city_hebrew,
+        lat: lat,
+        lon: long,
+        year_estab: parseInt(year_estab),
+        year_start: parseInt(year_start),
+        year_end: actualYearEnd,
+        population_start: popStartNum,
+        population_end: actualPopEnd,
+        confidence: probability, // Using probability as confidence indicator
+        type: parseInt(type),
+        symbol: parseInt(symbol),
+        country,
+        names: {
+            english: city_english,
+            yiddish: city_yid,
+            german: city_german,
+            other: city_other
+        },
+        source: source ? source.replace(/"/g, '') : '', // Remove quotes from source, handle undefined
+        comment
+    };
+}
+
+// Gives the browser a turn between two slices of work, so the page keeps painting and answering clicks while the CSV is parsed.
+function yieldToBrowser() {
+    if (window.scheduler && typeof window.scheduler.yield === 'function') return window.scheduler.yield();
+    return new Promise(resolve => setTimeout(resolve, 0));
+}
+
+// Parses the whole CSV text into records, in slices of about 10 ms with a yield in between (one pass over ~150,000
+// rows used to block the page for 1-4 seconds on start-up, longer on a phone).
+async function parseKehilotRows(csvText) {
+    const rows = csvText.split('\n'); // rows[0] is the header
+    const parsed = [];
+    let sliceStarted = performance.now();
+    for (let i = 1; i < rows.length; i++) {
+        const row = rows[i];
+        if (row.trim()) { // Skip empty rows
+            const kehila = parseKehilaRow(row);
+            // A handful of rows carry a non-numeric year_start (a century/decade/era
+            // description, a "?", etc.) that parseInt() turns into NaN. Left in, such a
+            // row would render at literally every year -- any comparison against NaN is
+            // false, so the "kehila.year_start > year" exclusion check never fires -- so
+            // drop these here rather than let them show up at nonsensical points in time.
+            if (!isNaN(kehila.year_start)) parsed.push(kehila);
+        }
+        if ((i & 511) === 0 && performance.now() - sliceStarted > 10) {
+            await yieldToBrowser();
+            sliceStarted = performance.now();
+        }
+    }
+    return parsed;
+}
+
+// Many towns are recorded as a chain of consecutive segments (one row's year_end
+// equal to the next row's year_start). Treating both ends as inclusive would make
+// the boundary year match both segments at once, double-rendering that town for
+// that one year. Build a lookup of which (country, town) + year combinations are a
+// segment's start, so we can tell "another segment picks up right here" (exclusive
+// upper bound, avoids the double-render) apart from "this is the town's actual
+// final segment" (kept inclusive, so it still shows on its own end year).
+function buildSegmentStartYears(records) {
+    const starts = new Map(); // "country||name" -> Set of year_start values
+    records.forEach(kehila => {
+        const key = `${kehila.country}||${kehila.name}`;
+        if (!starts.has(key)) {
+            starts.set(key, new Set());
+        }
+        starts.get(key).add(kehila.year_start);
+    });
+    return starts;
+}
+
+// Downloads and parses kehilot.csv exactly once; every caller shares the same promise. It is started as soon as helpers.js
+// runs (last lines of this file), so the download and the parsing overlap with loading the map library and drawing the map
+// instead of waiting for them. cachedParsedKehilot is only assigned once the list is complete: history_drawer.js reads it directly.
+let kehilotReadyPromise = null;
+function ensureKehilotParsed() {
+    if (!kehilotReadyPromise) {
+        kehilotReadyPromise = (async () => {
+            console.log("Requesting data...");
+            const csvText = await getData(); // fetches the CSV the first time only
+            performance.mark('kehilot-csv-downloaded');
+            const parsed = await parseKehilotRows(csvText);
+            cachedSegmentStartYears = buildSegmentStartYears(parsed);
+            cachedParsedKehilot = parsed;
+            performance.mark('kehilot-csv-parsed');
+        })();
+    }
+    return kehilotReadyPromise;
+}
+
 async function loadData(year) {
     try {
-        if (!cachedParsedKehilot) {
-            console.log("Requesting data...");
-            const csvData = await getData(); // This will only fetch the first time
-            const csvText = csvData;
-
-            // Parse CSV (year-independent fields only -- actual_pop depends on `year` and
-            // is computed per-call, below, only for the rows that survive the year filter)
-            const rows = csvText.split('\n').slice(1); // Skip header
-            cachedParsedKehilot = rows
-                .filter(row => row.trim()) // Skip empty rows
-                .map(row => {
-                    const [
-                        country, city, long, lat, year_estab, year_start, year_end,
-                        pop_start, pop_end, probability, type, symbol,
-                        city_english, city_hebrew, city_yid, city_german,
-                        city_other, source, comment
-                    ] = parseCSVLine(row).slice(0, 19);
-
-                    // If year_end is empty, use current year
-                    const actualYearEnd = year_end == undefined || year_end.trim() === '' ? undefined : parseInt(year_end);
-                    // A handful of source rows carry a non-numeric population placeholder
-                    // ("-", a range like "20-30", or stray free text from a CSV misalignment)
-                    // that parseInt can't handle -- fall back to 0 rather than letting NaN
-                    // propagate into the interpolation below and show up as "NaN" on the map.
-                    // A BLANK population is its own state, not 0: "Jews are documented here but
-                    // no count is known" -> null, drawn as a presence-only marker. 0 is kept for
-                    // documented absence ("no Jews lived here"), which draws nothing. See
-                    // HistorianDataExtractor.py's extraction rules for the same convention.
-                    const isBlank = v => v == undefined || v.trim() === '';
-                    const popStartNum = isBlank(pop_start) ? null : (parseInt(pop_start) || 0);
-                    const actualPopEnd = isBlank(pop_end) ? popStartNum : (parseInt(pop_end) || 0);
-
-                    return {
-                        name: city, // Fallback to city if English name not available
-                        name_he: city_hebrew,
-                        lat: lat,
-                        lon: long,
-                        year_estab: parseInt(year_estab),
-                        year_start: parseInt(year_start),
-                        year_end: actualYearEnd,
-                        population_start: popStartNum,
-                        population_end: actualPopEnd,
-                        confidence: probability, // Using probability as confidence indicator
-                        type: parseInt(type),
-                        symbol: parseInt(symbol),
-                        country,
-                        names: {
-                            english: city_english,
-                            yiddish: city_yid,
-                            german: city_german,
-                            other: city_other
-                        },
-                        source: source ? source.replace(/"/g, '') : '', // Remove quotes from source, handle undefined
-                        comment
-                    };
-                })
-                // A handful of rows carry a non-numeric year_start (a century/decade/era
-                // description, a "?", etc.) that parseInt() turns into NaN. Left in, such a
-                // row would render at literally every year -- any comparison against NaN is
-                // false, so the "kehila.year_start > year" exclusion check never fires -- so
-                // drop these here rather than let them show up at nonsensical points in time.
-                .filter(kehila => !isNaN(kehila.year_start));
-
-            // Many towns are recorded as a chain of consecutive segments (one row's year_end
-            // equal to the next row's year_start). Treating both ends as inclusive would make
-            // the boundary year match both segments at once, double-rendering that town for
-            // that one year. Build a lookup of which (country, town) + year combinations are a
-            // segment's start, so we can tell "another segment picks up right here" (exclusive
-            // upper bound, avoids the double-render) apart from "this is the town's actual
-            // final segment" (kept inclusive, so it still shows on its own end year).
-            cachedSegmentStartYears = new Map(); // "country||name" -> Set of year_start values
-            cachedParsedKehilot.forEach(kehila => {
-                const key = `${kehila.country}||${kehila.name}`;
-                if (!cachedSegmentStartYears.has(key)) {
-                    cachedSegmentStartYears.set(key, new Set());
-                }
-                cachedSegmentStartYears.get(key).add(kehila.year_start);
-            });
-        }
+        await ensureKehilotParsed();
 
         // Filter data based on the given year
         const relevantKehilot = cachedParsedKehilot
@@ -747,8 +806,11 @@ async function loadData(year) {
             });
 
         updateMarkers(mergeSameYearFacts(relevantKehilot));
+        finishDataLoadingIndicator(false);
     } catch (error) {
         console.error('Error loading kehilot data:', error);
+        // Parsed fine but drawing failed: the data did load, so do not claim otherwise.
+        finishDataLoadingIndicator(!cachedParsedKehilot);
     }
 }
 
@@ -4563,3 +4625,7 @@ function updatePeriodHighlighting(year) {
         }
     });
 }
+
+// Start downloading and parsing the data now, while the rest of the page (map library, tiles, timeline) is still loading.
+// A failure is reported by loadData(), which awaits the same promise; the catch here only avoids an unhandled-rejection warning.
+ensureKehilotParsed().catch(() => {});
