@@ -1,0 +1,30 @@
+OK https://www.jewishvirtuallibrary.org/lydda
+OK https://www.jewishencyclopedia.com/articles/10205-lydda
+FAILED https://lod.muni.il/en/49/
+FAILED https://lod.muni.il/en/49/
+OK https://lexundria.com/j_bj/2.513-2.555/wst
+OK https://lexundria.com/j_aj/14.297-14.323/wst
+OK https://www.israeliarchaeology.org/lydda/vol-2-2024/the-sages-group-in-lod-at-its-peak-during-the-yavneh-period-70-132-ce/?lang=en
+OK https://lexundria.com/j_aj/14.202-14.222/wst
+OK https://lexundria.com/j_aj/14.271-14.276/wst
+OK https://lexundria.com/j_aj/20.118-20.136/wst
+OK https://lexundria.com/j_bj/4.443-4.450/wst
+OK https://lexundria.com/j_bj/2.562-2.568/wst
+OK https://lexundria.com/j_bj/2.232-2.246/wst
+OK https://lexundria.com/j_bj/3.54-3.58/wst
+OK https://lexundria.com/j_bj/1.218-1.222/wst
+OK https://ebible.org/engourb/1MA11.htm
+FAILED https://www.sefaria.org/Ezra.2.33
+FAILED https://www.sefaria.org/Nehemiah.11.35
+OK https://www.biblegateway.com/passage/?search=Ezra+2%3A33%3BNehemiah+7%3A37%3BNehemiah+11%3A31-35&version=NRSVUE
+OK https://www.biblegateway.com/passage/?search=Acts+9%3A32-38&version=NRSVUE
+OK https://hadidexpedition.org/wp-content/uploads/2026/03/Etya-2024.pdf (WebFetch failed on size; downloaded with curl and text extracted locally)
+OK https://www.israeliarchaeology.org/תקופות/התקופה-הפרסית-והתקופה-ההלניסטית/?lang=en
+OK https://www.israeliarchaeology.org/periods/__trashed-2__trashed/?lang=en
+OK https://www.israeliarchaeology.org/periods/%d7%94%d7%aa%d7%a7%d7%95%d7%a4%d7%94-%d7%94%d7%a8%d7%95%d7%9e%d7%99%d7%aa-%d7%95%d7%94%d7%aa%d7%a7%d7%95%d7%a4%d7%94-%d7%94%d7%91%d7%99%d7%96%d7%a0%d7%98%d7%99%d7%aa/?lang=en
+FAILED https://www.hadashot-esi.org.il/report_detail_eng.aspx?id=24984 (redirect)
+OK https://hadashot.iaa.org.il/report_detail_eng.aspx?id=24984
+OK https://www.sefaria.org/api/texts/Mishnah_Maaser_Sheni.5.2?context=0
+OK https://en.wikipedia.org/wiki/Lod
+OK https://cris.biu.ac.il/en/publications/granting-of-the-toparchies-of-ephraim-ramathaim-and-lod-to-hasmon-2/
+FAILED https://huji.academia.edu/AharonTavger
