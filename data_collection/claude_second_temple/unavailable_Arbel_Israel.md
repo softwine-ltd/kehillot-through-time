@@ -1,0 +1,14 @@
+# Unavailable sources: Arbel, Israel (Second Temple period)
+
+- Ilan, Z. and Izdarechet, A., 1988/1989. "Arbel: An Ancient Town in Eastern Lower Galilee" (Hebrew survey report; Arbel synagogue and site survey, incl. Tsuk 1988 on water installations, Ayalon 1988 on agricultural installations). — Comprehensive site survey; cited by Leibner for site extent and the 2nd-century-BCE start of settlement. — Not online (cited in Leibner 2009).
+- Dolev, M., 1988. Table of 298 coins from Arbel (in Ilan & Izdarechet, Arbel volume). — Numismatic basis for Hasmonean founding (John Hyrcanus I coins) and 1st c. BCE/CE coin counts. — Not online (cited in Leibner 2009).
+- Aviam, M., 2004. Jews, Pagans and Christians in the Galilee. Rochester: University of Rochester Press (esp. p. 25 n. 9-10 on his 2000 salvage excavation at Arbel; pp. 48, 94 on Hasmonean settlement and Josephus' fortifications). — Excavation finds (miqvaot, stone vessels) and Hasmonean settlement of Galilee. — Paywalled / not online.
+- Bar-Kochva, B., 1989. Judas Maccabaeus: The Jewish Struggle against the Seleucids. Cambridge UP, p. 552 ff. — Argues that "Arbela" of 1 Macc 9:2 is not Galilean Arbel. — Paywalled (cited in Leibner 2009).
+- Applebaum, S., 1989. Judaea in Hellenistic and Roman Times (Leiden: Brill), p. 23. — Proposes Arbel Valley Hasmonean military settlers. — Paywalled (cited in Leibner 2009).
+- Shatzman, I., 1983 / 1991. The Armies of the Hasmonaeans and Herod (Tübingen). — Herod's army size at the battle of Arbela (5,000-7,000). — Not accessed (cited in Leibner 2009).
+- Leibner, U., 2004. Survey/report on the Arbel and Nitai cliff caves (finds incl. Hasmonean coins) and 2010 excavation of the Mt. Nitai wall (pers. comm.). — Dating of cliff-shelter occupation. — Not located online (cited in Shivtiel 2015).
+- Reich, R., 2010 and Shivtiel, Y., 2009, 2012. Studies of the miqvaot in the Arbel cliff caves (Hebrew). — Ritual baths in the Arbel cliff shelters. — Not online (cited in Shivtiel 2015).
+- Tepper, Y. and Shahar, Y., 1991/1992. Studies on Arbel / Kh. Hamam and the Mt. Nitai wall (Hebrew). — Alternative identification of ancient Arbel with Kh. Wadi Hamam. — Not online (cited in Leibner 2009 and Shivtiel 2015).
+- Arobas, B., 2012-2013. Excavations at the Arbel synagogue (IAA). — Possible early strata of the village. — No Hadashot Arkheologiyot report found online.
+- Leibner, U., 2018. Khirbet Wadi Hamam: A Roman-Period Village and Synagogue in the Lower Galilee (Qedem Reports 13). — Neighbouring Jewish village below Mt. Nitai (some scholars identify it with ancient Arbel); demographic data. — Paywalled; not this site per Leibner.
+- Murphy-O'Connor, J., 2008. The Holy Land: An Oxford Archaeological Guide; Negev, A. and Gibson, S., 2001. Archaeological Encyclopedia of the Holy Land, p. 47. — Cited by Wikipedia for 1 Macc 9:2 battle and the cave events. — Not online.

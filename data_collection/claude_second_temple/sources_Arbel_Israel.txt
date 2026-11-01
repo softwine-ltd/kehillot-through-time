@@ -1,0 +1,26 @@
+FAILED https://oalib-perpustakaan.upi.edu/Record/oapen_2024_20_500_12657_43969/Description
+FAILED https://library.oapen.org/handle/20.500.12657/43969
+OK https://unglue.it/work/438961
+FAILED https://library.oapen.org/bitstream/handle/20.500.12657/43969/external_content.pdf?sequence=1 (WebFetch timeout; PDF downloaded with curl and text extracted locally - OK)
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/arbel
+OK https://www.jewishvirtuallibrary.org/nittai-of-arbela
+OK https://lexundria.com/j_vit/188/wst
+FAILED https://anetoday.org/?p=10037
+OK https://lexundria.com/j_vit/309-312/wst
+OK https://lexundria.com/j_bj/1.304-1.313/wst
+FAILED https://lexundria.com/j_ant/14.413-14.430/wst
+FAILED https://lexundria.com/j_ant/14.415-14.430/wst
+FAILED https://penelope.uchicago.edu/josephus/ant-14.html
+OK https://www.gutenberg.org/files/2848/2848-h/2848-h.htm
+FAILED https://lexundria.com/j_ant/12.420-12.422/wst
+FAILED https://www.sefaria.org/Pirkei_Avot.1.6?lang=bi
+OK https://www.sefaria.org/api/v3/texts/Pirkei_Avot.1.6
+OK https://en.wikipedia.org/wiki/Arbel
+OK https://cbnisrael.org/2021/04/20/biblical-israel-arbel/
+OK https://www.biblicalarchaeology.org/daily/mikvaot-in-galilean-caves-suggest-lives-of-refuge-and-religion/
+FAILED https://www.operaipogea.it/wp-content/uploads/1995/03/10-Shivtiel-caves-Galilee.pdf (WebFetch could not parse PDF; saved binary extracted locally - OK)
+FAILED https://m.jpost.com/archaeology/article-712173
+OK https://www.jpost.com/archaeology/article-712173
+OK https://www.biblegateway.com/passage/?search=1+Maccabees+9%3A1-4&version=NRSVUE
+FAILED https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D14%3Asection%3D415
+FAILED https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D12%3Asection%3D421
