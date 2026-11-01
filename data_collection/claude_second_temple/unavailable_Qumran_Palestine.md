@@ -1,0 +1,21 @@
+# Unavailable sources: Qumran, Palestine
+
+- Broshi, M., 1992. "The Archaeology of Qumran - A Reconsideration." In D. Dimant and U. Rappaport (eds.), The Dead Sea Scrolls: Forty Years of Research, pp. 103-115 (cited pp. 113-14). — Original basis of the 150-200 / >170 estimate (assembly-hall seating). — Not online; known only via Hachlili and Wikipedia.
+- Patrich, J., 1994. "Khirbet Qumran in Light of New Archaeological Explorations in the Qumran Caves." In M.O. Wise et al. (eds.), Methods of Investigation of the Dead Sea Scrolls and the Khirbet Qumran Site, New York Academy of Sciences, pp. 73-95. — 50-70 inhabitants; caves not dwellings. — Not online (paywalled/print).
+- Broshi, M. and Eshel, H., 1999. "Residential Caves at Qumran." Dead Sea Discoveries 6/3. — Cave/tent survey supporting 150-200 residents. — Brill paywall.
+- Magness, J., 2002 (2nd ed. 2021). The Archaeology of Qumran and the Dead Sea Scrolls. Eerdmans. — Chronology (sectarian settlement c. 100-50 BCE; end of Ib 9/8 BCE), population discussion, miqvaot, stone vessels. — Book, not online (only reviews seen).
+- Mizzi, D. and Magness, J., 2016. "Was Qumran Abandoned at the End of the First Century BCE?" JBL 135/2, 301-320. doi:10.1353/jbl.2016.0015. — Continuity of occupation. — Full text paywalled (abstract only read).
+- Hirschfeld, Y., 2004. Qumran in Context: Reassessing the Archaeological Evidence. Hendrickson. — c. 20 residents in Hasmonean period (15 persons/dunam). — Book, not online (known via Wikipedia).
+- Magen, Y. and Peleg, Y., 2007. The Qumran Excavations 1993-2004: Preliminary Report (JSP 6). IAA. https://www.antiquities.org.il/images/shop/jsp/JSP6_Qumran_bw.pdf — Phases, coins, c. 25 residents. — URL redirects to IAA homepage (not accessible).
+- Magen, Y. and Peleg, Y., 2018. Back to Qumran: Final Report (1993-2004) (JSP 18). IAA. — Final excavation data. — Not online.
+- Burdajewicz, M., 2012. "Osadnictwo w Khirbet Qumran w okresie zelaza II" (Iron Age II settlement at Khirbet Qumran). https://repozytorium.theo-logos.pl/xmlui/handle/123456789/7116 — Founding mid-7th c. BCE at latest, end no later than 586 BCE (basis for Year Established). — 503 errors.
+- de Vaux, R., 1973. Archaeology and the Dead Sea Scrolls (Schweich Lectures 1959). Oxford/British Academy. — Original phasing and ~200 estimate. — Not online.
+- Milik, J.T., 1959. Ten Years of Discovery in the Wilderness of Judaea. SCM. — 150-200 estimate. — Not online.
+- Laperrousaz, E.-M., 1976. Qoumrân, l'établissement essénien des bords de la mer Morte. Picard. — 1,428 inhabitants estimate. — Not online.
+- Stegemann, H., 1998. The Library of Qumran. Eerdmans/Brill. — Population around 50 at any time (attributed in a BAS snippet). — Not online; BAS page fetched did not show the figure.
+- Cook, E.M., 1996. "What Was Qumran? A Ritual Purification Center." Biblical Archaeology Review 22/6. — Survey of estimates (de Vaux 'a few hundred', 150 to >300). — BAS paywall (only endnotes visible).
+- Humbert, J.-B. (various, e.g. 1994 RB; Humbert & Chambon 1994). — 10-15 residents estimate. — Not online; known via orion list.
+- Cross, F.M. and Eshel, E., 1997. "Ostraca from Khirbet Qumran." IEJ 47, 17-28. — Yahad ostracon, 'year two' date. — Not online.
+- Nagar, Y., Aharonovich, Y., Hizmi, H., Traubman, R., 2022. "Conclusive Palaeodemographic Analysis, Based on New Anthropological Data from the Cemetery of Qumran." Revue de Qumran 34. — Demographic profile of the cemetery, possibly population size. — Paywalled (abstract only).
+- Zias, J., 2000. "The Cemeteries of Qumran and Celibacy: Confusion Laid to Rest?" DSD 7. — Cemetery dating and demography. — Brill paywall.
+- Eshel, H., 2005. Review of Hirschfeld, Qumran in Context. JAOS 125/3, 389-394. — Critique of population/density estimates. — JSTOR paywall.
