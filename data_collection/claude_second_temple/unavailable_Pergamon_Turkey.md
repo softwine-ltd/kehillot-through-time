@@ -1,0 +1,13 @@
+# Unavailable sources: Pergamon, Turkey (Second Temple period)
+
+- Trebilco, P. R., 1991. *Jewish Communities in Asia Minor*. Cambridge: CUP (SNTSMS 69). — Standard survey of Jewish communities in Asia Minor; likely discusses the Pergamene decree and Flaccus evidence for Pergamum. — Not online (paywalled / Google Books).
+- Ameling, W., 2004. *Inscriptiones Judaicae Orientis II: Kleinasien*. Tübingen: Mohr Siebeck (TSAJ 99). — Corpus of all Jewish inscriptions of Asia Minor; would show whether any Jewish inscription from Pergamon dates before 74 CE. — Not online (paywalled).
+- Pucci Ben Zeev, M., 1998. *Jewish Rights in the Roman World: The Greek and Roman Documents Quoted by Josephus Flavius*. Tübingen: Mohr Siebeck (TSAJ 74). — Detailed commentary and dating of the Pergamene decree (Ant. 14.247-255). — Not online (paywalled).
+- Rajak, T., 1981. "Roman Intervention in a Seleucid Siege of Jerusalem?" *Greek, Roman and Byzantine Studies* 22, 65-81. — Dating of the Pergamene decree to John Hyrcanus I (cited by Rajak, JRS 1984). — Not accessed (only cited).
+- Rajak, T., 1984. "Was There a Roman Charter for the Jews?" *Journal of Roman Studies* 74, 107-123. — Notes that Augustus' edict on the Jews of Asia (Ant. 16.162-165) would have been set up at Pergamum (the text has Ancyra). — Only the landing page/notes extract visible; full text paywalled.
+- Schürer, E., rev. Vermes, Millar, Goodman, 1986. *The History of the Jewish People in the Age of Jesus Christ*, vol. III.1, pp. 17-36 (Asia Minor). — Lists evidence for Jews at Pergamum. — Not online (Google Books / paywall).
+- Barclay, J. M. G., 1996. *Jews in the Mediterranean Diaspora from Alexander to Trajan*. Edinburgh: T&T Clark, ch. 9 (Asia Minor). — Discussion of Flaccus seizure and Pergamum. — Not online.
+- Ramsay, W. M., 1897. *The Cities and Bishoprics of Phrygia*, vol. I.2, ch. XV (Jews in Phrygia), p. 667ff. https://digi.ub.uni-heidelberg.de/diglit/ramsay1897bd2/0336 — Discusses the Flaccus sums and Jewish population estimates for Asia. — Blocked (Anubis bot protection, Heidelberg).
+- Stern, M., 1974. "The Jewish Diaspora." In S. Safrai and M. Stern (eds.), *The Jewish People in the First Century*, vol. I, 117-183. — Survey of Diaspora communities including Asia Minor/Pergamum. — Not online.
+- Fränkel, M., 1890-1895. *Die Inschriften von Pergamon* I-II (Altertümer von Pergamon VIII). — Pergamene inscriptions; would show any Jewish inscriptions or the decree context. — Not accessed (not searchable online in this session).
+- Reinach, Th. (cited in Jewish Encyclopedia, "Asia Minor"). — Estimate of 180,000 Jews in Asia Minor from the Flaccus sums (regional, not Pergamon). — Original not accessed.
