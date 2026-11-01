@@ -1,0 +1,12 @@
+OK https://lexundria.com/j_aj/18.310-19.0/wst
+OK https://www.jewishencyclopedia.com/articles/11421
+OK https://www.jewishvirtuallibrary.org/nehardea
+OK https://en.wikipedia.org/wiki/Nehardea
+OK https://www.philipharland.com/Blog/2022/11/judean-jewish-diasporas-josephos-josephus-take-on-conflicts-in-babylonia-ca-40-66-ce-late-first-century-ce/
+FAILED https://www.iranicaonline.org/articles/asinaeus-and-anilaeus-figure-in-josephus-jewish-antiquities-18
+OK https://www.posenlibrary.com/node/9804
+OK https://lexundria.com/j_aj/15.11-15.22/wst
+OK https://hayadan.com/nehardea-history-babylonia
+OK https://en.wikipedia.org/wiki/Anilai_and_Asinai
+FAILED https://www.relbib.de/Record/1649987048
+OK https://hayadan.com/nehardaa-jewish-military-activity-parthia-hanilai-hasinai-ch2
