@@ -1,0 +1,14 @@
+OK https://ostia-antica.org/dict/topics/puteoli/presentation/puteoli-paulus.htm
+OK https://lexundria.com/j_bj/2.104/wst
+FAILED https://heurist.huma-num.fr/heurist/judaism_and_rome/tpl/public-record/289
+FAILED https://lexundria.com/j_ant/17.328/wst
+OK https://lexundria.com/j_vit/16/wst
+FAILED https://akroterion.journals.ac.za/pub/article/view/514/580
+OK https://lexundria.com/j_aj/17.328/wst
+OK https://lexundria.com/j_vit/13/wst
+OK https://www.j-italy.org/?p=1075
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Campania_and_Basilicata
+FAILED https://cts.perseids.org/read/greekLit/tlg0018/tlg031/1st1K-eng1/179-191
+OK https://en.wikipedia.org/wiki/Claudia_Aster_inscription
+OK https://unora.unior.it/retrieve/49ac34d0-5dd7-412f-b4d3-61da212c6a91/Lacerenza%202023%20Ebrei%20a%20Puteoli.pdf
+OK https://unora.unior.it/retrieve/dfd1bedd-70a7-d55a-e053-3705fe0af723/Lacerenza%202004%20Fra%20Roma%20e%20Gerusalemme.pdf
