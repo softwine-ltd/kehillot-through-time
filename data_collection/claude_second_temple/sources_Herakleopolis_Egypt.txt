@@ -1,0 +1,15 @@
+OK https://publikationen.uni-tuebingen.de/xmlui/bitstream/10900/157547/1/Kreuzer_035.pdf
+OK https://scriptaclassica.org/index.php/sci/article/download/3835/3331/7203
+OK https://scriptaclassica.org/index.php/sci/article/download/3087/2613/6161
+OK https://scriptaclassica.org/index.php/sci/article/download/3751/3247/7117
+OK https://philipharland.com/greco-roman-associations/?p=20630
+OK https://bmcr.brynmawr.edu/?p=76588
+OK https://sehepunkte.de/2021/07/33449.html
+OK https://www.austriaca.at/0xc1aa5576_0x003588c6.pdf
+OK https://cris.uni-muenster.de/portal/en/publication/100229040
+FAILED https://papyri.info/ddbdp/p.polit.iud;;1
+FAILED https://papyri.info/hgv/8060
+FAILED https://ancientassociations.ku.dk/assoc/1370
+FAILED https://trismegistos.org/archive/197
+FAILED https://aafu.journals.ekb.eg/article_367636.html
+FAILED https://hal.science/hal-03915640
