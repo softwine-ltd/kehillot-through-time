@@ -1,0 +1,25 @@
+OK https://rsc.byu.edu/ministry-peter-chief-apostle/simon-peter-capernaum-archaeological-survey-first-century-village
+OK https://journal.fi/nj/article/view/102988/64043
+FAILED https://bibleodyssey.com/articles/capernaum/
+FAILED https://www.bibleodyssey.org/articles/capernaum/
+OK https://cbnisrael.org/?p=7312
+OK https://cbnisrael.org/?p=8210
+OK https://www.jewishencyclopedia.com/articles/4000-capernaum
+OK https://www.jewishvirtuallibrary.org/capernaum
+OK https://www.piercedhearts.org/sctjm/sctjm_talks/sctjm_works_adobe/life_in_capernaum_sr_grace_marie_sctjm.pdf
+OK https://library.biblicalarchaeology.org/?p=70798
+OK https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0150:whiston%20section=72
+FAILED https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0148:book=3:chapter=10:section=8
+OK https://www.biblegateway.com/passage/?search=Luke%207%3A1-10&version=NRSVUE
+OK https://www.biblegateway.com/passage/?search=Mark%201%3A21-31&version=NRSVUE
+OK https://www.biblegateway.com/passage/?search=Matthew%2017%3A24-27%3BJohn%206%3A59&version=NRSVUE
+OK https://en.wikipedia.org/wiki/Capernaum
+OK https://www.archaeology.wiki/blog/issue/excavations-in-the-greek-sector-of-capernaum/?print=45340
+FAILED https://www.hmdb.org/m.asp?m=139434
+FAILED https://embassies.gov.il/MFA/IsraelExperience/history/Pages/Capernaum - City of Jesus and its Jewish Synagogue.aspx
+OK https://madainproject.com/capernaum
+OK https://dannythedigger.com/capernaum-synagogue/
+OK https://library.biblicalarchaeology.org/article/synagogue-where-jesus-preached-found-at-capernaum/
+FAILED https://israel-tourguide.info/tag/capernaum
+OK https://www.israel-tourguide.info/blog/other-church-at-capernaum
+OK https://deadseaquake.info/EarthquakeCatalogOfTheDeadSea/Sites/Archaeo/Capernaum.html
