@@ -1,0 +1,17 @@
+OK https://www.jewishvirtuallibrary.org/corinth
+OK https://lexundria.com/j_bj/3.540/wst
+OK https://cojs.org/?p=5270
+OK http://www.earlyjewishwritings.com/text/philo/book40.html
+OK https://www.biblegateway.com/passage/?search=Acts%2018&version=NRSVUE
+FAILED https://www.bibleodyssey.com/places/related-articles/erastus-gallio-and-paul-insights-from-inscriptions
+FAILED https://www.bibleodyssey.org/places/related-articles/erastus-gallio-and-paul-insights-from-inscriptions
+OK https://www.jewishencyclopedia.com/articles/4661-corinth
+OK https://ojs.reformedjournals.co.za/index.php/ngtt/article/download/828/1251?inline=1
+OK https://www.livius.org/articles/place/corinth/roman-corinth/
+OK https://library.biblicalarchaeology.org/?p=70579
+OK https://www.magdala.org/journal/history-from-magdala-to-corinth
+OK https://www.biblegateway.com/passage/?search=Acts%2018%3A24-19%3A1%3BActs%2020%3A1-3&version=NRSVUE
+OK https://biblia.com/books/paideia67co1/p%206
+OK https://www.biblegateway.com/passage/?search=1%20Corinthians%201%3A1-16%3B1%20Corinthians%207%3A17-20&version=NRSVUE
+FAILED https://penelope.uchicago.edu/josephus/war-3.html
+OK https://www.gutenberg.org/files/2850/2850-h/2850-h.htm
