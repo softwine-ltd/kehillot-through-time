@@ -1,0 +1,20 @@
+OK https://www.ostia-antica.org/regio4/17/17-1.htm
+OK https://www.biblicalarchaeology.org/daily/ancient-cultures/ancient-rome/a-mikveh-in-roman-ostia/
+FAILED https://heurist.huma-num.fr/heurist/judaism_and_rome/view/319
+OK https://www.jewishvirtuallibrary.org/ostia
+OK https://brentnongbri.com/2025/04/24/more-on-the-mikveh-at-ostia-and-other-jewish-materials/
+OK https://www.timesofisrael.com/roman-era-jewish-bath-in-italy-may-be-oldest-outside-of-israel-points-to-vibrant-diaspora/
+OK https://www.arte.it/notizie/roma/a-ostia-antica-emerge-un-bagno-rituale-ebraico-l-antico-porto-di-roma-crocevia-di-convivenza-e-scambio-di-culture-22209
+OK https://ostiaantica.cultura.gov.it/wp-content/uploads/2025/11/Floriani-Squarciapino-1970.pdf (WebFetch could not parse; downloaded with curl, text extracted with pymupdf)
+OK https://ostiaantica.cultura.gov.it/wp-content/uploads/2025/11/Floriani-Squarciapino-1961-62.pdf (curl + pymupdf)
+OK https://ostiaantica.cultura.gov.it/wp-content/uploads/2025/11/Floriani-Squarciapino-1963a.pdf (curl + pymupdf)
+OK https://ostiaantica.cultura.gov.it/wp-content/uploads/2025/11/Floriani-Squarciapino-1961a.pdf (curl + pymupdf)
+OK https://ostiaantica.cultura.gov.it/wp-content/uploads/2025/11/Floriani-Squarciapino-1962a.pdf (curl + pymupdf)
+OK https://ostiaantica.cultura.gov.it/wp-content/uploads/2025/11/Floriani-Squarciapino-1963b.pdf (WebFetch could not parse; downloaded with curl, text extracted with pymupdf)
+OK https://cultura.gov.it/comunicato/27331
+OK https://ostiaantica.cultura.gov.it/en/educational-panels-and-maps/the-coastal-districts-and-the-maritime-domus/sinagoga/
+OK https://www.cambridge.org/core/journals/harvard-theological-review/article/oldest-original-synagogue-building-in-the-diaspora-a-response-to-l-michael-white/8F546FE902FC8A68E9CB58E09BCECD79
+OK https://ecsi.se/actarom-4-57/
+OK https://www.fastionline.org/site/AIAC_2521
+OK https://www.romanports.org/en/articles/ports-in-focus/25-the-synagogue.html
+OK https://blogs.timesofisrael.com/the-jews-of-ostia-antica/
