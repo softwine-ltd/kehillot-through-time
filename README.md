@@ -73,5 +73,23 @@ past the Holocaust, in towns whose Jewish community is well documented to have b
 `DATA_COLLECTION_PIPELINE.md`'s "Post-Holocaust population integrity" section for what's been
 found and fixed so far, and what's still open.
 
+## Event shapes and border sources
+
+Historical events are drawn as ellipses (`events.csv`) or polygons (`events_polygon.csv`). On 2026-11-01 every
+event was reviewed: an event about an area whose borders can be drawn from a relevant map (a kingdom, an empire, a
+duchy, a county, a province, an island, a country; 161 events) became a polygon, and a point-like event (one town,
+one camp, one battle) or a loosely defined area (a migration, a cultural region, a campaign) stayed an ellipse.
+Eight older polygons whose outline was too crude for the area they stand for (the Babylonian zone, the
+Mesopotamian exile, the Persian rule, the Alexandria riots of 38 CE, the Galilee centres, the Babylonian academies,
+Al-Andalus, the Rhineland) were turned into ellipses. Polygons are single rings (the map draws one ring per
+event), with at most 150 points. The border source of every polygon, its confidence and the licence of the border
+data are listed in `EVENT_POLYGON_BORDER_SOURCES.csv`. The sources are Natural Earth (public domain),
+OpenHistoricalMap (CC0) and a few outlines traced from Wikimedia Commons maps (CC BY-SA: the Kingdom of Israel 1020
+map, the Hasmonean Kingdom map, the Herodian Tetrarchy map, "General Government for the occupied Polish territories
+(1941)" and the Serbia map by XrysD, a Transnistria Governorate map from the US Holocaust Memorial Museum, and the
+Pale of Settlement map `Ansiedlungsrayon.svg` by Furfur). Medieval and early modern borders from modern
+administrative units are approximations and are marked in the source file; the outline of the medieval Kingdom of
+France and of the Habsburg monarchy of 1781 are our own composites of such units.
+
 ## Meta Keywords
 Jewish demographics, Jewish history, population maps, Jewish communities, kehillot, Jewish diaspora, historical maps, Jewish migration, interactive timeline, Jewish geography, demographic changes, Jewish population data
