@@ -63,7 +63,9 @@ Population figures are almost never counts. Use them this way:
   says no Jews remained), event in Notes.
 - **Year Established** = the earliest documented Jewish (Judahite/Judean/Israelite) presence at the site. For
   Judahite towns this may be earlier than 586 BCE; give the basis in the Notes of the first row. Use the same
-  value on every row.
+  value on every row. No row may be dated before Year Established: battles, sieges, foreign garrisons,
+  conquests or coin finds at a site before Jews are documented living there are not rows (mention them in the
+  first row's Notes if useful). Samaritans are not counted as Jews.
 
 ## Method (deep academic research)
 1. Run at least 8 WebSearch queries, adapted to the settlement, aiming at ACADEMIC sources:
