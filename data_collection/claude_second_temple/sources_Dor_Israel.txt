@@ -1,0 +1,16 @@
+FAILED https://dor.huji.ac.il/periods_HL.html
+OK https://lexundria.com/j_aj/19.292-316/wst
+OK https://dor.huji.ac.il/Download/Article/Dora_Caesarea_and_the_Middle_Coast_1121-2160.pdf
+OK https://www.jewishvirtuallibrary.org/tel-dor
+OK https://www.lexundria.com/j_aj/13.320-13.347/wst
+FAILED https://www.berkeley.edu/news/media/releases/2001/02/12_greek.html
+OK https://newsarchive.berkeley.edu/news/media/releases/2001/02/12_greek.html
+OK https://www.lexundria.com/j_aj/13.348-13.376/wst
+OK https://www.lexundria.com/j_aj/13.387-13.404/wst
+OK https://newadvent.org/cathen/05133b.htm
+OK https://www.jewishencyclopedia.com/articles/12076-petronius-publius
+OK https://www.lexundria.com/j_aj/14.69-14.79/wst
+OK https://www.lexundria.com/j_aj/14.80-14.104/wst
+OK https://www.lexundria.com/j_vit/24-35/wst
+OK https://www.bu.edu/jewishstudies/research/maccabees/2023-2024/
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/dor
