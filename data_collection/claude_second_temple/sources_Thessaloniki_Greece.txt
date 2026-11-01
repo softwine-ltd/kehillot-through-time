@@ -1,0 +1,15 @@
+OK https://revistas.ucm.es/index.php/GERI/article/download/50980/47317/91890 (WebFetch exceeded size limit; downloaded with curl and text extracted locally)
+OK https://www.jewishencyclopedia.com/articles/13036-salonica (wrong article: Max Salomon; nothing relevant)
+OK https://www.jewishvirtuallibrary.org/salonika
+OK https://www.jewishencyclopedia.com/articles/13042-salonica
+OK https://hts.org.za/index.php/HTS/article/download/556/455 (PDF; text extracted locally)
+FAILED https://books.ub.uni-heidelberg.de/propylaeum/catalog/view/501/761/85538
+FAILED https://ejournals.epublishing.ekt.gr/index.php/makedonika/article/download/5726/5465
+FAILED https://epicongr2017.univie.ac.at/fileadmin/user_upload/p_epicongr2017/Poster/Fujisawa_Religious_Identity_of_Diaspora_Samaritan_in_Thessaloniki_170630.pdf
+OK https://www.biblegateway.com/passage/?search=Acts%2017%3A1-13&version=NRSVUE
+OK https://www.biblegateway.com/passage/?search=1%20Thessalonians%202%3A14-16&version=NRSVUE
+OK https://www.biblegateway.com/passage/?search=Acts%2020%3A4%3BActs%2027%3A2%3BColossians%204%3A10-11&version=NRSVUE
+OK https://www.mbp.gr/en/exhibition/oi-evraioi-sti-thessaloniki-anexitil-2/
+OK https://en.wikipedia.org/wiki/History_of_the_Jews_in_Thessaloniki
+OK https://jct.gr/Papanastosopoulou.pdf (PDF; text extracted locally)
+FAILED https://ejournals.epublishing.ekt.gr/index.php/tekmiria/article/download/2856/2609/5831
