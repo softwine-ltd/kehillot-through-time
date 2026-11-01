@@ -1,0 +1,16 @@
+OK https://www.kesherjournal.com/article/jews-exile-and-the-murashu-archive-of-nippur/
+OK https://cojs.org/the_murash%C3%BB_archive-_late_5th_century_bce/
+FAILED https://anetoday.org/?p=3201
+OK https://helda.helsinki.fi/server/api/core/bitstreams/7aa4f149-8dce-4d26-a666-78617a3b4aae/content
+OK https://www.jewishencyclopedia.com/articles/11551-nippur
+OK https://ub.edu/ipoa/wp-content/uploads/2024/06/20241AuOrLevavi.pdf
+FAILED https://www.metmuseum.org/perspectives/cyrus-and-the-judean-diaspora
+FAILED https://www.die-bibel.de/stichwort/28189
+OK https://www.jpost.com/Magazine/Features/Info-gathering-on-the-exiled
+OK https://www.jpost.com/magazine/features/article-148877
+OK https://aish.com/archeology-jewish-life-in-ancient-babylonia/
+OK https://cojs.org/the_early_history_of_babylonian_jewry/
+FAILED https://anetoday.org/alstola-exile-ba
+FAILED https://www.jewishrefugees.org.uk/2009/07/whatever-happened-to-jews-exiled-to.html
+FAILED https://www.biblicaltraining.org/library/kebar
+OK https://encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/chebar
