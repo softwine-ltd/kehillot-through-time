@@ -1,0 +1,16 @@
+OK https://www.jewishencyclopedia.com/articles/4861-damascus
+OK https://jewishvirtuallibrary.org/jsource/judaica/ejud_0002_0005_0_04829.html
+OK https://lexundria.com/j_bj/2.559-2.561/wst
+OK https://lexundria.com/j_bj/7.367/wst
+OK https://lexundria.com/j_bj/7.368/wst
+OK https://lexundria.com/j_vit/27/wst
+FAILED https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0147:book=2:section=561
+OK https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0147%3Abook%3D2%3Awhiston+chapter%3D20%3Awhiston+section%3D2
+FAILED https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.559-2.561/
+OK https://www.biblegateway.com/passage/?search=Acts+9%3A1-25&version=NRSVUE
+OK https://www.biblegateway.com/passage/?search=Acts+22%3A12%3B2+Corinthians+11%3A32-33&version=NRSVUE
+OK https://courses.edx.org/asset-v1:IsraelX+BIBARC101+3T2019+type@asset+block/Damascus_EBR_online.pdf
+FAILED https://www.sefaria.org/I_Kings.20.34?lang=bi
+OK https://www.sefaria.org/api/texts/I_Kings.20.34?context=0
+OK https://denverjournal.denverseminary.edu/the-denver-journal-article/paul-between-damascus-and-antioch-the-unknown-years/
+OK https://www.jewishvirtuallibrary.org/jsource/vjw/Damascus.html
