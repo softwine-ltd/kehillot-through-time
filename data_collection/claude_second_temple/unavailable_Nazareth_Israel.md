@@ -1,0 +1,16 @@
+# Unavailable sources: Nazareth, Israel
+
+- Alexandre, Y., 2020. "The Settlement History of Nazareth in the Iron Age and Early Roman Period." 'Atiqot 98, pp. 25-92. https://publications.iaa.org.il/atiqot/vol98/iss1/3/ — Full stratigraphy of the late Hellenistic-Early Roman Jewish village (stone vessels, pits, possible Revolt hiding complex, priestly courses discussion); only the abstract was read. — PDF download returned 403.
+- Dark, K. R., 2012. "Early Roman-Period Nazareth and the Sisters of Nazareth Convent." Antiquaries Journal 92, pp. 37-64. DOI 10.1017/S0003581512001308 (open copy at https://centaur.reading.ac.uk/29782/). — Excavation of the 1st-c. courtyard house, stone vessels, kokhim tombs, settlement extent. — Repository blocked by bot protection (Access Denied); Cambridge paywall.
+- Dark, K. R., 2020. Roman-Period and Byzantine Nazareth and its Hinterland. Routledge. — Source of the "up to 1,000 inhabitants" estimate and its method; hinterland survey; hiding complexes. — Not online (book).
+- Dark, K. R., 2023. Archaeology of Jesus' Nazareth. Oxford University Press. https://academic.oup.com/book/45361 — Latest synthesis on settlement origin (Late Hellenistic), size, Jewish identity. — Paywalled (only navigation loaded).
+- Dark, K. R., 2015. "Has Jesus' Nazareth House Been Found?" Biblical Archaeology Review 41/2 (March/April 2015). https://library.biblicalarchaeology.org/?p=71414 — Sisters of Nazareth house, limestone vessel fragments. — BAS Library paywall (teaser only).
+- Strange, J. F., 1992. "Nazareth." Anchor Bible Dictionary, vol. 4. Doubleday. — Population estimate "a maximum of about 480". — Not online; figure taken from Wikipedia.
+- Meyers, E. M. and Strange, J. F., 1981. Archaeology, the Rabbis, and Early Christianity. Abingdon. — Original population estimate 1,600-2,000. — Not online; figure taken from Wikipedia.
+- Crossan, J. D. and Reed, J. L., 2001. Excavating Jesus: Beneath the Stones, Behind the Texts. HarperSanFrancisco/SPCK. — Population 200-400, entirely Jewish village. — Not online; used via Barr 2005 review.
+- Reed, J. L., 2000. Archaeology and the Galilean Jesus. Trinity Press. — Likely size/population estimate for Nazareth (under 400). — Not online.
+- Finegan, J., 1992. The Archaeology of the New Testament (rev. ed.). Princeton University Press, pp. 44-46. — Characterisation of Nazareth as a strongly Jewish Roman-period settlement; tombs. — Not online; cited by Wikipedia.
+- Alexandre, Y., 2012. Mary's Well, Nazareth: The Late Hellenistic to the Ottoman Periods. IAA Reports 49. — Late Hellenistic and Early Roman finds and coins at the spring serving the village. — Not online.
+- Pfann, S. J. and Rapuano, Y., 2008. "On the Nazareth Village Farm Report: A Reply to Salm." STRATA 26, pp. 105-112; and Dark, K. R., 2008, review of Salm, The Myth of Nazareth, STRATA 26, pp. 140-146. — Early Roman agricultural installations and pottery; existence of 1st-c. settlement. — Not online (paywalled bulletin).
+- Keys, D., 2020. Article on Dark's Nazareth research. The Independent (also Church Times, 1 May 2020). — "Up to 1,000 inhabitants"; hiding places for 100+ people. — Church Times returned 403; Independent original not located.
+- Korb, S., 2010. Life in Year One. Riverhead Books, p. 109. — "Population of 400 and one public bath". — Not online; popular book cited by Wikipedia.
