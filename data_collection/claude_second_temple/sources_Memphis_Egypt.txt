@@ -1,0 +1,15 @@
+OK https://www.jewishencyclopedia.com/articles/10616
+OK https://www.encyclopedia.com/humanities/dictionaries-thesauruses-pictures-and-press-releases/papyri
+FAILED https://penelope.uchicago.edu/josephus/ant-14.html
+OK https://lexundria.com/j_aj/14.127-14.155/wst
+FAILED https://edit.elte.hu/xmlui/bitstream/handle/10831/32977/dissz_szanto_zsuzsanna_tortenelemtud.pdf?sequence=1
+OK https://edit.elte.hu/server/api/core/bitstreams/d18924dc-3a59-4ac4-b068-872884e4db36/content
+OK https://www.getty.edu/publications/egypt-classical-world/02/
+FAILED https://www.unige.ch/lettres/antic/download_file/view/874/489
+OK https://www.lrb.co.uk/v12/n03/dominic-rathbone/ptah-and-co
+FAILED https://journals.ub.uni-heidelberg.de/index.php/bjb/article/view/62594/55111
+FAILED https://prop.ub.uni-heidelberg.de/journals/bjb/article/view/62594/55111
+OK https://www.biblegateway.com/passage/?search=Jeremiah%2044%3A1&version=NRSVUE
+OK https://byustudies.byu.edu/article/jews-in-ancient-egypt
+FAILED https://papyri.info/search?STRING=C.Pap.Jud.+1+141&no_caps=on&no_marks=on&target=metadata
+FAILED https://papyri.info/ddbdp/c.pap.jud;1;141
