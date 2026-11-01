@@ -1,0 +1,17 @@
+OK https://cojs.org/?p=22731
+OK https://droitromain.univ-grenoble-alpes.fr/Anglica/Galbae1_johnson.htm
+OK https://lexundria.com/j_aj/14.244/wst
+OK https://lexundria.com/j_aj/14.244-246/wst
+OK https://lexundria.com/j_aj/14.245/wst
+OK https://lexundria.com/j_aj/12.125/wst
+OK https://www.miletgrabung.uni-hamburg.de/en/milet-tour/tour-stadtzentrum/synagoge.html
+OK https://www.miletgrabung.uni-hamburg.de/en/milet/milet-geschichte.html
+OK https://jewishencyclopedia.com/articles/2010-asia-minor
+OK https://www.jewishencyclopedia.com/articles/3886-caesar-caius-julius
+OK https://wol.jw.org/en/wol/gallery/r1/lp-e/nwtsty/44/1001072162
+OK https://philipharland.com/greco-roman-associations/?p=1383
+OK https://www.biblicalturkey.org/post/jews-in-ancient-asia-minor
+OK https://ru.wikisource.org/wiki/%D0%95%D0%AD%D0%91%D0%95/%D0%9C%D0%B8%D0%BB%D0%B5%D1%82
+OK https://www.bibleplaces.com/miletus/
+FAILED https://penelope.uchicago.edu/josephus/ant-14.html
+FAILED https://mosaicmagazine.com/picks/history-ideas/2023/07/when-jews-went-to-see-the-gladiators/
