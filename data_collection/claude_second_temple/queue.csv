@@ -17,7 +17,7 @@ n,town,country,lon,lat,alt_name,status
 16,Babylon,Iraq,44.4209,32.5364,Babel,done
 17,Nazareth,Israel,35.2970,32.7020,Natzrat,done
 18,Yodfat,Israel,35.2300,32.8380,Jotapata; Yodefat,done
-19,Hebron,Palestine,35.0998,31.5326,Hevron; Al-Khalil,pending
+19,Hebron,Palestine,35.0998,31.5326,Hevron; Al-Khalil,done
 20,Bethlehem,Palestine,35.2024,31.7049,Beit Lehem,pending
 21,Lod,Israel,34.8955,31.9510,Lydda; Diospolis,pending
 22,Jaffa,Israel,34.7520,32.0540,Joppa; Yafo,pending
