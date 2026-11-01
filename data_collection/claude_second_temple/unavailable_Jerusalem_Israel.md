@@ -1,0 +1,24 @@
+# Unavailable sources: Jerusalem, Israel (Second Temple period)
+
+- Geva, H., 2014. "Jerusalem's Population in Antiquity: A Minimalist View." Tel Aviv 41: 131-160. — Archaeological period-by-period estimates (Persian c. 1,000; Hasmonean 8,000; pre-70 max. 20,000) with areas and density coefficients; used here only via BAR/Wikipedia summaries. — Paywalled (Taylor & Francis); no open copy found.
+- Geva, H., 2007. "Estimating Jerusalem's Population in Antiquity: A Minimalist View." Eretz-Israel 28: 50-65 (Hebrew). — Persian-period estimate c. 1,000 on 60 dunams; cited by Lipschits 2009. — Not online.
+- Reich, R., 2014. "A Note on the Population Size of Jerusalem in the Second Temple Period." Revue Biblique 121(2): 298-305. — Full method (500 persons/ha, residential area table, c. 30,000 / 28,600). — Abstract only (Haifa CRIS); full text paywalled.
+- Broshi, M., 1978. "Estimating the Population of Ancient Jerusalem." Biblical Archaeology Review 4:2. — Period estimates incl. 80,000 for 70 CE and critique of Josephus/Hecataeus figures. — BAS Library paywall; old.biblicalarchaeology.org not resolvable in this session (network allow-list).
+- Broshi, M., 1975. "La population de l'ancienne Jérusalem." Revue Biblique 82: 5-14. — Original period-by-period estimates (Persian, Hasmonean 30,000-35,000, Herodian). — Not online / paywalled.
+- Broshi, M., 1977. "The Number of Inhabitants in Ancient Jerusalem." In M. Broshi (ed.), Between Hermon and Sinai (Yad Leamnon), Jerusalem: 65-74 (Hebrew). — Persian-period 4,800 and later figures; cited by Lipschits 2009. — Not online.
+- Broshi, M., 1979. "The Population of Western Palestine in the Roman-Byzantine Period." BASOR 236: 1-10. https://homepages.uc.edu/~martinj/Latin/Roman_Population/Broschi-%20Polulation%20of%20Western%20Palestine%20in%20the%20Roman-Byzantine%20Period.pdf — Density coefficient (400-500/ha) and Jerusalem figure. — HTTP 503 at fetch time.
+- Broshi, M., 2001. Bread, Wine, Walls and Scrolls (Sheffield), pp. 119-120. — 80,000 estimate for pre-70 Jerusalem (cited by Wikipedia). — Google Books/not online.
+- Wilkinson, J., 1974. "Ancient Jerusalem: Its Water Supply and Population." Palestine Exploration Quarterly 106: 33-51. — Water-supply-based 70,398 estimate. — Paywalled (T&F).
+- Levine, L. I., 2002. Jerusalem: Portrait of the City in the Second Temple Period (538 BCE-70 CE). Philadelphia: JPS. — Persian 4,000-5,000 (p. 33) and Herodian 60,000-70,000 (p. 343) estimates. — Book, not online.
+- Jeremias, J., 1969. Jerusalem in the Time of Jesus. London: SCM. pp. 77-84. — 55,000 then 25,000-30,000 estimates; used only via a secondary web page. — Book, not online.
+- Finkelstein, I., 2008. "Jerusalem in the Persian (and Early Hellenistic) Period and the Wall of Nehemiah." JSOT 32/4: 501-520. — 20-25 dunams, 400-500 people. — Paywalled (SAGE); used via Lipschits 2009.
+- Carter, C. E., 1999. The Emergence of Yehud in the Persian Period (JSOTSup 294). Sheffield. — 1,500 (archaeological) and 625-750 (textual, pre-Nehemiah) estimates. — Book, not online.
+- Lipschits, O., 2005. The Fall and Rise of Jerusalem: Judah under Babylonian Rule. Winona Lake. pp. 210-218, 271. — Desertion of Jerusalem 586-538 BCE and Persian population estimate. — Book, not online.
+- Weinberg, J. P., 1992. The Citizen-Temple Community (JSOTSup 151); 2000. "Jerusalem in the Persian Period." — 3,044 men / 12,000-15,000 people after Nehemiah. — Not online; via Lipschits 2009.
+- Zwickel, W., 2008. "Jerusalem und Samaria zur Zeit Nehemias. Ein Vergleich." Biblische Zeitschrift 52(2): 201-222. — 200 / 400-600 estimates. — Paywalled (Brill); via Lipschits 2009.
+- Reinhardt, W., 1995. "The Population Size of Jerusalem and the Numerical Growth of the Jerusalem Church." In R. Bauckham (ed.), The Book of Acts in its Palestinian Setting, p. 263. — 100,000-120,000. — Book, not online; via Wikipedia.
+- Lipiński, E., 2007, p. 9 — 35,000-40,000 for pre-revolt Jerusalem (cited by Wikipedia; exact title not verified). — Not accessed.
+- Strange, J., 2003, p. 110 — 75,000 for pre-revolt Jerusalem (cited by Wikipedia; exact title not verified). — Not accessed.
+- Price, J., 2011 (p. 410) — survey stating modern estimates range from 20,000 to c. 100,000 (cited by Wikipedia). — Not accessed.
+- Faust, A., 2013. Jerusalem expansion article, New Studies on Jerusalem 19 (Hebrew). https://lisa.biu.ac.il/sites/lisa/files/shared/faust-2013-nsoj_19-jerusalm_expansion.pdf — Discussion of Geva's minimalist reconstruction. — HTTP 503 at fetch time.
+- Unidentified paper at https://www.academia.edu/40790691 (appeared in searches on Jerusalem population density). — Possibly further density estimates. — 403.
