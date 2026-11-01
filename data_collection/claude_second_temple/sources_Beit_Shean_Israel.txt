@@ -1,0 +1,23 @@
+OK https://jewishencyclopedia.com/articles/13360-scythopolis
+OK https://lexundria.com/j_bj/2.457-2.512/wst
+OK https://uni-muenster.de/Archaeologie/forschen/projekte/german-israelitelliztabbaproject/index.html
+OK https://produccioncientifica.usal.es/documentos/6a0610d49ad1cf5720dce61d
+OK https://www.ebsco.com/research-starters/history/scythopolis/
+OK https://www.attalus.org/names/s/scythopolis.html
+OK https://www.biblegateway.com/passage/?search=2+Maccabees+12%3A29-31&version=NRSVUE
+OK https://lexundria.com/j_aj/13.275-13.283/wst
+FAILED https://www.attalus.org/translate/megillat.html
+OK https://lexundria.com/j_aj/13.392-13.397/wst
+OK https://lexundria.com/j_aj/14.74-14.76/wst
+OK https://www.attalus.org/translate/taanit.html
+OK https://lexundria.com/j_bj/7.361-7.366/wst
+OK https://lexundria.com/j_vit/24-27/wst
+OK https://library.oapen.org/bitstream/20.500.12657/77204/1/external_content.pdf (WebFetch timed out; downloaded with curl and text extracted locally)
+OK https://lexundria.com/j_bj/1.64-1.66/wst
+OK https://lexundria.com/j_aj/14.87-14.88/wst
+OK https://penn.museum/research/publications/publication/792
+OK https://penn.museum/documents/publications/pdfs/The_Northern_Cemetery_of_Beth_Shan.pdf (curl; no Second Temple Jewish material)
+OK https://jewishvirtuallibrary.org/jsource/judaica/ejud_0002_0003_0_02880.html
+OK https://search.inscriptionsisraelpalestine.org/inscriptions/bshe0002
+FAILED https://buleria.unileon.es/handle/10612/11712
+FAILED https://buleria.unileon.es/handle/10612/11712?show=full
