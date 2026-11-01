@@ -93,5 +93,17 @@ Pale of Settlement map `Ansiedlungsrayon.svg` by Furfur). Medieval and early mod
 administrative units are approximations and are marked in the source file; the outline of the medieval Kingdom of
 France and of the Habsburg monarchy of 1781 are our own composites of such units.
 
+### Event titles and colors
+
+Every event row ends with three columns: `valence` (`bad`, `good` or `neutral`), `title_eng` and `title_heb`. The popup
+title is the event type followed by what happened, in Hebrew and English (for example "Jewish Thought - Babylonian Jewish
+academies" and the same in Hebrew), so the type name alone no longer stands for the event. The shape color follows the
+valence, judged from the text of the row and not from its type (a State Events row can be anti-Jewish legislation or a
+grant of rights): red for bad events (pogroms, persecution, expulsions, anti-Jewish legislation, ghettos, destruction),
+blue for good events (community growth, states, rights granted, return, rescue), green for good Jewish-thought and
+migration events, gray for mixed or unclear events (a revolt with a mixed outcome, the earliest mention of a people).
+`utils/event_titles_colors.py colors` recolors every row from its `valence`, so changing a rating means editing the
+column and running that command; a new event needs a valence and the two titles.
+
 ## Meta Keywords
 Jewish demographics, Jewish history, population maps, Jewish communities, kehillot, Jewish diaspora, historical maps, Jewish migration, interactive timeline, Jewish geography, demographic changes, Jewish population data

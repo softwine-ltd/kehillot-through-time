@@ -4175,15 +4175,16 @@ async function processEllipseEvents(year) {
     try {
         const csvText = await getEventsData();
         const rows = csvText.split('\n').slice(1); // skip header
-        // Each row: center_lon, center_lat, radii1, radii2, tilt_deg, color, fillColor, fillOpacity, year_start, year_end, description_eng, description_heb, source, type
+        // Each row: center_lon, center_lat, radii1, radii2, tilt_deg, color, fillColor, fillOpacity, year_start, year_end, description_eng, description_heb, source, type, valence, title_eng, title_heb
         const events = rows
             .filter(row => row.trim())
             .map(row => {
                 const [
                     center_lon, center_lat, radii1, radii2, tilt_deg,
                     color, fillColor, fillOpacity, year_start, year_end,
-                    description_eng, description_heb, source, type
-                ] = parseCSVLine(row).slice(0, 14);
+                    description_eng, description_heb, source, type,
+                    valence, title_eng, title_heb
+                ] = parseCSVLine(row).slice(0, 17);
 
                 const actualYearEnd = year_end == undefined || year_end.trim() === '' ? undefined : parseInt(year_end);
                 return {
@@ -4199,7 +4200,10 @@ async function processEllipseEvents(year) {
                     descriptionEng: description_eng ? description_eng.replace(/"/g, '') : '',
                     descriptionHeb: description_heb ? description_heb.replace(/"/g, '') : '',
                     source: source ? source.replace(/"/g, '') : '',
-                    type: parseInt(type)
+                    type: parseInt(type),
+                    valence: valence ? valence.trim() : '',
+                    titleEng: title_eng ? title_eng.replace(/"/g, '').trim() : '',
+                    titleHeb: title_heb ? title_heb.replace(/"/g, '').trim() : ''
                 };
             });
 
@@ -4237,14 +4241,15 @@ async function processPolygonEvents(year) {
     try {
         const csvText = await getPolygonEventsData();
         const rows = csvText.split('\n').slice(1); // skip header
-        // Each row: polygon_coordinates, color, fillColor, fillOpacity, year_start, year_end, description_eng, description_heb, source, type
+        // Each row: polygon_coordinates, color, fillColor, fillOpacity, year_start, year_end, description_eng, description_heb, source, type, valence, title_eng, title_heb
         const events = rows
             .filter(row => row.trim())
             .map(row => {
                 const [
                     polygon_coords, color, fillColor, fillOpacity, year_start, year_end,
-                    description_eng, description_heb, source, type
-                ] = parseCSVLine(row).slice(0, 10);
+                    description_eng, description_heb, source, type,
+                    valence, title_eng, title_heb
+                ] = parseCSVLine(row).slice(0, 13);
 
                 const actualYearEnd = year_end == undefined || year_end.trim() === '' ? undefined : parseInt(year_end);
                 return {
@@ -4257,7 +4262,10 @@ async function processPolygonEvents(year) {
                     descriptionEng: description_eng ? description_eng.replace(/"/g, '') : '',
                     descriptionHeb: description_heb ? description_heb.replace(/"/g, '') : '',
                     source: source ? source.replace(/"/g, '') : '',
-                    type: parseInt(type)
+                    type: parseInt(type),
+                    valence: valence ? valence.trim() : '',
+                    titleEng: title_eng ? title_eng.replace(/"/g, '').trim() : '',
+                    titleHeb: title_heb ? title_heb.replace(/"/g, '').trim() : ''
                 };
             });
 
@@ -4314,7 +4322,12 @@ function addEventPopup(polygon, ev) {
         return titles[type] || { he: "אירוע", en: "Event" };
     }
 
-    const eventTitles = getEventTitles(ev.type);
+    // "Type - what happened": the type name alone says little, so the event's own short title follows it
+    const typeTitles = getEventTitles(ev.type);
+    const eventTitles = {
+        he: ev.titleHeb ? `${typeTitles.he} - ${ev.titleHeb}` : typeTitles.he,
+        en: ev.titleEng ? `${typeTitles.en} - ${ev.titleEng}` : typeTitles.en
+    };
     const currentLangForPopup = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
     const isRtlLang = currentLangForPopup === 'he';
     const textDir = isRtlLang ? 'rtl' : 'ltr';
@@ -4341,8 +4354,8 @@ function addEventPopup(polygon, ev) {
     
     const popupContent = `
     <div style="direction: ${textDir}; text-align: ${textAlign};">
-        <div style="font-weight: 600; margin-bottom: 4px;">${eventTitles.he}</div>
-        <div style="font-weight: 500; margin-bottom: 8px; color: #666; font-size: 14px;">${eventTitles.en}</div>
+        <div style="font-weight: 600; margin-bottom: 4px;">${escapeHtml(eventTitles.he)}</div>
+        <div style="font-weight: 500; margin-bottom: 8px; color: #666; font-size: 14px;">${escapeHtml(eventTitles.en)}</div>
         <div style="margin: 6px 0;">
             <strong>${labels.period}:</strong> ${ev.yearStart < 0 ? Math.abs(ev.yearStart) + ' BCE' : ev.yearStart + ' CE'}
             ${ev.yearEnd !== undefined ? ' - ' + (ev.yearEnd < 0 ? Math.abs(ev.yearEnd) + ' BCE' : ev.yearEnd + ' CE') : ''}
