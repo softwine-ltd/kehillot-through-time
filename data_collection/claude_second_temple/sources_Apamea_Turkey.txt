@@ -1,0 +1,17 @@
+FAILED https://digi.ub.uni-heidelberg.de/diglit/ramsay1897bd2/0336
+OK https://etheses.durham.ac.uk/id/eprint/6696
+OK https://etheses.durham.ac.uk/id/eprint/6696/1/6696_4000.PDF
+FAILED https://cts.perseids.org/read/latinLit/phi0474/phi017/perseus-eng2/59-70
+OK https://en.wikipedia.org/wiki/Apamea_(Phrygia)
+OK https://lexundria.com/j_aj/12.147-150/wst
+OK https://www.jewishvirtuallibrary.org/phrygia
+FAILED https://fgh.perseids.org/read/latinLit/phi0474/phi017/perseus-eng2/67-70
+OK https://jewishencyclopedia.com/articles/6165-flaccus-l-valerius
+OK https://www.jewishencyclopedia.com/articles/12124
+OK https://www.bsw.org/biblica/vol-93-2012/noah-deucalion-and-the-new-testament/502/article-p415.html
+FAILED https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0020%3Atext%3DFlac.%3Asection%3D68
+OK https://www.thelatinlibrary.com/cicero/flacco.shtml
+OK https://leunumismatik.com/en/lot/9/501
+FAILED https://digi.ub.uni-heidelberg.de/diglit/ramsay1897bd2/0338
+OK https://archive.org/download/citiesbishoprics02rams/citiesbishoprics02rams_djvu.txt
+OK https://dn760101.eu.archive.org/0/items/citiesbishoprics02rams/citiesbishoprics02rams_djvu.txt
