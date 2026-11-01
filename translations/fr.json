@@ -86,6 +86,10 @@
       "title": "Sources de Données",
       "description": "Les données combinent des archives historiques, des découvertes archéologiques, des études démographiques et des recherches universitaires. Les estimations de population sont basées sur des sources historiques disponibles et peuvent inclure des approximations à des fins de démonstration. Les sources incluent des publications académiques, des documents historiques et des bases de données démographiques établies."
     },
+    "dataUpdate": {
+      "title": "Mise à jour des données",
+      "text": "Dernière mise à jour des données : {{date}}. La carte couvre actuellement {{towns}} localités et {{rows}} lignes de données."
+    },
     "howToUse": {
       "title": "Comment Utiliser",
       "items": [

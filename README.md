@@ -52,6 +52,8 @@ for the full collection pipeline, its provenance, current known gaps, and in-pro
 notably closing the gap between this dataset's pre-WW2 Europe estimate and the accepted historical
 figure of ~9.5M — concentrated in Poland and the former Pale of Settlement).
 
+**The About dialog's data-update line.** The site's About dialog (English, Hebrew, French) states the date of the last data update, the number of towns and the number of data rows ("Last data update: ... The map currently covers N towns and N data rows."). The three numbers come from `data_info.json`, which `utils/update_data_info.py apply` writes from `kehilot.csv` (towns counted as `utils/validate_kehilot.py` counts markers; the date is the day it is run, or `--date`). Run it after every change of `kehilot.csv`, before committing; the data workspace's `chain.sh` does so after the validator. The wording is under `about.dataUpdate` in `translations/en.json`, `he.json` and `fr.json`.
+
 **Columns and the public Notes.** `kehilot.csv` has 19 public columns (the ones the site reads) and a 20th, `process_notes`, that the site never reads. The public Notes column is for visitors: what the source says, how to read the figure, caveats about the figure. Remarks about how the data was gathered and processed (page-image reading, OCR, search results, confidence tags, marker matching, coordinate provenance, review/merge logs, extra source links) are kept, verbatim, in `process_notes` for the maintainers; `utils/split_process_notes.py` moves them and runs after every merge (see `DATA_COLLECTION_PIPELINE.md`, "Public Notes vs `process_notes`").
 
 **What the data covers.** Besides the modern (16th–21st century) population series built by the AI

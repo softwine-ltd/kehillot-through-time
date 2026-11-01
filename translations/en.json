@@ -86,6 +86,10 @@
       "title": "Data Sources",
       "description": "The data combines historical records, archaeological findings, demographic studies, and scholarly research. Population estimates are based on available historical sources and may include approximations for demonstration purposes. Sources include academic publications, historical documents, and established demographic databases."
     },
+    "dataUpdate": {
+      "title": "Data Update",
+      "text": "Last data update: {{date}}. The map currently covers {{towns}} towns and {{rows}} data rows."
+    },
     "howToUse": {
       "title": "How to Use",
       "items": [

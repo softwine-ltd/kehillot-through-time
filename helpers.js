@@ -1733,10 +1733,42 @@ function initializeMap() {
     const closeAboutModal = document.getElementById('closeAboutModal');
     const closeAboutModalBtn = document.getElementById('closeAboutModalBtn');
 
+    // Data-update statement (date of the last data update, number of towns and of data rows). The numbers come from
+    // data_info.json, written by utils/update_data_info.py, so they always describe the kehilot.csv that is published.
+    // The line stays hidden if the file is missing or malformed.
+    let dataInfoPromise = null;
+    function loadDataInfo() {
+        if (!dataInfoPromise) {
+            dataInfoPromise = fetch('data_info.json')
+                .then(response => response.ok ? response.json() : null)
+                .then(info => (info && /^\d{4}-\d{2}-\d{2}$/.test(info.lastUpdate) && Number.isInteger(info.towns) && Number.isInteger(info.rows)) ? info : null)
+                .catch(() => null);
+        }
+        return dataInfoPromise;
+    }
+    async function renderDataUpdate() {
+        const block = document.getElementById('aboutDataUpdateBlock');
+        const line = document.getElementById('aboutDataUpdate');
+        const info = await loadDataInfo();
+        if (!block || !line || !info || !window.i18n) return;
+        const lang = window.i18n.getCurrentLanguage();
+        const locale = ({ en: 'en-GB', he: 'he-IL', fr: 'fr-FR' })[lang] || 'en-GB';
+        const [y, m, d] = info.lastUpdate.split('-').map(Number);
+        const date = new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(Date.UTC(y, m - 1, d)));
+        line.textContent = window.i18n.t('about.dataUpdate.text', {
+            date,
+            towns: info.towns.toLocaleString(locale),
+            rows: info.rows.toLocaleString(locale)
+        });
+        block.classList.remove('hidden');
+    }
+    window.addEventListener('languageChanged', renderDataUpdate);
+
     // Open modal
     aboutButton.addEventListener('click', () => {
         aboutModal.classList.remove('hidden');
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        renderDataUpdate();
     });
 
     // Close modal functions
