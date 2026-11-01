@@ -1,0 +1,14 @@
+OK https://www.jewishencyclopedia.com/articles/14255-tarsus
+OK https://www.jewishencyclopedia.com/articles/4387-cilicia
+OK https://students.cs.calvin.edu/~hplantin/reflow2/hastings/cache/0923.html
+OK https://tyndalebulletin.org/article/30220.pdf
+OK https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Tarsus
+OK https://biblicalstudies.gospelstudies.org.uk/pdf/expositor/series7/02-029.pdf
+OK https://www.biblegateway.com/passage/?search=Acts%2021%3A39%3BActs%2022%3A3&version=NRSVUE
+OK https://www.biblegateway.com/passage/?search=Acts%209%3A11%3BActs%209%3A30%3BActs%2011%3A25-26&version=NRSVUE
+OK https://www.biblegateway.com/passage/?search=2%20Maccabees%204%3A30-38&version=NRSVUE
+FAILED https://biblicalstudies.org.uk/book_cities-of-st-paul_ramsay.html
+FAILED https://www.britannica.com/biography/Saint-Paul-the-Apostle
+OK https://en.wikipedia.org/wiki/Paul_the_Apostle
+FAILED https://www.jewishvirtuallibrary.org/tarsus
+OK https://www.jewishvirtuallibrary.org/cilicia
