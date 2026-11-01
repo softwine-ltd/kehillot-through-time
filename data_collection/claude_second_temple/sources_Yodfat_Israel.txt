@@ -1,0 +1,23 @@
+OK https://www.jewishvirtuallibrary.org/yodefat
+OK https://library.biblicalarchaeology.org/book/the-new-encyclopedia-of-archaeological-excavations-in-the-holy-land/yodfat/
+OK https://jewishencyclopedia.com/articles/8933-jotapata
+FAILED https://www.hmdb.org/m.asp?m=132004
+OK https://en.wikipedia.org/wiki/Yodfat
+FAILED https://webpages.scu.edu/ftp/cmurphy/courses/sctr027/dig-sites/09a-jotapata.htm
+FAILED https://embassies.gov.il/MFA/IsraelExperience/history/Pages/Yodefat - A Town in Galilee.aspx
+OK https://ms.fortresspress.com/downloads/9781451467420_Chapter 1.pdf
+FAILED https://www.hamichlol.org.il/%D7%AA%D7%9C_%D7%99%D7%95%D7%93%D7%A4%D7%AA
+OK https://en.wikipedia.org/wiki/Galilee_campaign_(67)
+OK https://en.wikipedia.org/wiki/Siege_of_Yodfat
+FAILED https://www.sefaria.org/Mishnah_Arakhin.9.6
+OK https://www.sefaria.org/api/texts/Mishnah_Arakhin.9.6?context=0
+OK https://lexundria.com/j_bj/3.336/wst
+OK https://lexundria.com/j_bj/2.573/wst
+OK https://lexundria.com/j_bj/3.337/wst
+OK https://lexundria.com/j_bj/3.338/wst
+OK https://lexundria.com/j_bj/3.339/wst
+OK https://library.biblicalarchaeology.org/?p=72042
+OK https://lexundria.com/j_vit/188/wst
+FAILED https://www.academia.edu/5032021
+FAILED https://isac.uchicago.edu/article/lecture-mordechai-aviam-yodfat-jotapata-life-and-death-jewish-galilean-town
+OK https://www.virtualreligion.net/iho/jotapata.html
