@@ -1,0 +1,13 @@
+OK https://www.jewishvirtuallibrary.org/history-and-overview-of-acre
+OK https://jewishencyclopedia.com/articles/749-acre
+OK https://virtualreligion.net/iho/ptolemais.html
+OK https://lexundria.com/j_bj/2.457-2.480/wst
+FAILED https://cdn.mohrsiebeck.com/ee,e77a479dd943688b1c6326ffbfaee1.pdf
+OK https://www.philipharland.com/Blog/2022/10/judean-jewish-diasporas-josephos-josephus-take-on-tensions-with-greeks-in-syria-and-the-decapolis-ca-59-66-ce-late-first-century-ce/
+FAILED https://mobi.biblegateway.com/resources/encyclopedia-of-the-bible/Acco
+OK https://lexundria.com/j_aj/18.261-18.288/wst
+OK https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Acco
+OK https://lexundria.com/j_aj/13.324-13.347/wst
+OK https://lexundria.com/j_vit/213-215/wst
+OK https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/acre
+OK https://he.wikipedia.org/wiki/עכו
