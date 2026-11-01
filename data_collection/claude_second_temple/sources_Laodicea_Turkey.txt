@@ -1,0 +1,16 @@
+OK https://jewishencyclopedia.com/articles/9631-laodicea
+OK https://www.jewishvirtuallibrary.org/laodicea
+OK https://www.encyclopedia.com/history/ancient-greece-and-rome/ancient-history-greece/laodicea
+OK https://library.biblicalarchaeology.org/?p=71562
+OK https://www.attalus.org/cicero/flaccus2.html
+OK https://lexundria.com/j_aj/14.241/wst
+OK https://lexundria.com/j_aj/14.242/wst
+OK https://juchre.org/nor/letters/chap12.htm
+OK https://juchre.org/nor/letters/chap29.htm
+FAILED https://digi.ub.uni-heidelberg.de/diglit/ramsay1895bd1/0097
+OK https://etheses.durham.ac.uk/id/eprint/6696
+OK https://etheses.durham.ac.uk/id/eprint/6696/1/6696_4000.PDF
+OK https://www.galaxie.com/article/bsac141-561-01
+OK https://en.wikipedia.org/wiki/Laodicea_on_the_Lycus
+OK https://cojs.org/laodicaea/
+FAILED https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Tacitus/Annals/14B*.html
