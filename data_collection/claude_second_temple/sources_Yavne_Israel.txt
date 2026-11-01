@@ -1,0 +1,30 @@
+OK https://jewishencyclopedia.com/articles/8375-jabneh
+OK https://epi-identity-database.uw.edu.pl/site/130
+FAILED https://cts.perseids.org/read/greekLit/tlg0018/tlg031/1st1K-eng1/199-207
+FAILED https://cts.perseids.org/read/greekLit/tlg0018/tlg031/1st1K-eng1/192-204
+OK https://lexundria.com/j_bj/4.130/wst
+OK https://lexundria.com/j_aj/18.26-18.38/wst
+OK https://www.athensjournals.gr/history/2025-11-4-3-Varga.pdf (WebFetch could not parse; downloaded with curl and text extracted locally)
+OK https://www.athensjournals.gr/history/2024-6351-AJHIS-Varga-07.pdf (downloaded with curl; preprint of the 2025 article)
+OK https://bible.usccb.org/bible/2maccabees/12
+OK http://www.earlyjewishwritings.com/text/philo/book40.html
+OK https://lexundria.com/j_aj/13.395/wst
+OK https://lexundria.com/j_aj/13.390-13.400/wst
+OK https://lexundria.com/j_bj/4.440-4.450/wst
+OK https://lexundria.com/j_bj/1.155-1.170/wst
+OK https://www.jewishvirtuallibrary.org/jabneh
+OK https://www.jewishpress.com/first-ever-remains-of-sanhedrin-era-building-uncovered-in-coastal-city-of-yavneh/
+OK https://library.biblicalarchaeology.org/book/the-new-encyclopedia-of-archaeological-excavations-in-the-holy-land/yavneh/
+FAILED https://www.academia.edu/3218807
+FAILED https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/16B*.html
+OK https://www.lockwoodonlinejournals.com/index.php/inr/article/view/2802
+FAILED https://embassies.gov.il/london/NewsAndEvents/Pages/--2-DECEMBER-2021----Archeological-remains-dating-from-the-time-of-the-Sanhedrin-uncovered-in-Yavne-----.aspx
+OK https://www.archaeology.wiki/blog/2021/12/01/building-from-the-time-of-the-exiled-sanhedrin-discovered-in-yavne/
+OK https://lexundria.com/j_bj/3.50-3.58/wst
+OK https://lexundria.com/j_aj/18.155-18.160/wst
+OK https://lexundria.com/j_aj/13.320-13.326/wst
+OK https://lexundria.com/j_bj/2.93-2.100/wst
+OK https://lexundria.com/j_aj/13.213-13.217/wst
+OK https://lexundria.com/j_aj/14.74-14.76/wst
+FAILED https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0198:book=16:chapter=2:section=28
+OK https://en.wikipedia.org/wiki/Yavne
