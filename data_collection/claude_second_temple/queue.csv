@@ -1,0 +1,71 @@
+n,town,country,lon,lat,alt_name,status
+1,Jerusalem,Israel,35.2345,31.7767,Hierosolyma; Yerushalayim; Aelia,pending
+2,Alexandria,Egypt,29.9187,31.2001,Alexandreia,pending
+3,Sepphoris,Israel,35.2790,32.7520,Tzippori; Diocaesarea,pending
+4,Tiberias,Israel,35.5310,32.7940,Tverya,pending
+5,Rome,Italy,12.4964,41.9028,Roma,pending
+6,Jericho,Palestine,35.4440,31.8560,Hiericus; Tulul Abu el-Alayiq,pending
+7,Magdala,Israel,35.5170,32.8250,Migdal; Tarichaea; Magdala Nunayya,pending
+8,Capernaum,Israel,35.5750,32.8810,Kfar Nahum; Tell Hum,pending
+9,Gamla,Israel,35.7400,32.9030,Gamala,pending
+10,Masada,Israel,35.3536,31.3156,Metzada,pending
+11,Qumran,Palestine,35.4593,31.7414,Khirbet Qumran,pending
+12,Caesarea,Israel,34.8936,32.5000,Caesarea Maritima; Strato's Tower,pending
+13,Antioch,Turkey,36.1610,36.2020,Antakya; Antioch on the Orontes,pending
+14,Damascus,Syria,36.3060,33.5110,Dimashq,pending
+15,Elephantine,Egypt,32.8866,24.0850,Yeb; Aswan; Syene,pending
+16,Babylon,Iraq,44.4209,32.5364,Babel,pending
+17,Nazareth,Israel,35.2970,32.7020,Natzrat,pending
+18,Yodfat,Israel,35.2300,32.8380,Jotapata; Yodefat,pending
+19,Hebron,Palestine,35.0998,31.5326,Hevron; Al-Khalil,pending
+20,Bethlehem,Palestine,35.2024,31.7049,Beit Lehem,pending
+21,Lod,Israel,34.8955,31.9510,Lydda; Diospolis,pending
+22,Jaffa,Israel,34.7520,32.0540,Joppa; Yafo,pending
+23,Yavne,Israel,34.7389,31.8781,Jamnia; Iamneia; Yavneh,pending
+24,Emmaus,Israel,34.9898,31.8393,Emmaus Nicopolis; Imwas,pending
+25,Leontopolis,Egypt,31.3300,30.2930,Tell el-Yahudiyeh; Onias temple,pending
+26,Cyrene,Libya,21.8580,32.8250,Kyrene; Shahhat,pending
+27,Sardis,Turkey,28.0400,38.4880,Sardes; Sart,pending
+28,Delos,Greece,25.2680,37.3960,Dilos,pending
+29,Ein Gedi,Israel,35.3874,31.4610,En Gedi; Engaddi,pending
+30,Herodium,Palestine,35.2410,31.6658,Herodion; Jabal al-Fureidis,pending
+31,Bethsaida,Israel,35.6310,32.9100,Julias; et-Tell; el-Araj,pending
+32,Chorazin,Israel,35.5630,32.9110,Korazim; Khirbet Karazeh,pending
+33,Gush Halav,Israel,35.4470,33.0230,Gischala; Jish,pending
+34,Cana,Israel,35.3370,32.7900,Khirbet Qana; Kana of Galilee,pending
+35,Arbel,Israel,35.4990,32.8180,Arbela of Galilee,pending
+36,Beit Shean,Israel,35.5030,32.5000,Scythopolis; Beth Shean,pending
+37,Modiin,Israel,35.0100,31.8980,Modein; Umm el-Umdan,pending
+38,Gezer,Israel,34.9200,31.8590,Gazara,pending
+39,Maresha,Israel,34.8986,31.5933,Marisa; Tel Maresha,pending
+40,Beth Zur,Palestine,35.0960,31.5900,Bethsura; Khirbet et-Tubeiqa,pending
+41,Gophna,Palestine,35.2153,31.9628,Jifna,pending
+42,Ashkelon,Israel,34.5500,31.6600,Ascalon,pending
+43,Dor,Israel,34.9180,32.6170,Dora; Tel Dor,pending
+44,Acre,Israel,35.0700,32.9230,Ptolemais; Akko,pending
+45,Machaerus,Jordan,35.6300,31.5600,Mukawir,pending
+46,Herakleopolis,Egypt,30.9300,29.0850,Ihnasya; Heracleopolis Magna,pending
+47,Edfu,Egypt,32.8733,24.9780,Apollinopolis Magna,pending
+48,Oxyrhynchus,Egypt,30.6500,28.5330,El-Bahnasa,pending
+49,Faiyum,Egypt,30.8418,29.3084,Arsinoe; Crocodilopolis; Arsinoite nome,pending
+50,Memphis,Egypt,31.2550,29.8440,Mit Rahina,pending
+51,Benghazi,Libya,20.0667,32.1167,Berenice; Berenike; Euesperides,pending
+52,Nippur,Iraq,45.2306,32.1269,Murashu archive,pending
+53,Nehardea,Iraq,43.7800,33.3700,Nehardaa; near Fallujah / Anbar,pending
+54,Nisibis,Turkey,41.2153,37.0699,Nusaybin; Netzivin,pending
+55,Seleucia on the Tigris,Iraq,44.5200,33.1000,Seleucia; Seleukeia,pending
+56,Susa,Iran,48.2575,32.1894,Shushan; Shush,pending
+57,Ephesus,Turkey,27.3410,37.9410,Ephesos; Selcuk,pending
+58,Apamea,Turkey,30.1650,38.0750,Apamea Kibotos; Celaenae; Dinar,pending
+59,Laodicea,Turkey,29.1080,37.8360,Laodicea on the Lycus; Laodikeia,pending
+60,Miletus,Turkey,27.2780,37.5300,Miletos,pending
+61,Tarsus,Turkey,34.8950,36.9170,Tarsos,pending
+62,Pergamon,Turkey,27.1840,39.1320,Pergamum; Bergama,pending
+63,Corinth,Greece,22.8800,37.9060,Korinthos,pending
+64,Thessaloniki,Greece,22.9440,40.6400,Thessalonica; Salonica,pending
+65,Athens,Greece,23.7275,37.9838,Athenai,pending
+66,Pozzuoli,Italy,14.1210,40.8230,Puteoli; Dicaearchia,pending
+67,Ostia,Italy,12.2920,41.7560,Ostia Antica,pending
+68,Salamis,Cyprus,33.9000,35.1840,Salamis of Cyprus,pending
+69,Kerch,Ukraine,36.4730,45.3500,Panticapaeum; Pantikapaion; Bosporus,pending
+70,Anapa,Russia,37.3170,44.8950,Gorgippia,pending
