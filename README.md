@@ -89,7 +89,8 @@ data are listed in `EVENT_POLYGON_BORDER_SOURCES.csv`. The sources are Natural E
 OpenHistoricalMap (CC0) and a few outlines traced from Wikimedia Commons maps (CC BY-SA: the Kingdom of Israel 1020
 map, the Hasmonean Kingdom map, the Herodian Tetrarchy map, "General Government for the occupied Polish territories
 (1941)" and the Serbia map by XrysD, a Transnistria Governorate map from the US Holocaust Memorial Museum, and the
-Pale of Settlement map `Ansiedlungsrayon.svg` by Furfur). Medieval and early modern borders from modern
+Pale of Settlement map `Ansiedlungsrayon.svg` by Furfur), and one outline traced by us from the printed map of Herod's
+kingdom in the Herodium final report (see the source file). Medieval and early modern borders from modern
 administrative units are approximations and are marked in the source file; the outline of the medieval Kingdom of
 France and of the Habsburg monarchy of 1781 are our own composites of such units.
 
